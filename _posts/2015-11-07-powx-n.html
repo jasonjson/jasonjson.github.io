@@ -1,0 +1,74 @@
+---
+layout: post
+title: Pow(x, n)
+date: 2015-11-07 21:56:57.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465745218;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:302;}i:1;a:1:{s:2:"id";i:564;}i:2;a:1:{s:2:"id";i:1949;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Implement pow(x, n).</em></strong></p>
+<p>[expand title="iterative"]</p>
+<pre>
+public class Solution {
+    public double myPow(double x, int n) {
+        int m = Math.abs(n);
+        double result = 1;
+        while (m > 0) {
+            if ((m & 1) == 1) {
+                result *= x;
+            }
+            x *= x;
+            m >>= 1;
+        }
+        return n > 0 ? result : 1.0 / result;
+    }
+}
+</pre>
+<p>[/expand]</p>
+<p>[expand title="recursive"]</p>
+<pre>
+public class Solution {
+    public double myPow(double x, int n) {
+        if (n == 0) return 1;
+        if (n == 1) return x;
+        double temp = myPow(x, n / 2);
+        temp = temp * temp;
+        if (n % 2 != 0) {
+            if (n > 0) {
+                temp = temp * x;
+            } else {
+                temp = temp * (1.0 / x);
+            }
+        }
+        return temp;
+    }
+
+    public double myPow(double x, int n) {
+        if (n == 0) return 1.0;
+        if (n == 1) return x;
+        int m = Math.abs(n);
+        double result = myPow(x, m / 2);
+        result *= result;
+        if (m % 2 != 0) {
+            result *= x;
+        }
+        return n > 0 ? result : 1.0 / result;
+    }
+}
+
+</pre>
+<p>[/expand]</p>

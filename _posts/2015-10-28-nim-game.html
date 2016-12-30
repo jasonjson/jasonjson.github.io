@@ -1,0 +1,61 @@
+---
+layout: post
+title: Nim Game
+date: 2015-10-28 16:07:28.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+- Dynamic Programming
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467544788;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:480;}i:1;a:1:{s:2:"id";i:479;}i:2;a:1:{s:2:"id";i:1081;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones. Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap. For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.</em></strong></p>
+<p>[expand title="code"]</p>
+<pre>
+public class Solution {
+    public boolean canWinNim(int n) {
+        boolean[] dp = new boolean[n+1];
+        dp[1] = true;
+        for (int i = 1; i <= n; i++) {
+            if (i == 2 || i == 3) {
+                dp[i] = true;
+            } else {
+                dp[i] = !dp[n-1] || !dp[n-2] || !dp[n-3];
+            }
+        }
+        return dp[n];
+    }
+}
+</pre>
+<p>[/expand]</p>
+<p>[expand title = "code2"]</p>
+<pre>
+//strategy: the one with 4 remaining must loose
+//A, B players
+//if n == 4k, then at each round B can make A+B both take 4, 
+//eventually leave 4 to A, A lose
+//if n == 4k + i (i <= 3), then A can always take i first and B will
+//finanly lose as he faces above scenario like A
+public class Solution {
+    public boolean canWinNim(int n) {
+        if (n % 4 == 0) {可以观察上面的dp,只有当n是4的倍数时才会输
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+</pre>
+<p>[/expand]</p>

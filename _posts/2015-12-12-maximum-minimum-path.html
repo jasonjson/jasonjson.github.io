@@ -1,0 +1,76 @@
+---
+layout: post
+title: Maximum Minimum Path
+date: 2015-12-12 11:55:40.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+- Matrix
+- 面经
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468939951;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2057;}i:1;a:1:{s:2:"id";i:2052;}i:2;a:1:{s:2:"id";i:549;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Given a matrix, find all the min values in the path from the top left to bottom right point, output the max value.</em></strong></p>
+<p>[expand title = "dp"]</p>
+<pre>
+public class Solution {
+    public int getMaxMin(int[][] matrix){
+        int[] result = new int[matrix[0].length];
+        result[0] = matrix[0][0];
+        for(int j = 1; j < matrix[0].length; j++){
+            result[j] = Math.min(result[j - 1], matrix[0][j]);
+        }
+        for(int i = 1; i < matrix.length; i++){
+            result[0] = Math.min(matrix[i][0], result[0]);
+            for(int j = 1; j < matrix[0].length; j++){
+                if (result[j] < matrix[i][j] && result[j - 1] < matrix[i][j]) {
+                    result[j] = Math.max(result[j - 1], result[j]);
+                } else {
+                    result[j] = matrix[i][j];
+                }
+            }
+        }
+        return result[result.length-1];
+    }
+}
+</pre>
+<p>[/expand]</p>
+<p>[expand title="recursive"]</p>
+<pre>
+public class Solution {
+    public static void main(String[] args) {
+        int[][] matrix = {{8,4,7},{6,5,9}};
+        System.out.println(getMaxMin(matrix));
+    }
+    private static int max = Integer.MIN_VALUE;
+    public static int getMaxMin(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) return -1;
+
+        helper(matrix, 0, 0, Integer.MAX_VALUE);
+        return max;
+    }
+    public static void helper(int[][] matrix, int i, int j, int local_min) {
+        int row = matrix.length, col = matrix[0].length;
+        if (i >= row || j >= col) return;
+        local_min = Math.min(local_min, matrix[i][j]);
+        if (i == row - 1 && j == col - 1) {
+            max = Math.max(max, local_min);
+        }
+        helper(matrix, i + 1, j, local_min);
+        helper(matrix, i, j + 1, local_min);
+    }
+}
+</pre>
+<p>[/expand]</p>

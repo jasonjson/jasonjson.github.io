@@ -1,0 +1,57 @@
+---
+layout: post
+title: Cosine Similarity
+date: 2015-10-21 03:00:50.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+tags: []
+meta:
+  _edit_last: '1'
+  _wpcom_is_markdown: '1'
+  _spost_short_title: ''
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465214235;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:167;}i:1;a:1:{s:2:"id";i:85;}i:2;a:1:{s:2:"id";i:579;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Cosine similarity is a measure of similarity between two vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle.</em></strong><br />
+[expand title="code"]</p>
+<pre>
+class Solution {
+    /**
+     * @param A: An integer array.
+     * @param B: An integer array.
+     * @return: Cosine similarity.
+     */
+    public double cosineSimilarity(int[] A, int[] B) {
+        // write your code here
+        if (A == null || B == null || A.length == 0 || B.length == 0) return 2.0;
+        if (A.length != B.length) return 2.0;
+        
+        int i = 0;
+        double upper = 0.0, A_abs = 0.0, B_abs = 0.0;
+        //double not int
+        while (i < A.length) {
+            upper += A[i] * B[i];
+            i++;
+        }
+        
+        for (int j = 0; j < A.length; j++) {
+            A_abs += A[j] * A[j];
+        }
+        for (int j = 0; j < B.length; j++) {
+            B_abs += B[j] * B[j];
+        }
+        double lower = Math.sqrt(A_abs) * Math.sqrt(B_abs);
+        if (lower == 0.0) return 2.0;// bug: error check
+        return upper / lower; 
+    }
+}
+</pre>
+<p>[/expand]</p>
