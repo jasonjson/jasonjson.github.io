@@ -1,0 +1,58 @@
+---
+layout: post
+title: k Sum II
+date: 2015-10-21 14:23:22.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- DFS Backtracking
+tags: []
+meta:
+  _spost_short_title: ''
+  _wpas_done_all: '1'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469033944;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1302;}i:1;a:1:{s:2:"id";i:466;}i:2;a:1:{s:2:"id";i:335;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Given n unique integers, number k (1&lt;=k&lt;=n)  and target. Find all possible k integers where their sum is target.</em></strong></p>
+<p>[expand title="code"]</p>
+<pre>
+public class Solution {
+    /**
+     * @param A: an integer array.
+     * @param k: a positive integer (k <= length(A))
+     * @param target: a integer
+     * @return a list of lists of integer 
+     */ 
+    public ArrayList<ArrayList<integer>> kSumII(int A[], int k, int target) {
+        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+        if (A == null || A.length == 0) return result;
+        
+        ArrayList<integer> path = new ArrayList<integer>();
+        helper(A, k, target, 0, path, result);
+        return result;
+    }
+    
+    public void helper(int[] A, int k, int target, int start, ArrayList<integer> path, ArrayList<ArrayList<integer>> result) {
+        if (k < 0) return;
+        if (k == 0 && target == 0) {
+            result.add(new ArrayList<integer> (path));
+            return;
+        }
+        for (int i = start; i < A.length; i++) {
+            path.add(A[i]);
+            helper(A, k - 1, target - A[i], i + 1, path, result);
+            //bug i + 1 not start + 1
+            path.remove(path.size() - 1);
+        }
+    }
+}//dfs and back tracking
+</integer></integer></integer></integer></integer></integer></integer></integer></pre>
+<p>[/expand]</p>

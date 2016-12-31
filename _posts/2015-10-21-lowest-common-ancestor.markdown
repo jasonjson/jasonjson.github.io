@@ -1,0 +1,49 @@
+---
+layout: post
+title: Lowest Common Ancestor
+date: 2015-10-21 02:52:47.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Binary Search Tree
+tags: []
+meta:
+  _edit_last: '1'
+  _wpcom_is_markdown: '1'
+  _spost_short_title: ''
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467212518;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1272;}i:1;a:1:{s:2:"id";i:270;}i:2;a:1:{s:2:"id";i:276;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes. The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.</em></strong><br />
+[expand title="code"]</p>
+<pre>
+public class Solution {
+    /**
+     * @param root: The root of the binary search tree.
+     * @param A and B: two nodes in a Binary.
+     * @return: Return the least common ancestor(LCA) of the two nodes.
+     */
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
+        if (root == null || root == A || root == B) return root;
+        //once root == A or root == B, we just ouput the root, goes all way up
+        
+        TreeNode left = lowestCommonAncestor(root.left, A, B);
+        //for instance, if root == A in left subtree, this root will goes all way up to be left;
+        TreeNode right = lowestCommonAncestor(root.right, A, B);
+        
+        if (left != null && right != null) {
+            //A and B are in different subtree
+            return root;
+        }
+        return left == null ? right : left;
+        //A are B are in the same side, either A is first found or B is first found
+    }
+}
+</pre>
+<p>[/expand]</p>

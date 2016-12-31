@@ -1,0 +1,102 @@
+---
+layout: post
+title: Max Tree
+date: 2015-10-26 21:04:31.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Data Structure
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1464254078;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1234;}i:1;a:1:{s:2:"id";i:492;}i:2;a:1:{s:2:"id";i:1193;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Given an integer array with no duplicates. A max tree building on this array is defined as follow:</em></strong><br />
+1: The Cartesian tree for a sequence has one node for each number in the sequence. Each node is associated with a single sequence value.<br />
+2: A symmetric (in-order) traversal of the tree results in the original sequence. That is, the left subtree consists of the values earlier than the root in the sequence order, while the right subtree consists of the values later than the root, and a similar ordering constraint holds at each lower node of the tree.<br />
+3: The tree has the heap property: the parent of any non-root node has a smaller value than the node itself.<br />
+单调栈，每遍历到一个元素，将栈中小于该元素的结点合并，将合并后新的结点挂在当前结点的左侧。合并的时候，因为栈中的结点的值是递增的，所以直接将第一个结点挂下第二个结点的右侧。另外，这种树有个学名叫做笛卡树。<br />
+<a href="https://en.wikipedia.org/wiki/Cartesian_tree">wikipedia</a><br />
+[expand title="O(n) iterative"]</p>
+<pre>
+public class Solution {
+    /**
+     * @param A: Given an integer array with no duplicates.
+     * @return: The root of max tree.
+     */
+    public TreeNode maxTree(int[] A) {
+        // write your code here
+        if (A == null || A.length == 0) return null;
+        
+        Stack<treenode> stack = new Stack<treenode>();
+        for (int i = 0; i < A.length; i++) {
+            TreeNode newNode = new TreeNode(A[i]);
+            TreeNode prev = null;
+            while (!stack.isEmpty() && stack.peek().val < A[i]) {
+                TreeNode curr = stack.pop();
+                curr.right = prev;
+                //这个left right顺序与它们在array中比root先还是后有关!
+                prev = curr;               
+            }
+            newNode.left = prev;//newNode是新的,所以prev是左子树
+            stack.push(newNode);
+            //如果A[i]值比peek值小，那就直接push,可以看出stack内部的值是递增,top的值最小,bottom的值最大，所以最后的root是bottom node
+        }
+        
+        TreeNode prev = null;
+        while (!stack.isEmpty()) {
+            TreeNode curr = stack.pop();
+            //此处与上面合并node操作一致,把所有node链接起来
+            curr.right = prev;
+            prev = curr;
+        }
+        return prev;
+    }
+}
+</treenode></treenode></pre>
+<p>[/expand]</p>
+<p>[expand title = "recursive O(n^2)"]</p>
+<pre>
+public class Solution {
+    /**
+     * @param A: Given an integer array with no duplicates.
+     * @return: The root of max tree.
+     */
+    public TreeNode maxTree(int[] A) {
+        // write your code here
+        if (A == null || A.length == 0) return null;
+        return helper(A, 0, A.length - 1);
+    }
+    
+    public TreeNode helper(int[] A, int start, int end) {
+        if (start > end) return null;
+        if (start == end) return new TreeNode(A[start]);
+        int index = findMax(A, start, end);
+        TreeNode root = new TreeNode(A[index]);
+        root.left = helper(A, start, index - 1);
+        root.right = helper(A, index + 1, end);
+        return root;
+    }
+    
+    public int findMax(int[] A, int start, int end) {
+        int max = Integer.MIN_VALUE, index = 0;
+        for (int i = start; i <= end; i++) {
+            if (max < A[i]) {
+                max = A[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+}
+</pre>
+<p>[/expand]</p>

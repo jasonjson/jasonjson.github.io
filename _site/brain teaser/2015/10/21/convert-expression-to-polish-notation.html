@@ -74,18 +74,18 @@ public class Solution {
         ArrayList<string> result = new ArrayList<string>();
         if (expression == null || expression.length == 0) return result;
         Stack<string> stack = new Stack<string>();
-        for (int i = expression.length - 1; i >= 0; i--) {
+        for (int i = expression.length - 1; i &gt;= 0; i--) {
             String s = expression[i];
             if (isOp(s)) {
                 if (s.equals(")")) {
                     stack.push(s);
                 } else if (s.equals("(")) {
-                    while (!stack.isEmpty() && !stack.peek().equals(")") {
+                    while (!stack.isEmpty() &amp;&amp; !stack.peek().equals(")") {
                         result.add(stack.pop());
                     }
                     stack.pop();
                 } else {
-                    while (!stack.isEmpty() && order(s) < order(stack.peek())) {
+                    while (!stack.isEmpty() &amp;&amp; order(s) &lt; order(stack.peek())) {
                         result.add(stack.pop());
                     }
                     stack.push(s);
