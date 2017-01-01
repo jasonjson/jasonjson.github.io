@@ -1,0 +1,42 @@
+---
+layout: post
+title: H-Index
+date: 2015-10-29 17:16:08.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469265049;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1175;}i:1;a:1:{s:2:"id";i:1484;}i:2;a:1:{s:2:"id";i:423;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher's h-index. According to the definition of h-index on Wikipedia: "A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each." For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively. Since the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, his h-index is 3. Note: If there are several possible values for h, the maximum one is taken as the h-index.</em></strong></p>
+<p>[expand title = "O(nlgn)"]</p>
+<pre>
+public class Solution {
+    public int hIndex(int[] citations) {
+        if (citations == null || citations.length == 0) return 0;
+        Arrays.sort(citations);
+        int len = citations.length;
+        for (int i = 0; i < citations.length; i++) {
+            if (len <= citations[i]) {
+                break;
+            } else {
+                len--;
+            }
+        }
+        return len;
+    }
+}
+</pre>
+<p>[/expand]</p>

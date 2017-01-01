@@ -1,0 +1,79 @@
+---
+layout: post
+title: N-Queens
+date: 2015-10-21 13:23:55.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- DFS Backtracking
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _spost_short_title: ''
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465835929;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:475;}i:1;a:1:{s:2:"id";i:347;}i:2;a:1:{s:2:"id";i:583;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>The n-queens puzzle is the problem of placing n queens on an n $\times$ n chessboard such that no two queens attack each other.</em></strong></p>
+<p>[expand title="code"]</p>
+<pre>
+public class Solution {
+    public ArrayList<ArrayList<string>> solveNQueens(int n) {
+        ArrayList<ArrayList<string>> result = new ArrayList<ArrayList<string>>();
+        if (n <= 0) return result;
+        
+        ArrayList<integer> cols = new ArrayList<integer>();
+        search(n, cols, result);
+        return result;
+    }    
+    public void search(int n, ArrayList<integer> cols, ArrayList<ArrayList<string>> result) {//add one queen to cols each time
+        if (cols.size() == n) {//queen is located at (i, cols.get(i))
+            result.add(placeQueens(cols));
+            return;//we have added all rows
+        }
+        for (int col = 0; col < n; col ++) {
+            if (isValid(cols, col)) {
+                cols.add(col);
+                search(n, cols, result);
+                cols.remove(cols.size() - 1);
+            }
+        }
+    }    
+    public boolean isValid(ArrayList<integer> cols, int col) {
+        int row = cols.size();//the row position for new queen
+        for (int i = 0; i < cols.size(); i++) {
+            if (cols.get(i) == col) {
+                return false;//same column
+            } else if (i - cols.get(i) == row - col) {
+                return false;// left-top to right-bottom
+            } else if (i + cols.get(i) == row + col) {
+                return false;// right-top to left-bottom
+            }
+        }
+        return true;
+    }    
+    public ArrayList<string> placeQueens(ArrayList<integer> cols) {
+        ArrayList<string> chessboard = new ArrayList<string>();
+        for (int i = 0; i < cols.size(); i++) {
+            String row = "";
+            for (int j = 0; j < cols.size(); j++) {
+                if (j == cols.get(i)) {//find a queen at jth column
+                    row += "Q";
+                } else {
+                    row += ".";
+                }
+            }
+            chessboard.add(row);
+        }
+        return chessboard;
+    }
+}
+</string></string></integer></string></integer></string></integer></integer></integer></string></string></string></pre>
+<p>[/expand]</p>

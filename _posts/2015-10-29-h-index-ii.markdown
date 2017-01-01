@@ -1,0 +1,42 @@
+---
+layout: post
+title: H-Index II
+date: 2015-10-29 17:16:42.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Brain teaser
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1461510005;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1173;}i:1;a:1:{s:2:"id";i:145;}i:2;a:1:{s:2:"id";i:155;}}}}
+author:
+  login: johnny.lyy@gmail.com
+  email: johnny.lyy@gmail.com
+  display_name: johnny.lyy@gmail.com
+  first_name: ''
+  last_name: ''
+---
+<p><strong><em>Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?</em></strong></p>
+<p>The basic idea comes from the description h of his/her N papers have at least h citations each. Therefore, we know if "mid + 1" is a valid h index, it means value of position "citationsSize - mid - 1" must exceed "mid". After we find a valid h index, we go on searching on the right part to see if we can find a larger h index. If it's not a valid h index, the h index can be found in the left part and we simply follow the standard binary search to solve this problem.</p>
+<p>[expand title="code"]</p>
+<pre>
+public class Solution {
+    public int hIndex(int[] citations) {
+        if (citations == null || citations.length == 0) return 0;
+        in lo = 0, hi = citations.length - 1, n = citations.length;
+        while (lo <= hi) {
+            int mid = (lo + hi) / 2;
+            if (citations[n - mid - 1] > mid) {
+                lo = mid + 1;
+            } else {
+                hi = mid - 1;
+            }
+        return lo;
+    }
+}
+</pre>
+<p>[/expand]</p>

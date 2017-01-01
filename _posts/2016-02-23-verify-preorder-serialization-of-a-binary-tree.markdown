@@ -2,7 +2,8 @@
 layout: post
 title: "Verify Preorder Serialization of a Binary Tree"
 date: 2016-02-23 21:32:19.000000000 -05:00
-categories: algorithms Brain_teaser
+categories:
+- Brain teaser
 ---
 ``` java
 public class Solution {
