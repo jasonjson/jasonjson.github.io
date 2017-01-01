@@ -1,5 +1,5 @@
 # Site settings
-title: Coding
+title: CodeHu
 url: ""    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
 baseurl: "" # the prefix of your site uri, eg. `/bohu-jekyll-theme` or just one slash `/`
 #timezone: Asia/Shanghai
