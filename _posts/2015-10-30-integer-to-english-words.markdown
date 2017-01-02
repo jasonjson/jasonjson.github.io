@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public String numberToWords(int num) {

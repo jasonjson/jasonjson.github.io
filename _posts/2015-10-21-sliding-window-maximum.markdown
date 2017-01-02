@@ -10,6 +10,7 @@ author: Jason
 ---
 <p><strong><em>Given an array of n integer with duplicate number, and a moving window(size k), move the window at each iteration from the start of the array, find the maximum number inside the window at each moving</em></strong></p>
 
+
 ``` java
 //For Example: A = [2,1,3,4,6,3,8,9,10,12,56], w=4
 

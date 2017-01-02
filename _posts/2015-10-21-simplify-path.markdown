@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an absolute path for a file (Unix-style), simplify it.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public String simplifyPath(String path) {

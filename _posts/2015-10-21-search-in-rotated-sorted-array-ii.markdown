@@ -7,9 +7,9 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Follow up for "Search in Rotated Sorted Array":<br />
+<p><strong><em>Follow up for "Search in Rotated Sorted Array":</p>
 
-What if duplicates are allowed? Would this affect the run-time complexity? How and why? Write a function to determine if a given target is in the array.</em></strong><br />
+What if duplicates are allowed? Would this affect the run-time complexity? How and why? Write a function to determine if a given target is in the array.</em></strong></p>
 
 ``` java
 public class Solution {

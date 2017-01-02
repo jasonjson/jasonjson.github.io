@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</em></strong><br />
+<p><strong><em>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</em></strong></p>
 
 
 ``` java

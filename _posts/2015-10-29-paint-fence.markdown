@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>There is a fence with n posts, each post can be painted with one of the k colors. You have to paint all the posts such that no more than two adjacent fence posts have the same color. Return the total number of ways you can paint the fence.</em></strong></p>
 
+
 <p><a href="https://leetcode.com/discuss/56146/dynamic-programming-c-o-n-time-o-1-space-0ms">Read more</a></p>
 ``` java
 public class Solution {

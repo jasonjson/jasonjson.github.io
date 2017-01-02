@@ -6,7 +6,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given a rotated sorted array, recover it to sorted array in-place.</em></strong><br />
+<p><strong><em>Given a rotated sorted array, recover it to sorted array in-place.</em></strong></p>
 
 
 ``` java

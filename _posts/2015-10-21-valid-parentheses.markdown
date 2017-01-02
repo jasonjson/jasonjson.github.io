@@ -7,7 +7,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</em></strong><br />
+<p><strong><em>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</em></strong></p>
 
 
 ``` java

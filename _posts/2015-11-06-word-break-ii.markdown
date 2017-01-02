@@ -6,7 +6,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word.<br />
+<p><strong><em>Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word.</p>
 
 Return all such possible sentences.</em></strong></p>
 ``` java

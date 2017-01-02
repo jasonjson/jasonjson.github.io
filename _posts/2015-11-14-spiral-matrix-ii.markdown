@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int[][] generateMatrix(int n) {

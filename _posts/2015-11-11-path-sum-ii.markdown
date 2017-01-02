@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<List<integer>> pathSum(TreeNode root, int sum) {

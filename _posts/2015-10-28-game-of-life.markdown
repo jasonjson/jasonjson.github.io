@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a board with m by n cells, each cell has an initial state live (1) or dead (0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):</em></strong></p>
 
+
 <ul>
 <li>Any live cell with fewer than two live neighbors dies, as if caused by under-population.</li>
 <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
@@ -20,7 +21,7 @@ author: Jason
 <li>2 : live to die</li>
 <li>3 : die to live</li>
 </ul>
-<p><a href="http://www.cnblogs.com/grandyang/p/4854466.html">Read more</a><br />
+<p><a href="http://www.cnblogs.com/grandyang/p/4854466.html">Read more</a></p>
 
 ``` java
 public class Solution {

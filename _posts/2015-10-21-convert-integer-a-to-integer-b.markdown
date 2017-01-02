@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Determine the number of bits required to convert integer A to integer B Example: Given n = 31, m = 14,return 2</em></strong><br />
+<p><strong><em>Determine the number of bits required to convert integer A to integer B Example: Given n = 31, m = 14,return 2</em></strong></p>
 
 
 ``` java

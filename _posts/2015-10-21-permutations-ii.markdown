@@ -7,7 +7,7 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given a list of numbers with duplicate number in it. Find all unique permutations.</em></strong><br />
+<p><strong><em>Given a list of numbers with duplicate number in it. Find all unique permutations.</em></strong></p>
 
 
 ``` java

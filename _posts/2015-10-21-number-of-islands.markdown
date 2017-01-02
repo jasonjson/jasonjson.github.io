@@ -7,7 +7,7 @@ categories:
 - Matrix
 author: Jason
 ---
-<p><strong><em>Given a boolean 2D matrix, find the number of islands.</em></strong><br />
+<p><strong><em>Given a boolean 2D matrix, find the number of islands.</em></strong></p>
 
 
 ``` java

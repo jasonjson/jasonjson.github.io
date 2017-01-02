@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an input string, reverse the string word by word.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public void reverseWords(char[] s) {

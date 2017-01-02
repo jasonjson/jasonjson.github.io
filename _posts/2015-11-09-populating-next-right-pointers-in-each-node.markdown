@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary tree, populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public void connect(TreeLinkNode root) {

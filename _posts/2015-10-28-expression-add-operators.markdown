@@ -10,7 +10,8 @@ author: Jason
 ---
 <p><strong><em>Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.</em></strong></p>
 
-<p><a href="http://segmentfault.com/a/1190000003797204">Read more</a><br />
+
+<p><a href="http://segmentfault.com/a/1190000003797204">Read more</a></p>
 
 ``` java
 public class Solution {

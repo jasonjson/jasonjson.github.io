@@ -6,7 +6,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given an expression string array, return the Polish notation of this expression. (remove the parentheses)</em></strong><br />
+<p><strong><em>Given an expression string array, return the Polish notation of this expression. (remove the parentheses)</em></strong></p>
 
 
 ``` java

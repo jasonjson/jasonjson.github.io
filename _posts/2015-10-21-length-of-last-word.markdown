@@ -6,9 +6,9 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given a string s consists of upper/lower-case alphabets and empty space characters ' ',<br />
+<p><strong><em>Given a string s consists of upper/lower-case alphabets and empty space characters ' ',</p>
 
-return the length of last word in the string.If the last word does not exist, return 0.</em></strong><br />
+return the length of last word in the string.If the last word does not exist, return 0.</em></strong></p>
 
 ``` java
 public class Solution {

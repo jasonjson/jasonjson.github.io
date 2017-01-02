@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a string which contains only letters. Sort it by lower case first and upper case second.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /** 

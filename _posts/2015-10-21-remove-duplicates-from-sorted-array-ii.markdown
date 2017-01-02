@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Follow up for "Remove Duplicates":<br />
+<p><strong><em>Follow up for "Remove Duplicates":</p>
 
 What if duplicates are allowed at most twice?</em></strong></p>
 ``` java

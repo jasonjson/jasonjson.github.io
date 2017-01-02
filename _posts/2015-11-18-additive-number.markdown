@@ -6,7 +6,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Additive number is a positive integer whose digits can form additive sequence.<br />
+<p><strong><em>Additive number is a positive integer whose digits can form additive sequence.</p>
 
 A valid additive sequence should contain at least three numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.</em></strong></p>
 ``` java

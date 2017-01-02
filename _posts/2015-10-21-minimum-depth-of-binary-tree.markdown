@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</em></strong><br />
+<p><strong><em>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</em></strong></p>
 
 
 ``` java

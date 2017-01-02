@@ -7,7 +7,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</em></strong><br />
+<p><strong><em>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</em></strong></p>
 
 
 ``` java

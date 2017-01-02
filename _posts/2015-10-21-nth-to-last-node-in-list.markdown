@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Find the nth to last element of a singly linked list. The minimum number of nodes in list is n.</em></strong><br />
+<p><strong><em>Find the nth to last element of a singly linked list. The minimum number of nodes in list is n.</em></strong></p>
 
 
 ``` java

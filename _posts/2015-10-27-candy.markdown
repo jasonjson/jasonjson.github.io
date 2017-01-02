@@ -7,15 +7,15 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements:</em></strong><br />
+<p><strong><em>There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements:</em></strong></p>
 
-1: Each child must have at least one candy.<br />
-2: Children with a higher rating get more candies than their neighbors.<br />
+1: Each child must have at least one candy.</p>
+2: Children with a higher rating get more candies than their neighbors.</p>
 3: What is the minimum candies you must give?</p>
-<p>使用一个数组记录每一个小孩应得的糖果的数目<br />
-1.我们可以从左往右扫描，如果遇到上升区间，就给小孩比左边多一个糖，否则就给1个糖果。<br />
-2.我们可以从右往左扫描，如果遇到上升区间，就给小孩比右边多一个糖，否则就给1个糖果。<br />
-同时，应该与1步算出的值取一个大值（因为有可能要给小孩更多糖果才可以满足题设）。<br />
+<p>使用一个数组记录每一个小孩应得的糖果的数目</p>
+1.我们可以从左往右扫描，如果遇到上升区间，就给小孩比左边多一个糖，否则就给1个糖果。</p>
+2.我们可以从右往左扫描，如果遇到上升区间，就给小孩比右边多一个糖，否则就给1个糖果。</p>
+同时，应该与1步算出的值取一个大值（因为有可能要给小孩更多糖果才可以满足题设）。</p>
 
 ``` java
 public class Solution {

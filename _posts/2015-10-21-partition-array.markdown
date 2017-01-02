@@ -7,7 +7,7 @@ categories:
 - Subarray
 author: Jason
 ---
-<p><strong><em>Given an array nums of integers and an int k, partition the array (i.e move the elements in "nums") such that: All elements &lt; k are moved to the leff. All elements >= k are moved to the right Return the partitioning index, i.e the first index i nums[i] >= k.</em></strong><br />
+<p><strong><em>Given an array nums of integers and an int k, partition the array (i.e move the elements in "nums") such that: All elements &lt; k are moved to the leff. All elements >= k are moved to the right Return the partitioning index, i.e the first index i nums[i] >= k.</em></strong></p>
 
 
 ``` java

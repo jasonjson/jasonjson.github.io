@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given string A representative a positive integer which has N digits, remove any k digits of the number, the remaining digits are arranged according to the original order to become a new positive integer. Find the smallest integer after remove k digits.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

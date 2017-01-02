@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given an unsorted integer array, find the first missing positive integer.</em></strong><br />
+<p><strong><em>Given an unsorted integer array, find the first missing positive integer.</em></strong></p>
 
 
 ``` java

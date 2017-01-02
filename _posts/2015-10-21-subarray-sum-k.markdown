@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given an nonnegative integer array, find a subarray where the sum of numbers is k. Your code should return the index of the first number and the index of the last number.</em></strong><br />
+<p><strong><em>Given an nonnegative integer array, find a subarray where the sum of numbers is k. Your code should return the index of the first number and the index of the last number.</em></strong></p>
 
 
 ``` java

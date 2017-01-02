@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given an integers array A. Define B[i] = A[0] * ... * A[i-1] * A[i+1] * ... * A[n-1], calculate B WITHOUT divide operation.</em></strong><br />
+<p><strong><em>Given an integers array A. Define B[i] = A[0] * ... * A[i-1] * A[i+1] * ... * A[n-1], calculate B WITHOUT divide operation.</em></strong></p>
 
 
 ``` java

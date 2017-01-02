@@ -6,7 +6,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given two sorted integer arrays A and B, merge B into A as one sorted array.</em></strong><br />
+<p><strong><em>Given two sorted integer arrays A and B, merge B into A as one sorted array.</em></strong></p>
 
 
 ``` java

@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Write a function that add two numbers A and B. You should not use + or any arithmetic operators.</em></strong><br />
+<p><strong><em>Write a function that add two numbers A and B. You should not use + or any arithmetic operators.</em></strong></p>
 
 
 ``` java

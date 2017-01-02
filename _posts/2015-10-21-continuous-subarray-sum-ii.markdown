@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

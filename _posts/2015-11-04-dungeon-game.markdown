@@ -6,11 +6,11 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.<br />
+<p><strong><em>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
 
-The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.<br />
-Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0's) or contain magic orbs that increase the knight's health (positive integers).<br />
-In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.<br />
+The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
+Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0's) or contain magic orbs that increase the knight's health (positive integers).</p>
+In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
 Write a function to determine the knight's minimum initial health so that he is able to rescue the princess.</em></strong></p>
 ``` java
 public class Solution {

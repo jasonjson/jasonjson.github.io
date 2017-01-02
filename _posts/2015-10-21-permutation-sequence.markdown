@@ -6,9 +6,9 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given n and k, return the k-th permutation sequence.</em></strong><br />
+<p><strong><em>Given n and k, return the k-th permutation sequence.</em></strong></p>
 
-<a href="http://blog.sina.com.cn/s/blog_eb52001d0102v1ss.html">Reference</a><br />
+<a href="http://blog.sina.com.cn/s/blog_eb52001d0102v1ss.html">Reference</a></p>
 
 ``` java
 //1. 以某一数字开头的排列有(n-1)!个. 例如 123, 132, 以1开头的是 2!个

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.</em></strong></p>
 
+
 ``` java
 public class NumArray {
     int[] sums;

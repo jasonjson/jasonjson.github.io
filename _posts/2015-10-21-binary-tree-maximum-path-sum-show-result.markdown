@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, find the maximum path sum. The path may start and end at any node in the tree.</em></strong><br />
+<p><strong><em>Given a binary tree, find the maximum path sum. The path may start and end at any node in the tree.</em></strong></p>
 
 
 ``` java

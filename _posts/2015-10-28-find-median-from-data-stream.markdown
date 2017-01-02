@@ -8,11 +8,12 @@ author: Jason
 ---
 <p><strong><em>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.</em></strong></p>
 
-<p>Examples:<br />
+
+<p>Examples:</p>
 [2,3,4] , the median is 3</p>
 <p>[2,3], the median is (2 + 3) / 2 = 2.5</p>
 <p>Design a data structure that supports the following two operations:</p>
-<p>void addNum(int num) - Add a integer number from the data stream to the data structure.<br />
+<p>void addNum(int num) - Add a integer number from the data stream to the data structure.</p>
 double findMedian() - Return the median of all elements so far.</p>
 ``` java
 class MedianFinder {

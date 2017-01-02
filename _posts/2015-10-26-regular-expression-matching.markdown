@@ -9,7 +9,8 @@ author: Jason
 ---
 <p><strong><em>Implement regular expression matching.</em></strong></p>
 
-<p><a href="http://bangbingsyb.blogspot.com/2014/11/leetcode-regular-expression-matching.html">See detailed explanation</a><br />
+
+<p><a href="http://bangbingsyb.blogspot.com/2014/11/leetcode-regular-expression-matching.html">See detailed explanation</a></p>
 
 ``` java
 public class Solution {

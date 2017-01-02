@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a string s, cut s into some substrings such that every substring is a palindrome. Return the minimum cuts needed for a palindrome partitioning of s.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

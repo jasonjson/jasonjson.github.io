@@ -6,11 +6,11 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Compare two version numbers version1 and version2.<br />
+<p><strong><em>Compare two version numbers version1 and version2.</p>
 
-If version1 > version2 return 1, if version1 &lt; version2 return -1, otherwise return 0.<br />
-You may assume that the version strings are non-empty and contain only digits and the . character.<br />
-The . character does not represent a decimal point and is used to separate number sequences.<br />
+If version1 > version2 return 1, if version1 &lt; version2 return -1, otherwise return 0.</p>
+You may assume that the version strings are non-empty and contain only digits and the . character.</p>
+The . character does not represent a decimal point and is used to separate number sequences.</p>
 For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level revision of the second first-level revision.</em></strong></p>
 ``` java
 public class Solution {

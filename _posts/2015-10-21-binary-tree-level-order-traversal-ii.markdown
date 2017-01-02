@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).</em></strong><br />
+<p><strong><em>Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).</em></strong></p>
 
 
 ``` java

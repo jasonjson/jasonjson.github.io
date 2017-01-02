@@ -6,7 +6,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Write a method to replace all spaces in a string with \%20. The string is given in a characters array, you can assume it has enough space for replacement and you are given the true length of the string.</em></strong><br />
+<p><strong><em>Write a method to replace all spaces in a string with \%20. The string is given in a characters array, you can assume it has enough space for replacement and you are given the true length of the string.</em></strong></p>
 
 
 ``` java

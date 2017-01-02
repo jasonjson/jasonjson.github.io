@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a sorted (increasing order) array, Convert it to create a binary tree with minimal height.</em></strong><br />
+<p><strong><em>Given a sorted (increasing order) array, Convert it to create a binary tree with minimal height.</em></strong></p>
 
 
 ``` java

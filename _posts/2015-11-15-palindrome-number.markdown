@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Determine whether an integer is a palindrome. Do this without extra space.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean isPalindrome(int x) {

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a complete binary tree, count the number of nodes.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int countNodes(TreeNode root) {

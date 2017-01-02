@@ -6,10 +6,10 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>This is a follow up of Shortest Word Distance. The only difference is now word1 could be the same as word2.<br />
+<p><strong><em>This is a follow up of Shortest Word Distance. The only difference is now word1 could be the same as word2.</p>
 
-Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.<br />
-word1 and word2 may be the same and they represent two individual words in the list.<br />
+Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+word1 and word2 may be the same and they represent two individual words in the list.</p>
 You may assume word1 and word2 are both in the list.</em></strong></p>
 ``` java
 public class Solution {

@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a string, determine if a permutation of the string could form a palindrome.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean canPermutePalindrome(String s) {

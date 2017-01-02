@@ -7,11 +7,11 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:<br />
+<p><strong><em>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:</p>
 
-Each 0 marks an empty land which you can pass by freely.<br />
-Each 1 marks a building which you cannot pass through.<br />
-Each 2 marks an obstacle which you cannot pass through.<br />
+Each 0 marks an empty land which you can pass by freely.</p>
+Each 1 marks a building which you cannot pass through.</p>
+Each 2 marks an obstacle which you cannot pass through.</p>
 The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.</em></strong></p>
 ``` java
 //this problem is only slightly different from "best meeting points", but the algorithm is quite different

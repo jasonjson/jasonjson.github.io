@@ -6,10 +6,10 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Numbers can be regarded as product of its factors. For example,<br />
+<p><strong><em>Numbers can be regarded as product of its factors. For example,</p>
 
-8 = 2 x 2 x 2;<br />
-  = 2 x 4.<br />
+8 = 2 x 2 x 2;</p>
+  = 2 x 4.</p>
 Write a function that takes an integer n and return all possible combinations of its factors.</em></strong></p>
 ``` java
 public class Solution {

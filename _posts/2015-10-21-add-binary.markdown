@@ -9,6 +9,7 @@ categories:
 author: Jason
 ---
 <p><strong>Given two binary strings, return their sum (also a binary string).</strong></p>
+
 ``` java
     /**
      * @param a a number

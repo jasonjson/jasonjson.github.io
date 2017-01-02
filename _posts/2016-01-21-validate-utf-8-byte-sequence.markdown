@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em><a href="https://en.wikipedia.org/wiki/UTF-8#Description">Reference</a></em></strong></p>
 
+
 ``` java
 public class Solution {
     public static boolean validate(byte[] bytes) {

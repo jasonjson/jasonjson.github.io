@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Print numbers from 1 to the largest number with N digits by recursion.</em></strong><br />
+<p><strong><em>Print numbers from 1 to the largest number with N digits by recursion.</em></strong></p>
 
 
 ``` java

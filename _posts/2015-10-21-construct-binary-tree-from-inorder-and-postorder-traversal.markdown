@@ -6,6 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Construct a binary tree from inorder and postorder traversal</em></strong></p>
+
+
 ``` java
 //same ideas as above, except the last element in postorder is the root
 //be careful about the length of subtrees, run some examples on paper

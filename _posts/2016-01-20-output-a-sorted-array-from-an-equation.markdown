@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an equation y = ax^2 + bx + c, and sorted array X, output sorted Y</em></strong></p>
 
+
 ``` java
 
 public class Solution {

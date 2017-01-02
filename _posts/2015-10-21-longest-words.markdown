@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a dictionary, find all of the longest words in the dictionary.</em></strong></p>
 
+
 ``` java
 class Solution {
     public ArrayList<string> longestWords(String[] dictionary) {

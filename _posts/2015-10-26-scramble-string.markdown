@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.</em></strong></p>
 
+
 <p><a href="http://www.cnblogs.com/yuzhangcmu/p/4189152.html">See detailed explanations</a></p>
 ``` java
 public class Solution {

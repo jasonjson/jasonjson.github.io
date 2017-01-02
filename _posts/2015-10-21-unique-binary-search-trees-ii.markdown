@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.</em></strong><br />
+<p><strong><em>Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.</em></strong></p>
 
 
 ``` java

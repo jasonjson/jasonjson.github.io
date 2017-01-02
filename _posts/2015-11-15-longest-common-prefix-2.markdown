@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Write a function to find the longest common prefix string amongst an array of strings.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public String longestCommonPrefix(String[] strs) {

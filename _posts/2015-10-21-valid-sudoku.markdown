@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Determine whether a Sudoku is valid.The Sudoku board could be partially filled, where empty cells are filled with the character ..</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean isValidSudoku(char[][] board) {

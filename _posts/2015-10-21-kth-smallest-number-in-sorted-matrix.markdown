@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Find the kth smallest number in at row and column sorted matrix.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

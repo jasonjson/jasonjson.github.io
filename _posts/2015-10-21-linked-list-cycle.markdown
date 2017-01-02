@@ -6,9 +6,9 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list, determine if it has a cycle in it. Follow up:<br />
+<p><strong><em>Given a linked list, determine if it has a cycle in it. Follow up:</p>
 
-Can you solve it without using extra space?</em></strong><br />
+Can you solve it without using extra space?</em></strong></p>
 
 ``` java
 public class Solution {

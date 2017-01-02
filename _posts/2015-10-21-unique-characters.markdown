@@ -6,7 +6,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Implement an algorithm to determine if a string has all unique characters.</em></strong><br />
+<p><strong><em>Implement an algorithm to determine if a string has all unique characters.</em></strong></p>
 
 
 ``` java

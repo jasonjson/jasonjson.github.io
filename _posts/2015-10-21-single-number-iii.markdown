@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Given 2n + 2 numbers, every numbers occurs twice except two, find them.</em></strong><br />
+<p><strong><em>Given 2n + 2 numbers, every numbers occurs twice except two, find them.</em></strong></p>
 
 
 ``` java

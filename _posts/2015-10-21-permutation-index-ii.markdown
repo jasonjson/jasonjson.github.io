@@ -6,7 +6,7 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given a permutation which may contain repeated numbers, find its index in all the permutations of these numbers, which are ordered in lexicographical order. The index begins at 1.</em></strong><br />
+<p><strong><em>Given a permutation which may contain repeated numbers, find its index in all the permutations of these numbers, which are ordered in lexicographical order. The index begins at 1.</em></strong></p>
 
 
 ``` java

@@ -6,13 +6,13 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Given an integer array with no duplicates. A max tree building on this array is defined as follow:</em></strong><br />
+<p><strong><em>Given an integer array with no duplicates. A max tree building on this array is defined as follow:</em></strong></p>
 
-1: The Cartesian tree for a sequence has one node for each number in the sequence. Each node is associated with a single sequence value.<br />
-2: A symmetric (in-order) traversal of the tree results in the original sequence. That is, the left subtree consists of the values earlier than the root in the sequence order, while the right subtree consists of the values later than the root, and a similar ordering constraint holds at each lower node of the tree.<br />
-3: The tree has the heap property: the parent of any non-root node has a smaller value than the node itself.<br />
-单调栈，每遍历到一个元素，将栈中小于该元素的结点合并，将合并后新的结点挂在当前结点的左侧。合并的时候，因为栈中的结点的值是递增的，所以直接将第一个结点挂下第二个结点的右侧。另外，这种树有个学名叫做笛卡树。<br />
-<a href="https://en.wikipedia.org/wiki/Cartesian_tree">wikipedia</a><br />
+1: The Cartesian tree for a sequence has one node for each number in the sequence. Each node is associated with a single sequence value.</p>
+2: A symmetric (in-order) traversal of the tree results in the original sequence. That is, the left subtree consists of the values earlier than the root in the sequence order, while the right subtree consists of the values later than the root, and a similar ordering constraint holds at each lower node of the tree.</p>
+3: The tree has the heap property: the parent of any non-root node has a smaller value than the node itself.</p>
+单调栈，每遍历到一个元素，将栈中小于该元素的结点合并，将合并后新的结点挂在当前结点的左侧。合并的时候，因为栈中的结点的值是递增的，所以直接将第一个结点挂下第二个结点的右侧。另外，这种树有个学名叫做笛卡树。</p>
+<a href="https://en.wikipedia.org/wiki/Cartesian_tree">wikipedia</a></p>
 
 ``` java
 public class Solution {

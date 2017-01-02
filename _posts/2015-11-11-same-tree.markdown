@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given two binary trees, write a function to check if they are equal or not.<br />
+<p><strong><em>Given two binary trees, write a function to check if they are equal or not.</p>
 
 Two binary trees are considered equal if they are structurally identical and the nodes have the same value.</em></strong></p>
 ``` java

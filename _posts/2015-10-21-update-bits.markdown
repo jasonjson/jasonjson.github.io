@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Given two 32-bit numbers, N and M, and two bit positions, i and j. Write a method to set all bits between i and j in N equal to M (eg , M becomes a substring of N located at i and starting at j)</em></strong><br />
+<p><strong><em>Given two 32-bit numbers, N and M, and two bit positions, i and j. Write a method to set all bits between i and j in N equal to M (eg , M becomes a substring of N located at i and starting at j)</em></strong></p>
 
 
 ``` java

@@ -7,7 +7,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Evaluate the value of an arithmetic expression in Reverse Polish Notation.<br />
+<p><strong><em>Evaluate the value of an arithmetic expression in Reverse Polish Notation.</p>
 
 Valid operators are +, -, *, /. Each operand may be an integer or another expression.</em></strong></p>
 ``` java

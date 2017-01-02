@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></strong><br />
+<p><strong><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></strong></p>
 
 
 ``` java

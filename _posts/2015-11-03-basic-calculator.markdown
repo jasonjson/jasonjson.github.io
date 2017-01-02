@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Implement a basic calculator to evaluate a simple expression string.<br />
+<p><strong><em>Implement a basic calculator to evaluate a simple expression string.</p>
 
-The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces .<br />
+The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces .</p>
 You may assume that the given expression is always valid.</em></strong></p>
 ``` java
 public class Solution {

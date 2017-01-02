@@ -7,10 +7,10 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list where every node represents a linked list and contains two pointers of its type:<br />
+<p><strong><em>Given a linked list where every node represents a linked list and contains two pointers of its type:</p>
 
-(i) Pointer to next node in the main list (we call it ‘right’ pointer in below code)<br />
-(ii) Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).<br />
+(i) Pointer to next node in the main list (we call it ‘right’ pointer in below code)</p>
+(ii) Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).</p>
 All linked lists are sorted.Write a function flatten() to flatten the lists into a single linked list.</em></strong></p>
 ``` java
 class Solution {

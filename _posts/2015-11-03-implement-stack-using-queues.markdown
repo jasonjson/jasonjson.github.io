@@ -6,11 +6,11 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Implement the following operations of a stack using queues.<br />
+<p><strong><em>Implement the following operations of a stack using queues.</p>
 
-push(x) -- Push element x onto stack.<br />
-pop() -- Removes the element on top of the stack.<br />
-top() -- Get the top element.<br />
+push(x) -- Push element x onto stack.</p>
+pop() -- Removes the element on top of the stack.</p>
+top() -- Get the top element.</p>
 empty() -- Return whether the stack is empty.</em></strong></p>
 ``` java
 class MyStack {

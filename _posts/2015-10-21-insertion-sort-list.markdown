@@ -7,7 +7,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Sort a linked list using insertion sort.</em></strong><br />
+<p><strong><em>Sort a linked list using insertion sort.</em></strong></p>
 
 
 ``` java

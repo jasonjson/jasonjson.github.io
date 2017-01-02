@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>The size of the hash table is not determinate at the very beginning. If the total size of keys is too large (e.g. size >= capacity / 10), we should double the size of the hash table and rehash every keys.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

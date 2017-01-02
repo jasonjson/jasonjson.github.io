@@ -6,7 +6,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. Each number in C may only be used once in the combination.</em></strong><br />
+<p><strong><em>Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. Each number in C may only be used once in the combination.</em></strong></p>
 
 
 ``` java

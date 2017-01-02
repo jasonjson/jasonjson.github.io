@@ -6,6 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Preorder traversal a binary tree</em></strong></p>
+
+
 ``` java
 public class Solution {
     public List<integer> preorderTraversal(TreeNode root) {

@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a string S, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation.</em></strong></p>
 
+
 ``` java
 public class Solution {
 //The key point is to find the longest palindrome starting from the first character, and then reverse the remaining part as the prefix to s.

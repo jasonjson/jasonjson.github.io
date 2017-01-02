@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array nums, return the number of range sums that lie in [lower, upper] inclusive. Range sum S(i, j) is defined as the sum of the elements in nums between indices i and j (i ≤ j), inclusive.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int countRangeSum(int[] nums, int lower, int upper) {

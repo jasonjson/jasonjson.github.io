@@ -10,12 +10,13 @@ author: Jason
 ---
 <p><strong><em>Given an unsorted array, find the maximum difference between the successive elements in its sorted form. Return 0 if the array contains less than 2 elements.</em></strong></p>
 
+
 <ol>
-<li>Suppose there are N elements and they range from A to B.<br />
-Then the maximum gap will be no smaller than ceiling[(B - A) / (N - 1)]<br />
+<li>Suppose there are N elements and they range from A to B.</p>
+Then the maximum gap will be no smaller than ceiling[(B - A) / (N - 1)]</p>
 Let the length of a bucket to be len = ceiling[(B - A) / (N - 1)], then we will have at most num = (B - A) / len + 1 of bucket</li>
-<li>For any number K in the array, we can easily find out which bucket it belongs by calculating loc = (K - A) / len and therefore maintain the maximum and minimum elements in each bucket.<br />
-Since the maximum difference between elements in the same buckets will be at most len - 1, so the final answer will not be taken from two elements in the same buckets.<br />
+<li>For any number K in the array, we can easily find out which bucket it belongs by calculating loc = (K - A) / len and therefore maintain the maximum and minimum elements in each bucket.</p>
+Since the maximum difference between elements in the same buckets will be at most len - 1, so the final answer will not be taken from two elements in the same buckets.</p>
 两个bucket的距离最少是len,已经大于len - 1</li>
 <li>For each non-empty buckets p, find the next non-empty buckets q, then q.min - p.max could be the potential answer to the question. Return the maximum of all those values.</li>
 </ol>

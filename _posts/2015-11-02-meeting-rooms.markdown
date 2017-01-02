@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), determine if a person could attend all meetings.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean canAttendMeetings(Interval[] intervals) {

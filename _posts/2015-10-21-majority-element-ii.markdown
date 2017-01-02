@@ -7,7 +7,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given an integer array of size n, find all elements that appear more than $\floor *{n/3}$ times. The algorithm should run in linear time and in O(1) space.</em></strong><br />
+<p><strong><em>Given an integer array of size n, find all elements that appear more than $\floor *{n/3}$ times. The algorithm should run in linear time and in O(1) space.</em></strong></p>
 
 
 ``` java

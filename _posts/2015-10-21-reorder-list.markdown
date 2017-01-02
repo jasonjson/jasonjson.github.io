@@ -7,9 +7,9 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given a singly linked list L: L0 - L1 - ...  - Ln-1 - Ln,<br />
+<p><strong><em>Given a singly linked list L: L0 - L1 - ...  - Ln-1 - Ln,</p>
 
-reorder it to: L0 - Ln - L1 - Ln-1 - L2 - Ln-2 - ... You must do this in-place without altering the nodes' values.</em></strong><br />
+reorder it to: L0 - Ln - L1 - Ln-1 - L2 - Ln-2 - ... You must do this in-place without altering the nodes' values.</em></strong></p>
 
 ``` java
 public class Solution {

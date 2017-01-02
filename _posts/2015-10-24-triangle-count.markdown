@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given an array of integers, how many three numbers can be found in the array, so that we can build an triangle whose three edges length is the three numbers that we find?</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

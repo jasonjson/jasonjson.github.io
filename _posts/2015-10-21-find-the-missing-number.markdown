@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an array contains N numbers of 0 .. N, find which number doesn't exist in the array.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int missingNumber(int[] nums) {

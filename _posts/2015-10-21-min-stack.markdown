@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Implement a stack with min() function, which will return the smallest number in the stack. It should support push, pop and min operation all in O(1) cost.</em></strong></p>
 
+
 ``` java
 public class MinStack {
     Stack<integer> stack1;

@@ -6,7 +6,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given sorted array of doubles, return the another sorted array of doubles where all elements are the squares from the input array.</em></strong><br />
+<p><strong><em>Given sorted array of doubles, return the another sorted array of doubles where all elements are the squares from the input array.</em></strong></p>
 
 
 ``` java

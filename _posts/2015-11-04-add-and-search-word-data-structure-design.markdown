@@ -6,10 +6,10 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Design a data structure that supports the following two operations:<br />
+<p><strong><em>Design a data structure that supports the following two operations:</p>
 
-void addWord(word)<br />
-bool search(word)<br />
+void addWord(word)</p>
+bool search(word)</p>
 search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.</em></strong></p>
 ``` java
 public class WordDictionary {

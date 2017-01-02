@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given a unsorted array with integers, find the median of it. A median is the middle number of the array after it is sorted. If there are even numbers in the array, return the N/2 th number after sorted.</em></strong><br />
+<p><strong><em>Given a unsorted array with integers, find the median of it. A median is the middle number of the array after it is sorted. If there are even numbers in the array, return the N/2 th number after sorted.</em></strong></p>
 
 
 ``` java

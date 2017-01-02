@@ -9,7 +9,8 @@ author: Jason
 ---
 <p><strong><em>Given a sequence of integers, find the longest increasing subsequence (LIS). You code should return the length of the LIS.</em></strong></p>
 
-<p><a href="http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/">read more</a><br />
+
+<p><a href="http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/">read more</a></p>
 
 ``` java
 public class Solution {

@@ -6,8 +6,11 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Invert a binary tree</em></strong></p>
+
+
 ``` java
-***public class Solution {
+public class Solution {
     /**
      * @param root: a TreeNode, the root of the binary tree
      * @return: nothing
@@ -22,6 +25,11 @@ author: Jason
         invertBinaryTree(root.left);
         invertBinaryTree(root.right);
     }
+}
+```
+
+``` java
+public class Solution {
     //iterative
     public void invertBinaryTree(TreeNode root) {
         // write your code here

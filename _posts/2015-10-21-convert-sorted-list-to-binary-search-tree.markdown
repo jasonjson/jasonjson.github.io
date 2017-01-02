@@ -9,7 +9,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</em></strong><br />
+<p><strong><em>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</em></strong></p>
 
 
 ``` java

@@ -7,9 +7,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree. You may assume each number in the sequence is unique.<br />
+<p><strong><em>Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree. You may assume each number in the sequence is unique.</p>
 
-Follow up:<br />
+Follow up:</p>
 Could you do it using only constant space complexity?</em></strong></p>
 ``` java
 //keeping a stack of nodes (just their values) of which we're still in the left subtree. If the next number is smaller than the last stack value, then we're still in the left subtree of all stack nodes, so just push the new one onto the stack. But once the next number is larger than last stack value, we must now be in their right subtrees (or even further, in the right subtree of an ancestor). Also, use the popped values as a lower bound, since being in their right subtree means we must never come across a smaller number anymore.

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>An abbreviation of a word follows the form <first letter><number><last letter>. Below are some examples of word abbreviations: Assume you have a dictionary and given a word, find whether its abbreviation is unique in the dictionary. A word's abbreviation is unique if no other word from the dictionary has the same abbreviation.</last></number></first></em></strong></p>
 
+
 ``` java
 public class ValidWordAbbr {
     private HashMap<String, String> map = new HashMap<String, String>();

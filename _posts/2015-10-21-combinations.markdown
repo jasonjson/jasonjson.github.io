@@ -6,7 +6,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.</em></strong><br />
+<p><strong><em>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.</em></strong></p>
 
 
 ``` java

@@ -7,7 +7,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</em></strong><br />
+<p><strong><em>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</em></strong></p>
 
 
 ``` java

@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a collection of intervals, merge all overlapping intervals.</em></strong></p>
 
+
 ``` java
 class Solution {
     /**

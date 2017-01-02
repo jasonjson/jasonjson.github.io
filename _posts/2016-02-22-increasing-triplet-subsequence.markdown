@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean increasingTriplet(int[] nums) {

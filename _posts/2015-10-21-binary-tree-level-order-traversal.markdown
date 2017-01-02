@@ -6,6 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Binary tree level order traversal</em></strong></p>
+
+
 ``` java
 public class Solution {
     /**

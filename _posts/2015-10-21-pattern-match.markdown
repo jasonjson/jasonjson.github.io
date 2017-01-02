@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a pattern and a string str, find if str follows the same pattern.You are given a pattern, such as [a b a b]. You are also given a string, example "redblueredblue".</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean wordPatternMatch(String pattern, String str) {

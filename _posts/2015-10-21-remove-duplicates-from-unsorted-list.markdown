@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Write a removeDuplicates() function which takes a list and deletes any duplicate nodes from the list. The list is not sorted.</em></strong><br />
+<p><strong><em>Write a removeDuplicates() function which takes a list and deletes any duplicate nodes from the list. The list is not sorted.</em></strong></p>
 
 
 ``` java

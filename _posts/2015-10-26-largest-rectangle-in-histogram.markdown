@@ -9,8 +9,9 @@ author: Jason
 ---
 <p><strong><em>Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</em></strong></p>
 
-<p><a href="http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html">See detailed explanation</a><br />
-<a href="http://www.geeksforgeeks.org/largest-rectangle-under-histogram/">Read more</a><br />
+
+<p><a href="http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html">See detailed explanation</a></p>
+<a href="http://www.geeksforgeeks.org/largest-rectangle-under-histogram/">Read more</a></p>
 
 ``` java
 public class Solution {
@@ -38,9 +39,9 @@ public class Solution {
 }
 ```
 <p>&lt;</p>
-<p>pre><br />
-public class Solution {<br />
-    public int largestRectangleArea(int[] height) {<br />
+<p>pre></p>
+public class Solution {</p>
+    public int largestRectangleArea(int[] height) {</p>
         if (height == null || height.length == 0) return 0;</p>
 ``` java
     Stack&lt;Integer&gt; stack = new Stack&lt;Integer&gt;();

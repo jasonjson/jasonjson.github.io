@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a sorted linked list, delete all duplicates such that each element appear only once.</em></strong><br />
+<p><strong><em>Given a sorted linked list, delete all duplicates such that each element appear only once.</em></strong></p>
 
 
 ``` java

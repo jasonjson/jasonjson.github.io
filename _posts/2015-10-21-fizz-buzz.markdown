@@ -6,11 +6,11 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given number n. Print number from 1 to n. But:<br />
+<p><strong><em>Given number n. Print number from 1 to n. But:</p>
 
-when number is divided by 3, print "fizz".<br />
-when number is divided by 5, print "buzz".<br />
-when number is divided by both 3 and 5, print "fizz buzz".</em></strong><br />
+when number is divided by 3, print "fizz".</p>
+when number is divided by 5, print "buzz".</p>
+when number is divided by both 3 and 5, print "fizz buzz".</em></strong></p>
 
 ``` java
 class Solution {

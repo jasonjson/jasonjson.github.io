@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>The n-queens puzzle is the problem of placing n queens on an n $\times$ n chessboard such that no two queens attack each other.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public ArrayList<ArrayList<string>> solveNQueens(int n) {

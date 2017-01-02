@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>The structure of Expression Tree is a binary tree to evaluate certain expressions. All leaves of the Expression Tree have an number string value. All non-leaves of the Expression Tree have an operator string value. Now, given an expression array, build the expression tree of this expression, return the root of this expression tree.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

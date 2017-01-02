@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Using O(1) time to check whether an integer n is a power of 2.</em></strong><br />
+<p><strong><em>Using O(1) time to check whether an integer n is a power of 2.</em></strong></p>
 
 
 ``` java

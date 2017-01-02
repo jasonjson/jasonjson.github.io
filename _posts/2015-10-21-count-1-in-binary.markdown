@@ -8,7 +8,8 @@ author: Jason
 ---
 <p><strong><em>Count how many 1 in binary representation of a 32-bit integer. follow up: Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the Hamming weight).</em></strong></p>
 
-<p><a href="http://www.java-samples.com/showtutorial.php?tutorialid=60">unsigned right shift</a><br />
+
+<p><a href="http://www.java-samples.com/showtutorial.php?tutorialid=60">unsigned right shift</a></p>
 
 ``` java
 public class Solution {

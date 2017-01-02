@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Implement pow(x, n).</em></strong></p>
 
+
 ``` java
 public class Solution {
     public double myPow(double x, int n) {

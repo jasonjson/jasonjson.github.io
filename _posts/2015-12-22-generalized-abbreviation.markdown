@@ -7,10 +7,10 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Write a function to generate the generalized abbreviations of a word.<br />
+<p><strong><em>Write a function to generate the generalized abbreviations of a word.</p>
 
-Example:<br />
-Given word = "word", return the following list (order does not matter):<br />
+Example:</p>
+Given word = "word", return the following list (order does not matter):</p>
 ["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]</em></strong></p>
 ``` java
 public class Solution {

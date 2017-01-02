@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.</em></strong></p>
 
+
 ``` java
 //1. locker #k is opened toggled for each factor of k. For instance, locker 15 is opened on rounds 1, 3, 5, 15.
 //2. If the number of rounds if odd, then the locker will remain open. If the number of rounds is even, the the lock will remain closed.

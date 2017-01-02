@@ -7,7 +7,7 @@ categories:
 - Palindrome
 author: Jason
 ---
-<p><strong><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.</em></strong><br />
+<p><strong><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.</em></strong></p>
 
 
 ``` java

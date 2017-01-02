@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a string s and a dictionary of words dict, determine if s can be break into a space-separated sequence of one or more dictionary words.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean wordBreak(String s, Set<string> wordDict) {

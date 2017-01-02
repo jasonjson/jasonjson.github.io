@@ -6,7 +6,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a list of numbers that may has duplicate numbers, return all possible subsets</em></strong><br />
+<p><strong><em>Given a list of numbers that may has duplicate numbers, return all possible subsets</em></strong></p>
 
 
 ``` java

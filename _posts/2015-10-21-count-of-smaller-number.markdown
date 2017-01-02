@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller that the given integer.</em></strong></p>
 
+
 ``` java
 public class Solution {
    /**

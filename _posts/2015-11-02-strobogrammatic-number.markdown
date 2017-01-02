@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).<br />
+<p><strong><em>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).</p>
 
-Write a function to determine if a number is strobogrammatic. The number is represented as a string.<br />
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.</p>
 For example, the numbers "69", "88", and "818" are all strobogrammatic.</em></strong></p>
 ``` java
 public class Solution {

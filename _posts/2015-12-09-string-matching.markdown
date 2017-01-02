@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>给一个字典，里面全是string，字典很大，可能有几百万个string。然后写一个方法判断输入是否有一个typo，否则返回false。比如，字典有google，facebook，amazon等。输入google返回false，因为没有typo。输入geogle，返回true，因为有一个typo。输入geogla，返回false，因为有多于一个的typo。</em></strong></p>
 
+
 ``` java
 class Solution {
     static class TrieNode {

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer, write a function to determine if it is a power of three.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean isPowerOfThree(int n) {

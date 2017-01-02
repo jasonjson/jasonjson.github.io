@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given a string, we can "shift" each of its letter to its successive letter, for example: "abc" -> "bcd". We can keep "shifting" which forms the sequence:<br />
+<p><strong><em>Given a string, we can "shift" each of its letter to its successive letter, for example: "abc" -> "bcd". We can keep "shifting" which forms the sequence:</p>
 
-"abc" -> "bcd" -> ... -> "xyz"<br />
+"abc" -> "bcd" -> ... -> "xyz"</p>
 Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.</em></strong></p>
 ``` java
 public class Solution {

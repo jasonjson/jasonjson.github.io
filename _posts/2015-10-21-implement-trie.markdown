@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Implement a trie with insert, search, and startsWith methods.</em></strong></p>
 
+
 ``` java
 class TrieNode {
     boolean storeWord = false;

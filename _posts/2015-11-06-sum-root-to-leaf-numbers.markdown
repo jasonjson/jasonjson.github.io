@@ -6,9 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.<br />
+<p><strong><em>Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.</p>
 
-An example is the root-to-leaf path 1->2->3 which represents the number 123.<br />
+An example is the root-to-leaf path 1->2->3 which represents the number 123.</p>
 Find the total sum of all root-to-leaf numbers.</em></strong></p>
 ``` java
 public class Solution {

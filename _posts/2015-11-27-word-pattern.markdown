@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a pattern and a string str, find if str follows the same pattern.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean wordPattern(String pattern, String str) {

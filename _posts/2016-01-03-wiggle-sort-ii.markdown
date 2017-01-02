@@ -8,7 +8,8 @@ author: Jason
 ---
 <p><strong><em>Given an unsorted array nums, reorder it such that nums[0] &lt; nums[1] > nums[2] &lt; nums[3]....(wiggle sort I: nums[0] &lt;= nums[1] >= nums[2] &lt;= nums[3]...)</em></strong></p>
 
-<p><a href="https://leetcode.com/discuss/77122/simple-modulo-solution">explanation</a><br />
+
+<p><a href="https://leetcode.com/discuss/77122/simple-modulo-solution">explanation</a></p>
 
 ``` java
 public class Solution {

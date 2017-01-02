@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

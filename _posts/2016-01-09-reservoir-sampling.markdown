@@ -9,7 +9,8 @@ author: Jason
 ---
 <p><strong><em>Reservoir sampling is a family of randomized algorithms for randomly choosing k samples from a list of n items, where n is either a very large or unknown number.</em></strong></p>
 
-<p><a href="http://www.geeksforgeeks.org/reservoir-sampling/">read more</a><br />
+
+<p><a href="http://www.geeksforgeeks.org/reservoir-sampling/">read more</a></p>
 
 ``` java
 public class Solution {

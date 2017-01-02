@@ -6,13 +6,13 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a non-empty binary search tree and a target value, find k values in the BST that are closest to the target.</em></strong><br />
+<p><strong><em>Given a non-empty binary search tree and a target value, find k values in the BST that are closest to the target.</em></strong></p>
 
-Note:<br />
-Given target value is a floating point.<br />
-You may assume k is always valid, that is: k ≤ total nodes.<br />
+Note:</p>
+Given target value is a floating point.</p>
+You may assume k is always valid, that is: k ≤ total nodes.</p>
 You are guaranteed to have only one unique set of k values in the BST that are closest to the target.</p>
-<p>Follow up:<br />
+<p>Follow up:</p>
 Assume that the BST is balanced, could you solve it in less than O(n) runtime (where n = total nodes)? Divide and conquer, get the result from left subtree and right subtree then merge</p>
 ``` java
 public class Solution {

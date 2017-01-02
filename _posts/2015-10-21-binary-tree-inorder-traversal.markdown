@@ -6,6 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Inorder traversal a binary tree</em></strong></p>
+
+
 ``` java
 public class Solution {
     /**

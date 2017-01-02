@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Numbers keep coming, return the median of numbers at every time a new number added.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

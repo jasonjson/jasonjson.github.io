@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, find the sequence of gray code. A gray code sequence must begin with 0 and with cover all 2n integers.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

@@ -6,7 +6,7 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given a list of integers, which denote a permutation. Find the previous permutation in ascending order.</em></strong><br />
+<p><strong><em>Given a list of integers, which denote a permutation. Find the previous permutation in ascending order.</em></strong></p>
 
 
 ``` java

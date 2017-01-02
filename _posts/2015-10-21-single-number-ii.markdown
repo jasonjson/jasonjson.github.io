@@ -6,7 +6,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Given 3n + 1 numbers, every numbers occurs triple times except one, find it.</em></strong><br />
+<p><strong><em>Given 3n + 1 numbers, every numbers occurs triple times except one, find it.</em></strong></p>
 
 
 ``` java

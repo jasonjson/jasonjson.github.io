@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Implement a function to check if a linked list is a palindrome.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean isPalindrome(ListNode head) {

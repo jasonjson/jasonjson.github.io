@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Implement a basic calculator to evaluate a simple expression string.<br />
+<p><strong><em>Implement a basic calculator to evaluate a simple expression string.</p>
 
-The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero.<br />
+The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero.</p>
 You may assume that the given expression is always valid.</em></strong></p>
 ``` java
 public class Solution {

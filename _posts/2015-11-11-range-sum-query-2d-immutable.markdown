@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by (row1, col1), (row2, col2).</em></strong></p>
 
+
 ``` java
 public class NumMatrix {
     private int[][] matrix;

@@ -6,6 +6,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
+<p><strong><em>Construct a binary tree from preorder and inorder traversal</em></strong></p>
+
+
 ``` java
 //basic idea: the first element in preorder is the root
 //the root int inorder divides the inorder into left subtree and right subtree, which are also subtrees in preorder

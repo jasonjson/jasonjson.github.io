@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

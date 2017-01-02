@@ -6,7 +6,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Write a method anagram(s,t) to decide if two strings are anagrams or not.</em></strong><br />
+<p><strong><em>Write a method anagram(s,t) to decide if two strings are anagrams or not.</em></strong></p>
 
 
 ``` java

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.</em></strong></p>
 
+
 ``` java
 public class Solution { //level order traversal
     public List<integer> rightSideView(TreeNode root) {

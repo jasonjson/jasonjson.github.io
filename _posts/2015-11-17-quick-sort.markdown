@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Quick sort an integer array</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

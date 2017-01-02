@@ -22,9 +22,9 @@ linkedin_username: in/yuanresume
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
-#disqus_shortname: zhaoyuxiang   
+disqus_shortname: mickeyliu5
 # get one: https://disqus.com/admin/signup/
-# duoshuo_shortname: clark-zhao  
+duoshuo_shortname: mickeyliu5
 # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
@@ -35,7 +35,7 @@ gems:
 
 # Build settings
 paginate: 30
-paginate_path: "/page:num"
+paginate_path: "/blog/page:num/"
 
 highlighter: rouge
 markdown: kramdown

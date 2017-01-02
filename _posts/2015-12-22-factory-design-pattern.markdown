@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Factory design pattern</em></strong></p>
 
+
 ``` java
 public class Solution {
     static interface Shape {

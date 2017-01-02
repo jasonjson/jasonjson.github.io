@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Find the number Weak Connected Component in the directed graph. Each node in the graph contains a label and a list of its neighbors. (a connected set of a directed graph is a subgraph in which any two vertices are connected by direct edge path.)</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

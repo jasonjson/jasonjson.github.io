@@ -7,7 +7,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Determine the number of bits required to flip if you want to convert integer n to integer m.</em></strong><br />
+<p><strong><em>Determine the number of bits required to flip if you want to convert integer n to integer m.</em></strong></p>
 
 
 ``` java

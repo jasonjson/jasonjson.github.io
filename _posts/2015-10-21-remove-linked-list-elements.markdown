@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Remove all elements from a linked list of integers that have value val.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

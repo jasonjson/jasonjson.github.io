@@ -7,9 +7,9 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given a permutation which contains no repeated number, find its index in all the permutations of these numbers, which are ordered in lexicographical order. The index begins at 1.</em></strong><br />
+<p><strong><em>Given a permutation which contains no repeated number, find its index in all the permutations of these numbers, which are ordered in lexicographical order. The index begins at 1.</em></strong></p>
 
-<a href="http://algorithm.yuanbin.me/zh-cn/exhaustive_search/permutation_index.html">See explanations here</a><br />
+<a href="http://algorithm.yuanbin.me/zh-cn/exhaustive_search/permutation_index.html">See explanations here</a></p>
 
 ``` java
 public class Solution {

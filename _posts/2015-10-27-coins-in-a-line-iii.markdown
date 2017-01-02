@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>There are n coins in a line. Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins. Could you please decide the first player will win or lose?</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean firstWillWin(int[] values) {

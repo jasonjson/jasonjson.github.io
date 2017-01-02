@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array, heapify it into a min-heap array. For a heap array A, A[0] is the root of heap, and for each A[i], A[i * 2 + 1] is the left child of A[i] and A[i * 2 + 2] is the right child of A[i].</em></strong></p>
 
+
 ``` java
     //Start from index of n/2 since the node with index of n/2 is that last interval node with child.
     //For parent, left and right child, find the smallest to make it as parent, until the last level.

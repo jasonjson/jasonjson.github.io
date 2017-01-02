@@ -7,7 +7,7 @@ categories:
 - Palindrome
 author: Jason
 ---
-<p><strong><em>Given a string s, partition s such that every substring of the partition is a palindrome.<br />
+<p><strong><em>Given a string s, partition s such that every substring of the partition is a palindrome.</p>
 
 Return the minimum cuts needed for a palindrome partitioning of s.</em></strong></p>
 ``` java

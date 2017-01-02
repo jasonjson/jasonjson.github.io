@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Validate if a given string is numeric.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

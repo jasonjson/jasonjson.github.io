@@ -7,10 +7,10 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it. This matrix has the following properties:<br />
+<p><strong><em>Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it. This matrix has the following properties:</p>
 
-Integers in each row are sorted from left to right.<br />
-Integers in each column are sorted from up to bottom.<br />
+Integers in each row are sorted from left to right.</p>
+Integers in each column are sorted from up to bottom.</p>
 No duplicate integers in each row or column.</em></strong></p>
 ``` java
 public class Solution {

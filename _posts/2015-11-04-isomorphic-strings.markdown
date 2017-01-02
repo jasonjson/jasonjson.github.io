@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given two strings s and t, determine if they are isomorphic.<br />
+<p><strong><em>Given two strings s and t, determine if they are isomorphic.</p>
 
-Two strings are isomorphic if the characters in s can be replaced to get t.<br />
+Two strings are isomorphic if the characters in s can be replaced to get t.</p>
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.</em></strong></p>
 ``` java
 public class Solution {

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive. The update(i, val) function modifies nums by updating the element at index i to val.</em></strong></p>
 
+
 <p><a href="https://www.youtube.com/watch?v=CWDQJGaN1gY">read more</a></p>
 ``` java
 public class NumArray {

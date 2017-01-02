@@ -6,13 +6,13 @@ categories:
 - Divide and Conquer
 author: Jason
 ---
-<p><strong><em>There is an integer matrix which has the following features:<br />
+<p><strong><em>There is an integer matrix which has the following features:</p>
 
-1: The numbers in adjacent positions are different.<br />
-2: The matrix has n rows and m columns.<br />
-3: For all i &lt; m, A[0][i] &lt; A[1][i] &amp;&amp; A[n - 2][i] > A[n - 1][i].<br />
+1: The numbers in adjacent positions are different.</p>
+2: The matrix has n rows and m columns.</p>
+3: For all i &lt; m, A[0][i] &lt; A[1][i] &amp;&amp; A[n - 2][i] > A[n - 1][i].</p>
 4: For all j &lt; n, A[j][0] &lt; A[j][1] &amp;&amp; A[j][m - 2] > A[j][m - 1].</em></strong></p>
-<p><a href="http://courses.csail.mit.edu/6.006/spring11/lectures/lec02.pdf">Read more</a><br />
+<p><a href="http://courses.csail.mit.edu/6.006/spring11/lectures/lec02.pdf">Read more</a></p>
 
 ``` java
 class Solution {

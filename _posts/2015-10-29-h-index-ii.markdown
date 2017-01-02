@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?</em></strong></p>
 
+
 <p>The basic idea comes from the description h of his/her N papers have at least h citations each. Therefore, we know if "mid + 1" is a valid h index, it means value of position "citationsSize - mid - 1" must exceed "mid". After we find a valid h index, we go on searching on the right part to see if we can find a larger h index. If it's not a valid h index, the h index can be found in the left part and we simply follow the standard binary search to solve this problem.</p>
 ``` java
 public class Solution {

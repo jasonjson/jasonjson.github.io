@@ -6,9 +6,9 @@ categories:
 - Subarray
 author: Jason
 ---
-<p><strong><em>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] + nums[j] + nums[k] &lt; target.<br />
+<p><strong><em>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] + nums[j] + nums[k] &lt; target.</p>
 
-For example, given nums = [-2, 0, 1, 3], and target = 2.<br />
+For example, given nums = [-2, 0, 1, 3], and target = 2.</p>
 Return 2. Because there are two triplets which sums are less than 2:</em></strong></p>
 ``` java
 public class Solution {

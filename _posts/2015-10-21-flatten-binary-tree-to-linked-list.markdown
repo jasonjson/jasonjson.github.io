@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Flatten a binary tree to a fake "linked list" in pre-order traversal. Here we use the right pointer in TreeNode as the next pointer in ListNode.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public void flatten(TreeNode root) {

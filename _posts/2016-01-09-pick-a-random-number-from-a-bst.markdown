@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Randomly pick a number fro binary searach tree</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

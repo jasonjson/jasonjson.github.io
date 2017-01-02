@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a 2D binary matrix filled with 0's and 1's, find the largest square containing all 1's and return its area.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int maximalSquare(char[][] matrix) {

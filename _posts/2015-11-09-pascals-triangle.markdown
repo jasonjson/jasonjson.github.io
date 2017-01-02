@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given numRows, generate the first numRows of Pascal's triangle.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<List<integer>> generate(int numRows) {

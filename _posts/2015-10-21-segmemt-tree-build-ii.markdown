@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Implement a build method with a given array, so that we can create a corresponding segment tree with every node value represent the corresponding interval max value in the array, return the root of this segment tree.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Calculate the an a^n % b where a, b and n are all 32bit integers.</em></strong><br />
+<p><strong><em>Calculate the an a^n % b where a, b and n are all 32bit integers.</em></strong></p>
 
 
 ``` java

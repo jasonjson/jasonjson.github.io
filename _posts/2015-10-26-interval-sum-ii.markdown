@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer array in the construct method, implement two methods query(start, end) and modify(index, value): For query(start, end), return the sum from index start to index end in the given array. For modify(index, value), modify the number in the given index to value</em></strong></p>
 
+
 ``` java
 public class Solution {
     class segmentTreeNode {

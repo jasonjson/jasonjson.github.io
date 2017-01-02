@@ -7,7 +7,7 @@ categories:
 - Palindrome
 author: Jason
 ---
-<p><strong><em>Given a singly linked list of integers, write a function that returns true if the given list is palindrome, else false.</em></strong><br />
+<p><strong><em>Given a singly linked list of integers, write a function that returns true if the given list is palindrome, else false.</em></strong></p>
 
 
 ``` java

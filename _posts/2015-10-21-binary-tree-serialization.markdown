@@ -7,7 +7,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Design an algorithm and write code to serialize and deserialize a binary tree. Writing the tree to a file is called 'serialization' and reading back from the file to reconstruct the exact same binary tree is 'deserialization'.</em></strong><br />
+<p><strong><em>Design an algorithm and write code to serialize and deserialize a binary tree. Writing the tree to a file is called 'serialization' and reading back from the file to reconstruct the exact same binary tree is 'deserialization'.</em></strong></p>
 
 
 ``` java

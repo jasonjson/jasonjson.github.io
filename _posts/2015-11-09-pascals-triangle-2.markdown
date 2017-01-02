@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an index k, return the kth row of the Pascal's triangle.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<integer> getRow(int rowIndex) {

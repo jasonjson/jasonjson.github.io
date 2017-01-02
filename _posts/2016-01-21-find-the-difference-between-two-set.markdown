@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>找出两个数组的差，比如A = [1,1,1,2,2,2], B= [2,2,3]，在A出现在B不出现的集合是[1,1,1,2]， 在B出现在A    不出现的集合是[3]</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

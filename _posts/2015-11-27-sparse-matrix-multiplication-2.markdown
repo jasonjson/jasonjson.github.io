@@ -6,9 +6,9 @@ categories:
 - Matrix
 author: Jason
 ---
-<p><strong><em>Given two sparse matrices A and B, return the result of AB.</em></strong><br />
+<p><strong><em>Given two sparse matrices A and B, return the result of AB.</em></strong></p>
 
-<a href="http://www.cs.cmu.edu/~scandal/cacm/node9.html">read more</a><br />
+<a href="http://www.cs.cmu.edu/~scandal/cacm/node9.html">read more</a></p>
 
 ``` java
 public class Solution {

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given two strings, find the longest common subsequence (LCS). Your code should return the length of LCS.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

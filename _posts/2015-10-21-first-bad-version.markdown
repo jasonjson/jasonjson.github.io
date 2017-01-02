@@ -6,7 +6,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>The code base version is an integer start from 1 to n. One day, someone committed a bad version in the code case, so it caused this version and the following versions are all failed in the unit tests. Find the first bad version.</em></strong><br />
+<p><strong><em>The code base version is an integer start from 1 to n. One day, someone committed a bad version in the code case, so it caused this version and the following versions are all failed in the unit tests. Find the first bad version.</em></strong></p>
 
 
 ``` java

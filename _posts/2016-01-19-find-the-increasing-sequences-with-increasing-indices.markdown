@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Find three numbers in an array such that a &lt; b &lt; c and indices of a b c are also in ascending order</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

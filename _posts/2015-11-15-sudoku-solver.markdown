@@ -7,7 +7,7 @@ categories:
 - Matrix
 author: Jason
 ---
-<p><strong><em>Write a program to solve a Sudoku puzzle by filling the empty cells.<br />
+<p><strong><em>Write a program to solve a Sudoku puzzle by filling the empty cells.</p>
 
 Empty cells are indicated by the character '.'. You may assume that there will be only one unique solution.</em></strong></p>
 ``` java

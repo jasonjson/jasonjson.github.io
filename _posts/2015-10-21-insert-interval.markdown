@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given a non-overlapping interval list which is sorted by start point. Insert a new interval into it, make sure the list is still in order and non-overlapping (merge intervals if necessary).</em></strong></p>
 
+
 ``` java
 class Solution {
     /**

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a column title as appear in an Excel sheet, return its corresponding column number.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int titleToNumber(String s) {

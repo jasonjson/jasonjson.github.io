@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Swap two digits within a integer. For instance, 123456, swap 2nd and 4th digit, output 125436</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static void main(String[] args) {

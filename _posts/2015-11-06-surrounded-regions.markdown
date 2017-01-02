@@ -6,7 +6,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.<br />
+<p><strong><em>Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.</p>
 
 A region is captured by flipping all 'O's into 'X's in that surrounded region.</em></strong></p>
 ``` java

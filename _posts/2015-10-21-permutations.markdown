@@ -7,7 +7,7 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given a list of numbers, return all possible permutations.</em></strong><br />
+<p><strong><em>Given a list of numbers, return all possible permutations.</em></strong></p>
 
 
 ``` java

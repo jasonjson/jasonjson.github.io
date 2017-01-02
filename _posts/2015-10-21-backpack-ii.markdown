@@ -6,7 +6,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given n items with size Ai and value Vi, and a backpack with size m. What's the maximum value can you put into the backpack?</em></strong><br />
+<p><strong><em>Given n items with size Ai and value Vi, and a backpack with size m. What's the maximum value can you put into the backpack?</em></strong></p>
 
 
 ``` java

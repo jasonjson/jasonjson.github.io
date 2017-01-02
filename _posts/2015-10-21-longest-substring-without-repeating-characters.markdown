@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a string, find the length of the longest substring without repeating characters.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int lengthOfLongestSubstring(String s) {

@@ -6,7 +6,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>find the length of longest substring with left sum equal to right sum</em></strong><br />
+<p><strong><em>find the length of longest substring with left sum equal to right sum</em></strong></p>
 
 
 ``` java

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Implement an iterator to flatten a 2d vector.</em></strong></p>
 
+
 ``` java
 public class Vector2D {
     Iterator<integer> iterator;

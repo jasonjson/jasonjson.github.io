@@ -6,12 +6,12 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>The count-and-say sequence is the sequence of integers beginning as follows:<br />
+<p><strong><em>The count-and-say sequence is the sequence of integers beginning as follows:</p>
 
-1, 11, 21, 1211, 111221, ...<br />
-1 is read off as "one 1" or 11.<br />
-11 is read off as "two 1s" or 21.<br />
-21 is read off as "one 2, then one 1" or 1211.</em></strong><br />
+1, 11, 21, 1211, 111221, ...</p>
+1 is read off as "one 1" or 11.</p>
+11 is read off as "two 1s" or 21.</p>
+21 is read off as "one 2, then one 1" or 1211.</em></strong></p>
 
 ``` java
 public class Solution {

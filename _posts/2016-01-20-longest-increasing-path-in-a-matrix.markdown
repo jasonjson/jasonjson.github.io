@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given an integer matrix, find the length of the longest increasing path. From each cell, you can either move to four directions: left, right, up or down. You may NOT move diagonally or move outside of the boundary (i.e. wrap-around is not allowed).</em></strong></p>
 
+
 ``` java
 public class Solution {
     public static int longestIncreasingPath(int[][] matrix) {

@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Reverse a linked list from position m to n.</em></strong><br />
+<p><strong><em>Reverse a linked list from position m to n.</em></strong></p>
 
 
 ``` java

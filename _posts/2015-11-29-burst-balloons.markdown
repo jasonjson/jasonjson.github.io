@@ -7,7 +7,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.<br />
+<p><strong><em>Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.</p>
 
 Find the maximum coins you can collect by bursting the balloons wisely.</em></strong></p>
 <p><a href="https://leetcode.com/discuss/72216/share-some-analysis-and-explanations">read more</a></p>

@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Design and implement a TwoSum class. It should support the following operations: add and find.<br />
+<p><strong><em>Design and implement a TwoSum class. It should support the following operations: add and find.</p>
 
-add - Add the number to an internal data structure.<br />
+add - Add the number to an internal data structure.</p>
 find - Find if there exists any pair of numbers which sum is equal to the value.</em></strong></p>
 ``` java
 public class TwoSum {

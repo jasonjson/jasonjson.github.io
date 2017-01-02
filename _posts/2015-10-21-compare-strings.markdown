@@ -6,7 +6,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Compare two strings A and B, determine whether A contains all of the characters in B. The characters in string A and B are all Upper Case letters.</em></strong><br />
+<p><strong><em>Compare two strings A and B, determine whether A contains all of the characters in B. The characters in string A and B are all Upper Case letters.</em></strong></p>
 
 
 ``` java

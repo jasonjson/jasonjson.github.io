@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public String convertToTitle(int n) {

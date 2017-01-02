@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.</em></strong></p>
 
+
 ``` java
 //Whenever the sum is negative, reset it and let the car start from next point.
 //In the mean time, add up all of the left gas to total. If it's negative finally, return -1 since //it's impossible to finish.

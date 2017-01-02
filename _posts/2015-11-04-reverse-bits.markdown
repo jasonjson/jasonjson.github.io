@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Reverse bits of a given 32 bits unsigned integer.</em></strong></p>
 
+
 ``` java
 public class Solution {
     // you need treat n as an unsigned value

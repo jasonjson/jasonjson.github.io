@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

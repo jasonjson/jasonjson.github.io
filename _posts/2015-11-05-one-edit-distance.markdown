@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given two strings S and T, determine if they are both one edit distance apart.</em></strong></p>
 
+
 ``` java
 //The basic idea is we keep comparing s and t from the beginning, once there's a difference, we try to replace s(i) with t(j) or insert t(j) to s(i) and see if the rest are the same.
 public class Solution {

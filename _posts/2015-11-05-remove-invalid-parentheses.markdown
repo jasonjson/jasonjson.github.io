@@ -7,7 +7,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.<br />
+<p><strong><em>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.</p>
 
 Note: The input string may contain letters other than the parentheses ( and ).</em></strong></p>
 ``` java

@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a linked list, swap every two adjacent nodes and return its head.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public ListNode swapPairs(ListNode head) {

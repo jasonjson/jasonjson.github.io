@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Reverse digits of an integer.</em></strong><br />
+<p><strong><em>Reverse digits of an integer.</em></strong></p>
 
 
 ``` java

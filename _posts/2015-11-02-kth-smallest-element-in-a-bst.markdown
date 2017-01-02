@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public int kthSmallest(TreeNode root, int k) {

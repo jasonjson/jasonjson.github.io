@@ -7,7 +7,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Compute and return the square root of x.</em></strong><br />
+<p><strong><em>Compute and return the square root of x.</em></strong></p>
 
 
 ``` java

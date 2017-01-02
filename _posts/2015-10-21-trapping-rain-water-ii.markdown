@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given n x m non-negative integers representing an elevation map 2d where the area of each cell is 1 x 1, compute how much water it is able to trap after raining.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public class cell {

@@ -9,7 +9,8 @@ author: Jason
 ---
 <p><strong><em>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.</em></strong></p>
 
-<p><a href="https://leetcode.com/discuss/38206/ac-o-n-solution-in-java-using-buckets-with-explanation">Read more</a><br />
+
+<p><a href="https://leetcode.com/discuss/38206/ac-o-n-solution-in-java-using-buckets-with-explanation">Read more</a></p>
 
 ``` java
 public class Solution {

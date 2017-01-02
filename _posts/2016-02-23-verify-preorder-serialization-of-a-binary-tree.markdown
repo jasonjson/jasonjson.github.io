@@ -6,6 +6,7 @@ categories: algorithms Brain_teaser
 ---
 <p><strong><em>Given a string of comma separated values, verify whether it is a correct preorder traversal serialization of a binary tree. Find an algorithm without reconstructing the tree.</em></strong></p>
 
+
 ``` java
 public class Solution {
 //the number of empty is nodes is always one more than the number of numeric nodes in the end

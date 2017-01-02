@@ -18,23 +18,23 @@ author: Jason
 <p>Here’s a summary of the differences between threads and processes:</p>
 <ol>
 <li>
-<p>Threads are easier to create than processes since they<br />
+<p>Threads are easier to create than processes since they</p>
 don't require a separate address space.</p>
 </li>
 <li>
-<p>Multithreading requires careful programming since threads<br />
-share data strucures that should only be modified by one thread<br />
-at a time.  Unlike threads, processes don't share the same<br />
+<p>Multithreading requires careful programming since threads</p>
+share data strucures that should only be modified by one thread</p>
+at a time.  Unlike threads, processes don't share the same</p>
 address space.</p>
 </li>
 <li>
-<p>Threads are considered lightweight because they use far<br />
+<p>Threads are considered lightweight because they use far</p>
 less resources than processes.</p>
 </li>
 <li>
-<p>Processes are independent of each other.  Threads, since they<br />
-share the same address space are interdependent, so caution<br />
-must be taken so that different threads don't step on each other.<br />
+<p>Processes are independent of each other.  Threads, since they</p>
+share the same address space are interdependent, so caution</p>
+must be taken so that different threads don't step on each other.</p>
 This is really another way of stating #2 above.</p>
 </li>
 <li>

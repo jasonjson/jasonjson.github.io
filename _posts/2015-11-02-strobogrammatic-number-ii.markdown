@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down). Find all strobogrammatic numbers that are of length = n.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<string> findStrobogrammatic(int n) {

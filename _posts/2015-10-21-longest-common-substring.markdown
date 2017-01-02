@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given two strings, find the longest common substring. Return the length of it.</em></strong></p>
 
+
 ``` java
 public class Solution {
     /**

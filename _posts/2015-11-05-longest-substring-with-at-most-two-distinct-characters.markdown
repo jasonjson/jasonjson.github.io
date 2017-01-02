@@ -6,9 +6,9 @@ categories:
 - Two Pointers
 author: Jason
 ---
-<p><strong><em>Given a string, find the length of the longest substring T that contains at most 2 distinct characters.<br />
+<p><strong><em>Given a string, find the length of the longest substring T that contains at most 2 distinct characters.</p>
 
-For example, Given s = “eceba”,<br />
+For example, Given s = “eceba”,</p>
 T is "ece" which its length is 3.</em></strong></p>
 ``` java
 public class Solution {

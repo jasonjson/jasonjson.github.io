@@ -8,7 +8,8 @@ author: Jason
 ---
 <p><strong><em>Implement strStr().Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</em></strong></p>
 
-<p><a href="https://www.youtube.com/watch?v=GTJr8OvyEVQ">read more</a><br />
+
+<p><a href="https://www.youtube.com/watch?v=GTJr8OvyEVQ">read more</a></p>
 
 ``` java
 public class Solution {

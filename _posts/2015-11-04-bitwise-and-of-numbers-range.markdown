@@ -7,7 +7,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.<br />
+<p><strong><em>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.</p>
 
 For example, given the range [5, 7], you should return 4.</em></strong></p>
 ``` java

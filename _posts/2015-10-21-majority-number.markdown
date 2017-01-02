@@ -7,7 +7,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p>**<em>Given an array of size n, find the majority element. The majority element is the element that appears more than $\floor</em> {n/2}$ times***<br />
+<p>**<em>Given an array of size n, find the majority element. The majority element is the element that appears more than $\floor</em> {n/2}$ times***</p>
 
 ``` java
 public class Solution {

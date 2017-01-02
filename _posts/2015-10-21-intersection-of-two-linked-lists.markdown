@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Write a program to find the node at which the intersection of two singly linked lists begins.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

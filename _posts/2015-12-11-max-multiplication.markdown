@@ -9,6 +9,7 @@ author: Jason
 ---
 <p><strong><em>Given two integer arrays, find the kth smallest multiplication by picking one element from each array.</em></strong></p>
 
+
 ``` java
 class Solution {
     public static void main(String[] args) {

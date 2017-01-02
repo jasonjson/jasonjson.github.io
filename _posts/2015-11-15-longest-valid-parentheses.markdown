@@ -6,9 +6,9 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.<br />
+<p><strong><em>Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.</p>
 
-For "(()", the longest valid parentheses substring is "()", which has length = 2.<br />
+For "(()", the longest valid parentheses substring is "()", which has length = 2.</p>
 Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.</em></strong></p>
 ``` java
 //和 maximum histogram 非常类似

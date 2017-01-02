@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>An image is represented by a binary matrix with 0 as a white pixel and 1 as a black pixel. The black pixels are connected, i.e., there is only one black region. Pixels are connected horizontally and vertically. Given the location (x, y) of one of the black pixels, return the area of the smallest (axis-aligned) rectangle that encloses all black pixels.</em></strong></p>
 
+
 ``` java
 public class Solution {
     int maxX = Integer.MIN_VALUE, minX = Integer.MAX_VALUE, maxY = Integer.MIN_VALUE, minY = Integer.MAX_VALUE;//find the largest and smallest x, y coordinates for black pixel

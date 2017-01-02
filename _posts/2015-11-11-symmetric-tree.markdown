@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</em></strong></p>
 
+
 ``` java
 public class Solution {
     public boolean isSymmetric(TreeNode root) {

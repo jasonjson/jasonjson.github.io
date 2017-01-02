@@ -6,7 +6,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Find the Nth number in Fibonacci sequence. A Fibonacci sequence is defined as follow: The first two numbers are 0 and 1. The ith number is the sum of i-1th number and i-2 th number.</em></strong><br />
+<p><strong><em>Find the Nth number in Fibonacci sequence. A Fibonacci sequence is defined as follow: The first two numbers are 0 and 1. The ith number is the sum of i-1th number and i-2 th number.</em></strong></p>
 
 
 ``` java

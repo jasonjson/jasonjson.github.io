@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given integers n and k, along with p1, p2, · · · , pn ∈ [0, 1], you want to determine the probability of obtaining exactly k heads when n biased coins are tossed independently at random, where pi is the probability that the ith coin comes up heads. Give an O(n2) algorithm for this task. Assume you can multiply and add two numbers in [0,1] in O(1) time.</em></strong></p>
 
+
 ``` java
 class Solution {
     public static void main(String[] args) {

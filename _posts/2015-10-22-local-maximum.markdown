@@ -6,7 +6,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Suppose we are given an array A[1···n] with the special property that A[1] ≤ A[2] and A[n − 1] >= A[n]. We say that an element A[i] is a local maximum if it is less than or equal to both its neighbors, or more formally, if A[i − 1] ≤ A[i] and A[i] ≥ A[i + 1]. For example, there are four local maximum in the following array: We can obviously find a<br />
+<p><strong><em>Suppose we are given an array A[1···n] with the special property that A[1] ≤ A[2] and A[n − 1] >= A[n]. We say that an element A[i] is a local maximum if it is less than or equal to both its neighbors, or more formally, if A[i − 1] ≤ A[i] and A[i] ≥ A[i + 1]. For example, there are four local maximum in the following array: We can obviously find a</p>
 
 local maximum in O(n) time by scanning through the array. Describe and analyze an algorithm that finds one local maximum in O(log n) time. (It is enough if your algorithm finds one local maximum. There is no need to find all local maxima.)</em></strong></p>
 ``` java

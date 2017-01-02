@@ -7,7 +7,7 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Partition an integers array into odd number first and even number second.</em></strong><br />
+<p><strong><em>Partition an integers array into odd number first and even number second.</em></strong></p>
 
 
 ``` java

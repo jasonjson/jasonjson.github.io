@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given two values k1 and k2 (where k1 &lt; k2) and a root pointer to a Binary Search Tree. Find all the keys of tree in range k1 to k2. i.e. print all x such that k1&lt;=x&lt;=k2 and x is a key of given BST. Return all the keys in ascending order.</em></strong><br />
+<p><strong><em>Given two values k1 and k2 (where k1 &lt; k2) and a root pointer to a Binary Search Tree. Find all the keys of tree in range k1 to k2. i.e. print all x such that k1&lt;=x&lt;=k2 and x is a key of given BST. Return all the keys in ascending order.</em></strong></p>
 
 
 ``` java

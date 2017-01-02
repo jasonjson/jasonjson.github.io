@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Follow up for problem "Populating Next Right Pointers in Each Node".<br />
+<p><strong><em>Follow up for problem "Populating Next Right Pointers in Each Node".</p>
 
 What if the given tree could be any binary tree? Would your previous solution still work?</em></strong></p>
 ``` java

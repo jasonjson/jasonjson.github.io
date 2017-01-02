@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary search tree and a new tree node, insert the node into the tree. You should keep the tree still be a valid binary search tree.</em></strong><br />
+<p><strong><em>Given a binary search tree and a new tree node, insert the node into the tree. You should keep the tree still be a valid binary search tree.</em></strong></p>
 
 
 ``` java

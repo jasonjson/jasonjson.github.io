@@ -7,12 +7,12 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>A message containing letters from A-Z is being encoded to numbers using the following mapping:<br />
+<p><strong><em>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
 
-'A' -> 1<br />
-'B' -> 2<br />
-...<br />
-'Z' -> 26<br />
+'A' -> 1</p>
+'B' -> 2</p>
+...</p>
+'Z' -> 26</p>
 Given an encoded message containing digits, determine the total number of ways to decode it.</em></strong></p>
 ``` java
 public class Solution {

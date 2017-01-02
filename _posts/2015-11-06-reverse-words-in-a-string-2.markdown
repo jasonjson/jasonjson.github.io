@@ -6,10 +6,10 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given an input string, reverse the string word by word.<br />
+<p><strong><em>Given an input string, reverse the string word by word.</p>
 
-For example,<br />
-Given s = "the sky is blue",<br />
+For example,</p>
+Given s = "the sky is blue",</p>
 return "blue is sky the".</em></strong></p>
 ``` java
 public class Solution {

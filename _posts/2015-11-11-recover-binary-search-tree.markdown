@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Two elements of a binary search tree (BST) are swapped by mistake.<br />
+<p><strong><em>Two elements of a binary search tree (BST) are swapped by mistake.</p>
 
 Recover the tree without changing its structure.</em></strong></p>
 ``` java

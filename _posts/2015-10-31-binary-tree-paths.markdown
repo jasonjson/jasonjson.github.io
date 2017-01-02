@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given a binary tree, return all root-to-leaf paths.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<string> binaryTreePaths(TreeNode root) {

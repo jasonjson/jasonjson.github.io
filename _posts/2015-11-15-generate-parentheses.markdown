@@ -8,6 +8,7 @@ author: Jason
 ---
 <p><strong><em>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</em></strong></p>
 
+
 ``` java
 public class Solution {
     public List<string> generateParenthesis(int n) {

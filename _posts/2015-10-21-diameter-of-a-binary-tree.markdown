@@ -6,7 +6,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree.</em></strong><br />
+<p><strong><em>The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree.</em></strong></p>
 
 
 ``` java

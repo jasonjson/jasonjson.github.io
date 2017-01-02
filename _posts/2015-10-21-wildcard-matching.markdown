@@ -6,11 +6,11 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Implement wildcard pattern matching with support for '?' and '</em>'.<br />
+<p><strong><em>Implement wildcard pattern matching with support for '?' and '</em>'.</p>
 
-'?' Matches any single character.<br />
-'<em>' Matches any sequence of characters (including the empty sequence).<br />
-The matching should cover the entire input string (not partial).</em></strong><br />
+'?' Matches any single character.</p>
+'<em>' Matches any sequence of characters (including the empty sequence).</p>
+The matching should cover the entire input string (not partial).</em></strong></p>
 
 ``` java
 public class Solution {

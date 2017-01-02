@@ -6,7 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Reverse a singly linked list.</em></strong><br />
+<p><strong><em>Reverse a singly linked list.</em></strong></p>
 
 
 ``` java
