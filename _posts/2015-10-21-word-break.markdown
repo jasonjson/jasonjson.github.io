@@ -2,29 +2,14 @@
 layout: post
 title: Word Break
 date: 2015-10-21 12:34:38.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - DFS Backtracking
 - Dynamic Programming
-tags: []
-meta:
-  _spost_short_title: ''
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _wpcom_is_markdown: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1457079520;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1414;}i:1;a:1:{s:2:"id";i:93;}i:2;a:1:{s:2:"id";i:1050;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string s and a dictionary of words dict, determine if s can be break into a space-separated sequence of one or more dictionary words.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public boolean wordBreak(String s, Set<string> wordDict) {
         if (wordDict == null || wordDict.size() == 0) return false;
@@ -47,10 +32,8 @@ public class Solution {
         return dp[s.length()];
     }
 }
-</string></pre>
-<p>[/expand]</p>
-<p>[expand title = "code2"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param s: A string s
@@ -75,5 +58,4 @@ public class Solution {
         return false;
     }
 }//Memory Limit Exceed, use dp instead
-</string></string></pre>
-<p>[/expand]</p>
+```

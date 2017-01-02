@@ -2,30 +2,16 @@
 layout: post
 title: Permutation index
 date: 2015-10-21 03:38:04.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - DFS Backtracking
 - Permutation
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468324630;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:341;}i:1;a:1:{s:2:"id";i:109;}i:2;a:1:{s:2:"id";i:1058;}}}}
-  _inbound_impressions_count: '0'
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a permutation which contains no repeated number, find its index in all the permutations of these numbers, which are ordered in lexicographical order. The index begins at 1.</em></strong><br />
+
 <a href="http://algorithm.yuanbin.me/zh-cn/exhaustive_search/permutation_index.html">See explanations here</a><br />
-[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param A an integer array
@@ -47,5 +33,4 @@ public class Solution {
         return index;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

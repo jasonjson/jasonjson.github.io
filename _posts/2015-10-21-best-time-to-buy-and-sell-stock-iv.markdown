@@ -2,26 +2,12 @@
 layout: post
 title: Best Time to Buy and Sell Stock IV
 date: 2015-10-21 12:48:31.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466387043;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:941;}i:1;a:1:{s:2:"id";i:1280;}i:2;a:1:{s:2:"id";i:1626;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete at most k transactions.</em></strong></p>
+
 <p>传统的动态规划我们会这样想，到第i天时进行j次交易的最大收益，要么等于到第i-1天时进行j次交易的最大收益（第i天价格低于第i-1天的价格），要么等于到第i-1天时进行j-1次交易，然后第i天进行一次交易（第i天价格高于第i-1天价格时）。于是得到动规方程如下（其中diff = prices[i] – prices[i – 1]）：</p>
 <p>profit[i][j] = max(profit[i – 1][j], profit[i – 1][j – 1] + diff)<br />
 看起来很有道理，但其实不对，为什么不对呢？因为diff是第i天和第i-1天的差额收益，如果第i-1天当天本身也有交易呢（也就是说第i-1天刚卖出了股票，然后又买入等到第i天再卖出），那么这两次交易就可以合为一次交易，这样profit[i – 1][j – 1] + diff实际上只进行了j-1次交易，而不是最多可以的j次，这样得到的最大收益就小了。</p>
@@ -30,8 +16,7 @@ author:
 <p>local[i][j] = max(global[i – 1][j – 1] , local[i – 1][j] + diff)<br />
 global[i][j] = max(global[i – 1][j], local[i][j])<br />
 local[i][j]和global[i][j]的区别是：local[i][j]意味着在第i天一定有交易（卖出）发生，当第i天的价格高于第i-1天（即diff > 0）时，那么可以把这次交易（第i-1天买入第i天卖出）跟第i-1天的交易（卖出）合并为一次交易，即local[i][j]=local[i-1][j]+diff；当第i天的价格不高于第i-1天（即diff&lt;=0）时，那么local[i][j]=global[i-1][j-1]+diff，而由于diff&lt;=0，所以可写成local[i][j]=global[i-1][j-1]。global[i][j]就是我们所求的前i天最多进行k次交易的最大收益，可分为两种情况：如果第i天没有交易（卖出），那么global[i][j]=global[i-1][j]；如果第i天有交易（卖出），那么global[i][j]=local[i][j]。</p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 class Solution {
     /**
      * @param k: An integer
@@ -64,5 +49,4 @@ class Solution {
         return global[k];
     }
 };
-</pre>
-<p>[/expand]</p>
+```

@@ -2,28 +2,13 @@
 layout: post
 title: Interleaving String
 date: 2015-10-21 12:49:37.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466367939;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1050;}i:1;a:1:{s:2:"id";i:79;}i:2;a:1:{s:2:"id";i:450;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given three strings: s1, s2, s3, determine whether s3 is formed by the interleaving of s1 and s2.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * Determine whether s3 is formed by interleaving of s1 and s2.
@@ -58,5 +43,4 @@ public class Solution {
         return dp[l1][l2];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

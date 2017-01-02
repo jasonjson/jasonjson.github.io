@@ -2,29 +2,16 @@
 layout: post
 title: Reservoir Sampling
 date: 2016-01-09 10:29:27.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469262081;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:107;}i:1;a:1:{s:2:"id";i:1578;}i:2;a:1:{s:2:"id";i:2059;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Reservoir sampling is a family of randomized algorithms for randomly choosing k samples from a list of n items, where n is either a very large or unknown number.</em></strong></p>
+
 <p><a href="http://www.geeksforgeeks.org/reservoir-sampling/">read more</a><br />
-[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
@@ -55,10 +42,8 @@ public class Solution {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title = "generate random int"]</p>
-<pre>
+```
+``` java
 import java.util.Random;
 
 /**
@@ -87,5 +72,4 @@ public static int randInt(int min, int max) {
 
     return randomNum;
 }
-</pre>
-<p>[/expand]</p>
+```

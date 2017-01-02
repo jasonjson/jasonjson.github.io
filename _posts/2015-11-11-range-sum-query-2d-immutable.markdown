@@ -2,28 +2,14 @@
 layout: post
 title: Range Sum Query 2D - Immutable
 date: 2015-11-11 22:02:59.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Matrix
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468665791;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1613;}i:1;a:1:{s:2:"id";i:1671;}i:2;a:1:{s:2:"id";i:1852;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by (row1, col1), (row2, col2).</em></strong></p>
-<p>[expand title = "code1"]</p>
-<pre>
+
+``` java
 public class NumMatrix {
     private int[][] matrix;
     private int[][] sumRow; //sumRow or sumCol, extra col for sumRow, extra row for sumCol
@@ -47,10 +33,8 @@ public class NumMatrix {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="code2"]</p>
-<pre>
+```
+``` java
 public class NumMatrix {
     int[][] matrix;
     public NumMatrix(int[][] matrix) {
@@ -81,5 +65,4 @@ public class NumMatrix {
         return matrix[row2][col2] - matrix[row2][col1 - 1] - matrix[row1 - 1][col2] + matrix[row1 - 1][col1 - 1];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

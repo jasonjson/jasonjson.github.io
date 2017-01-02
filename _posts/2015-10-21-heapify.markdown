@@ -2,28 +2,13 @@
 layout: post
 title: Heapify
 date: 2015-10-21 13:01:40.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466281607;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1058;}i:1;a:1:{s:2:"id";i:109;}i:2;a:1:{s:2:"id";i:499;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an integer array, heapify it into a min-heap array. For a heap array A, A[0] is the root of heap, and for each A[i], A[i * 2 + 1] is the left child of A[i] and A[i * 2 + 2] is the right child of A[i].</em></strong></p>
-<p>[expand title="O(n)"]</p>
-<pre>
+
+``` java
     //Start from index of n/2 since the node with index of n/2 is that last interval node with child.
     //For parent, left and right child, find the smallest to make it as parent, until the last level.
 public class Solution {
@@ -58,5 +43,4 @@ public class Solution {
         A[b] = temp;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

@@ -2,29 +2,15 @@
 layout: post
 title: Valid parentheses
 date: 2015-10-21 03:35:31.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Data Structure
-tags: []
-meta:
-  _series_part: '2'
-  _spost_short_title: ''
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"11a1d0304b7e241b314dc3fd0305bba7";a:2:{s:7:"expires";i:1466852163;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1508;}i:1;a:1:{s:2:"id";i:1286;}i:2;a:1:{s:2:"id";i:516;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+
+``` java
 public class Solution {
     /**
      * @param s A string
@@ -51,5 +37,4 @@ public class Solution {
         return stack.isEmpty();
     }
 }
-</character></character></pre>
-<p>[/expand]</p>
+```

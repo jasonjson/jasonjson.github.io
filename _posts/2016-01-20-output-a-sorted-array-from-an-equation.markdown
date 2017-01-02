@@ -2,27 +2,13 @@
 layout: post
 title: Output a sorted array from an equation
 date: 2016-01-20 18:05:25.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"050d44b488a627caad9e64294981bb2b";a:2:{s:7:"expires";i:1468592721;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:125;}i:1;a:1:{s:2:"id";i:2047;}i:2;a:1:{s:2:"id";i:123;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an equation y = ax^2 + bx + c, and sorted array X, output sorted Y</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 
 public class Solution {
     public static void main(String[] args) {
@@ -85,5 +71,4 @@ public class Solution {
         return result;
     }
 }
-</integer></pre>
-<p>[/expand]</p>
+```

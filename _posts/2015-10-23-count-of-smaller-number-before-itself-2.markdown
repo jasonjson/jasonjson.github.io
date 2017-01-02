@@ -2,28 +2,14 @@
 layout: post
 title: Count of Smaller Number before itself
 date: 2015-10-23 19:46:11.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Binary Search Tree
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467282189;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:499;}i:1;a:1:{s:2:"id";i:1758;}i:2;a:1:{s:2:"id";i:1069;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) . For each element Ai in the array, count the number of element before this element Ai is smaller than it and return count number array.</em></strong></p>
-<p>[expand title = "binary search"]</p>
-<pre>
+
+``` java
 public class Solution {
     public List<integer> countOfSmallerNumberII(int[] A) {
         List<integer> result = new ArrayList<integer>();
@@ -57,10 +43,8 @@ public class Solution {
         return lo;
     }
 }
-</integer></integer></integer></integer></integer></integer></pre>
-<p>[/expand]</p>
-<p>[expand title="segment Tree"]</p>
-<pre>
+```
+``` java
 public class Solution {
    /**
      * @param A: An integer array
@@ -128,5 +112,4 @@ public class Solution {
         root.count = root.left.count + root.right.count;
     }
 }
-</integer></integer></integer></pre>
-<p>[/expand]</p>
+```

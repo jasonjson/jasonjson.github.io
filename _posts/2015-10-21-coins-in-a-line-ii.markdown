@@ -2,29 +2,14 @@
 layout: post
 title: Coins in a Line II
 date: 2015-10-21 13:26:15.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:2:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466754912;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:479;}i:1;a:1:{s:2:"id";i:1081;}i:2;a:1:{s:2:"id";i:388;}}}s:32:"067f18eb200b3707d5903529fe235b3b";a:2:{s:7:"expires";i:1466755569;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1081;}i:1;a:1:{s:2:"id";i:388;}i:2;a:1:{s:2:"id";i:1136;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>There are n coins with different value in a line. Two players take turns to take one or two coins from left side until there are no more coins left. The player who take the coins with the most value wins. Could you please decide the first player will win or lose?</em></strong></p>
-<p>[expand title = "dp"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param values: an array of integers
@@ -51,10 +36,8 @@ public class Solution {
         return dp[n] > sum - dp[n];
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="greedy"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param values: an array of integers
@@ -84,5 +67,4 @@ public class Solution {
         return sum1 > sum2;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

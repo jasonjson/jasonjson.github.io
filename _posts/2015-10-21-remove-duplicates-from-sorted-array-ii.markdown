@@ -2,28 +2,14 @@
 layout: post
 title: Remove Duplicates from Sorted Array II
 date: 2015-10-21 02:24:13.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Integer
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468796752;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:131;}i:1;a:1:{s:2:"id";i:105;}i:2;a:1:{s:2:"id";i:1298;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Follow up for "Remove Duplicates":<br />
+
 What if duplicates are allowed at most twice?</em></strong></p>
-<p>[expand title="code1"]</p>
-<pre>
+``` java
 public class Solution {
     /**
      * @param A: a array of integers
@@ -47,10 +33,9 @@ public class Solution {
         return index + 1;
     }
 }
-</pre>
-<p>[/expand]<br />
-[expand title="code2"]</p>
-<pre>
+```
+
+``` java
 public class Solution {
     //hash map solution
     public int removeDuplicates(int[] nums) {
@@ -67,5 +52,4 @@ public class Solution {
         }
         return j;
     }
-</pre>
-<p>[/expand]</p>
+```

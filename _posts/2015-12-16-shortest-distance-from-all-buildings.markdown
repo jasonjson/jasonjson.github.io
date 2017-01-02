@@ -2,32 +2,18 @@
 layout: post
 title: Shortest Distance from All Buildings
 date: 2015-12-16 22:42:54.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - BFS
 - Brain teaser
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468425991;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1148;}i:1;a:1:{s:2:"id";i:1159;}i:2;a:1:{s:2:"id";i:302;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:<br />
+
 Each 0 marks an empty land which you can pass by freely.<br />
 Each 1 marks a building which you cannot pass through.<br />
 Each 2 marks an obstacle which you cannot pass through.<br />
 The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 //this problem is only slightly different from "best meeting points", but the algorithm is quite different
 public class Solution {
     public int shortestDistance(int[][] grid) {
@@ -85,5 +71,4 @@ public class Solution {
         return result == Integer.MAX_VALUE ? -1 : result;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

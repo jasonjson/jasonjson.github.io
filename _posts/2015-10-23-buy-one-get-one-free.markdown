@@ -2,27 +2,14 @@
 layout: post
 title: Buy one get one free
 date: 2015-10-23 21:00:16.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467197543;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1143;}i:1;a:1:{s:2:"id";i:408;}i:2;a:1:{s:2:"id";i:1280;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>一堆商品，买一个可以送一个，但送的那个的价格必须小于买的那个的价格（强调一下，不能等于）。给定商品总数n和每个商品的价格，求得到全部商品的最少开销。 例如：4个商品价格为[5, 4, 3, 3]，最优解为9，即买5和4，送3和3。 两个test case: [100, 99, 98, 1, 1, 1], [100, 99, 98, 98, 97, 97, 97, 97]</em></strong></p>
+
 <p><a href="http://www.jiuzhang.com/qa/221/">Dynamic programming</a><br />
-[expand title = "DP function"]<br />
+
 首先排序不用说了。从小到大。然后先给出DP的方程：</p>
 <p>定义状态 f[i][j] 为 i 到 j 这一段的最优值（最少花多少钱全买下来）<br />
     f[i][j] = min(f[i + 1][j - 1]+A[j], f[i][k] + f[k+1][j]) 其中k为i到j-1。<br />

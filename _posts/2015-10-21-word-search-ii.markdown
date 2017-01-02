@@ -2,29 +2,14 @@
 layout: post
 title: Word Search II
 date: 2015-10-21 14:40:11.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1464027282;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:531;}i:1;a:1:{s:2:"id";i:1320;}i:2;a:1:{s:2:"id";i:1793;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a matrix of lower alphabets and a dictionary. Find all words in the dictionary that can be found in the matrix. A word can start from any position in the matrix and go left/right/up/down to the adjacent position.</em></strong></p>
-<p>[expand title = "trie and dfs"]</p>
-<pre>
+
+``` java
 public class Solution {
     class TrieNode {
         boolean isWord = false;
@@ -102,10 +87,8 @@ public class Solution {
         }
     }
 }
-</string></string></string></string></string></string></pre>
-<p>[/expand]</p>
-<p>[expand title="code"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public ArrayList<string> wordSearchII(char[][] board, ArrayList<string> words) {
         ArrayList<string> result = new ArrayList<string>();
@@ -142,5 +125,4 @@ public class Solution {
         visited[i][j] = false;
         return false;
     }
-</string></string></string></string></pre>
-<p>[/expand]</p>
+```

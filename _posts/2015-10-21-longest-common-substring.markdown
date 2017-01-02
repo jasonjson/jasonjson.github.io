@@ -2,28 +2,14 @@
 layout: post
 title: Longest Common Substring
 date: 2015-10-21 02:12:17.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
 - String
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465857570;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:396;}i:1;a:1:{s:2:"id";i:1587;}i:2;a:1:{s:2:"id";i:545;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given two strings, find the longest common substring. Return the length of it.</em></strong></p>
-<p>[expand title = "dp"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param A, B: Two string.
@@ -47,10 +33,9 @@ public class Solution {
         return maxLen;
     }
 }
-</pre>
-<p>[/expand]<br />
-[expand title="code"]</p>
-<pre>
+```
+
+``` java
 public class Solution {
     /**
      * @param A, B: Two string.
@@ -73,5 +58,4 @@ public class Solution {
         return maxLen;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

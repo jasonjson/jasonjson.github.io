@@ -2,27 +2,13 @@
 layout: post
 title: Remove Duplicate Letters
 date: 2015-12-09 12:59:38.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467907912;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1508;}i:1;a:1:{s:2:"id";i:317;}i:2;a:1:{s:2:"id";i:1357;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.</em></strong></p>
-<p>[expand title = "stack O(n)"]</p>
-<pre>
+
+``` java
 public class Solution {
     public String removeDuplicateLetters(String s) {
         if (s == null || s.length() == 0) return "";
@@ -49,10 +35,8 @@ public class Solution {
         return sb.reverse().toString();
     }
 }
-</character></character></pre>
-<p>[/expand]</p>
-<p>[expand title="code"]</p>
-<pre>
+```
+``` java
 public class Solution {
     //Given the string s, the greedy choice (i.e., the leftmost letter in the answer) 
     //is the smallest suffix s[i .. ] contains all the unique letters.
@@ -85,5 +69,4 @@ public class Solution {
         return "";
     }
 }
-</pre>
-<p>[/expand]</p>
+```

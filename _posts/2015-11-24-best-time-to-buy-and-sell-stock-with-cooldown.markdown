@@ -2,31 +2,17 @@
 layout: post
 title: Best Time to Buy and Sell Stock with Cooldown
 date: 2015-11-24 09:18:49.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468495424;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:400;}i:1;a:1:{s:2:"id";i:405;}i:2;a:1:{s:2:"id";i:402;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Say you have an array for which the ith element is the price of a given stock on day i.<br />
+
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times) with the following restrictions:<br />
 You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).<br />
 After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class Solution {
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length <= 1) return 0;
@@ -43,10 +29,8 @@ public class Solution {
         return profit[prices.length - 1];
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title = "O(n^2)"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length <= 1) return 0;
@@ -64,5 +48,4 @@ public class Solution {
         return global[prices.length - 1];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

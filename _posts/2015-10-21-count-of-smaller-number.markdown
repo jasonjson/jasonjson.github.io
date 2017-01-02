@@ -2,29 +2,14 @@
 layout: post
 title: Count of Smaller Number
 date: 2015-10-21 13:32:46.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Sorting
 - Subarray
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"eb0efc3e79a303b480aa9b5b5380aad6";a:2:{s:7:"expires";i:1468948249;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:936;}i:1;a:1:{s:2:"id";i:495;}i:2;a:1:{s:2:"id";i:497;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller that the given integer.</em></strong></p>
-<p>[expand title = "segment tree"]</p>
-<pre>
+
+``` java
 public class Solution {
    /**
      * @param A: An integer array
@@ -94,10 +79,8 @@ public class Solution {
         root.count = root.left.count + root.right.count;
     }
 }
-</integer></integer></integer></pre>
-<p>[/expand]</p>
-<p>[expand title="Binary search"]</p>
-<pre>
+```
+``` java
 public class Solution {
    /**
      * @param A: An integer array
@@ -133,5 +116,4 @@ public class Solution {
         return lo;
     }
 }
-</integer></integer></integer></pre>
-<p>[/expand]</p>
+```

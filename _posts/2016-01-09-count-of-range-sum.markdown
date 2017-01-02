@@ -2,27 +2,13 @@
 layout: post
 title: Count of Range Sum
 date: 2016-01-09 23:37:50.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469289532;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1578;}i:1;a:1:{s:2:"id";i:2071;}i:2;a:1:{s:2:"id";i:109;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an integer array nums, return the number of range sums that lie in [lower, upper] inclusive. Range sum S(i, j) is defined as the sum of the elements in nums between indices i and j (i ≤ j), inclusive.</em></strong></p>
-<p>[expand title = "O(nlgn)"]</p>
-<pre>
+
+``` java
 public class Solution {
     public int countRangeSum(int[] nums, int lower, int upper) {
         if (nums == null || nums.length == 0) return 0;
@@ -50,10 +36,8 @@ public class Solution {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="O(n^2)"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public int countRangeSum(int[] nums, int lower, int upper) {
         if (nums == null || nums.length == 0) return 0;
@@ -73,10 +57,8 @@ public class Solution {
         return count;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title = "O(n3)"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {-2, 5, -1};
@@ -101,5 +83,4 @@ public class Solution {
         return count;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

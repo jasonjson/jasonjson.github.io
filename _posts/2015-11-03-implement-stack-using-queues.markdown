@@ -2,31 +2,17 @@
 layout: post
 title: Implement Stack using Queues
 date: 2015-11-03 14:33:19.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468902561;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:442;}i:1;a:1:{s:2:"id";i:1508;}i:2;a:1:{s:2:"id";i:1466;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Implement the following operations of a stack using queues.<br />
+
 push(x) -- Push element x onto stack.<br />
 pop() -- Removes the element on top of the stack.<br />
 top() -- Get the top element.<br />
 empty() -- Return whether the stack is empty.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 class MyStack {
     // Push element x onto stack.
     Queue<integer> q1 = new LinkedList<integer>();
@@ -67,5 +53,4 @@ class MyStack {
         return q1.isEmpty();
     }
 }
-</integer></integer></integer></integer></pre>
-<p>[/expand]</p>
+```

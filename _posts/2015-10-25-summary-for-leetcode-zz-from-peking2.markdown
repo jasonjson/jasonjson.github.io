@@ -2,23 +2,9 @@
 layout: post
 title: Summary for leetcode, zz from peking2
 date: 2015-10-25 10:20:07.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Reading Notes
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"cddd4991353de37b0d50fe1dc73da5ac";a:2:{s:7:"expires";i:1468863849;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1280;}i:1;a:1:{s:2:"id";i:1143;}i:2;a:1:{s:2:"id";i:327;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p>首先声明一下，这里的面试题主要所指数据结构和算法的题目，题目的分析集中在Leetcode上面的题目上。</p>
 <p>我认为一道面试题由以下几个方面组成的</p>

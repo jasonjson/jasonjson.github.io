@@ -2,30 +2,16 @@
 layout: post
 title: Add and Search Word - Data structure design
 date: 2015-11-04 11:39:30.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1463979823;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1793;}i:1;a:1:{s:2:"id";i:531;}i:2;a:1:{s:2:"id";i:583;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Design a data structure that supports the following two operations:<br />
+
 void addWord(word)<br />
 bool search(word)<br />
 search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class WordDictionary {
     class TrieNode {
         boolean storeWord = false;
@@ -76,5 +62,4 @@ public class WordDictionary {
         return trie.search(word, trie.root);
     }
 }
-</pre>
-<p>[/expand]</p>
+```

@@ -2,29 +2,15 @@
 layout: post
 title: House Robber
 date: 2015-10-21 14:15:26.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465438017;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1306;}i:1;a:1:{s:2:"id";i:388;}i:2;a:1:{s:2:"id";i:891;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</em></strong><br />
-[expand title="code"]</p>
-<pre>public class Solution {
+
+
+``` java
     /**
      * @param A: An array of non-negative integers.
      * return: The maximum amount of money you can rob tonight
@@ -58,5 +44,4 @@ author:
         return dp[A.length - 1];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

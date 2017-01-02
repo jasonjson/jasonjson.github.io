@@ -2,28 +2,14 @@
 layout: post
 title: Range Sum Query - Mutable
 date: 2015-11-18 21:19:53.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466604953;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1613;}i:1;a:1:{s:2:"id";i:107;}i:2;a:1:{s:2:"id";i:109;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive. The update(i, val) function modifies nums by updating the element at index i to val.</em></strong></p>
+
 <p><a href="https://www.youtube.com/watch?v=CWDQJGaN1gY">read more</a></p>
-<p>[expand title = "IndexTree"]</p>
-<pre>
+``` java
 public class NumArray {
     private int[] arrs;
     private int[] BTree;
@@ -62,10 +48,8 @@ public class NumArray {
         return getSum(j) - getSum(i-1);//i - 1 not i
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="segmentTree"]</p>
-<pre>
+```
+``` java
 public class NumArray {
     segmentTreeNode root;
     public NumArray(int[] nums) {
@@ -129,5 +113,4 @@ public class NumArray {
         }
     }
 }
-</pre>
-<p>[/expand]</p>
+```

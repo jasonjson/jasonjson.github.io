@@ -2,29 +2,14 @@
 layout: post
 title: Number of Airplanes in the Sky
 date: 2015-10-21 14:33:58.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1463089513;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1244;}i:1;a:1:{s:2:"id";i:1242;}i:2;a:1:{s:2:"id";i:495;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an interval list which are flying and landing time of the flight. How many airplanes are on the sky at most?</em></strong></p>
-<p>[expand title = "code1"]</p>
-<pre>
+
+``` java
 //wrong, this is answer for how many airplanes are on the sky at least
 class Solution {
     public static int count(List<interval> airplanes) {
@@ -45,10 +30,8 @@ class Solution {
         return pq.size();
     }
 }
-</integer></integer></interval></interval></pre>
-<p>[/expand]</p>
-<p>[expand title="code2"]</p>
-<pre>
+```
+``` java
 //起飞是(,降落是),最多有多少对正确的括号组合
 class Solution {
     /**
@@ -89,5 +72,4 @@ class Solution {
         return result;
     }//http://www.cnblogs.com/easonliu/p/4504647.html
 }
-</point></point></point></interval></pre>
-<p>[/expand]</p>
+```

@@ -2,28 +2,13 @@
 layout: post
 title: Nuts & Bolts Problem
 date: 2015-10-21 13:08:03.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Sorting
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _edit_last: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465148253;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1560;}i:1;a:1:{s:2:"id";i:443;}i:2;a:1:{s:2:"id";i:936;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a set of n nuts of different sizes and n bolts of different sizes. There is a one-one mapping between nuts and bolts. Comparison of a nut to another nut or a bolt to another bolt is not allowed. It means nut can only be compared with bolt and bolt can only be compared with nut to see which one is bigger/smaller.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public void sortNutsAndBolts(String[] nuts, String[] bolts, NBComparator compare) {
         if (nuts == null || bolts == null) return;
@@ -59,5 +44,4 @@ public class Solution {
         strings[b] = temp;
     }
 };//http://algorithm.yuanbin.me/zh-cn/problem_misc/nuts_and_bolts_problem.html
-</pre>
-<p>[/expand]</p>
+```

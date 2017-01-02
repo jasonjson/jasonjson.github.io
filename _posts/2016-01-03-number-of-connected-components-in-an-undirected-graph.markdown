@@ -2,28 +2,14 @@
 layout: post
 title: Number of Connected Components in an Undirected Graph
 date: 2016-01-03 19:50:36.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - BFS
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469283843;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:591;}i:1;a:1:{s:2:"id";i:302;}i:2;a:1:{s:2:"id";i:547;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.</em></strong></p>
-<p>[expand title="Union Find"]</p>
-<pre>
+
+``` java
 public class Solution {
     class UnionFind {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -57,10 +43,8 @@ public class Solution {
         return n;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="BFS"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public int countComponents(int n, int[][] edges) {
         if (n == 0) return 0;
@@ -99,5 +83,4 @@ public class Solution {
         return count;
     }
 }
-</integer></integer></integer></integer></integer></pre>
-<p>[/expand]</p>
+```

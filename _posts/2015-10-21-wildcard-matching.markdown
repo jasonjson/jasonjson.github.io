@@ -2,30 +2,17 @@
 layout: post
 title: Wildcard Matching
 date: 2015-10-21 02:15:18.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - String
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465849227;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1056;}i:1;a:1:{s:2:"id";i:1050;}i:2;a:1:{s:2:"id";i:1510;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Implement wildcard pattern matching with support for '?' and '</em>'.<br />
+
 '?' Matches any single character.<br />
 '<em>' Matches any sequence of characters (including the empty sequence).<br />
 The matching should cover the entire input string (not partial).</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public static boolean isMatch(String s, String p) {
         int lenS = s.length(), lenP = p.length();
@@ -57,5 +44,4 @@ public class Solution {
         //check if s.substring(0,lenS-1) match p.substring(0,lenP-1)
     }
 }
-</pre>
-<p>[/expand]</p>
+```

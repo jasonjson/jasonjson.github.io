@@ -2,29 +2,14 @@
 layout: post
 title: Maximum Subarray II
 date: 2015-10-21 12:51:32.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
 - Subarray
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"c31158d1958e353b78ce3c647da78bc0";a:2:{s:7:"expires";i:1467460920;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:553;}i:1;a:1:{s:2:"id";i:414;}i:2;a:1:{s:2:"id";i:417;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an array of integers, find two non-overlapping subarrays which have the largest sum. The number in each subarray should be contiguous. Return the largest sum.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param nums: A list of integers
@@ -54,5 +39,4 @@ public class Solution {
         return max;
     }
 }
-</integer></pre>
-<p>[/expand]</p>
+```

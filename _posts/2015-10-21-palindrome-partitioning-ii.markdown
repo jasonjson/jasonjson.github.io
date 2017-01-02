@@ -2,28 +2,13 @@
 layout: post
 title: Palindrome Partitioning II
 date: 2015-10-21 12:43:09.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _wpas_done_all: '1'
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1464533191;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1422;}i:1;a:1:{s:2:"id";i:307;}i:2;a:1:{s:2:"id";i:93;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string s, cut s into some substrings such that every substring is a palindrome. Return the minimum cuts needed for a palindrome partitioning of s.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param s a string
@@ -67,8 +52,8 @@ public class Solution {
         return true;
     }
 };
-</pre>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param s a string
@@ -111,5 +96,4 @@ public class Solution {
         return palin;
     }
 };
-</pre>
-<p>[/expand]</p>
+```

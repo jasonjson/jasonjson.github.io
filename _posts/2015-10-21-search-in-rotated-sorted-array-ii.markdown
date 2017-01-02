@@ -2,29 +2,16 @@
 layout: post
 title: Search in Rotated Sorted Array II
 date: 2015-10-21 02:29:40.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Integer
 - Sorting
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1464863163;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:157;}i:1;a:1:{s:2:"id";i:1087;}i:2;a:1:{s:2:"id";i:149;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Follow up for "Search in Rotated Sorted Array":<br />
+
 What if duplicates are allowed? Would this affect the run-time complexity? How and why? Write a function to determine if a given target is in the array.</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     /** 
      * param A : an integer rotated sorted array and duplicates are allowed
@@ -61,5 +48,4 @@ public class Solution {
         return false;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

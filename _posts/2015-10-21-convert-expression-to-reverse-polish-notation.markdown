@@ -2,28 +2,12 @@
 layout: post
 title: Convert Expression to Reverse Polish Notation
 date: 2015-10-21 14:12:54.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Data Structure
-tags: []
-meta:
-  _spost_short_title: ''
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468064125;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:516;}i:1;a:1:{s:2:"id";i:1789;}i:2;a:1:{s:2:"id";i:1071;}}}}
-  _wpas_done_all: '1'
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class Solution {
     public ArrayList<string> convertToRPN(String[] expression) {
         ArrayList<string> result = new ArrayList<string>();
@@ -73,5 +57,4 @@ public class Solution {
         }
     }
 }
-</string></string></string></string></string></pre>
-<p>[/expand]</p>
+```

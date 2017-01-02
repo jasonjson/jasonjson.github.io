@@ -2,27 +2,13 @@
 layout: post
 title: Different Ways to Add Parentheses
 date: 2015-11-02 16:24:34.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469056906;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1302;}i:1;a:1:{s:2:"id";i:1414;}i:2;a:1:{s:2:"id";i:536;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are +, - and *.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public List<integer> diffWaysToCompute(String input) {
         if (input == null || input.length() == 0) return new ArrayList<integer>();
@@ -67,5 +53,4 @@ public class Solution {
         return result;
     }
 }
-</integer></integer></integer></integer></string></integer></string></string></integer></integer></pre>
-<p>[/expand]</p>
+```

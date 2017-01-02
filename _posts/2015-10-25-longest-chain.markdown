@@ -2,29 +2,15 @@
 layout: post
 title: Longest chain
 date: 2015-10-25 19:46:33.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - DFS Backtracking
-tags:
 - Two sigma OA
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469252854;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1280;}i:1;a:1:{s:2:"id";i:1143;}i:2;a:1:{s:2:"id";i:996;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>给一个字符串数组, 以任意一个单词开始，删除一个字母 ，如果形成的新字符串还在数组的单词堆里面，则是合法的， chain长度增加1.然后继续往下删，每删一个则长度增加1. 举些例子吧：(a, abcd, bcd, abd, cd, c)：<br />
+
 abcd 删除一个字母可以变成 bcd ， abd， acd，abc。但是只有bcd， acd 可以往下走，所以下面只要考虑这两个。 bcd 可以变成cd 再变成c。 但是abd删除一个单词不能变成数组的一个单词。所以停止。</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class Solution {
     public int longestchain(String[] words) {
         HashSet<string> dict = new HashSet<string>();
@@ -62,5 +48,4 @@ public class Solution {
         return result;
     }
 }
-</string></string></string></pre>
-<p>[/expand]</p>
+```

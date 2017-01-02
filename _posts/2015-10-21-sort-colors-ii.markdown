@@ -2,28 +2,13 @@
 layout: post
 title: Sort Colors II
 date: 2015-10-21 14:38:05.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1455296169;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:573;}i:1;a:1:{s:2:"id";i:45;}i:2;a:1:{s:2:"id";i:443;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an array of n objects with k different colors (numbered from 1 to k), sort them so that objects of the same color are adjacent, with the colors in the order 1, 2, ... k.</em></strong></p>
-<p>[expand title = "code"]</p>
-<pre>
+
+``` java
 class Solution {
     public void sortColors2(int[] colors, int k) {
         if (colors == null || colors.length == 0) return;
@@ -45,10 +30,8 @@ class Solution {
     }
 }
 
-</pre>
-<p>[/expand]</p>
-<p>[expand title="count sort"]</p>
-<pre>
+```
+``` java
 class Solution {
     /**
      * @param colors: A list of integer
@@ -71,5 +54,4 @@ class Solution {
             }
         }
     }
-</pre>
-<p>[/expand]</p>
+```

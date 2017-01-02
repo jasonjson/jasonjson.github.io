@@ -2,30 +2,17 @@
 layout: post
 title: Expression Add Operators
 date: 2015-10-28 12:58:06.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - DFS Backtracking
-tags:
 - Leetcode
-meta:
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _edit_last: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466826269;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:339;}i:1;a:1:{s:2:"id";i:1267;}i:2;a:1:{s:2:"id";i:1424;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.</em></strong></p>
+
 <p><a href="http://segmentfault.com/a/1190000003797204">Read more</a><br />
-[expand title = "code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public List<string> addOperators(String num, int target) {
         List<string> result = new ArrayList<string>();
@@ -54,5 +41,4 @@ public class Solution {
         }
     }
 }
-</string></string></string></string></pre>
-<p>[/expand]</p>
+```

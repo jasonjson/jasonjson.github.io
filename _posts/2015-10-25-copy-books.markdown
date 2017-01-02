@@ -2,28 +2,14 @@
 layout: post
 title: Copy Books
 date: 2015-10-25 10:07:53.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"ee48742fd7da0b1aaab019bb6de3e7f6";a:2:{s:7:"expires";i:1468948236;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:151;}i:1;a:1:{s:2:"id";i:499;}i:2;a:1:{s:2:"id";i:936;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an array A of integer with size of n( means n books and number of pages of each book) and k people to copy the book. You must distribute the continuous id books to one people to copy. (You can give book A[1],A[2] to one people, but you cannot give book A[1], A[3] to one people, because book A[1] and A[3] is not continuous.) Each person have can copy one page per minute. Return the number of smallest minutes need to copy all the books.</em></strong></p>
-<p>[expand title="O(nlg(sum/k) two pointers"]</p>
-<pre>
+
+``` java
 public class Solution {
     public int copyBooks(int[] pages, int k) {
         if (pages == null || pages.length == 0) return 0;
@@ -58,10 +44,8 @@ public class Solution {
         return count <= k;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title = "DP O(n^2 k) dp"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param pages: an array of integers
@@ -96,5 +80,4 @@ public class Solution {
         return dp[k][pages.length];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

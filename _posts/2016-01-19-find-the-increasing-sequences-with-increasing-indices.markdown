@@ -2,27 +2,13 @@
 layout: post
 title: Find the increasing sequences with increasing indices
 date: 2016-01-19 17:00:31.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468773602;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:443;}i:1;a:1:{s:2:"id";i:1073;}i:2;a:1:{s:2:"id";i:1038;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Find three numbers in an array such that a &lt; b &lt; c and indices of a b c are also in ascending order</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {8, 7, 6, 12, 14};
@@ -58,5 +44,4 @@ public class Solution {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

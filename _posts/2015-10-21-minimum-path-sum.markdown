@@ -2,29 +2,13 @@
 layout: post
 title: Minimum Path Sum
 date: 2015-10-21 12:24:23.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Matrix
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1452318734;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:347;}i:1;a:1:{s:2:"id";i:1148;}i:2;a:1:{s:2:"id";i:302;}}}}
-  _inbound_impressions_count: '0'
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.</em></strong></p>
-<p>[expand title="O(1)space"]</p>
-<pre>
+
+``` java
 public class Solution {
     /**
      * @param grid: a list of lists of integers.
@@ -56,10 +40,8 @@ public class Solution {
         return grid[row-1][col-1];
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="O(m*n)space"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param grid: a list of lists of integers.
@@ -89,5 +71,4 @@ public class Solution {
         return path[row-1][col-1];
     }
 }
-</pre>
-<p>[/expand]</p>
+```

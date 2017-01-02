@@ -2,28 +2,14 @@
 layout: post
 title: Surrounded Regions
 date: 2015-11-06 22:47:03.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468629935;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1506;}i:1;a:1:{s:2:"id";i:583;}i:2;a:1:{s:2:"id";i:1133;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.<br />
+
 A region is captured by flipping all 'O's into 'X's in that surrounded region.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class Solution {
     public void solve(char[][] board) {
         if (board == null || board.length == 0) return ;
@@ -54,5 +40,4 @@ public class Solution {
         if (j + 1 < board[0].length - 1) helper(board, i, j + 1);
     }
 }
-</pre>
-<p>[/expand]</p>
+```

@@ -2,24 +2,10 @@
 layout: post
 title: Top 50 Operating System Interview Questions
 date: 2015-11-03 22:49:09.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Reading Notes
-tags:
 - OS
-meta:
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469258547;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1629;}i:1;a:1:{s:2:"id";i:1437;}i:2;a:1:{s:2:"id";i:1400;}}}}
-  _edit_last: '1'
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><a href="http://career.guru99.com/">ZZ from</a></p>
 <ul>

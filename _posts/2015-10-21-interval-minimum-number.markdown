@@ -2,28 +2,13 @@
 layout: post
 title: Interval Minimum Number
 date: 2015-10-21 13:31:18.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Subarray
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"bbf9a95630c8d238f326d9ac73190f69";a:2:{s:7:"expires";i:1455274691;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:497;}i:1;a:1:{s:2:"id";i:499;}i:2;a:1:{s:2:"id";i:936;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an integer array (index from 0 to n-1, where n is the size of this array), and an query list. Each query has two integers [start, end]. For each query, calculate the minimum number between index start and end in the given array, return the result list.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public class SegmentTreeNode {
         int start, end, min;
@@ -71,5 +56,4 @@ public class Solution {
         }
     }
 }
-</integer></integer></interval></integer></pre>
-<p>[/expand]</p>
+```

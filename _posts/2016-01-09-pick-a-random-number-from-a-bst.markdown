@@ -2,26 +2,13 @@
 layout: post
 title: Pick a random number from a BST
 date: 2016-01-09 10:40:16.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465846717;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:276;}i:1;a:1:{s:2:"id";i:47;}i:2;a:1:{s:2:"id";i:1058;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
-<p>[expand title="code"]</p>
-<pre>
+<p><strong><em>Randomly pick a number fro binary searach tree</em></strong></p>
+
+``` java
 public class Solution {
     public static void main(String[] args) {
         TreeNode t1 = new TreeNode(1);
@@ -70,5 +57,4 @@ public class Solution {
         return result;
     }
 }
-</integer></integer></integer></integer></integer></pre>
-<p>[/expand]</p>
+```

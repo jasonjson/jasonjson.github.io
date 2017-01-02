@@ -2,30 +2,16 @@
 layout: post
 title: Longest Increasing Subsequence
 date: 2015-10-21 12:53:11.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
 - Subarray
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467949712;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:453;}i:1;a:1:{s:2:"id";i:109;}i:2;a:1:{s:2:"id";i:1224;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a sequence of integers, find the longest increasing subsequence (LIS). You code should return the length of the LIS.</em></strong></p>
+
 <p><a href="http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/">read more</a><br />
-[expand title = "O(nlgn)"]</p>
-<pre>
+
+``` java
 public class Solution {
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
@@ -58,10 +44,8 @@ public class Solution {
         return hi;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="code"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param nums: The integer array
@@ -89,5 +73,4 @@ public class Solution {
         return maxLen;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

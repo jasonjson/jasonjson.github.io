@@ -2,28 +2,14 @@
 layout: post
 title: Triangle
 date: 2015-10-21 03:56:43.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _inbound_impressions_count: '0'
-  _jetpack_related_posts_cache: a:1:{s:32:"a6541861b60020bd8cdcb170d596ac2b";a:2:{s:7:"expires";i:1460218561;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:380;}i:1;a:1:{s:2:"id";i:421;}i:2;a:1:{s:2:"id";i:1852;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</em></strong><br />
-[expand title="O(n)space"]</p>
-<pre>
+
+
+``` java
 public class Solution {
     /**
      * @param triangle: a list of lists of integers.
@@ -49,10 +35,8 @@ public class Solution {
         return sum[0];
     }
 }
-</integer></pre>
-<p>[/expand]</p>
-<p>[expand title="O(1)space"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public static int minimumTotal(ArrayList<ArrayList<integer>> triangle) {
         if (triangle == null || triangle.size() == 0) return 0;
@@ -76,5 +60,4 @@ public class Solution {
         return min;
     }
 }
-</integer></integer></pre>
-<p>[/expand]</p>
+```

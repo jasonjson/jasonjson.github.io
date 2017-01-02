@@ -2,30 +2,15 @@
 layout: post
 title: Sliding Window Maximum
 date: 2015-10-21 13:01:03.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Data Structure
 - Subarray
-tags: []
-meta:
-  _spost_short_title: ''
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1462913209;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:606;}i:1;a:1:{s:2:"id";i:1218;}i:2;a:1:{s:2:"id";i:1038;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given an array of n integer with duplicate number, and a moving window(size k), move the window at each iteration from the start of the array, find the maximum number inside the window at each moving</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 //For Example: A = [2,1,3,4,6,3,8,9,10,12,56], w=4
 
 //partition the array in blocks of size w=4. The last block may have less then w. 2, 1, 3, 4 | 6, 3, 8, 9 | 10, 12, 56|
@@ -63,10 +48,8 @@ public class Solution {
         return winMax;
     }
 }//we can also use segment tree structure, but TLE..
-</integer></integer></integer></pre>
-<p>[/expand]</p>
-<p>[expand title = "priority queue"]</p>
-<pre>
+```
+``` java
 public class Solution {
     /**
      * @param nums: A list of integers.
@@ -88,10 +71,8 @@ public class Solution {
         return result;
     }
 }
-</integer></integer></integer></integer></integer></pre>
-<p>[/expand]</p>
-<p>[expand title = "deque"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public static int[] maxWindow(int[] nums, int k) {
         //类似于用2个stack实现min的操作，此处用一个deque维持一个递减数列的index
@@ -127,5 +108,4 @@ public class Solution {
         return result;
     }
 }
-</integer></pre>
-<p>[/expand]</p>
+```

@@ -2,28 +2,15 @@
 layout: post
 title: Sparse Matrix Multiplication
 date: 2015-11-27 19:09:59.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Matrix
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469252830;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1069;}i:1;a:1:{s:2:"id";i:966;}i:2;a:1:{s:2:"id";i:347;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given two sparse matrices A and B, return the result of AB.</em></strong><br />
+
 <a href="http://www.cs.cmu.edu/~scandal/cacm/node9.html">read more</a><br />
-[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public int[][] multiply(int[][] A, int[][] B) {
         if (A.length == 0 || B.length == 0) return new int[][]{};
@@ -54,10 +41,8 @@ public class Solution {
         return result;
     }
 }
-</integer></integer></integer></integer></pre>
-<p>[/expand]</p>
-<p>[expand title = "naive"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public int[][] multiply(int[][] A, int[][] B) {
         int row1 = A.length, col1 = A[0].length, row2 = B.length, col2 = B[0].length;
@@ -73,5 +58,4 @@ public class Solution {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

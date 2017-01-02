@@ -2,28 +2,13 @@
 layout: post
 title: Min Stack
 date: 2015-10-21 13:00:24.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469045782;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:442;}i:1;a:1:{s:2:"id";i:1058;}i:2;a:1:{s:2:"id";i:509;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Implement a stack with min() function, which will return the smallest number in the stack. It should support push, pop and min operation all in O(1) cost.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class MinStack {
     Stack<integer> stack1;
     Stack<integer> stack2;
@@ -55,5 +40,4 @@ public class MinStack {
         return stack2.peek();
     }
 }
-</integer></integer></integer></integer></pre>
-<p>[/expand]</p>
+```

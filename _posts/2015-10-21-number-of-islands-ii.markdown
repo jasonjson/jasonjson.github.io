@@ -2,29 +2,16 @@
 layout: post
 title: Number of Islands II
 date: 2015-10-21 03:03:07.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - DFS Backtracking
 - Matrix
-tags:
 - Hard
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469283843;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1949;}i:1;a:1:{s:2:"id";i:591;}i:2;a:1:{s:2:"id";i:1510;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a n,m which means the row and column of the 2D matrix and an array of pair A( size k). Originally, the 2D matrix is all 0 which means there is only sea in the matrix. The list pair has k operator and each operator has two integer A[i].x, A[i].y means that you can change the grid matrix[A[i].x][A[i].y] from sea to island. Return how many island are there in the matrix after each operator.</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+
+``` java
 public class Solution {
     class UnionFind {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -76,5 +63,4 @@ public class Solution {
         return result;
     }
 }
-</integer></integer></integer></pre>
-<p>[/expand]</p>
+```

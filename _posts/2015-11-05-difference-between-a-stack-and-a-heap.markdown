@@ -2,22 +2,9 @@
 layout: post
 title: Difference between a stack and a heap
 date: 2015-11-05 23:26:17.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Reading Notes
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465133812;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1437;}i:1;a:1:{s:2:"id";i:1312;}i:2;a:1:{s:2:"id";i:1629;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <ul>
 <li>Where are the stack and heap stored?
@@ -37,7 +24,7 @@ author:
 </li>
 <li>Code to create an object on the stack:</li>
 </ul>
-<pre>
+``` java
 void somefunction( )
 {
 /* create an object "m" of class Member
@@ -49,13 +36,13 @@ void somefunction( )
   Member m;
 
 } //the object "m" is destroyed once the function ends
-</pre>
+```
 <p>So, the object “m” is destroyed once the function has run to completion – or, in other words, when it “goes out of scope”. The memory being used for the object “m” on the stack will be removed once the function is done running.</p>
 <ul>
 <li>If we want to create an object on the heap inside a function, then this is what the code would look like:</li>
 </ul>
 <p>Code to create an object on the heap:</p>
-<pre>
+``` java
 void some function( )
 {
 /* create an object "m" of class Member
@@ -72,7 +59,7 @@ void some function( )
 
   delete m; 
 } 
-</pre>
+```
 <p>In the code above, you can see that the “m” object is created inside a function using the “new” keyword. This means that “m” will be created on the heap. But, since “m” is created using the “new” keyword, that also means that we must delete the “m” object on our own as well – otherwise we will end up with a memory leak.</p>
 <ul>
 <li>How long does memory on the stack last versus memory on the heap?

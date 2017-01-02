@@ -2,27 +2,14 @@
 layout: post
 title: Two Strings Are Anagrams
 date: 2015-10-21 02:10:56.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - String
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465536764;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1050;}i:1;a:1:{s:2:"id";i:411;}i:2;a:1:{s:2:"id";i:450;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Write a method anagram(s,t) to decide if two strings are anagrams or not.</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+
+``` java
 public class solution {
     public static void main(String[] args) {
         String s1 = "abcd";
@@ -55,5 +42,4 @@ public class solution {
         return true;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

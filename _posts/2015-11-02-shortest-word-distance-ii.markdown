@@ -2,28 +2,14 @@
 layout: post
 title: Shortest Word Distance II
 date: 2015-11-02 13:36:55.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468830064;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1510;}i:1;a:1:{s:2:"id";i:1261;}i:2;a:1:{s:2:"id";i:1265;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>This is a follow up of Shortest Word Distance. The only difference is now you are given the list of words and your method will be called repeatedly many times with different parameters. How would you optimize it?<br />
+
 Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list. You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+``` java
 public class WordDistance {
     HashMap<String, List<integer>> map = new HashMap<String, List<integer>>();
     public WordDistance(String[] words) {
@@ -52,5 +38,4 @@ public class WordDistance {
         return min;
     }
 }
-</integer></integer></integer></integer></integer></pre>
-<p>[/expand]</p>
+```

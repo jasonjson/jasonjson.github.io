@@ -2,28 +2,15 @@
 layout: post
 title: Search for a Range
 date: 2015-10-21 02:27:43.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Integer
 - Sorting
-tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465970988;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1087;}i:1;a:1:{s:2:"id";i:157;}i:2;a:1:{s:2:"id";i:159;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a sorted array of integers, find the starting and ending position of a given target value. Your algorithm's runtime complexity must be in the order of O(log n). If the target is not found in the array, return [-1, -1].</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+
+``` java
 public class Solution {
     /** 
      *@param A : an integer sorted array
@@ -60,5 +47,4 @@ public class Solution {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
+```

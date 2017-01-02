@@ -2,25 +2,12 @@
 layout: post
 title: Maximal Rectangle
 date: 2015-11-12 18:23:08.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469298028;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1613;}i:1;a:1:{s:2:"id";i:2052;}i:2;a:1:{s:2:"id";i:1852;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing all ones and return its area.</em></strong></p>
+
 <p>If you think this algorithm is not easy to understand, you can try this example:</p>
 <p>0 0 0 1 0 0 0</p>
 <p>0 0 1 1 1 0 0</p>
@@ -36,8 +23,7 @@ author:
 <p>l: 0 1 2 3 2 1 0</p>
 <p>r: 7 6 5 4 5 6 7</p>
 <p>The vector "left" is computing the left boundary. Take (i,j)=(1,3) for example. On current row 1, the left boundary is at j=2. However, because matrix[1][3] is 1, you need to consider the left boundary on previous row as well, which is 3. So the real left boundary at (1,3) is 3.</p>
-<p>[expand title = "dp"]</p>
-<pre>
+``` java
 public class Solution {
     public int maximalRectangle(char[][] matrix) {
         if (matrix == null || matrix.length == 0) return 0;
@@ -81,10 +67,8 @@ public class Solution {
         return max;
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="code"]</p>
-<pre>
+```
+``` java
 public class Solution {
     //We can apply the maximum in histogram in each row of the 2D matrix. 
     //What we need is to maintain an int array for each row, which represent 
@@ -132,5 +116,4 @@ public class Solution {
         return area;
     }
 }
-</integer></integer></pre>
-<p>[/expand]</p>
+```

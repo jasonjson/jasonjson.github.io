@@ -2,27 +2,13 @@
 layout: post
 title: Coins in a Line III
 date: 2015-10-27 14:44:26.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Dynamic Programming
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1469090116;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:480;}i:1;a:1:{s:2:"id";i:479;}i:2;a:1:{s:2:"id";i:2006;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>There are n coins in a line. Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins. Could you please decide the first player will win or lose?</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public boolean firstWillWin(int[] values) {
         if (values == null || values.length == 0) return false;
@@ -54,10 +40,8 @@ public class Solution {
         return dp[0][n-1] > sum[0][n-1] - dp[0][n-1];
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title = "recursive"]</p>
-<pre>
+```
+``` java
 public class Solution {
     public boolean firstWillWin(int[] values) {
         if (values.length <= 2) return true;
@@ -69,5 +53,4 @@ public class Solution {
         return Math.max(values[start] - leftMoney(values, start + 1, end), values[end] - leftMoney(values, start, end - 1));
     }
 }
-</pre>
-<p>[/expand]</p>
+```

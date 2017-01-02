@@ -2,28 +2,13 @@
 layout: post
 title: Segment Tree Query II
 date: 2015-10-21 13:30:07.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Data Structure
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466014006;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:488;}i:1;a:1:{s:2:"id";i:1030;}i:2;a:1:{s:2:"id";i:499;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>For an array, we can build a SegmentTree for it, each node stores an extra attribute count to denote the number of elements in the the array which value is between interval start and end. (The array may not fully filled by elements) Design a query method with three parameters root, start and end, find the number of elements in the in array's interval [start, end] by the given root of value SegmentTree.</em></strong></p>
-<p>[expand title="code"]</p>
-<pre>
+
+``` java
 public class Solution {
     public int query(SegmentTreeNode root, int start, int end) {
         if (root == null) return 0;
@@ -41,5 +26,4 @@ public class Solution {
         }
     }
 }
-</pre>
-<p>[/expand]</p>
+```

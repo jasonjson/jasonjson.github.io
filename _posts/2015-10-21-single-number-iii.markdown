@@ -2,27 +2,14 @@
 layout: post
 title: Single Number III
 date: 2015-10-21 02:34:47.000000000 -04:00
-type: post
-published: true
-status: publish
 categories:
 - Bit
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _spost_short_title: ''
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468900528;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:188;}i:1;a:1:{s:2:"id";i:465;}i:2;a:1:{s:2:"id";i:1562;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given 2n + 2 numbers, every numbers occurs twice except two, find them.</em></strong><br />
-[expand title="code"]</p>
-<pre>
+
+
+``` java
 public class Solution {
 //The two numbers that appear only once must differ at some bit, this is how we can distinguish between them. Otherwise, they will be one of the duplicate numbers.
 //Let’s say the at the ith bit, the two desired numbers differ from each other. which means one number has bit i equaling: 0, the other number has bit i equaling 1.
@@ -55,5 +42,4 @@ public class Solution {
         return new ArrayList<integer>(Arrays.asList(x1, x2));
     }
 }
-</integer></integer></pre>
-<p>[/expand]</p>
+```

@@ -2,28 +2,14 @@
 layout: post
 title: Range Sum Query 2D - Mutable
 date: 2015-11-23 17:39:50.000000000 -05:00
-type: post
-published: true
-status: publish
 categories:
 - Brain teaser
 - Matrix
-tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _wpas_done_all: '1'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1468953664;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1473;}i:1;a:1:{s:2:"id";i:549;}i:2;a:1:{s:2:"id";i:1482;}}}}
-author:
-  login: johnny.lyy@gmail.com
-  email: johnny.lyy@gmail.com
-  display_name: johnny.lyy@gmail.com
-  first_name: ''
-  last_name: ''
+author: Jason
 ---
 <p><strong><em>Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2).</em></strong></p>
-<p>[expand title = "Binary Indexed Tree"]</p>
-<pre>
+
+``` java
 public class NumMatrix {
     private int[][] arrs;
     private int[][] Bindex;
@@ -62,10 +48,8 @@ public class NumMatrix {
         return getSum(row2,col2) - getSum(row1-1, col2) - getSum(row2, col1-1) + getSum(row1-1, col1-1);
     }
 }
-</pre>
-<p>[/expand]</p>
-<p>[expand title="code"]</p>
-<pre>
+```
+``` java
 public class NumMatrix {
     private int[][] sumCol;//we can also do this use sumRow, then use one extra cols
     private int[][] matrix;
@@ -96,5 +80,4 @@ public class NumMatrix {
         return result;
     }
 }
-</pre>
-<p>[/expand]</p>
+```
