@@ -24,7 +24,7 @@ linkedin_username: in/yuanresume
 #  choose one and un-comment the line to active it
 disqus_shortname: mickeyliu5
 # get one: https://disqus.com/admin/signup/
-duoshuo_shortname: mickeyliu5
+#duoshuo_shortname: mickeyliu5
 # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
