@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>海量数据处理 « CodeHu|Jason Liu's Blog</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.jpg"> 
+  <meta name="description" content="所谓海量数据处理，是指基于海量数据的存储、处理、和操作。正因为数据量太大，所以导致要么无法在较短时间内迅速解决，要么无法一次性装入内存。事实上，针对时间问题，可以采用巧妙的算法搭配合适的数据结构（如布隆过滤器、哈希、位图、堆、数据库、倒排索引、Trie树）来解决；而对于空间问题，可以采取分而治之（哈希映射）的方法...">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="headerWrap clearfix">
+      <a class="myFont title css2dcc4b9955748" href="/index">CodeHu</a>
+
+      <nav>
+        <ul>
+          <li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+          <li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+          <li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+        </ul>
+      </nav>
+
+<div class="search-tool" style="float: left;height: 45px;line-height: 45px;margin-left: 12px;">
+    <input type="text" class="form-control search-content" id="search-content" style="display: inline-block !important; 
+    color: #49525c;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #e1eaf2;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;" placeholder="Search for what you are interested in...." />
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+
+      <a href="" class="master">
+        <div class="avatarWrap">
+          <!--<img src="/assets/avatar.jpg" alt="Jason Liu" style="max-width: 27px;" />-->
+        <!--</div><span class="myFont css2dcc4b9955748">Jason Liu</span>-->
+      </a>
+    </div>
+  </header>
+
+  <main class="clearfix">
+    <div class="content">
+      <div class="content-inner">
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">海量数据处理</h1>
+    <p class="post-meta">Nov 2, 2015 • Jason</p>
+  </header>
+
+  <article class="post-content">
+    <p>所谓海量数据处理，是指基于海量数据的存储、处理、和操作。正因为数据量太大，所以导致要么无法在较短时间内迅速解决，要么无法一次性装入内存。</p>
+<p>事实上，针对时间问题，可以采用巧妙的算法搭配合适的数据结构（如布隆过滤器、哈希、位图、堆、数据库、倒排索引、Trie树）来解决；而对于空间问题，可以采取分而治之（哈希映射）的方法，也就是说，把规模大的数据转化为规模小的，从而各个击破。</p>
+<p>此外，针对常说的单机及集群问题，通俗来讲，单机就是指处理装载数据的机器有限（只要考虑CPU、内存、和硬盘之间的数据交互），而集群的意思是指机器有多台，适合分布式处理或并行计算，更多考虑节点与节点之间的数据交互。</p>
+<p>一般说来，处理海量数据问题，有以下十种典型方法：</p>
+<ul>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.02.md">哈希分治</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/File_size">KB MB GB</a></li>
+<li>怎么在海量数据中找出重复次数最多的一个？&lt;/p&gt;
+提示：先做hash，然后求模映射为小文件，求出每个小文件中重复次数最多的一个，并记录重复次数。然后找出上一步求出的数据中重复次数最多的一个就是所求（具体参考前面的题）。</li>
+<li>上千万或上亿数据（有重复），统计其中出现次数最多的前N个数据。&lt;/p&gt;
+提示：上千万或上亿的数据，现在的机器的内存应该能存下。所以考虑采用hash_map/搜索二叉树/红黑树等来进行统计次数。然后就是取出前N个出现次数最多的数据了，可以用第2题提到的堆机制完成。</li>
+<li>一个文本文件，大约有一万行，每行一个词，要求统计出其中最频繁出现的前10个词，请给出思想，给出时间复杂度分析。&lt;/p&gt;
+提示：这题是考虑时间效率。用trie树统计每个词出现的次数，时间复杂度是O(n<em>le)（le表示单词的平准长度）。然后是找出出现最频繁的前10个词，可以用堆来实现，前面的题中已经讲到了，时间复杂度是O(n</em>lg10)。所以总的时间复杂度，是O(n<em>le)与O(n</em>lg10)中较大的哪一个。</li>
+<li>1000万字符串，其中有些是重复的，需要把重复的全部去掉，保留没有重复的字符串。请怎么设计和实现？&lt;/p&gt;
+提示：这题用trie树比较合适，hash_map也行。当然，也可以先hash成小文件分开处理再综合。</li>
+<li>
+<p>一个文本文件，找出前10个经常出现的词，但这次文件比较长，说是上亿行或十亿行，总之无法一次读入内存，问最优解。</p>
+提示：首先根据用hash并求模，将文件分解为多个小文件，对于单个文件利用上题的方法求出每个文件件中10个最常出现的词。然后再进行归并处理，找出最终的10个最常出现的词。&lt;/p&gt;
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.03.md">simhash算法</a> simhash算法分为5个步骤：分词、hash、加权、合并、降维，具体过程如下所述：</p>
+<ul>
+<li>分词: 给定一段语句，进行分词，得到有效的特征向量，然后为每一个特征向量设置1-5等5个级别的权重（如果是给定一个文本，那么特征向量可以是文本中的词，其权重可以是这个词出现的次数）。例如给定一段语句：“CSDN博客结构之法算法之道的作者July”，分词后为：“CSDN 博客 结构 之 法 算法 之 道 的 作者 July”，然后为每个特征向量赋予权值：CSDN(4) 博客(5) 结构(3) 之(1) 法(2) 算法(3) 之(1) 道(2) 的(1) 作者(5) July(5)，其中括号里的数字代表这个单词在整条语句中的重要程度，数字越大代表越重要。</li>
+<li>hash: 通过hash函数计算各个特征向量的hash值，hash值为二进制数01组成的n-bit签名。比如“CSDN”的hash值Hash(CSDN)为100101，“博客”的hash值Hash(博客)为“101011”。就这样，字符串就变成了一系列数字。</li>
+<li>加权: 在hash值的基础上，给所有特征向量进行加权，即W = Hash * weight，且遇到1则hash值和权值正相乘，遇到0则hash值和权值负相乘。例如给“CSDN”的hash值“100101”加权得到：W(CSDN) = 1001014 = 4 -4 -4 4 -4 4，给“博客”的hash值“101011”加权得到：W(博客)=1010115 = 5 -5 5 -5 5 5，其余特征向量类似此般操作。</li>
+<li>合并: 将上述各个特征向量的加权结果累加，变成只有一个序列串。拿前两个特征向量举例，例如“CSDN”的“4 -4 -4 4 -4 4”和“博客”的“5 -5 5 -5 5 5”进行累加，得到“4+5 -4+-5 -4+5 4+-5 -4+5 4+5”，得到“9 -9 1 -1 1”。</li>
+<li>降维: 对于n-bit签名的累加结果，如果大于0则置1，否则置0，从而得到该语句的simhash值，最后我们便可以根据不同语句simhash的海明距离来判断它们的相似度。例如把上面计算出来的“9 -9 1 -1 1 9”降维（某位大于0记为1，小于0记为0），得到的01串为：“1 0 1 0 1 1”，从而形成它们的simhash签名。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.04.md">外排序</a>
+<ul>
+<li>所谓外排序，顾名思义，即是在内存外面的排序，因为当要处理的数据量很大，而不能一次装入内存时，此时只能放在读写较慢的外存储器（通常是硬盘）上。外排序通常采用的是一种“排序-归并”的策略。</li>
+<li>在排序阶段，先读入能放在内存中的数据量，将其排序输出到一个临时文件，依此进行，将待排序数据组织为多个有序的临时文件；尔后在归并阶段将这些临时文件组合为一个大的有序文件，也即排序结果。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.05.md">MapReduce</a>
+<ul>
+<li>MapReduce是一种计算模型，简单的说就是将大批量的工作（数据）分解（MAP）执行，然后再将结果合并成最终结果（REDUCE）。这样做的好处是可以在任务被分解后，可以通过大量机器进行并行计算，减少整个操作的时间。但如果你要我再通俗点介绍，那么，说白了，Mapreduce的原理就是一个归并排序。</li>
+<li>适用范围：数据量大，但是数据种类小可以放入内存</li>
+<li>基本原理及要点：将数据交给不同的机器去处理，数据划分，结果归约。</li>
+<li>MapReduce借鉴了函数式程序设计语言的设计思想，其软件实现是指定一个Map函数，把键值对(key/value)映射成新的键值对(key/value)，形成一系列中间结果形式的key/value 对，然后把它们传给Reduce(规约)函数，把具有相同中间形式key的value合并在一起。Map和Reduce函数具有一定的关联性。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.06.md">多层划分</a>
+<ul>
+<li>多层划分法，本质上还是分而治之的思想，因为元素范围很大，不能利用直接寻址表，所以通过多次划分，逐步确定范围，然后最后在一个可以接受的范围内进行。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.07.md">Bit-map</a>
+<ul>
+<li>count sort</li>
+<li>1、在2.5亿个整数中找出不重复的整数，注，内存不足以容纳这2.5亿个整数</li>
+<li>解法一：采用2-Bitmap（每个数分配2bit，00表示不存在，01表示出现一次，10表示多次，11无意义）进行，共需内存2^32 * 2 bit=1 GB内存，还可以接受。然后扫描这2.5亿个整数，查看Bitmap中相对应位，如果是00变01，01变10，10保持不变。所描完事后，查看bitmap，把对应位是01的整数输出即可。</li>
+<li>解法二：也可采用与第1题类似的方法，进行划分小文件的方法。然后在小文件中找出不重复的整数，并排序。然后再进行归并，注意去除重复的元素。”</li>
+<li>2、给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</li>
+<li>解法一：可以用位图/Bitmap的方法，申请512M的内存，一个bit位代表一个unsigned int值。读入40亿个数，设置相应的bit位，读入要查询的数，查看相应bit位是否为1，为1表示存在，为0表示不存在。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.08.md">Bloom Filter</a>
+<ul>
+<li>当一个元素被加入集合时，通过K个Hash函数将这个元素映射成一个位阵列（Bit array）中的K个点，把它们置为1。检索时，我们只要看看这些点是不是都是1就（大约）知道集合中有没有它了：如果这些点有任何一个0，则被检索元素一定不在；如果都是1，则被检索元素很可能在。</li>
+<li>Bloom Filter的这种高效是有一定代价的：在判断一个元素是否属于某个集合时，有可能会把不属于这个集合的元素误认为属于这个集合（false positive）。因此，Bloom Filter不适合那些“零错误”的应用场合。而在能容忍低错误率的应用场合下，Bloom Filter通过极少的错误换取了存储空间的极大节省。</li>
+<li>1、给你A,B两个文件，各存放50亿条URL，每条URL占用64字节，内存限制是4G，让你找出A,B文件共同的URL。如果是三个乃至n个文件呢？分析：如果允许有一定的错误率，可以使用Bloom filter，4G内存大概可以表示340亿bit。将其中一个文件中的url使用Bloom filter映射为这340亿bit，然后挨个读取另外一个文件的url，检查是否与Bloom filter，如果是，那么该url应该是共同的url（注意会有一定的错误率）。</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.09.md">Trie</a></p>
+<ul>
+<li>Read the link!!</li>
+<li>Trie树，即字典树，又称单词查找树或键树，是一种树形结构。典型应用是用于统计和排序大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是最大限度地减少无谓的字符串比较，查询效率比较高。 Trie的核心思想是空间换时间，利用字符串的公共前缀来降低查询时间的开销以达到提高效率的目的。</li>
+<li>它有3个基本性质：根节点不包含字符，除根节点外每一个节点都只包含一个字符。从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串。每个节点的所有子节点包含的字符都不相同。</li>
+<li>1、一个文本文件，大约有一万行，每行一个词，要求统计出其中最频繁出现的前10个词，请给出思想，给出时间复杂度分析. 提示：用trie树统计每个词出现的次数，时间复杂度是O(n<em>le)（le表示单词的平均长度），然后是找出出现最频繁的前10个词。当然，也可以用堆来实现，时间复杂度是O(n</em>lg10)。所以总的时间复杂度，是O(n<em>le)与O(n</em>lg10)中较大的哪一个。</li>
+<li>2、寻找热门查询 原题：搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节。假设目前有一千万个记录，这些查询串的重复读比较高，虽然总数是1千万，但是如果去除重复和，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就越热门。请你统计最热门的10个查询串，要求使用的内存不能超过1G。</li>
+</ul>
+</li>
+</ul>
+<p>&lt;</p>
+<p>p&gt;提示：利用trie树，关键字域存该查询串出现的次数，没有出现为0。最后用10个元素的最小推来对出现频率进行排序。</p>
+<ul>
+<li>数据库
+<ul>
+<li>当遇到大数据量的增删改查时，一般把数据装进数据库中，从而利用数据的设计实现方法，对海量数据的增删改查进行处理。</li>
+</ul>
+</li>
+<li><a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/06.11.md">倒排索引inverted index</a></li>
+<li>Exercises
+<ul>
+<li>有100W个关键字，长度小于等于50字节。用高效的算法找出top10的热词，并对内存的占用不超过1MB: 先把100W个关键字hash映射到小文件，根据题意，100W50B = 5010^6B = 50M，而内存只有1M，故干脆搞一个hash函数 % 50，分解成50个小文件；针对对每个小文件依次运用hashmap(key，value)完成每个key的value次数统计，后用堆找出每个小文件中value次数最大的top 10；最后依次对每两小文件的top 10归并，得到最终的top 10。此外，很多细节需要注意下，举个例子，如若hash映射后导致分布不均的话，有的小文件可能会超过1M，故为保险起见，你可能会说根据数据范围分解成50~500或更多的小文件，但到底是多少呢？我觉得这不重要，勿纠结答案，虽准备在平时，但关键还是看临场发挥，保持思路清晰关注细节即可。
+</li>
+<li>
+<p>单机5G内存，磁盘200T的数据，分别为字符串，然后给定一个字符串，判断这200T数据里面有没有这个字符串，怎么做？ 如果查询次数会非常的多, 怎么预处理: 提示：如果数据是200g且允许少许误差的话，可以考虑用布隆过滤器Bloom Filter。但本题是200T，得另寻良策，具体解法请读者继续思考。</p>
+</li>
+<li>
+<p>现在有一个大文件，文件里面的每一行都有一个group标识（group很多，但是每个group的数据量很小），现在要求把这个大文件分成十个小文件，要求：1、同一个group的必须在一个文件里面；2、切分之后，要求十个小文件的数据量尽可能均衡。</p>
+</li>
+<li>
+<p>服务器内存1G，有一个2G的文件，里面每行存着一个QQ号（5-10位数），怎么最快找出出现过最多次的QQ号。</p>
+</li>
+<li>
+<p>尽量高效的统计一片英文文章（总单词数目）里出现的所有英文单词，按照在文章中首次出现的顺序打印输出该单词和它的出现次数。</p>
+</li>
+<li>
+<p>在人人好友里，A和B是好友，B和C是好友，如果A　和C不是好友，那么C是A的二度好友，在一个有10万人的数据库里，如何在时间０（ｎ）里，找到某个人的十度好友。</p>
+</li>
+<li>
+<p>海量记录，记录形式如下： TERMID URLNOCOUNT urlno1 urlno2 ..., urlnon，请问怎么考虑资源和时间这两个因素，实现快速查询任意两个记录的交集，并集等，设计相关的数据结构和算法。</p>
+</li>
+<li>
+<p>有一亿个整数，请找出最大的1000个，要求时间越短越好，空间占用越少越好: min heap?</p>
+</li>
+<li>
+<p>10亿个int型整数，如何找出重复出现的数字。</p>
+</li>
+<li>
+<p>有2G的一个文本文档，文件每行存储的是一个句子，每个单词是用空格隔开的。问：输入一个句子，如何找到和它最相似的前10个句子。提示：可用倒排文档。</p>
+</li>
+<li>
+<p>某家视频网站，每天有上亿的视频被观看，现在公司要请研发人员找出最热门的视频。 该问题的输入可以简化为一个字符串文件，每一行都表示一个视频id，然后要找出出现次数最多的前100个视频id，将其输出，同时输出该视频的出现次数。1.假设每天的视频播放次数为3亿次，被观看的视频数量为一百万个，每个视频ID的长度为20字节，限定使用的内存为1G。请简述做法，再写代码。2.假设每个月的视频播放次数为100亿次，被观看的视频数量为1亿，每个视频ID的长度为20字节，一台机器被限定使用的内存为1G。提示：万变不离其宗，分而治之/Hash映射 + Hash统计 + 堆/快速/归并排序。</p>
+</li>
+<li>
+<p>有一个log文件，里面记录的格式为：</p>
+</li>
+</ul>
+<p>QQ号     时间        flag</p>
+<p>123456   14：00：00     0 </p>
+<p>123457   14：00：01     1</p>
+其中flag=0表示登录 flag=1表示退出&lt;/p&gt;
+<p>问：统计一天平均在线的QQ数。</p>
+<ul>
+<li>一个文本，一万行，每行一个词，统计出现频率最高的前10个词（词的平均长度为Len）。并分析时间复杂度。
+</li>
+<li>
+<p>在一个文件中有 10G 个整数，乱序排列，要求找出中位数。内存限制为 2G。只写出思路即可。</p>
+</li>
+<li>
+<p>一个url指向的页面里面有另一个url,最终有一个url指向之前出现过的url或空，这两种情形都定义为null。这样构成一个单链表。给两条这样单链表，判断里面是否存在同样的url。url以亿级计，资源不足以hash。</p>
+</li>
+<li>
+<p>一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词。</p>
+</li>
+<li>
+<p>一个1G大小的一个文件里全是数字，内存限制大小是1M。返回中位数。</p>
+桶排序，先扫一遍数据找到min,max，内存500kb建立500个桶，另外500kb用来load数据，桶里维护落在其范围内的数字的个数，扫完所有的数字后找到可能包含中位数的桶，然后继续建立桶扫描这个小的区间&lt;/p&gt;
+</li>
+<li>
+<p>1000万字符串，其中有些是重复的，需要把重复的全部去掉，保留没有重复的字符串。请怎么设计和实现？</p>
+</li>
+<li>
+<p>有10个文件，每个文件1G，每个文件的每一行都存放的是用户的query，每个文件的query都可能重复。要你按照query的频度排序。</p>
+</li>
+<li>
+<p>现有一200M的文本文件，里面记录着IP地址和对应地域信息，如</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>202.100.83.56 北京 北京大学</p>
+<p>202.100.83.120 北京 人民大学</p>
+<p>202.100.83.134 北京 中国青年政治学院</p>
+<p>211.93.120.45 长春市 长春大学</p>
+<p>211.93.120.129 吉林市 吉林大学</p>
+<p>211.93.120.200 长春 长春KTV</p>
+<p>现有6亿个IP地址，请编写程序，读取IP地址便转换成IP地址相对应的城市，要求有较好的时间复杂度和空间复杂度。&lt;/p&gt;</p>
+
+  </article>
+  
+  
+
+<div class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'mickeyliu5'; // required: replace example with your forum shortname
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+
+
+<div class="post-comments">
+<!-- 多说分享代码 start -->
+    <div class="ds-share" data-thread-key="/archivers/%e6%b5%b7%e9%87%8f%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86" data-title="海量数据处理" data-images="https://avatars0.githubusercontent.com/u/17525377?v=3&s=460" data-content="——Clark Zhao的博客" data-url="http://localhost:4000/archivers/e6-b5-b7-e9-87-8f-e6-95-b0-e6-8d-ae-e5-a4-84-e7-90-86">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li>分享到：</li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        <li><a class="ds-qq" href="javascript:void(0);" data-service="qq">QQ</a> </li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+    <!-- 多说分享代码 end -->
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/archivers/%e6%b5%b7%e9%87%8f%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86" data-title="海量数据处理" data-url="http://localhost:4000/archivers/e6-b5-b7-e9-87-8f-e6-95-b0-e6-8d-ae-e5-a4-84-e7-90-86"></div>
+    <!-- 多说评论框 end -->
+    
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mickeyliu5"};
+      (function() {
+      	var ds = document.createElement('script');
+      	ds.type = 'text/javascript';ds.async = true;
+      	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      	ds.charset = 'UTF-8';
+      	(document.getElementsByTagName('head')[0] 
+      	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+
+	</div>
+</div>
+<div class="sidebar">
+  <img class="avatar" src="/assets/avatar.jpg" alt="Jason Liu" height="250" width="200">
+  <div class="col-box-title name myFont css2dcc4b9955748">Jason Liu</div>
+  <p class="myFont css2dcc4b9955748">Time is money.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/mickeyliu5" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://weibo.com/u/2631341093" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://linkedin.com/in/yuanresume" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    
+    
+    
+    <a href="mailto:jason.yyliu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+  </p>
+
+  <div class="col-box-title myFont css2dcc4b9955748">Recent Articles</div>
+  <ul class="post-list">
+    <!--<li>Theme By <a href="http://zhaoyuxiang.cn">Clark Zhao</a></li>-->
+    
+      <li><a class="post-link" href="/archivers/largest-bst-subtree" target="_blank">Largest BST Subtree</a></li>
+    
+      <li><a class="post-link" href="/archivers/verify-preorder-serialization-of-a-binary-tree" target="_blank">Verify Preorder Serialization of a Binary Tree</a></li>
+    
+      <li><a class="post-link" href="/archivers/increasing-triplet-subsequence" target="_blank">Increasing Triplet Subsequence</a></li>
+    
+      <li><a class="post-link" href="/archivers/reconstruct-itinerary" target="_blank">Reconstruct Itinerary</a></li>
+    
+      <li><a class="post-link" href="/archivers/patching-array" target="_blank">Patching Array</a></li>
+    
+      <li><a class="post-link" href="/archivers/reorder-string" target="_blank">Reorder String</a></li>
+    
+      <li><a class="post-link" href="/archivers/validate-utf-8-byte-sequence" target="_blank">Validate UTF-8 byte sequence,</a></li>
+    
+      <li><a class="post-link" href="/archivers/find-the-difference-between-two-set" target="_blank">Find the difference between two set</a></li>
+    
+      <li><a class="post-link" href="/archivers/output-a-sorted-array-from-an-equation" target="_blank">Output a sorted array from an equation</a></li>
+    
+      <li><a class="post-link" href="/archivers/longest-increasing-path-in-a-matrix" target="_blank">Longest Increasing Path in a Matrix</a></li>
+    
+  </ul>
+</div>
+
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<span class="myFont">Copyright &copy; 2016 <a href="http://mickeyliu5.github.io">Jason Liu</a></span>
+			<ul>
+				<li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+				<li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+				<li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+				<li><a href="javascript:scroll(0,0)" class="myFont css2dcc4b9955748">Top</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!--返回顶部按钮-->
+	<div class="go-top">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </div>
+
+<script type="text/javascript"> /*$youzikuapi.asyncLoad("http://api.youziku.com/webfont/FastJS/yzk_80359A045057B6A0", function () { $youziku.load(".myFont", "6dee8aeae5404ac7b4184b79262d4e1a", "NaiYou");$youziku.draw(); }) Chinese font-family*/
+$(function() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1000)
+            $('div.go-top').show();
+        else
+            $('div.go-top').hide();
+    });
+    $('div.go-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 200);
+    });
+});
+</script>
+<!--English font-family
+<script type="text/javascript" src="http://api.youziku.com/wwwroot/js/g_webfont.min.js"></script> <script type="text/javascript"> WebFont.load({ custom: { urls: ['http://api.youziku.com/webfont/CSS/571879b6f629d80ed8fbe7d2'] } }); </script>-->
+</body>
+</html>

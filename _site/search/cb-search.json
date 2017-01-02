@@ -1,0 +1,3652 @@
+{
+	"code" : 0 ,
+	"data" : [
+	 
+	{
+		"title" : "Largest BST Subtree - Binary Search Tree_Brain teaser",
+		"url" : "/archivers/largest-bst-subtree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Verify Preorder Serialization of a Binary Tree - algorithms_Brain_teaser",
+		"url" : "/archivers/verify-preorder-serialization-of-a-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Increasing Triplet Subsequence - Brain teaser",
+		"url" : "/archivers/increasing-triplet-subsequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reconstruct Itinerary - DFS Backtracking",
+		"url" : "/archivers/reconstruct-itinerary"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Patching Array - Brain teaser",
+		"url" : "/archivers/patching-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reorder String - Brain teaser",
+		"url" : "/archivers/reorder-string"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Validate UTF-8 byte sequence, - Data Structure",
+		"url" : "/archivers/validate-utf-8-byte-sequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the difference between two set - Brain teaser",
+		"url" : "/archivers/find-the-difference-between-two-set"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Output a sorted array from an equation - Brain teaser",
+		"url" : "/archivers/output-a-sorted-array-from-an-equation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Increasing Path in a Matrix - DFS Backtracking",
+		"url" : "/archivers/longest-increasing-path-in-a-matrix"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Top k elements with most occurrences - Data Structure",
+		"url" : "/archivers/top-k-elements-with-most-occurrences"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the increasing sequences with increasing indices - Brain teaser",
+		"url" : "/archivers/find-the-increasing-sequences-with-increasing-indices"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Odd Even Linked List - Brain teaser",
+		"url" : "/archivers/odd-even-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count of Range Sum - Brain teaser",
+		"url" : "/archivers/count-of-range-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Pick a random number from a BST - Brain teaser",
+		"url" : "/archivers/pick-a-random-number-from-a-bst"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reservoir Sampling - Brain teaser_Data Structure",
+		"url" : "/archivers/reservoir-sampling"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Power of Three - Brain teaser",
+		"url" : "/archivers/power-of-three"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Size Subarray Sum Equals k - Brain teaser_Data Structure",
+		"url" : "/archivers/maximum-size-subarray-sum-equals-k"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Wiggle Sort II - Sorting",
+		"url" : "/archivers/wiggle-sort-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Number of Connected Components in an Undirected Graph - BFS_Data Structure",
+		"url" : "/archivers/number-of-connected-components-in-an-undirected-graph"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Coin Change - Dynamic Programming",
+		"url" : "/archivers/coin-change"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Create Maximum Number - Brain teaser",
+		"url" : "/archivers/create-maximum-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Generalized Abbreviation - Brain teaser_DFS Backtracking",
+		"url" : "/archivers/generalized-abbreviation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Factory design pattern - Brain teaser_Data Structure",
+		"url" : "/archivers/factory-design-pattern"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Java interview questions - Reading Notes",
+		"url" : "/archivers/java-interview-questions"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Bulb Switcher - Brain teaser",
+		"url" : "/archivers/bulb-switcher"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Shortest Distance from All Buildings - BFS_Brain teaser",
+		"url" : "/archivers/shortest-distance-from-all-buildings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Product of Word Lengths - Brain teaser_String",
+		"url" : "/archivers/maximum-product-of-word-lengths"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find best container - Brain teaser_Two Pointers",
+		"url" : "/archivers/find-best-container"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse half of a Linkedlist - Data Structure_LinkedList_面经",
+		"url" : "/archivers/reverse-half-of-a-linkedlist"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flattening a Linked List - Brain teaser_LinkedList",
+		"url" : "/archivers/flattening-a-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Max multiplication - Brain teaser_Sorting",
+		"url" : "/archivers/max-multiplication"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "String matching - Brain teaser_Data Structure",
+		"url" : "/archivers/string-matching"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicate Letters - Brain teaser",
+		"url" : "/archivers/remove-duplicate-letters"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "System design readings - Reading Notes",
+		"url" : "/archivers/system-design-readings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count of Smaller Numbers After Self - Brain teaser_Sorting",
+		"url" : "/archivers/count-of-smaller-numbers-after-self"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Vertical Order Traversal - BFS_Brain teaser",
+		"url" : "/archivers/binary-tree-vertical-order-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Super Ugly Number - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/super-ugly-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Burst Balloons - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/burst-balloons"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sparse Matrix Multiplication - Matrix",
+		"url" : "/archivers/sparse-matrix-multiplication-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Pattern - Brain teaser",
+		"url" : "/archivers/word-pattern"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Height Trees - Brain teaser_Graph",
+		"url" : "/archivers/minimum-height-trees"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Asynchronous vs synchronous execution - Reading Notes",
+		"url" : "/archivers/asynchronous-vs-synchronous-execution"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Time to Buy and Sell Stock with Cooldown - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/best-time-to-buy-and-sell-stock-with-cooldown"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Range Sum Query 2D - Mutable - Brain teaser_Matrix",
+		"url" : "/archivers/range-sum-query-2d-mutable"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Substring with At Most K Distinct Characters - Brain teaser_Two Pointers",
+		"url" : "/archivers/longest-substring-with-at-most-k-distinct-characters"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Range Sum Query - Mutable - Data Structure",
+		"url" : "/archivers/range-sum-query-mutable"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Additive Number - Brain teaser",
+		"url" : "/archivers/additive-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Quick Sort - Sorting",
+		"url" : "/archivers/quick-sort"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Number - Integer",
+		"url" : "/archivers/palindrome-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "ZigZag Conversion - Brain teaser",
+		"url" : "/archivers/zigzag-conversion"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Common Prefix - Brain teaser",
+		"url" : "/archivers/longest-common-prefix-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Generate Parentheses - DFS Backtracking",
+		"url" : "/archivers/generate-parentheses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Substring with Concatenation of All Words - Brain teaser",
+		"url" : "/archivers/substring-with-concatenation-of-all-words"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Valid Parentheses - Brain teaser",
+		"url" : "/archivers/longest-valid-parentheses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sudoku Solver - Brain teaser_Matrix",
+		"url" : "/archivers/sudoku-solver"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Multiply Strings - Brain teaser_Integer",
+		"url" : "/archivers/multiply-strings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Spiral Matrix II - Binary Search Tree_Matrix",
+		"url" : "/archivers/spiral-matrix-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Spiral Matrix - Brain teaser_Matrix",
+		"url" : "/archivers/spiral-matrix"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Swap two digits in a integer - Integer",
+		"url" : "/archivers/swap-two-digits-in-a-integer"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Text Justification - Brain teaser",
+		"url" : "/archivers/text-justification"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximal Rectangle - Brain teaser",
+		"url" : "/archivers/maximal-rectangle"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Decode Ways - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/decode-ways"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Restore IP Addresses - Brain teaser",
+		"url" : "/archivers/restore-ip-addresses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Range Sum Query 2D - Immutable - Brain teaser_Matrix",
+		"url" : "/archivers/range-sum-query-2d-immutable"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Recover Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/recover-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Same Tree - Binary Search Tree",
+		"url" : "/archivers/same-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Symmetric Tree - Binary Search Tree",
+		"url" : "/archivers/symmetric-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Path Sum II - Binary Search Tree",
+		"url" : "/archivers/path-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Range Sum Query - Immutable - Brain teaser",
+		"url" : "/archivers/range-sum-query-immutable"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Populating Next Right Pointers in Each Node II - Binary Search Tree",
+		"url" : "/archivers/populating-next-right-pointers-in-each-node-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Populating Next Right Pointers in Each Node - Binary Search Tree",
+		"url" : "/archivers/populating-next-right-pointers-in-each-node"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Pascal's Triangle II - Brain teaser",
+		"url" : "/archivers/pascals-triangle-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Pascal's Triangle - Brain teaser",
+		"url" : "/archivers/pascals-triangle"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Pow(x, n) - Brain teaser",
+		"url" : "/archivers/powx-n"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "What is the difference between a thread and a process? - Reading Notes",
+		"url" : "/archivers/what-is-the-difference-between-a-thread-and-a-process"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Smallest Rectangle Enclosing Black Pixels - Brain teaser",
+		"url" : "/archivers/smallest-rectangle-enclosing-black-pixels"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Surrounded Regions - Brain teaser",
+		"url" : "/archivers/surrounded-regions"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Path Sum - Binary Search Tree",
+		"url" : "/archivers/path-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sum Root to Leaf Numbers - Binary Search Tree",
+		"url" : "/archivers/sum-root-to-leaf-numbers"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Partitioning II - Dynamic Programming_Palindrome",
+		"url" : "/archivers/palindrome-partitioning-ii-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Break II - DFS Backtracking",
+		"url" : "/archivers/word-break-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Evaluate Reverse Polish Notation - Brain teaser_Data Structure",
+		"url" : "/archivers/evaluate-reverse-polish-notation-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Words in a String - Brain teaser",
+		"url" : "/archivers/reverse-words-in-a-string-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Difference between a stack and a heap - Reading Notes",
+		"url" : "/archivers/difference-between-a-stack-and-a-heap"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Read N Characters Given Read4 II - Call multiple times - Brain teaser",
+		"url" : "/archivers/read-n-characters-given-read4-ii-call-multiple-times"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Read N Characters Given Read4 - Brain teaser",
+		"url" : "/archivers/read-n-characters-given-read4"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Upside Down - Binary Search Tree_Brain teaser",
+		"url" : "/archivers/binary-tree-upside-down"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Substring with At Most Two Distinct Characters - Two Pointers",
+		"url" : "/archivers/longest-substring-with-at-most-two-distinct-characters"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "One Edit Distance - Brain teaser_String",
+		"url" : "/archivers/one-edit-distance"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Missing Ranges - Brain teaser",
+		"url" : "/archivers/missing-ranges"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Compare Version Numbers - Brain teaser",
+		"url" : "/archivers/compare-version-numbers"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Fraction to Recurring Decimal - Brain teaser",
+		"url" : "/archivers/fraction-to-recurring-decimal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Two Sum III - Data structure design - Brain teaser",
+		"url" : "/archivers/two-sum-iii-data-structure-design"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Excel Sheet Column Number - Brain teaser",
+		"url" : "/archivers/excel-sheet-column-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Excel Sheet Column Title - Brain teaser",
+		"url" : "/archivers/excel-sheet-column-title"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Invalid Parentheses - BFS_Brain teaser",
+		"url" : "/archivers/remove-invalid-parentheses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Dungeon Game - Dynamic Programming",
+		"url" : "/archivers/dungeon-game"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Repeated DNA Sequences - Brain teaser",
+		"url" : "/archivers/repeated-dna-sequences"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Bits - Bit",
+		"url" : "/archivers/reverse-bits"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Right Side View - Binary Search Tree",
+		"url" : "/archivers/binary-tree-right-side-view"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Bitwise AND of Numbers Range - Bit_Brain teaser",
+		"url" : "/archivers/bitwise-and-of-numbers-range"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Happy Number - Brain teaser",
+		"url" : "/archivers/happy-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count Primes - Brain teaser",
+		"url" : "/archivers/count-primes"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Isomorphic Strings - Brain teaser",
+		"url" : "/archivers/isomorphic-strings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Course Schedule II - Graph",
+		"url" : "/archivers/course-schedule-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Course Schedule - Graph_Sorting",
+		"url" : "/archivers/course-schedule"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Add and Search Word - Data structure design - Data Structure",
+		"url" : "/archivers/add-and-search-word-data-structure-design"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Top 50 Operating System Interview Questions - Reading Notes_OS",
+		"url" : "/archivers/top-50-operating-system-interview-questions"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "House Robber II - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/house-robber-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Shortest Palindrome - Brain teaser_Two Pointers",
+		"url" : "/archivers/shortest-palindrome"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Combination Sum III - DFS Backtracking",
+		"url" : "/archivers/combination-sum-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Contains Duplicate III - Brain teaser_Sorting",
+		"url" : "/archivers/contains-duplicate-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Contains Duplicate II - Brain teaser",
+		"url" : "/archivers/contains-duplicate-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximal Square - Dynamic Programming",
+		"url" : "/archivers/maximal-square-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count Complete Tree Nodes - Binary Search Tree",
+		"url" : "/archivers/count-complete-tree-nodes"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Implement Stack using Queues - Data Structure",
+		"url" : "/archivers/implement-stack-using-queues"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Basic Calculator II - Brain teaser",
+		"url" : "/archivers/basic-calculator-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Basic Calculator - Brain teaser",
+		"url" : "/archivers/basic-calculator"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Summary Ranges - Brain teaser",
+		"url" : "/archivers/summary-ranges"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "海量数据处理 - Reading Notes",
+		"url" : "/archivers/e6-b5-b7-e9-87-8f-e6-95-b0-e6-8d-ae-e5-a4-84-e7-90-86"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Kth Smallest Element in a BST - Binary Search Tree",
+		"url" : "/archivers/kth-smallest-element-in-a-bst"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Lowest Common Ancestor of a Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/lowest-common-ancestor-of-a-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Different Ways to Add Parentheses - Brain teaser",
+		"url" : "/archivers/different-ways-to-add-parentheses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Shortest Word Distance III - Brain teaser",
+		"url" : "/archivers/shortest-word-distance-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Shortest Word Distance II - Brain teaser",
+		"url" : "/archivers/shortest-word-distance-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Shortest Word Distance - Brain teaser",
+		"url" : "/archivers/shortest-word-distance"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Strobogrammatic Number III - Brain teaser",
+		"url" : "/archivers/strobogrammatic-number-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Strobogrammatic Number II - Brain teaser",
+		"url" : "/archivers/strobogrammatic-number-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Strobogrammatic Number - Brain teaser",
+		"url" : "/archivers/strobogrammatic-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Group Shifted Strings - Brain teaser",
+		"url" : "/archivers/group-shifted-strings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count Univalue Subtrees - Binary Search Tree",
+		"url" : "/archivers/count-univalue-subtrees"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flatten 2D Vector - Data Structure",
+		"url" : "/archivers/flatten-2d-vector"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Meeting Rooms II - Brain teaser",
+		"url" : "/archivers/meeting-rooms-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Meeting Rooms - Brain teaser",
+		"url" : "/archivers/meeting-rooms"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Factor Combinations - DFS Backtracking",
+		"url" : "/archivers/factor-combinations"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Bulls and Cows - Brain teaser_String",
+		"url" : "/archivers/bulls-and-cows"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Verify Preorder Sequence in Binary Search Tree - Binary Search Tree_Brain teaser",
+		"url" : "/archivers/verify-preorder-sequence-in-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Paint House - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/paint-house"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Paths - Binary Search Tree",
+		"url" : "/archivers/binary-tree-paths"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Add Digits - Brain teaser_Integer",
+		"url" : "/archivers/add-digits"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "3Sum Smaller - Subarray",
+		"url" : "/archivers/3sum-smaller"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Graph Valid Tree - Graph",
+		"url" : "/archivers/graph-valid-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Ugly Number II - Brain teaser_Integer",
+		"url" : "/archivers/ugly-number-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Paint House II - Dynamic Programming",
+		"url" : "/archivers/paint-house-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Permutation II - DFS Backtracking_Palindrome_Permutation",
+		"url" : "/archivers/palindrome-permutation-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Permutation - Palindrome_Permutation",
+		"url" : "/archivers/palindrome-permutation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Alien Dictionary - Sorting",
+		"url" : "/archivers/alien-dictionary"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Closest Binary Search Tree Value - Binary Search Tree",
+		"url" : "/archivers/closest-binary-search-tree-value"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Encode and Decode Strings - Data Structure",
+		"url" : "/archivers/encode-and-decode-strings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Closest Binary Search Tree Value II - Binary Search Tree",
+		"url" : "/archivers/closest-binary-search-tree-value-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Integer to English Words - Brain teaser_Integer",
+		"url" : "/archivers/integer-to-english-words"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "H-Index II - Brain teaser",
+		"url" : "/archivers/h-index-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "H-Index - Brain teaser",
+		"url" : "/archivers/h-index"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Paint Fence - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/paint-fence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the Celebrity - Brain teaser",
+		"url" : "/archivers/find-the-celebrity"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Wiggle Sort - Sorting",
+		"url" : "/archivers/wiggle-sort"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Zigzag Iterator - Data Structure",
+		"url" : "/archivers/zigzag-iterator"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Inorder Successor in BST - Data Structure",
+		"url" : "/archivers/inorder-successor-in-bst"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Walls and Gates - DFS Backtracking",
+		"url" : "/archivers/walls-and-gates"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Word Abbreviation - Brain teaser",
+		"url" : "/archivers/unique-word-abbreviation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flip Game II - DFS Backtracking",
+		"url" : "/archivers/flip-game-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flip Game - Brain teaser",
+		"url" : "/archivers/flip-game"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Meeting Point - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/best-meeting-point"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Longest Consecutive Sequence - Binary Search Tree",
+		"url" : "/archivers/binary-tree-longest-consecutive-sequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "从头到尾解析Hash表算法 - Reading Notes_Hash",
+		"url" : "/archivers/e4-bb-8e-e5-a4-b4-e5-88-b0-e5-b0-be-e8-a7-a3-e6-9e-90hash-e8-a1-a8-e7-ae-97-e6-b3-95"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find Median from Data Stream - Data Structure",
+		"url" : "/archivers/find-median-from-data-stream"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Nim Game - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/nim-game"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Game of Life - Brain teaser_Matrix",
+		"url" : "/archivers/game-of-life"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the Duplicate Number - Binary Search Tree_Two Pointers",
+		"url" : "/archivers/1130"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Peeking Iterator - Data Structure",
+		"url" : "/archivers/peeking-iterator"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Move Zeroes - Integer_Two Pointers",
+		"url" : "/archivers/move-zeroes"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Expression Add Operators - Brain teaser_DFS Backtracking_Leetcode",
+		"url" : "/archivers/expression-add-operators"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Perfect Squares - Dynamic Programming_Leetcode",
+		"url" : "/archivers/perfect-squares"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "1010 data onsite - 面经_Onsite",
+		"url" : "/archivers/1010-data-onsite"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Two sigma面经 - 面经",
+		"url" : "/archivers/two-sigma-e9-9d-a2-e7-bb-8f"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "LRU Cache - Data Structure",
+		"url" : "/archivers/lru-cache"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search in a Big Sorted Array - Sorting",
+		"url" : "/archivers/search-in-a-big-sorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Binary Search Tree to Doubly Linked List - Binary Search Tree_Data Structure",
+		"url" : "/archivers/convert-binary-search-tree-to-doubly-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Coins in a Line III - Dynamic Programming",
+		"url" : "/archivers/coins-in-a-line-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Candy - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/candy"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Data Stream Median - Data Structure",
+		"url" : "/archivers/data-stream-median"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Expression Evaluation - Brain teaser_Integer",
+		"url" : "/archivers/expression-evaluation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find Peak Element II - Divide and Conquer",
+		"url" : "/archivers/find-peak-element-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Largest Rectangle in Histogram - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/largest-rectangle-in-histogram"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Max Tree - Data Structure",
+		"url" : "/archivers/max-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Regular Expression Matching - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/regular-expression-matching"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Valid Number - Brain teaser_Integer",
+		"url" : "/archivers/valid-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Scramble String - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/scramble-string"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Post Office Problem - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/post-office-problem"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Bucket sort - Sorting",
+		"url" : "/archivers/bucket-sort"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum gap - Brain teaser_Integer_Sorting",
+		"url" : "/archivers/maximum-gap"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Interval Sum II - Data Structure",
+		"url" : "/archivers/interval-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Rectangle Area - Brain teaser_Cloudera OA",
+		"url" : "/archivers/rectangle-area"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Largest sibling - Integer_Cloudera OA",
+		"url" : "/archivers/largest-sibling"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Friend circles - BFS_Brain teaser_Two sigma OA",
+		"url" : "/archivers/friend-circles"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest chain - DFS Backtracking_Two sigma OA",
+		"url" : "/archivers/longest-chain"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Summary for leetcode, zz from peking2 - Reading Notes",
+		"url" : "/archivers/summary-for-leetcode-zz-from-peking2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Copy Books - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/copy-books"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Expression Tree Build - Brain teaser_Data Structure",
+		"url" : "/archivers/expression-tree-build"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Triangle Count - Brain teaser_Matrix",
+		"url" : "/archivers/triangle-count"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Buy one get one free - Dynamic Programming",
+		"url" : "/archivers/buy-one-get-one-free"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count of Smaller Number before itself - Binary Search Tree_Data Structure",
+		"url" : "/archivers/count-of-smaller-number-before-itself-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Counting heads - Dynamic Programming",
+		"url" : "/archivers/counting-heads"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Local maximum - Integer",
+		"url" : "/archivers/local-maximum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Representation - Integer",
+		"url" : "/archivers/binary-representation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Jump Game II - Brain teaser",
+		"url" : "/archivers/jump-game-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Pattern II - DFS Backtracking",
+		"url" : "/archivers/pattern-match"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Building skyline Outline - Brain teaser_Data Structure",
+		"url" : "/archivers/building-skyline-outline"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "The Skyline Problem - Brain teaser_Data Structure",
+		"url" : "/archivers/the-skyline-problem"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sliding Window Median - Data Structure",
+		"url" : "/archivers/sliding-window-median"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Intersection of Two Linked Lists - LinkedList",
+		"url" : "/archivers/intersection-of-two-linked-lists"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Linked List - LinkedList_Palindrome",
+		"url" : "/archivers/palindrome-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Swap Nodes in Pairs - LinkedList",
+		"url" : "/archivers/swap-nodes-in-pairs"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Linked List Elements - LinkedList",
+		"url" : "/archivers/remove-linked-list-elements"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flatten Binary Tree to Linked List - Binary Search Tree_LinkedList",
+		"url" : "/archivers/flatten-binary-tree-to-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Letter Combinations of a Phone Number - DFS Backtracking",
+		"url" : "/archivers/letter-combinations-of-a-phone-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Nodes in k-Group - LinkedList",
+		"url" : "/archivers/reverse-nodes-in-k-group"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the Weak Connected Component in the Directed Graph - Graph",
+		"url" : "/archivers/find-the-weak-connected-component-in-the-directed-graph"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Trapping Rain Water II - Dynamic Programming_Matrix",
+		"url" : "/archivers/trapping-rain-water-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Trapping Rain Water - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/trapping-rain-water"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Search II - Data Structure_Dynamic Programming",
+		"url" : "/archivers/word-search-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Search - Dynamic Programming",
+		"url" : "/archivers/word-search"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "The Smallest Difference - Integer_Sorting",
+		"url" : "/archivers/the-smallest-difference"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sort Letters by Case - Sorting",
+		"url" : "/archivers/sort-letters-by-case"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sort Colors II - Brain teaser",
+		"url" : "/archivers/sort-colors-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sort Colors - Brain teaser",
+		"url" : "/archivers/sort-colors"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Simplify Path - Brain teaser",
+		"url" : "/archivers/simplify-path"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Set Matrix Zeroes - Matrix",
+		"url" : "/archivers/set-matrix-zeroes"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Rotate List - LinkedList",
+		"url" : "/archivers/rotate-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Rotate Image - Matrix",
+		"url" : "/archivers/rotate-image"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Rehashing - Data Structure",
+		"url" : "/archivers/rehashing"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Number of Airplanes in the Sky - Brain teaser_Data Structure",
+		"url" : "/archivers/number-of-airplanes-in-the-sky"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Next Permutation - Permutation",
+		"url" : "/archivers/next-permutation-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Adjustment Cost - Dynamic Programming",
+		"url" : "/archivers/minimum-adjustment-cost"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Size Subarray Sum - Integer_Subarray",
+		"url" : "/archivers/minimum-size-subarray-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Subarray Difference - Dynamic Programming_Subarray",
+		"url" : "/archivers/maximum-subarray-difference"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Product Subarray - Subarray",
+		"url" : "/archivers/maximum-product-subarray"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximal Square - Dynamic Programming_Matrix",
+		"url" : "/archivers/maximal-square"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Max Points on a Line - Brain teaser",
+		"url" : "/archivers/max-points-on-a-line"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Substring Without Repeating Characters - String",
+		"url" : "/archivers/longest-substring-without-repeating-characters"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Consecutive Sequence - Integer_Subarray",
+		"url" : "/archivers/longest-consecutive-sequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Largest Number - Brain teaser_Integer",
+		"url" : "/archivers/largest-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Kth Smallest Number in Sorted Matrix - Data Structure_Matrix",
+		"url" : "/archivers/kth-smallest-number-in-sorted-matrix"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "k Sum II - DFS Backtracking",
+		"url" : "/archivers/k-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "k Sum - Dynamic Programming",
+		"url" : "/archivers/k-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Implement Trie - Data Structure",
+		"url" : "/archivers/implement-trie"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Interleaving Positive and Negative Numbers - Brain teaser",
+		"url" : "/archivers/interleaving-positive-and-negative-numbers"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Roman to Integer - Integer",
+		"url" : "/archivers/roman-to-integer"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Integer to Roman - Integer",
+		"url" : "/archivers/integer-to-roman"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "House Robber - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/house-robber"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Gas Station - Brain teaser",
+		"url" : "/archivers/gas-station"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Expression to Polish Notation - Brain teaser",
+		"url" : "/archivers/convert-expression-to-polish-notation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Expression to Reverse Polish Notation - Brain teaser_Data Structure",
+		"url" : "/archivers/convert-expression-to-reverse-polish-notation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Evaluate Reverse Polish Notation - Brain teaser_Data Structure",
+		"url" : "/archivers/evaluate-reverse-polish-notation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Divide Two Integers - Integer",
+		"url" : "/archivers/divide-two-integers"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Digit Counts - Brain teaser_Integer",
+		"url" : "/archivers/digit-counts"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Delete Digits - Brain teaser_Integer",
+		"url" : "/archivers/delete-digits"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count of Smaller Number - Sorting_Subarray",
+		"url" : "/archivers/count-of-smaller-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Interval Sum - Subarray",
+		"url" : "/archivers/interval-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Interval Minimum Number - Subarray",
+		"url" : "/archivers/interval-minimum-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Segment Tree Modify - Data Structure",
+		"url" : "/archivers/segment-tree-modify"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Segment Tree Query II - Data Structure",
+		"url" : "/archivers/segment-tree-query-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Segment Tree Query - Data Structure",
+		"url" : "/archivers/segment-tree-query"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Segmemt Tree Build II - Data Structure",
+		"url" : "/archivers/segmemt-tree-build-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Segment Tree Build - Data Structure",
+		"url" : "/archivers/segment-tree-build"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Container With Most Water - Dynamic Programming",
+		"url" : "/archivers/container-with-most-water"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Coins in a Line II - Brain teaser_Dynamic Programming",
+		"url" : "/archivers/coins-in-a-line-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Coins in a Line - Dynamic Programming",
+		"url" : "/archivers/coins-in-a-line"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Clone Graph - Graph",
+		"url" : "/archivers/clone-graph"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "N-Queens II - DFS Backtracking",
+		"url" : "/archivers/n-queens-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "N-Queens - DFS Backtracking",
+		"url" : "/archivers/n-queens"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "String to Integer(atoi) - String",
+		"url" : "/archivers/string-to-integeratoi"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Nuts & Bolts Problem - Sorting",
+		"url" : "/archivers/nuts-bolts-problem"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Gray Code - Bit",
+		"url" : "/archivers/gray-code"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Continuous Subarray Sum II - Subarray",
+		"url" : "/archivers/continuous-subarray-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Continuous Subarray Sum - Subarray",
+		"url" : "/archivers/continuous-subarray-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Window Substring - String",
+		"url" : "/archivers/minimum-window-substring"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Matrix Zigzag Traversal - Matrix",
+		"url" : "/archivers/matrix-zigzag-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge Intervals - Brain teaser_Data Structure",
+		"url" : "/archivers/merge-intervals"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Insert Interval - Brain teaser_Data Structure",
+		"url" : "/archivers/insert-interval"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the Missing Number - Brain teaser",
+		"url" : "/archivers/find-the-missing-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Valid Sudoku - Brain teaser",
+		"url" : "/archivers/valid-sudoku"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Heapify - Data Structure",
+		"url" : "/archivers/heapify"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sliding Window Maximum - Brain teaser_Data Structure_Subarray",
+		"url" : "/archivers/sliding-window-maximum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Min Stack - Data Structure",
+		"url" : "/archivers/min-stack"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Implement Queue by Two Stacks - Data Structure",
+		"url" : "/archivers/implement-queue-by-two-stacks"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Words - Brain teaser",
+		"url" : "/archivers/longest-words"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Ladder II - BFS_DFS Backtracking",
+		"url" : "/archivers/word-ladder-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Ladder - BFS",
+		"url" : "/archivers/word-ladder"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Topological Sorting - Graph",
+		"url" : "/archivers/topological-sorting"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Route Between Two Nodes in Graph - Graph",
+		"url" : "/archivers/route-between-two-nodes-in-graph"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find the Connected Component in the Undirected Graph - Graph",
+		"url" : "/archivers/find-the-connected-component-in-the-undirected-graph"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Increasing Continuous subsequence II - Dynamic Programming_Subarray",
+		"url" : "/archivers/longest-increasing-continuous-subsequence-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Increasing Continuous subsequence - Subarray",
+		"url" : "/archivers/longest-increasing-continuous-subsequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Increasing Subsequence - Dynamic Programming_Subarray",
+		"url" : "/archivers/longest-increasing-subsequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Subarray III - Dynamic Programming_Subarray",
+		"url" : "/archivers/maximum-subarray-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Subarray II - Dynamic Programming_Subarray",
+		"url" : "/archivers/maximum-subarray-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Subarray - Subarray",
+		"url" : "/archivers/minimum-subarray"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Subarray - Subarray",
+		"url" : "/archivers/maximum-subarray"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Interleaving String - Dynamic Programming",
+		"url" : "/archivers/interleaving-string"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Distinct Subsequences - Dynamic Programming",
+		"url" : "/archivers/distinct-subsequences"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Time to Buy and Sell Stock IV - Dynamic Programming",
+		"url" : "/archivers/best-time-to-buy-and-sell-stock-iv"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Time to Buy and Sell Stock III - Dynamic Programming",
+		"url" : "/archivers/best-time-to-buy-and-sell-stock-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Time to Buy and Sell Stock II - Dynamic Programming",
+		"url" : "/archivers/best-time-to-buy-and-sell-stock-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Best Time to Buy and Sell Stock - Dynamic Programming",
+		"url" : "/archivers/best-time-to-buy-and-sell-stock"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Edit Distance - Dynamic Programming",
+		"url" : "/archivers/edit-distance"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Common Subsequence - String",
+		"url" : "/archivers/longest-common-subsequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Partitioning II - Dynamic Programming",
+		"url" : "/archivers/palindrome-partitioning-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Word Break - DFS Backtracking_Dynamic Programming",
+		"url" : "/archivers/word-break"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Jump Game - Dynamic Programming",
+		"url" : "/archivers/jump-game"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Climbing Stairs - Dynamic Programming",
+		"url" : "/archivers/climbing-stairs"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Paths II - DFS Backtracking",
+		"url" : "/archivers/unique-paths-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Paths - Dynamic Programming_Matrix",
+		"url" : "/archivers/unique-paths"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Path Sum - Matrix",
+		"url" : "/archivers/minimum-path-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Backpack II - Dynamic Programming",
+		"url" : "/archivers/backpack-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Backpack - Dynamic Programming",
+		"url" : "/archivers/backpack"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Triangle - Dynamic Programming",
+		"url" : "/archivers/triangle"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Permutation Sequence - Permutation",
+		"url" : "/archivers/permutation-sequence"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Permutation Index II - Permutation",
+		"url" : "/archivers/permutation-index-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Combination Sum II - DFS Backtracking",
+		"url" : "/archivers/combination-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Combination Sum - DFS Backtracking",
+		"url" : "/archivers/combination-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Combinations - DFS Backtracking",
+		"url" : "/archivers/combinations"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Binary Search Trees II - Binary Search Tree",
+		"url" : "/archivers/unique-binary-search-trees-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Previous Permutation - Permutation",
+		"url" : "/archivers/previous-permutation"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Permutations II - DFS Backtracking_Permutation",
+		"url" : "/archivers/permutations-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Permutation index - DFS Backtracking_Permutation",
+		"url" : "/archivers/easy-permutation-index"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Permutations - DFS Backtracking_Permutation",
+		"url" : "/archivers/permutations"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subsets II - DFS Backtracking",
+		"url" : "/archivers/subsets-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subsets. - DFS Backtracking",
+		"url" : "/archivers/subsets"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Valid parentheses - Brain teaser_Data Structure",
+		"url" : "/archivers/valid-parentheses"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Characters - String",
+		"url" : "/archivers/unique-characters"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Singleton - OOD",
+		"url" : "/archivers/singleton"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Integer - Integer",
+		"url" : "/archivers/reverse-integer"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Palindrome Partitioning - DFS Backtracking_Palindrome",
+		"url" : "/archivers/palindrome-partitioning"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Number of Islands II - DFS Backtracking_Matrix_Hard",
+		"url" : "/archivers/number-of-islands-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Number of Islands - DFS Backtracking_Matrix",
+		"url" : "/archivers/number-of-islands"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Nth to Last Node in List - LinkedList",
+		"url" : "/archivers/nth-to-last-node-in-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Minimum Depth of Binary Tree - Binary Search Tree",
+		"url" : "/archivers/minimum-depth-of-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Cosine Similarity - Brain teaser",
+		"url" : "/archivers/cosine-similarity"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Search Tree Iterator - Binary Search Tree_Data Structure",
+		"url" : "/archivers/binary-search-tree-iterator"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Sorted List to Binary Search Tree - Binary Search Tree_LinkedList",
+		"url" : "/archivers/convert-sorted-list-to-binary-search-tree-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Sorted Array to Binary Search Tree With Minimal Height - Binary Search Tree",
+		"url" : "/archivers/convert-sorted-array-to-binary-search-tree-with-minimal-height"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search Range in Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/search-range-in-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Validate Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/validate-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Insert Node in a Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/insert-node-in-a-binary-search-tree-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Serialization - Binary Search Tree_Data Structure",
+		"url" : "/archivers/binary-tree-serialization"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Zigzag Level Order Traversal - Binary Search Tree",
+		"url" : "/archivers/binary-tree-zigzag-level-order-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subtree - Binary Search Tree",
+		"url" : "/archivers/subtree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Construct Binary Tree from Inorder and Postorder Traversal - Binary Search Tree",
+		"url" : "/archivers/construct-binary-tree-from-inorder-and-postorder-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Construct Binary Tree from Preorder and Inorder Traversal - Binary Search Tree",
+		"url" : "/archivers/construct-binary-tree-from-preorder-and-inorder-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Diameter of a Binary Tree - Binary Search Tree",
+		"url" : "/archivers/diameter-of-a-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Invert Binary Tree - Binary Search Tree",
+		"url" : "/archivers/invert-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Lowest Common Ancestor - Binary Search Tree",
+		"url" : "/archivers/lowest-common-ancestor"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Maximum Path Sum - Binary Search Tree",
+		"url" : "/archivers/binary-tree-maximum-path-sum-show-result"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Balanced Binary Tree - Binary Search Tree",
+		"url" : "/archivers/balanced-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Maximum Depth of Binary Tree - Binary Search Tree",
+		"url" : "/archivers/maximum-depth-of-binary-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Level Order Traversal II - Binary Search Tree",
+		"url" : "/archivers/binary-tree-level-order-traversal-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Level Order Traversal - Binary Search Tree",
+		"url" : "/archivers/binary-tree-level-order-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Postorder Traversal - Binary Search Tree",
+		"url" : "/archivers/binary-tree-postorder-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Inorder Traversal - Binary Search Tree",
+		"url" : "/archivers/binary-tree-inorder-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Tree Preorder Traversal - Binary Search Tree",
+		"url" : "/archivers/binary-tree-preorder-traversal"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Copy List with Random Pointer - LinkedList",
+		"url" : "/archivers/copy-list-with-random-pointer"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sort List - LinkedList_Sorting",
+		"url" : "/archivers/sort-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Insertion Sort List - LinkedList_Sorting",
+		"url" : "/archivers/insertion-sort-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Check if a singly linked list is palindrome - LinkedList_Palindrome",
+		"url" : "/archivers/check-if-a-singly-linked-list-is-palindrome"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reorder List - LinkedList_Sorting",
+		"url" : "/archivers/reorder-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge k Sorted Lists - LinkedList_Sorting",
+		"url" : "/archivers/merge-k-sorted-lists"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge Two Sorted Lists - LinkedList_Sorting",
+		"url" : "/archivers/merge-two-sorted-lists"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Linked List II - LinkedList",
+		"url" : "/archivers/reverse-linked-list-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Linked List - LinkedList",
+		"url" : "/archivers/reverse-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Linked List Cycle II - LinkedList",
+		"url" : "/archivers/linked-list-cycle-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Linked List Cycle - LinkedList",
+		"url" : "/archivers/linked-list-cycle"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Nth Node From End of List - LinkedList",
+		"url" : "/archivers/remove-nth-node-from-end-of-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Two Lists Sum - LinkedList",
+		"url" : "/archivers/two-lists-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Partition List - LinkedList",
+		"url" : "/archivers/partition-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicates from Unsorted List - LinkedList",
+		"url" : "/archivers/remove-duplicates-from-unsorted-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicates from Sorted List II - LinkedList",
+		"url" : "/archivers/remove-duplicates-from-sorted-list-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicates from Sorted List - LinkedList",
+		"url" : "/archivers/remove-duplicates-from-sorted-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Plus One - Integer",
+		"url" : "/archivers/plus-one"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Ugly Number - Integer",
+		"url" : "/archivers/ugly-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Majority Number III - Brain teaser_Integer",
+		"url" : "/archivers/majority-number-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Majority Element II - Brain teaser_Integer",
+		"url" : "/archivers/majority-element-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Majority Number - Brain teaser_Integer",
+		"url" : "/archivers/majority-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Print Numbers by Recursion - Integer",
+		"url" : "/archivers/print-numbers-by-recursion"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "A + B Problem - Bit",
+		"url" : "/archivers/a-b-problem"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Fibonacci - Dynamic Programming",
+		"url" : "/archivers/fibonacci"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count 1 in Binary - Bit",
+		"url" : "/archivers/count-1-in-binary"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Hash Function - Data Structure",
+		"url" : "/archivers/hash-function"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Fast Power - Integer",
+		"url" : "/archivers/fast-power"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Update Bits - Bit",
+		"url" : "/archivers/update-bits"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Unique Binary Search Trees - Binary Search Tree_Dynamic Programming",
+		"url" : "/archivers/unique-binary-search-trees"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Factorial Trailing Zeroes - Brain teaser",
+		"url" : "/archivers/factorial-trailing-zeroes"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Integer A to Integer B - Bit",
+		"url" : "/archivers/convert-integer-a-to-integer-b"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "O(1) Check Power of 2 - Bit",
+		"url" : "/archivers/o1-check-power-of-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Single Number III - Bit",
+		"url" : "/archivers/single-number-iii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Single Number II - Bit",
+		"url" : "/archivers/single-number-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Single Number - Bit",
+		"url" : "/archivers/single-number"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Wood Cut - Sorting",
+		"url" : "/archivers/wood-cut"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Implement int sqrt(int x). - Brain teaser_Integer",
+		"url" : "/archivers/implement-int-sqrtint-x"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Median of Two Sorted Arrays - Integer_Sorting_Subarray_Hard",
+		"url" : "/archivers/median-of-two-sorted-arrays"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search a 2D Matrix II - Matrix_Sorting",
+		"url" : "/archivers/search-a-2d-matrix-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find Minimum in Rotated Sorted Array II - Integer_Sorting",
+		"url" : "/archivers/find-minimum-in-rotated-sorted-array-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find Minimum in Rotated Sorted Array - Integer_Sorting",
+		"url" : "/archivers/find-minimum-in-rotated-sorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search in Rotated Sorted Array II - Integer_Sorting",
+		"url" : "/archivers/search-in-rotated-sorted-array-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search in rotated sorted array - Integer_Sorting",
+		"url" : "/archivers/medium-search-in-rotated-sorted-array-show-result"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find Peak Element - Divide and Conquer",
+		"url" : "/archivers/find-peak-element"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search a 2D Matrix - Binary Search Tree_Matrix",
+		"url" : "/archivers/search-a-2d-matrix"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "First Bad Version - Brain teaser",
+		"url" : "/archivers/first-bad-version"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search for a Range - Integer_Sorting",
+		"url" : "/archivers/search-for-a-range"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Search Insert Position - Binary Search Tree_Sorting",
+		"url" : "/archivers/search-insert-position"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Binary Search - Integer_Sorting",
+		"url" : "/archivers/binary-search"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Kth Largest Element in an Array - Integer_Sorting",
+		"url" : "/archivers/kth-largest-element-in-an-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Partition Array by Odd and Even - Integer_Sorting",
+		"url" : "/archivers/easy-partition-array-by-odd-and-even"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Median of unsorted array - Integer",
+		"url" : "/archivers/median-of-unsorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge Sorted Array II - Sorting",
+		"url" : "/archivers/merge-sorted-array-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge Sorted Array - Sorting",
+		"url" : "/archivers/merge-sorted-array-2"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicates from Sorted Array II - Integer",
+		"url" : "/archivers/remove-duplicates-from-sorted-array-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Duplicates from Sorted Array - Integer",
+		"url" : "/archivers/remove-duplicates-from-sorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "3 Sum Closest - Integer",
+		"url" : "/archivers/3-sum-closest"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "4 Sum - Integer_Subarray",
+		"url" : "/archivers/4-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "3 Sum - Integer_Subarray",
+		"url" : "/archivers/3-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "2 Sum - Integer",
+		"url" : "/archivers/2-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "First Missing Positive - Integer",
+		"url" : "/archivers/first-missing-positive"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Partition Array - Integer_Subarray",
+		"url" : "/archivers/partition-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Product of Array Exclude Itself - Integer",
+		"url" : "/archivers/product-of-array-exclude-itself"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Recover Rotated Sorted Array - Sorting",
+		"url" : "/archivers/recover-rotated-sorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subarray Sum Closest - Subarray",
+		"url" : "/archivers/subarray-sum-closest"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subarray Sum II - Subarray",
+		"url" : "/archivers/subarray-sum-ii"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subarray Sum K - Integer",
+		"url" : "/archivers/subarray-sum-k"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Subarray Sum - Integer_Subarray",
+		"url" : "/archivers/subarray-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Element - Integer",
+		"url" : "/archivers/remove-element"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Count and Say - String",
+		"url" : "/archivers/count-and-say"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Length of Last Word - String",
+		"url" : "/archivers/length-of-last-word"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Wildcard Matching - String",
+		"url" : "/archivers/wildcard-matching"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Space Replacement - String",
+		"url" : "/archivers/space-replacement"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Palindromic Substring - Palindrome_String",
+		"url" : "/archivers/longest-palindromic-substring"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Valid Palindrome - Palindrome_String",
+		"url" : "/archivers/valid-palindrome"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Reverse Words in a String - String",
+		"url" : "/archivers/reverse-words-in-a-string"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Rotate String - String",
+		"url" : "/archivers/rotate-string"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Longest Common Substring - Dynamic Programming_String",
+		"url" : "/archivers/longest-common-substring"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Anagrams - String",
+		"url" : "/archivers/anagrams"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Compare Strings - String",
+		"url" : "/archivers/compare-strings"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Two Strings Are Anagrams - String",
+		"url" : "/archivers/two-strings-are-anagrams"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Implement strStr() - String",
+		"url" : "/archivers/implement-strstr"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Find sum - String",
+		"url" : "/archivers/find-sum"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Sort array - Sorting",
+		"url" : "/archivers/sort-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Insert Node in a Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/insert-node-in-a-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Flip Bits - Bit_Integer",
+		"url" : "/archivers/flip-bits"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Fizz Buzz - String",
+		"url" : "/archivers/fizz-buzz"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Delete Node in the Middle of Singly Linked List - LinkedList",
+		"url" : "/archivers/delete-node-in-the-middle-of-singly-linked-list"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Remove Node in Binary Search Tree - Binary Search Tree",
+		"url" : "/archivers/remove-node-in-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Convert Sorted List to Binary Search Tree - Binary Search Tree_LinkedList_Binary search tree",
+		"url" : "/archivers/convert-sorted-list-to-binary-search-tree"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Merge Sorted Array - Sorting",
+		"url" : "/archivers/merge-sorted-array"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Add Two Numbers - LinkedList",
+		"url" : "/archivers/add-two-numbers"
+	}
+	
+	,
+	
+    
+	{
+		"title" : "Add Binary - String_Binary",
+		"url" : "/archivers/add-binary"
+	}
+	
+    
+	]
+}

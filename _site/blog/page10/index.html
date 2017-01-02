@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeHu|Jason Liu's Blog</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.jpg"> 
+  <meta name="description" content="Coding is fun">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="headerWrap clearfix">
+      <a class="myFont title css2dcc4b9955748" href="/index">CodeHu</a>
+
+      <nav>
+        <ul>
+          <li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+          <li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+          <li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+        </ul>
+      </nav>
+
+<div class="search-tool" style="float: left;height: 45px;line-height: 45px;margin-left: 12px;">
+    <input type="text" class="form-control search-content" id="search-content" style="display: inline-block !important; 
+    color: #49525c;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #e1eaf2;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;" placeholder="Search for what you are interested in...." />
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+
+      <a href="" class="master">
+        <div class="avatarWrap">
+          <!--<img src="/assets/avatar.jpg" alt="Jason Liu" style="max-width: 27px;" />-->
+        <!--</div><span class="myFont css2dcc4b9955748">Jason Liu</span>-->
+      </a>
+    </div>
+  </header>
+
+  <main class="clearfix">
+    <div class="content">
+      <div class="content-inner">
+
+<p class="content-inner-title myFont css2dcc4b9955748">Articles</p>
+<div class="content-main">
+	 <ul class="post-list">
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/n-queens-ii">N-Queens II</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">totalNQueens</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+        <span class="n">helper</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;(),</span> <span class="n">result</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">helper</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span> <span class="n">cols</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">cols</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">++;</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">isValid</span><span class="o">(</span><span class="n">cols</span><span class="o">,</span> <span class="n">i</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">cols</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+                <span class="n">helper</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">cols</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
+                <span class="n">cols</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">cols</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span> <span class="n">cols</span><span class="o">,</span> <span class="kt">int</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="n">cols</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">row</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">cols</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="n">col</span> <span class="o">||</span> <span class="n">i</span> <span class="o">+</span> <span class="n">cols</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="n">row</span> <span class="o">+</span> <span class="n">col</span> <span class="o">||</span> <span class="n">i</span> <span class="o">-</span> <span class="n">cols</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="n">row</span> <span class="o">-</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+	          <p>
+	            <a class="post-link" href="/archivers/n-queens-ii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/n-queens">N-Queens</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>The n-queens puzzle is the problem of placing n queens on an n $\times$ n chessboard such that no two queens attack each other.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/n-queens">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/string-to-integeratoi">String to Integer(atoi)</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Implement function atoi to convert a string to an integer. If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT&#95;MAX (2147483647) or INT&#95;MIN (-2147483648) is returned.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/string-to-integeratoi">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/nuts-bolts-problem">Nuts & Bolts Problem</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a set of n nuts of different sizes and n bolts of different sizes. There is a one-one mapping between nuts and bolts. Comparison of a nut to another nut or a bolt to another bolt is not allowed. It means nut can only be compared with bolt and bolt can only be compared with nut to see which one is bigger/smaller.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/nuts-bolts-problem">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/gray-code">Gray Code</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, find the sequence of gray code. A gray code sequence must begin with 0 and with cover all 2n integers.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/gray-code">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/continuous-subarray-sum-ii">Continuous Subarray Sum II</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/continuous-subarray-sum-ii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/continuous-subarray-sum">Continuous Subarray Sum</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an integer array, find a continuous subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the index of the last number. (If their are duplicate answer, return anyone)</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/continuous-subarray-sum">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/minimum-window-substring">Minimum Window Substring</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a string source and a string target, find the minimum window in source which will contain all the characters in target.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/minimum-window-substring">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/matrix-zigzag-traversal">Matrix Zigzag Traversal</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in ZigZag-order.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/matrix-zigzag-traversal">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/merge-intervals">Merge Intervals</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a collection of intervals, merge all overlapping intervals.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/merge-intervals">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/insert-interval">Insert Interval</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a non-overlapping interval list which is sorted by start point. Insert a new interval into it, make sure the list is still in order and non-overlapping (merge intervals if necessary).</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/insert-interval">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/find-the-missing-number">Find the Missing Number</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array contains N numbers of 0 .. N, find which number doesn't exist in the array.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/find-the-missing-number">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/valid-sudoku">Valid Sudoku</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Determine whether a Sudoku is valid.The Sudoku board could be partially filled, where empty cells are filled with the character ..</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/valid-sudoku">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/heapify">Heapify</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an integer array, heapify it into a min-heap array. For a heap array A, A[0] is the root of heap, and for each A[i], A[i * 2 + 1] is the left child of A[i] and A[i * 2 + 2] is the right child of A[i].</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/heapify">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/sliding-window-maximum">Sliding Window Maximum</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array of n integer with duplicate number, and a moving window(size k), move the window at each iteration from the start of the array, find the maximum number inside the window at each moving</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/sliding-window-maximum">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/min-stack">Min Stack</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Implement a stack with min() function, which will return the smallest number in the stack. It should support push, pop and min operation all in O(1) cost.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/min-stack">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/implement-queue-by-two-stacks">Implement Queue by Two Stacks</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>As the title described, you should only use two stacks to implement a queue's actions. The queue should support push(element), pop() and top() where pop is pop the first(a.k.a front) element in the queue. Both pop and top methods should return the value of first element.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/implement-queue-by-two-stacks">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/longest-words">Longest Words</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a dictionary, find all of the longest words in the dictionary.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/longest-words">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/word-ladder-ii">Word Ladder II</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/word-ladder-ii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/word-ladder">Word Ladder</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that: Only one letter can be changed at a time. Each intermediate word must exist in the dictionary</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/word-ladder">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/topological-sorting">Topological Sorting</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an directed graph, a topological order of the graph nodes is defined as follow: For each directed edge A -&gt; B in graph, A must before B in the order list. The first node in the order can be any node in the graph with no nodes direct to it. Find any topological order for the given graph.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/topological-sorting">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/route-between-two-nodes-in-graph">Route Between Two Nodes in Graph</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a directed graph, design an algorithm to find out whether there is a route between two nodes.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/route-between-two-nodes-in-graph">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/find-the-connected-component-in-the-undirected-graph">Find the Connected Component in the Undirected Graph</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Find the number connected component in the undirected graph. Each node in the graph contains a label and a list of its neighbors. (a connected component (or just component) of an undirected graph is a subgraph in which any two vertices are connected to each other by paths, and which is connected to no additional vertices in the supergraph.)</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/find-the-connected-component-in-the-undirected-graph">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/longest-increasing-continuous-subsequence-ii">Longest Increasing Continuous subsequence II</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Give you an integer matrix (with row size n, column size m)，find the longest increasing continuous subsequence in this matrix. (The definition of the longest increasing continuous subsequence here can start at any row or column and go up/down/right/left any direction).</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/longest-increasing-continuous-subsequence-ii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/longest-increasing-continuous-subsequence">Longest Increasing Continuous subsequence</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array)，find the longest increasing continuous subsequence in this array. (The definition of the longest increasing continuous subsequence here can be from right to left or from left to right)</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/longest-increasing-continuous-subsequence">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/longest-increasing-subsequence">Longest Increasing Subsequence</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given a sequence of integers, find the longest increasing subsequence (LIS). You code should return the length of the LIS.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/longest-increasing-subsequence">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/maximum-subarray-iii">Maximum Subarray III</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array of integers and a number k, find k non-overlapping subarrays which have the largest sum. The number in each subarray should be contiguous. Return the largest sum.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/maximum-subarray-iii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/maximum-subarray-ii">Maximum Subarray II</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array of integers, find two non-overlapping subarrays which have the largest sum. The number in each subarray should be contiguous. Return the largest sum.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/maximum-subarray-ii">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/minimum-subarray">Minimum Subarray</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array of integers, find the subarray with smallest sum. Return the sum of the subarray.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/minimum-subarray">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	      <li>
+	        <h2>
+	          <a class="post-link" href="/archivers/maximum-subarray">Maximum Subarray</a>
+	        </h2>
+	        
+	        <div class="post-meta">Oct 21, 2015</div>
+
+	        <div class="post-excerpt">
+	          <p><strong><em>Given an array of integers, find a contiguous subarray which has the largest sum.</em></strong></p>
+
+
+	          <p>
+	            <a class="post-link" href="/archivers/maximum-subarray">Read More &raquo;</a>
+	          </p>
+	        </div>
+	      </li>
+	    
+	 </ul>
+	 <!--分页导航，为每一页生成链接-->
+	
+	<div class="pagination">
+	  
+	    <a href="/blog/page9/">&laquo; Prev</a>
+	  
+
+	  
+	    
+	      <a href="/index.html">1</a>
+	    
+	  
+	    
+	      <a href="/blog/page2/">2</a>
+	    
+	  
+	    
+	      <a href="/blog/page3/">3</a>
+	    
+	  
+	    
+	      <a href="/blog/page4/">4</a>
+	    
+	  
+	    
+	      <a href="/blog/page5/">5</a>
+	    
+	  
+	    
+	      <a href="/blog/page6/">6</a>
+	    
+	  
+	    
+	      <a href="/blog/page7/">7</a>
+	    
+	  
+	    
+	      <a href="/blog/page8/">8</a>
+	    
+	  
+	    
+	      <a href="/blog/page9/">9</a>
+	    
+	  
+	    
+	      <span>10</span>
+	    
+	  
+	    
+	      <a href="/blog/page11/">11</a>
+	    
+	  
+	    
+	      <a href="/blog/page12/">12</a>
+	    
+	  
+	    
+	      <a href="/blog/page13/">13</a>
+	    
+	  
+	    
+	      <a href="/blog/page14/">14</a>
+	    
+	  
+	    
+	      <a href="/blog/page15/">15</a>
+	    
+	  
+	    
+	      <a href="/blog/page16/">16</a>
+	    
+	  
+
+	  
+	    <a href="/blog/page11/">Next &raquo;</a>
+	  
+	</div>
+	
+</div>
+
+	</div>
+</div>
+<div class="sidebar">
+  <img class="avatar" src="/assets/avatar.jpg" alt="Jason Liu" height="250" width="200">
+  <div class="col-box-title name myFont css2dcc4b9955748">Jason Liu</div>
+  <p class="myFont css2dcc4b9955748">Time is money.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/mickeyliu5" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://weibo.com/u/2631341093" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://linkedin.com/in/yuanresume" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    
+    
+    
+    <a href="mailto:jason.yyliu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+  </p>
+
+  <div class="col-box-title myFont css2dcc4b9955748">Recent Articles</div>
+  <ul class="post-list">
+    <!--<li>Theme By <a href="http://zhaoyuxiang.cn">Clark Zhao</a></li>-->
+    
+      <li><a class="post-link" href="/archivers/largest-bst-subtree" target="_blank">Largest BST Subtree</a></li>
+    
+      <li><a class="post-link" href="/archivers/verify-preorder-serialization-of-a-binary-tree" target="_blank">Verify Preorder Serialization of a Binary Tree</a></li>
+    
+      <li><a class="post-link" href="/archivers/increasing-triplet-subsequence" target="_blank">Increasing Triplet Subsequence</a></li>
+    
+      <li><a class="post-link" href="/archivers/reconstruct-itinerary" target="_blank">Reconstruct Itinerary</a></li>
+    
+      <li><a class="post-link" href="/archivers/patching-array" target="_blank">Patching Array</a></li>
+    
+      <li><a class="post-link" href="/archivers/reorder-string" target="_blank">Reorder String</a></li>
+    
+      <li><a class="post-link" href="/archivers/validate-utf-8-byte-sequence" target="_blank">Validate UTF-8 byte sequence,</a></li>
+    
+      <li><a class="post-link" href="/archivers/find-the-difference-between-two-set" target="_blank">Find the difference between two set</a></li>
+    
+      <li><a class="post-link" href="/archivers/output-a-sorted-array-from-an-equation" target="_blank">Output a sorted array from an equation</a></li>
+    
+      <li><a class="post-link" href="/archivers/longest-increasing-path-in-a-matrix" target="_blank">Longest Increasing Path in a Matrix</a></li>
+    
+  </ul>
+</div>
+
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<span class="myFont">Copyright &copy; 2016 <a href="http://mickeyliu5.github.io">Jason Liu</a></span>
+			<ul>
+				<li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+				<li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+				<li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+				<li><a href="javascript:scroll(0,0)" class="myFont css2dcc4b9955748">Top</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!--返回顶部按钮-->
+	<div class="go-top">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </div>
+
+<script type="text/javascript"> /*$youzikuapi.asyncLoad("http://api.youziku.com/webfont/FastJS/yzk_80359A045057B6A0", function () { $youziku.load(".myFont", "6dee8aeae5404ac7b4184b79262d4e1a", "NaiYou");$youziku.draw(); }) Chinese font-family*/
+$(function() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1000)
+            $('div.go-top').show();
+        else
+            $('div.go-top').hide();
+    });
+    $('div.go-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 200);
+    });
+});
+</script>
+<!--English font-family
+<script type="text/javascript" src="http://api.youziku.com/wwwroot/js/g_webfont.min.js"></script> <script type="text/javascript"> WebFont.load({ custom: { urls: ['http://api.youziku.com/webfont/CSS/571879b6f629d80ed8fbe7d2'] } }); </script>-->
+</body>
+</html>

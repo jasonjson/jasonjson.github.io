@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Difference between a stack and a heap « CodeHu|Jason Liu's Blog</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.jpg"> 
+  <meta name="description" content="Where are the stack and heap stored?They are both stored in the computer’s RAM (Random Access Memory). For a refresher on RAM and virtual memory, read this a...">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="headerWrap clearfix">
+      <a class="myFont title css2dcc4b9955748" href="/index">CodeHu</a>
+
+      <nav>
+        <ul>
+          <li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+          <li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+          <li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+        </ul>
+      </nav>
+
+<div class="search-tool" style="float: left;height: 45px;line-height: 45px;margin-left: 12px;">
+    <input type="text" class="form-control search-content" id="search-content" style="display: inline-block !important; 
+    color: #49525c;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #e1eaf2;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;" placeholder="Search for what you are interested in...." />
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+
+      <a href="" class="master">
+        <div class="avatarWrap">
+          <!--<img src="/assets/avatar.jpg" alt="Jason Liu" style="max-width: 27px;" />-->
+        <!--</div><span class="myFont css2dcc4b9955748">Jason Liu</span>-->
+      </a>
+    </div>
+  </header>
+
+  <main class="clearfix">
+    <div class="content">
+      <div class="content-inner">
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Difference between a stack and a heap</h1>
+    <p class="post-meta">Nov 5, 2015 • Jason</p>
+  </header>
+
+  <article class="post-content">
+    <ul>
+<li>Where are the stack and heap stored?
+<ul>
+<li>They are both stored in the computer’s RAM (Random Access Memory). For a refresher on RAM and virtual memory, read this article: How Virtual Memory Works</li>
+</ul>
+</li>
+<li>How do threads interact with the stack and the heap? How do the stack and heap work in multithreading?
+<ul>
+<li>In a multi-threaded application, each thread will have its own stack. But, all the different threads will share the heap. Because the different threads share the heap in a multi-threaded application, this also means that there has to be some coordination between the threads so that they don’t try to access and manipulate the same piece(s) of memory in the heap at the same time.</li>
+</ul>
+</li>
+<li>Can an object be stored on the stack instead of the heap?
+<ul>
+<li>Yes, an object can be stored on the stack. If you create an object inside a function without using the “new” operator then this will create and store the object on the stack, and not on the heap. Suppose we have a C++ class called Member, for which we want to create an object. We also have a function called some function(). Here is what the code would look like:</li>
+</ul>
+</li>
+<li>Code to create an object on the stack:</li>
+</ul>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">somefunction</span><span class="o">(</span> <span class="o">)</span>
+<span class="o">{</span>
+<span class="cm">/* create an object "m" of class Member
+    this will be put on the stack since the 
+    "new" keyword is not used, and we are 
+   creating the object inside a function
+*/</span>
+
+  <span class="n">Member</span> <span class="n">m</span><span class="o">;</span>
+
+<span class="o">}</span> <span class="c1">//the object "m" is destroyed once the function ends</span>
+</code></pre>
+</div>
+<p>So, the object “m” is destroyed once the function has run to completion – or, in other words, when it “goes out of scope”. The memory being used for the object “m” on the stack will be removed once the function is done running.</p>
+<ul>
+<li>If we want to create an object on the heap inside a function, then this is what the code would look like:</li>
+</ul>
+<p>Code to create an object on the heap:</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="n">some</span> <span class="nf">function</span><span class="o">(</span> <span class="o">)</span>
+<span class="o">{</span>
+<span class="cm">/* create an object "m" of class Member
+    this will be put on the heap since the 
+    "new" keyword is used, and we are 
+   creating the object inside a function
+*/</span>
+
+  <span class="n">Member</span><span class="o">*</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Member</span><span class="o">(</span> <span class="o">)</span> <span class="o">;</span>
+
+  <span class="cm">/* the object "m" must be deleted
+      otherwise a memory leak occurs
+  */</span>
+
+  <span class="n">delete</span> <span class="n">m</span><span class="o">;</span> 
+<span class="o">}</span> 
+</code></pre>
+</div>
+<p>In the code above, you can see that the “m” object is created inside a function using the “new” keyword. This means that “m” will be created on the heap. But, since “m” is created using the “new” keyword, that also means that we must delete the “m” object on our own as well – otherwise we will end up with a memory leak.</p>
+<ul>
+<li>How long does memory on the stack last versus memory on the heap?
+<ul>
+<li>Once a function call runs to completion, any data on the stack created specifically for that function call will automatically be deleted. Any data on the heap will remain there until it’s manually deleted by the programmer.</li>
+</ul>
+</li>
+<li>Can the stack grow in size? Can the heap grow in size?
+<ul>
+<li>The stack is set to a fixed size, and can not grow past it’s fixed size (although some languages have extensions that do allow this). So, if there is not enough room on the stack to handle the memory being assigned to it, a stack overflow occurs. This often happens when a lot of nested functions are being called, or if there is an infinite recursive call.
+</li>
+<li>
+<p>If the current size of the heap is too small to accommodate new memory, then more memory can be added to the heap by the operating system. This is one of the big differences between the heap and the stack.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>How are the stack and heap implemented?</p>
+<ul>
+<li>The implementation really depends on the language, compiler, and run-time – the small details of the implementation for a stack and a heap will always be different depending on what language and compiler are being used. But, in the big picture, the stacks and heaps in one language are used to accomplish the same things as stacks and heaps in another language.</li>
+</ul>
+</li>
+<li>Which is faster – the stack or the heap? And why?
+<ul>
+<li>The stack is much faster than the heap. This is because of the way that memory is allocated on the stack. Allocating memory on the stack is as simple as moving the stack pointer up.</li>
+</ul>
+</li>
+<li>How is memory deallocated on the stack and heap?
+<ul>
+<li>Data on the stack is automatically deallocated when variables go out of scope. However, in languages like C and C++, data stored on the heap has to be deleted manually by the programmer using one of the built in keywords like free, delete, or delete[ ]. Other languages like Java and .NET use garbage collection to automatically delete memory from the heap, without the programmer having to do anything..</li>
+</ul>
+</li>
+<li>What can go wrong with the stack and the heap?
+<ul>
+<li>If the stack runs out of memory, then this is called a stack overflow – and could cause the program to crash. The heap could have the problem of fragmentation, which occurs when the available memory on the heap is being stored as noncontiguous (or disconnected) blocks – because used blocks of memory are in between the unused memory blocks. When excessive fragmentation occurs, allocating new memory may be impossible because of the fact that even though there is enough memory for the desired allocation, there may not be enough memory in one big block for the desired amount of memory.</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+  
+  
+
+<div class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'mickeyliu5'; // required: replace example with your forum shortname
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+
+
+<div class="post-comments">
+<!-- 多说分享代码 start -->
+    <div class="ds-share" data-thread-key="/archivers/difference-between-a-stack-and-a-heap" data-title="Difference between a stack and a heap" data-images="https://avatars0.githubusercontent.com/u/17525377?v=3&s=460" data-content="——Clark Zhao的博客" data-url="http://localhost:4000/archivers/difference-between-a-stack-and-a-heap">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li>分享到：</li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        <li><a class="ds-qq" href="javascript:void(0);" data-service="qq">QQ</a> </li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+    <!-- 多说分享代码 end -->
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/archivers/difference-between-a-stack-and-a-heap" data-title="Difference between a stack and a heap" data-url="http://localhost:4000/archivers/difference-between-a-stack-and-a-heap"></div>
+    <!-- 多说评论框 end -->
+    
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mickeyliu5"};
+      (function() {
+      	var ds = document.createElement('script');
+      	ds.type = 'text/javascript';ds.async = true;
+      	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      	ds.charset = 'UTF-8';
+      	(document.getElementsByTagName('head')[0] 
+      	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+
+	</div>
+</div>
+<div class="sidebar">
+  <img class="avatar" src="/assets/avatar.jpg" alt="Jason Liu" height="250" width="200">
+  <div class="col-box-title name myFont css2dcc4b9955748">Jason Liu</div>
+  <p class="myFont css2dcc4b9955748">Time is money.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/mickeyliu5" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://weibo.com/u/2631341093" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://linkedin.com/in/yuanresume" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    
+    
+    
+    <a href="mailto:jason.yyliu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+  </p>
+
+  <div class="col-box-title myFont css2dcc4b9955748">Recent Articles</div>
+  <ul class="post-list">
+    <!--<li>Theme By <a href="http://zhaoyuxiang.cn">Clark Zhao</a></li>-->
+    
+      <li><a class="post-link" href="/archivers/largest-bst-subtree" target="_blank">Largest BST Subtree</a></li>
+    
+      <li><a class="post-link" href="/archivers/verify-preorder-serialization-of-a-binary-tree" target="_blank">Verify Preorder Serialization of a Binary Tree</a></li>
+    
+      <li><a class="post-link" href="/archivers/increasing-triplet-subsequence" target="_blank">Increasing Triplet Subsequence</a></li>
+    
+      <li><a class="post-link" href="/archivers/reconstruct-itinerary" target="_blank">Reconstruct Itinerary</a></li>
+    
+      <li><a class="post-link" href="/archivers/patching-array" target="_blank">Patching Array</a></li>
+    
+      <li><a class="post-link" href="/archivers/reorder-string" target="_blank">Reorder String</a></li>
+    
+      <li><a class="post-link" href="/archivers/validate-utf-8-byte-sequence" target="_blank">Validate UTF-8 byte sequence,</a></li>
+    
+      <li><a class="post-link" href="/archivers/find-the-difference-between-two-set" target="_blank">Find the difference between two set</a></li>
+    
+      <li><a class="post-link" href="/archivers/output-a-sorted-array-from-an-equation" target="_blank">Output a sorted array from an equation</a></li>
+    
+      <li><a class="post-link" href="/archivers/longest-increasing-path-in-a-matrix" target="_blank">Longest Increasing Path in a Matrix</a></li>
+    
+  </ul>
+</div>
+
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<span class="myFont">Copyright &copy; 2016 <a href="http://mickeyliu5.github.io">Jason Liu</a></span>
+			<ul>
+				<li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+				<li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+				<li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+				<li><a href="javascript:scroll(0,0)" class="myFont css2dcc4b9955748">Top</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!--返回顶部按钮-->
+	<div class="go-top">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </div>
+
+<script type="text/javascript"> /*$youzikuapi.asyncLoad("http://api.youziku.com/webfont/FastJS/yzk_80359A045057B6A0", function () { $youziku.load(".myFont", "6dee8aeae5404ac7b4184b79262d4e1a", "NaiYou");$youziku.draw(); }) Chinese font-family*/
+$(function() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1000)
+            $('div.go-top').show();
+        else
+            $('div.go-top').hide();
+    });
+    $('div.go-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 200);
+    });
+});
+</script>
+<!--English font-family
+<script type="text/javascript" src="http://api.youziku.com/wwwroot/js/g_webfont.min.js"></script> <script type="text/javascript"> WebFont.load({ custom: { urls: ['http://api.youziku.com/webfont/CSS/571879b6f629d80ed8fbe7d2'] } }); </script>-->
+</body>
+</html>

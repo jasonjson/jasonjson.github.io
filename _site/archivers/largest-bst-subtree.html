@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Largest BST Subtree « CodeHu|Jason Liu's Blog</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.jpg"> 
+  <meta name="description" content="Given a binary tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="headerWrap clearfix">
+      <a class="myFont title css2dcc4b9955748" href="/index">CodeHu</a>
+
+      <nav>
+        <ul>
+          <li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+          <li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+          <li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+        </ul>
+      </nav>
+
+<div class="search-tool" style="float: left;height: 45px;line-height: 45px;margin-left: 12px;">
+    <input type="text" class="form-control search-content" id="search-content" style="display: inline-block !important; 
+    color: #49525c;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #e1eaf2;
+    border: 1px solid #045bb2;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;" placeholder="Search for what you are interested in...." />
+</div>
+
+<link rel="stylesheet" href="/search/css/cb-search.css">
+
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+
+      <a href="" class="master">
+        <div class="avatarWrap">
+          <!--<img src="/assets/avatar.jpg" alt="Jason Liu" style="max-width: 27px;" />-->
+        <!--</div><span class="myFont css2dcc4b9955748">Jason Liu</span>-->
+      </a>
+    </div>
+  </header>
+
+  <main class="clearfix">
+    <div class="content">
+      <div class="content-inner">
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Largest BST Subtree</h1>
+    <p class="post-meta">Feb 23, 2016 • Jason</p>
+  </header>
+
+  <article class="post-content">
+    <p><strong><em>Given a binary tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.</em></strong></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">largestBSTSubtree</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="n">helper</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">helper</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
+        <span class="c1">//result[0]: is BST? result[2] : total number of nodes, result[3]: maximum value, result[4] minimum value</span>
+        <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">result</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">MIN_VALUE</span><span class="o">;</span> <span class="n">result</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">result_left</span> <span class="o">=</span> <span class="n">helper</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">result_right</span> <span class="o">=</span> <span class="n">helper</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">result_left</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&gt;=</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">||</span> <span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&lt;=</span> <span class="n">result_left</span><span class="o">[</span><span class="mi">3</span><span class="o">])</span> <span class="o">{</span>
+            <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span><span class="c1">//root is larger than the biggest node in left subtree and smaller than smallest node in right subtree</span>
+        <span class="n">result</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">result_left</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">+</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="n">result</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="n">result</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">:</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">result_left</span><span class="o">[</span><span class="mi">1</span><span class="o">],</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+        <span class="n">result</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">val</span><span class="o">,</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">result_left</span><span class="o">[</span><span class="mi">3</span><span class="o">],</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">3</span><span class="o">]));</span>
+        <span class="n">result</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">val</span><span class="o">,</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">result_left</span><span class="o">[</span><span class="mi">4</span><span class="o">],</span> <span class="n">result_right</span><span class="o">[</span><span class="mi">4</span><span class="o">]));</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+  </article>
+  
+  
+
+<div class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'mickeyliu5'; // required: replace example with your forum shortname
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+
+
+<div class="post-comments">
+<!-- 多说分享代码 start -->
+    <div class="ds-share" data-thread-key="/archivers/largest-bst-subtree" data-title="Largest BST Subtree" data-images="https://avatars0.githubusercontent.com/u/17525377?v=3&s=460" data-content="——Clark Zhao的博客" data-url="http://localhost:4000/archivers/largest-bst-subtree">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li>分享到：</li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        <li><a class="ds-qq" href="javascript:void(0);" data-service="qq">QQ</a> </li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+    <!-- 多说分享代码 end -->
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/archivers/largest-bst-subtree" data-title="Largest BST Subtree" data-url="http://localhost:4000/archivers/largest-bst-subtree"></div>
+    <!-- 多说评论框 end -->
+    
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mickeyliu5"};
+      (function() {
+      	var ds = document.createElement('script');
+      	ds.type = 'text/javascript';ds.async = true;
+      	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      	ds.charset = 'UTF-8';
+      	(document.getElementsByTagName('head')[0] 
+      	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+
+	</div>
+</div>
+<div class="sidebar">
+  <img class="avatar" src="/assets/avatar.jpg" alt="Jason Liu" height="250" width="200">
+  <div class="col-box-title name myFont css2dcc4b9955748">Jason Liu</div>
+  <p class="myFont css2dcc4b9955748">Time is money.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/mickeyliu5" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://weibo.com/u/2631341093" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    
+    
+    <a href="https://linkedin.com/in/yuanresume" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    
+    
+    
+    <a href="mailto:jason.yyliu@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+  </p>
+
+  <div class="col-box-title myFont css2dcc4b9955748">Recent Articles</div>
+  <ul class="post-list">
+    <!--<li>Theme By <a href="http://zhaoyuxiang.cn">Clark Zhao</a></li>-->
+    
+      <li><a class="post-link" href="/archivers/largest-bst-subtree" target="_blank">Largest BST Subtree</a></li>
+    
+      <li><a class="post-link" href="/archivers/verify-preorder-serialization-of-a-binary-tree" target="_blank">Verify Preorder Serialization of a Binary Tree</a></li>
+    
+      <li><a class="post-link" href="/archivers/increasing-triplet-subsequence" target="_blank">Increasing Triplet Subsequence</a></li>
+    
+      <li><a class="post-link" href="/archivers/reconstruct-itinerary" target="_blank">Reconstruct Itinerary</a></li>
+    
+      <li><a class="post-link" href="/archivers/patching-array" target="_blank">Patching Array</a></li>
+    
+      <li><a class="post-link" href="/archivers/reorder-string" target="_blank">Reorder String</a></li>
+    
+      <li><a class="post-link" href="/archivers/validate-utf-8-byte-sequence" target="_blank">Validate UTF-8 byte sequence,</a></li>
+    
+      <li><a class="post-link" href="/archivers/find-the-difference-between-two-set" target="_blank">Find the difference between two set</a></li>
+    
+      <li><a class="post-link" href="/archivers/output-a-sorted-array-from-an-equation" target="_blank">Output a sorted array from an equation</a></li>
+    
+      <li><a class="post-link" href="/archivers/longest-increasing-path-in-a-matrix" target="_blank">Longest Increasing Path in a Matrix</a></li>
+    
+  </ul>
+</div>
+
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<span class="myFont">Copyright &copy; 2016 <a href="http://mickeyliu5.github.io">Jason Liu</a></span>
+			<ul>
+				<li><a href="/index" class="myFont css2dcc4b9955748">Home</a></li>
+				<li><a href="/blog" class="myFont css2dcc4b9955748">Blog</a></li>
+				<li><a href="/about" class="myFont css2dcc4b9955748">About</a></li>
+				<li><a href="javascript:scroll(0,0)" class="myFont css2dcc4b9955748">Top</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!--返回顶部按钮-->
+	<div class="go-top">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </div>
+
+<script type="text/javascript"> /*$youzikuapi.asyncLoad("http://api.youziku.com/webfont/FastJS/yzk_80359A045057B6A0", function () { $youziku.load(".myFont", "6dee8aeae5404ac7b4184b79262d4e1a", "NaiYou");$youziku.draw(); }) Chinese font-family*/
+$(function() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1000)
+            $('div.go-top').show();
+        else
+            $('div.go-top').hide();
+    });
+    $('div.go-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 200);
+    });
+});
+</script>
+<!--English font-family
+<script type="text/javascript" src="http://api.youziku.com/wwwroot/js/g_webfont.min.js"></script> <script type="text/javascript"> WebFont.load({ custom: { urls: ['http://api.youziku.com/webfont/CSS/571879b6f629d80ed8fbe7d2'] } }); </script>-->
+</body>
+</html>
