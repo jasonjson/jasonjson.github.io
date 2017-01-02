@@ -6,8 +6,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.</em></strong><br />
-
+<p><strong><em>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.</em></strong></p>
 
 ``` java
 public class Solution {

@@ -1,12 +1,12 @@
 # Site settings
 title: CodeHu
-url: ""    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
+url: "mickeyliu5.github.io"    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
 baseurl: "" # the prefix of your site uri, eg. `/bohu-jekyll-theme` or just one slash `/`
 #timezone: Asia/Shanghai
 description: Coding is fun
 # Your information
 email: jason.yyliu@gmail.com
-author: Jason
+author: Jason Liu
 place: New York
 domain: mickeyliu5.github.io
 company: Unknown
