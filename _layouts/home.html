@@ -5,7 +5,8 @@
 	</div>
 </div>
 <div class="sidebar">
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=210 src="http://music.163.com/outchain/player?type=0&id=365802806&auto=0&height=430"></iframe>
+  <!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=210 src="http://music.163.com/outchain/player?type=0&id=365802806&auto=0&height=430"></iframe>-->
+  <img class="avatar" src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}" alt="{{ site.author }}" height="250" width="200">
   <div class="col-box-title name myFont">{{ site.author }}</div>
   <p class="myFont">{{ site.profile }}</p>
   <p class="contact">
@@ -14,6 +15,9 @@
     {% endif %}
     {% if site.weibo_username %}
     <a href="https://weibo.com/{{ site.weibo_username }}" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.linkedin_username %}
+    <a href="https://linkedin.com/{{ site.linkedin_username }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
     {% endif %}
     {% if site.twitter_username %}
     <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -25,7 +29,7 @@
 
   <div class="col-box-title myFont">Recent Articles</div>
   <ul class="post-list">
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts limit:10 %}
       <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}" target="_blank">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
