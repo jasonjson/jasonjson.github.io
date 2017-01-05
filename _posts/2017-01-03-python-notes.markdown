@@ -50,3 +50,23 @@ fib.cache_clear()
   * **a**   Open for writing. The file is created if it does not exist. The stream is positioned at the end of the file.  Subsequent writes to the file will always end up at the then current end of file, irrespective of any intervening fseek(3) or similar.
 
   * **a+**  Open for reading and writing. The file is created if it does not exist.  The stream is positioned at the end of the file.  Subsequent writes to the file will always end up at the then current end of file, irrespective of any intervening fseek(3) or similar.'
+
+## \*args and \*\*kwargs
+
+\*args is used to send a non-keyworded variable length argument list to the function.
+\*\*kwargs allows you to pass keyworded variable length of arguments to a function.
+
+## Decorators
+
+[Read this](http://book.pythontips.com/en/latest/decorators.html)
+
+## Object introspection
+
+`dir` returns a list of attributes and methods belonging to an object.
+`type` returns the type of an object.
+`id` returns the unique ids of various objects.
+
+## Virtual Environment
+
+`Virtualenv` is a tool which allows us to make isolated python environments.
+[Read this](http://book.pythontips.com/en/latest/virtual_environment.html)
