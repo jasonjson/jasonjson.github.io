@@ -10,9 +10,6 @@ author: Jason
 
 # Regular expression
 
-## Python Compatible Regex Tester
-[Link](https://regex101.com/#python)
-
 ## Special characters:
 * `.` (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.
 
@@ -34,17 +31,20 @@ author: Jason
 
 * `(?P<name>...)` Similar to regular parentheses, but the substring matched by the group is accessible via the symbolic group name name.
 
-* `\\d` When the UNICODE flag is not specified, matches any decimal digit; this is equivalent to the set [0-9]
+* `\d` When the UNICODE flag is not specified, matches any decimal digit; this is equivalent to the set [0-9]
 
-* `\\D` When the UNICODE flag is not specified, matches any non-digit character; this is equivalent to the set [^0-9]. With UNICODE, it will match anything other than character marked as digits in the Unicode character properties database.
+* `\D` When the UNICODE flag is not specified, matches any non-digit character; this is equivalent to the set [^0-9]. With UNICODE, it will match anything other than character marked as digits in the Unicode character properties database.
 
-* `\\s` When the UNICODE flag is not specified, it matches any whitespace character.
+* `\s` When the UNICODE flag is not specified, it matches any whitespace character.
 
-* `\\S` When the UNICODE flag is not specified, matches any non-whitespace character.
+* `\S` When the UNICODE flag is not specified, matches any non-whitespace character.
 
-* `\\w` When the LOCALE and UNICODE flags are not specified, matches any alphanumeric character and the underscore.
+* `\w` When the LOCALE and UNICODE flags are not specified, matches any alphanumeric character and the underscore.
 
-* `\\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
+* `\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
+
+## Python Compatible Regex Tester
+[Link](https://regex101.com/#python)
 
 # Function caching
 
