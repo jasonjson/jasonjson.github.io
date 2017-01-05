@@ -7,14 +7,12 @@ categories:
 author: Jason
 ---
 
-# Python Notes
+# Regular expression
 
-## Regular expression
-### Python Compatible Regex Tester
-
+## Python Compatible Regex Tester
 [Link](https://regex101.com/#python)
 
-### Special characters:
+## Special characters:
 * `.` (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.
 
 * `^` (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline.
@@ -47,7 +45,7 @@ author: Jason
 
 * `\\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
 
-## Function caching
+# Function caching
 
 In Python 3.2+ there is an `lru_cache` decorator which allows us to quickly cache and uncache the return values of a function.
 
@@ -73,7 +71,7 @@ fib.cache_clear()
 ```
 [Here](https://www.caktusgroup.com/blog/2015/06/08/testing-client-side-applications-django-post-mortem/) is a fine article by Caktus Group in which they caught a bug in Django which occurred due to `lru_cache`
 
-## File handlers
+# File handlers
 
   * **r**   Open text file for reading. The stream is positioned at the beginning of the file.
 
@@ -87,22 +85,22 @@ fib.cache_clear()
 
   * **a+**  Open for reading and writing. The file is created if it does not exist.  The stream is positioned at the end of the file.  Subsequent writes to the file will always end up at the then current end of file, irrespective of any intervening fseek(3) or similar.'
 
-## \*args and \*\*kwargs
+# \*args and \*\*kwargs
 
-\*args is used to send a non-keyworded variable length argument list to the function.
-\*\*kwargs allows you to pass keyworded variable length of arguments to a function.
+* \*args is used to send a non-keyworded variable length argument list to the function.
+* \*\*kwargs allows you to pass keyworded variable length of arguments to a function.
 
-## Decorators
+# Decorators
 
 [Read this](http://book.pythontips.com/en/latest/decorators.html)
 
-## Object introspection
+# Object introspection
 
 `dir` returns a list of attributes and methods belonging to an object.
 `type` returns the type of an object.
 `id` returns the unique ids of various objects.
 
-## Virtual Environment
+# Virtual Environment
 
 `Virtualenv` is a tool which allows us to make isolated python environments.
 [Read this](http://book.pythontips.com/en/latest/virtual_environment.html)
