@@ -10,7 +10,9 @@ author: Jason
 
 # Regular expression
 
-## Special characters:
+1. Python Compatible Regex Tester
+[Link](https://regex101.com/#python)
+2. Special characters:
 * `.` (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.
 
 * `^` (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline.
@@ -42,9 +44,6 @@ author: Jason
 * `\w` When the LOCALE and UNICODE flags are not specified, matches any alphanumeric character and the underscore.
 
 * `\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
-
-## Python Compatible Regex Tester
-[Link](https://regex101.com/#python)
 
 # Function caching
 
