@@ -13,37 +13,37 @@ author: Jason
 1. Python Compatible Regex Tester
 [Link](https://regex101.com/#python)
 2. Special characters:
-* `.` (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.
+    * `.` (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.
 
-* `^` (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline.
+    * `^` (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline.
 
-* `$` Matches the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline. foo matches both ‘foo’ and ‘foobar’, while the regular expression foo$ matches only ‘foo’. More interestingly, searching for foo.$ in 'foo1\nfoo2\n' matches ‘foo2’ normally, but ‘foo1’ in MULTILINE mode; searching for a single $ in 'foo\n' will find two (empty) matches: one just before the newline, and one at the end of the string.
+    * `$` Matches the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline. foo matches both ‘foo’ and ‘foobar’, while the regular expression foo$ matches only ‘foo’. More interestingly, searching for foo.$ in 'foo1\nfoo2\n' matches ‘foo2’ normally, but ‘foo1’ in MULTILINE mode; searching for a single $ in 'foo\n' will find two (empty) matches: one just before the newline, and one at the end of the string.
 
-* `*` Causes the resulting RE to match 0 or more repetitions of the preceding RE, as many repetitions as are possible. ab* will match ‘a’, ‘ab’, or ‘a’ followed by any number of ‘b’s.
+    * `*` Causes the resulting RE to match 0 or more repetitions of the preceding RE, as many repetitions as are possible. ab* will match ‘a’, ‘ab’, or ‘a’ followed by any number of ‘b’s.
 
-* `+` Causes the resulting RE to match 1 or more repetitions of the preceding RE. ab+ will match ‘a’ followed by any non-zero number of ‘b’s; it will not match just ‘a’.
+    * `+` Causes the resulting RE to match 1 or more repetitions of the preceding RE. ab+ will match ‘a’ followed by any non-zero number of ‘b’s; it will not match just ‘a’.
 
-* `?` Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. ab? will match either ‘a’ or ‘ab’.
+    * `?` Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. ab? will match either ‘a’ or ‘ab’.
 
-* `\\` Either escapes special characters (permitting you to match characters like '*', '?', and so forth), or signals a special sequence
+    * `\\` Either escapes special characters (permitting you to match characters like '*', '?', and so forth), or signals a special sequence
 
-* `[]` Used to indicate a set of characters.
+    * `[]` Used to indicate a set of characters.
 
-* `(?:...)` A non-capturing version of regular parentheses
+    * `(?:...)` A non-capturing version of regular parentheses
 
-* `(?P<name>...)` Similar to regular parentheses, but the substring matched by the group is accessible via the symbolic group name name.
+    * `(?P<name>...)` Similar to regular parentheses, but the substring matched by the group is accessible via the symbolic group name name.
 
-* `\d` When the UNICODE flag is not specified, matches any decimal digit; this is equivalent to the set [0-9]
+    * `\d` When the UNICODE flag is not specified, matches any decimal digit; this is equivalent to the set [0-9]
 
-* `\D` When the UNICODE flag is not specified, matches any non-digit character; this is equivalent to the set [^0-9]. With UNICODE, it will match anything other than character marked as digits in the Unicode character properties database.
+    * `\D` When the UNICODE flag is not specified, matches any non-digit character; this is equivalent to the set [^0-9]. With UNICODE, it will match anything other than character marked as digits in the Unicode character properties database.
 
-* `\s` When the UNICODE flag is not specified, it matches any whitespace character.
+    * `\s` When the UNICODE flag is not specified, it matches any whitespace character.
 
-* `\S` When the UNICODE flag is not specified, matches any non-whitespace character.
+    * `\S` When the UNICODE flag is not specified, matches any non-whitespace character.
 
-* `\w` When the LOCALE and UNICODE flags are not specified, matches any alphanumeric character and the underscore.
+    * `\w` When the LOCALE and UNICODE flags are not specified, matches any alphanumeric character and the underscore.
 
-* `\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
+    * `\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
 
 # Function caching
 
