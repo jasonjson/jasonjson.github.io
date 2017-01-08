@@ -3,7 +3,7 @@ layout: post
 title: Github notes
 date: 2017-01-05 10:04
 categories:
-- notes
+- A note
 author: Jason
 ---
 <p><strong><em>Github notes</em></strong></p>

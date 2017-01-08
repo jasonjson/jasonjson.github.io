@@ -3,7 +3,7 @@ layout: post
 title: Python notes
 date: 2017-01-05 10:10
 categories:
-- notes
+- A note
 author: Jason
 ---
 <p><strong><em>Python notes</em></strong></p>
