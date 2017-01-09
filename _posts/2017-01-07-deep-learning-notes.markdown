@@ -34,4 +34,7 @@ author: Jason
 
 ## Preventing Overfitting in Deep Neural Networks
 * One method of combatting overfitting is called *regularization*. Regularization modifies the objective function that we minimize by adding additional terms that penalize large weights.
-* The most common type of regularization is *L2 regularization*. It can be implemented by augmenting the error function with the squared magnitude of all weights in the neural network.
+    1. The most common type of regularization is *L2 regularization*. It can be implemented by augmenting the error function with the squared magnitude of all weights in the neural network.
+    2. Another common type of regularization is *L1 regularization*. Neurons with L1 regularization end up using only a small subset of their most important inputs and become quite resistant to noise in the inputs. L1 regularization is very useful when you want to understand exactly which features are contributing to a decision.
+    3. *Max norm constraints* have a similar goal of attempting to restrict  from becoming too large, but they do this more directly. Max norm constraints enforce an absolute upper bound on the magnitude of the incoming weight vector for every neuron and use projected gradient descent to enforce the constraint.
+    4. *Dropout* is a very different kind of method for preventing overfitting that can often be used in lieu of other techniques. While training, dropout is implemented by only keeping a neuron active with some probability  (a hyperparameter), or setting it to zero otherwise. Intuitively, this forces the network to be accurate even in the absence of certain information.
