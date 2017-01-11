@@ -9,8 +9,6 @@ author: Jason
 ---
 <p><strong><em>Given n, how many structurally unique BST's (binary search trees) that store values 1...n?</em></strong></p>
 
-<a href="http://fisherlei.blogspot.com/2013/03/leetcode-unique-binary-search-trees.html">see more explanation here</a></p>
-
 ```python
 class Solution(object):
     def numTrees(self, n):
