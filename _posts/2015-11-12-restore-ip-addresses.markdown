@@ -8,7 +8,35 @@ author: Jason
 ---
 <p><strong><em>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</em></strong></p>
 
+```python
+class Solution(object):
+    def restoreIpAddresses(self, s):
+        """
+        :type s: str
+        :rtype: List[str]
+        """
+        result = []
+        self.helper(s, "", result, 0)
+        return result
 
+    def helper(self, s, temp, result, step):
+        if step == 4:
+            if len(s) == 0:
+                result.append(temp[:-1])
+            return
+
+        for i in range(1, 4):
+            if i > len(s):
+                return
+            sub_str = s[:i]
+            if (self.is_valid(sub_str)):
+                self.helper(s[i:], temp + sub_str + '.', result, step + 1)
+
+    def is_valid(self, s):
+        if s[0] == '0':
+            return len(s) == 1
+        return int(s) <= 255 and int(s) > 0
+```
 ``` java
 public class Solution {
     public List<string> restoreIpAddresses(String s) {
