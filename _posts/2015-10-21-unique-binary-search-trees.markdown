@@ -11,6 +11,21 @@ author: Jason
 
 <a href="http://fisherlei.blogspot.com/2013/03/leetcode-unique-binary-search-trees.html">see more explanation here</a></p>
 
+```python
+class Solution(object):
+    def numTrees(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        dp = [1, 1]
+        for i in range(2, n + 1):
+            amount = 0
+            for j in range(0, i):
+                amount += dp[j] * dp[i - j - 1]
+            dp.append(amount)
+        return dp[n]
+```
 ``` java
 public class Solution {
     /**
