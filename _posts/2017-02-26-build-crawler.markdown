@@ -7,8 +7,8 @@ categories:
 author: Jason
 ---
 <p><strong><em>Build crawler using scrapy</em></strong></p>
-## Build the project
 
+## Build the project
 `$scrapy startproject my_crawler`
 该命令会在当前目录下创建一个名为”my_crawler”的工程，工程的目录结构如下
 
@@ -68,7 +68,6 @@ class MyCrawlSpider(CrawlSpider):
 `scrapy crawl my_crawler -o my_crawler.json -t json`
 
 ## Store the results to mongodb
-
 这里我们采用MongoDB，你需要先安装Python的MongoDB库”pymongo”。编辑”my_crawler”目录下的”pipelines.py”文件，在”MyCrawlerPipeline”类中加上如下代码：
 
 ```python
