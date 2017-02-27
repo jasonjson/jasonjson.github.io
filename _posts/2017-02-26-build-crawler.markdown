@@ -12,17 +12,7 @@ author: Jason
 2. Build the project
 
 `$scrapy startproject my_crawler`
-
 该命令会在当前目录下创建一个名为”my_crawler”的工程，工程的目录结构如下
-
-my_crawler
-  |- my_crawler
-  |    |- spiders
-  |    |    |- __init__.py
-  |    |- items.py
-  |    |- pipelines.py
-  |    |- setting.py
-  |- scrapy.cfg
 
 3. Modify fields that you want
  修改”items.py”文件，在”MyCrawlerItem”类中加上如下代码：
