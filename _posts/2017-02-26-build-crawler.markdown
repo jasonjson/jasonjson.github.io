@@ -7,14 +7,14 @@ categories:
 author: Jason
 ---
 <p><strong><em>Build crawler using scrapy</em></strong></p>
-1. Install lxml/scrapy using pip install
+## Install lxml/scrapy using pip install
 
-2. Build the project
+## Build the project
 
 `$scrapy startproject my_crawler`
 该命令会在当前目录下创建一个名为”my_crawler”的工程，工程的目录结构如下
 
-3. Modify fields that you want
+## Modify fields that you want
  修改”items.py”文件，在”MyCrawlerItem”类中加上如下代码：
 
 ```python
@@ -26,7 +26,7 @@ class MyCrawlerItem(scrapy.Item):
     pass
 ```
 
-4. Add websites and html fields
+## Add websites and html fields
 在”my_crawler/spiders”目录下，创建一个名为”crawl_spider.py”文件（文件名可以任意取）。代码如下
 
 ```python
@@ -62,14 +62,14 @@ class MyCrawlSpider(CrawlSpider):
 ```
 对于XPath不熟悉的朋友，可以通过Chrome的debug工具获取元素的XPath, view->developer->developer tools
 [Some tutorials for XPath](https://www.w3schools.com/xml/xpath_syntax.asp)
-5. Test the crawler
+## Test the crawler
 `scrapy crawl my_crawler`
 注意，这里的”my_crawler”就是你在”crawl_spider.py”文件中起的Spider名。
 
-6. Store the results into a json file
+## Store the results into a json file
 `scrapy crawl my_crawler -o my_crawler.json -t json`
 
-7. Store the results to mongodb
+## Store the results to mongodb
 
 这里我们采用MongoDB，你需要先安装Python的MongoDB库”pymongo”。编辑”my_crawler”目录下的”pipelines.py”文件，在”MyCrawlerPipeline”类中加上如下代码：
 
@@ -113,7 +113,7 @@ DOWNLOAD_DELAY=2    # 如果网络慢，可以适当加些延迟，单位是秒
 
 别忘了启动MongoDB并创建”bjhee”数据库哦。现在你可以在MongoDB里查询到记录了。
 
-8. 总结下，使用Scrapy来构建一个网络爬虫，你需要做的就是：
+## 总结下，使用Scrapy来构建一个网络爬虫，你需要做的就是：
 
 “items.py”中定义爬取字段
 在”spiders”目录下创建你的爬虫，编写解析函数和规则
