@@ -119,3 +119,4 @@ What you need to do to build a crawler
 2. 在”spiders”目录下创建你的爬虫，编写解析函数和规则
 3. “pipelines.py”中对爬取后的结果做处理
 4. “settings.py”设置必要的参数
+Some blogs abour scrapy[http://www.cnblogs.com/twelfthing/articles/4620533.html]
