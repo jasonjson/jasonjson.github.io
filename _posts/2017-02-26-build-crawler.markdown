@@ -7,7 +7,7 @@ categories:
 author: Jason
 ---
 <p><strong><em>Build crawler using scrapy</em></strong></p>
-## Install lxml/scrapy using pip install
+## Install lxml and scrapy
 
 ## Build the project
 
@@ -113,9 +113,9 @@ DOWNLOAD_DELAY=2    # 如果网络慢，可以适当加些延迟，单位是秒
 
 别忘了启动MongoDB并创建”bjhee”数据库哦。现在你可以在MongoDB里查询到记录了。
 
-## 总结下，使用Scrapy来构建一个网络爬虫，你需要做的就是：
-
-“items.py”中定义爬取字段
-在”spiders”目录下创建你的爬虫，编写解析函数和规则
-“pipelines.py”中对爬取后的结果做处理
-“settings.py”设置必要的参数
+## In summary
+What you need to do to build a crawler
+1. “items.py”中定义爬取字段
+2. 在”spiders”目录下创建你的爬虫，编写解析函数和规则
+3. “pipelines.py”中对爬取后的结果做处理
+4. “settings.py”设置必要的参数
