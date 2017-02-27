@@ -7,8 +7,6 @@ categories:
 author: Jason
 ---
 <p><strong><em>Build crawler using scrapy</em></strong></p>
-## Install lxml and scrapy
-
 ## Build the project
 
 `$scrapy startproject my_crawler`
