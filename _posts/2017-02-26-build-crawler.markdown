@@ -117,4 +117,4 @@ What you need to do to build a crawler
 3. “pipelines.py”中对爬取后的结果做处理
 4. “settings.py”设置必要的参数
 
-Some blogs abour scrapy[http://www.cnblogs.com/twelfthing/articles/4620533.html]
+[Some blogs about scrapy](http://www.cnblogs.com/twelfthing/articles/4620533.htmli)

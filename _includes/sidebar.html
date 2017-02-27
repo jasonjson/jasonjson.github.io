@@ -12,12 +12,11 @@
     {% if site.linkedin_username %}
     <a href="https://linkedin.com/{{ site.linkedin_username }}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
     {% endif %}
-    {% if site.twitter_username %}
-    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    {% endif %}
+    <!--<a href="../_site/feed.xml"><img src="http://0.tqn.com/f/stay/a.gif" alt="Subscribe to What's New"></a>-->
     {% if site.email %}
     <a href="mailto:{{ site.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
     {% endif %}
+    <a href="{{"/feed.xml" | prepend: site.baseurl}}"><i class="fa fa-rss" aria-hidden="true"></i></a>
   </p>
 
   <div class="col-box-title myFont css2dcc4b9955748">Recent Articles</div>
