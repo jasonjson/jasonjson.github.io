@@ -94,9 +94,10 @@ class MyCrawlerPipeline(object):
             # 也可以用self.collection.insert(dict(item))，使用upsert可以防止重复项
             self.collection.update({'url': item['url']}, dict(item), upsert=True)
         return item
-
+```
 再打开”my_crawler”目录下的”settings.py”文件，在文件末尾加上pipeline的设置：
 
+```python
 ITEM_PIPELINES = {
     'my_crawler.pipelines.MyCrawlerPipeline': 300,    # 设置Pipeline，可以多个，值为执行优先级
 }
