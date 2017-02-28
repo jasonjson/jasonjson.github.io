@@ -1,6 +1,6 @@
 # Site settings
 title: CodeHu
-url: "mickeyliu5.github.io"    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
+url: "jasonjson.github.io"    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
 baseurl: "" # the prefix of your site uri, eg. `/bohu-jekyll-theme` or just one slash `/`
 #timezone: Asia/Shanghai
 description: Coding is fun
@@ -8,14 +8,14 @@ description: Coding is fun
 email: jason.yyliu@gmail.com
 author: Jason Liu
 place: New York
-domain: mickeyliu5.github.io
+domain: jasonjson.github.io
 company: Unknown
 position: Engineer
 school: USTC
 major: Geophysics
 #resume:
 profile: Time is money.
-twitter_username: 
+twitter_username:
 #weibo_username: u/2631341093
 github_username:  mickeyliu5
 linkedin_username: in/yuanresume
