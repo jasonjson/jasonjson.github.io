@@ -3,9 +3,7 @@ layout: post
 title: Reverse half of a Linkedlist
 date: 2015-12-12 11:38:04.000000000 -05:00
 categories:
-- Data Structure
 - LinkedList
-- 面经
 author: Jason
 ---
 <p><strong><em>Reverse the latter half of a linkedlist.</em></strong></p>
