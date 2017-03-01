@@ -36,10 +36,10 @@ class MyCrawlSpider(CrawlSpider):
     name = 'my_crawler'               # Spider名，必须唯一，执行爬虫命令时使用
     allowed_domains = ['mickeyliu5.github.io']   # 限定允许爬的域名，可设置多个
     start_urls = [
-        "https://mickeyliu5.github.io/blog",       # 种子URL，可设置多个
+        "https://mickeyliu5.github.io/blog",   # 种子URL，可设置多个
     ]
-    rules = (    # 对应特定URL，设置解析函数，可设置多个
-        Rule(LinkExtractor(allow=r'/page[0-9]*'),  # 指定允许继续爬取的URL格式，支持正则
+    rules = ( # 对应特定URL，设置解析函数，可设置多个
+        Rule(LinkExtractor(allow=r'/page[0-9]*'),  # 指定允许继续爬取的URL格式
                            callback='parse_item',   # 用于解析网页的回调函数名
                            follow=True
         ),
