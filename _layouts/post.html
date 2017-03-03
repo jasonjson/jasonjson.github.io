@@ -9,7 +9,12 @@ layout: default
     <div class="date", style="text-align: right">
     Written on {{ page.date | date: "%B %e, %Y" }}
     </div>
-    <!--<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} {% for cat in page.categories %} • {{ cat }}{% endfor %}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>-->
+    <!--share via google+-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+    <!--share with twitter-->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   </header>
 
   <article class="post-content">
