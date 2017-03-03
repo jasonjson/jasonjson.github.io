@@ -2,6 +2,7 @@
 layout: post
 title: Shortest Distance from All Buildings
 date: 2015-12-16 22:42:54.000000000 -05:00
+tags: algorithm
 categories:
 - BFS
 - Brain teaser

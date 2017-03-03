@@ -2,6 +2,7 @@
 layout: post
 title: Fraction to Recurring Decimal
 date: 2015-11-05 12:57:44.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Restore IP Addresses
 date: 2015-11-12 09:09:28.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

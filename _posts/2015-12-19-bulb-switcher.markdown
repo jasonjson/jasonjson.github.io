@@ -2,6 +2,7 @@
 layout: post
 title: Bulb Switcher
 date: 2015-12-19 10:23:55.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Read N Characters Given Read4 II - Call multiple times
 date: 2015-11-05 18:27:33.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

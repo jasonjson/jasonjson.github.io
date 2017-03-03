@@ -2,6 +2,7 @@
 layout: post
 title: Basic Calculator
 date: 2015-11-03 13:49:17.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

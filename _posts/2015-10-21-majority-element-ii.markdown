@@ -2,6 +2,7 @@
 layout: post
 title: Majority Element II
 date: 2015-10-21 02:40:45.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Integer

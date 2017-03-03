@@ -2,6 +2,7 @@
 layout: post
 title: Strobogrammatic Number III
 date: 2015-11-02 12:13:53.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

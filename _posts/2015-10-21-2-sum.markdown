@@ -2,6 +2,7 @@
 layout: post
 title: 2 Sum
 date: 2015-10-21 02:21:01.000000000 -04:00
+tags: algorithm
 categories:
 - Integer
 author: Jason

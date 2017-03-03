@@ -2,6 +2,7 @@
 layout: post
 title: Longest Common Prefix
 date: 2015-11-15 12:24:19.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

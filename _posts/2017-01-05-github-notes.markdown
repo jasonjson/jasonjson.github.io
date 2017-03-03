@@ -2,6 +2,7 @@
 layout: post
 title: Github notes
 date: 2017-01-05 10:04
+tags: github
 categories:
 - A note
 author: Jason

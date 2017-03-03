@@ -2,6 +2,7 @@
 layout: post
 title: Delete Digits
 date: 2015-10-21 14:02:50.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Integer

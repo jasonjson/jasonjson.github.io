@@ -2,6 +2,7 @@
 layout: post
 title: Course Schedule II
 date: 2015-11-04 12:59:54.000000000 -05:00
+tags: algorithm
 categories:
 - Graph
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Graph Valid Tree
 date: 2015-10-31 10:01:45.000000000 -04:00
+tags: algorithm
 categories:
 - Graph
 author: Jason

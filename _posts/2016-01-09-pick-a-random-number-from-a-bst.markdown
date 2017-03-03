@@ -2,6 +2,7 @@
 layout: post
 title: Pick a random number from a BST
 date: 2016-01-09 10:40:16.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

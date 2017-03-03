@@ -2,6 +2,7 @@
 layout: post
 title: Shortest Palindrome
 date: 2015-11-03 17:45:22.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Two Pointers

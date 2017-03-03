@@ -2,6 +2,7 @@
 layout: post
 title: Two sigma面经
 date: 2015-10-27 23:17:27.000000000 -04:00
+tags: algorithm
 categories:
 - 面经
 author: Jason

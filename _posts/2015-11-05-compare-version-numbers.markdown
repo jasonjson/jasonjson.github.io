@@ -2,6 +2,7 @@
 layout: post
 title: Compare Version Numbers
 date: 2015-11-05 14:31:17.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

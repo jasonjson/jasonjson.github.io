@@ -2,6 +2,7 @@
 layout: post
 title: Balanced Binary Tree
 date: 2015-10-21 02:51:52.000000000 -04:00
+tags: algorithm
 categories:
 - Binary Search Tree
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Find Minimum in Rotated Sorted Array II
 date: 2015-10-21 02:30:37.000000000 -04:00
+tags: algorithm
 categories:
 - Integer
 - Sorting

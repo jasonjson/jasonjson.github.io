@@ -2,6 +2,7 @@
 layout: post
 title: Multiply Strings
 date: 2015-11-14 21:01:30.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Integer

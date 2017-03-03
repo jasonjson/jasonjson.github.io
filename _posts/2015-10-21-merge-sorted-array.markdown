@@ -2,6 +2,7 @@
 layout: post
 title: Merge Sorted Array
 date: 2015-10-21 01:42:51.000000000 -04:00
+tags: algorithm
 categories:
 - Sorting
 author: Jason

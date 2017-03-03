@@ -2,6 +2,7 @@
 layout: post
 title: Longest Substring with At Most K Distinct Characters
 date: 2015-11-19 18:10:55.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Two Pointers

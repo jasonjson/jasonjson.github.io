@@ -2,6 +2,7 @@
 layout: post
 title: Sort array
 date: 2015-10-21 02:09:22.000000000 -04:00
+tags: algorithm
 categories:
 - Sorting
 author: Jason

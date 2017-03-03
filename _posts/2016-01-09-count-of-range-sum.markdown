@@ -2,6 +2,7 @@
 layout: post
 title: Count of Range Sum
 date: 2016-01-09 23:37:50.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Closest Binary Search Tree Value
 date: 2015-10-30 11:53:00.000000000 -04:00
+tags: algorithm
 categories:
 - Binary Search Tree
 author: Jason

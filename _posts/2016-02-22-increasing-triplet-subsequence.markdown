@@ -2,6 +2,7 @@
 layout: post
 title: Increasing Triplet Subsequence
 date: 2016-02-22 23:25:30.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Power of Three
 date: 2016-01-08 16:06:31.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

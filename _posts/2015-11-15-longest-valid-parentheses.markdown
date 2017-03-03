@@ -2,6 +2,7 @@
 layout: post
 title: Longest Valid Parentheses
 date: 2015-11-15 10:28:38.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

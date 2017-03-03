@@ -2,6 +2,7 @@
 layout: post
 title: Repeated DNA Sequences
 date: 2015-11-04 17:31:35.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

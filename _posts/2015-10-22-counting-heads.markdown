@@ -2,6 +2,7 @@
 layout: post
 title: Counting heads
 date: 2015-10-22 15:19:20.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 author: Jason

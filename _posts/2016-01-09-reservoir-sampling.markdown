@@ -2,6 +2,7 @@
 layout: post
 title: Reservoir Sampling
 date: 2016-01-09 10:29:27.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Data Structure

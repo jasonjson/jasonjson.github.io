@@ -2,6 +2,7 @@
 layout: post
 title: Flip Game II
 date: 2015-10-29 11:49:37.000000000 -04:00
+tags: algorithm
 categories:
 - DFS Backtracking
 author: Jason

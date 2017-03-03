@@ -2,6 +2,7 @@
 layout: post
 title: Strobogrammatic Number II
 date: 2015-11-02 11:43:03.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

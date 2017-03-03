@@ -2,6 +2,7 @@
 layout: post
 title: Additive Number
 date: 2015-11-18 09:31:17.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

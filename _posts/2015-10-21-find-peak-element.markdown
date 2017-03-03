@@ -2,6 +2,7 @@
 layout: post
 title: Find Peak Element
 date: 2015-10-21 02:28:54.000000000 -04:00
+tags: algorithm
 categories:
 - Divide and Conquer
 author: Jason

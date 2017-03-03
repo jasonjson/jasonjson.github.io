@@ -2,6 +2,7 @@
 layout: post
 title: Remove Duplicates from Sorted Array
 date: 2015-10-21 02:23:37.000000000 -04:00
+tags: algorithm
 categories:
 - Integer
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Previous Permutation
 date: 2015-10-21 03:39:59.000000000 -04:00
+tags: algorithm
 categories:
 - Permutation
 author: Jason

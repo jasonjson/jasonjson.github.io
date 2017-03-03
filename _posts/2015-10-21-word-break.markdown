@@ -2,6 +2,7 @@
 layout: post
 title: Word Break
 date: 2015-10-21 12:34:38.000000000 -04:00
+tags: algorithm
 categories:
 - DFS Backtracking
 - Dynamic Programming

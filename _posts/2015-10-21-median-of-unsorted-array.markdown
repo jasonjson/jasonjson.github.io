@@ -2,6 +2,7 @@
 layout: post
 title: Median of unsorted array
 date: 2015-10-21 02:25:36.000000000 -04:00
+tags: algorithm
 categories:
 - Integer
 author: Jason

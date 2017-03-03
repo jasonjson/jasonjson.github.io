@@ -2,6 +2,7 @@
 layout: post
 title: Regular Expression Matching
 date: 2015-10-26 20:27:13.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

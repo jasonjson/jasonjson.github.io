@@ -2,6 +2,7 @@
 layout: post
 title: Edit Distance
 date: 2015-10-21 12:45:39.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 author: Jason

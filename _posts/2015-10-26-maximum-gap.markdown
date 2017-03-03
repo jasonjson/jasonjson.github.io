@@ -2,6 +2,7 @@
 layout: post
 title: Maximum gap
 date: 2015-10-26 12:48:19.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Integer

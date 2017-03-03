@@ -2,6 +2,7 @@
 layout: post
 title: Reconstruct Itinerary
 date: 2016-02-22 22:26:53.000000000 -05:00
+tags: algorithm
 categories:
 - DFS Backtracking
 author: Jason

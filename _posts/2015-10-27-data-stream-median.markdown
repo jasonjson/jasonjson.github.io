@@ -2,6 +2,7 @@
 layout: post
 title: Data Stream Median
 date: 2015-10-27 12:42:16.000000000 -04:00
+tags: algorithm
 categories:
 - Data Structure
 author: Jason

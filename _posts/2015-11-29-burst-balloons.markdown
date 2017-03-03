@@ -2,6 +2,7 @@
 layout: post
 title: Burst Balloons
 date: 2015-11-29 20:36:44.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

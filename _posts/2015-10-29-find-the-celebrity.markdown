@@ -2,6 +2,7 @@
 layout: post
 title: Find the Celebrity
 date: 2015-10-29 14:57:47.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Minimum Adjustment Cost
 date: 2015-10-21 14:32:27.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 author: Jason

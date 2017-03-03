@@ -2,6 +2,7 @@
 layout: post
 title: Sliding Window Median
 date: 2015-10-21 14:46:43.000000000 -04:00
+tags: algorithm
 categories:
 - Data Structure
 author: Jason

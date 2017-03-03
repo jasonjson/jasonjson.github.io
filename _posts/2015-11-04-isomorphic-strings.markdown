@@ -2,6 +2,7 @@
 layout: post
 title: Isomorphic Strings
 date: 2015-11-04 14:33:12.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

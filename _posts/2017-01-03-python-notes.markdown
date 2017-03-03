@@ -2,6 +2,7 @@
 layout: post
 title: Python notes
 date: 2017-01-05 10:10
+tags: python
 categories:
 - A note
 author: Jason

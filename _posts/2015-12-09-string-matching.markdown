@@ -2,6 +2,7 @@
 layout: post
 title: String matching
 date: 2015-12-09 18:17:30.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Data Structure

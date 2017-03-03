@@ -2,6 +2,7 @@
 layout: post
 title: Swap two digits in a integer
 date: 2015-11-14 15:08:06.000000000 -05:00
+tags: algorithm
 categories:
 - Integer
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Single Number III
 date: 2015-10-21 02:34:47.000000000 -04:00
+tags: algorithm
 categories:
 - Bit
 author: Jason

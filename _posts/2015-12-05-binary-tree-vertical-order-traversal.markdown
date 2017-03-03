@@ -2,6 +2,7 @@
 layout: post
 title: Binary Tree Vertical Order Traversal
 date: 2015-12-05 09:53:04.000000000 -05:00
+tags: algorithm
 categories:
 - BFS
 - Brain teaser

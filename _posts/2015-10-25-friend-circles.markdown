@@ -2,6 +2,7 @@
 layout: post
 title: Friend circles
 date: 2015-10-25 19:51:28.000000000 -04:00
+tags: algorithm
 categories:
 - BFS
 - Brain teaser

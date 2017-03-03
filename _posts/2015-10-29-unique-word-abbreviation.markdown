@@ -2,6 +2,7 @@
 layout: post
 title: Unique Word Abbreviation
 date: 2015-10-29 13:02:33.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

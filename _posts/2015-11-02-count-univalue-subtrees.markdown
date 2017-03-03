@@ -2,6 +2,7 @@
 layout: post
 title: Count Univalue Subtrees
 date: 2015-11-02 08:49:03.000000000 -05:00
+tags: algorithm
 categories:
 - Binary Search Tree
 author: Jason

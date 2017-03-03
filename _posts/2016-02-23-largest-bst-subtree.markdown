@@ -2,6 +2,7 @@
 layout: post
 title: Largest BST Subtree
 date: 2016-02-23 22:38:07.000000000 -05:00
+tags: algorithm
 categories:
 - Binary Search Tree
 - Brain teaser

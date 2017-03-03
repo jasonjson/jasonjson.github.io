@@ -2,6 +2,7 @@
 layout: post
 title: Excel Sheet Column Title
 date: 2015-11-05 11:43:27.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

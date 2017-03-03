@@ -2,6 +2,7 @@
 layout: post
 title: Find the Connected Component in the Undirected Graph
 date: 2015-10-21 12:55:02.000000000 -04:00
+tags: algorithm
 categories:
 - Graph
 author: Jason

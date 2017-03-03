@@ -2,6 +2,7 @@
 layout: post
 title: Find the increasing sequences with increasing indices
 date: 2016-01-19 17:00:31.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

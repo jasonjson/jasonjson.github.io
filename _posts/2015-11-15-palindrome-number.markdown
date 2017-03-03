@@ -2,6 +2,7 @@
 layout: post
 title: Palindrome Number
 date: 2015-11-15 17:33:12.000000000 -05:00
+tags: algorithm
 categories:
 - Integer
 author: Jason

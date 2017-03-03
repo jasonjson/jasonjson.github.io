@@ -2,6 +2,7 @@
 layout: post
 title: Bulls and Cows
 date: 2015-10-31 20:21:40.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - String

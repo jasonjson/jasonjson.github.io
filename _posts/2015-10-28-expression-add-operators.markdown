@@ -2,6 +2,7 @@
 layout: post
 title: Expression Add Operators
 date: 2015-10-28 12:58:06.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - DFS Backtracking

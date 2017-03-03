@@ -2,6 +2,7 @@
 layout: post
 title: Asynchronous vs synchronous execution
 date: 2015-11-24 10:56:59.000000000 -05:00
+tags: algorithm
 categories:
 - Reading Notes
 author: Jason

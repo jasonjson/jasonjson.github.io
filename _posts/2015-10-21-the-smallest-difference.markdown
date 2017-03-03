@@ -2,6 +2,7 @@
 layout: post
 title: The Smallest Difference
 date: 2015-10-21 14:39:14.000000000 -04:00
+tags: algorithm
 categories:
 - Integer
 - Sorting

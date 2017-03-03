@@ -2,6 +2,7 @@
 layout: post
 title: Combination Sum III
 date: 2015-11-03 17:04:46.000000000 -05:00
+tags: algorithm
 categories:
 - DFS Backtracking
 author: Jason

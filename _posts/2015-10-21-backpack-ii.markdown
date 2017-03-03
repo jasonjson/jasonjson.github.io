@@ -2,6 +2,7 @@
 layout: post
 title: Backpack II
 date: 2015-10-21 03:57:56.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 author: Jason

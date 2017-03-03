@@ -2,6 +2,7 @@
 layout: post
 title: Search in a Big Sorted Array
 date: 2015-10-27 15:42:52.000000000 -04:00
+tags: algorithm
 categories:
 - Sorting
 author: Jason

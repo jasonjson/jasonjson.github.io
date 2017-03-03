@@ -2,6 +2,7 @@
 layout: post
 title: Segment Tree Build
 date: 2015-10-21 13:28:38.000000000 -04:00
+tags: algorithm
 categories:
 - Data Structure
 author: Jason

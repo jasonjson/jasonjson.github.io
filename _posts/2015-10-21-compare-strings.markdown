@@ -2,6 +2,7 @@
 layout: post
 title: Compare Strings
 date: 2015-10-21 02:11:25.000000000 -04:00
+tags: algorithm
 categories:
 - String
 author: Jason

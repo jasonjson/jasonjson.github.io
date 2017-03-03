@@ -2,6 +2,7 @@
 layout: post
 title: Generalized Abbreviation
 date: 2015-12-22 16:04:37.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - DFS Backtracking

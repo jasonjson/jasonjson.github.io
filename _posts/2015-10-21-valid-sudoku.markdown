@@ -2,6 +2,7 @@
 layout: post
 title: Valid Sudoku
 date: 2015-10-21 13:02:11.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

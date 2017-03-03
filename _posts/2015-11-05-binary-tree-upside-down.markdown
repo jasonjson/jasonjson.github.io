@@ -2,6 +2,7 @@
 layout: post
 title: Binary Tree Upside Down
 date: 2015-11-05 17:28:56.000000000 -05:00
+tags: algorithm
 categories:
 - Binary Search Tree
 - Brain teaser

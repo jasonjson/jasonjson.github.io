@@ -2,6 +2,7 @@
 layout: post
 title: Ugly Number II
 date: 2015-10-30 22:03:57.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Integer

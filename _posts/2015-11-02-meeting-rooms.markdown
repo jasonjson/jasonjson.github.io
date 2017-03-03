@@ -2,6 +2,7 @@
 layout: post
 title: Meeting Rooms
 date: 2015-11-02 07:36:10.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

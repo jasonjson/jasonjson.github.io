@@ -2,6 +2,7 @@
 layout: post
 title: Missing Ranges
 date: 2015-11-05 15:07:38.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

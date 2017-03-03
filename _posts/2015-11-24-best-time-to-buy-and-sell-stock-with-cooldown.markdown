@@ -2,6 +2,7 @@
 layout: post
 title: Best Time to Buy and Sell Stock with Cooldown
 date: 2015-11-24 09:18:49.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

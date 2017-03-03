@@ -2,6 +2,7 @@
 layout: post
 title: Convert Expression to Reverse Polish Notation
 date: 2015-10-21 14:12:54.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Data Structure

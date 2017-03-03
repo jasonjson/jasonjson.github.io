@@ -2,6 +2,7 @@
 layout: post
 title: Best Time to Buy and Sell Stock III
 date: 2015-10-21 12:48:00.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 author: Jason

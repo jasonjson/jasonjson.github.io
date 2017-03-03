@@ -2,6 +2,7 @@
 layout: post
 title: Surrounded Regions
 date: 2015-11-06 22:47:03.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

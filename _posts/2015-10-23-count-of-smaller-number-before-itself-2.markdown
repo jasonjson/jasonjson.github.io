@@ -2,6 +2,7 @@
 layout: post
 title: Count of Smaller Number before itself
 date: 2015-10-23 19:46:11.000000000 -04:00
+tags: algorithm
 categories:
 - Binary Search Tree
 - Data Structure

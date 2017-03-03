@@ -2,6 +2,7 @@
 layout: post
 title: Shortest Word Distance II
 date: 2015-11-02 13:36:55.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

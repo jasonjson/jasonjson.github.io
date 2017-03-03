@@ -2,6 +2,7 @@
 layout: post
 title: Reverse Words in a String
 date: 2015-11-06 11:37:05.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Permutation Sequence
 date: 2015-10-21 03:43:20.000000000 -04:00
+tags: algorithm
 categories:
 - Permutation
 author: Jason

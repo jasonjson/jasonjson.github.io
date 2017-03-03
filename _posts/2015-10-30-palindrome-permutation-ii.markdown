@@ -2,6 +2,7 @@
 layout: post
 title: Palindrome Permutation II
 date: 2015-10-30 16:14:52.000000000 -04:00
+tags: algorithm
 categories:
 - DFS Backtracking
 - Palindrome

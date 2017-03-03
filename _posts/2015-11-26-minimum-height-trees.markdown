@@ -2,6 +2,7 @@
 layout: post
 title: Minimum Height Trees
 date: 2015-11-26 15:18:26.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 - Graph

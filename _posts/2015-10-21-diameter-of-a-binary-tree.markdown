@@ -2,6 +2,7 @@
 layout: post
 title: Diameter of a Binary Tree
 date: 2015-10-21 02:54:43.000000000 -04:00
+tags: algorithm
 categories:
 - Binary Search Tree
 author: Jason

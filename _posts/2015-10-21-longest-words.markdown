@@ -2,6 +2,7 @@
 layout: post
 title: Longest Words
 date: 2015-10-21 12:59:11.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: "Verify Preorder Serialization of a Binary Tree"
 date: 2016-02-23 21:32:19.000000000 -05:00
+tags: algorithm
 categories: algorithms Brain_teaser
 ---
 <p><strong><em>Given a string of comma separated values, verify whether it is a correct preorder traversal serialization of a binary tree. Find an algorithm without reconstructing the tree.</em></strong></p>

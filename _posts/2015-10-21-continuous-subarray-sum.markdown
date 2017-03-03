@@ -2,6 +2,7 @@
 layout: post
 title: Continuous Subarray Sum
 date: 2015-10-21 13:06:06.000000000 -04:00
+tags: algorithm
 categories:
 - Subarray
 author: Jason

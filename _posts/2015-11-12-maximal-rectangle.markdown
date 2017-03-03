@@ -2,6 +2,7 @@
 layout: post
 title: Maximal Rectangle
 date: 2015-11-12 18:23:08.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Find the Missing Number
 date: 2015-10-21 13:02:42.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Longest Common Subsequence
 date: 2015-10-21 12:44:53.000000000 -04:00
+tags: algorithm
 categories:
 - String
 author: Jason

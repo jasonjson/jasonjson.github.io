@@ -2,6 +2,7 @@
 layout: post
 title: Perfect Squares
 date: 2015-10-28 11:33:33.000000000 -04:00
+tags: algorithm
 categories:
 - Dynamic Programming
 - Leetcode

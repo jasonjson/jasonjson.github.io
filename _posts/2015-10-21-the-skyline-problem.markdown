@@ -2,6 +2,7 @@
 layout: post
 title: The Skyline Problem
 date: 2015-10-21 14:47:31.000000000 -04:00
+tags: algorithm
 categories:
 - Brain teaser
 - Data Structure

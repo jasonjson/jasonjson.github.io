@@ -2,6 +2,7 @@
 layout: post
 title: Text Justification
 date: 2015-11-13 09:05:29.000000000 -05:00
+tags: algorithm
 categories:
 - Brain teaser
 author: Jason

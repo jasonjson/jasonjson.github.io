@@ -2,6 +2,7 @@
 layout: post
 title: Summary for leetcode, zz from peking2
 date: 2015-10-25 10:20:07.000000000 -04:00
+tags: algorithm
 categories:
 - Reading Notes
 author: Jason

@@ -2,6 +2,7 @@
 layout: post
 title: Flatten 2D Vector
 date: 2015-11-02 08:17:30.000000000 -05:00
+tags: algorithm
 categories:
 - Data Structure
 author: Jason
