@@ -5,7 +5,11 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} {% for cat in page.categories %} • {{ cat }}{% endfor %}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% include post-tags.html %}
+    <div class="date", style="text-align: right">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+    </div>
+    <!--<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.categories %} {% for cat in page.categories %} • {{ cat }}{% endfor %}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>-->
   </header>
 
   <article class="post-content">
