@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find-Mode-in-Binary-Search-Tree
+title: Find Mode in Binary Search Tree
 date: 2017-03-05
 tags:
 - algorithm
