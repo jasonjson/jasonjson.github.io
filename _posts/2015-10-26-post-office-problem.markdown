@@ -4,7 +4,6 @@ title: Post Office Problem
 date: 2015-10-26 15:59:07.000000000 -04:00
 tags: algorithm
 categories:
-- Brain teaser
 - Dynamic Programming
 author: Jason
 ---

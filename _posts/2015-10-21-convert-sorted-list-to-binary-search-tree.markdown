@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Convert Sorted List to Binary Search Tree
-date: 2015-10-21 01:44:02.000000000 -04:00
+date: 2015-10-21 03:00:01.000000000 -04:00
 tags: algorithm
 categories:
 - Binary Search Tree
-- LinkedList
-- Binary search tree
 - LinkedList
 author: Jason
 ---
@@ -14,33 +12,53 @@ author: Jason
 
 
 ``` java
+public class Solution {
     /**
      * @param head: The first node of linked list.
      * @return: a tree node
      */
-     
-    public static ListNode h; //static variable
     public TreeNode sortedListToBST(ListNode head) {  
-        // write your code here/
-        int count = 0;
-        h = head;
-        ListNode runner = head;
-        while(runner != null){
-            count ++;
-            runner = runner.next;
-        }//get length of the Linkedlist
-        return sortedListToBST(0, count - 1);
-        
+        // write your code here
+        if (head == null) return null;
+        ListNode right = head, fast = head, prev = null;
+        while (fast != null && fast.next != null) {
+            prev = right;
+            right = right.next;
+            fast = fast.next.next;
+        }
+        TreeNode root = new TreeNode(right.val);
+        if (prev != null) {//一定要单独考虑prev == null的情况
+            prev.next = null;
+            root.left = sortedListToBST(head);
+            root.right = sortedListToBST(right.next);
+        } 
+        return root;
     }
-    public TreeNode sortedListToBST(int lo, int hi){
-        if(lo > hi) return null;
-        int mid = (lo + hi) / 2;
-        //like inorder traversal, start from the left child to root to right child
-        TreeNode leftChild = sortedListToBST(lo, mid - 1);
+}
+```
+
+``` java
+public class Solution {
+    public static ListNode h;
+    public TreeNode sortedListToBST(ListNode head) { 
+        if (head == null) return null;
+        if (head.next == null) return new TreeNode(head.val);
+        h = head;
+        int len = 0;
+        while (head != null) {
+            head = head.next;
+            len ++;
+        }
+        return sortedListToBSTUtil(0, len - 1);
+    }    
+    public TreeNode sortedListToBSTUtil(int start, int end) {
+        if (start > end) return null;
+        int mid = start + (end - start) / 2;
+        TreeNode leftChild = sortedListToBSTUtil(start, mid - 1);
         TreeNode root = new TreeNode(h.val);
-        root.left = leftChild;
         h = h.next;
-        root.right = sortedListToBST(mid + 1, hi);
+        root.left = leftChild;
+        root.right = sortedListToBSTUtil(mid + 1, end);
         return root;
     }
 }

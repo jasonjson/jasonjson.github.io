@@ -5,7 +5,7 @@ date: 2017-03-05
 tags:
 - algorithm
 categories:
-- binary search tree
+- Binary Search Tree
 author: Jason
 ---
 <p><strong><em>Given a binary search tree (BST) with duplicates, find all the mode(s) (the most frequently occurred element) in the given BST.</em></strong></p>
