@@ -1,0 +1,15 @@
+---
+layout: post
+title: HTML Tags
+date: 2017-03-14
+tags: HTML
+- 
+categories:
+- A note
+author: Jason
+---
+<p><strong><em>Useful Html tags</em></strong></p>
+* `<table>` tag defines an HTML table.
+* `<tr>` tag defines a row in an HTML table.
+* `<th>` tag defines a header cell in an HTML table.
+* `<td>` tag defines a standard cell in an HTML table.
