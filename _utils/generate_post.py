@@ -2,6 +2,7 @@
 
 import datetime as dt
 import sys
+import argparse
 
 def generate_post(title):
     """Description
@@ -21,5 +22,9 @@ def generate_post(title):
         output.write('\n'.join(post))
 
 if __name__ == "__main__":
-    title = sys.argv[1]
+    parse = argparse.ArgumentParser(description='add new post')
+    parse.add_argument('title', help="post title as a string")
+    args = parse.parse_args()
+
+    title = args.title
     generate_post(title)
