@@ -33,7 +33,6 @@ gems:
  - jekyll-gist
  - jemoji
  - jekyll-feed
- - jekyll-last-modified-at
 
 # Build settings
 paginate: 30
