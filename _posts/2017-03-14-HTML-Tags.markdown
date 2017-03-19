@@ -9,6 +9,7 @@ categories:
 author: Jason
 ---
 <p><strong><em>Useful Html tags</em></strong></p>
+
 * `<table>` tag defines an HTML table.
 * `<tr>` tag defines a row in an HTML table.
 * `<th>` tag defines a header cell in an HTML table.
