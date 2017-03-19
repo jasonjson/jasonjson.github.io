@@ -3,7 +3,7 @@
   float: left;
   position: relative;
   margin-left: 0px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 /* Grid >> Children (Alpha ~ First, Omega ~ Last) */
@@ -13,7 +13,7 @@
 }
 
 .omega {
-  margin-right: 0;
+  margin-left: 10px;
 }
 
 /* Grid >> 4 Columns */
@@ -23,7 +23,8 @@
 }
 
 .grid .grid-2 {
-  width: 412px;
+  width: 600px;
+  margin-left: 30px;
 }
 
 .grid .grid-3 {
@@ -31,7 +32,7 @@
 }
 
 .grid .grid-4 {
-  width: 940px;
+  width: 50px;
 }
 
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */
