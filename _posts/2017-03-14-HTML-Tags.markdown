@@ -10,7 +10,24 @@ author: Jason
 ---
 <p><strong><em>Useful Html tags</em></strong></p>
 
-* `<table>` tag defines an HTML table.
-* `<tr>` tag defines a row in an HTML table.
-* `<th>` tag defines a header cell in an HTML table.
-* `<td>` tag defines a standard cell in an HTML table.
+## Basic
+* `<html>` wraps all the content on the entire page.
+* `<head>` acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, etc.
+* `<title>` sets the title of your page, which is the title that appears in the browser tab, and is used to describe the page when you bookmark/favourite it.
+* `<body>` contains all the content that you want to show to web users when they visit your page.
+
+## Block elements
+* `<p>` defines a paragrah.
+* `<form>` creates an form for user input.
+
+## Inline elements
+* `<em>` gives the line italic emphasis.
+* `<strong>` gives line strong emphasis.
+* `<a>` wraps a piece of text around a hyperlink with attributes `<href>` and `<title>`.
+* `<img>` inserts an image with attribute `<src>`.
+
+## Table
+* `<table>` defines an HTML table.
+* `<tr>` defines a row in an HTML table.
+* `<th>` defines a header cell in an HTML table.
+* `<td>` defines a standard cell in an HTML table.
