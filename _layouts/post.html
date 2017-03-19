@@ -9,6 +9,9 @@ layout: default
     <div class="date", style="text-align: right">
     Written on {{ page.date | date: "%B %e, %Y" }}
     </div>
+    <div class="date", style="text-align: right">
+    Modified on {{ page.last_modified_at | date: "%B %e, %Y"}}
+    </div>
     <!--share via google+-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <div class="g-plus" data-action="share" data-annotation="none"></div>
