@@ -12,8 +12,6 @@ author: Jason
 
 ## Basic
 * `<html>` wraps all the content on the entire page.
-* `<head>` acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, etc.
-* `<title>` sets the title of your page, which is the title that appears in the browser tab, and is used to describe the page when you bookmark/favourite it.
 * `<body>` contains all the content that you want to show to web users when they visit your page.
 
 ## Block elements
@@ -23,11 +21,31 @@ author: Jason
 ## Inline elements
 * `<em>` gives the line italic emphasis.
 * `<strong>` gives line strong emphasis.
-* `<a>` wraps a piece of text around a hyperlink with attributes `<href>` and `<title>`.
-* `<img>` inserts an image with attribute `<src>`.
+* `<a>` wraps a piece of text around a hyperlink with attributes `<href>` and `<title>`, `<download>` attribute provide a default save filename.
+* `<img>` inserts an image with attribute `<src>` and `<alt>`.
+* `<span>` is used to group inlin-elements in a document.
 
 ## Table
 * `<table>` defines an HTML table.
 * `<tr>` defines a row in an HTML table.
 * `<th>` defines a header cell in an HTML table.
 * `<td>` defines a standard cell in an HTML table.
+
+## Special characters
+* `&lt;` gives `<`
+* `&gt;` gives `>`
+* `&quot;` gives `"`
+* `&apos;` gives `'`
+* `&amp;` gives `&`
+
+## Head
+* `<head>` acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, etc.
+* `<title>` sets the title of your page, which is the title that appears in the browser tab, and is used to describe the page when you bookmark/favourite it.
+* `<meta>` contains imformation about  data within body. Many `<meta>` elements include name and content attributes.
+* `<link>` takes two attributes, `rel="stylesheet"`, which indicates that it is the document's stylesheet, and `href`, which contains the path to the css file.
+* `<script>` takes `<src>` attribute for javascript.
+
+## List
+* `<ul>` defines an unordered list.
+* `<ol>` defines an ordered list.
+* `<li>` defines a list item.
