@@ -49,3 +49,6 @@ author: Jason
 * `<ul>` defines an unordered list.
 * `<ol>` defines an ordered list.
 * `<li>` defines a list item.
+* `<dl>` defines a description lists.
+* `<dt>` defines a description term.
+* `<dd>` defines a description description.
