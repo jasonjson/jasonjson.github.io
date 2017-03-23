@@ -2,7 +2,8 @@
 layout: post
 title: Binary Tree Right Side View
 date: 2015-11-04 15:49:10.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

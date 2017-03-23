@@ -2,7 +2,8 @@
 layout: post
 title: Create Maximum Number
 date: 2016-01-03 19:08:09.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

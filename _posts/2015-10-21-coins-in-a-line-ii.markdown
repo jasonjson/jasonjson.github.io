@@ -2,7 +2,8 @@
 layout: post
 title: Coins in a Line II
 date: 2015-10-21 13:26:15.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

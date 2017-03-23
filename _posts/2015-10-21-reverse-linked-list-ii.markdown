@@ -2,7 +2,8 @@
 layout: post
 title: Reverse Linked List II
 date: 2015-10-21 02:46:31.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Digit Counts
 date: 2015-10-21 14:03:43.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Integer

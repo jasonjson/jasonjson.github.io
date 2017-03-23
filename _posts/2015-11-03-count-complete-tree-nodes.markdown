@@ -2,7 +2,8 @@
 layout: post
 title: Count Complete Tree Nodes
 date: 2015-11-03 15:01:07.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

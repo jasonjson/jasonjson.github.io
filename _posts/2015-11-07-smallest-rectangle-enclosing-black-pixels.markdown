@@ -2,7 +2,8 @@
 layout: post
 title: Smallest Rectangle Enclosing Black Pixels
 date: 2015-11-07 16:16:21.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

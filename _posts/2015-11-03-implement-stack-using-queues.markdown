@@ -2,7 +2,8 @@
 layout: post
 title: Implement Stack using Queues
 date: 2015-11-03 14:33:19.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Data Structure
 author: Jason

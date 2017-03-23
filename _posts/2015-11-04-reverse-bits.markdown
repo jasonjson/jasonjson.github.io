@@ -2,7 +2,8 @@
 layout: post
 title: Reverse Bits
 date: 2015-11-04 16:16:49.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Bit
 author: Jason

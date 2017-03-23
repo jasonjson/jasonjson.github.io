@@ -2,7 +2,8 @@
 layout: post
 title: Unique Binary Search Trees
 date: 2015-10-21 02:36:32.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 - Dynamic Programming

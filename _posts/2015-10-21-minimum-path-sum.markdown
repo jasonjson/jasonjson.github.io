@@ -2,7 +2,8 @@
 layout: post
 title: Minimum Path Sum
 date: 2015-10-21 12:24:23.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Matrix
 author: Jason

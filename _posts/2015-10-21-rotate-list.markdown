@@ -2,7 +2,8 @@
 layout: post
 title: Rotate List
 date: 2015-10-21 14:35:50.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 - LinkedList

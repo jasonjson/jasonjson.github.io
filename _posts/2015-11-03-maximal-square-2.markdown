@@ -2,7 +2,8 @@
 layout: post
 title: Maximal Square
 date: 2015-11-03 15:29:44.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Dynamic Programming
 author: Jason

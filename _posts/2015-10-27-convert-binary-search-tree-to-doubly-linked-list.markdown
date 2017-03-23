@@ -2,7 +2,8 @@
 layout: post
 title: Convert Binary Search Tree to Doubly Linked List
 date: 2015-10-27 15:22:08.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 - Data Structure

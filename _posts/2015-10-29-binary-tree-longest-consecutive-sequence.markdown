@@ -2,7 +2,8 @@
 layout: post
 title: Binary Tree Longest Consecutive Sequence
 date: 2015-10-29 10:37:39.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

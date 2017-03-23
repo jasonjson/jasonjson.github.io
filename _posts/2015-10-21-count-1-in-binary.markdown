@@ -2,7 +2,8 @@
 layout: post
 title: Count 1 in Binary
 date: 2015-10-21 02:38:23.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Bit
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Sort Letters by Case
 date: 2015-10-21 14:38:36.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Sorting
 author: Jason

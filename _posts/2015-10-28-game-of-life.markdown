@@ -2,7 +2,8 @@
 layout: post
 title: Game of Life
 date: 2015-10-28 15:02:31.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Matrix

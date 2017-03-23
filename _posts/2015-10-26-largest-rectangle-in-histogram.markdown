@@ -2,7 +2,8 @@
 layout: post
 title: Largest Rectangle in Histogram
 date: 2015-10-26 22:24:05.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

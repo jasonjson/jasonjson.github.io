@@ -2,7 +2,8 @@
 layout: post
 title: Longest chain
 date: 2015-10-25 19:46:33.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 - Two sigma OA

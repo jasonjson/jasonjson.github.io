@@ -2,7 +2,8 @@
 layout: post
 title: Interleaving Positive and Negative Numbers
 date: 2015-10-21 14:21:54.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

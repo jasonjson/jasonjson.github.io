@@ -2,7 +2,8 @@
 layout: post
 title: Happy Number
 date: 2015-11-04 15:15:26.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

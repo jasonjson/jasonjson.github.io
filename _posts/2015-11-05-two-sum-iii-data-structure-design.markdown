@@ -2,7 +2,8 @@
 layout: post
 title: Two Sum III - Data structure design
 date: 2015-11-05 12:06:13.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

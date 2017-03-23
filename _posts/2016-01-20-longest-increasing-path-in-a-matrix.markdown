@@ -2,7 +2,8 @@
 layout: post
 title: Longest Increasing Path in a Matrix
 date: 2016-01-20 11:57:16.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 author: Jason

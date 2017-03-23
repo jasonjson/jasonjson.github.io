@@ -2,7 +2,8 @@
 layout: post
 title: Valid parentheses
 date: 2015-10-21 03:35:31.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Data Structure

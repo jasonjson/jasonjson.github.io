@@ -2,7 +2,8 @@
 layout: post
 title: Binary Tree Maximum Path Sum
 date: 2015-10-21 02:52:23.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

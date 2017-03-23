@@ -2,7 +2,8 @@
 layout: post
 title: Factory design pattern
 date: 2015-12-22 15:22:45.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Data Structure

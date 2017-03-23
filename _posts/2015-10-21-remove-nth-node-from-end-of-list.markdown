@@ -2,7 +2,8 @@
 layout: post
 title: Remove Nth Node From End of List
 date: 2015-10-21 02:44:57.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 author: Jason

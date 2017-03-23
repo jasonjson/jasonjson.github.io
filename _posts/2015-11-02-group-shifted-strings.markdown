@@ -2,7 +2,8 @@
 layout: post
 title: Group Shifted Strings
 date: 2015-11-02 09:26:18.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

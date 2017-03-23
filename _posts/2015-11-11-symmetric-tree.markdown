@@ -2,7 +2,8 @@
 layout: post
 title: Symmetric Tree
 date: 2015-11-11 17:24:07.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Factorial Trailing Zeroes
 date: 2015-10-21 02:36:12.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

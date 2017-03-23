@@ -2,7 +2,8 @@
 layout: post
 title: Count of Smaller Numbers After Self
 date: 2015-12-07 18:21:09.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Sorting

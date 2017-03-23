@@ -2,7 +2,8 @@
 layout: post
 title: Remove Duplicate Letters
 date: 2015-12-09 12:59:38.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

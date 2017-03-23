@@ -2,7 +2,8 @@
 layout: post
 title: Maximum Depth of Binary Tree
 date: 2015-10-21 02:51:31.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

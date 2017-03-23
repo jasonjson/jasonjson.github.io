@@ -2,7 +2,8 @@
 layout: post
 title: Nim Game
 date: 2015-10-28 16:07:28.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

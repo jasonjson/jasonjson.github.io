@@ -2,7 +2,8 @@
 layout: post
 title: System design readings
 date: 2015-12-08 23:52:01.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Reading Notes
 author: Jason

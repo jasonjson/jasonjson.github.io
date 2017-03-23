@@ -2,7 +2,8 @@
 layout: post
 title: Build crawler using scrapy
 date: 2017-02-26 21:41
-tags: python scrapy
+tags:
+- Crawler
 categories:
 - A note
 tags: scrapy python

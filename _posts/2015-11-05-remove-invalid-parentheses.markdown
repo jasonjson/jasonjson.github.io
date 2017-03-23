@@ -2,7 +2,8 @@
 layout: post
 title: Remove Invalid Parentheses
 date: 2015-11-05 11:13:54.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - BFS
 - Brain teaser

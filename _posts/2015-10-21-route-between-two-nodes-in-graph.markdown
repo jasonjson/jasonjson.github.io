@@ -2,7 +2,8 @@
 layout: post
 title: Route Between Two Nodes in Graph
 date: 2015-10-21 12:55:45.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Graph
 author: Jason

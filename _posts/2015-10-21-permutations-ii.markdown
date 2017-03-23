@@ -2,7 +2,8 @@
 layout: post
 title: Permutations II
 date: 2015-10-21 03:38:30.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 - Permutation

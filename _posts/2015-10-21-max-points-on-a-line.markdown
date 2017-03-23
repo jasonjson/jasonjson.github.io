@@ -2,7 +2,8 @@
 layout: post
 title: Max Points on a Line
 date: 2015-10-21 14:29:12.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

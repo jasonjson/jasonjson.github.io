@@ -2,7 +2,8 @@
 layout: post
 title: Output a sorted array from an equation
 date: 2016-01-20 18:05:25.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

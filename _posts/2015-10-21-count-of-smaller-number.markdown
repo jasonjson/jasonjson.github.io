@@ -2,7 +2,8 @@
 layout: post
 title: Count of Smaller Number
 date: 2015-10-21 13:32:46.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Sorting
 - Subarray

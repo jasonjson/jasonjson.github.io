@@ -2,7 +2,8 @@
 layout: post
 title: Populating Next Right Pointers in Each Node II
 date: 2015-11-09 18:52:59.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

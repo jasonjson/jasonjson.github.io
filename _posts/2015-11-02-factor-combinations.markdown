@@ -2,7 +2,8 @@
 layout: post
 title: Factor Combinations
 date: 2015-11-02 07:28:09.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 author: Jason

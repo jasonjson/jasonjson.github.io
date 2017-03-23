@@ -2,7 +2,8 @@
 layout: post
 title: Patching Array
 date: 2016-01-27 14:15:01.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

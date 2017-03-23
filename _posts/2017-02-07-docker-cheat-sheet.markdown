@@ -1,11 +1,11 @@
----
+
 layout: post
 title: Docker cheat sheet
 date: 2017-02-07 09:11
-tags: docker
 categories:
 - A note
-tags: python note
+tags:
+- Docker
 author: Jason
 ---
 <p><strong><em>Docker cheet sheet</em></strong></p>

@@ -2,7 +2,8 @@
 layout: post
 title: Palindrome Partitioning II
 date: 2015-11-06 21:20:00.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Dynamic Programming
 - Palindrome

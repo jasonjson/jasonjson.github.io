@@ -2,7 +2,8 @@
 layout: post
 title: Odd Even Linked List
 date: 2016-01-18 12:00:49.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

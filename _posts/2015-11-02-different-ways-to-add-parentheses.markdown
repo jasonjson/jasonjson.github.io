@@ -2,7 +2,8 @@
 layout: post
 title: Different Ways to Add Parentheses
 date: 2015-11-02 16:24:34.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

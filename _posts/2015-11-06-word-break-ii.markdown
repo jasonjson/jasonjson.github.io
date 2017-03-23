@@ -2,7 +2,8 @@
 layout: post
 title: Word Break II
 date: 2015-11-06 14:27:27.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 author: Jason

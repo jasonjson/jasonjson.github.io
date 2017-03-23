@@ -2,7 +2,8 @@
 layout: post
 title: H-Index
 date: 2015-10-29 17:16:08.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

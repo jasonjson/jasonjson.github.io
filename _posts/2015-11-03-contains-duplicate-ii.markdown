@@ -2,7 +2,8 @@
 layout: post
 title: Contains Duplicate II
 date: 2015-11-03 15:39:36.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

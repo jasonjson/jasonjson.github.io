@@ -2,7 +2,8 @@
 layout: post
 title: Add Two Numbers
 date: 2015-10-21 01:42:02.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 author: Jason

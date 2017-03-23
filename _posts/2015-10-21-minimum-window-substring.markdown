@@ -2,7 +2,8 @@
 layout: post
 title: Minimum Window Substring
 date: 2015-10-21 13:05:04.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - String
 author: Jason

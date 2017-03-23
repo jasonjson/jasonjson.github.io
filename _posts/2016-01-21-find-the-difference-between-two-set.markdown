@@ -2,7 +2,8 @@
 layout: post
 title: Find the difference between two set
 date: 2016-01-21 11:30:59.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

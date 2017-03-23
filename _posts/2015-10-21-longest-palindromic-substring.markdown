@@ -2,7 +2,8 @@
 layout: post
 title: Longest Palindromic Substring
 date: 2015-10-21 02:14:16.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Palindrome
 - String

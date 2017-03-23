@@ -2,7 +2,8 @@
 layout: post
 title: Top 50 Operating System Interview Questions
 date: 2015-11-03 22:49:09.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Reading Notes
 - OS

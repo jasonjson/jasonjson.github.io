@@ -2,7 +2,8 @@
 layout: post
 title: Add and Search Word - Data structure design
 date: 2015-11-04 11:39:30.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Data Structure
 author: Jason

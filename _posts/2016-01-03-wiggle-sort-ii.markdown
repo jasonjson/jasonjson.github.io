@@ -2,7 +2,8 @@
 layout: post
 title: Wiggle Sort II
 date: 2016-01-03 20:18:07.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Sorting
 author: Jason

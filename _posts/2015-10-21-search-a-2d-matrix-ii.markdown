@@ -2,7 +2,8 @@
 layout: post
 title: Search a 2D Matrix II
 date: 2015-10-21 02:31:22.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Matrix
 - Sorting

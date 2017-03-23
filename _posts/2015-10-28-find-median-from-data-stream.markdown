@@ -2,7 +2,8 @@
 layout: post
 title: Find Median from Data Stream
 date: 2015-10-28 16:25:11.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Data Structure
 author: Jason

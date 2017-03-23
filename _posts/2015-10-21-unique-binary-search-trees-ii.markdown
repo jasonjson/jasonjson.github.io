@@ -2,7 +2,8 @@
 layout: post
 title: Unique Binary Search Trees II
 date: 2015-10-21 03:40:35.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

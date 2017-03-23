@@ -2,7 +2,8 @@
 layout: post
 title: Combination Sum II
 date: 2015-10-21 03:41:59.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 author: Jason

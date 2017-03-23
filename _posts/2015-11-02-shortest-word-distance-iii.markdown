@@ -2,7 +2,8 @@
 layout: post
 title: Shortest Word Distance III
 date: 2015-11-02 13:37:36.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

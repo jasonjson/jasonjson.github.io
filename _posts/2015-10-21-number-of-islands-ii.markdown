@@ -2,7 +2,8 @@
 layout: post
 title: Number of Islands II
 date: 2015-10-21 03:03:07.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 - Matrix

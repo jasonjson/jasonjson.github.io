@@ -2,7 +2,8 @@
 layout: post
 title: House Robber II
 date: 2015-11-03 18:28:31.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

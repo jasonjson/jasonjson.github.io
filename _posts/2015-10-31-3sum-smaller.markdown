@@ -2,7 +2,8 @@
 layout: post
 title: 3Sum Smaller
 date: 2015-10-31 10:24:04.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Subarray
 author: Jason

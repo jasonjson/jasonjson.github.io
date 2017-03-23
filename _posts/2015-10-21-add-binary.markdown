@@ -2,7 +2,8 @@
 layout: post
 title: Add Binary
 date: 2015-10-21 01:34:39.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - String
 - Binary

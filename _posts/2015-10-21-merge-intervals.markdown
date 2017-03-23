@@ -2,7 +2,8 @@
 layout: post
 title: Merge Intervals
 date: 2015-10-21 13:03:49.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Data Structure

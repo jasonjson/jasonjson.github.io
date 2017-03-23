@@ -2,7 +2,8 @@
 layout: post
 title: Find the Duplicate Number
 date: 2015-10-28 14:16:38.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 - Two Pointers

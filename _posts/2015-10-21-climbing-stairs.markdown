@@ -2,7 +2,8 @@
 layout: post
 title: Climbing Stairs
 date: 2015-10-21 12:26:49.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Dynamic Programming
 author: Jason

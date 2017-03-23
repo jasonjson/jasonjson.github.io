@@ -2,7 +2,8 @@
 layout: post
 title: O(1) Check Power of 2
 date: 2015-10-21 02:35:09.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Bit
 author: Jason

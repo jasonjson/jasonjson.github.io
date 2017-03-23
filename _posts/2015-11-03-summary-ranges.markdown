@@ -2,7 +2,8 @@
 layout: post
 title: Summary Ranges
 date: 2015-11-03 12:00:26.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Expression Tree Build
 date: 2015-10-24 14:05:56.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Data Structure

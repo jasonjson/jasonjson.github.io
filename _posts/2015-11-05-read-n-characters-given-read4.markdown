@@ -2,7 +2,8 @@
 layout: post
 title: Read N Characters Given Read4
 date: 2015-11-05 17:42:58.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

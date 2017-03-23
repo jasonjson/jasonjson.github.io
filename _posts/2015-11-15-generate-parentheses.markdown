@@ -2,7 +2,8 @@
 layout: post
 title: Generate Parentheses
 date: 2015-11-15 11:41:02.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - DFS Backtracking
 author: Jason

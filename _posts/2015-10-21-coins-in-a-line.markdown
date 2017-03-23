@@ -2,7 +2,8 @@
 layout: post
 title: Coins in a Line
 date: 2015-10-21 13:25:45.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Dynamic Programming
 author: Jason

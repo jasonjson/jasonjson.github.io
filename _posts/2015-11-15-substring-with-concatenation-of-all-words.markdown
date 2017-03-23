@@ -2,7 +2,8 @@
 layout: post
 title: Substring with Concatenation of All Words
 date: 2015-11-15 11:38:30.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

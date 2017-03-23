@@ -2,7 +2,8 @@
 layout: post
 title: Sliding Window Maximum
 date: 2015-10-21 13:01:03.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Data Structure

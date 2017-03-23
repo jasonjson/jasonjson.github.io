@@ -2,7 +2,8 @@
 layout: post
 title: Remove Linked List Elements
 date: 2015-10-21 14:44:14.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 author: Jason

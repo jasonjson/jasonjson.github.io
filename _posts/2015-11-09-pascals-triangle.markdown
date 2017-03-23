@@ -2,7 +2,8 @@
 layout: post
 title: Pascal's Triangle
 date: 2015-11-09 17:17:27.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

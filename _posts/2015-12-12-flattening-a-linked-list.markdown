@@ -2,7 +2,8 @@
 layout: post
 title: Flattening a Linked List
 date: 2015-12-12 10:28:11.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - LinkedList

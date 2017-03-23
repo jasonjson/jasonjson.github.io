@@ -2,7 +2,8 @@
 layout: post
 title: Gray Code
 date: 2015-10-21 13:07:23.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Bit
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Palindrome Permutation
 date: 2015-10-30 15:34:35.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Palindrome
 - Permutation

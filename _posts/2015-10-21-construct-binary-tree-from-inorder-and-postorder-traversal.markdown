@@ -2,7 +2,8 @@
 layout: post
 title: Construct Binary Tree from Inorder and Postorder Traversal
 date: 2015-10-21 02:55:48.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 author: Jason

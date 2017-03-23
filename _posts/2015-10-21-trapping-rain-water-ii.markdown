@@ -2,7 +2,8 @@
 layout: post
 title: Trapping Rain Water II
 date: 2015-10-21 14:41:51.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Dynamic Programming
 - Matrix

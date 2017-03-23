@@ -2,7 +2,8 @@
 layout: post
 title: Majority Number III
 date: 2015-10-21 02:41:11.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Integer

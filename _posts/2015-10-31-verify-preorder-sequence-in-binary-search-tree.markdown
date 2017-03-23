@@ -2,7 +2,8 @@
 layout: post
 title: Verify Preorder Sequence in Binary Search Tree
 date: 2015-10-31 17:30:44.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Binary Search Tree
 - Brain teaser

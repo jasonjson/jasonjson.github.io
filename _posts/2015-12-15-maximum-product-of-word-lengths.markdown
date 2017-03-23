@@ -2,7 +2,8 @@
 layout: post
 title: Maximum Product of Word Lengths
 date: 2015-12-15 14:06:56.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - String

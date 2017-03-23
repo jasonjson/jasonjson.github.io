@@ -2,7 +2,8 @@
 layout: post
 title: Count Primes
 date: 2015-11-04 14:55:54.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 author: Jason

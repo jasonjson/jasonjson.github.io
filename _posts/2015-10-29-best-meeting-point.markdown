@@ -2,7 +2,8 @@
 layout: post
 title: Best Meeting Point
 date: 2015-10-29 11:36:52.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Dynamic Programming

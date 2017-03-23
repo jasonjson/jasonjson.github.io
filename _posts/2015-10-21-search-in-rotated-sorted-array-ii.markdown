@@ -2,7 +2,8 @@
 layout: post
 title: Search in Rotated Sorted Array II
 date: 2015-10-21 02:29:40.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Integer
 - Sorting

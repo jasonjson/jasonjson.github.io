@@ -2,7 +2,8 @@
 layout: post
 title: Range Sum Query 2D - Immutable
 date: 2015-11-11 22:02:59.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Matrix

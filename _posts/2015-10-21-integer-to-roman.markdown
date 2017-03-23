@@ -2,7 +2,8 @@
 layout: post
 title: Integer to Roman
 date: 2015-10-21 14:20:00.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Integer
 author: Jason

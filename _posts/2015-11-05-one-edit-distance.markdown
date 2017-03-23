@@ -2,7 +2,8 @@
 layout: post
 title: One Edit Distance
 date: 2015-11-05 15:30:45.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - String

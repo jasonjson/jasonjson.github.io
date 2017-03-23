@@ -2,7 +2,8 @@
 layout: post
 title: Bitwise AND of Numbers Range
 date: 2015-11-04 15:36:13.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Bit
 - Brain teaser

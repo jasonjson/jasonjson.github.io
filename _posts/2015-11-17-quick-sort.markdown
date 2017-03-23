@@ -2,7 +2,8 @@
 layout: post
 title: Quick Sort
 date: 2015-11-17 22:52:05.000000000 -05:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Sorting
 author: Jason

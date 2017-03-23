@@ -2,7 +2,8 @@
 layout: post
 title: Reverse Nodes in k-Group
 date: 2015-10-21 14:42:44.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - LinkedList
 author: Jason

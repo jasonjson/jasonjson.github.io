@@ -2,7 +2,8 @@
 layout: post
 title: Subarray Sum K
 date: 2015-10-21 02:17:46.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Integer
 author: Jason

@@ -2,7 +2,8 @@
 layout: post
 title: Rectangle Area
 date: 2015-10-25 20:44:22.000000000 -04:00
-tags: algorithm
+tags:
+- Algorithm
 categories:
 - Brain teaser
 - Cloudera OA
