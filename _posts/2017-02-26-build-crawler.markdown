@@ -4,6 +4,7 @@ title: Build crawler using scrapy
 date: 2017-02-26 21:41
 tags:
 - Crawler
+- Python
 categories:
 - A note
 tags: scrapy python

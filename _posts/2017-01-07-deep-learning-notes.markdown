@@ -4,6 +4,7 @@ title: Deep Learning Notes
 date: 2017-01-07 13:31
 tags:
 - Tensorflow
+- Python
 categories:
 - A note
 author: Jason
