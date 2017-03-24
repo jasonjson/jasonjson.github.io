@@ -4,7 +4,6 @@ title: "Verify Preorder Serialization of a Binary Tree"
 date: 2016-02-23 21:32:19.000000000 -05:00
 tags:
 - Algorithm
-- algorithm
 categories:
 - Binary Search Tree
 ---
