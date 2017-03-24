@@ -6,7 +6,6 @@ tags:
 - Python
 categories:
 - A note
-tags: scrapy python
 author: Jason
 ---
 <p><strong><em>Build crawler using scrapy</em></strong></p>
