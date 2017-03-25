@@ -62,7 +62,7 @@ public class Solution {
 #     def __init__(self, x):
 #         self.label = x
 #         self.neighbors = []
-
+from collections import deque
 class Solution:
     # @param node, a undirected graph node
     # @return a undirected graph node
@@ -72,9 +72,9 @@ class Solution:
 
         new_node = UndirectedGraphNode(node.label)
         mapping = {node: new_node}
-        queue = [node]
+        queue = deque([node])
         while queue:
-            curr = queue.pop()
+            curr = queue.popleft()
             new_curr = mapping[curr]
             for neighbor in curr.neighbors:
                 if neighbor not in mapping:
