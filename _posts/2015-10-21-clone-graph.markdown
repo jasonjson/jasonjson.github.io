@@ -56,3 +56,31 @@ public class Solution {
         return newNode;
     }
 ```
+```python
+# Definition for a undirected graph node
+# class UndirectedGraphNode:
+#     def __init__(self, x):
+#         self.label = x
+#         self.neighbors = []
+
+class Solution:
+    # @param node, a undirected graph node
+    # @return a undirected graph node
+    def cloneGraph(self, node):
+        if node is None:
+            return
+
+        new_node = UndirectedGraphNode(node.label)
+        mapping = {node: new_node}
+        queue = [node]
+        while queue:
+            curr = queue.pop()
+            new_curr = mapping[curr]
+            for neighbor in curr.neighbors:
+                if neighbor not in mapping:
+                    new_neighbor = UndirectedGraphNode(neighbor.label)
+                    mapping[neighbor] = new_neighbor
+                    queue.append(neighbor)
+                new_curr.neighbors.append(mapping[neighbor])
+        return new_node
+```
