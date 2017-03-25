@@ -20,17 +20,20 @@ author: Jason
 * `<header>` represents a group of introductory content.
 * `<nav>` contains the main navigation functionality for the page.
 * `<footer>` represents a group of end content for a page.
+* `<br>` creates a line break in a paragraph.
+* `<hr>` create a horizontal line in the document that denotes a thematic change in the text.
 
 ## Block elements
 * `<p>` defines a paragrah.
 * `<form>` creates an form for user input.
+* `<div>` defines a block level non-semantic element
 
 ## Inline elements
 * `<em>` gives the line italic emphasis.
 * `<strong>` gives line strong emphasis.
 * `<a>` wraps a piece of text around a hyperlink with attributes `<href>` and `<title>`, `<download>` attribute provide a default save filename.
 * `<img>` inserts an image with attribute `<src>` and `<alt>`.
-* `<span>` is used to group inlin-elements in a document.
+* `<span>` is used to group inline non-semantic elements in a document.
 
 ## Table
 * `<table>` defines an HTML table.
