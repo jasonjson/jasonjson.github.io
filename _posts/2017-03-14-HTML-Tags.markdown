@@ -10,9 +10,16 @@ author: Jason
 ---
 <p><strong><em>Useful Html tags</em></strong></p>
 
-## Basic
+## Layout
 * `<html>` wraps all the content on the entire page.
+* `<main>` defines content unique to this page, use only once per page.
 * `<body>` contains all the content that you want to show to web users when they visit your page.
+* `<article>` encloses a block of related content that makes sense on its own without the rest of the page.
+* `<section>` groups together a single part of the page that constitutes one single piece of functionality.
+* `<aside>` contains content that is not directly related to the main content but can provide additional information indirectly related to it.
+* `<header>` represents a group of introductory content.
+* `<nav>` contains the main navigation functionality for the page.
+* `<footer>` represents a group of end content for a page.
 
 ## Block elements
 * `<p>` defines a paragrah.
