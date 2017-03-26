@@ -32,7 +32,6 @@ author: Jason
 * `<em>` gives the line italic emphasis.
 * `<strong>` gives line strong emphasis.
 * `<a>` wraps a piece of text around a hyperlink with attributes `<href>` and `<title>`, `<download>` attribute provide a default save filename.
-* `<img>` inserts an image with attribute `<src>` and `<alt>`.
 * `<span>` is used to group inline non-semantic elements in a document.
 
 ## Table
@@ -62,3 +61,8 @@ author: Jason
 * `<dl>` defines a description lists.
 * `<dt>` defines a description term.
 * `<dd>` defines a description description.
+
+## Multimedia
+* `<img>` inserts an image with attributes `<src>`, `<alt>`, `<width>`, `<height>`, `<title`.
+* `<video>` inserts an video with attributes `<src`, `<controls>`.
+* `<audio>` inserts an audio with attributes `<src`, `<controls>`.
