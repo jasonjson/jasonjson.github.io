@@ -11,4 +11,7 @@
   <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
   <script type="text/javascript" src="{{ "/js/jquery-2.2.3.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
 </head>

@@ -36,6 +36,7 @@ author: Jason
 
 ## Table
 * `<table>` defines an HTML table.
+* `<caption>` defines a caption by putting it blow `<table>` tag.
 * `<tr>` defines a row in an HTML table.
 * `<th>` defines a header cell in an HTML table.
 * `<td>` defines a standard cell in an HTML table.
