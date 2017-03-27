@@ -43,30 +43,17 @@
   fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
 }(window,document,'script'));
 </script>
-
 <div id="chart-1-container">test</div>
-<div id="embed-api-auth-container">test</div>
-<div id="chart-container">test</div>
-<div id="view-selector-container"></div>
-
 <script>
 
 gapi.analytics.ready(function() {
 
-  /**
-   * Authorize the user with an access token obtained server side.
-   */
   gapi.analytics.auth.authorize({
     'serverAuth': {
       'access_token': 'ya29.ElkbBDa0I3ziL70D7_VZZObt-WbtyCYtj95XAkimUH4TFD-ZEyW1_2zn7skNvo-_j_fEUsTpTfb2o9DMb5pCN88an3_mu55DYaYVRf1fx0ZTJs9YSr5Z_qiH8Q'
     }
   });
 
-
-  /**
-   * Creates a new DataChart instance showing sessions over the past 30 days.
-   * It will be rendered inside an element with the id "chart-1-container".
-   */
   var dataChart1 = new gapi.analytics.googleCharts.DataChart({
     query: {
       'ids': 'ga:137616766',
@@ -85,36 +72,6 @@ gapi.analytics.ready(function() {
   });
   dataChart1.execute();
 
-
-
-
-gapi.analytics.ready(function() {
-  gapi.analytics.auth.authorize({
-    container: 'embed-api-auth-container',
-    clientid: '986222494138-qlmknq75ckpnbdhlpvmuf5k3tg5ptlj4.apps.googleusercontent.com'
-  });
-  var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector-container'
-  });
-  viewSelector.execute();
-  var dataChart = new gapi.analytics.googleCharts.DataChart({
-    query: {
-      metrics: 'ga:sessions',
-      dimensions: 'ga:date',
-      'start-date': '30daysAgo',
-      'end-date': 'yesterday'
-    },
-    chart: {
-      container: 'chart-container',
-      type: 'LINE',
-      options: {
-        width: '100%'
-      }
-    }
-  });
-  viewSelector.on('change', function(ids) {
-    dataChart.set({query: {ids: ids}}).execute();
-  });
 });
 </script>
 
