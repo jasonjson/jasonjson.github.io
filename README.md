@@ -1,6 +1,6 @@
 # CodeHu
 
-It's a simple [jekyll blog](https://jasonjson.github.io).
+It's a simple [jekyll blog](https://jasonjson.com).
 
 1. **Use paging as 1,2,3,4,5......**   
 1. **Searchable for blog.**    
