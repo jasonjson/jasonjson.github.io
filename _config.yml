@@ -1,6 +1,6 @@
 # Site settings
 title: CodeHu
-url: "www.jasonjson.com"    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
+url: http://www.jasonjson.com    # the protocol and hostname of your site, eg. `http://zhaoyuxiang.cn/blog`
 baseurl: "" # the prefix of your site uri, eg. `/bohu-jekyll-theme` or just one slash `/`
 #timezone: Asia/Shanghai
 description: Coding is fun
