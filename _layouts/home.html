@@ -43,47 +43,6 @@
     {% endfor %}
   </ul>
 </ul>
-
-<script>
-(function(w,d,s,g,js,fs){
-  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
-  js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
-  js.src='https://apis.google.com/js/platform.js';
-  fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
-}(window,document,'script'));
-</script>
-<div class="col-box-title myFont">Site Traffic</div>
-<div id="chart-1-container"></div>
-<script>
-
-gapi.analytics.ready(function() {
-
-  gapi.analytics.auth.authorize({
-    'serverAuth': {
-      'access_token': 'ya29.ElkcBECqC9R-ddUIDunE4528gWb_IGx7HLlJhjyH0w0B8NEum1i_vVCIlkKDd5eUYuD5cKYeHCThhONsi7lQNvtReSbM5HZHfkeMEdAu-a742_sO4c0OQNcOSw'
-    }
-  });
-
-  var dataChart1 = new gapi.analytics.googleCharts.DataChart({
-    query: {
-      'ids': 'ga:137616766',
-      'start-date': '30daysAgo',
-      'end-date': 'yesterday',
-      'metrics': 'ga:sessions,ga:users',
-      'dimensions': 'ga:date'
-    },
-    chart: {
-      'container': 'chart-1-container',
-      'type': 'LINE',
-      'options': {
-        'width': '100%'
-      }
-    }
-  });
-  dataChart1.execute();
-});
-</script>
-
 </div>
 {% include footer.html %}
 {% include foot.html %}
