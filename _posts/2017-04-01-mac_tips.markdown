@@ -10,6 +10,6 @@ author: Jason
 ---
 <p><strong><em>Some useful mac tips and tools</em></strong></p>
 
-* Easy copy and paste on Mac os with highlighting and middle mouse
+* Easy copy and paste on Mac
     1. A simple [C program](https://github.com/rsmz/macpaste) that enables you to copy and paste with hilighting text and middle mouse. In iTerm2, disable middle-click in Preferences, otherwise you'll get double pastes.
     1. [BetterTouchTool](https://www.boastr.net/) is a powerful tool to create various gestures and actions for touchpad.
