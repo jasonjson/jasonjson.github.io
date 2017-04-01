@@ -67,3 +67,6 @@ author: Jason
 * `<img>` inserts an image with attributes `<src>`, `<alt>`, `<width>`, `<height>`, `<title`.
 * `<video>` inserts an video with attributes `<src`, `<controls>`.
 * `<audio>` inserts an audio with attributes `<src`, `<controls>`.
+
+## Useful resources
+[mozillar.org](https://developer.mozilla.org/en-US/docs/Learn)
