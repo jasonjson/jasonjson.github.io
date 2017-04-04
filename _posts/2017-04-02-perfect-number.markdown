@@ -1,6 +1,6 @@
 ---
 layout: post
-title: perfect number
+title: Perfect number
 date: 2017-04-02
 tags:
 - Algorithm 
@@ -8,8 +8,6 @@ categories:
 - Brain teaser
 author: Jason
 ---
-# Perfect number
-
 We define the Perfect Number is a positive integer that is equal to the sum of all its positive divisors except itself. Now, given an integer n, write a function that returns true when it is a perfect number and false when it is not.
 
 ```python
