@@ -8,7 +8,7 @@ categories:
 - A note
 author: Jason
 ---
-<p><strong><em>Github notes</em></strong></p>
+# Github notes
 
 1. Delete local branch: `git branch -d branch_name`, use -D for force delete
-   Delete remote branch : `git branch origin -d branch_name`
+2. Delete remote branch : `git branch origin -d branch_name`
