@@ -8,15 +8,12 @@ categories:
 - A note
 author: Jason
 ---
-# Some useful mac tips and apps
+Some useful mac tips and apps
 
-## Efficiency
-* Copy and paste on Mac
-    1. [BetterTouchTool](https://www.boastr.net/) is a powerful tool to create various gestures and actions for touchpad. You can set up middle mouse as `command+v` and another mouse button as `command+c`
-    2. A simple [C program](https://github.com/rsmz/macpaste) that enables you to copy and paste with hilighting text and middle mouse. In iTerm2, disable middle-click in Preferences, otherwise you'll get double pastes. This unfortunaly will mess up your clipboards if you are used to hilighling texts randomly, this also creates lots of unnecessary actions.
-
-* Adjust size and postion of application
-    1. [BetterSnapTool](https://www.boastr.net/category/bettersnaptool/)
+## Productivity
+* [BetterTouchTool](https://www.boastr.net/) - a powerful tool to create various gestures and actions for touchpad. You can set up middle mouse as `command+v` and another mouse button as `command+c`
+* [macpaste](https://github.com/rsmz/macpaste) - enables you to copy and paste with hilighting text and middle mouse. In iTerm2, disable middle-click in Preferences, otherwise you'll get double pastes. This unfortunaly will mess up your clipboards if you are used to hilighling texts randomly, this also creates lots of unnecessary actions.
+* [BetterSnapTool](https://www.boastr.net/category/bettersnaptool/)
 
 ## Developer
-* [Dash](https://kapeli.com/dash) - Awesome API documentation browser and code snippet manager.
+* [Dash](https://kapeli.com/dash) - awesome API documentation browser and code snippet manager.
