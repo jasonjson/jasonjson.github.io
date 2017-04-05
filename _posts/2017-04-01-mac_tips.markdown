@@ -11,8 +11,8 @@ author: Jason
 <p><strong><em>Some useful mac tips and tools</em></strong></p>
 
 * Copy and paste on Mac
-    1. A simple [C program](https://github.com/rsmz/macpaste) that enables you to copy and paste with hilighting text and middle mouse. In iTerm2, disable middle-click in Preferences, otherwise you'll get double pastes.
-    1. [BetterTouchTool](https://www.boastr.net/) is a powerful tool to create various gestures and actions for touchpad.
+    1. [BetterTouchTool](https://www.boastr.net/) is a powerful tool to create various gestures and actions for touchpad. You can set up middle mouse as `command+v` and another mouse button as `command+c`
+    2. A simple [C program](https://github.com/rsmz/macpaste) that enables you to copy and paste with hilighting text and middle mouse. In iTerm2, disable middle-click in Preferences, otherwise you'll get double pastes. This unfortunaly will mess up your clipboards if you are used to hilighling texts randomly, this also creates lots of unnecessary actions.
 
 * Adjust size and postion of application
     1. [BetterSnapTool](https://www.boastr.net/category/bettersnaptool/)
