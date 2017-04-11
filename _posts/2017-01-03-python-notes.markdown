@@ -98,11 +98,17 @@ fib.cache_clear()
 
 # Object introspection
 
-`dir` returns a list of attributes and methods belonging to an object.
-`type` returns the type of an object.
-`id` returns the unique ids of various objects.
+* `dir` returns a list of attributes and methods belonging to an object.
+* `type` returns the type of an object.
+* `id` returns the unique ids of various objects.
 
 # Virtual Environment
 
-`Virtualenv` is a tool which allows us to make isolated python environments.
+* `Virtualenv` is a tool which allows us to make isolated python environments.
 [Read this](http://book.pythontips.com/en/latest/virtual_environment.html)
+
+# OS related:
+* `os.path.join(path, *paths)` Join one or more path components intelligently. The return value is the concatenation of path and any members of *paths with exactly one directory separator.
+
+* `os.walk(top, topdown=True, onerror=None, followlinks=False)` - Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple (dirpath, dirnames, filenames).
+
