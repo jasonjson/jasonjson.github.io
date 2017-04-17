@@ -1,4 +1,4 @@
-#!/Users/yuanyuanliu/miniconda3/bin/python
+#!/usr/local/bin/python3
 
 import datetime as dt
 import sys
@@ -17,7 +17,7 @@ def generate_post(title):
     """
     today_date = dt.datetime.today().strftime("%Y-%m-%d")
     filename = '../_posts/' + '-'.join([today_date, title.replace(' ', '-')]) + ".markdown"
-    post = ['---', 'layout: post', 'title: {0}'.format(title), 'date: {0}'.format(today_date), 'tags:', '- ', 'categories:', '- ' , "author: Jason", '---', '<p><strong><em>header</em></strong></p>']
+    post = ['---', 'layout: post', 'title: {0}'.format(title), 'date: {0}'.format(today_date), 'tags:', '- ', 'categories:', '- ' , "author: Jason", '---', '**title**']
     with open (filename, 'w') as output:
         output.write('\n'.join(post))
 
@@ -26,5 +26,4 @@ if __name__ == "__main__":
     parse.add_argument('title', help="post title as a string")
     args = parse.parse_args()
 
-    title = args.title
-    generate_post(title)
+    generate_post(args.title)
