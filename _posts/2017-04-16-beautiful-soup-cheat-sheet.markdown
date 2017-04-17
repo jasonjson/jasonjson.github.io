@@ -12,7 +12,7 @@ author: Jason
 
 ### Navigating using tag name
 * `.tag` - The simplest way to navigate the parse tree is to say the name of the tag you want. However, using a tag name as an attribute will give you only the first tag by that name.
-* `.contents` - Gives a tag's children as a list. The BeautifulSoup object itself has one child `<html>` tag.
+* `.contents` - Gives a tag's children as a list. The BeautifulSoup object itself has one child <html> tag.
 * `.children` - Gives a generator to iterate over a tag's children.
 * `.descendants` - Lets you iterate over all of a tag’s children, recursively: its direct children, the children of its direct children, and so on.
 * `.string` - If a tag has only one child, and that child is a NavigableString, the child is made available as .string. If a tag’s only child is another tag, and that tag has a .string, then the parent tag is considered to have the same .string as its child. f a tag contains more than one thing, then it’s not clear what .string should refer to, so .string is defined to be *None*.
