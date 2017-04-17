@@ -10,7 +10,7 @@ author: Jason
 ---
 **Beautiful Soup Cheat Sheet**
 
-# Navigating using tag name
+### Navigating using tag name
 * `.tag` - The simplest way to navigate the parse tree is to say the name of the tag you want. However, using a tag name as an attribute will give you only the first tag by that name.
 * `.contents` - Gives a tag's children as a list. The BeautifulSoup object itself has one child `<html>` tag.
 * `.children` - Gives a generator to iterate over a tag's children.
@@ -24,4 +24,4 @@ author: Jason
 * `.next_siblings` and `.previous_siblings` - Iterate over a tag’s siblings.
 * `.next_element` and `.previous_elements` - points to whatever was parsed immediately afterwards or before.
 
-# Searching the tree
+### Searching the tree
