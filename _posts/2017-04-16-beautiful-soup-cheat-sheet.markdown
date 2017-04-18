@@ -26,22 +26,22 @@ author: Jason
 
 ### Searching the tree
 * Kinds of filters
-    1. *string* Pass a string to a search method and Beautiful Soup will perform a match against that exact string.
-    2. *regular expression* If you pass in a regular expression object, Beautiful Soup will filter against that regular expression using its match() method.
-    3. *list* If you pass in a list, Beautiful Soup will allow a string match against any item in that list.
-    4. *True* The value True matches everything it can.
-    5. *function* Define a function that takes an element as its only argument. The function should return True if the argument matches, and False otherwise.
-* `find_all(name, attrs, recursive, string, limit, **kwargs)` - The method looks through a tag’s descendants and retrieves all descendants that match your filters.
-    1. *name* Pass in a value for name and you’ll tell Beautiful Soup to only consider tags with certain names.
-    2. *keyword* Any argument that’s not recognized will be turned into a filter on one of a tag’s attributes.
-    3. *class_* You can search by CSS class using the this keyword as argument.
-    4. *string* You can search for strings instead of tags.
-    5. *limit* If you don’t need all the results, you can pass in a number for limit.
-    6. *recursive* If you only want Beautiful Soup to consider direct children, you can pass in recursive=False.
-* `find(name, attrs, recursive, string, limit, **kwargs)` - Rather than passing in limit=1 every time you call find_all, you can use the find() method. The only difference is that find_all() returns a list containing the single result, and find() just returns the result. If find_all() can’t find anything, it returns an empty list. If find() can’t find anything, it returns None.
-* `find_parents(name, attrs, string, limit, **kwargs)` and `find_parent(name, attrs, string, limit, **kwargs)` - These methods work their way up the tree, looking at a tag’s (or a string’s) parents.
-* `find_next_siblings(name, attrs, string, limit, **kwargs)` and `find_next_sibling(name, attrs, string, **kwargs)` - These methods use .next_siblings to iterate over the rest of an element’s siblings in the tree. The find_next_siblings() method returns all the siblings that match, and find_next_sibling() only returns the first one.
-* `find_previous_siblings(name, attrs, string, limit, **kwargs)` and `find_previous_sibling(name, attrs, string, limit, **kwargs)` - These methods use .previous_siblings to iterate over an element’s siblings that precede it in the tree. The find_previous_siblings() method returns all the siblings that match, and find_previous_sibling() only returns the first one.
+    1. **string** Pass a string to a search method and Beautiful Soup will perform a match against that exact string.
+    2. **regular expression** If you pass in a regular expression object, Beautiful Soup will filter against that regular expression using its match() method.
+    3. **list** If you pass in a list, Beautiful Soup will allow a string match against any item in that list.
+    4. **True** The value True matches everything it can.
+    5. **function** Define a function that takes an element as its only argument. The function should return True if the argument matches, and False otherwise.
+* `find_all` - The method looks through a tag’s descendants and retrieves all descendants that match your filters.
+    1. **name** Pass in a value for name and you’ll tell Beautiful Soup to only consider tags with certain names.
+    2. **keyword** Any argument that’s not recognized will be turned into a filter on one of a tag’s attributes.
+    3. **class_** You can search by CSS class using the this keyword as argument.
+    4. **string** You can search for strings instead of tags.
+    5. **limit** If you don’t need all the results, you can pass in a number for limit.
+    6. **recursive** If you only want Beautiful Soup to consider direct children, you can pass in recursive=False.
+* `find` - Rather than passing in limit=1 every time you call find_all, you can use the find() method. The only difference is that find_all() returns a list containing the single result, and find() just returns the result. If find_all() can’t find anything, it returns an empty list. If find() can’t find anything, it returns None.
+* `find_parents` and `find_parent` - These methods work their way up the tree, looking at a tag’s (or a string’s) parents.
+* `find_next_siblings` and `find_next_sibling` - These methods use .next_siblings to iterate over the rest of an element’s siblings in the tree. The find_next_siblings() method returns all the siblings that match, and find_next_sibling() only returns the first one.
+* `find_previous_siblings` and `find_previous_sibling` - These methods use .previous_siblings to iterate over an element’s siblings that precede it in the tree. The find_previous_siblings() method returns all the siblings that match, and find_previous_sibling() only returns the first one.
 
 ### Output
 * `prettify` - turns a Beautiful Soup parse tree into a nicely formatted Unicode string, with each HTML/XML tag on its own line.
