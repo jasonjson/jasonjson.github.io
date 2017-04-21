@@ -8,9 +8,9 @@ categories:
 - A note
 author: Jason
 ---
-<p><strong><em>Python notes</em></strong></p>
+**Python notes**
 
-# Regular expression
+### Regular expression
 
 1. Python Compatible Regex Tester
 [Link](https://regex101.com/#python)
@@ -47,7 +47,7 @@ author: Jason
 
     * `\W` When the LOCALE and UNICODE flags are not specified, matches any non-alphanumeric character.
 
-# Function caching
+### Function caching
 
 In Python 3.2+ there is an `lru_cache` decorator which allows us to quickly cache and uncache the return values of a function.
 
@@ -73,7 +73,7 @@ fib.cache_clear()
 ```
 [Here](https://www.caktusgroup.com/blog/2015/06/08/testing-client-side-applications-django-post-mortem/) is a fine article by Caktus Group in which they caught a bug in Django which occurred due to `lru_cache`
 
-# File handlers
+### File handlers
 
   * `r`   Open text file for reading. The stream is positioned at the beginning of the file.
 
@@ -87,28 +87,27 @@ fib.cache_clear()
 
   * `a+`  Open for reading and writing. The file is created if it does not exist.  The stream is positioned at the end of the file.  Subsequent writes to the file will always end up at the then current end of file, irrespective of any intervening fseek(3) or similar.'
 
-# \*args and \*\*kwargs
+### \*args and \*\*kwargs
 
 * `*args` is used to send a non-keyworded variable length argument list to the function.
 * `**kwargs` allows you to pass keyworded variable length of arguments to a function.
 
-# Decorators
+### Decorators
 
 [Read this](http://book.pythontips.com/en/latest/decorators.html)
 
-# Object introspection
+### Object introspection
 
 * `dir` returns a list of attributes and methods belonging to an object.
 * `type` returns the type of an object.
 * `id` returns the unique ids of various objects.
 
-# Virtual Environment
+### Virtual Environment
 
 * `Virtualenv` is a tool which allows us to make isolated python environments.
 [Read this](http://book.pythontips.com/en/latest/virtual_environment.html)
 
-# OS related:
+### OS related:
 * `os.path.join(path, *paths)` Join one or more path components intelligently. The return value is the concatenation of path and any members of *paths with exactly one directory separator.
 
 * `os.walk(top, topdown=True, onerror=None, followlinks=False)` - Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple (dirpath, dirnames, filenames).
-
