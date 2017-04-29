@@ -16,7 +16,7 @@ def generate_post(title):
     @raise e:  Description
     """
     today_date = dt.datetime.today().strftime("%Y-%m-%d")
-    filename = '../_posts/' + '-'.join([today_date, title.replace(' ', '-')]) + ".markdown"
+    filename = '_posts/' + '-'.join([today_date, title.replace(' ', '-')]) + ".markdown"
     post = ['---', 'layout: post', 'title: {0}'.format(title), 'date: {0}'.format(today_date), 'tags:', '- ', 'categories:', '- ' , "author: Jason", '---', '**title**']
     with open (filename, 'w') as output:
         output.write('\n'.join(post))
