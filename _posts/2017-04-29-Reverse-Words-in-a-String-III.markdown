@@ -17,5 +17,6 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
+        #reverse a string: x[::-1]
         return " ".join(map(lambda x: x[::-1], s.split()))
 ```
