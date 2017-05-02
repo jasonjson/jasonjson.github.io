@@ -9,20 +9,17 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Write a function to generate the generalized abbreviations of a word.</p>
+**Write a function to generate the generalized abbreviations of a word. Example: Given word = "word", return the following list (order does not matter): ["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]**
 
-Example:</p>
-Given word = "word", return the following list (order does not matter):</p>
-["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]</em></strong></p>
 ``` java
 public class Solution {
     public List<string> generateAbbreviations(String word) {
         List<string> result = new ArrayList<string>();
-        //if (word == null || word.length() == 0) return result; empty string also has abbreviation
-        helper(word, 0, "", result, true);//true indicates we can add abbreviation(numbers)
+        //true indicates we can add abbreviation(numbers)
+        helper(word, 0, "", result, true);
         return result;
     }
-    
+
     public void helper(String word, int start, String path, List<string> result, boolean addAbbr) {
         if (start == word.length()) {
             result.add(new String(path));
@@ -36,4 +33,21 @@ public class Solution {
         helper(word, start + 1, path + word.charAt(start), result, true);
     }
 }
+```
+
+```python
+class Solution():
+    def generateAbbreviations(self, word):
+        result = []
+        self.helper(word, 0, "", result, False)
+        return result
+
+    def helper(self, word, start, path, result, num_added):
+        if start == len(word):
+            result.append(path)
+            return
+        if not num_added:
+            for i in range(start + 1, len(word) + 1):
+                self.helper(word, i, path + str(i - start), result, True)
+        self.helper(word, start + 1, path + word[start], result, False)
 ```
