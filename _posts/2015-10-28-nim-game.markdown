@@ -9,7 +9,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones. Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap. For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.</em></strong></p>
+**You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones. Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap. For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.**
 
 
 ``` java
@@ -28,20 +28,19 @@ public class Solution {
     }
 }
 ```
-``` java
-//strategy: the one with 4 remaining must loose
-//A, B players
-//if n == 4k, then at each round B can make A+B both take 4, 
-//eventually leave 4 to A, A lose
-//if n == 4k + i (i <= 3), then A can always take i first and B will
-//finanly lose as he faces above scenario like A
-public class Solution {
-    public boolean canWinNim(int n) {
-        if (n % 4 == 0) {可以观察上面的dp,只有当n是4的倍数时才会输
-            return false;
-        } else {
-            return true;
-        }
-    }
-}
+
+```python
+#strategy: the one with 4 remaining must lose, A, B players
+#if n == 4k, then at each round B can make A+B both take 4
+#eventually leave 4 to A, A lose
+#if n == 4k + i (i <= 3), then A can always take i first and B will
+#finanly lose as he faces above scenario like A
+
+class Solution(object):
+    def canWinNim(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        return n % 4 != 0
 ```
