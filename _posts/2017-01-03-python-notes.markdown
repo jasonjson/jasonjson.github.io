@@ -83,3 +83,24 @@ We can easily uncache the return values as well by using: `fib.cache_clear()`. [
 * `os.path.exists` - Return True if path refers to an existing path.
 * `os.mkdir` - Create a directory named path with numeric mode mode. The default mode is 0777 (octal).
 * `os.makedirs` - Recursive directory creation function.
+
+### Built-in methods
+* `filter` - Construct an iterator from those elements of iterable for which function returns true. Note that filter(function, iterable) is equivalent to the generator expression (item for item in iterable if function(item)).
+* `chr` - Return the string representing a character whose Unicode code point is the integer i. For example, chr(97) returns the string 'a'. This is the inverse of ord().
+* `oct` - Convert an integer number to an octal string.
+* `hex` - Convert an integer number to a lowercase hexadecimal string prefixed with “0x”
+* `ord` - Given a string representing one Unicode character, return an integer representing the Unicode code point of that character.
+* `id` - Return the “identity” of an object. This is an integer which is guaranteed to be unique and constant for this object during its lifetime.
+* `isinstance` - Return true if the object argument is an instance of the classinfo argument, or of a (direct, indirect or virtual) subclass thereof.
+* `map` - Return an iterator that applies function to every item of iterable, yielding the results.
+* `abs` - Return the absolute value of a number.
+* `max` - Return the largest item in an iterable or the largest of two or more arguments.
+* `min` - Return the smallest item in an iterable or the smallest of two or more arguments.
+* `next` - Retrieve the next item from the iterator by calling its __next__() method.
+s is the inverse of ord().
+* `pow` - Return x to the power y.
+* `property` - Return a property attribute. [read more](https://docs.python.org/3/library/functions.html)
+* `reversed` - Return a reverse iterator.
+* `sorted` - Return a new sorted list from the items in iterable.
+* `sum` - Sums start and the items of an iterable from left to right and returns the total.
+* `zip` - Make an iterator that aggregates elements from each of the iterables. Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables. The iterator stops when the shortest input iterable is exhausted. With a single iterable argument, it returns an iterator of 1-tuples. With no arguments, it returns an empty iterator.
