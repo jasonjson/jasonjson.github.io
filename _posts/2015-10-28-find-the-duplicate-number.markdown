@@ -6,24 +6,22 @@ tags:
 - Algorithm
 categories:
 - Binary Search Tree
-- Two Pointers
 author: Jason
 ---
-<p><strong><em>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</em></strong></p>
+**Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.**
 
 
-<p><a href="http://bookshadow.com/weblog/2015/09/28/leetcode-find-duplicate-number/">Read more</a></p>
-二分枚举答案范围，使用鸽笼原理进行检验</p>
-<p>根据鸽笼原理，给定n + 1个范围[1, n]的整数，其中一定存在数字出现至少两次。</p>
-<p>假设枚举的数字为 n / 2：</p>
-<p>遍历数组，若数组中不大于n / 2的数字个数超过n / 2，则可以确定[1, n /2]范围内一定有解，</p>
-<p>否则可以确定解落在(n / 2, n]范围内。</p>
+[Read more](http://bookshadow.com/weblog/2015/09/28/leetcode-find-duplicate-number)
+二分枚举答案范围，使用鸽笼原理进行检验
+* 根据鸽笼原理，给定n + 1个范围[1, n]的整数，其中一定存在数字出现至少两次。
+* 假设枚举的数字为 n / 2：
+* 遍历数组，若数组中不大于n / 2的数字个数超过n / 2，则可以确定[1, n /2]范围内一定有解. 否则可以确定解落在(n / 2, n]范围内。
 
-``` java
+```java
 public class Solution {
     public int findDuplicate(int[] nums) {
         if (nums == null || nums.length == 0) return -1;
-        
+
         int lo = 0, hi = nums.length - 1;
         while (lo <= hi) {
             int mid = (lo + hi) / 2, count = 0;
@@ -42,7 +40,8 @@ public class Solution {
     }
 }
 ```
-``` java
+
+```java
 public class Solution {
     public int findDuplicate(int[] nums) {
         if (nums == null || nums.length == 0) return -1;
