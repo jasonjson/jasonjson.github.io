@@ -17,7 +17,7 @@ def generate_post(input_file):
     """
 
     today_date = dt.datetime.today().strftime("%Y-%m-%d")
-    problem_name = input_file.split(".")[1]
+    problem_name = input_file.split(".")[1].title()
     title = problem_name.replace("-", " ")
     output_file = '-'.join([today_date, problem_name]) + ".markdown"
     post = ['---', 'layout: post', 'title: {0}'.format(title), 'date: {0}'.format(today_date), 'tags:', '- Algorithm', 'categories:', '- ' , "author: Jason", '---', '**title**']

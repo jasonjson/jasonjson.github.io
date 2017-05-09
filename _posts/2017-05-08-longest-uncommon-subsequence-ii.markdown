@@ -1,6 +1,6 @@
 ---
 layout: post
-title: longest uncommon subsequence ii
+title: Longest Uncommon Subsequence ii
 date: 2017-05-08
 tags:
 - Algorithm
