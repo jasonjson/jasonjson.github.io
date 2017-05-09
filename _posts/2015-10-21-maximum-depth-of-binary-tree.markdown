@@ -8,8 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</em></strong></p>
-
+**Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.**
 
 ``` java
 public class Solution {
@@ -24,6 +23,7 @@ public class Solution {
     }
 }
 ```
+
 ``` java
 public class Solution {
     /**
@@ -42,4 +42,19 @@ public class Solution {
         }
     }
 }
+```
+
+```python
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+
+        if root is None:
+            return 0
+        left_dep = self.maxDepth(root.left)
+        right_dep = self.maxDepth(root.right)
+        return max(left_dep, right_dep) + 1
 ```
