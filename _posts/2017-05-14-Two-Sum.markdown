@@ -1,0 +1,53 @@
+---
+layout: post
+title: Two Sum
+date: 2017-05-14
+tags:
+- Algorithm
+categories:
+- Array
+author: Jason
+---
+**Given an array of integers, return indices of the two numbers such that they add up to a specific target.  You may assume that each input would have exactly one solution, and you may not use the same element twice.**
+
+```python
+#
+# [1] Two Sum
+#
+# https://leetcode.com/problems/two-sum
+#
+# Easy (32.80%)
+# Total Accepted:    494112
+# Total Submissions: 1506335
+# Testcase Example:  '[3,2,4]\n6'
+#
+# 
+# 
+# Example:
+# 
+# Given nums = [2, 7, 11, 15], target = 9,
+# 
+# Because nums[0] + nums[1] = 2 + 7 = 9,
+# return [0, 1].
+# 
+# 
+#
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        num_index = {}
+        ret = []
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in num_index:
+                ret.extend([num_index.get(diff), i])
+                break
+            else:
+                num_index[num] = i
+
+        return ret
+```

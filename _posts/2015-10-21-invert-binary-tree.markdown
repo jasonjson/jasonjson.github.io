@@ -8,8 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Invert a binary tree</em></strong></p>
-
+**Invert a binary tree**
 
 ``` java
 public class Solution {
@@ -37,7 +36,7 @@ public class Solution {
         // write your code here
         if (root == null) return;
         Stack<treenode> stack = new Stack<treenode>();
-        
+
         stack.push(root);
         while (!stack.isEmpty()) {
             //we don't care if the current level is finished, when i level is finished, it goes automatically to i + 1 level, root remain the same, because it's already swapped in the above level
@@ -50,4 +49,34 @@ public class Solution {
         }
     }
 }
+```
+
+```python
+class Solution(object):
+    def invertTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root is None:
+            return
+        stack = []
+        stack.append(root)
+        while stack:
+            curr = stack.pop()
+            curr.left, curr.right = curr.right, curr.left
+            if curr.left:
+                stack.append(curr.left)
+            if curr.right:
+                stack.append(curr.right)
+        return root
+```
+
+```python
+class Solution(object):
+    def invertTree(self, root):
+        if root is None:
+            return
+        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root
 ```
