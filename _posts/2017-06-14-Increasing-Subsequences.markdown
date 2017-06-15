@@ -5,7 +5,7 @@ date: 2017-06-14
 tags:
 - Algorithm
 categories:
-- DFS BACKTRACKING
+- DFS Backtracking
 author: Jason
 ---
 **Given an integer array, your task is to find all the different possible increasing subsequences of the given array, and the length of an increasing subsequence should be at least 2**
