@@ -3,7 +3,7 @@ layout: post
 title: Find All Numbers Disappeared in an Array
 date: 2017-05-07
 tags:
-- Alogrithm
+- Algorithm
 categories:
 - Array
 author: Jason
