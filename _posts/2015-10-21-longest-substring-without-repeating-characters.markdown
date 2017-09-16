@@ -8,14 +8,14 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given a string, find the length of the longest substring without repeating characters.</em></strong></p>
+**Given a string, find the length of the longest substring without repeating characters.**
 
 
 ``` java
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
-        
+
         int start = 0, maxLen = 0;
         int[] letters = new int[256];
         for (int i = 0; i < s.length(); i++) {
@@ -30,6 +30,7 @@ public class Solution {
     }
 }
 ```
+
 ``` java
 public class Solution {
     /**
@@ -38,7 +39,7 @@ public class Solution {
      */
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
-        
+
         int[] lastIndex = new int[256];
         Arrays.fill(lastIndex, -1);
         int start = 0, max = 1;
@@ -53,4 +54,25 @@ public class Solution {
         return max;
     }
 }
+```
+
+```python
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if not s:
+            return 0
+        ret, first_index = 0, 0
+        char_map = {}
+        for i, char in enumerate(s):
+            if char in char_map:
+                while char_map[char] > 0:
+                    char_map[s[first_index]] -= 1
+                    first_index += 1    
+            ret = max(ret, i - first_index + 1)
+            char_map[char] = 1
+        return ret
 ```
