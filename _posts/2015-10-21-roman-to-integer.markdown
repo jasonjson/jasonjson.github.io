@@ -8,7 +8,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given a roman numeral, convert it to an integer. The answer is guaranteed to be within the range from 1 to 3999.</em></strong></p>
+**Given a roman numeral, convert it to an integer. The answer is guaranteed to be within the range from 1 to 3999.**
 
 
 ``` java
@@ -23,12 +23,12 @@ public class Solution {
                 if (i < s.length() - 1 && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
                     result -= 1;
                 } else {
-                    result += 1;     
+                    result += 1;
                 }
             } else if (c == 'V') {
                 result += 5;
             } else if (c == 'X') {
-                if (i < s.length() - 1 && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) { 
+                if (i < s.length() - 1 && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
                     result -= 10;
                 } else {
                     result += 10;
@@ -36,7 +36,7 @@ public class Solution {
             } else if (c == 'L') {
                 result += 50;
             } else if (c == 'C') {
-                if (i < s.length() - 1 && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) { 
+                if (i < s.length() - 1 && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
                     result -= 100;
                 } else {
                     result += 100;
@@ -50,4 +50,38 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        nums = []
+        for char in s:
+            if char == "M":
+                nums.append(1000)
+            elif char == "D":
+                nums.append(500)
+            elif char == "C":
+                nums.append(100)
+            elif char == "L":
+                nums.append(50)
+            elif char == "X":
+                nums.append(10)
+            elif char == "V":
+                nums.append(5)
+            elif char == "I":
+                nums.append(1)
+
+        ret = 0
+        for i, num in enumerate(nums[:-1]):
+            if num < nums[i + 1]:
+                ret -= num
+            else:
+                ret += num
+        return ret + nums[-1]
 ```
