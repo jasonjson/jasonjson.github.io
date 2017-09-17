@@ -5,11 +5,10 @@ date: 2015-10-21 02:36:32.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Binary Search Tree
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given n, how many structurally unique BST's (binary search trees) that store values 1...n?</em></strong></p>
+**Given n, how many structurally unique BST's (binary search trees) that store values 1...n?**
 
 ```python
 class Solution(object):
@@ -26,6 +25,7 @@ class Solution(object):
             dp.append(amount)
         return dp[n]
 ```
+
 ``` java
 public class Solution {
     /**
@@ -38,11 +38,28 @@ public class Solution {
         int[] count = new int[n+1]; //count[i] indicates how many BST for i
         count[0] = 1;
         for (int i = 1; i <= n; i++) {//there can be i - 1 elements in the subtree, use j to control how many elements in left subtree and how many in right subtree, update count[i]
-            for (int j = 1; j <= i; j++) {
-                count[i] += count[j-1] * count[i-j];// (j - 1) + (i - j) == i - 1 elements
+            for (int j = 0; j < i; j++) {
+                count[i] += count[j] * count[i - j - 1];// j  + (i - j - 1) == i - 1 elements
             }
         }
         return count[n];
     }
 }
+```
+
+``` python
+class Solution(object):
+    def numTrees(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+        dp = [0] * (n + 1)
+        dp[0] = 1
+        for i in xrange(1, n + 1):
+            for j in xrange(i):
+                #j elements in left tree and i - j - 1 elements in right tree
+                dp[i] += dp[j] * dp[i - j - 1]
+        return dp[n]
 ```
