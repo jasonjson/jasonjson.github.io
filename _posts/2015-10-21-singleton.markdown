@@ -5,24 +5,23 @@ date: 2015-10-21 03:34:23.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- OOD
+- Interview
 author: Jason
 ---
-<p><strong><em>Singleton is a most widely used design pattern. If a class has and only has one instance at every moment, we call this design as singleton. For example, for class Mouse (not a animal mouse), we should design it in singleton. You job is to implement a getInstance method for given class, return the same instance of this class every time you call this method.</em></strong></p>
+**Singleton is a most widely used design pattern. If a class has and only has one instance at every moment, we call this design as singleton. For example, for class Mouse (not a animal mouse), we should design it in singleton. You job is to implement a getInstance method for given class, return the same instance of this class every time you call this method.**
 
-
-<p><a href="http://www.programmerinterview.com/index.php/design-pattern-questions/design-pattern-interview-question-part-2/">Read More</a></p>
+[reference](http://www.programmerinterview.com/index.php/design-pattern-questions/design-pattern-interview-question-part-2/)
 
 ``` java
 class Solution {
     /**
      * @return: The same instance of this class every time
      */
-    
+
     private static volatile Solution instance = null;
     //Declaring a volatile Java variable means: The value of this variable will never be cached thread-locally: all reads and writes will go straight to "main memory"; Access to the variable acts as though it is enclosed in a synchronized block, synchronized on itself.
     private Solution() {
-        
+
     }
     public static Solution getInstance() {
         // The whole point of this is to save resources by instantiating the Singleton only when it’s actually needed. This technique is commonly known as lazy loading, or deferred initialization.

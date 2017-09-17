@@ -6,12 +6,9 @@ tags:
 - Algorithm
 categories:
 - Brain teaser
-- Cloudera OA
 author: Jason
 ---
-<p><strong><em>Find the total area covered by two rectilinear rectangles in a 2D plane. Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.</em></strong></p>
-
-<a href="http://yuancrackcode.com/wp-content/uploads/2015/10/rectangle_area.png"><img src="{{ site.baseurl }}/assets/rectangle_area-300x168.png" alt="rectangle_area" width="300" height="168" class="aligncenter size-medium wp-image-1014" /></a></p>
+**Find the total area covered by two rectilinear rectangles in a 2D plane. Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.**
 
 ``` java
 public class Solution {

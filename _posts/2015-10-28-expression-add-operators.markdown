@@ -5,26 +5,22 @@ date: 2015-10-28 12:58:06.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Brain teaser
 - DFS Backtracking
-- Leetcode
 author: Jason
 ---
-<p><strong><em>Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.</em></strong></p>
-
-
-<p><a href="http://segmentfault.com/a/1190000003797204">Read more</a></p>
+**Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.**
+[reference](http://segmentfault.com/a/1190000003797204")
 
 ``` java
 public class Solution {
     public List<string> addOperators(String num, int target) {
         List<string> result = new ArrayList<string>();
         if (num == null || num.length() == 0) return result;
-        
+
         helper(num, target, 0, 0, "", result);
         return result;
     }
-    
+
     public void helper(String num, int target, long prev, long currRes, String path, List<string> result) {
         if (num.length() == 0 && currRes == target) {
             result.add(new String(path));

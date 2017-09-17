@@ -5,14 +5,10 @@ date: 2015-10-21 02:31:58.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Integer
 - Sorting
-- Subarray
-- Hard
 author: Jason
 ---
-<p><strong><em>There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</em></strong></p>
-
+**There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).**
 
 ``` java
 class Solution {
@@ -30,7 +26,7 @@ class Solution {
             return helper(A, 0, B, 0, len / 2 + 1);
         }
     }
-    
+
     public double helper(int[] A, int A_start, int[] B, int B_start, int k) {
         if (A_start >= A.length) {
             return B[B_start + k - 1];

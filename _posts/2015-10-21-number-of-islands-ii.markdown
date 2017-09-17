@@ -6,11 +6,9 @@ tags:
 - Algorithm
 categories:
 - DFS Backtracking
-- Matrix
-- Hard
 author: Jason
 ---
-<p><strong><em>Given a n,m which means the row and column of the 2D matrix and an array of pair A( size k). Originally, the 2D matrix is all 0 which means there is only sea in the matrix. The list pair has k operator and each operator has two integer A[i].x, A[i].y means that you can change the grid matrix[A[i].x][A[i].y] from sea to island. Return how many island are there in the matrix after each operator.</em></strong></p>
+**Given a n,m which means the row and column of the 2D matrix and an array of pair A( size k). Originally, the 2D matrix is all 0 which means there is only sea in the matrix. The list pair has k operator and each operator has two integer A[i].x, A[i].y means that you can change the grid matrix[A[i].x][A[i].y] from sea to island. Return how many island are there in the matrix after each operator.**
 
 
 ``` java
@@ -39,7 +37,7 @@ public class Solution {
     }
     public List<integer> numIslands2(int n, int m, Point[] operators) {
         List<integer> result = new ArrayList<integer>();
-        if (operators == null || operators.length == 0) return result;        
+        if (operators == null || operators.length == 0) return result;
         int[] dx = {0, -1, 0, 1}, dy = {-1, 0, 1, 0};
         int[][] grid = new int[n][m];
         UnionFind uf = new UnionFind();

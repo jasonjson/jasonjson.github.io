@@ -5,7 +5,7 @@ date: 2017-09-14
 tags:
 - Algorithm
 categories:
-- Tree
+- Binary Search Tree
 author: Jason
 ---
 **Given a tree node with n depth. Each node has value either 1 or 0. Find the lowest level node with value 1 and set all the above nodes to 0, Dont change the node in the same level.**

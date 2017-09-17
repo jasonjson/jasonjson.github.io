@@ -6,11 +6,9 @@ tags:
 - Algorithm
 categories:
 - Integer
-- Cloudera OA
 author: Jason
 ---
-<p><strong><em>Given a number, find the largest sibling</em></strong></p>
-
+**Given a number, find the largest sibling**
 
 ``` java
 public class solution {
