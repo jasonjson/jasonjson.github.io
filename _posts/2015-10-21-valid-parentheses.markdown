@@ -6,10 +6,9 @@ tags:
 - Algorithm
 categories:
 - Brain teaser
-- Data Structure
 author: Jason
 ---
-<p><strong><em>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</em></strong></p>
+**Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.**
 
 
 ``` java
@@ -20,7 +19,7 @@ public class Solution {
      */
     public boolean isValidParentheses(String s) {
         if (s == null || s.length() == 0) return true;
-        
+
         Stack<character> stack = new Stack<character>();
         for (char c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
@@ -39,4 +38,27 @@ public class Solution {
         return stack.isEmpty();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+
+        if not s:
+            return False
+
+        stack = []
+        for char in s:
+            if char in "([{":
+                stack.append(char)
+            elif len(stack) == 0:
+                return False
+            elif (char == ")" and stack.pop() != "(") or (char == "]" and stack.pop() != "[") or (char == "}" and stack.pop() != "{"):
+                return False
+
+        return len(stack) == 0
 ```
