@@ -8,8 +8,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Determine whether an integer is a palindrome. Do this without extra space.</em></strong></p>
-
+**Determine whether an integer is a palindrome. Do this without extra space.**
 
 ``` java
 public class Solution {
@@ -23,4 +22,21 @@ public class Solution {
         return rev == x;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x is None or x < 0:
+            return False
+
+        tmp, x_copy = 0, x
+        while x_copy:
+            tmp = tmp * 10 + x_copy % 10
+            x_copy /= 10
+        return tmp == x
 ```
