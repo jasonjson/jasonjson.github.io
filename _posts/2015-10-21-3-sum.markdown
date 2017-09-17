@@ -5,25 +5,24 @@ date: 2015-10-21 02:21:29.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Integer
-- Subarray
+- Array
 author: Jason
 ---
-<p><strong><em>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.</em></strong></p>
+**Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.**
 
 
 ``` java
 public class Solution {
-    public List<List<integer>> threeSum(int[] nums) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nums == null || nums.length == 0) return result;
-        
+        Arrays.sort(nums);
         for (int i = 0; i + 2 < nums.length; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             int lo = i + 1, hi = nums.length - 1;
             while (lo < hi) {
                 if (lo > i + 1 && nums[lo] == nums[lo - 1]) {
-                    lo++; 
+                    lo++;
                     continue;
                 }
                 if (hi < nums.length - 1 && nums[hi] == nums[hi + 1]) {
@@ -32,7 +31,7 @@ public class Solution {
                 }
                 int sum = nums[i] + nums[lo] + nums[hi];
                 if (sum == 0) {
-                    List<integer> list = new ArrayList<integer>(Arrays.asList(nums[i], nums[lo], nums[hi]));
+                    List<Integer> list = new ArrayList<Integer>(Arrays.asList(nums[i], nums[lo], nums[hi]));
                     result.add(list);
                     lo++;
                     hi--;
@@ -46,4 +45,39 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+
+        if not nums:
+            return []
+
+        ret = []
+        nums.sort()
+        for i, num in enumerate(nums[:-2]):
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+            lo, hi = i + 1, len(nums) - 1;
+            while lo < hi:
+                if lo > i + 1 and nums[lo] == nums[lo - 1]:
+                    lo += 1
+                    continue
+                if hi < len(nums) - 1 and nums[hi] == nums[hi + 1]:
+                    hi -= 1
+                    continue
+                if nums[lo] + nums[hi] + num == 0:
+                    ret.append([num, nums[lo], nums[hi]])
+                    lo += 1
+                    hi -= 1
+                elif nums[lo] + nums[hi] + num > 0:
+                    hi -= 1
+                else:
+                    lo += 1
+        return ret
 ```

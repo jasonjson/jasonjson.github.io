@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Write a function to find the longest common prefix string amongst an array of strings.</em></strong></p>
+**Write a function to find the longest common prefix string amongst an array of strings.**
 
 
 ``` java
@@ -36,7 +36,7 @@ public class Solution {
     public String longestCommonPrefix(String[] strs) {
         // write your code here
         if (strs == null || strs.length == 0) return "";
-        
+
         Arrays.sort(strs);
         String head = strs[0], tail = strs[strs.length - 1];
         int i = 0;
@@ -48,4 +48,23 @@ public class Solution {
         return head.substring(0, i);
     }
 }
+```
+
+``` python
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+
+        if not strs:
+            return ""
+
+        strs.sort()
+        head, tail = strs[0], strs[-1]
+        for i, char in enumerate(head):
+            if char != tail[i]:
+                return head[0:i] if i > 0 else ""
+        return head
 ```
