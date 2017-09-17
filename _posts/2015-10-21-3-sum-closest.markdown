@@ -20,17 +20,8 @@ public class Solution {
         int n = nums.length;
         int result = nums[0] + nums[1] + nums[2];
         for (int i = 0; i + 2 < n; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
             int lo = i + 1, hi = n - 1;
             while (lo < hi) {
-                if (lo > i + 1 && nums[lo] == nums[lo - 1]) {
-                    lo++;
-                    continue;
-                }
-                if (hi < n - 1 && nums[hi] == nums[hi + 1]) {
-                    hi--;
-                    continue;
-                }
                 int sum = nums[i] + nums[lo] + nums[hi];
                 if (sum == target) {
                     return target;
@@ -63,16 +54,8 @@ class Solution(object):
         ret = sum(nums[:3])
         nums.sort()
         for i, num in enumerate(nums[:-2]):
-            if i > 0 and nums[i] == nums[i - 1]:
-                continue
             lo, hi = i + 1, len(nums) - 1
             while lo < hi:
-                if lo > i + 1 and nums[lo] == nums[lo - 1]:
-                    lo += 1
-                    continue
-                if hi < len(nums) - 1 and nums[hi] == nums[hi + 1]:
-                    hi -= 1
-                    continue
                 total = num + nums[lo] + nums[hi]
                 if total == target:
                     return total
