@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a digit string, return all possible letter combinations that the number could represent.</em></strong></p>
+**Given a digit string, return all possible letter combinations that the number could represent.**
 
 
 ``` java
@@ -25,7 +25,7 @@ public class Solution {
         helper(digits, letters, str, result);
         return result;
     }
-    
+
     public void helper(String digits, String[] letters, StringBuilder str, ArrayList<string> result) {
         if (digits.length() == 0) {
             result.add(str.toString());
@@ -39,4 +39,29 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        if not digits:
+            return []
+
+        letters = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
+        ret = []
+        self.helper(0, digits, letters, [], ret)
+        return ret
+
+    def helper(self, index, digits, letters, curr, ret):
+        if index == len(digits):
+            ret.append("".join(curr))
+            return
+        for char in letters[int(digits[index])]:
+            curr.append(char)
+            self.helper(index + 1, digits, letters, curr, ret)
+            curr.pop()
 ```
