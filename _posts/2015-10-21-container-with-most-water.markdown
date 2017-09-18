@@ -5,7 +5,7 @@ date: 2015-10-21 13:26:44.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Brain Teaser
+- Brain teaser
 author: Jason
 ---
 **Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.**
