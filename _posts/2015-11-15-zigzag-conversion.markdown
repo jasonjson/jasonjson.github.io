@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</em></strong></p>
+**The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)**
 
 
 ``` java
@@ -28,4 +28,31 @@ public class Solution {
         return sb.toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def convert(self, s, numRows):
+        """
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+
+        buckets = [[] for i in xrange(numRows)]
+        i = 0
+        while i < len(s):
+            for j in xrange(numRows):
+                if i < len(s):
+                    buckets[j].append(s[i])
+                    i += 1
+            for j in reversed(xrange(1, numRows-1)):
+                if i < len(s):
+                    buckets[j].append(s[i])
+                    i += 1
+
+        ret = []
+        for bucket in buckets:
+            ret.extend(bucket)
+        return "".join(ret)
 ```
