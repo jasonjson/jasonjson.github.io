@@ -8,7 +8,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Divide two integers without using multiplication, division and mod operator. If it is overflow, return 2147483647</em></strong></p>
+**Divide two integers without using multiplication, division and mod operator. If it is overflow, return 2147483647**
 
 
 ``` java
@@ -26,14 +26,14 @@ public class Solution {
         }
         long dvd = Math.abs((long)dividend);//先转化成long再求绝对值
         long dvs = Math.abs((long)divisor);
-        
+
         long result = helper(dvd, dvs);
         if (result >= Integer.MAX_VALUE) {
             return positive ? Integer.MAX_VALUE : Integer.MIN_VALUE;
         }
         return positive ? (int) result : -(int)result;
     }
-    
+
     public long helper(long dvd, long dvs) {
         if (dvd < dvs) return 0;
         long sum = dvs, multiple = 1;
@@ -44,4 +44,28 @@ public class Solution {
         return multiple + helper(dvd - sum, dvs);
     }
 }
+```
+
+``` python
+class Solution(object):
+    def divide(self, dividend, divisor):
+        """
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        """
+
+        positive = (dividend < 0) is (divisor < 0)
+        dvd, dvs = abs(dividend), abs(divisor)
+        ret = 0
+        while dvd >= dvs:
+            tmp, multiple = dvs, 1
+            while dvd >= tmp:
+                dvd -= tmp
+                ret += multiple
+                multiple <<= 1
+                tmp <<= 1
+        if not positive:
+            ret = -ret
+        return min(max(-2 ** 31, ret), 2 ** 31 - 1)
 ```
