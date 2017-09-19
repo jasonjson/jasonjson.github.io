@@ -8,10 +8,10 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Implement strStr().Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</em></strong></p>
+**Implement strStr().Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.**
 
 
-<p><a href="https://www.youtube.com/watch?v=GTJr8OvyEVQ">read more</a></p>
+[KMP](https://www.youtube.com/watch?v=GTJr8OvyEVQ)
 
 ``` java
 public class Solution {
@@ -58,4 +58,24 @@ public class Solution {
         return -1;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        if not needle:
+            return 0
+
+        for i in xrange(len(haystack) - len(needle) + 1):
+            for j in xrange(len(needle)):
+                if haystack[i + j] != needle[j]:
+                    break
+                elif j == len(needle) - 1:
+                    return i
+        return -1
 ```
