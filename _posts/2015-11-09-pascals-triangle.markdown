@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given numRows, generate the first numRows of Pascal's triangle.</em></strong></p>
+**Given numRows, generate the first numRows of Pascal's triangle.**
 
 
 ``` java
@@ -32,4 +32,28 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def generate(self, numRows):
+        """
+        :type numRows: int
+        :rtype: List[List[int]]
+        """
+        if not numRows:
+            return []
+
+        ret = []
+        for i in xrange(1, numRows + 1):
+            line = []
+            for j in xrange(i):
+                if j == 0:
+                    line.append(1)
+                elif j == i - 1:
+                    line.append(1)
+                else:
+                    line.append(ret[-1][j] + ret[-1][j - 1])
+            ret.append(line)
+        return ret
 ```
