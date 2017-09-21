@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. Each number in C may only be used once in the combination.</em></strong></p>
+**Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. Each number in C may only be used once in the combination.**
 
 
 ``` java
@@ -16,12 +16,12 @@ public class Solution {
     public List<List<integer>> combinationSum2(int[] num, int target) {
         List<List<integer>> result = new ArrayList<List<integer>>();
         if (num == null || num.length == 0) return result;
-        
+
         Arrays.sort(num);
         helper(num, 0, target, new ArrayList<integer>(), result);
         return result;
     }
-    
+
     public void helper (int[] num, int start, int remain, List<integer> list, List<List<integer>> result) {
         if (remain == 0) {
             result.add(new ArrayList<integer>(list));
@@ -37,4 +37,34 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def combinationSum2(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+
+        if not candidates:
+            return []
+
+        candidates.sort()
+        ret = []
+        self.helper(candidates, 0, [], ret, target)
+        return ret
+
+    def helper(self, candidates, start, curr, ret, remain):
+        if remain == 0:
+            ret.append(copy.deepcopy(curr))
+            return
+        for i in xrange(start, len(candidates)):
+            if i > start and candidates[i] == candidates[i - 1]:
+                continue
+            if candidates[i] <= remain:
+                curr.append(candidates[i])
+                self.helper(candidates, i + 1, curr, ret, remain - candidates[i])
+                curr.pop()
 ```
