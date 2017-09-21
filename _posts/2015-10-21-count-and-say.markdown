@@ -8,12 +8,12 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>The count-and-say sequence is the sequence of integers beginning as follows:</p>
+**The count-and-say sequence is the sequence of integers beginning as follows:**
 
-1, 11, 21, 1211, 111221, ...</p>
-1 is read off as "one 1" or 11.</p>
-11 is read off as "two 1s" or 21.</p>
-21 is read off as "one 2, then one 1" or 1211.</em></strong></p>
+* 1, 11, 21, 1211, 111221, ...
+* 1 is read off as "one 1" or 11
+* 11 is read off as "two 1s" or 21
+* 21 is read off as "one 2, then one 1" or 1211
 
 ``` java
 public class Solution {
@@ -30,7 +30,7 @@ public class Solution {
         //we build new string based on previous string
         char prev_char = prev.charAt(0);
         int start = 0;
-        
+
         for(int i = 0; i < prev.length(); i++){
             if(prev.charAt(i) != prev_char){
                 str.append(""+(i-start)+prev_char);
@@ -45,4 +45,33 @@ public class Solution {
         return str.toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def countAndSay(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+
+        if not n:
+            return ""
+
+        prev = "1"
+        for i in xrange(n - 1):
+            count, j = 1, 1
+            curr = []
+            while j < len(prev):
+                if prev[j] == prev[j - 1]:
+                    count += 1
+                else:
+                    curr.append(str(count))
+                    curr.append(prev[j - 1])
+                    count = 1
+                j += 1
+            curr.append(str(count))
+            curr.append(prev[j - 1])
+            prev = "".join(curr)
+        return prev
 ```
