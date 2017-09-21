@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. The same repeated number may be chosen from C unlimited number of times.</em></strong></p>
+**Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. The same repeated number may be chosen from C unlimited number of times.**
 
 
 ``` java
@@ -17,17 +17,17 @@ public class Solution {
         List<List<integer>> result = new ArrayList<List<integer>>();
         if (candidates == null || candidates.length == 0) return result;
         List<integer> list = new ArrayList<integer>();
-        
+
         Arrays.sort(candidates);
         helper(candidates, 0, target, list, result);
         return result;
     }
-    
+
     public void helper(int[] candidates, int start, int gap, List<integer> list, List<List<integer>> result) {
         if (gap == 0) {
             result.add(new ArrayList<integer>(list));
             return;
-        }        
+        }
         for (int i = start; i < candidates.length; i++) {
             if (i > start && candidate[i] == candidates[i - 1]) continue;
             if (gap - candidates[i] >= 0) {
@@ -38,4 +38,33 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        if not candidates:
+            return []
+
+        candidates.sort()
+        ret = []
+        self.helper(candidates, 0, [], ret, target)
+        return ret
+
+    def helper(self, candidates, index, curr, ret, remain):
+        if remain == 0 :
+            ret.append(copy.deepcopy(curr))
+            return
+        for i in xrange(index, len(candidates)):
+            if i > 0 and candidates[i] == candidates[i - 1]:
+                continue
+            elif candidates[i] <= remain:
+                curr.append(candidates[i])
+                self.helper(candidates, i, curr, ret, remain - candidates[i])
+                curr.pop()
 ```
