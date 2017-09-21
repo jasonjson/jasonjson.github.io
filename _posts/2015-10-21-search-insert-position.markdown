@@ -9,12 +9,12 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You may assume NO duplicates in the array.</em></strong></p>
+**Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You may assume NO duplicates in the array.**
 
 
 ``` java
 public class Solution {
-    /** 
+    /**
      * param A : an integer sorted array
      * param target :  an integer to be inserted
      * return : an integer
@@ -38,4 +38,28 @@ public class Solution {
         return lo; //当循环停下来时，如果不是正好找到target，lo指向的元素恰好大于target，hi指向的元素恰好小于target，这里lo和hi可能越界，不过如果越界就说明大于（小于）target并且是最大（最小）
     }
 }
+```
+
+``` pythoon
+class Solution(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+
+        if not nums:
+            return 0
+
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] > target:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        return lo
 ```
