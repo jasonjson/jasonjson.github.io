@@ -5,26 +5,23 @@ date: 2015-10-21 02:29:40.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Integer
 - Sorting
 author: Jason
 ---
-<p><strong><em>Follow up for "Search in Rotated Sorted Array":</p>
-
-What if duplicates are allowed? Would this affect the run-time complexity? How and why? Write a function to determine if a given target is in the array.</em></strong></p>
+**Follow up for "Search in Rotated Sorted Array": What if duplicates are allowed? Would this affect the run-time complexity? How and why? Write a function to determine if a given target is in the array.**
 
 ``` java
 public class Solution {
-    /** 
+    /**
      * param A : an integer rotated sorted array and duplicates are allowed
      * param target :  an integer to be search
-     * return : a boolean 
+     * return : a boolean
      */
     public boolean search(int[] A, int target) {
         // write your code here
         int len = A.length;
         if (A == null || len == 0) return false;
-        
+
         int lo = 0, hi = len - 1;
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
@@ -34,7 +31,7 @@ public class Solution {
                     hi = mid - 1;
                 } else {
                     lo = mid + 1;
-                } 
+                }
             }else if (A[lo] > A[mid]) {
                 if (A[mid] < target && target <= A[hi]) {
                     lo = mid + 1;
@@ -50,4 +47,36 @@ public class Solution {
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: bool
+        """
+
+        if not nums:
+            return False
+
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if nums[mid] == target:
+                return True
+            elif nums[mid] < nums[hi]:
+                if (nums[mid] < target and target <= nums[hi]):
+                    lo = mid + 1
+                else:
+                    hi = mid - 1
+            elif nums[mid] > nums[hi]:
+                if (nums[lo] <= target and target < nums[mid]):
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+            else:
+                hi -= 1
+        return False
 ```
