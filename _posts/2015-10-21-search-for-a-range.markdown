@@ -5,16 +5,15 @@ date: 2015-10-21 02:27:43.000000000 -04:00
 tags:
 - Algorithm
 categories:
-- Integer
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given a sorted array of integers, find the starting and ending position of a given target value. Your algorithm's runtime complexity must be in the order of O(log n). If the target is not found in the array, return [-1, -1].</em></strong></p>
+**Given a sorted array of integers, find the starting and ending position of a given target value. Your algorithm's runtime complexity must be in the order of O(log n). If the target is not found in the array, return [-1, -1].**
 
 
 ``` java
 public class Solution {
-    /** 
+    /**
      *@param A : an integer sorted array
      *@param target :  an integer to be inserted
      *return : a list of length 2, [index1, index2]
@@ -25,7 +24,7 @@ public class Solution {
         if (A == null || A.length == 0) {
             return result;
         }
-        
+
         int lo = 0, hi = A.length - 1;
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
@@ -49,4 +48,33 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def searchRange(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        if not nums:
+            return [-1, -1]
+
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if nums[mid] == target:
+                left, right = mid, mid
+                while left - 1 >= 0 and nums[left - 1] == target:
+                    left -= 1
+                while right + 1 < len(nums) and nums[right + 1] == target:
+                    right += 1
+                return [left, right]
+            elif nums[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return [-1, -1]
 ```
