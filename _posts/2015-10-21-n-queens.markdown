@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>The n-queens puzzle is the problem of placing n queens on an n $\times$ n chessboard such that no two queens attack each other.</em></strong></p>
+**The n-queens puzzle is the problem of placing n queens on an n by n chessboard such that no two queens attack each other.**
 
 
 ``` java
@@ -16,11 +16,11 @@ public class Solution {
     public ArrayList<ArrayList<string>> solveNQueens(int n) {
         ArrayList<ArrayList<string>> result = new ArrayList<ArrayList<string>>();
         if (n <= 0) return result;
-        
+
         ArrayList<integer> cols = new ArrayList<integer>();
         search(n, cols, result);
         return result;
-    }    
+    }
     public void search(int n, ArrayList<integer> cols, ArrayList<ArrayList<string>> result) {//add one queen to cols each time
         if (cols.size() == n) {//queen is located at (i, cols.get(i))
             result.add(placeQueens(cols));
@@ -33,7 +33,7 @@ public class Solution {
                 cols.remove(cols.size() - 1);
             }
         }
-    }    
+    }
     public boolean isValid(ArrayList<integer> cols, int col) {
         int row = cols.size();//the row position for new queen
         for (int i = 0; i < cols.size(); i++) {
@@ -46,7 +46,7 @@ public class Solution {
             }
         }
         return true;
-    }    
+    }
     public ArrayList<string> placeQueens(ArrayList<integer> cols) {
         ArrayList<string> chessboard = new ArrayList<string>();
         for (int i = 0; i < cols.size(); i++) {
@@ -63,4 +63,43 @@ public class Solution {
         return chessboard;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def solveNQueens(self, n):
+        """
+        :type n: int
+        :rtype: List[List[str]]
+        """
+
+        ret = []
+        self.helper(n, [], ret)
+        return ret
+
+    def helper(self, n, cols, ret):
+        if (len(cols) == n):
+            ret.append(self.place_queen(cols))
+            return
+        for i in xrange(n):
+            if self.is_valid(cols, i):
+                cols.append(i)
+                self.helper(n, cols, ret)
+                cols.pop()
+
+    def is_valid(self, cols, col):
+        row = len(cols)
+        for i in xrange(row):
+            if col == cols[i] or abs(row - i) == abs(col - cols[i]):
+                return False
+        return True
+
+    def place_queen(self, cols):
+        board = []
+        for i in xrange(len(cols)):
+            line = []
+            for j in xrange(len(cols)):
+                line.append("Q" if j == cols[i] else ".")
+            board.append("".join(line))
+        return board
 ```
