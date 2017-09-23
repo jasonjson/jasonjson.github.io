@@ -6,10 +6,9 @@ tags:
 - Algorithm
 categories:
 - DFS Backtracking
-- Permutation
 author: Jason
 ---
-<p><strong><em>Given a list of numbers with duplicate number in it. Find all unique permutations.</em></strong></p>
+**Given a list of numbers with duplicate number in it. Find all unique permutations.**
 
 
 ``` java
@@ -22,20 +21,20 @@ class Solution {
         // write your code here
         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
         if (nums == null || nums.size() == 0) return result;
-        
+
         Collections.sort(nums);
         ArrayList<integer> list = new ArrayList<integer>();
         boolean[] visited = new boolean [nums.size()];
         dfs(nums, visited, list, result);
         return result;
     }
-    
+
     public void dfs(ArrayList<integer> nums, boolean[] visited, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
         if (list.size() == nums.size()) {
             result.add(new ArrayList<integer>(list));
             return;
         }
-        
+
         for (int i = 0; i < nums.size(); i++) {
             //when visit the same number, or the previous number has not been used, we continue
             //only recursively call on the first duplicate number that has not been used
@@ -54,4 +53,35 @@ class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def permuteUnique(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if not nums:
+            return []
+
+        used = [False] * len(nums)
+        nums.sort()
+        ret = []
+        self.helper(nums, [], used, ret)
+        return ret
+
+    def helper(self, nums, curr, used, ret):
+        if len(curr) == len(nums):
+            ret.append(copy.deepcopy(curr))
+            return
+        for i, num in enumerate(nums):
+            if i > 0 and nums[i] == nums[i - 1] and not used[i - 1]:
+                continue
+            if not used[i]:
+                curr.append(num)
+                used[i] = True
+                self.helper(nums, curr, used, ret)
+                curr.pop()
+                used[i] = False
 ```
