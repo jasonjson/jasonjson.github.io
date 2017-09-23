@@ -6,10 +6,9 @@ tags:
 - Algorithm
 categories:
 - DFS Backtracking
-- Permutation
 author: Jason
 ---
-<p><strong><em>Given a list of numbers, return all possible permutations.</em></strong></p>
+**Given a list of numbers, return all possible permutations.**
 
 
 ``` java
@@ -22,12 +21,12 @@ class Solution {
         // write your code here
         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
         if (nums == null || nums.size() == 0) return result;
-        
+
         ArrayList<integer> list = new ArrayList<integer>();
         dfs(nums, list, result);
         return result;
     }
-    
+
     public void dfs(ArrayList<integer> nums, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
         if (list.size() == nums.size()) {
             result.add(new ArrayList<integer> (list));
@@ -44,4 +43,31 @@ class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+
+        if not nums:
+            return []
+
+        ret = []
+        self.helper(nums, [], ret)
+        return ret
+
+    def helper(self, nums, curr, ret):
+        if len(curr) == len(nums):
+            ret.append(copy.deepcopy(curr))
+            return
+
+        for i, num in enumerate(nums):
+            if num not in curr:
+                curr.append(num)
+                self.helper(nums, curr, ret)
+                curr.pop()
 ```
