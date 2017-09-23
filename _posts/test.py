@@ -1,39 +1,39 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
+
 class Solution(object):
-    def totalNQueens(self, n):
+    def multiply(self, num1, num2):
         """
-        :type n: int
-        :rtype: int
+        :type num1: str
+        :type num2: str
+        :rtype: str
         """
 
-        ret = [0]
-        self.helper(n, [], ret)
-        return ret[0]
+        if not num1 or not num2:
+            return ""
 
-    def helper(self, n, cols, ret):
-        if (len(cols) == n):
-            import pprint
-            pprint.pprint(cols)
-            ret[0] += 1
-            return
-        for i in xrange(n):
-            if self.is_valid(cols, i):
-                cols.append(i)
-                self.helper(n, cols, ret)
-                cols.pop()
+        ret = [0] * (len(num1) * len(num2) + 1)
 
-    def is_valid(self, cols, col):
-        row = len(cols)
-        for i in xrange(row):
-            if col == cols[i]:
-                return False
-            elif abs(row - i) == (col - cols[i]):
-                return False
-        return True
+        for i, n1 in enumerate(reversed(num1)):
+            for j, n2 in enumerate(reversed(num2)):
+                mul = int(n1) * int(n2)
+                ret[i + j] += mul
+                ret[i + j + 1] += ret[i + j] / 10
+                ret[i + j] %= 10
+        ret = list(reversed(ret))
+
+        index = 0
+        while index < len(ret):
+            if ret[index] != 0:
+                break
+            index += 1
+        tmp = []
+        for i in xrange(index, len(ret)):
+            tmp.append(str(ret[i]))
+        return "".join(tmp)
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.totalNQueens(2))
+    pprint.pprint(solution.multiply("98", "9"))

@@ -6,17 +6,16 @@ tags:
 - Algorithm
 categories:
 - Brain teaser
-- Integer
 author: Jason
 ---
-<p><strong><em>Given two numbers represented as strings, return multiplication of the numbers as a string.</em></strong></p>
+**Given two numbers represented as strings, return multiplication of the numbers as a string.**
 
 
 ``` java
 public class Solution {
-    public String multiply(String num1, String num2) {        
+    public String multiply(String num1, String num2) {
         if (num1.length() == 0 || num2.length() == 0) return "";
-        
+
         StringBuilder sb = new StringBuilder();
         int len1 = num1.length(), len2 = num2.length();
         int[] mul = new int[len1 + len2];
@@ -39,4 +38,30 @@ public class Solution {
         return sb.length() == 0 ? "0" : sb.toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def multiply(self, num1, num2):
+        """
+        :type num1: str
+        :type num2: str
+        :rtype: str
+        """
+
+        if not num1 or not num2:
+            return ""
+
+        ret = [0] * (len(num1) + len(num2))
+        for i, n1 in enumerate(reversed(num1)):
+            for j, n2 in enumerate(reversed(num2)):
+                ret[i + j] += int(n1) * int(n2)
+                ret[i + j + 1] += ret[i + j] / 10
+                ret[i + j] %= 10
+
+        tmp = []
+        for i, num in enumerate(reversed(ret)):
+            if not (len(tmp) == 0 and num == 0):
+                tmp.append(str(num))
+        return "".join(tmp) if tmp else "0"
 ```
