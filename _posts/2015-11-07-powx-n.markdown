@@ -5,10 +5,10 @@ date: 2015-11-07 21:56:57.000000000 -05:00
 tags:
 - Algorithm
 categories:
-- Brain teaser
+- Bit
 author: Jason
 ---
-<p><strong><em>Implement pow(x, n).</em></strong></p>
+**Implement pow(x, n).**
 
 
 ``` java
@@ -57,4 +57,23 @@ public class Solution {
     }
 }
 
+```
+
+``` python
+class Solution(object):
+    def myPow(self, x, n):
+        """
+        :type x: float
+        :type n: int
+        :rtype: float
+        """
+
+        m = abs(n)
+        ret = 1
+        while m > 0:
+            if m & 1 == 1:
+                ret *= x
+            x *= x
+            m /= 2
+        return ret if n > 0 else 1.0 / ret
 ```

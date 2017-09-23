@@ -1,27 +1,24 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+
 class Solution(object):
-    def groupAnagrams(self, strs):
+    def myPow(self, x, n):
         """
-        :type strs: List[str]
-        :rtype: List[List[str]]
+        :type x: float
+        :type n: int
+        :rtype: float
         """
 
-        if not strs:
-            return []
+        if n == 0:
+            return 1
 
-        sorted_strs = [sorted(s) for s in strs]
-        str_dict = {}
-        for i, s in enumerate(sorted_strs):
-            index_list = str_dict.setdefault("".join(s), [])
-            index_list.append(i)
+        while n / 2:
+            x *= x
+            n /= 2
 
-        ret = []
-        for indexes in str_dict.values():
-            ret.append([strs[index] for index in indexes])
-        return ret
+        return x
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+    pprint.pprint(solution.myPow(2, 4))
