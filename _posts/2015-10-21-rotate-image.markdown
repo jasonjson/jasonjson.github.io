@@ -8,7 +8,7 @@ categories:
 - Matrix
 author: Jason
 ---
-<p><strong><em>You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).</em></strong></p>
+**You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).**
 
 
 ``` java
@@ -27,4 +27,29 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+#顺时针旋转,先将第一行最后一行互换,并向中间进行,然后沿对角线互换
+# 逆时针旋转,先将左边与右边互换,然后沿对角线互换
+class Solution(object):
+    def rotate(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+
+        if not matrix:
+            return
+
+        top, bottom = 0, len(matrix) - 1
+        while top < bottom:
+            for i in xrange(len(matrix)):
+                matrix[top][i], matrix[bottom][i] = matrix[bottom][i], matrix[top][i]
+            top += 1
+            bottom -= 1
+
+        for i in xrange(len(matrix)):
+            for j in xrange(i, len(matrix)):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 ```
