@@ -8,7 +8,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index.</em></strong></p>
+**Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index.**
 
 
 ``` java
@@ -20,7 +20,7 @@ public class Solution {
     public boolean canJump(int[] A) {
         // wirte your code here
         if (A == null || A.length == 0) return false;
-        
+
         int n = A.length;
         boolean[] dp = new boolean[n];
         dp[0] = true;
@@ -48,4 +48,25 @@ public class Solution {
         return index == 0;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def canJump(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        if not nums:
+            return False
+
+        dp = [False] * len(nums)
+        dp[0] = True
+        for i in xrange(1, len(nums)):
+            for j in reversed(xrange(i)):
+                if dp[j] and nums[j] >= i - j:
+                    dp[i] = True
+                    break
+
+        return dp[-1]
 ```
