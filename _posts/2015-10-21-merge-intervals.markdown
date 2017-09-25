@@ -6,10 +6,9 @@ tags:
 - Algorithm
 categories:
 - Brain teaser
-- Data Structure
 author: Jason
 ---
-<p><strong><em>Given a collection of intervals, merge all overlapping intervals.</em></strong></p>
+**Given a collection of intervals, merge all overlapping intervals.**
 
 
 ``` java
@@ -22,19 +21,15 @@ class Solution {
         // write your code here
         List<interval> result = new ArrayList<interval>();
         if (intervals == null || intervals.size() == 0) return result;
-        
+
         for (Interval interval : intervals) {
             result = helper(result, interval);
         }
         return result;
     }
-    
+
     public List<interval> helper(List<interval> intervals, Interval newInterval) {
         List<interval> list = new ArrayList<interval>();
-        if (intervals.size() == 0) {
-            list.add(newInterval);
-            return list;
-        }
         for (Interval interval : intervals) {
             if (interval.end < newInterval.start) {
                 list.add(interval);
@@ -49,4 +44,40 @@ class Solution {
         return list;
     }
 }
+```
+
+``` python
+# Definition for an interval.
+# class Interval(object):
+#     def __init__(self, s=0, e=0):
+#         self.start = s
+#         self.end = e
+
+class Solution(object):
+    def merge(self, intervals):
+        """
+        :type intervals: List[Interval]
+        :rtype: List[Interval]
+        """
+
+        if not intervals:
+            return []
+
+        ret = []
+        for interval in intervals:
+            ret = self.helper(ret, interval)
+        return ret
+
+    def helper(self, curr, new_interval):
+        ret = []
+        for interval in curr:
+            if interval.end < new_interval.start:
+                ret.append(interval)
+            elif interval.start > new_interval.end:
+                ret.append(new_interval)
+                new_interval = interval
+            else:
+                new_interval = Interval(min(interval.start, new_interval.start), max(interval.end, new_interval.end))
+        ret.append(new_interval)
+        return ret
 ```
