@@ -8,9 +8,7 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given a string s consists of upper/lower-case alphabets and empty space characters ' ',</p>
-
-return the length of last word in the string.If the last word does not exist, return 0.</em></strong></p>
+**Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.If the last word does not exist, return 0.**
 
 ``` java
 public class Solution {
@@ -18,18 +16,18 @@ public class Solution {
         if (s ==  null || s == " ") return 0;
         String[] arr = s.split(" ");
         int n = arr.length;
-        if (n > 0) { 
+        if (n > 0) {
             return (arr[n-1].length());
         } else {
             return 0;
         }
     }
-    
+
     public static int lengthOfLastWord(String s) {
         if(s == null || s.length() == 0) return 0;
-        
+
         int start = 0, end = s.length() - 1;
-        while (end > 0 && s.charAt(end) == ' ') { 
+        while (end > 0 && s.charAt(end) == ' ') {
             end --;
         }
         for (int i = 0; i <= end; i++) {
@@ -40,4 +38,15 @@ public class Solution {
         return end - start + 1;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        return len(s.strip().split(" ")[-1])
 ```
