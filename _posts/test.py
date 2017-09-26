@@ -1,45 +1,36 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
-class Solution(object):
-    def spiralOrder(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: List[int]
-        """
-        if not matrix:
-            return []
 
-        ret = []
-        top, bottom, left, right = 0, len(matrix) - 1, 0, len(matrix) - 1
-        while True:
+class Solution(object):
+    def generateMatrix(self, n):
+        """
+        :type n: int
+        :rtype: List[List[int]]
+        """
+
+        num = 1
+        ret = [[0] * n for i in xrange(n)]
+        left, right, top, bottom = 0, n - 1, 0, n - 1
+        while num <= n * n and left < right and top < bottom:
             for j in xrange(left, right + 1):
-                import pdb
-                pdb.set_trace()
-                print top, j
-                ret.append(matrix[top][j])
+                ret[top][j] = num
+                num += 1
             top += 1
-            if self.cross(left, right, top, bottom):
-                break
             for i in xrange(top, bottom + 1):
-                ret.append(matrix[i][right])
+                ret[i][right] = num
+                num += 1
             right -= 1
-            if self.cross(left, right, top, bottom):
-                break
             for j in reversed(xrange(left, right + 1)):
-                ret.append(matrix[bottom][j])
+                ret[bottom][j] = num
+                num += 1
             bottom -= 1
-            if self.cross(left, right, top, bottom):
-                break
             for i in reversed(xrange(top, bottom + 1)):
-                ret.append(matrix[i][left])
+                ret[i][left] = num
+                num += 1
             left += 1
-            if self.cross(left, right, top, bottom):
-                break
         return ret
 
-    def cross(self, left, right, top, bottom):
-        return left > right or top > bottom
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.spiralOrder([[3],[2]]))
+    pprint.pprint(solution.generateMatrix(3))
