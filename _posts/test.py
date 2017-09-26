@@ -1,36 +1,58 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+    def __str__(self):
+        return str(self.val)
+    def __repr__(self):
+        curr = self
+        val_list = []
+        while curr:
+            val_list.append(str(curr.val))
+            curr = curr.next
+        return "->".join(val_list)
+
 class Solution(object):
-    def generateMatrix(self, n):
+    def rotateRight(self, head, k):
         """
-        :type n: int
-        :rtype: List[List[int]]
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
         """
 
-        num = 1
-        ret = [[0] * n for i in xrange(n)]
-        left, right, top, bottom = 0, n - 1, 0, n - 1
-        while num <= n * n and left < right and top < bottom:
-            for j in xrange(left, right + 1):
-                ret[top][j] = num
-                num += 1
-            top += 1
-            for i in xrange(top, bottom + 1):
-                ret[i][right] = num
-                num += 1
-            right -= 1
-            for j in reversed(xrange(left, right + 1)):
-                ret[bottom][j] = num
-                num += 1
-            bottom -= 1
-            for i in reversed(xrange(top, bottom + 1)):
-                ret[i][left] = num
-                num += 1
-            left += 1
-        return ret
+        if not head:
+            return
+
+        slow, fast = head, head
+        for i in xrange(k):
+            fast = fast.next
+            if not fast:
+                fast = head
+        while fast.next:
+            fast = fast.next
+            slow = slow.next
+
+        import pdb
+        pdb.set_trace()
+        fast.next = head
+        head = slow.next
+        slow.next = None
+        return head
 
 if __name__ == "__main__":
     solution = Solution()
+    h1 = ListNode(1)
+    h2 = ListNode(2)
+    h3 = ListNode(3)
+    h4 = ListNode(4)
+    h5 = ListNode(5)
+    # h1.next = h2
+    # h2.next = h3
+    # h3.next = h4
+    # h4.next = h5
     import pprint
-    pprint.pprint(solution.generateMatrix(3))
+    pprint.pprint(solution.rotateRight(h1, 0))

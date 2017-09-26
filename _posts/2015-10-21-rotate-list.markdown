@@ -6,10 +6,9 @@ tags:
 - Algorithm
 categories:
 - LinkedList
-- LinkedList
 author: Jason
 ---
-<p><strong><em>Given a list, rotate the list to the right by k places, where k is non-negative.</em></strong></p>
+**Given a list, rotate the list to the right by k places, where k is non-negative.**
 
 
 ``` java
@@ -39,7 +38,7 @@ public class Solution {
         }
         tail.next = head;
         return right;
-    }    
+    }
     public int getSize(ListNode head) {
         int count = 0;
         while (head != null) {
@@ -49,4 +48,38 @@ public class Solution {
         return count;
     }
 }
+```
+
+``` python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def rotateRight(self, head, k):
+        """
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        slow, fast = head, head
+        for i in xrange(k):
+            fast = fast.next
+                if not fast:
+                    fast = head
+
+        while fast.next:
+            fast = fast.next
+            slow = slow.next
+
+        fast.next = head
+        head = slow.next
+        slow.next = None
+        return head
 ```
