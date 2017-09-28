@@ -6,11 +6,9 @@ tags:
 - Algorithm
 categories:
 - String
-- Binary
-- String
 author: Jason
 ---
-<p><strong>Given two binary strings, return their sum (also a binary string).</strong></p>
+**Given two binary strings, return their sum (also a binary string).**
 
 ``` java
     /**
@@ -38,4 +36,28 @@ author: Jason
         return str.reverse().toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def addBinary(self, a, b):
+        """
+        :type a: str
+        :type b: str
+        :rtype: str
+        """
+
+        ret = []
+        carry, i, j = 0, len(a) - 1, len(b) - 1
+        while carry or i >= 0 or j >= 0:
+            if i >= 0:
+                carry += int(a[i])
+            if j >= 0:
+                carry += int(b[j])
+            ret.append(str(carry % 2))
+            carry /= 2
+            i -= 1
+            j -= 1
+
+        return "".join(reversed(ret))
 ```
