@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a set of distinct integers, return all possible subsets.</em></strong></p>
+**Given a set of distinct integers, return all possible subsets.**
 
 
 ``` java
@@ -21,14 +21,14 @@ class Solution {
         // write your code here
         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
         if (S == null || S.size() == 0) return result;
-        
+
         ArrayList<integer> list = new ArrayList<integer>();
         Collections.sort(S);
         //subset problem is different from permutation. {1, 2} is the same with {2, 1} int subset problem, while {1, 2} is different from {2, 1} in permutation problems, so we need to sort here, one a number is used, we don't go back. In permutations, we always need to start from the begining
         dfs(S, 0, list, result);
         return result;
     }
-    
+
     public void dfs(ArrayList<integer> S, int start, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
         result.add(new ArrayList<integer> (list));
         for (int i = start; i < S.size(); i++) {
@@ -38,4 +38,27 @@ class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+
+        if not nums:
+            return []
+
+        ret = []
+        self.helper(0, nums, [], ret)
+        return ret
+
+    def helper(self, start, nums, curr, ret):
+        ret.append(curr[:])
+        for i in xrange(start, len(nums)):
+            curr.append(nums[i])
+            self.helper(i + 1, nums, curr, ret)
+            curr.pop()
 ```
