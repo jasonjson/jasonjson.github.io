@@ -8,7 +8,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given a 2D board and a word, find if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</em></strong></p>
+**Given a 2D board and a word, find if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.**
 
 
 ``` java
@@ -21,7 +21,7 @@ public class Solution {
     public boolean exist(char[][] board, String word) {
         // write your code here
         if (board == null || board.length == 0) return false;
-        
+
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 if (helper(board, i, j, word)) {
@@ -30,7 +30,7 @@ public class Solution {
             }
         }
         return false;
-    }   
+    }
     public boolean helper(char[][] board, int i, int j, String word) {
         if (word.length() == 0) {
             return true;
@@ -48,4 +48,30 @@ public class Solution {
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def exist(self, board, word):
+        """
+        :type board: List[List[str]]
+        :type word: str
+        :rtype: bool
+        """
+
+        for i in xrange(len(board)):
+            for j in xrange(len(board[0])):
+                if self.helper(board, i, j, 0, word):
+                    return True
+        return False
+
+    def helper(self, board, i, j, index, word):
+        if index == len(word):
+            return True
+        if i in xrange(len(board)) and j in xrange(len(board[0])) and board[i][j] == word[index]:
+            board[i][j] = "#"
+            if self.helper(board, i + 1, j, index + 1, word) or self.helper(board, i - 1, j, index + 1, word) or self.helper(board, i, j + 1, index + 1, word) or self.helper(board, i, j - 1, index + 1, word):
+                return True
+            board[i][j] = word[index]
+        return False
 ```
