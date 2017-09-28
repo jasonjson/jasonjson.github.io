@@ -8,13 +8,13 @@ categories:
 - Matrix
 author: Jason
 ---
-<p><strong><em>Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.</em></strong></p>
+**Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.**
 
 
 ``` java
 public class Solution {
     public void setZeroes(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) return;        
+        if (matrix == null || matrix.length == 0) return;
         int row = matrix.length, col = matrix[0].length;
         boolean[] rowZero = new boolean[row];
         boolean[] colZero = new boolean[col];
@@ -25,12 +25,12 @@ public class Solution {
                     colZero[j] = true;
                 }
             }
-        }        
+        }
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (rowZero[i] || colZero[j]) {
                     matrix[i][j] = 0;
-                } 
+                }
             }
         }
     }O(m + n) space
@@ -77,4 +77,66 @@ public class Solution {
         }
     }
 }//constant space
+```
+
+``` python
+class Solution(object):
+    def setZeroes(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+
+        if not matrix:
+            return
+
+        zero_row, zero_col = [], []
+        for i in xrange(len(matrix)):
+            for j in xrange(len(matrix[0])):
+                if matrix[i][j] == 0:
+                    zero_row.append(i)
+                    zero_col.append(j)
+
+        for i in xrange(len(matrix)):
+            for j in xrange(len(matrix[0])):
+                if i in zero_row or j in zero_col:
+                    matrix[i][j] = 0
+```
+
+``` python
+class Solution(object):
+    def setZeroes(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+
+        if not matrix:
+            return
+
+        row, col = len(matrix), len(matrix[0])
+        row_zero, col_zero = False, False
+
+        for j in xrange(col):
+            if matrix[0][j] == 0:
+                row_zero = True
+                break
+        for i in xrange(row):
+            if matrix[i][0] == 0:
+                col_zero = True
+                break
+        for i in xrange(1, row):
+            for j in xrange(1, col):
+                if matrix[i][j] == 0:
+                    matrix[i][0], matrix[0][j] = 0, 0
+        for i in xrange(1, row):
+            for j in xrange(1, col):
+                if matrix[i][0] == 0 or matrix[0][j] == 0:
+                    matrix[i][j] = 0
+        if row_zero:
+            for j in xrange(col):
+                matrix[0][j] = 0
+        if col_zero:
+            for i in xrange(row):
+                matrix[i][0] = 0
 ```
