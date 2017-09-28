@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given an absolute path for a file (Unix-style), simplify it.</em></strong></p>
+**Given an absolute path for a file (Unix-style), simplify it.**
 
 
 ``` java
@@ -39,4 +39,29 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def simplifyPath(self, path):
+        """
+        :type path: str
+        :rtype: str
+        """
+
+        if not path:
+            return ""
+
+        stack = []
+        path_list = path.split("/")
+        for p in path_list:
+            if p == ".":
+                continue
+            elif p == "..":
+                if stack:
+                    stack.pop()
+            elif p: #p can be empty string
+                stack.append(p)
+
+        return "/" + "/".join(stack)
 ```
