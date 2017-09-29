@@ -8,36 +8,8 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.</em></strong></p>
+**Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
 
-
-```python
-class Solution(object):
-    def generateTrees(self, n):
-        """
-        :type n: int
-        :rtype: List[TreeNode]
-        """
-        if n == 0:
-            return []
-        return self.helper(1, n)
-
-    def helper(self, start, end):
-        if (start > end):
-            return [None]
-
-        result = []
-        for x in range(start, end + 1):
-            left_trees = self.helper(start, x - 1)
-            right_trees = self.helper(x + 1, end)
-            for left_tree in left_trees:
-                for right_tree in right_trees:
-                    root = TreeNode(x)
-                    root.left = left_tree
-                    root.right = right_tree
-                    result.append(root)
-        return result
-```
 
 ``` java
 public class Solution {
@@ -49,7 +21,7 @@ public class Solution {
         // write your code here
         return generateTreesUtil(1, n);
     }
-    
+
     public List<treenode> generateTreesUtil(int start, int end) {
         List<treenode> result = new ArrayList<treenode>();
         if (start > end) {
@@ -73,4 +45,39 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def generateTrees(self, n):
+        """
+        :type n: int
+        :rtype: List[TreeNode]
+        """
+
+        if not n:
+            return []
+        return self.helper(1, n)
+
+    def helper(self, start, end):
+        if start > end:
+            return [None]
+        ret = []
+        for i in xrange(start, end + 1):
+            left_tree = self.helper(start, i - 1)
+            right_tree = self.helper(i + 1, end)
+            for r1 in left_tree:
+                for r2 in right_tree:
+                    root = TreeNode(i)
+                    root.left = r1
+                    root.right = r2
+                    ret.append(root)
+        return ret
 ```
