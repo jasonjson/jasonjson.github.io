@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</em></strong></p>
+**Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).**
 
 
 ``` java
@@ -17,7 +17,7 @@ public class Solution {
         if (root == null) return true;
         return helper(root, root);
     }
-    
+
     public boolean helper(TreeNode a, TreeNode b) {
         if (a == null && b == null) return true;
         if (a == null || b == null) return false;
@@ -47,4 +47,21 @@ public class Solution {
         return q1.size() == q2.size();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def isSymmetric(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        return self.helper(root, root)
+
+    def helper(self, left, right):
+        if left is None and right is None:
+            return True
+        if not left or not right:
+            return False
+        return left.val == right.val and self.helper(left.left, right.right) and self.helper(left.right, right.left)
 ```
