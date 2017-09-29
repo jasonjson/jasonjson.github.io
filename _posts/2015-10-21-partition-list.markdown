@@ -16,7 +16,7 @@ public class Solution {
     /**
      * @param head: The first node of linked list.
      * @param x: an integer
-     * @return: a ListNode 
+     * @return: a ListNode
      */
     public ListNode partition(ListNode head, int x) {
         // write your code here
@@ -34,8 +34,8 @@ public class Solution {
                 right.next = curr;
                 right = right.next;
             }
-            curr = curr.next; 
-        }     
+            curr = curr.next;
+        }
         right.next = null;
         //bug: forget to clear the right.next, which causes an infinity loop
         //in the end, right.next = curr, and curr has its own next node, you need to clear this node.
@@ -43,4 +43,32 @@ public class Solution {
         return leftDummy.next;
     }
 }
+```
+``` python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def partition(self, head, x):
+        """
+        :type head: ListNode
+        :type x: int
+        :rtype: ListNode
+        """
+        left_dummy, right_dummy = ListNode(0), ListNode(0)
+        left, right = left_dummy,right_dummy
+        while head:
+            if head.val < x:
+                left.next = head
+                left = left.next
+            else:
+                right.next = head
+                right = right.next
+            head = head.next
+        right.next = None
+        left.next = right_dummy.next
+        return left_dummy.next
 ```
