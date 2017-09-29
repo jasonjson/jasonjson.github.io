@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.</em></strong></p>
+**Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.**
 
 
 ``` java
@@ -38,4 +38,34 @@ public class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        dummy = ListNode(0)
+        dummy.next = head
+        curr = dummy
+        while curr.next and curr.next.next:
+            if curr.next.val == curr.next.next.val:
+                repeated_value = curr.next.val
+                while curr.next and curr.next.val == repeated_value:
+                    curr.next = curr.next.next
+            else:
+                curr = curr.next
+        return dummy.next
 ```

@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a sorted linked list, delete all duplicates such that each element appear only once.</em></strong></p>
+**Given a sorted linked list, delete all duplicates such that each element appear only once.**
 
 
 ``` java
@@ -29,7 +29,7 @@ public class Solution {
         }
         return head;
     }
-    
+
     public ListNode deleteDuplicates(ListNode head) {
         ListNode curr = head;
         while (curr != null && curr.next != null) {
@@ -42,4 +42,46 @@ public class Solution {
         return head;
     }
 }
+```
+
+``` python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        prev = head
+        while prev:
+            curr = prev.next
+            while curr and curr.val == prev.val:
+                curr = curr.next
+            prev.next = curr
+            prev = curr
+        return head
+
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        curr = head
+        while curr and curr.next:
+            if curr.next.val == curr.val:
+                curr.next = curr.next.next
+            else:
+                curr = curr.next
+        return head
 ```
