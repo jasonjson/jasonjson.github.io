@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Reverse a linked list from position m to n.</em></strong></p>
+**Reverse a linked list from position m to n.**
 
 
 ``` java
@@ -33,4 +33,39 @@ public class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def reverseBetween(self, head, m, n):
+        """
+        :type head: ListNode
+        :type m: int
+        :type n: int
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        index = 1
+        dummy, dummy.next = ListNode(0), head
+        prev = dummy
+        while index < m:
+            index += 1
+            prev = prev.next
+        last, curr = prev.next, prev.next.next
+        while index < n:
+            index += 1
+            last.next = curr.next
+            curr.next = prev.next
+            prev.next = curr
+            curr = last.next
+        return dummy.next
 ```
