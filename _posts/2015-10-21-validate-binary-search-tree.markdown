@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></strong></p>
+**Given a binary tree, determine if it is a valid binary search tree (BST).**
 
 
 ``` java
@@ -26,7 +26,7 @@ public class Solution {
         }
         return true;
     }
-    
+
     public void inorderTraversal(ArrayList<integer> array, TreeNode root){
         if(root == null) return;
         inorderTraversal(array, root.left);
@@ -36,18 +36,33 @@ public class Solution {
 }
 ```
 
-``` java
-public class Solution {
-    public static Integer lastPrinted;
-    public boolean isValidBST(TreeNode root) {
-        // write your code here
-        if(root == null) return true;
-        if(!isValidBST(root.left)) return false;
-        if(lastPrinted != null && root.val <= lastPrinted) return false;
-        lastPrinted = root.val;
-        if(!isValidBST(root.right)) return false;
-        return true;
-    }
-    //Solution 3: create a min and max value
-}
+``` python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+
+        stack = []
+        prev = None
+        while root or stack:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                #prev might be 0, so cannot use if prev here
+                if prev is not None and root.val <= prev:
+                    return False
+                prev = root.val
+                root = root.right
+        return True
 ```

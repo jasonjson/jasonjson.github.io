@@ -1,33 +1,37 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution(object):
-    def restoreIpAddresses(self, s):
+    def isValidBST(self, root):
         """
-        :type s: str
-        :rtype: List[str]
+        :type root: TreeNode
+        :rtype: bool
         """
 
-        if not s:
-            return []
-
-        ret = []
-        self.helper(step=0, string=s, curr=[], ret=ret)
-        return ret
-
-    def helper(self, step, string, curr, ret):
-        if step == 4:
-            if not string:
-                ret.append(".".join(curr))
-                return
-        for i in xrange(1, 4):
-            if i > len(string):
-                return
-            val = int(string[:i])
-            if val <= 255 and str(val) == string[:i]:
-                self.helper(step + 1, string[i:], curr + [string[:i]], ret)
+        stack = []
+        prev = None
+        while root or stack:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                if prev and root.val <= prev:
+                    return False
+                prev = root.val
+                root = root.right
+        return True
 
 if __name__ == "__main__":
     solution = Solution()
+    root = TreeNode(0)
+    root.left = None
+    root.right = TreeNode(-1)
     import pprint
-    pprint.pprint(solution.restoreIpAddresses("010010"))
+    pprint.pprint(solution.isValidBST(root))
