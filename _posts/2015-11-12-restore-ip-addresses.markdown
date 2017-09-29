@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</em></strong></p>
+**Given a string containing only digits, restore it by returning all possible valid IP address combinations.**
 
 ```python
 class Solution(object):
@@ -44,11 +44,11 @@ public class Solution {
     public List<string> restoreIpAddresses(String s) {
         List<string> result = new ArrayList<string>();
         if (s == null || s.length() == 0) return result;
-        
+
         helper(s, 0, "", result);
         return result;
     }
-    
+
     public void helper(String s, int step, String path, List<string> result) {
         if (step == 4) {//这个负责控制多少段字符
             if (s.length() == 0) {
@@ -66,4 +66,32 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def restoreIpAddresses(self, s):
+        """
+        :type s: str
+        :rtype: List[str]
+        """
+
+        if not s:
+            return []
+
+        ret = []
+        self.helper(0, s, [], ret)
+        return ret
+
+    def helper(self, step, s, curr, ret):
+        if step == 4:
+            if not s:
+                ret.append(".".join(curr))
+            return
+        for i in xrange(1, 4):
+            if i > len(s):
+                return
+            val = int(s[:i])
+            if val <= 255 and str(val) == s[:i]:
+                self.helper(step + 1, s[i:], curr + [s[:i]], ret)
 ```
