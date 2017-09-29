@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Inorder traversal a binary tree</em></strong></p>
+**Inorder traversal a binary tree**
 
 
 ``` java
@@ -32,7 +32,7 @@ public class Solution {
     public ArrayList<integer> inorderTraversal(TreeNode root) {
         ArrayList<integer> result = new ArrayList<integer>();
         Stack<treenode> stack = new Stack<treenode>();
-        
+
         while (root != null || !stack.isEmpty()) {
             if (root != null) {
                 stack.push(root);
@@ -47,4 +47,32 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+
+        ret, stack = [], []
+
+        while root or stack:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                ret.append(root.val)
+                root = root.right
+        return ret
 ```
