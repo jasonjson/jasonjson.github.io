@@ -5,17 +5,19 @@ date: 2015-11-12 12:13:00.000000000 -05:00
 tags:
 - Algorithm
 categories:
-- Brain teaser
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
+**A message containing letters from A-Z is being encoded to numbers using the following mapping:**
 
-'A' -> 1</p>
-'B' -> 2</p>
-...</p>
-'Z' -> 26</p>
-Given an encoded message containing digits, determine the total number of ways to decode it.</em></strong></p>
+* 'A' -> 1
+* 'B' -> 2
+* ...
+* 'Z' -> 26
+
+**Given an encoded message containing digits, determine the total number of ways to decode it.**
+
+
 ``` java
 public class Solution {
     public int numDecodings(String s) {
@@ -35,4 +37,26 @@ public class Solution {
         return count[s.length()];
     }
 }
+```
+
+``` python
+class Solution(object):
+    def numDecodings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        #watch out edge cases
+        if not s or s[0] == "0":
+            return 0
+
+        dp = [0] * (len(s) + 1)
+        dp[0], dp[1] = 1, 1
+        for i in xrange(2, len(s) + 1):
+            if int(s[i - 1]) != 0:
+                dp[i] += dp[i - 1]
+            if int(s[i - 2 : i]) <= 26 and int(s[i - 2 : i]) >= 10:
+                dp[i] += dp[i - 2]
+        return dp[-1]
 ```
