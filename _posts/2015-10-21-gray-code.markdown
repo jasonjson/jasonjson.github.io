@@ -8,7 +8,7 @@ categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, find the sequence of gray code. A gray code sequence must begin with 0 and with cover all 2n integers.</em></strong></p>
+**The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, find the sequence of gray code. A gray code sequence must begin with 0 and with cover all 2n integers.**
 
 
 ``` java
@@ -17,18 +17,34 @@ public class Solution {
      * @param n a number
      * @return Gray code
      */
-    //http://algorithm.yuanbin.me/zh-cn/problem_misc/gray_code.html
     public ArrayList<integer> grayCode(int n) {
         ArrayList<integer> result = new ArrayList<integer>();
-        
+
         result.add(0);
         for (int i = 0; i < n; i++) {
             int mask = 1 << i; // i = 3; 1 << 2
             for (int j = result.size() - 1; j >= 0; j--) {
                 result.add(mask | result.get(j));
-            }//DP is much better than recursive function         
+            }//DP is much better than recursive function
         }
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def grayCode(self, n):
+        """
+        :type n: int
+        :rtype: List[int]
+        """
+
+        #edge case: return [0] if n == 0
+        ret = [0]
+        for i in xrange(n):
+            mask = 1 << i
+            for j in reversed(xrange(len(ret))):
+                ret.append(ret[j] | mask)
+        return ret
 ```

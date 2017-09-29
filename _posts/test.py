@@ -1,34 +1,25 @@
 #!/usr/local/bin/python3
 
 # -*- coding: utf-8 -*-
-
-import copy
 class Solution(object):
-    def combine(self, n, k):
+    def grayCode(self, n):
         """
         :type n: int
-        :type k: int
-        :rtype: List[List[int]]
+        :rtype: List[int]
         """
 
-
-        if not k or not n:
+        if not n:
             return []
 
-        ret = []
-        self.helper(1, n, k, [], ret)
+        ret = [0]
+        for i in xrange(n):
+            mask = 1 << i
+            print ret
+            for j in reversed(xrange(len(ret))):
+                ret.append(ret[j] | mask)
         return ret
-
-    def helper(self, start, n, k, curr, ret):
-        if len(curr) == k:
-            ret.append(copy.deepcopy(curr))
-            return
-        for i in xrange(start, n + 1):
-            curr.append(i)
-            self.helper(i + 1, n, k, curr, ret)
-            curr.pop()
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.combine(20, 16))
+    pprint.pprint(solution.grayCode(0))
