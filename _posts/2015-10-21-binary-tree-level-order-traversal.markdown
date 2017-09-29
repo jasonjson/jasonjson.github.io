@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Binary tree level order traversal</em></strong></p>
+**Binary tree level order traversal.**
 
 
 ``` java
@@ -20,7 +20,7 @@ public class Solution {
      public ArrayList<ArrayList<integer>> levelOrder(TreeNode root){
          ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
          if (root == null) return result;
-         
+
          Queue<treenode> q = new LinkedList<treenode>();
          q.add(root);
          while (!q.isEmpty()) {
@@ -38,4 +38,28 @@ public class Solution {
          return result;
      }
 }
+```
+
+``` python
+class Solution(object):
+    def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+
+        prev = [root]
+        ret = []
+        while prev:
+            ret.append([n.val for n in prev])
+            curr = []
+            for node in prev:
+                if node.left:
+                    curr.append(node.left)
+                if node.right:
+                    curr.append(node.right)
+            prev = curr
+        return ret
 ```
