@@ -5,7 +5,7 @@ date: 2017-04-26
 tags:
 - Algorithm
 categories:
-- Brain Teaser
+- Brain teaser
 author: Jason
 ---
 **The Hamming distance between two integers is the number of positions at which the corresponding bits are different. Given two integers x and y, calculate the Hamming distance.**
