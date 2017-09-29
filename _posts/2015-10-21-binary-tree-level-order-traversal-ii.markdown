@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).</em></strong></p>
+**Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).**
 
 
 ``` java
@@ -21,7 +21,7 @@ author: Jason
         // write your code here
         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
         if (root == null) return result;
-        
+
         Queue<treenode> q = new LinkedList<treenode>();
         q.add(root);
         while (!q.isEmpty()) {
@@ -39,4 +39,29 @@ author: Jason
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def levelOrderBottom(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+
+        if not root:
+            return []
+
+        prev = [root]
+        ret = []
+        while prev:
+            ret.append([n.val for n in prev])
+            curr = []
+            for node in prev:
+                if node.left:
+                    curr.append(node.left)
+                if node.right:
+                    curr.append(node.right)
+            prev = curr
+        return list(reversed(ret))
 ```
