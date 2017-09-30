@@ -41,19 +41,18 @@ class Solution(object):
         :type numRows: int
         :rtype: List[List[int]]
         """
+
         if not numRows:
             return []
 
         ret = []
         for i in xrange(1, numRows + 1):
-            line = []
-            for j in xrange(i):
-                if j == 0:
-                    line.append(1)
-                elif j == i - 1:
-                    line.append(1)
+            curr = []
+            for j in xrange(0, i): # the length is i
+                if j == 0 or j == i - 1:
+                    curr.append(1)
                 else:
-                    line.append(ret[-1][j] + ret[-1][j - 1])
-            ret.append(line)
+                    curr.append(ret[-1][j] + ret[-1][j - 1])
+            ret.append(curr)
         return ret
 ```

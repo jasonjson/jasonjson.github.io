@@ -8,27 +8,30 @@ class TreeNode(object):
     def __repr__(self):
         return str(self.val)
 
-class Solution:
-    # @param root, a tree link node
-    # @return nothing
-    def connect(self, root):
-        if not root or not root.left or root.right:
-            return
+class Solution(object):
+    def getRow(self, rowIndex):
+        """
+        :type rowIndex: int
+        :rtype: List[int]
+        """
 
-        root.left.next = root.right
-        if root.next:
-            root.right.next = root.next.left
-        import pdb
-        pdb.set_trace()
-        self.connect(root.left)
-        self.connect(root.right)
+        if not rowIndex:
+            return []
+
+        ret = [0] * (rowIndex + 1)
+        for i in xrange(1, rowIndex + 2):
+            # import pdb
+            # pdb.set_trace()
+            for j in reversed(xrange(i)):
+                if j == 0 or j == i - 1:
+                    ret[j] = 1
+                else:
+                    ret[j] = ret[j] + ret[j - 1]
+        return ret
 
 if __name__ == "__main__":
     solution = Solution()
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right= TreeNode(3)
     import pprint
-    pprint.pprint(solution.connect(root))
+    pprint.pprint(solution.getRow(3))
 
 

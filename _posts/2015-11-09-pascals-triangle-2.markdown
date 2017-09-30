@@ -8,7 +8,7 @@ categories:
 - Brain teaser
 author: Jason
 ---
-<p><strong><em>Given an index k, return the kth row of the Pascal's triangle.</em></strong></p>
+**Given an index k, return the kth row of the Pascal's triangle.**
 
 
 ``` java
@@ -26,4 +26,24 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def getRow(self, rowIndex):
+        """
+        :type rowIndex: int
+        :rtype: List[int]
+        """
+
+
+        ret = [0] * (rowIndex + 1)
+        for i in xrange(1, rowIndex + 2):
+            for j in reversed(xrange(i)):
+                if j == 0 or j == i - 1:
+                    ret[j] = 1
+                else:
+                #must do this reversly, so ret[j - 1] is alterted later
+                    ret[j] = ret[j] + ret[j - 1]
+        return ret
 ```
