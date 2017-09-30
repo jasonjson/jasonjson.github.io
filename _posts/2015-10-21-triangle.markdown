@@ -8,7 +8,7 @@ categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</em></strong></p>
+**Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.**
 
 
 ``` java
@@ -20,46 +20,39 @@ public class Solution {
     public int minimumTotal(ArrayList<ArrayList<integer>> triangle) {
         // write your code here
         if (triangle == null || triangle.size() == 0) return 0;
-        
+
         int row = triangle.size();
         int[] sum = new int[triangle.get(row-1).size()];
         //from bottom to top
         for (int i = row - 1; i >= 0; i--) {
            int col = triangle.get(i).size();
            for (int j = 0; j < col; j++) {
-               if (i == row - 1) {//last row, just copy elements 
+               if (i == row - 1) {//last row, just copy elements
                    sum[j] = triangle.get(i).get(j);
-               } else { 
+               } else {
                    sum[j] = Math.min(sum[j], sum[j+1]) + triangle.get(i).get(j);
                }
            }
-        } 
+        }
         return sum[0];
     }
 }
 ```
-``` java
-public class Solution {
-    public static int minimumTotal(ArrayList<ArrayList<integer>> triangle) {
-        if (triangle == null || triangle.size() == 0) return 0;
 
-        for (int i = 1; i < triangle.size(); i++) {
-            ArrayList<integer> list = triangle.get(i);
-            for (int j = 0; j < list.size(); j++) {
-                if (j == 0) {
-                    list.set(j, list.get(j) + triangle.get(i - 1).get(j));
-                } else if (j == list.size() - 1) {
-                    list.set(j, list.get(j) + triangle.get(i - 1).get(j-1));
-                } else {
-                    list.set(j, list.get(j) + Math.min(triangle.get(i - 1).get(j-1), triangle.get(i - 1).get(j)));
-                }
-            }
-        }
-        int min = Integer.MAX_VALUE;
-        for (int n : triangle.get(triangle.size()-1)) {
-            min = Math.min(min, n);
-        }
-        return min;
-    }
-}
+``` python
+class Solution(object):
+    def minimumTotal(self, triangle):
+        """
+        :type triangle: List[List[int]]
+        :rtype: int
+        """
+
+        if not triangle:
+            return -1
+
+        dp = triangle[-1]
+        for row in reversed(triangle[:-1]):
+            for j, num in enumerate(row):
+                dp[j] = min(dp[j], dp[j + 1]) + num
+        return dp[0]
 ```
