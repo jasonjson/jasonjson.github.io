@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Construct a binary tree from inorder and postorder traversal</em></strong></p>
+**Construct a binary tree from inorder and postorder traversal.**
 
 
 ``` java
@@ -39,11 +39,35 @@ public class Solution {
         if (in_start > in_end || post_start > post_end) return null;
         int root_val = postorder[post_end];
         TreeNode root = new TreeNode(root_val);
-        int index = findIndex(inorder, in_start, in_end, root_val); 
+        int index = findIndex(inorder, in_start, in_end, root_val);
         // inorder not nums
         root.left = buildTreeUtil(inorder, in_start, index - 1, postorder, post_start, post_start + index - in_start - 1);
         root.right = buildTreeUtil(inorder, index + 1, in_end, postorder, post_start + index - in_start, post_end - 1);
         return root;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def buildTree(self, inorder, postorder):
+        """
+        :type inorder: List[int]
+        :type postorder: List[int]
+        :rtype: TreeNode
+        """
+
+        if not inorder or not postorder:
+            return
+
+        return self.helper(postorder, 0, len(postorder) - 1, inorder, 0, len(inorder) - 1)
+
+    def helper(self, postorder, post_start, post_end, inorder, in_start, in_end):
+        if post_start > post_end or in_start > in_end:
+            return
+        root = TreeNode(postorder[post_end])
+        index = inorder.index(root.val)
+        root.left = self.helper(postorder, post_start, index - in_start + post_start - 1, inorder, in_start, index - 1)
+        root.right = self.helper(postorder, index - in_start + post_start, post_end - 1, inorder, index + 1, in_end)
+        return root
 ```

@@ -1,31 +1,30 @@
 #!/usr/bin/python
-from listnode import ListNode
+
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution(object):
-    def sortedListToBST(self, head):
+        def buildTree(self, inorder, postorder):
         """
-        :type head: ListNode
+        :type inorder: List[int]
+        :type postorder: List[int]
         :rtype: TreeNode
         """
 
-        if not head:
+
+        self.helper(postorder, 0, len(postorder) - 1, inorder, 0, len(inorder) - 1)
+    def helper(self, postorder, post_start, post_end, inorder, in_start, in_end):
+        if post_start > post_end or in_start > in_end:
             return
-
-        prev, right, fast = None, head, head
-        while fast and fast.next:
-            prev = right
-            right = right.next
-            fast = fast.next.next
-
-        root = ListNode(right.val)
-        if prev:
-            prev.next = None
-            root.left = self.sortedListToBST(head)
-            root.right = self.sortedListToBST(right.next)
-            print root, root.left, root.right
+        root = TreeNode(postorder[post_end])
+        index = inorder.index(root.val)
+        root.left = self.helper(postorder, post_start, index - in_start + post_start - 1, inorder, in_start, index - 1)
+        root.right = self.helper(postorder, index - in_start + post_start, post_end - 1, inorder, index + 1, in_end)
         return root
-
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.sortedListToBST(ListNode([1,3])))
+    pprint.pprint(solution.buildTree([-1],[-1]).val)
