@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</em></strong></p>
+**Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.**
 
 
 ``` java
@@ -16,7 +16,7 @@ public class Solution {
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) {
             return false;
-        } 
+        }
         if (root.left == null && root.right == null) {
             return root.val == sum;
         } else {
@@ -24,4 +24,25 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def hasPathSum(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: bool
+        """
+
+        if not root:
+            return False
+
+        if not root.left and not root.right and root.val == sum:
+            return True
+
+        if self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(root.right, sum - root.val):
+            return True
+
+        return False
 ```

@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.</em></strong></p>
+**Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.**
 
 
 ``` java
@@ -19,7 +19,7 @@ public class Solution {
         helper(root, new ArrayList<integer>(), sum, result);
         return result;
     }
-    
+
     public void helper(TreeNode root, List<integer> path, int remain, List<List<integer>> result) {
         if (root == null) return;
         path.add(root.val);
@@ -31,4 +31,30 @@ public class Solution {
         path.remove(path.size() - 1);
     }
 }
+```
+
+``` python
+class Solution(object):
+    def pathSum(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: List[List[int]]
+        """
+
+        if not root:
+            return []
+
+        ret = []
+        self.helper(root, sum, [], ret)
+        return ret
+
+    def helper(self, root, sum, curr, ret):
+        if not root:
+            return
+        if not root.left and not root.right and root.val == sum:
+            ret.append(curr + [root.val])
+            return
+        self.helper(root.left, sum - root.val, curr + [root.val], ret)
+        self.helper(root.right, sum - root.val, curr + [root.val], ret)
 ```
