@@ -5,26 +5,32 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
+    def __repr__(self):
+        return str(self.val)
 
 class Solution(object):
-        def buildTree(self, inorder, postorder):
+    def flatten(self, root):
         """
-        :type inorder: List[int]
-        :type postorder: List[int]
-        :rtype: TreeNode
+        :type root: TreeNode
+        :rtype: void Do not return anything, modify root in-place instead.
         """
-
-
-        self.helper(postorder, 0, len(postorder) - 1, inorder, 0, len(inorder) - 1)
-    def helper(self, postorder, post_start, post_end, inorder, in_start, in_end):
-        if post_start > post_end or in_start > in_end:
+        if not root:
             return
-        root = TreeNode(postorder[post_end])
-        index = inorder.index(root.val)
-        root.left = self.helper(postorder, post_start, index - in_start + post_start - 1, inorder, in_start, index - 1)
-        root.right = self.helper(postorder, index - in_start + post_start, post_end - 1, inorder, index + 1, in_end)
-        return root
+
+        right_tree = self.flatten(root.right)
+        left_tree = self.flatten(root.left)
+        root.right = left_tree
+        curr = root
+        while curr.right:
+            curr = curr.right
+        curr.right = right_tree
+
 if __name__ == "__main__":
     solution = Solution()
+    root = TreeNode(1)
+    root.left = TreeNode(2)
     import pprint
-    pprint.pprint(solution.buildTree([-1],[-1]).val)
+    pprint.pprint(solution.flatten(root))
+    print root, root.left, root.right
+
+

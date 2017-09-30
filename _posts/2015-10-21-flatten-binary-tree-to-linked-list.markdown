@@ -9,14 +9,14 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Flatten a binary tree to a fake "linked list" in pre-order traversal. Here we use the right pointer in TreeNode as the next pointer in ListNode.</em></strong></p>
+**Flatten a binary tree to a fake "linked list" in pre-order traversal. Here we use the right pointer in TreeNode as the next pointer in ListNode.**
 
 
 ``` java
 public class Solution {
     public void flatten(TreeNode root) {
         if (root == null) return;
-        
+
         Stack<treenode> stack = new Stack<treenode>();
         stack.push(root);
         TreeNode prev = null;
@@ -62,4 +62,28 @@ public class Solution {
         return root;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def flatten(self, root):
+        """
+        :type root: TreeNode
+        :rtype: void Do not return anything, modify root in-place instead.
+        """
+        if not root:
+            return
+
+        stack = [root]
+        prev = None
+        while stack:
+            curr = stack.pop()
+            if prev:
+                prev.right = curr
+                prev.left = None
+            prev = curr
+            if curr.right:
+                stack.append(curr.right)
+            if curr.left:
+                stack.append(curr.left)
 ```
