@@ -15,7 +15,7 @@ What if the given tree could be any binary tree? Would your previous solution st
 public class Solution {
     public void connect(TreeLinkNode root) {
         if (root == null) return;
-        
+
         TreeLinkNode curr = root;
         while (curr != null) {
             if (curr.left != null) {
@@ -29,7 +29,7 @@ public class Solution {
         connect(root.left);
         connect(root.right);
     }
-    
+
     public TreeLinkNode getNext(TreeLinkNode root) {
         while (root != null) {
             if (root.left != null) return root.left;
@@ -39,4 +39,23 @@ public class Solution {
         return null;
     }
 }
+```
+
+``` python
+class Solution:
+    # @param root, a tree link node
+    # @return nothing
+    def connect(self, node):
+        curr = dummy = TreeLinkNode(0)
+        while node:
+            curr.next = node.left
+            if curr.next:
+                curr = curr.next
+            curr.next = node.right
+            if curr.next:
+                curr = curr.next
+            node = node.next
+            if not node:
+                curr = dummy #dummy储存了连好的本层所有nodes
+                node = dummy.next
 ```

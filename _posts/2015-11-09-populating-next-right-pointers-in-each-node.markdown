@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></strong></p>
+**Given a binary tree, populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.**
 
 
 ``` java
@@ -23,26 +23,17 @@ public class Solution {
 }
 ```
 
-``` java
-public class Solution {
-    public void connect(TreeLinkNode root) {
-        if (root == null) return;
-        
-        Queue<treelinknode> q = new LinkedList<treelinknode>();
-        q.offer(root);
-        while (!q.isEmpty()) {
-            int size = q.size();
-            TreeLinkNode prev = null;
-            for (int i = 0; i < size; i++) {
-                TreeLinkNode curr = q.poll();
-                if (prev != null) {
-                    prev.next = curr;
-                }
-                prev = curr;
-                if (curr.left != null) q.offer(curr.left);
-                if (curr.right != null) q.offer(curr.right);
-            }
-        }
-    }
-}
+``` python
+class Solution:
+    # @param root, a tree link node
+    # @return nothing
+    def connect(self, root):
+        if not root or not root.left or root.right:
+            return
+
+        root.left.next = root.right
+        if root.next:
+            root.right.next = root.next.left
+        connect(root.left)
+        connect(root.right)
 ```
