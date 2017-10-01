@@ -40,7 +40,7 @@ public class Solution {
 }
 ```
 
-``` python:
+``` python
 class Solution(object):
     def searchMatrix(self, matrix, target):
         """
