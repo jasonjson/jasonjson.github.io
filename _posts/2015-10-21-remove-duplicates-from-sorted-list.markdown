@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove Duplicates from Sorted List
+title: 83 - Remove Duplicates from Sorted List
 date: 2015-10-21 02:42:57.000000000 -04:00
 tags:
 - Leetcode

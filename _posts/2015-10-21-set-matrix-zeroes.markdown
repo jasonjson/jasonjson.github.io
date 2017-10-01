@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set Matrix Zeroes
+title: 73 - Set Matrix Zeroes
 date: 2015-10-21 14:36:15.000000000 -04:00
 tags:
 - Leetcode

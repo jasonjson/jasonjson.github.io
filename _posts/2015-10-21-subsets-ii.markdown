@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Subsets II
+title: 90 - Subsets II
 date: 2015-10-21 03:37:09.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a list of numbers that may has duplicate numbers, return all possible subsets</em></strong></p>
+**Given a list of numbers that may has duplicate numbers, return all possible subsets.**
 
 
 ``` java
@@ -21,13 +21,13 @@ class Solution {
         // write your code here
         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
         if (S == null || S.size() == 0) return result;
-        
+
         Collections.sort(S);//remember to sort!!
         ArrayList<integer> list = new ArrayList<integer>();
         dfs(S, 0, list, result);
         return result;
     }
-    
+
     public void dfs(ArrayList<integer> S, int start, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
         result.add(new ArrayList<integer>(list));
         for (int i = start; i < S.size(); i++) {
@@ -42,4 +42,30 @@ class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+
+        if not nums:
+            return []
+
+        ret = []
+        nums.sort()
+        self.helper(nums, 0, [], ret)
+        return ret
+
+    def helper(self, nums, start, curr, ret):
+        ret.append(curr[:])
+        for i in xrange(start, len(nums)):
+            if i > start and nums[i] == nums[i - 1]:
+                continue
+            curr.append(nums[i])
+            self.helper(nums, i + 1, curr, ret)
+            curr.pop()
 ```

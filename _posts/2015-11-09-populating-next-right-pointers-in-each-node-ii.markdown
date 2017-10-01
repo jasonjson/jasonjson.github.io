@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populating Next Right Pointers in Each Node II
+title: 117 - Populating Next Right Pointers in Each Node II
 date: 2015-11-09 18:52:59.000000000 -05:00
 tags:
 - Leetcode
@@ -8,9 +8,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Follow up for problem "Populating Next Right Pointers in Each Node".</p>
+**Follow up for problem "Populating Next Right Pointers in Each Node". What if the given tree could be any binary tree? Would your previous solution still work?**
 
-What if the given tree could be any binary tree? Would your previous solution still work?</em></strong></p>
+
 ``` java
 public class Solution {
     public void connect(TreeLinkNode root) {

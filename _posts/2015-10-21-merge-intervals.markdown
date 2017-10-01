@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Merge Intervals
+title: 56 - Merge Intervals
 date: 2015-10-21 13:03:49.000000000 -04:00
 tags:
 - Leetcode

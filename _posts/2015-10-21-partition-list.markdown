@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Partition List
+title: 86 - Partition List
 date: 2015-10-21 02:44:06.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x. You should preserve the original relative order of the nodes in each of the two partitions.</em></strong></p>
+**Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x. You should preserve the original relative order of the nodes in each of the two partitions.**
 
 
 ``` java
@@ -45,12 +45,6 @@ public class Solution {
 }
 ```
 ``` python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
     def partition(self, head, x):
         """

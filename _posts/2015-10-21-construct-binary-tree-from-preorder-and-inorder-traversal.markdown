@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Construct Binary Tree from Preorder and Inorder Traversal
+title: 105 - Construct Binary Tree from Preorder and Inorder Traversal
 date: 2015-10-21 02:55:10.000000000 -04:00
 tags:
 - Leetcode

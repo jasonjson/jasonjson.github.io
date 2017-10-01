@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Minimum Depth of Binary Tree
+title: 111 - Minimum Depth of Binary Tree
 date: 2015-10-21 03:01:12.000000000 -04:00
 tags:
 - Leetcode

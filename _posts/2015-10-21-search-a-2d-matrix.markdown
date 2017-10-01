@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Search a 2D Matrix
+title: 74 - Search a 2D Matrix
 date: 2015-10-21 02:28:30.000000000 -04:00
 tags:
 - Leetcode

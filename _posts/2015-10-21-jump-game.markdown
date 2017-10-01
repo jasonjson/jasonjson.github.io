@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jump Game
+title: 55 - Jump Game
 date: 2015-10-21 12:27:30.000000000 -04:00
 tags:
 - Leetcode

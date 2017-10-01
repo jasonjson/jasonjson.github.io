@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Tree Inorder Traversal
+title: 94 - Binary Tree Inorder Traversal
 date: 2015-10-21 02:50:09.000000000 -04:00
 tags:
 - Leetcode
@@ -50,13 +50,6 @@ public class Solution {
 ```
 
 ``` python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution(object):
     def inorderTraversal(self, root):
         """

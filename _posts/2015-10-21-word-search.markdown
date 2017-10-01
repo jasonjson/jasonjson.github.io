@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Word Search
+title: 79 - Word Search
 date: 2015-10-21 14:39:43.000000000 -04:00
 tags:
 - Leetcode

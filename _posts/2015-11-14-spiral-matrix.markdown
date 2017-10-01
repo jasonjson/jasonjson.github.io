@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spiral Matrix
+title: 54 - Spiral Matrix
 date: 2015-11-14 19:20:05.000000000 -05:00
 tags:
 - Leetcode

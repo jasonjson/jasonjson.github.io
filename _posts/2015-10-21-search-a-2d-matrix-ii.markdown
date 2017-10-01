@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Search a 2D Matrix II
+title: 240 - Search a 2D Matrix II
 date: 2015-10-21 02:31:22.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Matrix
-- Sorting
+- Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it. This matrix has the following properties:</p>
+**Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it. This matrix has the following properties:**
+* Integers in each row are sorted from left to right.
+* Integers in each column are sorted from up to bottom.
+* No duplicate integers in each row or column.
 
-Integers in each row are sorted from left to right.</p>
-Integers in each column are sorted from up to bottom.</p>
-No duplicate integers in each row or column.</em></strong></p>
+
 ``` java
 public class Solution {
     /**

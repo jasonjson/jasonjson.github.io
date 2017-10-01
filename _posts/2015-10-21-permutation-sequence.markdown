@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Permutation Sequence
+title: 60 - Permutation Sequence
 date: 2015-10-21 03:43:20.000000000 -04:00
 tags:
 - Leetcode
@@ -8,9 +8,9 @@ categories:
 - Permutation
 author: Jason
 ---
-<p><strong><em>Given n and k, return the k-th permutation sequence.</em></strong></p>
+**Given n and k, return the k-th permutation sequence.**
+[Reference](http://blog.sina.com.cn/s/blog_eb52001d0102v1ss.html)
 
-<a href="http://blog.sina.com.cn/s/blog_eb52001d0102v1ss.html">Reference</a></p>
 
 ``` java
 //1. 以某一数字开头的排列有(n-1)!个. 例如 123, 132, 以1开头的是 2!个

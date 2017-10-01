@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validate Binary Search Tree
+title: 98 - Validate Binary Search Tree
 date: 2015-10-21 02:58:13.000000000 -04:00
 tags:
 - Leetcode

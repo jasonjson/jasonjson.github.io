@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Symmetric Tree
+title: 101 - Symmetric Tree
 date: 2015-11-11 17:24:07.000000000 -05:00
 tags:
 - Leetcode

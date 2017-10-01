@@ -1,6 +1,6 @@
 ---
 layout: post
-title: N-Queens II
+title: 52 - N-Queens II
 date: 2015-10-21 13:24:37.000000000 -04:00
 tags:
 - Leetcode

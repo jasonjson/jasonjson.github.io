@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sort Colors
+title: 75 - Sort Colors
 date: 2015-10-21 14:37:34.000000000 -04:00
 tags:
 - Leetcode

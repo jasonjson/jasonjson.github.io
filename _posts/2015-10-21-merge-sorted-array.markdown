@@ -1,38 +1,29 @@
 ---
 layout: post
-title: Merge Sorted Array
-date: 2015-10-21 01:42:51.000000000 -04:00
+title: 88 - Merge Sorted Array
+date: 2015-10-21 02:24:40.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Sorting
 author: Jason
 ---
-**Given two sorted integer arrays A and B, merge B into A as one sorted array.**
+**Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.**
 
 
 ``` java
-    /**
-     * @param A: sorted integer array A which has m elements,
-     *           but size of A is m+n
-     * @param B: sorted integer array B which has n elements
-     * @return: void
-     */
-    public void mergeSortedArray(int[] A, int m, int[] B, int n) {
-        // write your code here
-        int i = m - 1, j = n - 1, k = m + n - 1;
-        while (i >= 0 && j >= 0){
-        //we don't need to check if k >=0
-            if (A[i] >= B[j]){
-                A[k--] = A[i--];
-            }else{
-                A[k--] = B[j--];
+public class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int tail1 = m - 1, tail2 = n - 1, finished = m + n - 1;
+        while ( tail1 >= 0 && tail2 >= 0) {
+            nums1[finished --] = nums1[tail1] > nums2[tail2] ? nums1[tail1 --] : nums2[tail2 --];
+        }
+        if (tail1 < 0) {
+        //this can also deal with case where m = 0
+            while (tail2 >= 0){
+                nums1[finished --] = nums2[tail2 --];
             }
         }
-        while(j >= 0){
-            A[k--] = B[j--];
-        }
-        //we only need to check if B array is empty, since if B is empty, the rest of A elements would have already been in the right place.
     }
 }
 ```

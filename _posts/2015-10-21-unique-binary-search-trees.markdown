@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unique Binary Search Trees
+title: 96 - Unique Binary Search Trees
 date: 2015-10-21 02:36:32.000000000 -04:00
 tags:
 - Leetcode
