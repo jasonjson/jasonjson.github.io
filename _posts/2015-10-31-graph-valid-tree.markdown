@@ -16,9 +16,9 @@ Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.<
 ``` java
 public class Solution {
     public boolean validTree(int n, int[][] edges) {
-        List<Set<integer>> graph = new ArrayList<Set<integer>>();//构造graph的方法 adjacency list
+        List<Set<Integer>> graph = new ArrayList<Set<Integer>>();//构造graph的方法 adjacency list
         for (int i = 0; i < n; i++) {
-            graph.add(new HashSet<integer>());
+            graph.add(new HashSet<Integer>());
         }
         for (int i = 0; i < edges.length; i++) {
             graph.get(edges[i][0]).add(edges[i][1]);
@@ -26,7 +26,7 @@ public class Solution {
         }
         
         boolean[] visited = new boolean[n];
-        Queue<integer> q = new LinkedList<integer>();
+        Queue<Integer> q = new LinkedList<Integer>();
         q.offer(0);
         while (!q.isEmpty()) {
             int curr = q.poll();

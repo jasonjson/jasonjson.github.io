@@ -13,15 +13,15 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> findStrobogrammatic(int n) {
+    public List<String> findStrobogrammatic(int n) {
         return helper(n, n);
     }
     
-    public List<string> helper(int n, int m) {
-        if (n == 0) return new ArrayList<string>(Arrays.asList(""));
-        if (n == 1) return new ArrayList<string>(Arrays.asList("0", "1", "8"));
-        List<string> prev = helper(n - 2, m); //like count and say
-        List<string> result = new ArrayList<string>();
+    public List<String> helper(int n, int m) {
+        if (n == 0) return new ArrayList<String>(Arrays.asList(""));
+        if (n == 1) return new ArrayList<String>(Arrays.asList("0", "1", "8"));
+        List<String> prev = helper(n - 2, m); //like count and say
+        List<String> result = new ArrayList<String>();
         for (int i = 0; i < prev.size(); i++) {
             String s = prev.get(i);
             if (n != m) {

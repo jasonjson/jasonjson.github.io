@@ -36,7 +36,7 @@ public class Solution {
 
         HashMap<Integer, Integer> map = new HashMap<>();
         helper(nums, 0, 0, map);
-        List<integer> missing = new ArrayList<>();
+        List<Integer> missing = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             if (!map.containsKey(i)) {
                 missing.add(i);
@@ -46,7 +46,7 @@ public class Solution {
         for (int miss : missing) {
             if (!map.containsKey(miss)) {
                 result++;
-                List<integer> elements = new ArrayList<>();
+                List<Integer> elements = new ArrayList<>();
                 elements.addAll(map.keySet());
                 for (int key : elements) {
                     map.put(key + miss, 1);

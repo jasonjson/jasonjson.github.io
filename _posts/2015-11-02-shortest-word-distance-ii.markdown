@@ -13,19 +13,19 @@ author: Jason
 Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list. You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.</em></strong></p>
 ``` java
 public class WordDistance {
-    HashMap<String, List<integer>> map = new HashMap<String, List<integer>>();
+    HashMap<String, List<Integer>> map = new HashMap<String, List<Integer>>();
     public WordDistance(String[] words) {
         for (int i = 0; i < words.length; i++) {
             if (!map.containsKey(words[i])) {
-                map.put(words[i], new ArrayList<integer>());
+                map.put(words[i], new ArrayList<Integer>());
             }
             map.get(words[i]).add(i);
         }
     }
 
     public int shortest(String word1, String word2) {
-        List<integer> l1 = map.get(word1);
-        List<integer> l2 = map.get(word2);
+        List<Integer> l1 = map.get(word1);
+        List<Integer> l2 = map.get(word2);
         int min = Integer.MAX_VALUE;
         int i = 0, j = 0;
         while (i < l1.size() && j < l2.size()) {

@@ -13,12 +13,12 @@ author: Jason
 
 ``` java
 public class MinStack {
-    Stack<integer> stack1;
-    Stack<integer> stack2;
+    Stack<Integer> stack1;
+    Stack<Integer> stack2;
     public MinStack() {
         // do initialize if necessary
-        stack1 = new Stack<integer>();
-        stack2 = new Stack<integer>();
+        stack1 = new Stack<Integer>();
+        stack2 = new Stack<Integer>();
     }
 
     public void push(int number) {

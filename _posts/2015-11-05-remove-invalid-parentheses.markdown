@@ -14,12 +14,12 @@ author: Jason
 Note: The input string may contain letters other than the parentheses ( and ).</em></strong></p>
 ``` java
 public class Solution {
-    public List<string> removeInvalidParentheses(String s) {
-        List<string> result = new ArrayList<string>();
+    public List<String> removeInvalidParentheses(String s) {
+        List<String> result = new ArrayList<String>();
         if (s == null) return result;//s.length() == 0 is also a valid result
         
-        Set<string> visited = new HashSet<string>();
-        Queue<string> q = new LinkedList<string>();
+        Set<String> visited = new HashSet<String>();
+        Queue<String> q = new LinkedList<String>();
         q.offer(s);
         visited.add(s);
         boolean found = false;

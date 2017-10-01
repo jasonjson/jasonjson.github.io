@@ -13,14 +13,14 @@ author: Jason
 
 ``` java
 public class Solution {
-    public int ladderLength(String beginWord, String endWord, Set<string> wordList) {
+    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
         wordList.add(endWord);
         HashMap<String, Boolean> visited = new HashMap<String, Boolean>();
         for (String s : wordList) {
             visited.put(s, false);
         }
         int ladder = 0;
-        Queue<string> q = new LinkedList<string>();
+        Queue<String> q = new LinkedList<String>();
         q.offer(beginWord);
         while (!q.isEmpty()) {
             ladder ++;
@@ -41,8 +41,8 @@ public class Solution {
         return 0;
     }
     
-    public List<string> getNext(String s, Set<string> wordList) {
-        List<string> result = new ArrayList<string>();
+    public List<String> getNext(String s, Set<String> wordList) {
+        List<String> result = new ArrayList<String>();
         for (int i = 0; i < s.length(); i++) {
             char[] chars = s.toCharArray();
             for (char c = 'a'; c <= 'z'; c++) {

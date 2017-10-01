@@ -17,12 +17,12 @@ public class Solution {
      * @param A an integer array
      * @return  A list of integers includes the index of the first number and the index of the last number
      */
-    public ArrayList<integer> continuousSubarraySumII(int[] A) {
+    public ArrayList<Integer> continuousSubarraySumII(int[] A) {
         // Write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (A == null || A.length == 0) return result;
-        List<integer> max = helper(A, 1);
-        List<integer> min = helper(A, -1);
+        List<Integer> max = helper(A, 1);
+        List<Integer> min = helper(A, -1);
         if (max.get(3) - min.get(2) > max.get(2)) {
             result.add(min.get(1) + 1);
             result.add(min.get(0) - 1);
@@ -37,8 +37,8 @@ public class Solution {
         return result;
     }
     
-    public List<integer> helper(int[] A, int sign) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public List<Integer> helper(int[] A, int sign) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         
         int local = 0, global = sign == 1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         int start = 0, sum = 0;

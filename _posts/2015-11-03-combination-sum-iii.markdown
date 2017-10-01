@@ -13,16 +13,16 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<integer>> combinationSum3(int k, int n) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (k <= 0 || n <= 0) return result;
-        helper(1, k, n, new ArrayList<integer>(), result);
+        helper(1, k, n, new ArrayList<Integer>(), result);
         return result;
     }
-    public void helper(int start, int k, int remain, List<integer> path, List<List<integer>> result) {
+    public void helper(int start, int k, int remain, List<Integer> path, List<List<Integer>> result) {
         if (k == 0) {
             if (remain == 0) {
-                result.add(new ArrayList<integer>(path));
+                result.add(new ArrayList<Integer>(path));
             }
             return;
         }

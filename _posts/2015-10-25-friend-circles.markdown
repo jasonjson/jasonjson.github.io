@@ -21,7 +21,7 @@ public class Solution {
 
         int circles = 0, n = friends.length;
         boolean[] visited = new boolean[n];
-        Queue<integer> q = new LinkedList<integer>();
+        Queue<Integer> q = new LinkedList<Integer>();
         q.offer(0);//0 is the index of first person in friends
         visited[0] = true;
         while (!q.isEmpty()) {

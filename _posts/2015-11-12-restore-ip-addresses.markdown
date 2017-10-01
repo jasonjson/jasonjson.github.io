@@ -41,15 +41,15 @@ class Solution(object):
 ```
 ``` java
 public class Solution {
-    public List<string> restoreIpAddresses(String s) {
-        List<string> result = new ArrayList<string>();
+    public List<String> restoreIpAddresses(String s) {
+        List<String> result = new ArrayList<String>();
         if (s == null || s.length() == 0) return result;
 
         helper(s, 0, "", result);
         return result;
     }
 
-    public void helper(String s, int step, String path, List<string> result) {
+    public void helper(String s, int step, String path, List<String> result) {
         if (step == 4) {//这个负责控制多少段字符
             if (s.length() == 0) {
                 result.add(path.substring(0, path.length() - 1));

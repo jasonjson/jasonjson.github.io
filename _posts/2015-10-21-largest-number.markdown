@@ -22,11 +22,11 @@ public class Solution {
         // write your code here
         if (num == null || num.length == 0) return "";
         
-        List<string> list = new ArrayList<string>();
+        List<String> list = new ArrayList<String>();
         for (int n : num) {
             list.add(String.valueOf(n));
         }        
-        Collections.sort(list, new Comparator<string>() {
+        Collections.sort(list, new Comparator<String>() {
             public int compare (String a, String b) {
                 return (b + a).compareTo(a + b);
             }

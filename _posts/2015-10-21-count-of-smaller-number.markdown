@@ -31,9 +31,9 @@ public class Solution {
             this.right = null;
         }
     }
-    public ArrayList<integer> countOfSmallerNumber(int[] A, int[] queries) {
+    public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         
         segmentTreeNode root = build(0, 10000);
         for (int n : A) {
@@ -90,8 +90,8 @@ public class Solution {
      * @return: The number of element in the array that 
      *          are smaller that the given integer
      */
-    public ArrayList<integer> countOfSmallerNumber(int[] A, int[] queries) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
 
         Arrays.sort(A);
         for (int i = 0; i < queries.length; i++) {

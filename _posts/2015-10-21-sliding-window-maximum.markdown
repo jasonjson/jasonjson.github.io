@@ -28,8 +28,8 @@ public class Solution {
      * @param nums: A list of integers.
      * @return: The maximum number inside the window at each moving.
      */
-    public ArrayList<integer> maxSlidingWindow(int[] nums, int k) {
-        ArrayList<integer> winMax = new ArrayList<integer>();
+    public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
+        ArrayList<Integer> winMax = new ArrayList<Integer>();
         if (nums == null || nums.length == 0 || k <= 0) return winMax;
         
         int n = nums.length;
@@ -58,11 +58,11 @@ public class Solution {
      * @param nums: A list of integers.
      * @return: The maximum number inside the window at each moving.
      */
-    public ArrayList<integer> maxSlidingWindow(int[] nums, int k) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public ArrayList<Integer> maxSlidingWindow(int[] nums, int k) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (nums == null || nums.length == 0) return result;
         
-        PriorityQueue<integer> max = new PriorityQueue<integer>(10, Collections.reverseOrder());
+        PriorityQueue<Integer> max = new PriorityQueue<Integer>(10, Collections.reverseOrder());
         int start = 0;
         for (int i = 0; i < nums.length; i++) {
             max.offer(nums[i]);
@@ -88,7 +88,7 @@ public class Solution {
         //is the largest and element at rear of Qi is the smallest of current window.
         int[] result = new int[nums.length - k + 1];
 
-        Deque<integer> deque = new LinkedList<>();
+        Deque<Integer> deque = new LinkedList<>();
         int i = 0;
         for (; i < k; i++) {
             while (!deque.isEmpty() && nums[deque.getLast()] <= nums[i]) {

@@ -37,9 +37,9 @@ public class Solution {
             return a;
         }
     }
-    public List<List<integer>> connectedSet2(ArrayList<directedgraphnode> nodes) {
+    public List<List<Integer>> connectedSet2(ArrayList<directedgraphnode> nodes) {
         // Write your code here
-        List<List<integer>> result = new ArrayList<List<integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nodes == null || nodes.size() == 0) return result;
         
         UnionFind uf = new UnionFind();
@@ -51,9 +51,9 @@ public class Solution {
             }
         }
         
-        HashMap<Integer, List<integer>> graph = new HashMap<Integer, List<integer>>();
+        HashMap<Integer, List<Integer>> graph = new HashMap<Integer, List<Integer>>();
         for (DirectedGraphNode node : nodes) {
-            List<integer> list = new ArrayList<integer>();
+            List<Integer> list = new ArrayList<Integer>();
             int root = uf.find(node.label);
             if (graph.containsKey(root)) {
                 list = graph.get(root);

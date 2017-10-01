@@ -13,13 +13,13 @@ author: Jason
 
 ``` java
 public class Solution {
-    private Stack<integer> stack1;
-    private Stack<integer> stack2;
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
 
     public Solution() {
        // do initialization if necessary
-       stack1 = new Stack<integer>();
-       stack2 = new Stack<integer>();
+       stack1 = new Stack<Integer>();
+       stack2 = new Stack<Integer>();
     }
     
     public void push(int element) {

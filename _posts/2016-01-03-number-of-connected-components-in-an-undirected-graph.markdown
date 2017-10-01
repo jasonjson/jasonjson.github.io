@@ -51,16 +51,16 @@ public class Solution {
 public class Solution {
     public int countComponents(int n, int[][] edges) {
         if (n == 0) return 0;
-        List<List<integer>> neighbors = new ArrayList<List<integer>>();
+        List<List<Integer>> neighbors = new ArrayList<List<Integer>>();
         for (int i = 0; i < n; i++) {
-            neighbors.add(new ArrayList<integer>());
+            neighbors.add(new ArrayList<Integer>());
         }
         for (int[] edge : edges) {
             neighbors.get(edge[0]).add(edge[1]);
             neighbors.get(edge[1]).add(edge[0]);
         }
         int count = 0;
-        Queue<integer> q = new LinkedList<integer>();
+        Queue<Integer> q = new LinkedList<Integer>();
         boolean[] visited = new boolean[n];
         q.offer(0);
         visited[0] = true;

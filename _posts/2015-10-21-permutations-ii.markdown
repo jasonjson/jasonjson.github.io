@@ -17,21 +17,21 @@ class Solution {
      * @param nums: A list of integers.
      * @return: A list of unique permutations.
      */
-    public ArrayList<ArrayList<integer>> permuteUnique(ArrayList<integer> nums) {
+    public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> nums) {
         // write your code here
-        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (nums == null || nums.size() == 0) return result;
 
         Collections.sort(nums);
-        ArrayList<integer> list = new ArrayList<integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         boolean[] visited = new boolean [nums.size()];
         dfs(nums, visited, list, result);
         return result;
     }
 
-    public void dfs(ArrayList<integer> nums, boolean[] visited, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
+    public void dfs(ArrayList<Integer> nums, boolean[] visited, ArrayList<Integer> list, ArrayList<ArrayList<Integer>> result) {
         if (list.size() == nums.size()) {
-            result.add(new ArrayList<integer>(list));
+            result.add(new ArrayList<Integer>(list));
             return;
         }
 

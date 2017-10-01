@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<integer>> fourSum(int[] nums, int target) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nums == null || nums.length == 0) return result;
 
         Arrays.sort(nums);
@@ -40,7 +40,7 @@ public class Solution {
                     }
                     int c = nums[lo], d = nums[hi];
                     if (a + b + c + d == target) {
-                        List<integer> list = new ArrayList<integer>(Arrays.asList(a, b, c, d));
+                        List<Integer> list = new ArrayList<Integer>(Arrays.asList(a, b, c, d));
                         result.add(list);
                         lo ++;
                         hi --;

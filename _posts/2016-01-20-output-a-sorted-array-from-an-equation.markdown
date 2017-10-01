@@ -38,7 +38,7 @@ public class Solution {
             }
         } else {
             double mid = -b / 2.0 * a;//以中轴为分界线
-            List<integer> left = new ArrayList<>(), right = new ArrayList<>();
+            List<Integer> left = new ArrayList<>(), right = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 int val = a * nums[i] * nums[i] + b * nums[i] + c;
                 if (nums[i] < mid) {

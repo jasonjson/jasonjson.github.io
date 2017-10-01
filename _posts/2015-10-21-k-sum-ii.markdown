@@ -19,19 +19,19 @@ public class Solution {
      * @param target: a integer
      * @return a list of lists of integer 
      */ 
-    public ArrayList<ArrayList<integer>> kSumII(int A[], int k, int target) {
-        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+    public ArrayList<ArrayList<Integer>> kSumII(int A[], int k, int target) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (A == null || A.length == 0) return result;
         
-        ArrayList<integer> path = new ArrayList<integer>();
+        ArrayList<Integer> path = new ArrayList<Integer>();
         helper(A, k, target, 0, path, result);
         return result;
     }
     
-    public void helper(int[] A, int k, int target, int start, ArrayList<integer> path, ArrayList<ArrayList<integer>> result) {
+    public void helper(int[] A, int k, int target, int start, ArrayList<Integer> path, ArrayList<ArrayList<Integer>> result) {
         if (k < 0) return;
         if (k == 0 && target == 0) {
-            result.add(new ArrayList<integer> (path));
+            result.add(new ArrayList<Integer> (path));
             return;
         }
         for (int i = start; i < A.length; i++) {

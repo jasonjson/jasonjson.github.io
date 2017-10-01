@@ -15,8 +15,8 @@ Extra spaces between words should be distributed as evenly as possible. If the n
 For the last line of text, it should be left justified and no extra space is inserted between words.</em></strong></p>
 ``` java
 public class Solution {
-    public List<string> fullJustify(String[] words, int maxWidth) {
-        List<string> result = new ArrayList<string>();
+    public List<String> fullJustify(String[] words, int maxWidth) {
+        List<String> result = new ArrayList<String>();
         if (words == null || words.length == 0) return result;
         
         int index = 0;

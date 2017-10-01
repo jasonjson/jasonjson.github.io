@@ -13,15 +13,15 @@ author: Jason
 
 ``` java
 public class Solution {
-    public ArrayList<ArrayList<string>> solveNQueens(int n) {
-        ArrayList<ArrayList<string>> result = new ArrayList<ArrayList<string>>();
+    public ArrayList<ArrayList<String>> solveNQueens(int n) {
+        ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
         if (n <= 0) return result;
 
-        ArrayList<integer> cols = new ArrayList<integer>();
+        ArrayList<Integer> cols = new ArrayList<Integer>();
         search(n, cols, result);
         return result;
     }
-    public void search(int n, ArrayList<integer> cols, ArrayList<ArrayList<string>> result) {//add one queen to cols each time
+    public void search(int n, ArrayList<Integer> cols, ArrayList<ArrayList<String>> result) {//add one queen to cols each time
         if (cols.size() == n) {//queen is located at (i, cols.get(i))
             result.add(placeQueens(cols));
             return;//we have added all rows
@@ -34,7 +34,7 @@ public class Solution {
             }
         }
     }
-    public boolean isValid(ArrayList<integer> cols, int col) {
+    public boolean isValid(ArrayList<Integer> cols, int col) {
         int row = cols.size();//the row position for new queen
         for (int i = 0; i < cols.size(); i++) {
             if (cols.get(i) == col) {
@@ -47,8 +47,8 @@ public class Solution {
         }
         return true;
     }
-    public ArrayList<string> placeQueens(ArrayList<integer> cols) {
-        ArrayList<string> chessboard = new ArrayList<string>();
+    public ArrayList<String> placeQueens(ArrayList<Integer> cols) {
+        ArrayList<String> chessboard = new ArrayList<String>();
         for (int i = 0; i < cols.size(); i++) {
             String row = "";
             for (int j = 0; j < cols.size(); j++) {

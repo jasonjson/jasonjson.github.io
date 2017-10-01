@@ -22,8 +22,8 @@ public class Solution {
             this.min = min;
         }
     }    
-    public ArrayList<integer> intervalMinNumber(int[] A, ArrayList<interval> queries) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public ArrayList<Integer> intervalMinNumber(int[] A, ArrayList<interval> queries) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (A ==  null || A.length == 0) return result;
         SegmentTreeNode root = buildTree(A, 0, A.length - 1);
         for (Interval interval : queries) {

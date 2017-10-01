@@ -19,11 +19,11 @@ public class Solution {
      * @return: A list of lists of string
      */
      //this kind of problem: find all subset, find the longest ... always using dfs and backtracking.
-    public List<List<string>> partition(String s) {
-        List<List<string>> result = new ArrayList<List<string>>();
+    public List<List<String>> partition(String s) {
+        List<List<String>> result = new ArrayList<List<String>>();
         if (s == null || s.length() == 0) return result;
         
-        List<string> list = new ArrayList<string>();
+        List<String> list = new ArrayList<String>();
         
         partitionUtil(s, result, list);
         return result;
@@ -39,9 +39,9 @@ public class Solution {
         }
         return true;
     }    
-    public void partitionUtil(String s, List<List<string>> result, List<string> list) {
+    public void partitionUtil(String s, List<List<String>> result, List<String> list) {
         if (s.length() == 0) {
-            result.add(new ArrayList<string>(list));
+            result.add(new ArrayList<String>(list));
         }        
         for (int i = 1; i <= s.length(); i++) {
             String str = s.substring(0, i);

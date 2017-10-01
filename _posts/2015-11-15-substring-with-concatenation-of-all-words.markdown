@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> findSubstring(String s, String[] words) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> result = new ArrayList<Integer>();
         if(words.length == 0 || s.length() == 0) return result;
         
         HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -55,8 +55,8 @@ public class Solution {
 ```
 ``` java
 public class Solution {
-    public List<integer> findSubstring(String s, String[] words) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> result = new ArrayList<Integer>();
         if (s.length() == 0 || words.length == 0) return result;
         
         HashMap<String, Integer> map = new HashMap<String, Integer>();

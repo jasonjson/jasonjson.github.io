@@ -17,8 +17,8 @@ public class Solution {
      * @param digits A digital string
      * @return all posible letter combinations
      */
-    public ArrayList<string> letterCombinations(String digits) {
-        ArrayList<string> result = new ArrayList<string>();
+    public ArrayList<String> letterCombinations(String digits) {
+        ArrayList<String> result = new ArrayList<String>();
         if (digits == null || digits.length() == 0) return result;
         String[] letters = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
         StringBuilder str = new StringBuilder();
@@ -26,7 +26,7 @@ public class Solution {
         return result;
     }
 
-    public void helper(String digits, String[] letters, StringBuilder str, ArrayList<string> result) {
+    public void helper(String digits, String[] letters, StringBuilder str, ArrayList<String> result) {
         if (digits.length() == 0) {
             result.add(str.toString());
             return;

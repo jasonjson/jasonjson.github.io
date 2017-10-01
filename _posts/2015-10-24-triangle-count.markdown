@@ -24,12 +24,12 @@ public class Solution {
         if (S == null || S.length == 0) return 0;
         
         Arrays.sort(S);
-        List<integer> list = new ArrayList<integer>();
+        List<Integer> list = new ArrayList<Integer>();
         helper(S, 0, list);
         return count;
     }
     
-    public void helper(int[] S, int start, List<integer> list) {
+    public void helper(int[] S, int start, List<Integer> list) {
         if (list.size() == 3 && isTri(list)) {
             count ++;
             return;
@@ -48,7 +48,7 @@ public class Solution {
         }
     }
     
-    public boolean isTri(List<integer> list) {
+    public boolean isTri(List<Integer> list) {
         Collections.sort(list);
         int a = list.get(0), b = list.get(1), c = list.get(2);
         if (a + b > c && b - a < c && c - a < b && c - b < a) {

@@ -17,7 +17,7 @@ public class Solution extends Relation {
         if (n <= 0) return -1;
         if (n == 1) return 0;
         
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         for (int i = 0; i < n; i++) {
             stack.push(i);
         }

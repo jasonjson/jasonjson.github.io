@@ -14,17 +14,17 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> findMinHeightTrees(int n, int[][] edges) {
-        List<integer> result = new ArrayList<>();
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        List<Integer> result = new ArrayList<>();
         if (n == 1) {
             result.add(0);
             return result;
         }
         
         int[] degrees = new int[n];
-        List<List<integer>> neighbors = new ArrayList<List<integer>>();
+        List<List<Integer>> neighbors = new ArrayList<List<Integer>>();
         for (int i = 0; i < n; i++) {
-            neighbors.add(new ArrayList<integer>());
+            neighbors.add(new ArrayList<Integer>());
         }
         for (int[] edge : edges) {
             degrees[edge[0]] ++;
@@ -33,14 +33,14 @@ public class Solution {
             neighbors.get(edge[1]).add(edge[0]);
         }
         
-        List<integer> preLevel = new ArrayList<integer>();
+        List<Integer> preLevel = new ArrayList<Integer>();
         for (int i = 0; i < degrees.length; i++) {
             if (degrees[i] == 1) {
                 preLevel.add(i);
             }
         }
         while (preLevel.size() > 1) {//the number of roots can be at most 2
-            List<integer> currLevel = new ArrayList<>();
+            List<Integer> currLevel = new ArrayList<>();
             for (int point : preLevel) {
                 for (int next : neighbors.get(point)) {
                     degrees[next]--;

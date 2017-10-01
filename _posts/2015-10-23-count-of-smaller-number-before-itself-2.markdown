@@ -14,11 +14,11 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> countOfSmallerNumberII(int[] A) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> countOfSmallerNumberII(int[] A) {
+        List<Integer> result = new ArrayList<Integer>();
         if (A == null || A.length == 0) return result;
         
-        List<integer> sorted = new ArrayList<integer>();
+        List<Integer> sorted = new ArrayList<Integer>();
         for (int i = 0; i < A.length; i++) {
             int index = find(sorted, A[i]);
             result.add(index);
@@ -27,7 +27,7 @@ public class Solution {
         return result;
     }
     
-    public int find(List<integer> sorted, int val) {
+    public int find(List<Integer> sorted, int val) {
         //if (sorted.size() == 0) return 0; no need
         int lo = 0, hi = sorted.size() - 1;
         while (lo <= hi) {
@@ -65,9 +65,9 @@ public class Solution {
             right = null;
         }
     }
-    public ArrayList<integer> countOfSmallerNumberII(int[] A) {
+    public ArrayList<Integer> countOfSmallerNumberII(int[] A) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         
         segmentTreeNode root = build(0, 10000);
         for (int i = 0; i < A.length; i++) {

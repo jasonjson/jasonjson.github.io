@@ -13,8 +13,8 @@ author: Jason
 Return all such possible sentences.</em></strong></p>
 ``` java
 public class Solution {
-    public List<string> wordBreak(String s, Set<string> wordDict) {
-        List<string> result = new ArrayList<string>();
+    public List<String> wordBreak(String s, Set<String> wordDict) {
+        List<String> result = new ArrayList<String>();
         if (wordDict == null || wordDict.size() == 0) return result;
         
         boolean[] dp = getWord(s, wordDict);
@@ -26,7 +26,7 @@ public class Solution {
         }
     }
     
-    public boolean[] getWord(String s, Set<string> wordDict) {
+    public boolean[] getWord(String s, Set<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;
         for (int i = 1; i <= s.length(); i++) {
@@ -40,7 +40,7 @@ public class Solution {
         return dp;
     }
     
-    public void helper(String s, Set<string> wordDict, String path, List<string> result) {
+    public void helper(String s, Set<String> wordDict, String path, List<String> result) {
         if (s.length() == 0) {
             result.add(new String(path.substring(1)));
             return;

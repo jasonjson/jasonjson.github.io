@@ -15,18 +15,18 @@ author: Jason
 Write a function that takes an integer n and return all possible combinations of its factors.</em></strong></p>
 ``` java
 public class Solution {
-    public static List<List<integer>> getFactors(int n) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public static List<List<Integer>> getFactors(int n) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (n <= 1) return result;
 
-        helper(n, 2, new ArrayList<integer>(), result);
+        helper(n, 2, new ArrayList<Integer>(), result);
         return result;
     }
 
-    public static void helper(int remain, int start, List<integer> path, List<List<integer>> result) {
+    public static void helper(int remain, int start, List<Integer> path, List<List<Integer>> result) {
         if (remain == 1) {
             if (path.size() > 1) {//for 12, {12} can be in the result, we need to remove it
-                result.add(new ArrayList<integer>(path));
+                result.add(new ArrayList<Integer>(path));
             }
             return;
         }

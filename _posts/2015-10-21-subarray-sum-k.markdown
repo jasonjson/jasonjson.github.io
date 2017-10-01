@@ -15,16 +15,16 @@ author: Jason
 public class solution {
     public static void main(String[] args) {
         int[] a = {1, 4, 0, 0, 3, 10, 5};;
-        ArrayList<integer> list = findSum(a,7);
+        ArrayList<Integer> list = findSum(a,7);
         for(int n : list){
             System.out.println(n);
         }
     }
 
-    public static ArrayList<integer> findSum(int[] arr, int val){
+    public static ArrayList<Integer> findSum(int[] arr, int val){
         if(arr == null) return null;
         HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         int sum = 0;
         for(int i = 0; i < arr.length; i++){
             sum += arr[i];

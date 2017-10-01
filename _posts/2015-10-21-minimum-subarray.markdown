@@ -17,7 +17,7 @@ public class Solution {
      * @param nums: a list of integers
      * @return: A integer indicate the sum of minimum subarray
      */
-    public int minSubArray(ArrayList<integer> nums) {
+    public int minSubArray(ArrayList<Integer> nums) {
         if (nums == null || nums.size() == 0) return 0;
         
         int min = Integer.MAX_VALUE, local = 0;

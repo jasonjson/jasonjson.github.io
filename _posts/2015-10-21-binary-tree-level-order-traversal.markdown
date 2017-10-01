@@ -17,8 +17,8 @@ public class Solution {
      * @param root: The root of binary tree.
      * @return: Level order a list of lists of integer
      */
-     public ArrayList<ArrayList<integer>> levelOrder(TreeNode root){
-         ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root){
+         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
          if (root == null) return result;
 
          Queue<treenode> q = new LinkedList<treenode>();
@@ -26,7 +26,7 @@ public class Solution {
          while (!q.isEmpty()) {
             int size = q.size();
             //control when the level ends
-            ArrayList<integer> list = new ArrayList<integer>();
+            ArrayList<Integer> list = new ArrayList<Integer>();
             for (int i = 0; i < size; i++) {
                 TreeNode curr = q.poll();
                 list.add(curr.val);

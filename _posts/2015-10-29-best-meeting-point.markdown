@@ -51,7 +51,7 @@ public class Solution {
     
     public int helper(int[][] grid, int dimen) {
         int row = grid.length, col = grid[0].length;
-        List<integer> path = new ArrayList<integer>();
+        List<Integer> path = new ArrayList<Integer>();
         if (dimen == 0) {
             for (int i = 0; i < row; i++) {
                 for (int j = 0; j < col; j++) {

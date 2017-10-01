@@ -35,8 +35,8 @@ public class Solution {
     public int convertToId(int x, int y, int m) {
         return x * m + y;//id must be x * col + y!!!! this is the only way to make it unique!!!
     }
-    public List<integer> numIslands2(int n, int m, Point[] operators) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> numIslands2(int n, int m, Point[] operators) {
+        List<Integer> result = new ArrayList<Integer>();
         if (operators == null || operators.length == 0) return result;
         int[] dx = {0, -1, 0, 1}, dy = {-1, 0, 1, 0};
         int[][] grid = new int[n][m];

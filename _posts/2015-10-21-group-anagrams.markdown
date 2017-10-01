@@ -13,16 +13,16 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<string>> groupAnagrams(String[] strs) {
-        List<List<string>> lists = new ArrayList<List<string>>();
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> lists = new ArrayList<List<String>>();
         if(strs == null) return lists;
 
-        HashMap<String, List<string>> map = new HashMap<String, List<string>>();
+        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
         for(String str : strs){
             char[] charArr = str.toCharArray();
             Arrays.sort(charArr);
             String sorted = String.valueOf(charArr);
-            List<string> list = new ArrayList<string>();
+            List<String> list = new ArrayList<String>();
             if(map.containsKey(sorted)){
                 list = map.get(sorted);
             }
@@ -31,7 +31,7 @@ public class Solution {
         }
 
         for(String key : map.keySet()){
-            List<string> list = map.get(key);
+            List<String> list = map.get(key);
             Collections.sort(list);
             //the problem requests this
             lists.add(list);

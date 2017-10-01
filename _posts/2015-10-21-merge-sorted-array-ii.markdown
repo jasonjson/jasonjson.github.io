@@ -17,9 +17,9 @@ class Solution {
      * @param A and B: sorted integer array A and B.
      * @return: A new sorted integer array
      */
-    public ArrayList<integer> mergeSortedArray(ArrayList<integer> A, ArrayList<integer> B) {
+    public ArrayList<Integer> mergeSortedArray(ArrayList<Integer> A, ArrayList<Integer> B) {
         // write your code here
-        ArrayList<integer> C = new ArrayList<integer>();
+        ArrayList<Integer> C = new ArrayList<Integer>();
         while (!A.isEmpty() && !B.isEmpty()){
             if (A.get(0) <= B.get(0)) C.add(A.remove(0));
             else C.add(B.remove(0));

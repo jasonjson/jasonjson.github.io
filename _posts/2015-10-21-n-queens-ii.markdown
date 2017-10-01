@@ -15,11 +15,11 @@ public class Solution {
         if (n <= 0) return 0;
 
         int[] result = new int[1];
-        helper(n, new ArrayList<integer>(), result);
+        helper(n, new ArrayList<Integer>(), result);
         return result[0];
     }
 
-    public void helper(int n, List<integer> cols, int[] result) {
+    public void helper(int n, List<Integer> cols, int[] result) {
         if (cols.size() == n) {
             result[0] ++;
             return;
@@ -33,7 +33,7 @@ public class Solution {
         }
     }
 
-    public boolean isValid(List<integer> cols, int col) {
+    public boolean isValid(List<Integer> cols, int col) {
         int row = cols.size();
         for (int i = 0; i < row; i++) {
             if (cols.get(i) == col || i + cols.get(i) == row + col || i - cols.get(i) == row - col) {

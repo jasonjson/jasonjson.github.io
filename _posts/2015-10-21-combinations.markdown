@@ -18,19 +18,19 @@ public class Solution {
      * @param k: Given the numbers of combinations
      * @return: All the combinations of k numbers out of 1..n
      */
-    public List<List<integer>> combine(int n, int k) {
+    public List<List<Integer>> combine(int n, int k) {
         // write your code here
-        List<List<integer>> result = new ArrayList<List<integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (n == 0 || k == 0) return result;
-        List<integer> list = new ArrayList<integer>();
+        List<Integer> list = new ArrayList<Integer>();
 
         combineUtil(n, k, 1, list, result);
         return result;
     }
 
-    public void combineUtil(int n, int k, int start, List<integer> list, List<List<integer>> result) {
+    public void combineUtil(int n, int k, int start, List<Integer> list, List<List<Integer>> result) {
         if (list.size() == k) {
-            result.add(new ArrayList<integer>(list));
+            result.add(new ArrayList<Integer>(list));
             return; // for subset don't return
             //for permutation or a fixed size list, return so save time.
         }

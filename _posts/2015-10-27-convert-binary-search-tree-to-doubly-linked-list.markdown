@@ -21,7 +21,7 @@ public class Solution {
     public DoublyListNode bstToDoublyList(TreeNode root) {  
         // Write your code here
         if (root == null) return null;
-        ArrayList<integer> list = new ArrayList<integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         Stack<treenode> stack = new Stack<treenode>();
         while (root != null) {
             stack.push(root);

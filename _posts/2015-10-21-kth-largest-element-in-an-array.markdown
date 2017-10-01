@@ -18,14 +18,14 @@ class Solution {
     //param k : description of k
     //param numbers : array of numbers
     //return: description of return
-    public int kthLargestElement(int k, ArrayList<integer> numbers) {
+    public int kthLargestElement(int k, ArrayList<Integer> numbers) {
         // write your code here
         if (numbers == null || numbers.size() == 0) return 0;
         
         return helper(k, numbers, 0, numbers.size() - 1);
     }
     
-    public int helper(int k, ArrayList<integer> numbers, int start, int end) {
+    public int helper(int k, ArrayList<Integer> numbers, int start, int end) {
         int lo = start, hi = end, pivot = end;
         while (lo <= hi) {
             while (lo <= hi && numbers.get(lo) < numbers.get(pivot)) {

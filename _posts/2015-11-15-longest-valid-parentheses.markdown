@@ -19,7 +19,7 @@ public class Solution {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
 
-        Stack<integer> stack = new Stack<integer>();//换换思维,不是push char而是push index便于求长度
+        Stack<Integer> stack = new Stack<Integer>();//换换思维,不是push char而是push index便于求长度
         int start = 0, len = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -43,8 +43,8 @@ public class Solution {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
 
-        Set<string> visited = new HashSet<string>();
-        Queue<string> q = new LinkedList<string>();
+        Set<String> visited = new HashSet<String>();
+        Queue<String> q = new LinkedList<String>();
         q.offer(s);
         visited.add(s);
         while (!q.isEmpty()) {

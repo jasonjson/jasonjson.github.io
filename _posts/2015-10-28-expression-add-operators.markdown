@@ -13,15 +13,15 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> addOperators(String num, int target) {
-        List<string> result = new ArrayList<string>();
+    public List<String> addOperators(String num, int target) {
+        List<String> result = new ArrayList<String>();
         if (num == null || num.length() == 0) return result;
 
         helper(num, target, 0, 0, "", result);
         return result;
     }
 
-    public void helper(String num, int target, long prev, long currRes, String path, List<string> result) {
+    public void helper(String num, int target, long prev, long currRes, String path, List<String> result) {
         if (num.length() == 0 && currRes == target) {
             result.add(new String(path));
             return;

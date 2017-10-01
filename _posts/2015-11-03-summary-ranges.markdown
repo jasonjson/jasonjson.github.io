@@ -13,8 +13,8 @@ author: Jason
 For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].</em></strong></p>
 ``` java
 public class Solution {
-    public List<string> summaryRanges(int[] nums) {
-        List<string> result = new ArrayList<>();
+    public List<String> summaryRanges(int[] nums) {
+        List<String> result = new ArrayList<>();
         if (nums == null || nums.length == 0) return result;
         
         int i = 0;

@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> spiralOrder(int[][] matrix) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> result = new ArrayList<Integer>();
         if (matrix == null || matrix.length == 0) return result;
 
         int up = 0, down = matrix.length - 1, left = 0, right = matrix[0].length - 1;

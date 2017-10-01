@@ -55,15 +55,15 @@ public class Solution {
     }
      
      
-    public ArrayList<string> wordSearchII(char[][] board, ArrayList<string> words) {
+    public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
         // write your code here
-        ArrayList<string> result = new ArrayList<string>();
+        ArrayList<String> result = new ArrayList<String>();
         if (board == null || board.length == 0) return result;
         Trie trie = new Trie();
         for (String word : words) {
             trie.insert(word);
         }
-        HashSet<string> set = new HashSet<>();
+        HashSet<String> set = new HashSet<>();
         boolean[][] visited = new boolean[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
@@ -74,7 +74,7 @@ public class Solution {
         return result;
     }
     
-    public void helper(char[][] board, int i, int j, Trie trie, String path, boolean[][] visited, HashSet<string> set) {
+    public void helper(char[][] board, int i, int j, Trie trie, String path, boolean[][] visited, HashSet<String> set) {
         if (trie.search(path)) {
             set.add(new String(path));
         }
@@ -93,8 +93,8 @@ public class Solution {
 ```
 ``` java
 public class Solution {
-    public ArrayList<string> wordSearchII(char[][] board, ArrayList<string> words) {
-        ArrayList<string> result = new ArrayList<string>();
+    public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
+        ArrayList<String> result = new ArrayList<String>();
         if (board == null || board.length == 0 || words == null || words.size() == 0) return result;        
         for (String word : words) {
             if (exist(board, word)) {

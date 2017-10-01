@@ -14,13 +14,13 @@ author: Jason
 ``` java
 public class Solution {
     public static void main(String[] args) {
-        List<integer> A = new ArrayList<>(Arrays.asList(1,1,1,2,2,2));
-        List<integer> B = new ArrayList<>(Arrays.asList(2,2,3));
+        List<Integer> A = new ArrayList<>(Arrays.asList(1,1,1,2,2,2));
+        List<Integer> B = new ArrayList<>(Arrays.asList(2,2,3));
         System.out.println(findSubset(B, A));
         System.out.println(findSubset(A, B));
     }
-    public static List<integer> findSubset(List<integer> A, List<integer> B) {
-        List<integer> result = new ArrayList<>();
+    public static List<Integer> findSubset(List<Integer> A, List<Integer> B) {
+        List<Integer> result = new ArrayList<>();
         if (A.size() == 0) return result;
         if (B.size() == 0) {
             result.addAll(A);

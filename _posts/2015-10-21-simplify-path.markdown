@@ -17,7 +17,7 @@ public class Solution {
         if (path == null || path.length() == 0) return "";
         String[] strs = path.split("/");
         StringBuilder sb = new StringBuilder();
-        Deque<string> dq = new LinkedList<string>();
+        Deque<String> dq = new LinkedList<String>();
         for (String s : strs) {
             if (s.length() == 0 || s.equals(".")) {
                 continue;

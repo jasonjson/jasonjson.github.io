@@ -12,10 +12,10 @@ author: Jason
 
 
 ``` java
-class PeekingIterator implements Iterator<integer> {
+class PeekingIterator implements Iterator<Integer> {
     Integer nextElement;
-    Iterator<integer> iterator;
-    public PeekingIterator(Iterator<integer> iterator) {
+    Iterator<Integer> iterator;
+    public PeekingIterator(Iterator<Integer> iterator) {
         // initialize any member here.
         this.iterator = iterator;
         nextElement = null;

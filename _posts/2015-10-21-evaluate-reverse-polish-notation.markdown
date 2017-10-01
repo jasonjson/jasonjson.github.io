@@ -22,7 +22,7 @@ public class Solution {
         // Write your code here
         if (tokens == null || tokens.length == 0) return 0;
         
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         //we avoid to check if tokens[i] is a number
         for (String s : tokens) {
             if (s.equals("+")) {

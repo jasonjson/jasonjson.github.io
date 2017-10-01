@@ -18,30 +18,30 @@ public class Solution {
      * @param k1 and k2: range k1 to k2.
      * @return: Return all keys that k1<=key<=k2 in ascending order.
      */
-    public ArrayList<integer> searchRange(TreeNode root, int k1, int k2) {
+    public ArrayList<Integer> searchRange(TreeNode root, int k1, int k2) {
         // write your code here
-        ArrayList<integer> array = new ArrayList<integer>();
+        ArrayList<Integer> array = new ArrayList<Integer>();
         inorderTraversal(root, array);
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         for(int i = 0; i < array.size(); i++){
             int val = array.get(i);
             if(val >= k1 && val <= k2) result.add(val);
         }
         return result;
     }   
-    public void inorderTraversal(TreeNode root, ArrayList<integer> array){
+    public void inorderTraversal(TreeNode root, ArrayList<Integer> array){
         if(root == null) return;
         inorderTraversal(root.left, array);
         array.add(root.val);
         inorderTraversal(root.right, array);
     }
     //Solution 2, add value while traversal, and only add elements in the range
-    public ArrayList<integer> searchRange(TreeNode root, int k1, int k2) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public ArrayList<Integer> searchRange(TreeNode root, int k1, int k2) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         helper(root, k1, k2, result);
         return result;
     }   
-    public void helper(TreeNode root, int k1, int k2, ArrayList<integer> result){
+    public void helper(TreeNode root, int k1, int k2, ArrayList<Integer> result){
         if (root == null) return; 
         三个if是并存的关系，不是if else，表示我们三个点是否都需要查找       
         if (root.val > k1) { 

@@ -18,7 +18,7 @@ public class Solution {
      * @param nums: A list of integers
      * @return: An integer denotes the sum of max two non-overlapping subarrays
      */
-    public int maxTwoSubArrays(ArrayList<integer> nums) {
+    public int maxTwoSubArrays(ArrayList<Integer> nums) {
         if (nums == null || nums.size() == 0) return 0;
         
         int n = nums.size(), local = 0, max = Integer.MIN_VALUE;

@@ -105,7 +105,7 @@ public class Solution {
     }
     
     public int getArea(int[] height) {
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         int area = 0;
         for (int i = 0; i < height.length; i++) {
             while (!stack.isEmpty() && height[i] < height[stack.peek()]) {

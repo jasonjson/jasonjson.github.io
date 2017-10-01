@@ -19,7 +19,7 @@ public class Solution {
      * @param k: An integer denote to find k non-overlapping subarrays
      * @return: An integer denote the sum of max k non-overlapping subarrays
      */
-    public int maxSubArray(ArrayList<integer> nums, int k) {
+    public int maxSubArray(ArrayList<Integer> nums, int k) {
         // write your code
         if (nums == null || nums.size() == 0) return 0;
                 

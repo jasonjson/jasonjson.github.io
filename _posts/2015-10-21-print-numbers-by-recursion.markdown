@@ -17,9 +17,9 @@ public class Solution {
      * @param n: An integer.
      * return : An array storing 1 to the largest number with n digits.
      */
-    public static List<integer> numbersByRecursion(int n) {
+    public static List<Integer> numbersByRecursion(int n) {
         // write your code here
-        List<integer> result = new ArrayList<integer>();
+        List<Integer> result = new ArrayList<Integer>();
         if (n <= 0) return result;
 
         result.add(0);//帮忙生成10, 20, 30....

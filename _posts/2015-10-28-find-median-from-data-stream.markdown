@@ -20,8 +20,8 @@ double findMedian() - Return the median of all elements so far.</p>
 ``` java
 class MedianFinder {
     
-    PriorityQueue<integer> max = new PriorityQueue<integer>(10, Collections.reverseOrder());
-    PriorityQueue<integer> min = new PriorityQueue<integer>();
+    PriorityQueue<Integer> max = new PriorityQueue<Integer>(10, Collections.reverseOrder());
+    PriorityQueue<Integer> min = new PriorityQueue<Integer>();
     int count = 0;
     // Adds a number into the data structure.
     public void addNum(int num) {

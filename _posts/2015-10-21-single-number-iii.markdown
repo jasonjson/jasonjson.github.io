@@ -22,7 +22,7 @@ public class Solution {
      * @param A : An integer array
      * @return : Two integers
      */
-    public List<integer> singleNumberIII(int[] A) {
+    public List<Integer> singleNumberIII(int[] A) {
         // write your code here
         int xor = 0;
         for (int n : A) {
@@ -41,7 +41,7 @@ public class Solution {
                 x2 ^= n;
             }
         }
-        return new ArrayList<integer>(Arrays.asList(x1, x2));
+        return new ArrayList<Integer>(Arrays.asList(x1, x2));
     }
 }
 ```

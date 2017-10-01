@@ -17,7 +17,7 @@ public class Solution {
      * @param nums: A list of integers
      * @return: A list of integers that's previous permuation
      */
-    public ArrayList<integer> previousPermuation(ArrayList<integer> nums) {
+    public ArrayList<Integer> previousPermuation(ArrayList<Integer> nums) {
         if (nums == null || nums.size() == 0) return nums; 
         int n = nums.size();
         int i = n - 2;

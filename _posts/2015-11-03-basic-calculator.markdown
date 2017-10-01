@@ -21,7 +21,7 @@ public class Solution {
     //')': pop out the top two numbers from stack, first one is the sign before this pair of parenthesis, second is the temporary result before this pair of parenthesis. We add them together.
     public int calculate(String s) {
         if (s == null || s.length() == 0) return -1;
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         
         int number = 0, sign = 1, result = 0;
         for (char c : s.toCharArray()) {

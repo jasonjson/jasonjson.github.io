@@ -17,15 +17,15 @@ public class Solution {
         if (prerequisites == null || prerequisites.length == 0) return true;
 
         int[] degree = new int[numCourses];
-        List<List<integer>> course = new ArrayList<List<integer>>();
+        List<List<Integer>> course = new ArrayList<List<Integer>>();
         for (int i = 0; i < numCourses; i++) {
-            course.add(new ArrayList<integer>());
+            course.add(new ArrayList<Integer>());
         }
         for (int[] pair : prerequisites) {
             degree[pair[0]] ++;
             course.get(pair[1]).add(pair[0]);
         }
-        Queue<integer> q = new LinkedList<integer>();
+        Queue<Integer> q = new LinkedList<Integer>();
         for (int i = 0; i < numCourses; i++) {
             if (degree[i] == 0) {
                 q.offer(i);

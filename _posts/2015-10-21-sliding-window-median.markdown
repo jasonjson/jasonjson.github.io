@@ -13,11 +13,11 @@ author: Jason
 
 ``` java
 public class Solution {
-    public ArrayList<integer> medianSlidingWindow(int[] nums, int k) {
-        ArrayList<integer> result = new ArrayList<integer>();
+    public ArrayList<Integer> medianSlidingWindow(int[] nums, int k) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (nums == null || nums.length == 0) return result;
-        PriorityQueue<integer> max_heap = new PriorityQueue<integer>(10, Collections.reverseOrder());// 10 is initial capacity
-        PriorityQueue<integer> min_heap = new PriorityQueue<integer>();
+        PriorityQueue<Integer> max_heap = new PriorityQueue<Integer>(10, Collections.reverseOrder());// 10 is initial capacity
+        PriorityQueue<Integer> min_heap = new PriorityQueue<Integer>();
         for (int i = 0; i < nums.length; i++) {
             if (max_heap.isEmpty() || nums[i] < max_heap.peek()) {
                 max_heap.add(nums[i]);

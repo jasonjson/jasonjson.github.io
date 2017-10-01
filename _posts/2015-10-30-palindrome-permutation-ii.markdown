@@ -15,8 +15,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> generatePalindromes(String s) {
-        List<string> result = new ArrayList<string>();
+    public List<String> generatePalindromes(String s) {
+        List<String> result = new ArrayList<String>();
         if (s == null || s.length() == 0) return result;
         
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
@@ -39,7 +39,7 @@ public class Solution {
         return result;
     }
     
-    public void helper(List<character> list, String mid, boolean[] visited, StringBuilder sb, List<string> result) {
+    public void helper(List<character> list, String mid, boolean[] visited, StringBuilder sb, List<String> result) {
         if (sb.length() == list.size()) {
             result.add(sb.toString() + mid + sb.reverse().toString());
             sb.reverse();
@@ -61,14 +61,14 @@ public class Solution {
 
 ``` java
 public class Solution {
-    public List<string> generatePalindromes(String s) {
-       List<string> result = new ArrayList<string>();
+    public List<String> generatePalindromes(String s) {
+       List<String> result = new ArrayList<String>();
        boolean[] visited = new boolean[s.length()];
        helper(s, "", visited, result);
        return result;
     }
     
-    public void helper(String s, String path, boolean[] visited, List<string> result) {
+    public void helper(String s, String path, boolean[] visited, List<String> result) {
         if (path.length() == s.length() && isPali(path)) {
             result.add(new String(path));
             return;

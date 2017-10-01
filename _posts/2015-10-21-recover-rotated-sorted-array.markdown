@@ -17,7 +17,7 @@ public class Solution {
      * @param nums: The rotated sorted array
      * @return: void
      */
-    public void recoverRotatedSortedArray(ArrayList<integer> nums) {
+    public void recoverRotatedSortedArray(ArrayList<Integer> nums) {
         // write your code
         int len = nums.size();
         int index = 0;
@@ -30,7 +30,7 @@ public class Solution {
         reverseUtil(nums,0,len-1);
     }
     //reverse an arraylist
-    public void reverseUtil(ArrayList<integer> nums, int lo, int hi){
+    public void reverseUtil(ArrayList<Integer> nums, int lo, int hi){
         if(lo > hi) return;
         for(int i = lo; i <= hi; i++){
             nums.add(i,nums.remove(hi));

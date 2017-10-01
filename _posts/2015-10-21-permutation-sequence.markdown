@@ -19,7 +19,7 @@ author: Jason
 //4. 不断重复2, 3, 取余并且对(n-k)!进行除法，直至计算完毕
 public class Solution {
     public String getPermutation(int n, int k) {
-        List<integer> nums = new ArrayList<integer>();
+        List<Integer> nums = new ArrayList<Integer>();
         int[] factorial = new int[n + 1];
         factorial[0] = 1;
         for (int i = 1; i <= n; i++) {

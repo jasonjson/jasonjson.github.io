@@ -13,7 +13,7 @@ author: Jason
 
 ``` java
 public class Solution {
-    public int MinAdjustmentCost(ArrayList<integer> A, int target) {
+    public int MinAdjustmentCost(ArrayList<Integer> A, int target) {
         if (A == null || A.size() == 0) return 0;
         
         int max = 0, result = Integer.MAX_VALUE;

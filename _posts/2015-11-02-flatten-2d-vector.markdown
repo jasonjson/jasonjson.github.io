@@ -13,10 +13,10 @@ author: Jason
 
 ``` java
 public class Vector2D {
-    Iterator<integer> iterator;
+    Iterator<Integer> iterator;
     Queue<iterator> q = new LinkedList<iterator>();//用queue比用ArrayList方便
-    public Vector2D(List<List<integer>> vec2d) {
-        for (List<integer> vec : vec2d) {
+    public Vector2D(List<List<Integer>> vec2d) {
+        for (List<Integer> vec : vec2d) {
             q.offer(vec.iterator());
         }
         if (!q.isEmpty()) {

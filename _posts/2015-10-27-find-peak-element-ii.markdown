@@ -22,9 +22,9 @@ class Solution {
      * @param A: An integer matrix
      * @return: The index of the peak
      */
-    public List<integer> findPeakII(int[][] A) {
+    public List<Integer> findPeakII(int[][] A) {
         // write your code here
-        List<integer> result = new ArrayList<integer>();
+        List<Integer> result = new ArrayList<Integer>();
         if (A == null || A.length == 0) return result;
         
         for (int i = 1; i < A.length - 1; i++) {//第一行和最后一行不用考虑
@@ -51,16 +51,16 @@ class Solution {
 ```
 ``` java
 class Solution {
-    public static List<integer> findPeakII(int[][] A) {
+    public static List<Integer> findPeakII(int[][] A) {
         // write your code here
-        List<integer> result = new ArrayList<integer>();
+        List<Integer> result = new ArrayList<Integer>();
         if (A == null || A.length == 0) return result;
 
         helper(A, 0, A.length - 1,result);
         return result;
     }
 
-    public static void helper(int[][] A, int up, int down, List<integer> result) {
+    public static void helper(int[][] A, int up, int down, List<Integer> result) {
         if (up > down) return;
         if (up == down) {
             int j = find(A[up]);

@@ -13,19 +13,19 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<integer>> combinationSum(int[] candidates, int target) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (candidates == null || candidates.length == 0) return result;
-        List<integer> list = new ArrayList<integer>();
+        List<Integer> list = new ArrayList<Integer>();
 
         Arrays.sort(candidates);
         helper(candidates, 0, target, list, result);
         return result;
     }
 
-    public void helper(int[] candidates, int start, int gap, List<integer> list, List<List<integer>> result) {
+    public void helper(int[] candidates, int start, int gap, List<Integer> list, List<List<Integer>> result) {
         if (gap == 0) {
-            result.add(new ArrayList<integer>(list));
+            result.add(new ArrayList<Integer>(list));
             return;
         }
         for (int i = start; i < candidates.length; i++) {

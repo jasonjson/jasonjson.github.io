@@ -44,7 +44,7 @@ public class Solution {
                return a.start - b.start;
            } 
         });
-        PriorityQueue<integer> pq = new PriorityQueue<integer>();
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         for (Interval interval : intervals) {
             if (!pq.isEmpty() && interval.start >= pq.peek()) {
                 pq.poll();//可以想象把pq.peek()和新的interval合并在一起

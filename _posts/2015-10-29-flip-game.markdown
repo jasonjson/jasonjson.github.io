@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> generatePossibleNextMoves(String s) {
-        List<string> result = new ArrayList<>();
+    public List<String> generatePossibleNextMoves(String s) {
+        List<String> result = new ArrayList<>();
         if (s == null || s.length() == 0) return result;
         
         for (int i = 1; i < s.length(); i++) {

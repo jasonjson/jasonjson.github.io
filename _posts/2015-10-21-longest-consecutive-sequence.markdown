@@ -22,7 +22,7 @@ public class Solution {
         // write you code here
         if (num == null || num.length == 0) return 0;
         int len = 0;
-        Set<integer> set = new HashSet<integer>();
+        Set<Integer> set = new HashSet<Integer>();
         for (int n : num) {
             set.add(n);
         }

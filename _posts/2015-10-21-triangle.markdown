@@ -17,7 +17,7 @@ public class Solution {
      * @param triangle: a list of lists of integers.
      * @return: An integer, minimum path sum.
      */
-    public int minimumTotal(ArrayList<ArrayList<integer>> triangle) {
+    public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
         // write your code here
         if (triangle == null || triangle.size() == 0) return 0;
 

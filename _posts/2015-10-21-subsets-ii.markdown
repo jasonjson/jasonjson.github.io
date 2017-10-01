@@ -17,19 +17,19 @@ class Solution {
      * @param S: A set of numbers.
      * @return: A list of lists. All valid subsets.
      */
-    public ArrayList<ArrayList<integer>> subsetsWithDup(ArrayList<integer> S) {
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> S) {
         // write your code here
-        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (S == null || S.size() == 0) return result;
 
         Collections.sort(S);//remember to sort!!
-        ArrayList<integer> list = new ArrayList<integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         dfs(S, 0, list, result);
         return result;
     }
 
-    public void dfs(ArrayList<integer> S, int start, ArrayList<integer> list, ArrayList<ArrayList<integer>> result) {
-        result.add(new ArrayList<integer>(list));
+    public void dfs(ArrayList<Integer> S, int start, ArrayList<Integer> list, ArrayList<ArrayList<Integer>> result) {
+        result.add(new ArrayList<Integer>(list));
         for (int i = start; i < S.size(); i++) {
             if (i > start && S.get(i) == S.get(i-1)) {
                 continue;

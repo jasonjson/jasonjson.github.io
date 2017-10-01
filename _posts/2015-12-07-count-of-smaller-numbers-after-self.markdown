@@ -14,11 +14,11 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> countSmaller(int[] nums) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> countSmaller(int[] nums) {
+        List<Integer> result = new ArrayList<Integer>();
         if (nums == null || nums.length == 0) return result;
 
-        List<integer> sorted = new ArrayList<>();
+        List<Integer> sorted = new ArrayList<>();
         for (int i = nums.length - 1; i >= 0; i--) {
             int index = find(sorted, nums[i]);
             result.add(index);
@@ -28,7 +28,7 @@ public class Solution {
         return result;
     }
 
-    public int find(List<integer> sorted, int val) {
+    public int find(List<Integer> sorted, int val) {
         //if (sorted.size() == 0) return 0; no need
         int lo = 0, hi = sorted.size() - 1;
         while (lo <= hi) {

@@ -13,11 +13,11 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> preorderTraversal(TreeNode root) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
         if (root != null) {
-            List<integer> left = preorderTraversal(root.left);
-            List<integer> right = preorderTraversal(root.right);
+            List<Integer> left = preorderTraversal(root.left);
+            List<Integer> right = preorderTraversal(root.right);
             result.add(root.val);
             result.addAll(left);
             result.addAll(right);
@@ -25,9 +25,9 @@ public class Solution {
         return result;
     }
     //iterative!
-    public ArrayList<integer> preorderTraversal(TreeNode root) {
+    public ArrayList<Integer> preorderTraversal(TreeNode root) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (root == null) {
             return result;
         }

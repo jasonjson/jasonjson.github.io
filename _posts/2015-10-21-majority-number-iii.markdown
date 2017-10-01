@@ -14,7 +14,7 @@ author: Jason
 
 ``` java
 public class Solution {
-    public int majorityNumber(ArrayList<integer> nums, int k) {
+    public int majorityNumber(ArrayList<Integer> nums, int k) {
         if (nums == null || nums.size() == 0 || k > nums.size()) return -1;
         //bug : nums.size() !!! not nums.size
         HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
@@ -24,7 +24,7 @@ public class Solution {
             } else if (map.size() < k) {
                 map.put(n, 1);
             } else {
-                ArrayList<integer> keys = new ArrayList<integer>();
+                ArrayList<Integer> keys = new ArrayList<Integer>();
                 for (int key : map.keySet()) {
                     keys.add(key);
                 }
@@ -38,7 +38,7 @@ public class Solution {
                 }
             }
         }
-        List<integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         for (int key : map.keySet()) {
             list.add(key);
         }

@@ -14,12 +14,12 @@ author: Jason
 
 ``` java
 public class Solution {
-    public static List<List<integer>> verticalOrder(TreeNode root) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public static List<List<Integer>> verticalOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 
         HashMap<TreeNode, Integer> dist = new HashMap<TreeNode, Integer>();
-        HashMap<Integer, List<integer>> map = new HashMap<>();
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
         Queue<treenode> q = new LinkedList<treenode>();
         q.offer(root);
         dist.put(root, 0);
@@ -28,7 +28,7 @@ public class Solution {
             root = q.poll();
             int index = dist.get(root);
             minIndex = Math.min(minIndex, index);
-            List<integer> list = map.containsKey(index) ?  map.get(index) : new ArrayList<>();
+            List<Integer> list = map.containsKey(index) ?  map.get(index) : new ArrayList<>();
             list.add(root.val);
             map.put(index, list);
             if (root.left != null) {

@@ -17,16 +17,16 @@ author: Jason
      * @param root: The root of binary tree.
      * @return: buttom-up level order a list of lists of integer
      */
-    public ArrayList<ArrayList<integer>> levelOrderBottom(TreeNode root) {
+    public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
         // write your code here
-        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) return result;
 
         Queue<treenode> q = new LinkedList<treenode>();
         q.add(root);
         while (!q.isEmpty()) {
             int size = q.size();
-            ArrayList<integer> list = new ArrayList<integer>();
+            ArrayList<Integer> list = new ArrayList<Integer>();
             for (int i = 0; i < size; i++) {
                 TreeNode curr = q.poll();
                 list.add(curr.val);

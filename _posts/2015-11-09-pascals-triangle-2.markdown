@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> getRow(int rowIndex) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> result = new ArrayList<Integer>();
         result.add(1);
         for (int i = 1; i <= rowIndex; i++) {
             int size = result.size();

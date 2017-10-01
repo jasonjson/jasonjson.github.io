@@ -18,8 +18,8 @@ You are guaranteed to have only one unique set of k values in the BST that are c
 Assume that the BST is balanced, could you solve it in less than O(n) runtime (where n = total nodes)? Divide and conquer, get the result from left subtree and right subtree then merge</p>
 ``` java
 public class Solution {
-    public List<integer> closestKValues(TreeNode root, double target, int k) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
         
         Stack<treenode> stack = new Stack<treenode>();

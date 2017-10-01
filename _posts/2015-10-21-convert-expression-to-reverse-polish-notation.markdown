@@ -11,10 +11,10 @@ author: Jason
 ---
 ``` java
 public class Solution {
-    public ArrayList<string> convertToRPN(String[] expression) {
-        ArrayList<string> result = new ArrayList<string>();
+    public ArrayList<String> convertToRPN(String[] expression) {
+        ArrayList<String> result = new ArrayList<String>();
         if (expression == null || expression.length == 0) return result;        
-        Stack<string> stack = new Stack<string>();
+        Stack<String> stack = new Stack<String>();
         for (String s : expression) {
             if (isOp(s)) {
                 if (s.equals("(")) {

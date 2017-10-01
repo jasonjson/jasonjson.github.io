@@ -13,8 +13,8 @@ author: Jason
 Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.</em></strong></p>
 ``` java
 public class Solution {
-    public List<string> findRepeatedDnaSequences(String s) {
-        List<string> result = new ArrayList<>();
+    public List<String> findRepeatedDnaSequences(String s) {
+        List<String> result = new ArrayList<>();
         if (s == null || s.length() == 0) return result;
         
         HashMap<String, Integer> map = new HashMap<>();

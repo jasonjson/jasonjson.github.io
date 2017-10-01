@@ -13,14 +13,14 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> generateAbbreviations(String word) {
-        List<string> result = new ArrayList<string>();
+    public List<String> generateAbbreviations(String word) {
+        List<String> result = new ArrayList<String>();
         //true indicates we can add abbreviation(numbers)
         helper(word, 0, "", result, true);
         return result;
     }
 
-    public void helper(String word, int start, String path, List<string> result, boolean addAbbr) {
+    public void helper(String word, int start, String path, List<String> result, boolean addAbbr) {
         if (start == word.length()) {
             result.add(new String(path));
             return;

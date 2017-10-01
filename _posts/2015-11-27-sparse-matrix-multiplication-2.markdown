@@ -18,9 +18,9 @@ public class Solution {
         if (A.length == 0 || B.length == 0) return new int[][]{};
         
         int row = A.length, col = B[0].length, mid = B.length;
-        List<List<integer>> temp = new ArrayList<List<integer>>();
+        List<List<Integer>> temp = new ArrayList<List<Integer>>();
         for (int i = 0; i < row; i++) {
-            List<integer> list = new ArrayList<>();
+            List<Integer> list = new ArrayList<>();
             for (int j = 0; j < mid; j++) {
                 if (A[i][j] != 0) {
                     list.add(j);
@@ -31,7 +31,7 @@ public class Solution {
         }
         int[][] result = new int[row][col];
         for (int i = 0; i < row; i++) {
-            List<integer> list = temp.get(i);
+            List<Integer> list = temp.get(i);
             for (int l = 0; l + 1 < list.size(); l += 2) {
                 int colNum = list.get(l);
                 int colVal = list.get(l + 1);

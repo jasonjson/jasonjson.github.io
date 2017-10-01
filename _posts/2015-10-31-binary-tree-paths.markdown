@@ -13,14 +13,14 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> binaryTreePaths(TreeNode root) {
-        List<string> result = new ArrayList<string>();
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> result = new ArrayList<String>();
         if (root == null) return result;
         helper(root, "", result);
         return result;
     }
     
-    public void helper(TreeNode root, String path, List<string> result) {
+    public void helper(TreeNode root, String path, List<String> result) {
         if (root.left == null && root.right == null) {
             result.add(new String(path + root.val));//leaf node必须单独处理
             return;

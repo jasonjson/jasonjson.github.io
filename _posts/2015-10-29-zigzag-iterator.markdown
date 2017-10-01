@@ -15,8 +15,8 @@ v2 = [3, 4, 5, 6]</p>
 By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1, 3, 2, 4, 5, 6].</p>
 ``` java
 public class ZigzagIterator {
-    Queue<integer> q = new LinkedList<integer>();
-    public ZigzagIterator(List<integer> v1, List<integer> v2) {
+    Queue<Integer> q = new LinkedList<Integer>();
+    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {
        int index = 0, prev_size = 0;
        while (true) {//can deal with k lists
            if (index < v1.size()) {

@@ -14,20 +14,20 @@ author: Jason
 
 ``` java
 public class Solution {
-    public static List<List<string>> findLadders(String beginWord, String endWord, Set<string> wordList) {
-        List<List<string>> result = new ArrayList<List<string>>();
+    public static List<List<String>> findLadders(String beginWord, String endWord, Set<String> wordList) {
+        List<List<String>> result = new ArrayList<List<String>>();
 
         wordList.add(beginWord);
         wordList.add(endWord);
         HashMap<String, Integer> dist = new HashMap<String, Integer>();
         bfs(beginWord, dist, wordList);
-        List<string> path = new ArrayList<>();
+        List<String> path = new ArrayList<>();
         path.add(endWord);
         dfs(endWord, beginWord, dist, wordList, path, result);
         return result;
     }
-    public static void bfs(String start, HashMap<String, Integer> dist, Set<string> wordList) {
-        Queue<string> q = new LinkedList<string>();
+    public static void bfs(String start, HashMap<String, Integer> dist, Set<String> wordList) {
+        Queue<String> q = new LinkedList<String>();
         q.offer(start);
         dist.put(start, 0);
         while (!q.isEmpty()) {
@@ -40,10 +40,10 @@ public class Solution {
             }
         }
     }
-    public static void dfs(String end, String start, HashMap<String, Integer> dist, Set<string> wordList, List<string> path, List<List<string>> result) {
+    public static void dfs(String end, String start, HashMap<String, Integer> dist, Set<String> wordList, List<String> path, List<List<String>> result) {
         if (end.equals(start)) {
             Collections.reverse(path);
-            result.add(new ArrayList<string>(path));
+            result.add(new ArrayList<String>(path));
             Collections.reverse(path);
             return;
         }
@@ -55,8 +55,8 @@ public class Solution {
             }
         }
     }
-    public static Set<string> getWord(String s, Set<string> wordList) {
-        Set<string> result = new HashSet<string>();
+    public static Set<String> getWord(String s, Set<String> wordList) {
+        Set<String> result = new HashSet<String>();
         for (int i = 0; i < s.length(); i++) {
             char[] chars = s.toCharArray();
             for (char c = 'a'; c <= 'z'; c++) {

@@ -14,9 +14,9 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<integer> majorityElement(int[] nums) {
+    public List<Integer> majorityElement(int[] nums) {
         if (nums == null) return null;
-        List<integer> result = new ArrayList<integer>();
+        List<Integer> result = new ArrayList<Integer>();
         int key1 = -1, key2 = -1, count1 = 0, count2 = 0;
         for (int n : nums) {
             if (count1 == 0) {

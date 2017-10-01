@@ -19,7 +19,7 @@ public class Solution {
      * @return: An integer indicate the value of maximum difference between two
      *          Subarrays
      */
-    public int maxDiffSubArrays(ArrayList<integer> nums) {
+    public int maxDiffSubArrays(ArrayList<Integer> nums) {
         if (nums == null || nums.size() == 0) return 0;
         //bug: typos !!!!
         int result = 0;

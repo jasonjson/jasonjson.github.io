@@ -36,7 +36,7 @@ public class Solution {
     public static int pickRandom(TreeNode root) {
         if (root == null) return -1;
 
-        List<integer> nums = getList(root);
+        List<Integer> nums = getList(root);
         int i = 0, result = nums.get(0);
         Random rand = new Random();
         for (; i < nums.size(); i++) {
@@ -48,12 +48,12 @@ public class Solution {
         return result;
     }
 
-    public static List<integer> getList(TreeNode root) {
-        List<integer> result = new ArrayList<>();
+    public static List<Integer> getList(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
         if (root == null) return result;
 
-        List<integer> left = getList(root.left);
-        List<integer> right = getList(root.right);
+        List<Integer> left = getList(root.left);
+        List<Integer> right = getList(root.right);
         result.addAll(left);
         result.add(root.val);
         result.addAll(right);

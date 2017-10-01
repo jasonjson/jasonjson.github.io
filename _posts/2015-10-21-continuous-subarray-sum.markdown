@@ -17,9 +17,9 @@ public class Solution {
      * @param A an integer array
      * @return  A list of integers includes the index of the first number and the index of the last number
      */
-    public ArrayList<integer> continuousSubarraySum(int[] A) {
+    public ArrayList<Integer> continuousSubarraySum(int[] A) {
         // Write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (A == null || A.length == 0) return result;
         
         int local_max = 0, global_max = Integer.MIN_VALUE;

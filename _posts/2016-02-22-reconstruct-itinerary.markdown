@@ -13,17 +13,17 @@ author: Jason
 
 ``` java
 public class Solution {
-        public static List<string> findItinerary(String[][] tickets) {
-        List<string> result = new ArrayList<>();
+        public static List<String> findItinerary(String[][] tickets) {
+        List<String> result = new ArrayList<>();
         if (tickets == null || tickets.length == 0) return result;
 
-        Map<String, List<string>> map = new HashMap<>();
+        Map<String, List<String>> map = new HashMap<>();
         for (String[] ticket : tickets) {
-            List<string> arrival = map.containsKey(ticket[0]) ? map.get(ticket[0]) : new ArrayList<>();
+            List<String> arrival = map.containsKey(ticket[0]) ? map.get(ticket[0]) : new ArrayList<>();
             arrival.add(ticket[1]);
             map.put(ticket[0], arrival);
         }
-        for (List<string> arrivals : map.values()) {
+        for (List<String> arrivals : map.values()) {
             Collections.sort(arrivals);
         }
         result.add("JFK");
@@ -31,12 +31,12 @@ public class Solution {
         return result;
     }
 
-    public static boolean helper(Map<String, List<string>> map, List<string> path, String last, int stops) {
+    public static boolean helper(Map<String, List<String>> map, List<String> path, String last, int stops) {
         if (path.size() == stops) {
             return true;
         }
         if (!map.containsKey(last) || map.get(last).size() == 0) return false;
-        List<string> arrivals = map.get(last);
+        List<String> arrivals = map.get(last);
         for (int i = 0; i < arrivals.size(); i++) {
             String next = map.get(last).remove(i);
             path.add(next);

@@ -21,8 +21,8 @@ public class Solution {
             this.height = height;
         }
     }
-    public ArrayList<ArrayList<integer>> buildingOutline(int[][] buildings) {
-        ArrayList<ArrayList<integer>> result = new ArrayList<ArrayList<integer>>();
+    public ArrayList<ArrayList<Integer>> buildingOutline(int[][] buildings) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (buildings == null || buildings.length == 0) return result;        
         ArrayList<height> heights = new ArrayList<height>();
         for (int[] building : buildings) {
@@ -34,7 +34,7 @@ public class Solution {
                 return h1.index != h2.index ? h1.index - h2.index : h1.height - h2.height; 
             }
         });
-        PriorityQueue<integer> heap = new PriorityQueue<integer>(10, Collections.reverseOrder());
+        PriorityQueue<Integer> heap = new PriorityQueue<Integer>(10, Collections.reverseOrder());
         heap.add(0);
         int prev_height = 0, prev_index = 0;
         for (Height h : heights) {
@@ -46,7 +46,7 @@ public class Solution {
             int curr = heap.peek();
             if (curr != prev_height) {
                 if (prev_height != 0) {
-                    ArrayList<integer> list = new ArrayList<integer>();
+                    ArrayList<Integer> list = new ArrayList<Integer>();
                     list.add(prev_index);
                     list.add(h.index);
                     list.add(prev_height);

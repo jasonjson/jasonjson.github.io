@@ -21,8 +21,8 @@ public class Solution {
     public int evaluateExpression(String[] expression) {
         // write your code here
         if (expression == null || expression.length == 0) return 0;
-        Stack<integer> num = new Stack<integer>();
-        Stack<string> op = new Stack<string>();
+        Stack<Integer> num = new Stack<Integer>();
+        Stack<String> op = new Stack<String>();
         
         for (String s : expression) {
             if (isOp(s)) {

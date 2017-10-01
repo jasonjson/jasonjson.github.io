@@ -17,9 +17,9 @@ public class Solution {
      * @param root: The root of binary tree.
      * @return: Postorder in ArrayList which contains node values.
      */
-    public ArrayList<integer> postorderTraversal(TreeNode root) {
+    public ArrayList<Integer> postorderTraversal(TreeNode root) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
         
         Stack<treenode> stack = new Stack<treenode>();
@@ -53,12 +53,12 @@ public class Solution {
 ```
 ``` java
 public class Solution {
-    public ArrayList<integer> postorderTraversal(TreeNode root) {
+    public ArrayList<Integer> postorderTraversal(TreeNode root) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (root != null) {
-            ArrayList<integer> left = postorderTraversal(root.left);
-            ArrayList<integer> right = postorderTraversal(root.right);
+            ArrayList<Integer> left = postorderTraversal(root.left);
+            ArrayList<Integer> right = postorderTraversal(root.right);
             result.addAll(left);
             result.addAll(right);
             result.add(root.val);

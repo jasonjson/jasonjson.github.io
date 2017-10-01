@@ -20,8 +20,8 @@ public class Solution {
     public int[] medianII(int[] nums) {
         int[] result = new int[nums.length];
         
-        PriorityQueue<integer> min = new PriorityQueue<integer>();
-        PriorityQueue<integer> max = new PriorityQueue<integer>(10, Collections.reverseOrder());
+        PriorityQueue<Integer> min = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> max = new PriorityQueue<Integer>(10, Collections.reverseOrder());
         
         for (int i = 0; i < nums.length; i++) {
             if (max.isEmpty() || nums[i] < max.peek()) {

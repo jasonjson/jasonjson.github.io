@@ -19,9 +19,9 @@ public class Solution {
      * @return: A list of integers includes the index of the first number 
      *          and the index of the last number
      */
-    public ArrayList<integer> subarraySum(int[] nums) {
+    public ArrayList<Integer> subarraySum(int[] nums) {
         // write your code here
-        ArrayList<integer> result = new ArrayList<integer>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
         if (nums == null || nums.length == 0) return result;
         
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();

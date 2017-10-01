@@ -19,7 +19,7 @@ public class Solution {
      */
     public boolean isValidBST(TreeNode root) {
         // write your code here
-        ArrayList<integer> array = new ArrayList<integer>();
+        ArrayList<Integer> array = new ArrayList<Integer>();
         inorderTraversal(array, root);
         for(int i = 0; i < array.size() - 1; i++){
             if (array.get(i) >= array.get(i+1)) return false;
@@ -27,7 +27,7 @@ public class Solution {
         return true;
     }
 
-    public void inorderTraversal(ArrayList<integer> array, TreeNode root){
+    public void inorderTraversal(ArrayList<Integer> array, TreeNode root){
         if(root == null) return;
         inorderTraversal(array, root.left);
         array.add(root.val);

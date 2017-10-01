@@ -13,13 +13,13 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<string> generateParenthesis(int n) {
-        List<string> result = new ArrayList<string>();
+    public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<String>();
         helper(n, n, "", result);
         return result;
     }
 
-    public void helper(int left, int right, String path, List<string> result) {
+    public void helper(int left, int right, String path, List<String> result) {
         if (left == 0 && right == 0) {
             result.add(path);
             return;

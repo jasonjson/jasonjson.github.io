@@ -14,11 +14,11 @@ author: Jason
 Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.</em></strong></p>
 ``` java
 public class Solution {
-    public List<List<string>> groupStrings(String[] strings) {
-        List<List<string>> result = new ArrayList<List<string>>();
+    public List<List<String>> groupStrings(String[] strings) {
+        List<List<String>> result = new ArrayList<List<String>>();
         if (strings == null || strings.length == 0) return result;
         
-        HashMap<String, List<string>> map = new HashMap<String, List<string>>();
+        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
         Arrays.sort(strings);
         for (String s : strings) {
             String key = ""; //the distance between nearby chars should be the same
@@ -26,11 +26,11 @@ public class Solution {
                 key += (s.charAt(i) - s.charAt(i-1) + 26) % 26;//deal with z -> a
             }
             if (!map.containsKey(key)) {
-                map.put(key, new ArrayList<string>());
+                map.put(key, new ArrayList<String>());
             }
             map.get(key).add(s);
         }
-        for (List<string> list : map.values()) {
+        for (List<String> list : map.values()) {
             result.add(list);
         }
         return result;

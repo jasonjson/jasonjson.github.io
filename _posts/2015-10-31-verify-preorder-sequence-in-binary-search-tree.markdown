@@ -19,7 +19,7 @@ Could you do it using only constant space complexity?</em></strong></p>
 public class Solution {
     public boolean verifyPreorder(int[] preorder) {
         if (preorder == null || preorder.length == 0) return true;
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         int min = Integer.MIN_VALUE;
         for (int n : preorder) {
             if (n < min) {
@@ -38,7 +38,7 @@ public class Solution {
 public class Solution {
     public static boolean verifyPostOrder(int[] postOrder) {
         int max = Integer.MAX_VALUE;
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         for (int i = postOrder.length - 1; i >= 0; i--) {
             if (postOrder[i] > max) {
                 return false;

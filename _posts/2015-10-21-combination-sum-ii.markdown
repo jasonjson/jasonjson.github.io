@@ -13,18 +13,18 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<integer>> combinationSum2(int[] num, int target) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> combinationSum2(int[] num, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (num == null || num.length == 0) return result;
 
         Arrays.sort(num);
-        helper(num, 0, target, new ArrayList<integer>(), result);
+        helper(num, 0, target, new ArrayList<Integer>(), result);
         return result;
     }
 
-    public void helper (int[] num, int start, int remain, List<integer> list, List<List<integer>> result) {
+    public void helper (int[] num, int start, int remain, List<Integer> list, List<List<Integer>> result) {
         if (remain == 0) {
-            result.add(new ArrayList<integer>(list));
+            result.add(new ArrayList<Integer>(list));
             return;
         }
         for (int i = start; i < num.length; i++) {

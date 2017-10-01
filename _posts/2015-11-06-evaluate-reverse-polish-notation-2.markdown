@@ -16,7 +16,7 @@ Valid operators are +, -, *, /. Each operand may be an integer or another expres
 public class Solution {
     public int evalRPN(String[] tokens) {
         if (tokens == null || tokens.length == 0) return 0;
-        Stack<integer> stack = new Stack<integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         for (String s : tokens) {
             if (isOp(s)) {
                 int num1 = stack.pop();

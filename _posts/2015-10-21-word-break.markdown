@@ -14,7 +14,7 @@ author: Jason
 
 ``` java
 public class Solution {
-    public boolean wordBreak(String s, Set<string> wordDict) {
+    public boolean wordBreak(String s, Set<String> wordDict) {
         if (wordDict == null || wordDict.size() == 0) return false;
         
         int maxLen = 0;
@@ -42,13 +42,13 @@ public class Solution {
      * @param s: A string s
      * @param dict: A dictionary of words dict
      */
-    public boolean wordBreak(String s, Set<string> dict) {
+    public boolean wordBreak(String s, Set<String> dict) {
         if (s == null || s.length() == 0) return true;
         
         return helper(s, dict);
     }
     
-    public boolean helper(String s, Set<string> dict) {
+    public boolean helper(String s, Set<String> dict) {
         if (dict.contains(s)) {
             return true;
         }

@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 public class Solution { //level order traversal
-    public List<integer> rightSideView(TreeNode root) {
-        List<integer> result = new ArrayList<integer>();
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
         
         Queue<treenode> q = new LinkedList<treenode>();

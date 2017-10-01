@@ -17,7 +17,7 @@ public class Solution {
     public int sumNumbers(TreeNode root) {
         if (root == null) return 0;
         
-        List<string> result = new ArrayList<string>();
+        List<String> result = new ArrayList<String>();
         helper(root, "", result);
         int sum = 0;
         for (String s : result) {
@@ -26,7 +26,7 @@ public class Solution {
         return sum;
     }
     
-    public void helper(TreeNode root, String path, List<string> result) {
+    public void helper(TreeNode root, String path, List<String> result) {
         if (root == null) {
             return;
         }

@@ -17,8 +17,8 @@ public class Solution {
         int[] nums = {1,1,2,2,3,3,3,4,5,6,6,6,6,6,7,7,7,8,8,8,8,9,10,11,12,13,14,15,15};
         System.out.println(get(nums, 3));
     }
-    public static List<integer> get(int[] nums, int k) {
-        List<integer> result = new ArrayList<>();
+    public static List<Integer> get(int[] nums, int k) {
+        List<Integer> result = new ArrayList<>();
         if (nums == null || nums.length == 0 || k == 0) return result;
 
 
@@ -27,7 +27,7 @@ public class Solution {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
         System.out.println(map);
-        PriorityQueue<integer> pq = new PriorityQueue<>(k, new Comparator<integer>() {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(k, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 return map.get(o1) - map.get(o2);//不用造class来储存值和次数

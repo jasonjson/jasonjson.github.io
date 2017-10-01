@@ -34,7 +34,7 @@ public class Solution {
                 return a.index == b.index ? a.height - b.height : a.index - b.index;
             }
         });
-        PriorityQueue<integer> heap = new PriorityQueue<integer>(10, Collections.reverseOrder());
+        PriorityQueue<Integer> heap = new PriorityQueue<Integer>(10, Collections.reverseOrder());
         heap.offer(0);
         int prev = 0;
         for (Height h : heights) {

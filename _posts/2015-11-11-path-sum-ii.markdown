@@ -13,18 +13,18 @@ author: Jason
 
 ``` java
 public class Solution {
-    public List<List<integer>> pathSum(TreeNode root, int sum) {
-        List<List<integer>> result = new ArrayList<List<integer>>();
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
-        helper(root, new ArrayList<integer>(), sum, result);
+        helper(root, new ArrayList<Integer>(), sum, result);
         return result;
     }
 
-    public void helper(TreeNode root, List<integer> path, int remain, List<List<integer>> result) {
+    public void helper(TreeNode root, List<Integer> path, int remain, List<List<Integer>> result) {
         if (root == null) return;
         path.add(root.val);
         if (root.left == null && root.right == null && root.val == remain) {
-            result.add(new ArrayList<integer>(path));//加进result的条件比较特殊,必须到了leaf且leaf的值等于remain
+            result.add(new ArrayList<Integer>(path));//加进result的条件比较特殊,必须到了leaf且leaf的值等于remain
         }
         helper(root.left, path, remain - root.val, result);
         helper(root.right, path, remain - root.val, result);

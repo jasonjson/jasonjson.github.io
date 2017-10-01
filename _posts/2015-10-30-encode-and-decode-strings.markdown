@@ -15,7 +15,7 @@ author: Jason
 public class Codec {
 
     // Encodes a list of strings to a single string.
-    public String encode(List<string> strs) {
+    public String encode(List<String> strs) {
         if (strs == null || strs.size() == 0) return "";
 
         StringBuilder sb = new StringBuilder();
@@ -26,8 +26,8 @@ public class Codec {
     }
 
     // Decodes a single string to a list of strings.
-    public List<string> decode(String s) {
-        List<string> result = new ArrayList<>();
+    public List<String> decode(String s) {
+        List<String> result = new ArrayList<>();
         if (s == null || s.length() == 0) return result;
         
         for (int i = 0; i < s.length();) {

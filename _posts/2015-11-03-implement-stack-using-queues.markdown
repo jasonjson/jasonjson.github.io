@@ -17,8 +17,8 @@ empty() -- Return whether the stack is empty.</em></strong></p>
 ``` java
 class MyStack {
     // Push element x onto stack.
-    Queue<integer> q1 = new LinkedList<integer>();
-    Queue<integer> q2 = new LinkedList<integer>();
+    Queue<Integer> q1 = new LinkedList<Integer>();
+    Queue<Integer> q2 = new LinkedList<Integer>();
     int len = 0;
     public void push(int x) {
         q1.offer(x);

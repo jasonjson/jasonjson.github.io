@@ -16,8 +16,8 @@ class Solution {
      * param n: As description.
      * return: A list of strings.
      */
-    public ArrayList<string> fizzBuzz(int n) {
-        ArrayList<string> results = new ArrayList<string>();
+    public ArrayList<String> fizzBuzz(int n) {
+        ArrayList<String> results = new ArrayList<String>();
         for (int i = 1; i <= n; i++) {
             if (i % 15 == 0) {
                 results.add("fizz buzz");

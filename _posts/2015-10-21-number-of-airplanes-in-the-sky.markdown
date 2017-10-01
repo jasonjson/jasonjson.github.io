@@ -23,7 +23,7 @@ class Solution {
                 return a.start - b.start;
             }
         });
-        PriorityQueue<integer> pq = new PriorityQueue<integer>();
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         for (Interval interval : airplanes) {
             if (!pq.isEmpty() && interval.start >= pq.peek()) {
                 pq.poll();

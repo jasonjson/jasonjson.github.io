@@ -13,8 +13,8 @@ author: Jason
 
 ``` java
 class Solution {
-    public ArrayList<string> longestWords(String[] dictionary) {
-        ArrayList<string> result = new ArrayList<string>();
+    public ArrayList<String> longestWords(String[] dictionary) {
+        ArrayList<String> result = new ArrayList<String>();
         if (dictionary == null) return result;
         
         int maxLen = 0;

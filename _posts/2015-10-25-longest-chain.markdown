@@ -13,7 +13,7 @@ author: Jason
 ``` java
 public class Solution {
     public int longestchain(String[] words) {
-        HashSet<string> dict = new HashSet<string>();
+        HashSet<String> dict = new HashSet<String>();
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         //use map to store the longest len for string, save time
         for (String s : words) {
@@ -31,7 +31,7 @@ public class Solution {
         return longest;
     }
 
-    public int helper(String s, HashSet<string> dict, HashMap<String, Integer> map) {
+    public int helper(String s, HashSet<String> dict, HashMap<String, Integer> map) {
         int result = 0;
         for (int i = 0; i < s.length(); i++) {
             String newStr = s.substring(0, i) + s.substring(i+1);

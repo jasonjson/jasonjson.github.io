@@ -13,10 +13,10 @@ author: Jason
 
 ``` java
 public class Solution {
-    public ArrayList<string> convertToPN(String[] expression) {
-        ArrayList<string> result = new ArrayList<string>();
+    public ArrayList<String> convertToPN(String[] expression) {
+        ArrayList<String> result = new ArrayList<String>();
         if (expression == null || expression.length == 0) return result;
-        Stack<string> stack = new Stack<string>();
+        Stack<String> stack = new Stack<String>();
         for (int i = expression.length - 1; i >= 0; i--) {
             String s = expression[i];
             if (isOp(s)) {
