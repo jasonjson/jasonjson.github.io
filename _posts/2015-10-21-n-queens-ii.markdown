@@ -8,6 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
+**Follow up for N-Queens problem. Now, instead outputting board configurations, return the total number of distinct solutions.**
 
 ``` java
 public class Solution {
