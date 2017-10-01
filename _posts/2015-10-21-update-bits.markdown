@@ -3,7 +3,7 @@ layout: post
 title: Update Bits
 date: 2015-10-21 02:37:14.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Bit
 author: Jason

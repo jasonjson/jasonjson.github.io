@@ -3,7 +3,7 @@ layout: post
 title: Product of Array Exclude Itself
 date: 2015-10-21 02:19:40.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 author: Jason

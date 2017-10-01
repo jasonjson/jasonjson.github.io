@@ -3,9 +3,9 @@ layout: post
 title: Triangle Count
 date: 2015-10-24 12:06:43.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Matrix
 author: Jason
 ---

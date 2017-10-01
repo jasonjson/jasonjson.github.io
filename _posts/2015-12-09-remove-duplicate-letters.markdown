@@ -3,9 +3,9 @@ layout: post
 title: Remove Duplicate Letters
 date: 2015-12-09 12:59:38.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.</em></strong></p>

@@ -3,7 +3,7 @@ layout: post
 title: Segment Tree Query II
 date: 2015-10-21 13:30:07.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

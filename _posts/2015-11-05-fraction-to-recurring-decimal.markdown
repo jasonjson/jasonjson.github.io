@@ -3,9 +3,9 @@ layout: post
 title: Fraction to Recurring Decimal
 date: 2015-11-05 12:57:44.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given two integers representing the numerator and denominator of a fraction, return the fraction in string format. If the fractional part is repeating, enclose the repeating part in parentheses.</em></strong></p>

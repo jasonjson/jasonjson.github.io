@@ -3,9 +3,9 @@ layout: post
 title: Expression Evaluation
 date: 2015-10-27 11:33:11.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

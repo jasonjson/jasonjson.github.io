@@ -3,7 +3,7 @@ layout: post
 title: Max Consecutive Ones
 date: 2017-05-04
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

@@ -3,7 +3,7 @@ layout: post
 title: Flatten Binary Tree to Linked List
 date: 2015-10-21 14:43:36.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 - LinkedList

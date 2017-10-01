@@ -3,7 +3,7 @@ layout: post
 title: Detect Capital
 date: 2017-05-04
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

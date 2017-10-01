@@ -3,7 +3,7 @@ layout: post
 title: Encode and Decode Strings
 date: 2015-10-30 11:43:26.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

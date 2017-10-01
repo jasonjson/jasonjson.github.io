@@ -3,9 +3,9 @@ layout: post
 title: Range Sum Query - Immutable
 date: 2015-11-10 09:14:36.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.</em></strong></p>

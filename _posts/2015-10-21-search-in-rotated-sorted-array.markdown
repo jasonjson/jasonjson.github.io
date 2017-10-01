@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Search in Rotated Sorted Array
+title: 33 - Search in Rotated Sorted Array
 date: 2015-10-21 02:29:17.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

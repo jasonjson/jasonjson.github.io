@@ -3,7 +3,7 @@ layout: post
 title: Implement Queue by Two Stacks
 date: 2015-10-21 12:59:51.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

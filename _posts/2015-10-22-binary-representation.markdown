@@ -3,7 +3,7 @@ layout: post
 title: Binary Representation
 date: 2015-10-22 08:28:06.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 author: Jason

@@ -3,9 +3,9 @@ layout: post
 title: Shortest Word Distance II
 date: 2015-11-02 13:36:55.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>This is a follow up of Shortest Word Distance. The only difference is now you are given the list of words and your method will be called repeatedly many times with different parameters. How would you optimize it?</p>

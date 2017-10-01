@@ -3,9 +3,9 @@ layout: post
 title: Cosine Similarity
 date: 2015-10-21 03:00:50.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Cosine similarity is a measure of similarity between two vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle.</em></strong></p>

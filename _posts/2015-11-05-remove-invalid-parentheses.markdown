@@ -3,10 +3,10 @@ layout: post
 title: Remove Invalid Parentheses
 date: 2015-11-05 11:13:54.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.</p>

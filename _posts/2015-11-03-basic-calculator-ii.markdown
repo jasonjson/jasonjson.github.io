@@ -3,9 +3,9 @@ layout: post
 title: Basic Calculator II
 date: 2015-11-03 14:05:09.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Implement a basic calculator to evaluate a simple expression string.</p>

@@ -3,7 +3,7 @@ layout: post
 title: Reverse Words in a String III
 date: 2017-04-29
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

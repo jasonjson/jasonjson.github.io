@@ -3,9 +3,9 @@ layout: post
 title: Two Sum III - Data structure design
 date: 2015-11-05 12:06:13.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Design and implement a TwoSum class. It should support the following operations: add and find.</p>

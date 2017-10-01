@@ -3,9 +3,9 @@ layout: post
 title: Restore IP Addresses
 date: 2015-11-12 09:09:28.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Given a string containing only digits, restore it by returning all possible valid IP address combinations.**

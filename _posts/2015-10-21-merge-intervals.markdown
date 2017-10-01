@@ -3,9 +3,9 @@ layout: post
 title: Merge Intervals
 date: 2015-10-21 13:03:49.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Given a collection of intervals, merge all overlapping intervals.**

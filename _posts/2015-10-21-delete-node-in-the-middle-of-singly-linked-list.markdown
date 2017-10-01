@@ -3,7 +3,7 @@ layout: post
 title: Delete Node in the Middle of Singly Linked List
 date: 2015-10-21 02:04:08.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 author: Jason

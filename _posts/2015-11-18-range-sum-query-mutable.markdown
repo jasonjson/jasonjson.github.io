@@ -3,7 +3,7 @@ layout: post
 title: Range Sum Query - Mutable
 date: 2015-11-18 21:19:53.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

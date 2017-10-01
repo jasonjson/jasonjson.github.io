@@ -3,7 +3,7 @@ layout: post
 title: Number of Connected Components in an Undirected Graph
 date: 2016-01-03 19:50:36.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
 - Data Structure

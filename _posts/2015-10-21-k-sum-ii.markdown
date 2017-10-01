@@ -3,7 +3,7 @@ layout: post
 title: k Sum II
 date: 2015-10-21 14:23:22.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Rotate Image
+title: 48 - Rotate Image
 date: 2015-10-21 14:34:51.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

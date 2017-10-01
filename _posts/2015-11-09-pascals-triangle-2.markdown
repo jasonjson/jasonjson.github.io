@@ -3,9 +3,9 @@ layout: post
 title: Pascal's Triangle II
 date: 2015-11-09 17:18:45.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Given an index k, return the kth row of the Pascal's triangle.**

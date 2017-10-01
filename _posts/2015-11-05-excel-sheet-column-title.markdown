@@ -3,9 +3,9 @@ layout: post
 title: Excel Sheet Column Title
 date: 2015-11-05 11:43:27.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</em></strong></p>

@@ -1,23 +1,24 @@
 ---
 layout: post
-title: Longest Valid Parentheses
+title: 32 - Longest Valid Parentheses
 date: 2015-11-15 10:28:38.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
-<p><strong><em>Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.</p>
+**Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.**
+* For "(()", the longest valid parentheses substring is "()", which has length = 2.
+* Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
 
-For "(()", the longest valid parentheses substring is "()", which has length = 2.</p>
-Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.</em></strong></p>
+
 ``` java
 //和 maximum histogram 非常类似
 public class Solution {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
-        
+
         Stack<integer> stack = new Stack<integer>();//换换思维,不是push char而是push index便于求长度
         int start = 0, len = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -41,7 +42,7 @@ public class Solution {
 public class Solution {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
-        
+
         Set<string> visited = new HashSet<string>();
         Queue<string> q = new LinkedList<string>();
         q.offer(s);
@@ -61,12 +62,12 @@ public class Solution {
         }
         return 0;
     }
-    
+
     public boolean isValid(String s) {
         int count = 0;
         for (char c : s.toCharArray()) {
             if (c == '(') {
-                count ++;    
+                count ++;
             } else {
                 if (count <= 0) {
                     return false;

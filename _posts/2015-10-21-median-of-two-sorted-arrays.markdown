@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Median of Two Sorted Arrays
+title: 4 - Median of Two Sorted Arrays
 date: 2015-10-21 02:31:58.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

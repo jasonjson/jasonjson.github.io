@@ -3,7 +3,7 @@ layout: post
 title: Topological Sorting
 date: 2015-10-21 12:56:31.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Graph
 author: Jason

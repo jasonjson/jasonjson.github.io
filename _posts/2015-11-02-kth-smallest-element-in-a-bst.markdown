@@ -3,7 +3,7 @@ layout: post
 title: Kth Smallest Element in a BST
 date: 2015-11-02 18:05:03.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

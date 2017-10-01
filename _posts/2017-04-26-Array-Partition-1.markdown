@@ -3,7 +3,7 @@ layout: post
 title: Array Partition 1
 date: 2017-04-26
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

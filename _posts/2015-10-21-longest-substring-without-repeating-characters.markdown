@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Longest Substring Without Repeating Characters
+title: 3 - Longest Substring Without Repeating Characters
 date: 2015-10-21 14:28:39.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason
@@ -35,7 +35,7 @@ public class Solution {
 public class Solution {
     /**
      * @param s: a string
-     * @return: an integer 
+     * @return: an integer
      */
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
@@ -71,7 +71,7 @@ class Solution(object):
             if char in char_map:
                 while char_map[char] > 0:
                     char_map[s[first_index]] -= 1
-                    first_index += 1    
+                    first_index += 1
             ret = max(ret, i - first_index + 1)
             char_map[char] = 1
         return ret

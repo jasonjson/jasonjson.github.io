@@ -3,7 +3,7 @@ layout: post
 title: Local maximum
 date: 2015-10-22 14:50:21.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 author: Jason

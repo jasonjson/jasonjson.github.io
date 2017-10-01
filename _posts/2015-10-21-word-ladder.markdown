@@ -3,7 +3,7 @@ layout: post
 title: Word Ladder
 date: 2015-10-21 12:57:57.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
 author: Jason

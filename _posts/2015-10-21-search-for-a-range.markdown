@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Search for a Range
+title: 34 - Search for a Range
 date: 2015-10-21 02:27:43.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

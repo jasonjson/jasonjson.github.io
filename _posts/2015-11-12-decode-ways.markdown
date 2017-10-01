@@ -3,7 +3,7 @@ layout: post
 title: Decode Ways
 date: 2015-11-12 12:13:00.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

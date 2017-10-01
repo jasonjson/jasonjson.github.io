@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Letter Combinations of a Phone Number
+title: 17 - Letter Combinations of a Phone Number
 date: 2015-10-21 14:43:14.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

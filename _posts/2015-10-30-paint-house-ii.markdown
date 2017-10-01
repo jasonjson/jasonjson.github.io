@@ -3,7 +3,7 @@ layout: post
 title: Paint House II
 date: 2015-10-30 21:22:04.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

@@ -3,9 +3,9 @@ layout: post
 title: Happy Number
 date: 2015-11-04 15:15:26.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Write an algorithm to determine if a number is "happy".</p>

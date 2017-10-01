@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Longest Common Prefix
+title: 14 - Longest Common Prefix
 date: 2015-11-15 12:24:19.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Write a function to find the longest common prefix string amongst an array of strings.**

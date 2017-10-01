@@ -3,7 +3,7 @@ layout: post
 title: Valid Palindrome
 date: 2015-10-21 02:13:45.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Palindrome
 - String

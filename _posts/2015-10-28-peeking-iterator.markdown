@@ -3,7 +3,7 @@ layout: post
 title: Peeking Iterator
 date: 2015-10-28 13:34:02.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

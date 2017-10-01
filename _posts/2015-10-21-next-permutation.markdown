@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Next Permutation
+title: 31 - Next Permutation
 date: 2015-10-21 14:33:08.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Permutation
 author: Jason

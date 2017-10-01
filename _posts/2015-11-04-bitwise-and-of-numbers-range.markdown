@@ -3,10 +3,10 @@ layout: post
 title: Bitwise AND of Numbers Range
 date: 2015-11-04 15:36:13.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Bit
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.</p>

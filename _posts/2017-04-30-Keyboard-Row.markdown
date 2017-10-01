@@ -3,7 +3,7 @@ layout: post
 title: Keyboard Row
 date: 2017-04-30
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

@@ -3,9 +3,9 @@ layout: post
 title: Super Ugly Number
 date: 2015-12-03 21:42:33.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Reshape the Matrix
 date: 2017-04-30
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

@@ -3,7 +3,7 @@ layout: post
 title: Design Twitter
 date: 2017-05-06
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Priority Queue
 author: Jason

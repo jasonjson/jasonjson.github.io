@@ -3,9 +3,9 @@ layout: post
 title: Copy Books
 date: 2015-10-25 10:07:53.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

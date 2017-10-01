@@ -3,9 +3,9 @@ layout: post
 title: Ugly Number II
 date: 2015-10-30 22:03:57.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Longest Substring with At Most Two Distinct Characters
 date: 2015-11-05 16:22:23.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Two Pointers
 author: Jason

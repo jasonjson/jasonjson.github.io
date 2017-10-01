@@ -3,9 +3,9 @@ layout: post
 title: Isomorphic Strings
 date: 2015-11-04 14:33:12.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given two strings s and t, determine if they are isomorphic.</p>

@@ -3,7 +3,7 @@ layout: post
 title: Remove Node in Binary Search Tree
 date: 2015-10-21 02:03:14.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

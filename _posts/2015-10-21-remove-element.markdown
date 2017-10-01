@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Remove Element
+title: 27 - Remove Element
 date: 2015-10-21 02:16:55.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

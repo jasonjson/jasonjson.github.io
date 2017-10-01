@@ -3,7 +3,7 @@ layout: post
 title: Search Range in Binary Search Tree
 date: 2015-10-21 02:58:42.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

@@ -3,7 +3,7 @@ layout: post
 title: Minimum Subarray
 date: 2015-10-21 12:50:57.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Subarray
 author: Jason

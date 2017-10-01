@@ -3,9 +3,9 @@ layout: post
 title: Shortest Word Distance III
 date: 2015-11-02 13:37:36.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>This is a follow up of Shortest Word Distance. The only difference is now word1 could be the same as word2.</p>

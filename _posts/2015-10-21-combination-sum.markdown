@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Combination Sum
+title: 39 - Combination Sum
 date: 2015-10-21 03:41:33.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

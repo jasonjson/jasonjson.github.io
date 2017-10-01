@@ -3,9 +3,9 @@ layout: post
 title: Strobogrammatic Number II
 date: 2015-11-02 11:43:03.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down). Find all strobogrammatic numbers that are of length = n.</em></strong></p>

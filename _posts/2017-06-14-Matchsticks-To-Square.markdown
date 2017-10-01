@@ -3,7 +3,7 @@ layout: post
 title: Matchsticks To Square
 date: 2017-06-14
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

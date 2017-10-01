@@ -3,7 +3,7 @@ layout: post
 title: Recover Binary Search Tree
 date: 2015-11-11 17:51:55.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

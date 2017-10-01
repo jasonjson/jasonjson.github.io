@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Divide Two Integers
+title: 29 - Divide Two Integers
 date: 2015-10-21 14:04:10.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 author: Jason

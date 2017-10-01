@@ -3,7 +3,7 @@ layout: post
 title: Maximum Subarray III
 date: 2015-10-21 12:52:17.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 - Subarray

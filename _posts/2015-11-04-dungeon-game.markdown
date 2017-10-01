@@ -3,7 +3,7 @@ layout: post
 title: Dungeon Game
 date: 2015-11-04 19:13:08.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

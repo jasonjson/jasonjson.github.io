@@ -3,9 +3,9 @@ layout: post
 title: Digit Counts
 date: 2015-10-21 14:03:43.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

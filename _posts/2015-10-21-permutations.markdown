@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Permutations
+title: 46 - Permutations
 date: 2015-10-21 03:37:39.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

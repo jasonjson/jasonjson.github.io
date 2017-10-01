@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Longest Palindromic Substring
+title: 5 - Longest Palindromic Substring
 date: 2015-10-21 02:14:16.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Palindrome
 - String
 author: Jason
 ---
@@ -49,8 +48,8 @@ public class Solution {
                 }
                 lo--; //!lo -- not lo ++
                 hi++;
-            }   
-            //odd case, i is the mid position    
+            }
+            //odd case, i is the mid position
             lo = i - 1; hi = i + 1;
             while(lo >=0 && hi < s.length() && s.charAt(lo) == s.charAt(hi)){
                 if(hi - lo + 1 > maxLen){

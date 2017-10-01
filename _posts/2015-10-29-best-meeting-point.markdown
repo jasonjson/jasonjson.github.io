@@ -3,9 +3,9 @@ layout: post
 title: Best Meeting Point
 date: 2015-10-29 11:36:52.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

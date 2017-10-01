@@ -3,12 +3,12 @@ layout: post
 title: A + B Problem
 date: 2015-10-21 02:39:12.000000000 -04:00
 tags:
-- Algorithm
+- Lintcode
 categories:
 - Bit
 author: Jason
 ---
-<p><strong><em>Write a function that add two numbers A and B. You should not use + or any arithmetic operators.</em></strong></p>
+**Write a function that add two numbers A and B. You should not use + or any arithmetic operators.**
 
 
 ``` java

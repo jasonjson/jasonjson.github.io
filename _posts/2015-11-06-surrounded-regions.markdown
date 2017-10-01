@@ -3,9 +3,9 @@ layout: post
 title: Surrounded Regions
 date: 2015-11-06 22:47:03.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.</p>

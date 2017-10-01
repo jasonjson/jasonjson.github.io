@@ -3,7 +3,7 @@ layout: post
 title: Perfect Squares
 date: 2015-10-28 11:33:33.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

@@ -3,9 +3,9 @@ layout: post
 title: Largest Rectangle in Histogram
 date: 2015-10-26 22:24:05.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

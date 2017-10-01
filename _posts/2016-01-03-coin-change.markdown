@@ -3,7 +3,7 @@ layout: post
 title: Coin Change
 date: 2016-01-03 19:24:01.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

@@ -3,9 +3,9 @@ layout: post
 title: Interleaving Positive and Negative Numbers
 date: 2015-10-21 14:21:54.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an array with positive and negative integers. Re-range it to interleaving with positive and negative integers.</em></strong></p>

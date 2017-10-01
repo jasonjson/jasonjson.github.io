@@ -3,9 +3,9 @@ layout: post
 title: Power of Three
 date: 2016-01-08 16:06:31.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an integer, write a function to determine if it is a power of three.</em></strong></p>

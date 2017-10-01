@@ -3,9 +3,9 @@ layout: post
 title: Additive Number
 date: 2015-11-18 09:31:17.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Additive number is a positive integer whose digits can form additive sequence.</p>

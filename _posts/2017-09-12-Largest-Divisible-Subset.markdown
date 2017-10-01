@@ -3,7 +3,7 @@ layout: post
 title: Largest Divisible Subset
 date: 2017-09-12
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

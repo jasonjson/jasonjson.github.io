@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Combination Sum II
+title: 40 - Combination Sum II
 date: 2015-10-21 03:41:59.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

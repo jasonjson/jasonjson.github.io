@@ -3,9 +3,9 @@ layout: post
 title: Reservoir Sampling
 date: 2016-01-09 10:29:27.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Data Structure
 author: Jason
 ---

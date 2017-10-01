@@ -18,7 +18,7 @@ author: Jason
 ## Gradient Descent with Sigmoidal Neurons
 * The new modification rule is just like the delta rule, except with extra multiplicative terms included to account for the logistic component of the sigmoidal neuron.
 
-## The back-propagation Algorithm
+## The back-propagation Leetcode
 * The strategy will be one of dynamic programming. Once we have the error derivatives for one layer of hidden units, we’ll use them to compute the error derivatives for the activites of the layer below. And once we find the error derivatives for the activities of the hidden units, it’s quite easy to get the error derivatives for the weights leading into a hidden unit.
 
 ## Stochastic and Mini-Batch Gradient Descent

@@ -3,7 +3,7 @@ layout: post
 title: Move Zeroes
 date: 2015-10-28 13:19:18.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 - Two Pointers

@@ -3,7 +3,7 @@ layout: post
 title: Matrix Zigzag Traversal
 date: 2015-10-21 13:04:40.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

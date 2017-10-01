@@ -3,7 +3,7 @@ layout: post
 title: Walls and Gates
 date: 2015-10-29 13:31:35.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

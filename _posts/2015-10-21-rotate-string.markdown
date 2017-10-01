@@ -3,7 +3,7 @@ layout: post
 title: Rotate String
 date: 2015-10-21 02:12:52.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

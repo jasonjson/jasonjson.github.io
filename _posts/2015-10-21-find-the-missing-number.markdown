@@ -3,9 +3,9 @@ layout: post
 title: Find the Missing Number
 date: 2015-10-21 13:02:42.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an array contains N numbers of 0 .. N, find which number doesn't exist in the array.</em></strong></p>

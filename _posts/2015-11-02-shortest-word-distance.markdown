@@ -3,9 +3,9 @@ layout: post
 title: Shortest Word Distance
 date: 2015-11-02 13:35:25.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list. You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.</em></strong></p>

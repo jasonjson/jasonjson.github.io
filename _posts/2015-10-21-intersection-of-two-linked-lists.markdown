@@ -3,7 +3,7 @@ layout: post
 title: Intersection of Two Linked Lists
 date: 2015-10-21 14:46:15.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 author: Jason

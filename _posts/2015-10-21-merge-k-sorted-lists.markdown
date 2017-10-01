@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Merge k Sorted Lists
+title: 23 - Merge k Sorted Lists
 date: 2015-10-21 02:47:17.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 - Sorting
@@ -18,7 +18,7 @@ public class Solution {
         if (lists.length == 0 || lists == null) return null;
         return mergeKListsUtil(lists, 0, lists.length - 1);
     }
-    
+
     public ListNode mergeKListsUtil(ListNode[] lists, int lo, int hi) {
         if (lo == hi) {
             return lists[lo];
@@ -27,7 +27,7 @@ public class Solution {
         ListNode right = mergeKListsUtil(lists, lo + (hi - lo) / 2 + 1, hi);
         return mergeTwoLists(left, right);
     }
-    
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;

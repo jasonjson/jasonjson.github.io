@@ -1,11 +1,11 @@
 ---
 layout: post
-title: ZigZag Conversion
+title: 6 - ZigZag Conversion
 date: 2015-11-15 16:42:45.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)**

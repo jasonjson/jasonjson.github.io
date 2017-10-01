@@ -3,9 +3,9 @@ layout: post
 title: Factorial Trailing Zeroes
 date: 2015-10-21 02:36:12.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an integer n, return the number of trailing zeroes in n!. Note: Your solution should be in logarithmic time complexity.</em></strong></p>

@@ -3,7 +3,7 @@ layout: post
 title: What is the difference between a thread and a process?
 date: 2015-11-07 16:37:52.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Reading Notes
 author: Jason

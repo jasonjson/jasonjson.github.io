@@ -3,12 +3,12 @@ layout: post
 title: Backpack II
 date: 2015-10-21 03:57:56.000000000 -04:00
 tags:
-- Algorithm
+- Lintcode
 categories:
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given n items with size Ai and value Vi, and a backpack with size m. What's the maximum value can you put into the backpack?</em></strong></p>
+**Given n items with size Ai and value Vi, and a backpack with size m. What's the maximum value can you put into the backpack?**
 
 
 ``` java
@@ -21,7 +21,7 @@ public class Solution {
     public int backPackII(int m, int[] A, int V[]) {
         // write your code here
         int[][] value = new int[A.length + 1][m + 1];
-        
+
         for (int i = 1; i <= A.length; i++) {
             for (int j = 1; j <= m; j++) {
                 if (j >= A[i - 1]) {
@@ -35,6 +35,7 @@ public class Solution {
     }
 }
 ```
+
 ``` java
 public class Solution {
     /**

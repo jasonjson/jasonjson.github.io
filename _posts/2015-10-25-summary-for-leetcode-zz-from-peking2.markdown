@@ -3,7 +3,7 @@ layout: post
 title: Summary for leetcode, zz from peking2
 date: 2015-10-25 10:20:07.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Reading Notes
 author: Jason
@@ -13,7 +13,7 @@ author: Jason
 <p>Question</p>
 <p>Data structure in question</p>
 <p>Data structure in solution</p>
-<p>Algorithm in solution</p>
+<p>Leetcode in solution</p>
 <p>Coding</p>
 <p>题目：非常关键，一个题目通常有一些相应的变形题目，同一个题目可能有不同的要求。比如时间复杂度，空间复杂度的要求，比如recursive,</p>
 iterative的要求。而根据题目的变形与要求，可能会极大的影响到你能够采取的数据结构和算法。</p>

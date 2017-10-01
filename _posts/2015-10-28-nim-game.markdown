@@ -3,9 +3,9 @@ layout: post
 title: Nim Game
 date: 2015-10-28 16:07:28.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

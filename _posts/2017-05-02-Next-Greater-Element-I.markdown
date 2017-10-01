@@ -3,7 +3,7 @@ layout: post
 title: Next Greater Element I
 date: 2017-05-02
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

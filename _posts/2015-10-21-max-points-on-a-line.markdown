@@ -3,9 +3,9 @@ layout: post
 title: Max Points on a Line
 date: 2015-10-21 14:29:12.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.</em></strong></p>

@@ -3,7 +3,7 @@ layout: post
 title: Kill Process
 date: 2017-06-04
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

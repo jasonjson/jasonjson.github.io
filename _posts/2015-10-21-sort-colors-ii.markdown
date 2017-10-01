@@ -3,9 +3,9 @@ layout: post
 title: Sort Colors II
 date: 2015-10-21 14:38:05.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an array of n objects with k different colors (numbered from 1 to k), sort them so that objects of the same color are adjacent, with the colors in the order 1, 2, ... k.</em></strong></p>

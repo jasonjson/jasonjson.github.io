@@ -3,9 +3,9 @@ layout: post
 title: Count Primes
 date: 2015-11-04 14:55:54.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Count the number of prime numbers less than a non-negative number, n.</em></strong></p>

@@ -3,9 +3,9 @@ layout: post
 title: Reverse Words in a String
 date: 2015-11-06 11:37:05.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an input string, reverse the string word by word.</p>

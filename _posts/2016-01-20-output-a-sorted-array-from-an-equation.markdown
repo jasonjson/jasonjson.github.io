@@ -3,9 +3,9 @@ layout: post
 title: Output a sorted array from an equation
 date: 2016-01-20 18:05:25.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an equation y = ax^2 + bx + c, and sorted array X, output sorted Y</em></strong></p>

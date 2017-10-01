@@ -3,7 +3,7 @@ layout: post
 title: Search a 2D Matrix
 date: 2015-10-21 02:28:30.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

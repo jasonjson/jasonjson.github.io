@@ -3,7 +3,7 @@ layout: post
 title: Longest Consecutive Sequence
 date: 2015-10-21 14:26:41.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 - Subarray

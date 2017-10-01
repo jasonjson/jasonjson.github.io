@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Valid Sudoku
+title: 36 - Valid Sudoku
 date: 2015-10-21 13:02:11.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Determine whether a Sudoku is valid.The Sudoku board could be partially filled, where empty cells are filled with the character '.'**

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Swap Nodes in Pairs
+title: 24 - Swap Nodes in Pairs
 date: 2015-10-21 14:44:57.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 author: Jason

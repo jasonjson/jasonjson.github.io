@@ -3,7 +3,7 @@ layout: post
 title: Invert Binary Tree
 date: 2015-10-21 02:53:24.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

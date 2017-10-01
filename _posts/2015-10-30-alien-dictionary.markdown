@@ -3,7 +3,7 @@ layout: post
 title: Alien Dictionary
 date: 2015-10-30 15:12:16.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

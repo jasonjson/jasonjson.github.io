@@ -3,9 +3,9 @@ layout: post
 title: Generalized Abbreviation
 date: 2015-12-22 16:04:37.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - DFS Backtracking
 author: Jason
 ---

@@ -3,9 +3,9 @@ layout: post
 title: Paint House
 date: 2015-10-31 11:26:50.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

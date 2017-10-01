@@ -3,10 +3,10 @@ layout: post
 title: Binary Tree Vertical Order Traversal
 date: 2015-12-05 09:53:04.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a binary tree, return the vertical order traversal of its nodes' values. (ie, from top to bottom, column by column). If two nodes are in the same row and column, the order should be from left to right.</em></strong></p>

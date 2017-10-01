@@ -3,9 +3,9 @@ layout: post
 title: Read N Characters Given Read4
 date: 2015-11-05 17:42:58.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>The API: int read4(char *buf) reads 4 characters at a time from a file.</p>

@@ -3,7 +3,7 @@ layout: post
 title: Check if a singly linked list is palindrome
 date: 2015-10-21 02:48:25.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 - Palindrome

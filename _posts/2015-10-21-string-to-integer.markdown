@@ -1,9 +1,9 @@
 ---
 layout: post
-title: String to Integer(atoi)
+title: 8 - String to Integer(atoi)
 date: 2015-10-21 13:23:18.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

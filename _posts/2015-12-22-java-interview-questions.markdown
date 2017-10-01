@@ -3,7 +3,7 @@ layout: post
 title: Java interview questions
 date: 2015-12-22 11:02:24.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Reading Notes
 author: Jason

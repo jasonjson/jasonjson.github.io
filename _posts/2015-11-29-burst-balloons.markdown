@@ -3,9 +3,9 @@ layout: post
 title: Burst Balloons
 date: 2015-11-29 20:36:44.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

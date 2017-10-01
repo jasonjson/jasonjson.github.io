@@ -3,9 +3,9 @@ layout: post
 title: Convert Expression to Polish Notation
 date: 2015-10-21 14:13:38.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an expression string array, return the Polish notation of this expression. (remove the parentheses)</em></strong></p>

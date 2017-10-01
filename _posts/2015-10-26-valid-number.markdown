@@ -3,9 +3,9 @@ layout: post
 title: Valid Number
 date: 2015-10-26 17:19:21.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

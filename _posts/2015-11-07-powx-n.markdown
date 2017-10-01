@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Pow(x, n)
+title: 50 - Pow(x, n)
 date: 2015-11-07 21:56:57.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Bit
 author: Jason

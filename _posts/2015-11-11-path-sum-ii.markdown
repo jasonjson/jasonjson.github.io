@@ -3,7 +3,7 @@ layout: post
 title: Path Sum II
 date: 2015-11-11 09:05:32.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

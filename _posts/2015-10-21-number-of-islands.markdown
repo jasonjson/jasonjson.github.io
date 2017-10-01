@@ -3,7 +3,7 @@ layout: post
 title: Number of Islands
 date: 2015-10-21 03:02:22.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 - Matrix

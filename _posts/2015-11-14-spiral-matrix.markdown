@@ -3,7 +3,7 @@ layout: post
 title: Spiral Matrix
 date: 2015-11-14 19:20:05.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

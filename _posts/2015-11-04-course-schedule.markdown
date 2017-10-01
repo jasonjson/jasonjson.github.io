@@ -3,7 +3,7 @@ layout: post
 title: Course Schedule
 date: 2015-11-04 12:41:18.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Graph
 - Sorting

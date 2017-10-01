@@ -3,9 +3,9 @@ layout: post
 title: Maximal Rectangle
 date: 2015-11-12 18:23:08.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing all ones and return its area.</em></strong></p>

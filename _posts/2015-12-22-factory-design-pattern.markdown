@@ -3,9 +3,9 @@ layout: post
 title: Factory design pattern
 date: 2015-12-22 15:22:45.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Data Structure
 author: Jason
 ---

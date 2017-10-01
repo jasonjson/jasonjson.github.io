@@ -3,7 +3,7 @@ layout: post
 title: Guess Number Higher Or Lower Ii
 date: 2017-05-30
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

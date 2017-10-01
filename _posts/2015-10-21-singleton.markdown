@@ -3,7 +3,7 @@ layout: post
 title: Singleton
 date: 2015-10-21 03:34:23.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Interview
 author: Jason

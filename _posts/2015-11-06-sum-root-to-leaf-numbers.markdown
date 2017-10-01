@@ -3,7 +3,7 @@ layout: post
 title: Sum Root to Leaf Numbers
 date: 2015-11-06 22:04:46.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

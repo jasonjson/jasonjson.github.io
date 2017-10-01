@@ -3,7 +3,7 @@ layout: post
 title: Nth to Last Node in List
 date: 2015-10-21 03:01:39.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 author: Jason

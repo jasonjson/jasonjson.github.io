@@ -3,7 +3,7 @@ layout: post
 title: Bucket sort
 date: 2015-10-26 12:49:16.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

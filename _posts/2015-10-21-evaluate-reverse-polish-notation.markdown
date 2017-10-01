@@ -3,9 +3,9 @@ layout: post
 title: Evaluate Reverse Polish Notation
 date: 2015-10-21 14:04:59.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Data Structure
 author: Jason
 ---

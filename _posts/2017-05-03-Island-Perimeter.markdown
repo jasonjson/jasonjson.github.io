@@ -3,7 +3,7 @@ layout: post
 title: Island Perimeter
 date: 2017-05-03
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

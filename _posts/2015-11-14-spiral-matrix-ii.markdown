@@ -3,7 +3,7 @@ layout: post
 title: Spiral Matrix II
 date: 2015-11-14 19:28:04.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

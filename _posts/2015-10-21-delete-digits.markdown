@@ -3,9 +3,9 @@ layout: post
 title: Delete Digits
 date: 2015-10-21 14:02:50.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

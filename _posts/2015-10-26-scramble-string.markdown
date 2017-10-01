@@ -3,9 +3,9 @@ layout: post
 title: Scramble String
 date: 2015-10-26 16:40:01.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

@@ -3,9 +3,9 @@ layout: post
 title: Word Pattern
 date: 2015-11-27 16:47:45.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a pattern and a string str, find if str follows the same pattern.</em></strong></p>

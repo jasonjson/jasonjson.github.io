@@ -3,7 +3,7 @@ layout: post
 title: Find Mode in Binary Search Tree
 date: 2017-03-05
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

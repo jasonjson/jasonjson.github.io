@@ -3,10 +3,10 @@ layout: post
 title: Largest BST Subtree
 date: 2016-02-23 22:38:07.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a binary tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.</em></strong></p>

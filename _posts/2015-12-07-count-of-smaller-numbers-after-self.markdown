@@ -3,9 +3,9 @@ layout: post
 title: Count of Smaller Numbers After Self
 date: 2015-12-07 18:21:09.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Sorting
 author: Jason
 ---

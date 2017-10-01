@@ -3,9 +3,9 @@ layout: post
 title: Text Justification
 date: 2015-11-13 09:05:29.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and right) justified.</p>

@@ -3,9 +3,9 @@ layout: post
 title: Compare Version Numbers
 date: 2015-11-05 14:31:17.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Compare two version numbers version1 and version2.</p>

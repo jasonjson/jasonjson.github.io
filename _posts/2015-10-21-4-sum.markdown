@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 4 Sum
+title: 18 - 4Sum
 date: 2015-10-21 02:21:55.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Subarray
 author: Jason

@@ -3,7 +3,7 @@ layout: post
 title: Subarray Sum
 date: 2015-10-21 02:17:19.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 - Subarray

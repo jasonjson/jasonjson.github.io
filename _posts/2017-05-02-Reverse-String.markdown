@@ -3,7 +3,7 @@ layout: post
 title: Reverse String
 date: 2017-05-02
 tags:
-- Algorithm 
+- Leetcode 
 categories:
 - String
 author: Jason

@@ -3,10 +3,10 @@ layout: post
 title: Binary Tree Upside Down
 date: 2015-11-05 17:28:56.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a binary tree where all the right nodes are either leaf nodes with a sibling (a left node that shares the same parent node) or empty, flip it upside down and turn it into a tree where the original right nodes turned into left leaf nodes. Return the new root.</em></strong></p>

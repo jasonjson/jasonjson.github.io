@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Group Anagrams
+title: 49 - Group Anagrams
 date: 2015-10-21 02:11:51.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

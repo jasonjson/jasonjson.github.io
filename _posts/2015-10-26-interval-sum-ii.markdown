@@ -3,7 +3,7 @@ layout: post
 title: Interval Sum II
 date: 2015-10-26 11:22:41.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

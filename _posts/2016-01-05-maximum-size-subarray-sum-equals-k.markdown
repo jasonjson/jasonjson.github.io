@@ -3,9 +3,9 @@ layout: post
 title: Maximum Size Subarray Sum Equals k
 date: 2016-01-05 12:18:15.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Data Structure
 author: Jason
 ---

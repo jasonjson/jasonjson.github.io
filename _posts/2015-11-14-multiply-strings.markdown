@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Multiply Strings
+title: 43 - Multiply Strings
 date: 2015-11-14 21:01:30.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Given two numbers represented as strings, return multiplication of the numbers as a string.**

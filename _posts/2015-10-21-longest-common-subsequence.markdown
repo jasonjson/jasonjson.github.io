@@ -3,7 +3,7 @@ layout: post
 title: Longest Common Subsequence
 date: 2015-10-21 12:44:53.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason
@@ -21,7 +21,7 @@ public class Solution {
         // key: the sequence can be discrete
         if (A == null || A.length() == 0) return 0;
         if (B == null || B.length() == 0) return 0;
-        
+
         int m = A.length(), n = B.length();
         int[][] lcs = new int[m+1][n+1];
         //lcs[i][j] indicates the lcs for A.substring(0, i) and B.substring(0,j);

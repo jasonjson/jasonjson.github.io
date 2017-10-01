@@ -3,7 +3,7 @@ layout: post
 title: Binary Tree Serialization
 date: 2015-10-21 02:57:07.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 - Data Structure

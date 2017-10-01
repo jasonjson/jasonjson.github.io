@@ -3,7 +3,7 @@ layout: post
 title: Find All Numbers Disappeared in an Array
 date: 2017-05-07
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

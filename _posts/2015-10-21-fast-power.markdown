@@ -3,7 +3,7 @@ layout: post
 title: Fast Power
 date: 2015-10-21 02:37:36.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Integer
 author: Jason

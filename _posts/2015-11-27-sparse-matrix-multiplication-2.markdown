@@ -3,7 +3,7 @@ layout: post
 title: Sparse Matrix Multiplication
 date: 2015-11-27 19:09:59.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Matrix
 author: Jason

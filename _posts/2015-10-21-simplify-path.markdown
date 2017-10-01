@@ -3,9 +3,9 @@ layout: post
 title: Simplify Path
 date: 2015-10-21 14:36:43.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 **Given an absolute path for a file (Unix-style), simplify it.**

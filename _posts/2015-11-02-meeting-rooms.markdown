@@ -3,9 +3,9 @@ layout: post
 title: Meeting Rooms
 date: 2015-11-02 07:36:10.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), determine if a person could attend all meetings.</em></strong></p>

@@ -3,7 +3,7 @@ layout: post
 title: Longest Increasing Path in a Matrix
 date: 2016-01-20 11:57:16.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

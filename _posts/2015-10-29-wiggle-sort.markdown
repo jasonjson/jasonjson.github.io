@@ -3,7 +3,7 @@ layout: post
 title: Wiggle Sort
 date: 2015-10-29 14:09:31.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Sorting
 author: Jason

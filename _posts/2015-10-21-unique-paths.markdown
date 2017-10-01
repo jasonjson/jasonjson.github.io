@@ -3,7 +3,7 @@ layout: post
 title: Unique Paths
 date: 2015-10-21 12:25:13.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

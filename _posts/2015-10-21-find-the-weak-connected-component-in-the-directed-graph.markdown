@@ -3,7 +3,7 @@ layout: post
 title: Find the Weak Connected Component in the Directed Graph
 date: 2015-10-21 14:42:25.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Graph
 author: Jason

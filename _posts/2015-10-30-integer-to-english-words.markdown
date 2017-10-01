@@ -3,9 +3,9 @@ layout: post
 title: Integer to English Words
 date: 2015-10-30 10:40:37.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---

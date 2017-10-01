@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Generate Parentheses
+title: 22 - Generate Parentheses
 date: 2015-11-15 11:41:02.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

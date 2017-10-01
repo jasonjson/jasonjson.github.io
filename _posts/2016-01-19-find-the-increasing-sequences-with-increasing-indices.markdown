@@ -3,9 +3,9 @@ layout: post
 title: Find the increasing sequences with increasing indices
 date: 2016-01-19 17:00:31.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Find three numbers in an array such that a &lt; b &lt; c and indices of a b c are also in ascending order</em></strong></p>

@@ -3,9 +3,9 @@ layout: post
 title: House Robber
 date: 2015-10-21 14:15:26.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---

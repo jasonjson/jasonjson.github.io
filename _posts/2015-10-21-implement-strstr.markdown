@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Implement strStr()
+title: 28 - Implement strStr()
 date: 2015-10-21 02:10:21.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

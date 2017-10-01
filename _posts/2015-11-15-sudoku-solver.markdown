@@ -3,9 +3,9 @@ layout: post
 title: Sudoku Solver
 date: 2015-11-15 09:51:25.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Matrix
 author: Jason
 ---

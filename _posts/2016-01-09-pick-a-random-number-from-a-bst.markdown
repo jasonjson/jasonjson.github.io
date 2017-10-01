@@ -3,9 +3,9 @@ layout: post
 title: Pick a random number from a BST
 date: 2016-01-09 10:40:16.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Randomly pick a number fro binary searach tree</em></strong></p>

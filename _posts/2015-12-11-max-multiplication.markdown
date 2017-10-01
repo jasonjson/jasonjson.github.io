@@ -3,9 +3,9 @@ layout: post
 title: Max multiplication
 date: 2015-12-11 11:44:45.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Sorting
 author: Jason
 ---

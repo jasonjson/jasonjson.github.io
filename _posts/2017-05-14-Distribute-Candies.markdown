@@ -3,7 +3,7 @@ layout: post
 title: Distribute Candies
 date: 2017-05-14
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Array
 author: Jason

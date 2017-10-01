@@ -3,7 +3,7 @@ layout: post
 title: Longest Uncommon Subsequence i
 date: 2017-05-08
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

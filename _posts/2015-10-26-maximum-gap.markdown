@@ -3,9 +3,9 @@ layout: post
 title: Maximum gap
 date: 2015-10-26 12:48:19.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 - Sorting
 author: Jason

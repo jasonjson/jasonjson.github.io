@@ -3,10 +3,10 @@ layout: post
 title: Shortest Distance from All Buildings
 date: 2015-12-16 22:42:54.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:</p>

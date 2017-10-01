@@ -3,9 +3,9 @@ layout: post
 title: H-Index II
 date: 2015-10-29 17:16:42.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?</em></strong></p>

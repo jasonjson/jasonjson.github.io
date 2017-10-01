@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Add Two Numbers
+title: 2 - Add Two Numbers
 date: 2015-10-21 01:42:02.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - LinkedList
 author: Jason
@@ -15,7 +15,7 @@ author: Jason
     /**
      * @param l1: the first list
      * @param l2: the second list
-     * @return: the sum list of l1 and l2 
+     * @return: the sum list of l1 and l2
      */
     public ListNode addLists(ListNode l1, ListNode l2) {
         // write your code here

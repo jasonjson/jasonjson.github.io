@@ -3,7 +3,7 @@ layout: post
 title: Number Complement
 date: 2017-04-30
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Bit
 author: Jason

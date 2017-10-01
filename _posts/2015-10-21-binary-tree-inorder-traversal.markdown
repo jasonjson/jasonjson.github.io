@@ -3,7 +3,7 @@ layout: post
 title: Binary Tree Inorder Traversal
 date: 2015-10-21 02:50:09.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

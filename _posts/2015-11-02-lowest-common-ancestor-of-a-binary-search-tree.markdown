@@ -3,7 +3,7 @@ layout: post
 title: Lowest Common Ancestor of a Binary Search Tree
 date: 2015-11-02 16:51:12.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 author: Jason

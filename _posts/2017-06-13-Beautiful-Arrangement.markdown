@@ -3,7 +3,7 @@ layout: post
 title: Beautiful Arrangement
 date: 2017-06-13
 tags:
-- Algorithm
+- Leetcode
 categories:
 - DFS Backtracking
 author: Jason

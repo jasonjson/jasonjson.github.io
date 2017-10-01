@@ -3,9 +3,9 @@ layout: post
 title: Summary Ranges
 date: 2015-11-03 12:00:26.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a sorted integer array without duplicates, return the summary of its ranges.</p>

@@ -3,9 +3,9 @@ layout: post
 title: Increasing Triplet Subsequence
 date: 2016-02-22 23:25:30.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</em></strong></p>

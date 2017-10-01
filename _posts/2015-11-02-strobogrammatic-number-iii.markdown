@@ -3,9 +3,9 @@ layout: post
 title: Strobogrammatic Number III
 date: 2015-11-02 12:13:53.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).</p>

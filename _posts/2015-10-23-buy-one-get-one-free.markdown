@@ -3,7 +3,7 @@ layout: post
 title: Buy one get one free
 date: 2015-10-23 21:00:16.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 author: Jason

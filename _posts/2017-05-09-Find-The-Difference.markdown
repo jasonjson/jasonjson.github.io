@@ -3,7 +3,7 @@ layout: post
 title: Find The Difference
 date: 2017-05-09
 tags:
-- Algorithm
+- Leetcode
 categories:
 - String
 author: Jason

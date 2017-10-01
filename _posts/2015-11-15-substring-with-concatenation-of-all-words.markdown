@@ -3,9 +3,9 @@ layout: post
 title: Substring with Concatenation of All Words
 date: 2015-11-15 11:38:30.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>You are given a string, s, and a list of words, words, that are all of the same length. Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.</em></strong></p>

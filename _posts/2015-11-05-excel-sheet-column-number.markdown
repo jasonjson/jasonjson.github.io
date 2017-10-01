@@ -3,9 +3,9 @@ layout: post
 title: Excel Sheet Column Number
 date: 2015-11-05 11:50:50.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a column title as appear in an Excel sheet, return its corresponding column number.</em></strong></p>

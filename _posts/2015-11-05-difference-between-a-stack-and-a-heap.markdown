@@ -3,7 +3,7 @@ layout: post
 title: Difference between a stack and a heap
 date: 2015-11-05 23:26:17.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Reading Notes
 author: Jason

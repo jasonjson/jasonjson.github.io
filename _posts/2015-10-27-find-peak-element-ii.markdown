@@ -3,7 +3,7 @@ layout: post
 title: Find Peak Element II
 date: 2015-10-27 11:15:26.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Divide and Conquer
 author: Jason

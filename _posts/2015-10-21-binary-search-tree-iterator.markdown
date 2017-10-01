@@ -3,7 +3,7 @@ layout: post
 title: Binary Search Tree Iterator
 date: 2015-10-21 03:00:24.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Binary Search Tree
 - Data Structure

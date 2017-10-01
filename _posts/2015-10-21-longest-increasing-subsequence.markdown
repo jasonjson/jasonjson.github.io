@@ -3,7 +3,7 @@ layout: post
 title: Longest Increasing Subsequence
 date: 2015-10-21 12:53:11.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Dynamic Programming
 - Subarray

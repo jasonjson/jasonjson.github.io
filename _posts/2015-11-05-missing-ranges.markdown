@@ -3,9 +3,9 @@ layout: post
 title: Missing Ranges
 date: 2015-11-05 15:07:38.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>Given a sorted integer array where the range of elements are [lower, upper] inclusive, return its missing ranges.</p>

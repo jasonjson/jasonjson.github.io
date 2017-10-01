@@ -3,9 +3,9 @@ layout: post
 title: Reorder String
 date: 2016-01-21 21:26:55.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 author: Jason
 ---
 <p><strong><em>BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string</em></strong></p>

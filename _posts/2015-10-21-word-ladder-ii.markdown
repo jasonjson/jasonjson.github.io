@@ -3,7 +3,7 @@ layout: post
 title: Word Ladder II
 date: 2015-10-21 12:58:31.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - BFS
 - DFS Backtracking

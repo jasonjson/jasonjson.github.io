@@ -3,9 +3,9 @@ layout: post
 title: Number of Airplanes in the Sky
 date: 2015-10-21 14:33:58.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Data Structure
 author: Jason
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Validate UTF-8 byte sequence,
 date: 2016-01-21 12:09:57.000000000 -05:00
 tags:
-- Algorithm
+- Leetcode
 categories:
 - Data Structure
 author: Jason

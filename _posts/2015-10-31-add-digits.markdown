@@ -3,9 +3,9 @@ layout: post
 title: Add Digits
 date: 2015-10-31 10:40:28.000000000 -04:00
 tags:
-- Algorithm
+- Leetcode
 categories:
-- Brain teaser
+- Brain Teaser
 - Integer
 author: Jason
 ---
