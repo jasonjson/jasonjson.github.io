@@ -50,21 +50,18 @@ class Solution(object):
 
         if not candidates:
             return []
-
         candidates.sort()
         ret = []
-        self.helper(candidates, 0, [], ret, target)
+        self.helper(candidates, target, 0, [], ret)
         return ret
 
-    def helper(self, candidates, start, curr, ret, remain):
+    def helper(self, candidates, remain, start, curr, ret):
         if remain == 0:
-            ret.append(copy.deepcopy(curr))
+            ret.append(curr[:])
             return
         for i in xrange(start, len(candidates)):
             if i > start and candidates[i] == candidates[i - 1]:
                 continue
             if candidates[i] <= remain:
-                curr.append(candidates[i])
-                self.helper(candidates, i + 1, curr, ret, remain - candidates[i])
-                curr.pop()
+                self.helper(candidates, remain - candidates[i], i + 1, curr + [candidates[i]], ret)
 ```

@@ -48,23 +48,19 @@ class Solution(object):
         :type target: int
         :rtype: List[List[int]]
         """
-        if not candidates:
-            return []
 
-        candidates.sort()
+        if not candidates:
+            return
+
         ret = []
-        self.helper(candidates, 0, [], ret, target)
+        self.helper(candidates, target, 0, [], ret)
         return ret
 
-    def helper(self, candidates, index, curr, ret, remain):
-        if remain == 0 :
-            ret.append(copy.deepcopy(curr))
+    def helper(self, candidates, target, start, curr, ret):
+        if target == 0:
+            ret.append(curr[:])
             return
-        for i in xrange(index, len(candidates)):
-            if i > 0 and candidates[i] == candidates[i - 1]:
-                continue
-            elif candidates[i] <= remain:
-                curr.append(candidates[i])
-                self.helper(candidates, i, curr, ret, remain - candidates[i])
-                curr.pop()
+        for i in xrange(start, len(candidates)):
+            if candidates[i] <= target:
+                self.helper(candidates, target - candidates[i], i, curr + [candidates[i]], ret)
 ```
