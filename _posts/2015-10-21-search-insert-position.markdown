@@ -39,7 +39,7 @@ public class Solution {
 }
 ```
 
-``` pythoon
+``` python
 class Solution(object):
     def searchInsert(self, nums, target):
         """
