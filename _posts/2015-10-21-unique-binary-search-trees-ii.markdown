@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-**Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
+**Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.**
 
 
 ``` java
@@ -48,13 +48,6 @@ public class Solution {
 ```
 
 ``` python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution(object):
     def generateTrees(self, n):
         """
