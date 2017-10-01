@@ -67,10 +67,6 @@ class Solution(object):
         return self.merge_two_lists(left_side, right_side)
 
     def merge_two_lists(self, l1, l2):
-        if not l1:
-            return l2
-        elif not l2:
-            return l1
         dummy = ListNode(0)
         curr = dummy
         while l1 and l2:
