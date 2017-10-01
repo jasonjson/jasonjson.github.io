@@ -67,11 +67,5 @@ class Solution(object):
             elif not char.isdigit():
                 break
             ret = ret * 10 + sign * int(char)
-
-        if ret > 2 ** 31 - 1:
-            return 2 ** 31 - 1
-        elif ret < -2 ** 31:
-            return -2 ** 31
-        else:
-            return ret
+        return min(max(ret, -2 ** 31), 2 **31 - 1)
 ```
