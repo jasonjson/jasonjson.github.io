@@ -36,3 +36,21 @@ public class Solution {
     }
 }
 ```
+
+``` python
+class Solution(object):
+    def getPermutation(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: str
+        """
+        ret = []
+        k -= 1
+        nums = list(xrange(1, n + 1))
+        for i in reversed(xrange(n)):
+            index, k = divmod(k, math.factorial(i))
+            ret.append(str(nums[index]))
+            del nums[index]
+        return "".join(ret)
+```
