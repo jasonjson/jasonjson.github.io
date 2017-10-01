@@ -6,10 +6,9 @@ tags:
 - Leetcode
 categories:
 - Binary Search Tree
-- LinkedList
 author: Jason
 ---
-**Flatten a binary tree to a fake "linked list" in pre-order traversal. Here we use the right pointer in TreeNode as the next pointer in ListNode.**
+**Given a binary tree, flatten it to a linked list in-place.**
 
 
 ``` java
