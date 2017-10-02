@@ -9,29 +9,37 @@ class TreeNode(object):
         return str(self.val)
 
 class Solution(object):
-    def getRow(self, rowIndex):
+    def sumNumbers(self, root):
         """
-        :type rowIndex: int
-        :rtype: List[int]
+        :type root: TreeNode
+        :rtype: int
         """
 
-        if not rowIndex:
-            return []
+        if not root:
+            return 0
 
-        ret = [0] * (rowIndex + 1)
-        for i in xrange(1, rowIndex + 2):
-            # import pdb
-            # pdb.set_trace()
-            for j in reversed(xrange(i)):
-                if j == 0 or j == i - 1:
-                    ret[j] = 1
-                else:
-                    ret[j] = ret[j] + ret[j - 1]
-        return ret
+        ret = []
+        self.helper(root, [], ret)
+        import pprint
+        pprint.pprint(ret)
+        return sum([int(n) for n in ret])
 
+    def helper(self, root, curr, ret):
+        curr += [str(root.val)]
+        if not root.left and not root.right:
+            ret.append("".join(curr))
+            return
+        if root.left:
+            self.helper(root.left, curr, ret)
+            curr.pop()
+        if root.right:
+            self.helper(root.right, curr, ret)
+            curr.pop()
 if __name__ == "__main__":
     solution = Solution()
+
+    root = TreeNode(0)
+    root.left = TreeNode(1)
+    root.right = TreeNode(3)
     import pprint
-    pprint.pprint(solution.getRow(3))
-
-
+    pprint.pprint(solution.sumNumbers(root))
