@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Word Ladder
+title: 127 - Word Ladder
 date: 2015-10-21 12:57:57.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - BFS
 author: Jason
 ---
-<p><strong><em>Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that: Only one letter can be changed at a time. Each intermediate word must exist in the dictionary</em></strong></p>
+**Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that: Only one letter can be changed at a time. Each intermediate word must exist in the dictionary.**
 
 
 ``` java
@@ -40,7 +40,7 @@ public class Solution {
         }
         return 0;
     }
-    
+
     public List<String> getNext(String s, Set<String> wordList) {
         List<String> result = new ArrayList<String>();
         for (int i = 0; i < s.length(); i++) {
@@ -56,4 +56,45 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+import collections
+class Solution(object):
+    def ladderLength(self, beginWord, endWord, wordList):
+        """
+        :type beginWord: str
+        :type endWord: str
+        :type wordList: List[str]
+        :rtype: int
+        """
+
+        if not wordList:
+            return 0
+
+        dict_words = self.construct_dict(wordList)
+        word_queue = collections.deque([(beginWord, 1)])
+        visited = set()
+        while word_queue:
+            curr_word, step = word_queue.popleft()
+            if curr_word not in visited:
+                visited.add(curr_word)
+                if curr_word == endWord:
+                    return step
+                for i in xrange(len(curr_word)):
+                    s = curr_word[:i] + "_" + curr_word[i+1:]
+                    neigh_words = dict_words.get(s, [])
+                    for new_word in neigh_words:
+                        if new_word not in visited:
+                            word_queue.append((new_word, step + 1))
+        return 0
+
+    def construct_dict(self, word_list):
+        #find all possible tranformation words
+        d = {}
+        for word in word_list:
+            for i in range(len(word)):
+                s = word[:i] + "_" + word[i+1:]
+                d[s] = d.get(s, []) + [word]
+        return d
 ```
