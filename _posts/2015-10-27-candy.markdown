@@ -1,29 +1,24 @@
 ---
 layout: post
-title: Candy
+title: 135 - Candy
 date: 2015-10-27 13:51:58.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Brain Teaser
-- Dynamic Programming
 author: Jason
 ---
-<p><strong><em>There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements:</em></strong></p>
+**There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements:**
+* Each child must have at least one candy.
+* Children with a higher rating get more candies than their neighbors.
+**What is the minimum candies you must give?**
 
-1: Each child must have at least one candy.</p>
-2: Children with a higher rating get more candies than their neighbors.</p>
-3: What is the minimum candies you must give?</p>
-<p>使用一个数组记录每一个小孩应得的糖果的数目</p>
-1.我们可以从左往右扫描，如果遇到上升区间，就给小孩比左边多一个糖，否则就给1个糖果。</p>
-2.我们可以从右往左扫描，如果遇到上升区间，就给小孩比右边多一个糖，否则就给1个糖果。</p>
-同时，应该与1步算出的值取一个大值（因为有可能要给小孩更多糖果才可以满足题设）。</p>
 
 ``` java
 public class Solution {
     public int candy(int[] ratings) {
         if (ratings == null || ratings.length == 0) return 0;
-        
+
         int n = ratings.length;
         int[] num = new int[n];
         Arrays.fill(num, 1);
@@ -32,7 +27,7 @@ public class Solution {
                 num[i] = num[i-1] + 1;
             }
         }
-        
+
         int result = num[n - 1];
         for (int i = n - 2; i >= 0; i--) {
             if (ratings[i] > ratings[i+1]) {
@@ -43,4 +38,26 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def candy(self, ratings):
+        """
+        :type ratings: List[int]
+        :rtype: int
+        """
+
+        if not ratings:
+            return 0
+
+        candies = [1] * len(ratings)
+        for i in xrange(1, len(ratings)):
+            if ratings[i] > ratings[i - 1]:
+                candies[i] = candies[i - 1] + 1
+
+        for i in reversed(xrange(len(ratings) - 1)):
+            if ratings[i] > ratings[i + 1]:
+                candies[i] = max(candies[i + 1] + 1, candies[i])
+        return sum(candies)
 ```
