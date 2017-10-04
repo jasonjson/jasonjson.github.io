@@ -1,45 +1,38 @@
 #!/usr/bin/python
-
-class TreeNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-    def __repr__(self):
-        return str(self.val)
-
 class Solution(object):
-    def sumNumbers(self, root):
+    def partition(self, s):
         """
-        :type root: TreeNode
-        :rtype: int
+        :type s: str
+        :rtype: List[List[str]]
         """
 
-        if not root:
-            return 0
+        if not s:
+            return []
 
         ret = []
-        self.helper(root, [], ret)
-        import pprint
-        pprint.pprint(ret)
-        return sum([int(n) for n in ret])
+        self.helper(s, [], ret)
+        return ret
 
-    def helper(self, root, curr, ret):
-        curr += [str(root.val)]
-        if not root.left and not root.right:
-            ret.append("".join(curr))
+    def helper(self, s, curr, ret):
+        if len(s) == 0:
+            ret.append(curr[:])
             return
-        if root.left:
-            self.helper(root.left, curr, ret)
-            curr.pop()
-        if root.right:
-            self.helper(root.right, curr, ret)
-            curr.pop()
+        for i in xrange(len(s)):
+            sub_s = s[0: i + 1]
+            if self.is_pali(sub_s):
+                curr.append(sub_s)
+                self.helper(s[i+1:], curr, ret)
+                curr.pop()
+
+    def is_pali(self, s):
+        lo, hi = 0, len(s) - 1
+        while lo <= hi:
+            if s[lo] != s[hi]:
+                return False
+            lo += 1
+            hi -= 1
+        return True
 if __name__ == "__main__":
     solution = Solution()
-
-    root = TreeNode(0)
-    root.left = TreeNode(1)
-    root.right = TreeNode(3)
     import pprint
-    pprint.pprint(solution.sumNumbers(root))
+    pprint.pprint(solution.partition("aab"))
