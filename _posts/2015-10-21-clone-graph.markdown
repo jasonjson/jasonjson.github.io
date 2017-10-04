@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clone Graph
+title: 133 - Clone Graph
 date: 2015-10-21 13:25:04.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Graph
 author: Jason
 ---
-<p><strong><em>Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.</em></strong></p>
+**Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.**
 
 
 ``` java
@@ -33,9 +33,9 @@ public class Solution {
 ``` java
 public class Solution {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        if (node == null) return null;        
+        if (node == null) return null;
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-        Queue<undirectedgraphnode> queue = new LinkedList<undirectedgraphnode>();        
+        Queue<undirectedgraphnode> queue = new LinkedList<undirectedgraphnode>();
         UndirectedGraphNode newNode = new UndirectedGraphNode(node.label);
         map.put(node, newNode);
         queue.add(node);//always add old node for cloning
@@ -57,22 +57,16 @@ public class Solution {
     }
 ```
 ```python
-# Definition for a undirected graph node
-# class UndirectedGraphNode:
-#     def __init__(self, x):
-#         self.label = x
-#         self.neighbors = []
-from collections import deque
 class Solution:
     # @param node, a undirected graph node
     # @return a undirected graph node
     def cloneGraph(self, node):
-        if node is None:
+        if not node:
             return
 
         new_node = UndirectedGraphNode(node.label)
         mapping = {node: new_node}
-        queue = deque([node])
+        queue = collections.deque([node])
         while queue:
             curr = queue.popleft()
             new_curr = mapping[curr]
@@ -84,3 +78,4 @@ class Solution:
                 new_curr.neighbors.append(mapping[neighbor])
         return new_node
 ```
+
