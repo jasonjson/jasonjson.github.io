@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gas Station
+title: 134 - Gas Station
 date: 2015-10-21 14:14:07.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.</em></strong></p>
+**There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.**
 
 
 ``` java
@@ -46,7 +46,7 @@ public class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         // write your code here
         if (gas.length == 0 || cost.length == 0) return -1;
-        
+
         for (int i = 0; i < gas.length; i++) {
             int left_gas = 0, k = 0;;
             for (; k < gas.length; k++) {
@@ -60,4 +60,30 @@ public class Solution {
         return -1;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        """
+        :type gas: List[int]
+        :type cost: List[int]
+        :rtype: int
+        """
+
+        if not gas or not cost:
+            return -1
+
+        total_left_gas, left_gas, index = 0, 0, 0
+        for i in xrange(len(gas)):
+            left_gas += gas[i] - cost[i]
+            if left_gas < 0:
+                total_left_gas += left_gas
+                left_gas = 0
+                index = i + 1
+        total_left_gas += left_gas
+        if total_left_gas < 0:
+            return -1
+        else:
+            return index
 ```
