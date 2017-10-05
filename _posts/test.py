@@ -1,38 +1,29 @@
 #!/usr/bin/python
+
 class Solution(object):
-    def partition(self, s):
+    def singleNumber(self, nums):
         """
-        :type s: str
-        :rtype: List[List[str]]
+        :type nums: List[int]
+        :rtype: int
         """
 
-        if not s:
-            return []
+        if not nums:
+            return -1
 
-        ret = []
-        self.helper(s, [], ret)
-        return ret
-
-    def helper(self, s, curr, ret):
-        if len(s) == 0:
-            ret.append(curr[:])
-            return
-        for i in xrange(len(s)):
-            sub_s = s[0: i + 1]
-            if self.is_pali(sub_s):
-                curr.append(sub_s)
-                self.helper(s[i+1:], curr, ret)
-                curr.pop()
-
-    def is_pali(self, s):
-        lo, hi = 0, len(s) - 1
-        while lo <= hi:
-            if s[lo] != s[hi]:
-                return False
-            lo += 1
-            hi -= 1
-        return True
+        ret = 0
+        for i in xrange(32):
+            digit = 0
+            for num in nums:
+                if (num >> i) & 1:
+                    digit += 1
+            ret |= (digit % 3) << i
+        print digit
+        return self.convert(ret)
+    def convert(self,x):
+        if x >= 2**31:
+            x -= 2**32
+        return x
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.partition("aab"))
+    pprint.pprint(solution.singleNumber([-2,-2,1,1,-3,1,-3,-3,-4,-2]))
