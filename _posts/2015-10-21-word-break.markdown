@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Word Break
+title: 139 - Word Break
 date: 2015-10-21 12:34:38.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given a string s and a dictionary of words dict, determine if s can be break into a space-separated sequence of one or more dictionary words.</em></strong></p>
+**Given a string s and a dictionary of words dict, determine if s can be break into a space-separated sequence of one or more dictionary words.**
 
 
 ``` java
 public class Solution {
     public boolean wordBreak(String s, Set<String> wordDict) {
         if (wordDict == null || wordDict.size() == 0) return false;
-        
+
         int maxLen = 0;
         for (String word : wordDict) {
             maxLen = Math.max(maxLen, word.length());
@@ -36,29 +35,28 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    /**
-     * @param s: A string s
-     * @param dict: A dictionary of words dict
-     */
-    public boolean wordBreak(String s, Set<String> dict) {
-        if (s == null || s.length() == 0) return true;
-        
-        return helper(s, dict);
-    }
-    
-    public boolean helper(String s, Set<String> dict) {
-        if (dict.contains(s)) {
-            return true;
-        }
-        for (int i = 1; i <= s.length(); i++) {
-            String sub = s.substring(0, i);
-            if (dict.contains(sub) && helper(s.substring(i), dict)) {
-                return true;
-            }
-        }
-        return false;
-    }
-}//Memory Limit Exceed, use dp instead
+
+``` python
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+
+        if not wordDict:
+            return False
+        max_len = max([len(word) for word in wordDict])
+        dp = [False] * (len(s) + 1)
+        dp[0] = True #empty string is always true
+        for i in xrange(1, len(s) + 1):
+            j = i - 1
+            while j >= 0 and i - j <= max_len:
+                if dp[j] and s[j : i] in wordDict:
+                    dp[i] = True
+                    break
+                j -= 1
+        return dp[-1]
 ```
+
