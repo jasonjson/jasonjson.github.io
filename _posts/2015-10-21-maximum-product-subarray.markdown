@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maximum Product Subarray
+title: 152 - Maximum Product Subarray
 date: 2015-10-21 14:30:37.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
-<p><strong><em>Find the contiguous subarray within an array (containing at least one number) which has the largest product.</em></strong></p>
+**Find the contiguous subarray within an array (containing at least one number) which has the largest product.**
 
 
 ``` java
@@ -24,5 +24,26 @@ public class Solution {
         }
         return global;
     }
-}//http://blog.csdn.net/linhuanmars/article/details/39537283
+}
+```
+
+``` python
+class Solution(object):
+    def findMin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        lo, hi = 0, len(nums) - 1
+        while lo < hi:
+            mid = (lo + hi) / 2
+            if nums[mid] < nums[hi]:
+                hi = mid
+            elif nums[mid] > nums[hi]:
+                lo = mid + 1
+            else:
+                hi -= 1
+        return nums[lo]
+
 ```

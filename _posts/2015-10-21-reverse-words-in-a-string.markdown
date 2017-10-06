@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reverse Words in a String
+title: 151 - Reverse Words in a String
 date: 2015-10-21 02:13:20.000000000 -04:00
 tags:
 - Leetcode
@@ -8,34 +8,8 @@ categories:
 - String
 author: Jason
 ---
-<p><strong><em>Given an input string, reverse the string word by word.</em></strong></p>
+**Given an input string, reverse the string word by word.**
 
-
-``` java
-public class Solution {
-    public void reverseWords(char[] s) {
-        int start = 0;
-        for (int i = 0; i < s.length; i ++) {
-            if (s[i] == ' ') {
-                reverse(s, start, i - 1);
-                start = i + 1;
-            }
-        }
-        reverse(s, start, s.length - 1);//reverse the last word!!! there is no space after!!
-        reverse(s, 0, s.length - 1);
-    }
-    
-    public void reverse(char[] s, int lo, int hi) {
-        while (lo <= hi) {
-            char temp = s[lo];
-            s[lo] = s[hi];
-            s[hi] = temp;
-            lo ++;
-            hi --;
-        }
-    }
-}
-```
 
 ``` java
 public class Solution {
@@ -58,4 +32,15 @@ public class Solution {
         return str.toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+
+        return " ".join(reversed([word for word in s.strip().split(" ") if word]))
 ```
