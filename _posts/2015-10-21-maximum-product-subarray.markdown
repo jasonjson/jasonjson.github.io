@@ -29,21 +29,20 @@ public class Solution {
 
 ``` python
 class Solution(object):
-    def findMin(self, nums):
+    def maxProduct(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
 
-        lo, hi = 0, len(nums) - 1
-        while lo < hi:
-            mid = (lo + hi) / 2
-            if nums[mid] < nums[hi]:
-                hi = mid
-            elif nums[mid] > nums[hi]:
-                lo = mid + 1
-            else:
-                hi -= 1
-        return nums[lo]
-
+        if not nums:
+            return 0
+        min_product = max_product = 1
+        ret = nums[0]
+        for num in nums:
+            tmp = max_product
+            max_product = max(max_product * num, min_product * num, num)
+            min_product = min(tmp * num, min_product * num, num)
+            ret = max(ret, max_product)
+        return ret
 ```

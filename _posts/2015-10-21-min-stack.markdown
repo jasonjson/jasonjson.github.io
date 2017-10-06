@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Min Stack
+title: 155 - Min Stack
 date: 2015-10-21 13:00:24.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Implement a stack with min() function, which will return the smallest number in the stack. It should support push, pop and min operation all in O(1) cost.</em></strong></p>
+**Implement a stack with min() function, which will return the smallest number in the stack. It should support push, pop and min operation all in O(1) cost.**
 
 
 ``` java
@@ -47,34 +47,32 @@ public class MinStack {
 
 ```python
 class MinStack(object):
-
     def __init__(self):
         """
         initialize your data structure here.
         """
         self.stack = []
-        self.min = sys.maxint
+        self.min = 2 ** 31 - 1
 
     def push(self, x):
         """
         :type x: int
         :rtype: void
         """
-        if (x <= self.min):
-        # everytime we find a new min value, we push the
-        # second-minimal value and minimal value to stack
+        if x <= self.min:
             self.stack.append(self.min)
             self.min = x
         self.stack.append(x)
+
 
     def pop(self):
         """
         :rtype: void
         """
-        if (self.stack and self.stack[-1] == self.min):
-            del self.stack[-1]
+        if self.stack[-1] == self.min:
+            self.stack.pop()
             self.min = self.stack[-1]
-        del self.stack[-1]
+        self.stack.pop()
 
     def top(self):
         """
