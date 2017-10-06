@@ -1,22 +1,43 @@
 #!/usr/bin/python
 
+from listnode import ListNode
 class Solution(object):
-    def wordBreak(self, s, wordDict):
+    def reorderList(self, head):
         """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: bool
+        :type head: ListNode
+        :rtype: void Do not return anything, modify head in-place instead.
         """
+        if not head or not head.next:
+            return
 
-        if len(s) == 0:
-            return True
+        fast = right = head
+        prev = None
+        while fast and fast.next:
+            prev = right
+            fast = fast.next.next
+            right = right.next
+        prev.next = None
+        curr, right = head, self.reverse(right)
+        print curr, right
+        while curr:
+            next_node = curr.next
+            curr.next = right
+            right = right.next
+            right.next = next_node
+            curr = next_node
+        import pprint
+        pprint.pprint(head)
 
-        for i in xrange(len(s)):
-            if s[: i + 1] in wordDict and self.wordBreak(s[i + 1 :], wordDict):
-                return True
+    def reverse(self, head):
+        rev = None
+        while head:
+            next_node = head.next
+            head.next = rev
+            rev = head
+            head = next_node
+        return rev
 
-        return False
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.wordBreak("leetcode", ["leet", "code"]))
+    pprint.pprint(solution.reorderList(ListNode([1,2,3,4])))

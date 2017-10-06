@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Tree Postorder Traversal
+title: 145 - Binary Tree Postorder Traversal
 date: 2015-10-21 02:50:25.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Binary tree postorder traversal</em></strong></p>
+**Given a binary tree, return the postorder traversal of its nodes' values.**
 
 
 ``` java
@@ -21,7 +21,7 @@ public class Solution {
         // write your code here
         ArrayList<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
-        
+
         Stack<treenode> stack = new Stack<treenode>();
         TreeNode prev = null;
         stack.push(root);
@@ -66,4 +66,32 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def postorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        if not root:
+            return []
+
+        stack, ret = [root], []
+        prev = None
+        while stack:
+            curr = stack[-1]
+            no_children = True if not curr.left and not curr.right else False
+            visit_children = True if prev and (curr.left == prev or curr.right == prev) else False
+            if no_children or visit_children:
+                curr = stack.pop()
+                ret.append(curr.val)
+                prev = curr
+            else:
+                if curr.right:
+                    stack.append(curr.right)
+                if curr.left:
+                    stack.append(curr.left)
+        return ret
 ```

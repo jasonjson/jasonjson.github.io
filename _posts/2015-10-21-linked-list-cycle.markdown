@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linked List Cycle
+title: 141 - Linked List Cycle
 date: 2015-10-21 02:45:22.000000000 -04:00
 tags:
 - Leetcode
@@ -8,9 +8,8 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list, determine if it has a cycle in it. Follow up:</p>
+**Given a linked list, determine if it has a cycle in it.**
 
-Can you solve it without using extra space?</em></strong></p>
 
 ``` java
 public class Solution {
@@ -23,10 +22,29 @@ public class Solution {
             runner = runner.next.next;
             if (runner == head) return true;
             //if there is cycle, this can end the while loop
-            //if there is no cycle, the loop will ends automatically 
+            //if there is no cycle, the loop will ends automatically
             //since runner will gets to null
         }
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        if not head:
+            return False
+
+        fast = slow = head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return True
+        return False
 ```

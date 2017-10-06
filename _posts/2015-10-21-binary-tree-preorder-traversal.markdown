@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Tree Preorder Traversal
+title: 144 - Binary Tree Preorder Traversal
 date: 2015-10-21 02:49:50.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Preorder traversal a binary tree</em></strong></p>
+**Given a binary tree, return the preorder traversal of its nodes' values.**
 
 
 ``` java
@@ -35,7 +35,7 @@ public class Solution {
         stack.push(root);
         while (!stack.isEmpty()){
             TreeNode node = stack.pop();
-            result.add(node.val); 
+            result.add(node.val);
             //push right node first, which comes out later
             if (node.right != null) stack.push(node.right);
             if (node.left != null) stack.push(node.left);
@@ -43,4 +43,26 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+
+        if not root:
+            return []
+
+        stack, ret = [root], []
+        while stack:
+            curr = stack.pop()
+            ret.append(curr.val)
+            if curr.right:
+                stack.append(curr.right)
+            if curr.left:
+                stack.append(curr.left)
+        return ret
 ```
