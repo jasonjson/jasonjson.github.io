@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Sort List
+title: 148 - Sort List
 date: 2015-10-21 02:49:10.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - LinkedList
-- Sorting
 author: Jason
 ---
-<p><strong><em>Sort a linked list in O(n log n) time using constant space complexity.</em></strong></p>
+**Sort a linked list in O(n log n) time using constant space complexity.**
 
 
 ``` java
@@ -23,14 +22,14 @@ public class Solution {
             slow = slow.next;
         }
         ListNode left = head;
-        ListNode right = slow; 
+        ListNode right = slow;
         prev.next = null; // clear the end of left part, this is why we need prev
         ListNode sortedLeft = sortList(left);
         ListNode sortedRight = sortList(right);
         return merge(sortedLeft, sortedRight);
     }
-    
-    
+
+
     public ListNode merge(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
@@ -48,4 +47,36 @@ public class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def sortList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        if not head or not head.next:
+            return head
+        prev = slow = fast = head
+        while fast and fast.next:
+            prev = slow
+            slow = slow.next
+            fast = fast.next.next
+        prev.next = None
+        return self.merge_left_right(self.sortList(head), self.sortList(slow))
+
+    def merge_left_right(self, left, right):
+        curr = dummy = ListNode(0)
+        while left and right:
+            if left.val < right.val:
+                curr.next = left
+                left = left.next
+            else:
+                curr.next = right
+                right = right.next
+            curr = curr.next
+        curr.next = left if left else right
+        return dummy.next
 ```

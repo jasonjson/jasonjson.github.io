@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Evaluate Reverse Polish Notation
+title: 150 -Evaluate Reverse Polish Notation
 date: 2015-10-21 14:04:59.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Brain Teaser
-- Data Structure
 author: Jason
 ---
-<p><strong><em>Evaluate the value of an arithmetic expression in Reverse Polish Notation. Valid operators are +, -, *, /. Each operand may be an integer or another expression.</em></strong></p>
+**Evaluate the value of an arithmetic expression in Reverse Polish Notation. Valid operators are +, -, *, /. Each operand may be an integer or another expression.**
 
 
 ``` java
@@ -21,7 +20,7 @@ public class Solution {
     public int evalRPN(String[] tokens) {
         // Write your code here
         if (tokens == null || tokens.length == 0) return 0;
-        
+
         Stack<Integer> stack = new Stack<Integer>();
         //we avoid to check if tokens[i] is a number
         for (String s : tokens) {
@@ -44,4 +43,36 @@ public class Solution {
         return stack.peek();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def evalRPN(self, tokens):
+        """
+        :type tokens: List[str]
+        :rtype: int
+        """
+
+        if not tokens:
+            return -1
+
+        number = []
+        for token in tokens:
+            try:
+                number.append(int(token))
+            except:
+                num1 = number.pop()
+                num2 = number.pop()
+                number.append(self.cal(num2, num1, token))
+        return number.pop()
+
+    def cal(self, num2, num1, token):
+        if token == "+":
+            return num2 + num1
+        elif token == "-":
+            return num2 - num1
+        elif token == "*":
+            return num2 * num1
+        elif token == "/":
+            return int(float(num2) / num1)
 ```

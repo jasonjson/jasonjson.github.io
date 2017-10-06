@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Insertion Sort List
+title: 147 - Insertion Sort List
 date: 2015-10-21 02:48:46.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - LinkedList
-- Sorting
 author: Jason
 ---
-<p><strong><em>Sort a linked list using insertion sort.</em></strong></p>
+**Sort a linked list using insertion sort.**
 
 
 ``` java
@@ -25,7 +24,7 @@ public class Solution {
 
         while (head != null) {
             ListNode prev = dummy;
-            while (prev.next != null && prev.next.val < head.val) { 
+            while (prev.next != null && prev.next.val < head.val) {
             //bug: prev != null, prev = dummy, it's not null
                 prev = prev.next;
             }
@@ -40,4 +39,27 @@ public class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def insertionSortList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        dummy = ListNode(0)
+        while head:
+            prev = dummy
+            while prev.next and prev.next.val < head.val:
+                prev = prev.next
+            next_head = head.next
+            head.next = prev.next
+            prev.next = head
+            head = next_head
+        return dummy.next
 ```
