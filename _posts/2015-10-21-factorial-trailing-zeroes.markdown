@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Factorial Trailing Zeroes
+title: 172 - Factorial Trailing Zeroes
 date: 2015-10-21 02:36:12.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Given an integer n, return the number of trailing zeroes in n!. Note: Your solution should be in logarithmic time complexity.</em></strong></p>
+**Given an integer n, return the number of trailing zeroes in n!. Note: Your solution should be in logarithmic time complexity.**
 
 
 ``` java
@@ -30,4 +30,19 @@ public class Solution {
         return n / 5 + trailingZeroes(n / 5);
     }
 }
+```
+
+``` python
+class Solution(object):
+    def trailingZeroes(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+        ret = 0
+        while n:
+            ret += n / 5
+            n /= 5
+        return ret
 ```
