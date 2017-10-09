@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Majority Number
+title: 169 - Majority Number
 date: 2015-10-21 02:40:10.000000000 -04:00
 tags:
 - Leetcode
@@ -9,7 +9,8 @@ categories:
 - Integer
 author: Jason
 ---
-<p>**<em>Given an array of size n, find the majority element. The majority element is the element that appears more than $\floor</em> {n/2}$ times***</p>
+**Given an array of size n, find the majority element. The majority element is the element that appears more than {n/2} times**
+
 
 ``` java
 public class Solution {
@@ -31,4 +32,28 @@ public class Solution {
         //bug: return count
     }
 }
+```
+
+``` python
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        if not nums:
+            return -1
+
+        count = ret = 0
+        for num in nums:
+            if count == 0:
+                ret = num
+                count += 1
+            else:
+                if num == ret:
+                    count += 1
+                else:
+                    count -= 1
+        return ret
 ```
