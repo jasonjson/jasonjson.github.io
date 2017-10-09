@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intersection of Two Linked Lists
+title: 160 - Intersection of Two Linked Lists
 date: 2015-10-21 14:46:15.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Write a program to find the node at which the intersection of two singly linked lists begins.</em></strong></p>
+**Write a program to find the node at which the intersection of two singly linked lists begins.**
 
 
 ``` java
@@ -26,4 +26,22 @@ public class Solution {
         return A;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def getIntersectionNode(self, headA, headB):
+        """
+        :type head1, head1: ListNode
+        :rtype: ListNode
+        """
+
+        if not headA or not headB:
+            return
+
+        A, B = headA, headB
+        while A is not B:
+            A = A.next if A else headB
+            B = B.next if B else headA
+        return A
 ```
