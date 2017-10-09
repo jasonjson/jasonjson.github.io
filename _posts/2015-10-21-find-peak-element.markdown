@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find Peak Element
+title: 162 - Find Peak Element
 date: 2015-10-21 02:28:54.000000000 -04:00
 tags:
 - Leetcode
@@ -35,4 +35,26 @@ class Solution {
         return -1;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def findPeakElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        if not nums:
+            return -1
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if mid + 1 < len(nums) and nums[mid] < nums[mid + 1]:
+                lo = mid + 1
+            elif mid > 0 and nums[mid] < nums[mid - 1]:
+                hi = mid - 1
+            else:
+                return mid
+        return -1
 ```
