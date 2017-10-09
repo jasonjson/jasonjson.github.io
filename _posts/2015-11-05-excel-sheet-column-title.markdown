@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel Sheet Column Title
+title: 168 - Excel Sheet Column Title
 date: 2015-11-05 11:43:27.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</em></strong></p>
+**Given a positive integer, return its corresponding column title as appear in an Excel sheet.**
 
 
 ``` java
@@ -28,4 +28,26 @@ public class Solution {
         return sb.reverse().toString();
     }
 }
+```
+
+``` python
+class Solution(object):
+    def convertToTitle(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+
+        if not n:
+            return ""
+
+        letter_map = "ZABCDEFGHIJKLMNOPQRSTUVWXY"
+        ret = []
+        while n > 0:
+            digit = n % 26
+            n = n / 26
+            if digit == 0:
+                n -= 1
+            ret.append(letter_map[digit])
+        return "".join(reversed(ret))
 ```
