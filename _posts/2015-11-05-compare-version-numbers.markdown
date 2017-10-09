@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Compare Version Numbers
+title: 165 - Compare Version Numbers
 date: 2015-11-05 14:31:17.000000000 -05:00
 tags:
 - Leetcode
@@ -8,12 +8,9 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Compare two version numbers version1 and version2.</p>
+**Compare two version numbers version1 and version2. If version1 > version2 return 1, if version1 &lt; version2 return -1, otherwise return 0. You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level revision of the second first-level revision.**
 
-If version1 > version2 return 1, if version1 &lt; version2 return -1, otherwise return 0.</p>
-You may assume that the version strings are non-empty and contain only digits and the . character.</p>
-The . character does not represent a decimal point and is used to separate number sequences.</p>
-For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level revision of the second first-level revision.</em></strong></p>
+
 ``` java
 public class Solution {
     public int compareVersion(String version1, String version2) {
@@ -38,4 +35,35 @@ public class Solution {
         return 0;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def compareVersion(self, version1, version2):
+        """
+        :type version1: str
+        :type version2: str
+        :rtype: int
+        """
+
+        if not version1 or not version2:
+            return 0
+
+        i = j = 0
+        while i < len(version1) or j < len(version2):
+            num1 = num2 = 0
+            while i < len(version1) and version1[i] != '.':
+                num1 = num1 * 10 + int(version1[i])
+                i += 1
+            while j < len(version2) and version2[j] != '.':
+                num2 = num2 * 10 + int(version2[j])
+                j += 1
+            if num1 > num2:
+                return 1
+            elif num1 < num2:
+                return -1
+            else:
+                i += 1
+                j += 1
+        return 0
 ```
