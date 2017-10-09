@@ -1,43 +1,42 @@
 #!/usr/bin/python
-
-from listnode import ListNode
 class Solution(object):
-    def reorderList(self, head):
+    def fractionToDecimal(self, numerator, denominator):
         """
-        :type head: ListNode
-        :rtype: void Do not return anything, modify head in-place instead.
+        :type numerator: int
+        :type denominator: int
+        :rtype: str
         """
-        if not head or not head.next:
-            return
 
-        fast = right = head
-        prev = None
-        while fast and fast.next:
-            prev = right
-            fast = fast.next.next
-            right = right.next
-        prev.next = None
-        curr, right = head, self.reverse(right)
-        print curr, right
-        while curr:
-            next_node = curr.next
-            curr.next = right
-            right = right.next
-            right.next = next_node
-            curr = next_node
-        import pprint
-        pprint.pprint(head)
+        if not numerator or not denominator:
+            return ""
 
-    def reverse(self, head):
-        rev = None
-        while head:
-            next_node = head.next
-            head.next = rev
-            rev = head
-            head = next_node
-        return rev
-
+        ret = []
+        nume, deno = abs(numerator), abs(denominator)
+        if numerator > 0 == denominator < 0:
+            ret.append("-")
+        ret.append(str(nume / deno))
+        nume %= deno
+        if nume == 0:
+            return "".join(ret)
+        else:
+            ret.append(".")
+        repeating_map = {}
+        index = 1
+        while nume:
+            print nume
+            nume *= 10
+            digit = nume / deno
+            if nume not in repeating_map:
+                ret.append(str(digit))
+                repeating_map[nume] = index
+                index += 1
+            else:
+                ret.insert(ret.index(".") + repeating_map[nume], "(")
+                ret.append(")")
+                break
+            nume %= deno
+        return "".join(ret)
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.reorderList(ListNode([1,2,3,4])))
+    pprint.pprint(solution.fractionToDecimal(1, 6))
