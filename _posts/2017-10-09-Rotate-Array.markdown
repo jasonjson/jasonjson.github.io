@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rotate Array
+title: 189 - Rotate Array
 date: 2017-10-09
 tags:
 - Leetcode

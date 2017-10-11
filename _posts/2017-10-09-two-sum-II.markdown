@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 167 - Two Sum Ii Input Array Is Sorted
+title: 167 - Two Sum II
 date: 2017-10-09
 tags:
 - Leetcode
