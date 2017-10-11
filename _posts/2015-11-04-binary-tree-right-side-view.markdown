@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Tree Right Side View
+title: 199 - Binary Tree Right Side View
 date: 2015-11-04 15:49:10.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.</em></strong></p>
+**Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.**
 
 
 ``` java
@@ -16,7 +16,7 @@ public class Solution { //level order traversal
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
-        
+
         Queue<treenode> q = new LinkedList<treenode>();
         q.offer(root);
         while (!q.isEmpty()) {
@@ -33,4 +33,27 @@ public class Solution { //level order traversal
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def rightSideView(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+
+        if not root:
+            return []
+        prev, ret = [root], []
+        while prev:
+            curr = []
+            ret.append(prev[-1].val)
+            for node in prev:
+                if node.left:
+                    curr.append(node.left)
+                if node.right:
+                    curr.append(node.right)
+            prev = curr
+        return ret
 ```
