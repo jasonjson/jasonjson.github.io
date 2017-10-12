@@ -53,7 +53,6 @@ class Solution(object):
         if not head:
             return
         curr = dummy = RandomListNode(0)
-        dummy.next = head
         node_map = {}
         while head:
             new_head = node_map.get(head, RandomListNode(head.label))
