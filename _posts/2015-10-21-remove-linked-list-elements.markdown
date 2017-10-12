@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove Linked List Elements
+title: 203 - Remove Linked List Elements
 date: 2015-10-21 14:44:14.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Remove all elements from a linked list of integers that have value val.</em></strong></p>
+**Remove all elements from a linked list of integers that have value val.**
 
 
 ``` java
@@ -21,7 +21,7 @@ public class Solution {
     public ListNode removeElements(ListNode head, int val) {
         // Write your code here
         if (head == null) return null;
-        
+
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode curr = dummy;
@@ -35,4 +35,26 @@ public class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def removeElements(self, head, val):
+        """
+        :type head: ListNode
+        :type val: int
+        :rtype: ListNode
+        """
+
+        if not head:
+            return
+
+        curr = dummy = ListNode(0)
+        dummy.next = head
+        while curr.next:
+            if curr.next.val == val:
+                curr.next = curr.next.next
+            else:
+                curr = curr.next
+        return dummy.next
 ```
