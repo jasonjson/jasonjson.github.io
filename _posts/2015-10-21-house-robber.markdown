@@ -1,15 +1,14 @@
 ---
 layout: post
-title: House Robber
+title: 198 - House Robber
 date: 2015-10-21 14:15:26.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</em></strong></p>
+**You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.**
 
 
 ``` java
@@ -36,7 +35,7 @@ author: Jason
     public long houseRobber(int[] A) {
         if (A.length <= 0) return 0;
         if (A.length == 1) return A[0];
-        
+
         long[] dp = new long[A.length];
         dp[0] = A[0];
         dp[1] = Math.max(A[0], A[1]);
@@ -46,4 +45,24 @@ author: Jason
         return dp[A.length - 1];
     }
 }
+```
+
+``` python
+class Solution(object):
+    def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return 0
+        if len(nums) == 1:
+            return nums[0]
+
+        dp = [0] * len(nums)
+        dp[0] = nums[0]
+        dp[1] = max(nums[0], nums[1])
+        for i in xrange(2, len(nums)):
+            dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])
+        return dp[-1]
 ```
