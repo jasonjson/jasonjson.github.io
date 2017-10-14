@@ -45,45 +45,6 @@ public class Solution {
 }
 ```
 
-```python
-from collections import deque
-class Solution(object):
-    def canFinish(self, numCourses, prerequisites):
-        """
-        :type numCourses: int
-        :type prerequisites: List[List[int]]
-        :rtype: bool
-        """
-        if not prerequisites:
-            return True
-
-        degrees = {}
-        graphs = {}
-        #Build graph
-        for i in xrange(numCourses):
-            degrees.setdefault(i, 0)
-        for requirement in prerequisites:
-            degrees[requirement[0]] += 1
-            prerequisite = graphs.setdefault(requirement[1], [])
-            prerequisite.append(requirement[0])
-
-        #Traverse graph
-        queue = deque()
-        for key, val in degrees.items():
-            if val == 0:
-                queue.append(key)
-
-        while queue:
-            curr = queue.popleft()
-            numCourses -= 1
-            for next in graphs.get(curr, []):
-                degrees[next] -= 1
-                if (degrees[next] == 0):
-                    queue.append(next)
-
-        return numCourses == 0
-```
-
 ``` python
 class Solution(object):
     def canFinish(self, numCourses, prerequisites):
