@@ -6,7 +6,6 @@ tags:
 - Leetcode
 categories:
 - Dynamic Programming
-- Subarray
 author: Jason
 ---
 <p><strong><em>Give you an integer matrix (with row size n, column size m)，find the longest increasing continuous subsequence in this matrix. (The definition of the longest increasing continuous subsequence here can start at any row or column and go up/down/right/left any direction).</em></strong></p>
@@ -22,7 +21,7 @@ public class Solution {
         // Write your code here
         if (A == null || A.length == 0) return 0;
         int row = A.length, col = A[0].length;
-        
+
         int[][] dp = new int[row][col];
         //dp[i][j] the longest sequence at point A[i][j]
         //must use dp, otherwise TLE
@@ -36,7 +35,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public int helper(int[][] A, int i, int j, int[][] dp) {
         int row = A.length, col = A[0].length;
         if (dp[i][j] != 0) {

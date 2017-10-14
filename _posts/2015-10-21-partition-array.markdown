@@ -5,8 +5,7 @@ date: 2015-10-21 02:20:04.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Integer
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an array nums of integers and an int k, partition the array (i.e move the elements in "nums") such that: All elements &lt; k are moved to the leff. All elements >= k are moved to the right Return the partitioning index, i.e the first index i nums[i] >= k.</em></strong></p>
@@ -14,7 +13,7 @@ author: Jason
 
 ``` java
 public class Solution {
-    /** 
+    /**
      *@param nums: The integer array you should partition
      *@param k: As description
      *return: The index after partition

@@ -6,7 +6,6 @@ tags:
 - Leetcode
 categories:
 - Dynamic Programming
-- Subarray
 author: Jason
 ---
 <p><strong><em>Given a sequence of integers, find the longest increasing subsequence (LIS). You code should return the length of the LIS.</em></strong></p>
@@ -33,7 +32,7 @@ public class Solution {
         }
         return len;
     }
-    
+
     public int findIndex(int[] nums, int lo, int hi, int key) {
     //find the index of first element in the array that is larger than key
         while (lo + 1 < hi) {// lo + 1...
@@ -58,15 +57,15 @@ public class Solution {
         // write your code here
         if (nums == null || nums.length == 0) return 0;
         int n = nums.length, maxLen = 0;
-        
+
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
-        //dp[i] indicates the LIS with ith element as the end, so it's at least 1, 
+        //dp[i] indicates the LIS with ith element as the end, so it's at least 1,
         //key : nums[i] must be the last element in the increasing subsequence
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < i; j++) {
                 if (nums[j] <= nums[i]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);                    
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
             maxLen = Math.max(maxLen, dp[i]);//only update global max in outmost loop

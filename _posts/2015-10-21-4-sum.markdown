@@ -5,7 +5,7 @@ date: 2015-10-21 02:21:55.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
 **Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.**

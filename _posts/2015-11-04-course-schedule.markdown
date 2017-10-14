@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Course Schedule
+title: 207 - Course Schedule
 date: 2015-11-04 12:41:18.000000000 -05:00
 tags:
 - Leetcode
 categories:
 - Graph
-- Sorting
 author: Jason
 ---
-<p><strong><em>There are a total of n courses you have to take, labeled from 0 to n - 1. Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]. Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?</em></strong></p>
+**There are a total of n courses you have to take, labeled from 0 to n - 1. Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]. Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?**
 
 ``` java
 public class Solution {
@@ -82,5 +81,30 @@ class Solution(object):
                 if (degrees[next] == 0):
                     queue.append(next)
 
+        return numCourses == 0
+```
+
+``` python
+class Solution(object):
+    def canFinish(self, numCourses, prerequisites):
+        """
+        :type numCourses: int
+        :type prerequisites: List[List[int]]
+        :rtype: bool
+        """
+
+        degree_list = [0] * numCourses
+        pre_list = [[] for i in xrange(numCourses)]
+        for x, y in prerequisites:
+            degree_list[x] += 1
+            pre_list[y].append(x)
+        stack = [index for index, i in enumerate(degree_list) if i == 0]
+        while stack:
+            curr = stack.pop()
+            numCourses -= 1
+            for j in pre_list[curr]:
+                degree_list[j] -= 1
+                if degree_list[j] == 0:
+                    stack.append(j)
         return numCourses == 0
 ```

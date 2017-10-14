@@ -6,7 +6,6 @@ tags:
 - Leetcode
 categories:
 - Sorting
-- Subarray
 author: Jason
 ---
 <p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller that the given integer.</em></strong></p>
@@ -16,10 +15,10 @@ author: Jason
 public class Solution {
    /**
      * @param A: An integer array
-     * @return: The number of element in the array that 
+     * @return: The number of element in the array that
      *          are smaller that the given integer
      */
-     
+
     class segmentTreeNode {
         int start, end, count;
         segmentTreeNode left, right;
@@ -34,7 +33,7 @@ public class Solution {
     public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
         // write your code here
         ArrayList<Integer> result = new ArrayList<Integer>();
-        
+
         segmentTreeNode root = build(0, 10000);
         for (int n : A) {
             update(root, n);
@@ -44,7 +43,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public segmentTreeNode build(int start, int end) {
         if (start > end) return null;
         if (start == end) return new segmentTreeNode(start, end, 0);//base case
@@ -87,7 +86,7 @@ public class Solution {
 public class Solution {
    /**
      * @param A: An integer array
-     * @return: The number of element in the array that 
+     * @return: The number of element in the array that
      *          are smaller that the given integer
      */
     public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
@@ -99,7 +98,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public int find(int[] A, int val) {
         int lo = 0, hi = A.length - 1;
         while (lo <= hi) {

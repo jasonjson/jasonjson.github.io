@@ -8,11 +8,9 @@ categories:
 - Graph
 author: Jason
 ---
-<p><strong><em>There are a total of n courses you have to take, labeled from 0 to n - 1.</p>
+**There are a total of n courses you have to take, labeled from 0 to n - 1. Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1].  Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses. There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.**
 
-Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]</p>
-Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.</p>
-There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.</em></strong></p>
+
 ``` java
 public class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
@@ -51,4 +49,30 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def findOrder(self, numCourses, prerequisites):
+        """
+        :type numCourses: int
+        :type prerequisites: List[List[int]]
+        :rtype: List[int]
+        """
+
+        degree_list = [0] * numCourses
+        prere_list = [[] for i in xrange(numCourses)]
+        for x, y in prerequisites:
+            degree_list[x] += 1
+            prere_list[y].append(x)
+        ret = []
+        stack = [index for index, i in enumerate(degree_list) if i == 0]
+        while stack:
+            curr = stack.pop()
+            ret.append(curr)
+            for j in prere_list[curr]:
+                degree_list[j] -= 1
+                if degree_list[j] == 0:
+                    stack.append(j)
+        return ret if len(ret) == numCourses else []
 ```

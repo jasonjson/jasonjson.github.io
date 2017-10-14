@@ -5,7 +5,7 @@ date: 2015-10-21 02:18:11.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an integer array, find a subarray where the sum of numbers is between two given interval. Your code should return the number of possible answer.</em></strong></p>
@@ -15,7 +15,7 @@ author: Jason
 public class Solution {
     public int subarraySumII(int[] nums, int start, int end) {
         if (nums == null || nums.length == 0 || start > end) return 0;
-        
+
         int[] sum = new int[nums.length];
         sum[0] = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -64,7 +64,7 @@ public class Solution {
     public int subarraySumII(int[] A, int start, int end) {
         // Write your code here
         if (A == null) return -1;
-        
+
         int count = 0;
         int[] sums = new int[A.length + 1];
         for (int i = 1; i <= A.length; i++) {

@@ -5,7 +5,7 @@ date: 2015-10-21 13:06:45.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Aarray
 author: Jason
 ---
 <p><strong><em>Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.</em></strong></p>
@@ -36,10 +36,10 @@ public class Solution {
         }
         return result;
     }
-    
+
     public List<Integer> helper(int[] A, int sign) {
         ArrayList<Integer> result = new ArrayList<Integer>();
-        
+
         int local = 0, global = sign == 1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         int start = 0, sum = 0;
         for (int i = 0; i < A.length; i++) {

@@ -5,7 +5,7 @@ date: 2015-10-31 10:24:04.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] + nums[j] + nums[k] &lt; target.</p>
@@ -16,7 +16,7 @@ Return 2. Because there are two triplets which sums are less than 2:</em></stron
 public class Solution {
     public int threeSumSmaller(int[] nums, int target) {
         if (nums == null || nums.length == 0) return 0;
-        
+
         Arrays.sort(nums);
         int result = 0;
         for (int i = 0; i + 2 < num.length; i++) {
@@ -49,7 +49,7 @@ public class Solution {
 public class Solution {
     public int threeSumSmaller(int[] nums, int target) {
         if (nums == null || nums.length == 0) return 0;
-        
+
         int count = 0;
         for (int i = 0; i < nums.length - 2; i++) {
             for (int j = i + 1; j < nums.length - 1; j++) {

@@ -5,7 +5,7 @@ date: 2015-10-21 12:50:57.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an array of integers, find the subarray with smallest sum. Return the sum of the subarray.</em></strong></p>
@@ -19,7 +19,7 @@ public class Solution {
      */
     public int minSubArray(ArrayList<Integer> nums) {
         if (nums == null || nums.size() == 0) return 0;
-        
+
         int min = Integer.MAX_VALUE, local = 0;
         for (int num : nums) {
             local = Math.min(local + num, num);

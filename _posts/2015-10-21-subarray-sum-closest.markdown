@@ -5,7 +5,7 @@ date: 2015-10-21 02:18:36.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an integer array, find a subarray with sum closest to zero. Return the indexes of the first number and last number.</em></strong></p>
@@ -22,7 +22,7 @@ public class Solution {
     }
     public int[] subarraySumClosest(int[] nums) {
         if (nums == null || nums.length == 0) return new int[] {};
-        
+
         pair[] pairs = new pair[nums.length + 1];
         pairs[0] = new pair(0, 0);
         for (int i = 1; i <= nums.length; i++) {
@@ -31,7 +31,7 @@ public class Solution {
         Arrays.sort(pairs, new Comparator<pair>() {
            public int compare(pair a, pair b) {
                return a.sum - b.sum;
-           } 
+           }
         });
         int diff = Integer.MAX_VALUE, start = 0, end = 0;
         for (int i = 1; i < pairs.length; i++) {

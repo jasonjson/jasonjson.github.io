@@ -6,7 +6,6 @@ tags:
 - Leetcode
 categories:
 - Dynamic Programming
-- Subarray
 author: Jason
 ---
 <p><strong><em>Given an array of integers and a number k, find k non-overlapping subarrays which have the largest sum. The number in each subarray should be contiguous. Return the largest sum.</em></strong></p>
@@ -22,7 +21,7 @@ public class Solution {
     public int maxSubArray(ArrayList<Integer> nums, int k) {
         // write your code
         if (nums == null || nums.size() == 0) return 0;
-                
+
         int n = nums.size();
         int[][] sum = new int[k + 1][n + 1];
         //from i elements pick k subarray

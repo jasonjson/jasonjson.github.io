@@ -5,8 +5,7 @@ date: 2015-10-21 14:26:41.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Integer
-- Subarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</em></strong></p>
@@ -26,7 +25,7 @@ public class Solution {
         for (int n : num) {
             set.add(n);
         }
-        
+
         for (int n : num) {
             int left = n;
             while (set.remove(left)) {
