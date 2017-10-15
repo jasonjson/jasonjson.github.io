@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rectangle Area
+title: 223 - Rectangle Area
 date: 2015-10-25 20:44:22.000000000 -04:00
 tags:
 - Leetcode
@@ -21,7 +21,7 @@ public class Solution {
         int y1 = Math.max(B, F);
         int x2 = Math.min(C, G);
         int y2 = Math.min(D, H);
-        result = (C - A) * (D - B) + (G - E) * (H - F) - (x2 - x1) * (y2 - y1);//minus overlapped 
+        result = (C - A) * (D - B) + (G - E) * (H - F) - (x2 - x1) * (y2 - y1);//minus overlapped
         if (result > Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
         } else {
@@ -29,4 +29,27 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def computeArea(self, A, B, C, D, E, F, G, H):
+        """
+        :type A: int
+        :type B: int
+        :type C: int
+        :type D: int
+        :type E: int
+        :type F: int
+        :type G: int
+        :type H: int
+        :rtype: int
+        """
+
+        if C <= E or B >= H or G <= A or F >= D:
+            return (C - A) * (D - B) + (G- E) * (H - F)
+        else:
+            left, bottom = max(A, E), max(B, F)
+            right, top = min(C, G), min(D, H)
+            return (C - A) * (D - B) + (G- E) * (H - F) - (top - bottom) * (right - left)
 ```
