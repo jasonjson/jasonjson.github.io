@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add and Search Word - Data structure design
+title: 211 - Add and Search Word
 date: 2015-11-04 11:39:30.000000000 -05:00
 tags:
 - Leetcode
@@ -8,18 +8,19 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Design a data structure that supports the following two operations:</p>
+**Design a data structure that supports the following two operations:**
+* void addWord(word)
+* bool search(word)
+**search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.**
 
-void addWord(word)</p>
-bool search(word)</p>
-search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.</em></strong></p>
+
 ``` java
 public class WordDictionary {
     class TrieNode {
         boolean storeWord = false;
         TrieNode[] children = new TrieNode[26];
     }
-    
+
     class Trie {
         TrieNode root = new TrieNode();
         public void insert(String word) {
@@ -47,7 +48,7 @@ public class WordDictionary {
                         return false;
                     }
                     curr = curr.children[c - 'a'];
-                }                
+                }
             }
             return curr.storeWord;
         }
@@ -64,4 +65,54 @@ public class WordDictionary {
         return trie.search(word, trie.root);
     }
 }
+```
+
+``` python
+class TrieNode(object):
+
+    def __init__(self):
+        self.is_word = False
+        self.char_map = {}
+
+class WordDictionary(object):
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.root = TrieNode()
+
+    def addWord(self, word):
+        """
+        Adds a word into the data structure.
+        :type word: str
+        :rtype: void
+        """
+        curr = self.root
+        for char in word:
+            if char not in curr.char_map:
+                curr.char_map[char] = TrieNode()
+            curr = curr.char_map[char]
+        curr.is_word = True
+
+    def search(self, word):
+        """
+        Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
+        :type word: str
+        :rtype: bool
+        """
+        curr = self.root
+        return self.helper(curr, word)
+
+    def helper(self, root, word):
+        for i, char in enumerate(word):
+            if char == ".":
+                for child in root.char_map.values():
+                    if self.helper(child, word[i + 1:]):
+                        return True
+                return False
+            elif char not in root.char_map:
+                return False
+            root = root.char_map[char]
+        return root.is_word
 ```
