@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Combination Sum III
+title: 216 - Combination Sum III
 date: 2015-11-03 17:04:46.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</em></strong></p>
+**Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.**
 
 
 ``` java
@@ -36,4 +36,27 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def combinationSum3(self, k, n):
+        """
+        :type k: int
+        :type n: int
+        :rtype: List[List[int]]
+        """
+
+        ret = []
+        self.helper(k, n, 1, [], ret)
+        return ret
+
+    def helper(self, k, n, start, curr, ret):
+        if len(curr) == k:
+            if n == 0:
+                ret.append(curr[:])
+            return
+        for i in xrange(start, 10):
+            if i <= n:
+                self.helper(k, n - i, i + 1, curr + [i], ret)
 ```
