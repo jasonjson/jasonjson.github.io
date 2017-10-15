@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Contains Duplicate II
+title: 219 - Contains Duplicate II
 date: 2015-11-03 15:39:36.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- Array
 author: Jason
 ---
-<p><strong><em>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.</em></strong></p>
+**Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.**
 
 
 ``` java
@@ -25,4 +25,24 @@ public class Solution {
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def containsNearbyDuplicate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+
+        if not nums:
+            return False
+
+        num_map = {}
+        for i, num in enumerate(nums):
+            if num in num_map and i - num_map[num] <= k:
+                return True
+            num_map[num] = i
+        return False
 ```

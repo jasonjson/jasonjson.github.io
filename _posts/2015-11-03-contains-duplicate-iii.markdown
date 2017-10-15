@@ -1,18 +1,16 @@
 ---
 layout: post
-title: Contains Duplicate III
+title: 220 - Contains Duplicate III
 date: 2015-11-03 16:37:27.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
-- Sorting
+- Array
 author: Jason
 ---
-<p><strong><em>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.</em></strong></p>
+**Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.**
+[Reference](https://leetcode.com/discuss/38206/ac-o-n-solution-in-java-using-buckets-with-explanation")
 
-
-<p><a href="https://leetcode.com/discuss/38206/ac-o-n-solution-in-java-using-buckets-with-explanation">Read more</a></p>
 
 ``` java
 public class Solution {
@@ -34,4 +32,25 @@ public class Solution {
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def containsNearbyAlmostDuplicate(self, nums, k, t):
+        if t < 0:
+            return False
+        bucket_map = {}
+        bucket_size = t + 1
+        for i in xrange(len(nums)):
+            index = nums[i] / bucket_size
+            if index in bucket_map:
+                return True
+            if index - 1 in bucket_map and abs(nums[i] - bucket_map[index - 1]) < bucket_size:
+                return True
+            if index + 1 in bucket_map and abs(nums[i] - bucket_map[index + 1]) < bucket_size:
+                return True
+            bucket_map[index] = nums[i]
+            if i >= k:
+                del bucket_map[nums[i - k] / bucket_size]
+        return False
 ```
