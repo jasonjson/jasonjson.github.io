@@ -1,53 +1,58 @@
 ---
 layout: post
-title: Maximal Square
-date: 2015-10-21 14:29:56.000000000 -04:00
+title: 211 - Maximal Square
+date: 2015-11-03 15:29:44.000000000 -05:00
 tags:
 - Leetcode
 categories:
 - Dynamic Programming
-- Matrix
 author: Jason
 ---
-<p><strong><em>Given a 2D binary matrix filled with 0's and 1's, find the largest square containing all 1's and return its area.</em></strong></p>
+**Given a 2D binary matrix filled with 0's and 1's, find the largest square containing all 1's and return its area.**
 
 
 ``` java
 public class Solution {
-    /**
-     * @param matrix: a matrix of 0 and 1
-     * @return: an integer
-     */
-    public int maxSquare(int[][] matrix) {
-        // write your code here
+    public int maximalSquare(char[][] matrix) {
         if (matrix == null || matrix.length == 0) return 0;
-        int row = matrix.length, col = matrix[0].length;
-        
+
+        int row = matrix.length, col = matrix[0].length, max = 0;
         int[][] dp = new int[row][col];
-        int max = 0;
         for (int i = 0; i < row; i++) {
-            if (matrix[i][0] == 1) {
-                dp[i][0] = 1;
-                max = 1;
-            }
-        }
-        
-        for (int j = 0; j < col; j++) {
-            if (matrix[0][j] == 1) {
-                dp[0][j] = 1;
-                max = 1;
-            }
-        }
-        
-        for (int i = 1; i < row; i++) {
-            for (int j = 1; j < col; j++) {
-                if (matrix[i][j] == 1) {
+            for (int j = 0; j < col; j++) {
+                if (i == 0 || j == 0) {
+                    dp[i][j] = matrix[i][j] - '0';
+                } else if (matrix[i][j] == '1') {
                     dp[i][j] = Math.min(dp[i-1][j], Math.min(dp[i][j-1], dp[i-1][j-1])) + 1;
-                    max = Math.max(max, dp[i][j]);
                 }
+                max = Math.max(max, dp[i][j]);
             }
         }
         return max * max;
     }
-}//http://www.cnblogs.com/jcliBlogger/p/4548751.html
+}
+```
+
+``` python
+class Solution(object):
+    def maximalSquare(self, matrix):
+        """
+        :type matrix: List[List[str]]
+        :rtype: int
+        """
+
+        if not matrix:
+            return 0
+
+        row, col = len(matrix), len(matrix[0])
+        dp = [[0] * col for i in xrange(row)]
+        max_len = 0
+        for i in xrange(row):
+            for j in xrange(col):
+                if i == 0 or j == 0:
+                    dp[i][j] = int(matrix[i][j])
+                elif matrix[i][j] == "1":
+                    dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
+                max_len = max(max_len, dp[i][j])
+        return max_len ** 2
 ```
