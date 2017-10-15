@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Implement Stack using Queues
+title: 225 - Implement Stack using Queues
 date: 2015-11-03 14:33:19.000000000 -05:00
 tags:
 - Leetcode
@@ -8,15 +8,15 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Implement the following operations of a stack using queues.</p>
+**Implement the following operations of a stack using queues.**
+* push(x) -- Push element x onto stack.
+* pop() -- Removes the element on top of the stack.
+* top() -- Get the top element.
+* empty() -- Return whether the stack is empty.
 
-push(x) -- Push element x onto stack.</p>
-pop() -- Removes the element on top of the stack.</p>
-top() -- Get the top element.</p>
-empty() -- Return whether the stack is empty.</em></strong></p>
+
 ``` java
 class MyStack {
-    // Push element x onto stack.
     Queue<Integer> q1 = new LinkedList<Integer>();
     Queue<Integer> q2 = new LinkedList<Integer>();
     int len = 0;
@@ -25,19 +25,18 @@ class MyStack {
         len ++;
     }
 
-    // Removes the element on top of the stack.
     public void pop() {
         for (int i = 0; i < len - 1; i++) {
             q2.offer(q1.poll());
         }
-        q1.poll();
+        int result = q1.poll();
         for (int i = 0; i < len - 1; i++) {
             q1.offer(q2.poll());
         }
         len--;
+        return result
     }
 
-    // Get the top element.
     public int top() {
         for (int i = 0; i < len - 1; i++) {
             q2.offer(q1.poll());
@@ -46,13 +45,64 @@ class MyStack {
         for (int i = 0; i < len - 1; i++) {
             q1.offer(q2.poll());
         }
-        q1.offer(result);//!!!!此时q1的顺序已经变化，原来队尾的元素到第一个了，需要归位
+        q1.offer(result);
         return result;
     }
 
-    // Return whether the stack is empty.
     public boolean empty() {
         return q1.isEmpty();
     }
 }
+```
+
+``` python
+class MyStack(object):
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.q1 = self.q2 = collections.deque()
+        self.size = 0
+
+    def push(self, x):
+        """
+        Push element x onto stack.
+        :type x: int
+        :rtype: void
+        """
+        self.q1.append(x)
+        self.size += 1
+
+    def pop(self):
+        """
+        Removes the element on top of the stack and returns that element.
+        :rtype: int
+        """
+        for i in xrange(self.size - 1):
+            self.q2.append(self.q1.popleft())
+        top = self.q1.popleft()
+        self.size -= 1
+        self.q1, self.q2 = self.q2, self.q1
+        return top
+
+    def top(self):
+        """
+        Get the top element.
+        :rtype: int
+        """
+        for i in xrange(self.size - 1):
+            self.q2.append(self.q1.popleft())
+        top = self.q1.popleft()
+        self.q2.append(top)
+        self.q1, self.q2 = self.q2, self.q1
+        return top
+
+
+    def empty(self):
+        """
+        Returns whether the stack is empty.
+        :rtype: bool
+        """
+        return self.size == 0
 ```
