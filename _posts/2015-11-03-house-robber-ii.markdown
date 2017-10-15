@@ -1,17 +1,16 @@
 ---
 layout: post
-title: House Robber II
+title: 213 - House Robber II
 date: 2015-11-03 18:28:31.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
 - Dynamic Programming
 author: Jason
 ---
-<p><strong><em>After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get too much attention. This time, all houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, the security system for these houses remain the same as for those in the previous street.</p>
+**After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get too much attention. This time, all houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, the security system for these houses remain the same as for those in the previous street. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.**
 
-Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</em></strong></p>
+
 ``` java
 public class Solution {
     //Taking into account this circular constraint, either we rob the house at index 0, or the house at last index n. In order to reduce this problem to the simpler problem House Robber I, we need to remove the circular condition.
@@ -24,7 +23,7 @@ public class Solution {
         if (n == 2) return Math.max(nums[0], nums[1]);
         return Math.max(helper(Arrays.copyOfRange(nums, 0, nums.length-1)), helper(Arrays.copyOfRange(nums, 1, nums.length)));
     }
-    
+
     public int helper(int[] nums) {
         int n = nums.length;
         nums[1] = Math.max(nums[0], nums[1]);
@@ -34,4 +33,27 @@ public class Solution {
         return nums[n-1];
     }
 }
+```
+
+``` python
+class Solution(object):
+    def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if len(nums) == 0:
+            return 0
+        elif len(nums) == 1:
+            return nums[0]
+        elif len(nums) == 2:
+            return max(nums[0], nums[1])
+
+        return max(self.helper(nums[: -1]), self.helper(nums[1:]))
+
+    def helper(self, nums):
+        nums[1] = max(nums[0], nums[1])
+        for i in xrange(2, len(nums)):
+            nums[i] = max(nums[i - 2] + nums[i], nums[i - 1])
+        return nums[-1]
 ```
