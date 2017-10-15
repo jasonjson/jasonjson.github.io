@@ -1,55 +1,32 @@
 #!/usr/bin/python
 
-class TrieNode(object):
-    def __init__(self):
-        self.is_word = False
-        self.char_map = {}
-class WordDictionary(object):
-
-    def __init__(self):
+class Solution(object):
+    def findKthLargest(self, nums, k):
         """
-        Initialize your data structure here.
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
         """
-        self.root = TrieNode()
 
+        return self.helper(nums, 0, len(nums) - 1, k)
 
-    def addWord(self, word):
-        """
-        Adds a word into the data structure.
-        :type word: str
-        :rtype: void
-        """
-        curr = self.root
-        for char in word:
-            if char not in curr.char_map:
-                curr.char_map[char] = TrieNode()
-            curr = curr.char_map[char]
-        curr.is_word = True
-
-
-    def search(self, word):
-        """
-        Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
-        :type word: str
-        :rtype: bool
-        """
-        curr = self.root
-        return self.helper(curr, word)
-
-    def helper(self, root, word):
-        for i, char in enumerate(word):
-            if char == ".":
-                for child in root.char_map.values():
-                    if self.helper(child, word[i + 1:]):
-                        return True
-                return False
-            elif char not in root.char_map:
-                return False
-            root = root.char_map[char]
-        return root.is_word
+    def helper(self, nums, lo, hi, k):
+        left, right, pivot = lo, hi, hi
+        while left <= right:
+            while left <= right and nums[left] < nums[pivot]:
+                left += 1
+            while left <= right and  nums[right] >= nums[pivot]:
+                right -= 1
+            if left <= right:
+                nums[left], nums[right] = nums[right], nums[left]
+        nums[left], nums[pivot] = nums[pivot], nums[left]
+        if left ==  len(nums) - k:
+            return nums[lo]
+        elif left > len(nums) - k:
+            return self.helper(nums, lo, left - 1, k)
+        else:
+            return self.helper(nums, left + 1, hi, k)
 if __name__ == "__main__":
-    word = WordDictionary()
-    word.addWord("bad")
+    solution = Solution()
     import pprint
-    # pprint.pprint(word.search("bad"))
-    pprint.pprint(word.search("b.."))
+    pprint.pprint(solution.findKthLargest([2, 1], 1))

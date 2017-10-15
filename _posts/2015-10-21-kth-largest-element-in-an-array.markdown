@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Kth Largest Element in an Array
+title: 215 - Kth Largest Element in an Array
 date: 2015-10-21 02:26:27.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Integer
 - Sorting
 author: Jason
 ---
-<p><strong><em>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. For example,</p>
+**Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. For example, given [3,2,1,5,6,4] and k = 2, return 5.**
 
-Given [3,2,1,5,6,4] and k = 2, return 5.</em></strong></p>
 
 ``` java
 class Solution {
@@ -21,10 +19,10 @@ class Solution {
     public int kthLargestElement(int k, ArrayList<Integer> numbers) {
         // write your code here
         if (numbers == null || numbers.size() == 0) return 0;
-        
+
         return helper(k, numbers, 0, numbers.size() - 1);
     }
-    
+
     public int helper(int k, ArrayList<Integer> numbers, int start, int end) {
         int lo = start, hi = end, pivot = end;
         while (lo <= hi) {
@@ -48,4 +46,34 @@ class Solution {
         }
     }
 };
+```
+
+``` python
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+
+        return self.helper(k, nums, 0, len(nums) - 1)
+
+    def helper(self, k, nums, start, end):
+        lo, hi, pivot = start, end, end
+        while lo <= hi:
+            if nums[lo] < nums[pivot]:
+                lo += 1
+                continue
+            if nums[hi] >= nums[pivot]:
+                hi -= 1
+                continue
+            nums[lo], nums[hi] = nums[hi], nums[lo]
+        nums[lo], nums[pivot] = nums[pivot], nums[lo]
+        if lo == len(nums) - k:
+            return nums[lo]
+        elif lo > len(nums) - k:
+            return self.helper(k, nums, start, lo - 1)
+        else:
+            return self.helper(k, nums, lo + 1, end)
 ```
