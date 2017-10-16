@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Calculator II
+title: 227 - Basic Calculator II
 date: 2015-11-03 14:05:09.000000000 -05:00
 tags:
 - Leetcode
@@ -8,15 +8,14 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Implement a basic calculator to evaluate a simple expression string.</p>
+**Implement a basic calculator to evaluate a simple expression string.  The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero. You may assume that the given expression is always valid.**
 
-The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero.</p>
-You may assume that the given expression is always valid.</em></strong></p>
+
 ``` java
 public class Solution {
     public int calculate(String s) {
         if (s == null || s.length() == 0) return -1;
-        
+
         int result = 0, sign = 1, num = 0, prev = 0, opt = 0;
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) {//number
@@ -47,7 +46,7 @@ public class Solution {
         if (num != 0) {
             if (opt == 1) {
                 result += sign * prev * num;//相当于把前面num = prev * num;result += num * sign;并到一起
-            } else if (opt == -1) { 
+            } else if (opt == -1) {
                 result += sign * prev / num;
             } else {
                 result += sign * num;
@@ -56,4 +55,33 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def calculate(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        if not s:
+            return 0
+        num_stack = []
+        num, sign = 0, "+"
+        for i, char in enumerate(s):
+            if char.isdigit():
+                num = num * 10 + int(char)
+            if (not char.isdigit() and char != " ") or i == len(s) - 1:
+                if sign == "+":
+                    num_stack.append(num)
+                elif sign == "-":
+                    num_stack.append(-num)
+                elif sign == "*":
+                    num_stack.append(num_stack.pop() * num)
+                elif sign == "/":
+                    num_stack.append(int(num_stack.pop() / float(num)))
+                sign = char
+                num = 0
+        return sum(num_stack)
 ```

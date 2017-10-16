@@ -1,32 +1,36 @@
 #!/usr/bin/python
 
 class Solution(object):
-    def findKthLargest(self, nums, k):
+    def calculate(self, s):
         """
-        :type nums: List[int]
-        :type k: int
+        :type s: str
         :rtype: int
         """
 
-        return self.helper(nums, 0, len(nums) - 1, k)
+        if not s:
+            return 0
+        num_stack = []
+        num, sign = 0, "+"
+        for i, char in enumerate(s):
+            if char.isdigit():
+                num = num * 10 + int(char)
+            if char != " " and !char.isdigit():
+                if sign == "+":
+                    num_stack.append(num)
+                elif sign == "-":
+                    num_stack.append(-num)
+                elif sign == "*":
+                    num_stack.append(num_stack.pop() * num)
+                elif sign == "/":
+                    num_stack.append(int(num_stack.pop() / float(num)))
+                sign = char
+                num = 0
 
-    def helper(self, nums, lo, hi, k):
-        left, right, pivot = lo, hi, hi
-        while left <= right:
-            while left <= right and nums[left] < nums[pivot]:
-                left += 1
-            while left <= right and  nums[right] >= nums[pivot]:
-                right -= 1
-            if left <= right:
-                nums[left], nums[right] = nums[right], nums[left]
-        nums[left], nums[pivot] = nums[pivot], nums[left]
-        if left ==  len(nums) - k:
-            return nums[lo]
-        elif left > len(nums) - k:
-            return self.helper(nums, lo, left - 1, k)
-        else:
-            return self.helper(nums, left + 1, hi, k)
+        import pprint
+        pprint.pprint(num_stack)
+        return sum(num_stack)
+
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.findKthLargest([2, 1], 1))
+    pprint.pprint(solution.calculate("14-3/2"))
