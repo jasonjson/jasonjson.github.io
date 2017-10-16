@@ -1,53 +1,38 @@
 ---
 layout: post
-title: Majority Element II
+title: 229 - Majority Element II
 date: 2015-10-21 02:40:45.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Brain Teaser
-- Integer
 author: Jason
 ---
-<p><strong><em>Given an integer array of size n, find all elements that appear more than $\floor *{n/3}$ times. The algorithm should run in linear time and in O(1) space.</em></strong></p>
+**Given an integer array of size n, find all elements that appear more than n/3 times. The algorithm should run in linear time and in O(1) space.**
 
 
-``` java
-public class Solution {
-    public List<Integer> majorityElement(int[] nums) {
-        if (nums == null) return null;
-        List<Integer> result = new ArrayList<Integer>();
-        int key1 = -1, key2 = -1, count1 = 0, count2 = 0;
-        for (int n : nums) {
-            if (count1 == 0) {
-                key1 = n;
-                count1 = 1;
-            } else if (count2 == 0 && n != key1) {
-                key2 = n;
-                count2 = 1;
-            } else {
-                if (key1 == n) {
-                    count1 ++;
-                } else if (key2 == n) {
-                    count2 ++;
-                } else {
-                    count1 --;
-                    count2 --;
-                }
-            }
-        }
-        count1 = 0;
-        count2 = 0;
-        for (int n : nums) {
-            if (key1 == n) {
-                count1++;
-            } else if (key2 == n) {
-                count2++;
-            }
-        }
-        if(count1 > nums.length / 3) result.add(key1);
-        if(count2 > nums.length / 3) result.add(key2);
-        return result;
-    }
-}
+``` python
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+
+        if not nums:
+            return []
+        e1, e2, c1, c2 = 0, 1, 0, 0
+        for num in nums:
+            if num == e1:
+                c1 += 1
+            elif num == e2:
+                c2 += 1
+            elif c1 == 0:
+                e1, c1 = num, 1
+            elif c2 == 0:
+                e2, c2 = num, 1
+            else:
+                c1 -= 1
+                c2 -= 1
+        return [n for n in (e1, e2) if nums.count(n) > len(nums) / 3]
 ```
