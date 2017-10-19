@@ -5,41 +5,53 @@ date: 2015-10-21 02:31:22.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Binary Search Tree
+- Matrix
 author: Jason
 ---
-**Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it. This matrix has the following properties:**
-* Integers in each row are sorted from left to right.
-* Integers in each column are sorted from up to bottom.
-* No duplicate integers in each row or column.
+**Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:**
+* Integers in each row are sorted in ascending from left to right.
+* Integers in each column are sorted in ascending from top to bottom.
 
 
 ``` java
 public class Solution {
-    /**
-     * @param matrix: A list of lists of integers
-     * @param: A number you want to search in the matrix
-     * @return: An integer indicate the occurrence of target in the given matrix
-     */
-    public int searchMatrix(int[][] matrix, int target) {
-        // write your code here
-        int count = 0;
-        if (matrix == null || matrix.length == 0) return count;
-        if (matrix[0] == null || matrix[0].length == 0) return count;
-        //error check
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0) return False;
         int row = matrix.length, col = matrix[0].length;
-        int i = 0, j = col - 1, count = 0;
+        int i = 0, j = col - 1;
         while (i < row && j >= 0) {
             if (matrix[i][j] == target) {
-                count ++;
-                j--;//bug: forget to decrement j, j is the smallest element in this column, the rest elements woule be larger
+                return True
             } else if (matrix[i][j] > target) {
                 j--;
             } else {
                 i++;
             }
         }
-        return count;
+        return False;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        """
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        """
+
+        if not matrix:
+            return False
+        row, col = len(matrix), len(matrix[0])
+        i, j = 0, col - 1
+        while i < row and j >= 0:
+            if matrix[i][j] > target:
+                j -= 1
+            elif matrix[i][j] < target:
+                i += 1
+            else:
+                return True
+        return False
 ```
