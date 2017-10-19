@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Product of Array Exclude Itself
+title: 238 - Product of Array Exclude Itself
 date: 2015-10-21 02:19:40.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Integer
+- Array
 author: Jason
 ---
-<p><strong><em>Given an integers array A. Define B[i] = A[0] * ... * A[i-1] * A[i+1] * ... * A[n-1], calculate B WITHOUT divide operation.</em></strong></p>
+**Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].**
 
 
 ``` java
@@ -23,7 +23,7 @@ public class Solution {
                 left[i] = left[i-1] * nums[i-1];
             }
         }
-        
+
         int right = 1;
         for (int i = n - 1; i >= 0; i--) {
             if (i == n - 1) {
@@ -36,4 +36,24 @@ public class Solution {
         return left;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def productExceptSelf(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+
+        if not nums:
+            return []
+        ret = [1] * len(nums)
+        for i in xrange(1, len(nums)):
+            ret[i] = ret[i - 1] * nums[i - 1]
+        right = 1
+        for i in reversed(xrange(len(nums) - 1)):
+            right = right * nums[i + 1]
+            ret[i] *= right
+        return ret
 ```
