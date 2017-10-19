@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Design Twitter
+title: 355 - Design Twitter
 date: 2017-05-06
 tags:
 - Leetcode
 categories:
-- Priority Queue
+- Data Structure
 author: Jason
 ---
 **Design a simplified version of Twitter where users can post tweets, follow/unfollow another user and is able to see the 10 most recent tweets in the user's news feed. Your design should support the following methods:**

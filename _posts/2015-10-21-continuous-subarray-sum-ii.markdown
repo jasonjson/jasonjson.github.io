@@ -5,7 +5,7 @@ date: 2015-10-21 13:06:45.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Aarray
+- Array
 author: Jason
 ---
 <p><strong><em>Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.</em></strong></p>
