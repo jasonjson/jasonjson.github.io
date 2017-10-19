@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Different Ways to Add Parentheses
+title: 241 - Different Ways to Add Parentheses
 date: 2015-11-02 16:24:34.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are +, - and *.</em></strong></p>
+**Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are +, - and *.**
 
 
 ``` java
 public class Solution {
     public List<Integer> diffWaysToCompute(String input) {
         if (input == null || input.length() == 0) return new ArrayList<Integer>();
-        
+
         List<String> path = new ArrayList<String>();
         for (int i = 0; i < input.length(); i++) {
             int j = i;
@@ -30,7 +30,7 @@ public class Solution {
         }//separate strings into numbers and operators
         return helper(path, 0, path.size() - 1);
     }
-    
+
     public List<Integer> helper(List<String> path, int lo, int hi) {
         List<Integer> result = new ArrayList<Integer>();
         if (lo == hi) {
@@ -56,4 +56,51 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def diffWaysToCompute(self, input):
+        """
+        :type input: str
+        :rtype: List[int]
+        """
+
+        if not input:
+            return []
+        num_op = self.get_num_op(input)
+        return self.helper(num_op, 0, len(num_op) - 1)
+
+    def helper(self, num_op, start, end):
+        if start == end:
+            return [num_op[start]]
+        ret = []
+        for i in xrange(start + 1, end):
+            operator = num_op[i]
+            left_ret = self.helper(num_op, start, i - 1)
+            right_ret = self.helper(num_op, i + 1, end)
+            for left in left_ret:
+                for right in right_ret:
+                    if operator == "+":
+                        ret.append(left + right)
+                    elif operator == "-":
+                        ret.append(left - right)
+                    elif operator == "*":
+                        ret.append(left * right)
+        return ret
+
+    def get_num_op(self, input):
+        ret = []
+        index = 0
+        num = 0
+        while index < len(input):
+            if input[index].isdigit():
+                num = num * 10 + int(input[index])
+            else:
+                ret.append(num)
+                ret.append(input[index])
+                num = 0
+            index += 1
+        ret.append(num)
+        return ret
 ```
