@@ -13,10 +13,6 @@ author: Jason
 
 ``` java
 public class Solution {
-    /**
-     *@param A : an integer array
-     *return : a integer
-     */
     //利用位运算中的异或：x^x = 0, x^0 = x。并且异或有交换律：1^1^0 = 0 = 1^0^1
     public int singleNumber(int[] A) {
         int result = 0;
