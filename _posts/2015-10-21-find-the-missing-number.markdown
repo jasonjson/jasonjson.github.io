@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find the Missing Number
+title: 268 - Find the Missing Number
 date: 2015-10-21 13:02:42.000000000 -04:00
 tags:
 - Leetcode
@@ -8,43 +8,20 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Given an array contains N numbers of 0 .. N, find which number doesn't exist in the array.</em></strong></p>
+**Given an array contains N numbers of 0 .. N, find which number doesn't exist in the array.**
 
 
 ``` java
 public class Solution {
-    public int missingNumber(int[] nums) {
-        int lo = 0, hi = nums.length - 1;
-        while (lo <= hi) {
-            int mid = (lo + hi) / 2;
-            int count = 0;
-            for (int n : nums) {
-                if (n <= mid) {
-                    count ++;
-                }
-            }
-            if (count == mid + 1) {
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
-            }
-        }
-        return lo;
-    }
-}
-```
-``` java
-public class Solution {
-    /**    
+    /**
      * @param nums: an array of integers
      * @return: an integer
      */
     public int findMissing(int[] nums) {
-        // write your code here
         int x1 = 0;
         for (int n : nums) {
             x1 ^= n;
-        }        
+        }
         int x2 = 0;
         for (int i = 0; i <= nums.length; i++) {
             x2 ^= i;
@@ -75,4 +52,20 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        xor = 0
+        for num in nums:
+            xor ^= num
+        for i in xrange(len(nums) + 1):
+            xor ^= i
+        return xor
 ```
