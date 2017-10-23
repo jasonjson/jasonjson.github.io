@@ -1,26 +1,33 @@
 #!/usr/bin/python
 
 class Solution(object):
-    def nthUglyNumber(self, n):
+    def canPartition(self, nums):
         """
-        :type n: int
-        :rtype: int
+        :type nums: List[int]
+        :rtype: bool
         """
+        if not nums:
+            return True
 
-        dp = [0] * (n + 1)
-        dp[1] = 1
-        index2 = index3 = index5 = 1
-        for i in xrange(2, n + 1):
-            dp[i] = min(dp[index2] * 2, dp[index3] * 3, dp[index5] * 5)
-            if dp[i] == dp[index2] * 2:
-                index2 += 1
-            if dp[i] == dp[index3] * 3:
-                index3 += 1
-            if dp[i] == dp[index5] * 5:
-                index5 += 1
-        print dp
-        return dp[n]
+        left, right = 0, sum(nums)
+        visited = [False] * len(nums)
+        return self.helper(nums, visited, left, right)
+
+    def helper(self, nums, visited, left, right):
+        if left == right:
+            return True
+        elif left > right:
+            return False
+        for i, num in enumerate(nums):
+            if not visited[i]:
+                visited[i] = True
+                if self.helper(nums, visited, left + num, right - num):
+                    return True
+                else:
+                    visited[i] = False
+        return False
+
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.nthUglyNumber(1))
+    pprint.pprint(solution.canPartition([1,2 ,3,5]))
