@@ -34,3 +34,28 @@ class Solution(object):
                     dp[i] = dp[i] or dp[i - num]
         return dp[-1]
 ```
+
+``` python
+class Solution(object):
+    def canPartition(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        if not nums:
+            return True
+        summation = sum(nums)
+        if summation % 2 != 0:
+            return False
+        nums.sort(reverse=True)
+        return self.helper(nums, summation / 2, 0)
+
+    def helper(self, nums, summation, index):
+        if index >= len(nums):
+            return False
+        elif summation == nums[index]:
+            return True
+        elif summation < nums[index]:
+            return False
+        return self.helper(nums, summation - nums[index], index + 1) or self.helper(nums, summation, index + 1)
+```

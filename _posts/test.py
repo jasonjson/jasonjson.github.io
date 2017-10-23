@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 class Solution(object):
     def canPartition(self, nums):
@@ -8,26 +7,22 @@ class Solution(object):
         """
         if not nums:
             return True
+        nums.sort(reverse=True)
+        return self.helper(nums, sum(nums) / 2, 0)
 
-        left, right = 0, sum(nums)
-        visited = [False] * len(nums)
-        return self.helper(nums, visited, left, right)
-
-    def helper(self, nums, visited, left, right):
-        if left == right:
-            return True
-        elif left > right:
-            return False
-        for i, num in enumerate(nums):
-            if not visited[i]:
-                visited[i] = True
-                if self.helper(nums, visited, left + num, right - num):
-                    return True
-                else:
-                    visited[i] = False
-        return False
+    def helper(self, nums, summation, index):
+        try:
+            if summation == nums[index]:
+                return True
+            elif summation < nums[index]:
+                print summation
+                return False
+        except:
+            import pdb
+            pdb.set_trace()
+        return self.helper(nums, summation - nums[index], index + 1) or self.helper(nums, summation, index + 1)
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.canPartition([1,2 ,3,5]))
+    pprint.pprint(solution.canPartition([2,2,3,5]))
