@@ -1,28 +1,32 @@
 
 class Solution(object):
-    def canPartition(self, nums):
+    def hIndex(self, citations):
         """
-        :type nums: List[int]
-        :rtype: bool
+        :type citations: List[int]
+        :rtype: int
         """
-        if not nums:
-            return True
-        nums.sort(reverse=True)
-        return self.helper(nums, sum(nums) / 2, 0)
+        if not citations:
+            return 0
 
-    def helper(self, nums, summation, index):
-        try:
-            if summation == nums[index]:
-                return True
-            elif summation < nums[index]:
-                print summation
-                return False
-        except:
-            import pdb
-            pdb.set_trace()
-        return self.helper(nums, summation - nums[index], index + 1) or self.helper(nums, summation, index + 1)
+        citations.sort()
+        lo, hi = 0, len(citations) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if self.is_valid(citations, mid):
+                lo = mid
+            else:
+                hi = mid - 1
+        return lo
 
+    def is_valid(self, citations, index):
+        count = 0
+        for citation in citations:
+            if citation >= index:
+                count += 1
+        import pdb
+        pdb.set_trace()
+        return count >= index and len(citations) - count < index
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.canPartition([2,2,3,5]))
+    pprint.pprint(solution.hIndex([1]))

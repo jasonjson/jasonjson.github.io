@@ -1,17 +1,18 @@
 ---
 layout: post
-title: H-Index II
+title: 275 - H-Index II
 date: 2015-10-29 17:16:42.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- Array
 author: Jason
 ---
-<p><strong><em>Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?</em></strong></p>
+**Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?**
+
+The basic idea comes from the description h of the N papers have at least h citations each. Therefore, we know if "mid + 1" is a valid h index, it means value of position "citationsSize - mid - 1" must be larger or equal to "mid + 1". After we find a valid h index, we go on searching on the right part to see if we can find a larger h index. If it's not a valid h index, the h index can be found in the left part and we simply follow the standard binary search to solve this problem.
 
 
-<p>The basic idea comes from the description h of his/her N papers have at least h citations each. Therefore, we know if "mid + 1" is a valid h index, it means value of position "citationsSize - mid - 1" must exceed "mid". After we find a valid h index, we go on searching on the right part to see if we can find a larger h index. If it's not a valid h index, the h index can be found in the left part and we simply follow the standard binary search to solve this problem.</p>
 ``` java
 public class Solution {
     public int hIndex(int[] citations) {
@@ -27,4 +28,25 @@ public class Solution {
         return lo;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def hIndex(self, citations):
+        """
+        :type citations: List[int]
+        :rtype: int
+        """
+
+        if not citations:
+            return 0
+
+        lo, hi, size = 0, len(citations) - 1, len(citations)
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if citations[size - (mid + 1)] >= mid + 1:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return lo
 ```
