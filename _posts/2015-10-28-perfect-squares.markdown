@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perfect Squares
+title: 279 - Perfect Squares
 date: 2015-10-28 11:33:33.000000000 -04:00
 tags:
 - Leetcode
@@ -26,4 +26,21 @@ public class Solution {
         return dp[n];
     }
 }
+```
+
+``` python
+class Solution(object):
+    def numSquares(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+        dp = [0] * (n + 1)
+        for i in xrange(1, n + 1):
+            nearest, prev_min = int(math.sqrt(i)), i
+            for j in reversed(xrange(1, nearest + 1)):
+                prev_min = min(prev_min, dp[i - j * j])
+            dp[i] = prev_min + 1
+        return dp[-1]
 ```
