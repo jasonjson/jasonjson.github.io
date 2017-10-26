@@ -72,5 +72,5 @@ class Solution(object):
             else:
                 self.helper(num[i:], target, curr + ["+", str(new_num)], new_num, curr_ret + new_num, ret)
                 self.helper(num[i:], target, curr + ["-", str(new_num)], -new_num, curr_ret - new_num, ret)
-                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret);
+                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret)
 ```
