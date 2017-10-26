@@ -1,32 +1,32 @@
-
 class Solution(object):
-    def hIndex(self, citations):
+    def addOperators(self, num, target):
         """
-        :type citations: List[int]
-        :rtype: int
+        :type num: str
+        :type target: int
+        :rtype: List[str]
         """
-        if not citations:
-            return 0
 
-        citations.sort()
-        lo, hi = 0, len(citations) - 1
-        while lo <= hi:
-            mid = (lo + hi) / 2
-            if self.is_valid(citations, mid):
-                lo = mid
+        if not num:
+            return []
+
+        ret = []
+        self.helper(num, target, [], 0, 0, ret)
+        return ret
+
+    def helper(self, num, target, curr, prev, curr_ret, ret):
+        if len(num) == 0:
+            if target == curr_ret:
+                ret.append("".join(curr))
+            return
+        for i in xrange(1, len(num) + 1):
+            new_num = int(num[:i])
+            if len(curr) == 0:
+                self.helper(num[i:], target, [str(new_num)], new_num, new_num, ret)
             else:
-                hi = mid - 1
-        return lo
-
-    def is_valid(self, citations, index):
-        count = 0
-        for citation in citations:
-            if citation >= index:
-                count += 1
-        import pdb
-        pdb.set_trace()
-        return count >= index and len(citations) - count < index
+                self.helper(num[i:], target, curr + ["+", str(new_num)], new_num, curr_ret + new_num, ret)
+                self.helper(num[i:], target, curr + ["-", str(new_num)], -new_num, curr_ret - new_num, ret)
+                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret);
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.hIndex([1]))
+    pprint.pprint(solution.addOperators("123", 6))

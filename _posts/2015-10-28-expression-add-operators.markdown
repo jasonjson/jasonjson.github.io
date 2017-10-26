@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Expression Add Operators
+title: 282 - Expression Add Operators
 date: 2015-10-28 12:58:06.000000000 -04:00
 tags:
 - Leetcode
@@ -40,4 +40,37 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution(object):
+    def addOperators(self, num, target):
+        """
+        :type num: str
+        :type target: int
+        :rtype: List[str]
+        """
+
+        if not num:
+            return []
+
+        ret = []
+        self.helper(num, target, [], 0, 0, ret)
+        return ret
+
+    def helper(self, num, target, curr, prev, curr_ret, ret):
+        if len(num) == 0:
+            if target == curr_ret:
+                ret.append("".join(curr))
+            return
+        for i in xrange(1, len(num) + 1):
+            if num[0] == "0" and i > 1:
+                continue
+            new_num = int(num[:i])
+            if len(curr) == 0:
+                self.helper(num[i:], target, [str(new_num)], new_num, new_num, ret)
+            else:
+                self.helper(num[i:], target, curr + ["+", str(new_num)], new_num, curr_ret + new_num, ret)
+                self.helper(num[i:], target, curr + ["-", str(new_num)], -new_num, curr_ret - new_num, ret)
+                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret);
 ```
