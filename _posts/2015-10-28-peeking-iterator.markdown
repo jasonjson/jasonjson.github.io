@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Peeking Iterator
+title: 284 - Peeking Iterator
 date: 2015-10-28 13:34:02.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().</em></strong></p>
+**Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().**
 
 
 ``` java
@@ -16,12 +16,10 @@ class PeekingIterator implements Iterator<Integer> {
     Integer nextElement;
     Iterator<Integer> iterator;
     public PeekingIterator(Iterator<Integer> iterator) {
-        // initialize any member here.
         this.iterator = iterator;
         nextElement = null;
     }
 
-    // Returns the next element in the iteration without advancing the iterator.
     public Integer peek() {
         if (nextElement == null) {
             nextElement = iterator.next();
@@ -29,8 +27,6 @@ class PeekingIterator implements Iterator<Integer> {
         return nextElement;
     }
 
-    // hasNext() and next() should behave the same as in the Iterator interface.
-    // Override them if needed.
     @Override
     public Integer next() {
         if (nextElement == null) {
@@ -47,4 +43,27 @@ class PeekingIterator implements Iterator<Integer> {
         return nextElement != null || iterator.hasNext();
     }
 }
+```
+
+``` python
+class PeekingIterator(object):
+    def __init__(self, iterator):
+        self.iterator = iterator
+        self.next_element = None
+
+    def peek(self):
+        if self.next_element is None:
+            self.next_element = self.iterator.next()
+        return self.next_element
+
+    def next(self):
+        if self.next_element is None:
+            return self.iterator.next()
+        else:
+            ret = self.next_element
+            self.next_element = None
+            return ret
+
+    def hasNext(self):
+        return self.next_element is not None or self.iterator.hasNext()
 ```
