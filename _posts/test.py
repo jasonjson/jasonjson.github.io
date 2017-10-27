@@ -1,32 +1,36 @@
 class Solution(object):
-    def addOperators(self, num, target):
+    def lengthOfLIS(self, nums):
         """
-        :type num: str
-        :type target: int
-        :rtype: List[str]
+        :type nums: List[int]
+        :rtype: int
         """
 
-        if not num:
-            return []
+        if not nums:
+            return 0
 
-        ret = []
-        self.helper(num, target, [], 0, 0, ret)
-        return ret
-
-    def helper(self, num, target, curr, prev, curr_ret, ret):
-        if len(num) == 0:
-            if target == curr_ret:
-                ret.append("".join(curr))
-            return
-        for i in xrange(1, len(num) + 1):
-            new_num = int(num[:i])
-            if len(curr) == 0:
-                self.helper(num[i:], target, [str(new_num)], new_num, new_num, ret)
+        seq = [0] * len(nums)
+        seq[0] = nums[0]
+        size = 1
+        for i in xrange(1, len(nums)):
+            if nums[i] <= seq[0]:
+                seq[0] = nums[i]
+            elif nums[i] > seq[size - 1]:
+                seq[size] = nums[i]
+                size += 1
             else:
-                self.helper(num[i:], target, curr + ["+", str(new_num)], new_num, curr_ret + new_num, ret)
-                self.helper(num[i:], target, curr + ["-", str(new_num)], -new_num, curr_ret - new_num, ret)
-                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret);
+                seq[self.helper(nums, 0, size - 1, nums[i])] = nums[i]
+            print seq
+        return size
+    def helper(self, nums, lo, hi, target):
+        while lo + 1 < hi:
+            mid = (lo + hi) / 2
+            if nums[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid
+        return hi
+
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.addOperators("123", 6))
+    pprint.pprint(solution.lengthOfLIS([4,10,4,3,8,9]))
