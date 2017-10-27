@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find the Duplicate Number
+title: 287 - Find the Duplicate Number
 date: 2015-10-28 14:16:38.000000000 -04:00
 tags:
 - Leetcode
@@ -14,8 +14,7 @@ author: Jason
 [Read more](http://bookshadow.com/weblog/2015/09/28/leetcode-find-duplicate-number)
 二分枚举答案范围，使用鸽笼原理进行检验
 * 根据鸽笼原理，给定n + 1个范围[1, n]的整数，其中一定存在数字出现至少两次。
-* 假设枚举的数字为 n / 2：
-* 遍历数组，若数组中不大于n / 2的数字个数超过n / 2，则可以确定[1, n /2]范围内一定有解. 否则可以确定解落在(n / 2, n]范围内。
+* 假设枚举的数字为 n / 2, 遍历数组，若数组中不大于n / 2的数字个数超过n / 2，则可以确定[1, n /2]范围内一定有解. 否则可以确定解落在(n / 2, n]范围内。
 
 ```java
 public class Solution {
@@ -41,26 +40,25 @@ public class Solution {
 }
 ```
 
-```java
-public class Solution {
-    public int findDuplicate(int[] nums) {
-        if (nums == null || nums.length == 0) return -1;
-        int fast = 0, slow = 0;
-        while (true) {
-            slow = nums[slow];
-            fast = nums[nums[fast]];
-            if (slow == fast) {
-                break;
-            }
-        }
-        slow = 0;
-        while (true) {
-           slow = nums[slow];
-           fast = nums[fast];
-           if (slow == fast) {
-               return slow;
-           }
-        }
-    }
-}
+``` python
+class Solution(object):
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return -1
+
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid, count = (lo + hi) / 2, 0
+            for num in nums:
+                if num <= mid:
+                    count += 1
+            if count > mid:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        return lo
 ```
