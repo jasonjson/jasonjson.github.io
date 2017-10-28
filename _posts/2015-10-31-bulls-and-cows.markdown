@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Bulls and Cows
+title: 299 - Bulls and Cows
 date: 2015-10-31 20:21:40.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Brain Teaser
-- String
 author: Jason
 ---
-<p><strong><em>You are playing the following Bulls and Cows game with your friend: You write a 4-digit secret number and ask your friend to guess it, each time your friend guesses a number, you give a hint, the hint tells your friend how many digits are in the correct positions (called "bulls") and how many digits are in the wrong positions (called "cows"), your friend will use those hints to find out the secret number.</em></strong></p>
+**You are playing the following Bulls and Cows game with your friend: You write a 4-digit secret number and ask your friend to guess it, each time your friend guesses a number, you give a hint, the hint tells your friend how many digits are in the correct positions (called "bulls") and how many digits are in the wrong positions (called "cows"), your friend will use those hints to find out the secret number.**
 
 
 ``` java
@@ -30,4 +29,28 @@ public class Solution {
         return bulls + "A" + cows + "B";
     }
 }
+```
+
+``` python
+class Solution(object):
+    def getHint(self, secret, guess):
+        """
+        :type secret: str
+        :type guess: str
+        :rtype: str
+        """
+
+        digit_map = {}
+        bull = cow = 0
+        for s, g in zip(secret, guess):
+            if s == g:
+                bull += 1
+            else:
+                if digit_map.get(s, 0) < 0:
+                    cow += 1
+                if digit_map.get(g, 0) > 0:
+                    cow += 1
+                digit_map[s] = digit_map.get(s, 0) + 1
+                digit_map[g] = digit_map.get(g, 0) - 1
+        return str(bull) + "A" + str(cow) + "B"
 ```
