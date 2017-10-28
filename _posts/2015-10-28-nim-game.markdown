@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nim Game
+title: 292 - Nim Game
 date: 2015-10-28 16:07:28.000000000 -04:00
 tags:
 - Leetcode
@@ -30,12 +30,6 @@ public class Solution {
 ```
 
 ```python
-#strategy: the one with 4 remaining must lose, A, B players
-#if n == 4k, then at each round B can make A+B both take 4
-#eventually leave 4 to A, A lose
-#if n == 4k + i (i <= 3), then A can always take i first and B will
-#finanly lose as he faces above scenario like A
-
 class Solution(object):
     def canWinNim(self, n):
         """
@@ -43,4 +37,21 @@ class Solution(object):
         :rtype: bool
         """
         return n % 4 != 0
+```
+
+``` python
+class Solution(object):
+    def canWinNim(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n < 4:
+            return True
+
+        dp = [True] * (n + 1)
+        for i in xrange(4, n + 1):
+            if dp[i - 1] and dp[i - 2] and dp[i - 3]:
+                dp[i] = False
+        return dp[-1]
 ```

@@ -1,26 +1,20 @@
 class Solution(object):
-    def wordPattern(self, pattern, str):
+    def canWinNim(self, n):
         """
-        :type pattern: str
-        :type str: str
+        :type n: int
         :rtype: bool
         """
-        if not pattern or not str:
-            return False
+        if n < 4:
+            return True
 
-        p_map, s_map = {}, {}
-        str_list = str.split(" ")
-        if len(pattern) != len(str_list):
-            return False
-        for p, s in zip(pattern, str_list):
-            __import__('pdb').set_trace()
-            if p_map.get(p, s) != s or s_map.get(s, p) != p:
-                return False
-            print p_map, s_map
-            p_map[p] = s
-            s_map[s] = p
-        return True
+        dp = [True] * (n + 1)
+        for i in xrange(4, n + 1):
+            if dp[i - 1] and dp[i - 2] and dp[i - 3]:
+                dp[i] = False
+        print [i for i, p in enumerate(dp) if not p]
+        return dp[-1]
+
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.wordPattern("abc", "b c a"))
+    pprint.pprint(solution.canWinNim(100))
