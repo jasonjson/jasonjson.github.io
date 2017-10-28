@@ -1,36 +1,26 @@
 class Solution(object):
-    def lengthOfLIS(self, nums):
+    def wordPattern(self, pattern, str):
         """
-        :type nums: List[int]
-        :rtype: int
+        :type pattern: str
+        :type str: str
+        :rtype: bool
         """
+        if not pattern or not str:
+            return False
 
-        if not nums:
-            return 0
-
-        seq = [0] * len(nums)
-        seq[0] = nums[0]
-        size = 1
-        for i in xrange(1, len(nums)):
-            if nums[i] <= seq[0]:
-                seq[0] = nums[i]
-            elif nums[i] > seq[size - 1]:
-                seq[size] = nums[i]
-                size += 1
-            else:
-                seq[self.helper(nums, 0, size - 1, nums[i])] = nums[i]
-            print seq
-        return size
-    def helper(self, nums, lo, hi, target):
-        while lo + 1 < hi:
-            mid = (lo + hi) / 2
-            if nums[mid] < target:
-                lo = mid + 1
-            else:
-                hi = mid
-        return hi
-
+        p_map, s_map = {}, {}
+        str_list = str.split(" ")
+        if len(pattern) != len(str_list):
+            return False
+        for p, s in zip(pattern, str_list):
+            __import__('pdb').set_trace()
+            if p_map.get(p, s) != s or s_map.get(s, p) != p:
+                return False
+            print p_map, s_map
+            p_map[p] = s
+            s_map[s] = p
+        return True
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.lengthOfLIS([4,10,4,3,8,9]))
+    pprint.pprint(solution.wordPattern("abc", "b c a"))
