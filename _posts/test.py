@@ -1,69 +1,34 @@
-class SegmentNode(object):
-
-    def __init__(self, lo, hi, sums):
-        this.lo = lo
-        this.hi = hi
-        this.sums = sums
-        this.left = None
-        this.right = None
-
-class NumArray(object):
-
-    def __init__(self, nums):
+class Solution(object):
+    def isAdditiveNumber(self, num):
         """
-        :type nums: List[int]
+        :type num: str
+        :rtype: bool
         """
-        self.root = self.build(0, len(nums) - 1, nums)
+        if not num:
+            return True
+        for i in xrange(1, len(num) / 2 + 1):
+            if num[0] == "0" and i > 1:
+                break
+            # j = 1
+            # while max(i , j) <= len(num) - i - j:
+            for j in xrange(1, len(num) - i):
+                if num[i] == "0" and j > 1:
+                    break
+                if self.is_valid(int(num[:i]), int(num[i:i+j]), num[i+j:]):
+                    return True
+                # j += 1
+        return False
 
-
-    def build(self, lo, hi, nums):
-        if lo > hi:
-            return
-        elif lo == hi:
-            return SegmentNode(lo, hi, nums[lo])
+    def is_valid(self, prev_1, prev_2, num):
+        if len(num) == 0:
+            return True
+        curr = str(prev_1 + prev_2)
+        if num.startswith(curr) and self.is_valid(prev_2, int(curr), num[len(curr):]):
+            return True
         else:
-            mid = (lo + hi) / 2
-            root = SegmentNode(lo, hi, 0)
-            root.left = self.build(lo, mid, nums)
-            root.right = self.build(mid + 1, hi, nums)
-            root.sums = root.left.sums + root.right.sums
-            return root
+            return False
 
-    def update(self, i, val):
-        """
-        :type i: int
-        :type val: int
-        :rtype: void
-        """
-        self.update_node(self.root, i, val)
-
-    def update_node(self, node, i, val):
-        if node.lo == i and node.hi == i:
-            node.sums = val
-        else:
-            mid = (node.lo + node.hi) / 2
-            if i <= mid:
-                update_node(node.left, i, val)
-            else:
-                update_node(node.right, i, val)
-            node.sums = node.left.sums + node.right.sums
-
-
-    def sumRange(self, i, j):
-        """
-        :type i: int
-        :type j: int
-        :rtype: int
-        """
-        return sumRange(self.root, i, j)
-
-    def sum_node(self, node, i, j):
-        if node.lo == i and node.hi == j:
-            return node.sums
-        mid = (node.lo + node.hi) / 2
-        if j <= mid:
-            return self.sum_node(node.left, i, j)
-        elif i > mid:
-            return self.sum_node(node.right, i, j)
-        else:
-            return self.sum_node(node.left, i, mid) + self.sum_node(node.right, mid + 1, j)
+if __name__ == "__main__":
+    solution = Solution()
+    import pprint
+    pprint.pprint(solution.isAdditiveNumber("123"))
