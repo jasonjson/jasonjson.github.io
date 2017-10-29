@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range Sum Query - Immutable
+title: 303 - Range Sum Query - Immutable
 date: 2015-11-10 09:14:36.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- Array
 author: Jason
 ---
-<p><strong><em>Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.</em></strong></p>
+**Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.**
 
 
 ``` java
@@ -25,4 +25,24 @@ public class NumArray {
         return sums[j + 1] - sums[i];
     }
 }
+```
+
+``` python
+class NumArray(object):
+
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        self.sum = [0]
+        for num in nums:
+            self.sum.append(self.sum[-1] + num)
+
+    def sumRange(self, i, j):
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        return self.sum[j + 1] - self.sum[i]
 ```

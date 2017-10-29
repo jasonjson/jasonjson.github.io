@@ -1,42 +1,16 @@
 ---
 layout: post
-title: Range Sum Query 2D - Immutable
+title: 304 - Range Sum Query 2D - Immutable
 date: 2015-11-11 22:02:59.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
 - Matrix
 author: Jason
 ---
-<p><strong><em>Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by (row1, col1), (row2, col2).</em></strong></p>
+**Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by (row1, col1), (row2, col2).**
 
 
-``` java
-public class NumMatrix {
-    private int[][] matrix;
-    private int[][] sumRow; //sumRow or sumCol, extra col for sumRow, extra row for sumCol
-    public NumMatrix(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) return;
-        
-        this.matrix = matrix;
-        sumRow = new int[matrix.length][matrix[0].length + 1];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 1; j <= matrix[0].length; j++) {
-                sumRow[i][j] = sumRow[i][j-1] + matrix[i][j-1];
-            }
-        }
-    }
-    public int sumRegion(int row1, int col1, int row2, int col2) {
-        int result = 0;
-        for (int i = row1; i <= row2; i++) {
-            result += sumRow[i][col2 + 1] - sumRow[i][col1];
-            //remember the col size of sumRow, we want to include both the value at col1 and col2
-        }
-        return result;
-    }
-}
-```
 ``` java
 public class NumMatrix {
     int[][] matrix;
@@ -68,4 +42,34 @@ public class NumMatrix {
         return matrix[row2][col2] - matrix[row2][col1 - 1] - matrix[row1 - 1][col2] + matrix[row1 - 1][col1 - 1];
     }
 }
+```
+
+``` python
+class NumMatrix(object):
+
+    def __init__(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        """
+        if not matrix:
+            return
+        row, col = len(matrix), len(matrix[0])
+        self.row_sum = [[0] * (col + 1) for i in xrange(row)]
+        for i in xrange(row):
+            for j in xrange(1, col + 1):
+                self.row_sum[i][j] = self.row_sum[i][j - 1] + matrix[i][j - 1]
+
+
+    def sumRegion(self, row1, col1, row2, col2):
+        """
+        :type row1: int
+        :type col1: int
+        :type row2: int
+        :type col2: int
+        :rtype: int
+        """
+        ret = 0
+        for i in xrange(row1, row2 + 1):
+            ret += self.row_sum[i][col2 + 1] - self.row_sum[i][col1]
+        return ret
 ```

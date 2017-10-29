@@ -1,58 +1,15 @@
 ---
 layout: post
-title: Range Sum Query - Mutable
+title: 307 - Range Sum Query - Mutable
 date: 2015-11-18 21:19:53.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Data Structure
+- Array
 author: Jason
 ---
 **Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive. The update(i, val) function modifies nums by updating the element at index i to val.**
 
-
-<p><a href="https://www.youtube.com/watch?v=CWDQJGaN1gY">read more</a></p>
-
-```java
-public class NumArray {
-    private int[] arrs;
-    private int[] BTree;
-
-    public NumArray(int[] nums) {
-        this.arrs = new int[nums.length];//wrong: this.arrs = nums;
-        this.BTree = new int[nums.length + 1];
-        //arrs = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            update(i, nums[i]);//the initial value of arrs[i] is zero, and thus we can update BTree
-            arrs[i] = nums[i];//then we assign value to arrs[i],
-        }
-    }
-
-    public void update(int i, int val) {
-        int diff = val - arrs[i];
-        arrs[i] = val;
-        i++;//the index of Btree is i ++
-        while (i < BTree.length) {
-            BTree[i] += diff;
-            i += i & (-i);//update next value
-        }
-    }
-
-    public int getSum(int i) {
-        i++;
-        int sum = 0;
-        while (i > 0) {
-            sum += BTree[i];
-            i -= i & (-i);//add parents
-        }
-        return sum;
-    }
-
-    public int sumRange(int i, int j) {
-        return getSum(j) - getSum(i-1);//i - 1 not i
-    }
-}
-```
 
 ```java
 public class NumArray {
@@ -130,8 +87,7 @@ class NumArray(object):
         self.nums = nums
         self.sums = [0]
         for num in nums:
-            sum = self.sums[-1] + num
-            self.sums.append(sum)
+            self.sums.append(self.sums[-1] + num)
 
     def update(self, i, val):
         """
@@ -141,8 +97,8 @@ class NumArray(object):
         """
         diff = val - self.nums[i]
         self.nums[i] = val
-        for index in range(i + 1, len(self.sums)):
-            self.sums[index] += diff
+        for j in xrange(i + 1, len(self.sums)):
+            self.sums[j] += diff
 
     def sumRange(self, i, j):
         """
@@ -154,57 +110,59 @@ class NumArray(object):
 ```
 
 ```python
+class SegmentNode(object):
+
+    def __init__(self, lo, hi, sums):
+        self.lo = lo
+        self.hi = hi
+        self.sums = sums
+        self.left = None
+        self.right = None
+
 class NumArray(object):
 
     def __init__(self, nums):
         self.root = self.build(0, len(nums) - 1, nums)
 
-    def update(self, i, val):
-        self.updateNode(self.root, i, val)
-
-    def sumRange(self, i, j):
-        return self.queryNode(self.root, i, j)
-
-    def build(self, start, end, nums):
-        if start > end:
-            return None
-        elif start == end:
-            return segement_node(start, end, nums[start])
+    def build(self, lo, hi, nums):
+        if lo > hi:
+            return
+        elif lo == hi:
+            return SegmentNode(lo, hi, nums[lo])
         else:
-            mid = (start + end) // 2
-            root = segement_node(start, end, 0)
-            root.left = self.build(start, mid, nums)
-            root.right = self.build(mid + 1, end, nums)
-            root.sum = root.left.sum + root.right.sum
+            mid = (lo + hi) / 2
+            root = SegmentNode(lo, hi, 0)
+            root.left = self.build(lo, mid, nums)
+            root.right = self.build(mid + 1, hi, nums)
+            root.sums = root.left.sums + root.right.sums
             return root
 
-    def updateNode(self, node, i, val):
-        if node.start == i and node.end == i:
-            node.sum = val
-            return
-        mid = (node.start + node.end) // 2
-        if i <= mid:
-            self.updateNode(node.left, i, val)
-        else:
-            self.updateNode(node.right, i, val)
-        node.sum = node.left.sum + node.right.sum
+    def update(self, i, val):
+        self.update_node(self.root, i, val)
 
-    def queryNode(self, node, i, j):
-        if node.start == i and node.end == j:
-            return node.sum
-        mid = (node.start + node.end) // 2
-        if i > mid:
-            return self.queryNode(node.right, i, j)
-        elif j <= mid:
-            return self.queryNode(node.left, i, j)
+    def update_node(self, node, i, val):
+        if node.lo == i and node.hi == i:
+            node.sums = val
         else:
-            return self.queryNode(node.left, i, mid) + self.queryNode(node.right, mid + 1, j)
+            mid = (node.lo + node.hi) / 2
+            if i <= mid:
+                self.update_node(node.left, i, val)
+            else:
+                self.update_node(node.right, i, val)
+            node.sums = node.left.sums + node.right.sums
 
-class segement_node(object):
-    def __init__(self, start, end, sum):
-        self.start = start
-        self.end = end
-        self.sum = sum
-        self.left = None
-        self.right = None
+
+    def sumRange(self, i, j):
+        return self.sum_node(self.root, i, j)
+
+    def sum_node(self, node, i, j):
+        if node.lo == i and node.hi == j:
+            return node.sums
+        mid = (node.lo + node.hi) / 2
+        if j <= mid:
+            return self.sum_node(node.left, i, j)
+        elif i > mid:
+            return self.sum_node(node.right, i, j)
+        else:
+            return self.sum_node(node.left, i, mid) + self.sum_node(node.right, mid + 1, j)
 ```
