@@ -1,34 +1,31 @@
+import collections
 class Solution(object):
-    def isAdditiveNumber(self, num):
+    def findMinHeightTrees(self, n, edges):
         """
-        :type num: str
-        :rtype: bool
+        :type n: int
+        :type edges: List[List[int]]
+        :rtype: List[int]
         """
-        if not num:
-            return True
-        for i in xrange(1, len(num) / 2 + 1):
-            if num[0] == "0" and i > 1:
-                break
-            # j = 1
-            # while max(i , j) <= len(num) - i - j:
-            for j in xrange(1, len(num) - i):
-                if num[i] == "0" and j > 1:
-                    break
-                if self.is_valid(int(num[:i]), int(num[i:i+j]), num[i+j:]):
-                    return True
-                # j += 1
-        return False
 
-    def is_valid(self, prev_1, prev_2, num):
-        if len(num) == 0:
-            return True
-        curr = str(prev_1 + prev_2)
-        if num.startswith(curr) and self.is_valid(prev_2, int(curr), num[len(curr):]):
-            return True
-        else:
-            return False
+        edge_map = collections.defaultdict(list)
+        for a, b in edges:
+            edge_map[a].append(b)
+            edge_map[b].append(a)
 
+        prev = [k for k, v in edge_map.iteritems() if len(v) == 1]
+        while len(prev) >= 2:
+            curr = []
+            for a in prev:
+                for neighbor in edge_map[a]:
+                    edge_map[neighbor].remove(a)
+                    if len(edge_map[neighbor]) == 1:
+                        curr.append(neighbor)
+            print curr
+            if len(curr) == 0:
+                return prev
+            prev = curr
+        return prev
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.isAdditiveNumber("123"))
+    pprint.pprint(solution.findMinHeightTrees(4, [[1, 0], [1, 2], [1, 3]]))
