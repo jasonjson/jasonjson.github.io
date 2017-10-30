@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bulb Switcher
+title: 319 - Bulb Switcher
 date: 2015-12-19 10:23:55.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.</em></strong></p>
+**There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.**
 
 
 ``` java
@@ -27,7 +27,7 @@ public class Solution {
 public class Solution {
     public int bulbSwitch(int n) {
         if (n <= 0) return 0;
-        
+
         boolean[] bulb = new boolean[n + 1];
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {

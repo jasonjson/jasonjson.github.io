@@ -1,21 +1,18 @@
 class Solution(object):
-    def maxProduct(self, words):
+    def bulbSwitch(self, n):
         """
-        :type words: List[str]
+        :type n: int
         :rtype: int
         """
-        if not words:
-            return 0
 
-        ord_map = {}
-        for word in words:
-            mask = 0
-            for c in set(word):
-                mask |= (1 << (ord(c) - ord("a")))
-            ord_map[mask] = max(ord_map.get(mask, 0), len(word))
-        return max([ord_map[x] * ord_map[y] for x in ord_map for y in ord_map if not x & y] or [0])
-
+        bulbs = [True] * (n + 1)
+        for i in xrange(2, n + 1):
+            for j in xrange(1, n + 1):
+                if j % i == 0:
+                    bulbs[j] = not bulbs[j]
+        print bulbs
+        return bulbs.count(True) - 1
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.maxProduct(["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]))
+    pprint.pprint(solution.bulbSwitch(3))
