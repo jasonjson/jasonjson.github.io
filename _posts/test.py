@@ -1,23 +1,21 @@
 class Solution(object):
-    def nthSuperUglyNumber(self, n, primes):
+    def maxProduct(self, words):
         """
-        :type n: int
-        :type primes: List[int]
+        :type words: List[str]
         :rtype: int
         """
+        if not words:
+            return 0
 
-        primes_index = [0] * len(primes)
-        num = [0] * n
-        num[0] = 1
-        for i in xrange(1, n):
-            num[i] = min([num[primes_index[j]] * primes[j] for j in xrange(len(primes))])
-            for k in xrange(len(primes)):
-                if num[i] == num[primes_index[k]] * primes[k]:
-                    primes_index[k] += 1
+        ord_map = {}
+        for word in words:
+            mask = 0
+            for c in set(word):
+                mask |= (1 << (ord(c) - ord("a")))
+            ord_map[mask] = max(ord_map.get(mask, 0), len(word))
+        return max([ord_map[x] * ord_map[y] for x in ord_map for y in ord_map if not x & y] or [0])
 
-        print num
-        return num[-1]
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.nthSuperUglyNumber(12, [2,7,13,19]))
+    pprint.pprint(solution.maxProduct(["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]))
