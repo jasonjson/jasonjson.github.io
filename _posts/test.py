@@ -1,31 +1,23 @@
-import collections
 class Solution(object):
-    def findMinHeightTrees(self, n, edges):
+    def nthSuperUglyNumber(self, n, primes):
         """
         :type n: int
-        :type edges: List[List[int]]
-        :rtype: List[int]
+        :type primes: List[int]
+        :rtype: int
         """
 
-        edge_map = collections.defaultdict(list)
-        for a, b in edges:
-            edge_map[a].append(b)
-            edge_map[b].append(a)
+        primes_index = [0] * len(primes)
+        num = [0] * n
+        num[0] = 1
+        for i in xrange(1, n):
+            num[i] = min([num[primes_index[j]] * primes[j] for j in xrange(len(primes))])
+            for k in xrange(len(primes)):
+                if num[i] == num[primes_index[k]] * primes[k]:
+                    primes_index[k] += 1
 
-        prev = [k for k, v in edge_map.iteritems() if len(v) == 1]
-        while len(prev) >= 2:
-            curr = []
-            for a in prev:
-                for neighbor in edge_map[a]:
-                    edge_map[neighbor].remove(a)
-                    if len(edge_map[neighbor]) == 1:
-                        curr.append(neighbor)
-            print curr
-            if len(curr) == 0:
-                return prev
-            prev = curr
-        return prev
+        print num
+        return num[-1]
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.findMinHeightTrees(4, [[1, 0], [1, 2], [1, 3]]))
+    pprint.pprint(solution.nthSuperUglyNumber(12, [2,7,13,19]))
