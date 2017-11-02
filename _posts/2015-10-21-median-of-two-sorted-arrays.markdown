@@ -47,3 +47,33 @@ class Solution {
     }
 }
 ```
+
+``` python
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        total_length = len(nums1) + len(nums2)
+        if total_length % 2 == 0:
+            return (self.helper(nums1, 0, nums2, 0, total_length / 2) + self.helper(nums1, 0, nums2, 0, total_length / 2 + 1)) / 2.0
+        else:
+            return self.helper(nums1, 0, nums2, 0, total_length / 2 + 1)
+
+    def helper(self, a, a_start, b, b_start, k):
+        if a_start >= len(a):
+            return b[b_start + k - 1]
+        elif b_start >= len(b):
+            return a[a_start + k - 1]
+        elif k == 1:
+            return min(a[a_start], b[b_start])
+        else:
+            k1 = a[a_start + k / 2 - 1] if a_start + k / 2 - 1 < len(a) else 2 ** 31
+            k2 = b[b_start + k / 2 - 1] if b_start + k / 2 - 1 < len(b) else 2 ** 31
+            if k1 < k2:
+                return self.helper(a, a_start + k / 2, b, b_start, k - k / 2)
+            else:
+                return self.helper(a, a_start, b, b_start + k / 2, k - k / 2)
+```
