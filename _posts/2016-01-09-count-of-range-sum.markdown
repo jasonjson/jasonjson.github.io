@@ -59,15 +59,11 @@ class Solution(object):
         :rtype: int
         """
         set_nums = set()
-        sums = 0
+        sums = ret = 0
         for num in nums:
             sums += num
             set_nums.add(sums)
-        list_nums = list(set_nums)
-        list_nums.sort()
-        root = self.build_tree(list_nums, 0, len(list_nums) - 1)
-
-        ret = 0
+        root = self.build_tree(sorted(set_nums), 0, len(set_nums) - 1)
         for num in reversed(nums):
             self.update_tree(root, sums)
             sums -= num
