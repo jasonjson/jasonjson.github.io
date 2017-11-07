@@ -1,68 +1,33 @@
-import copy
-class Twitter(object):
-
-    def __init__(self):
+class Solution(object):
+    def canMeasureWater(self, x, y, z):
         """
-        Initialize your data structure here.
-        """
-        self.user_map = {}
-        self.tweet_map = {}
-        self.time_order = 0
-
-    def postTweet(self, userId, tweetId):
-        """
-        Compose a new tweet.
-        :type userId: int
-        :type tweetId: int
-        :rtype: void
+        :type x: int
+        :type y: int
+        :type z: int
+        :rtype: bool
         """
 
-        user_tweets = self.tweet_map.setdefault(userId, [])
-        user_tweets.append((tweetId, self.time_order))
-        self.time_order += 1
 
-    def getNewsFeed(self, userId):
-        """
-        Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
-        :type userId: int
-        :rtype: List[int]
-        """
-        tweet_list = copy.deepcopy(self.tweet_map.get(userId, []))
-        for followee in self.user_map.get(userId, []):
-            tweet_list.extend(self.tweet_map.get(followee, []))
-        tweet_list.sort(key = lambda tweet: tweet[1], reverse = True)
-        return [tweet[0] for tweet in tweet_list[:10]]
+        return z in self.helper(x, y)
 
-    def follow(self, followerId, followeeId):
-        """
-        Follower follows a followee. If the operation is invalid, it should be a no-op.
-        :type followerId: int
-        :type followeeId: int
-        :rtype: void
-        """
-        user_follows = self.user_map.setdefault(followerId, [])
-        user_follows.append(followeeId)
-
-
-    def unfollow(self, followerId, followeeId):
-        """
-        Follower unfollows a followee. If the operation is invalid, it should be a no-op.
-        :type followerId: int
-        :type followeeId: int
-        :rtype: void
-        """
-        user_follows = self.user_map.setdefault(followerId, [])
-        try:
-            user_follows.remove(followeeId)
-        except:
-            pass
-
+    def helper(self, x, y):
+        prev = [x, y]
+        added = True
+        while added:
+            added = False
+            for i in xrange(len(prev) - 1):
+                for j in xrange(i + 1, len(prev)):
+                    num1 = prev[i] + prev[j]
+                    if num1 < x and num1 < y and num1 not in prev:
+                        prev.append(num1)
+                        added = True
+                    num2 = abs(prev[i] - prev[j])
+                    if num2 not in prev:
+                        prev.append(num2)
+                        added = True
+        print prev
+        return prev
 if __name__ == "__main__":
-    twitter = Twitter()
-    twitter.postTweet(1, 5)
-    twitter.getNewsFeed(1)
-    twitter.follow(1, 2)
-    twitter.postTweet(2, 6)
-    print twitter.getNewsFeed(1)
-    twitter.unfollow(1, 2)
-    print twitter.getNewsFeed(1)
+    solution = Solution()
+    import pprint
+    pprint.pprint(solution.canMeasureWater(1, 2, 3))
