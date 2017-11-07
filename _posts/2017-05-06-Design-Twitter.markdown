@@ -9,30 +9,22 @@ categories:
 author: Jason
 ---
 **Design a simplified version of Twitter where users can post tweets, follow/unfollow another user and is able to see the 10 most recent tweets in the user's news feed. Your design should support the following methods:**
-
 * postTweet(userId, tweetId): Compose a new tweet.
 * getNewsFeed(userId): Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
 * follow(followerId, followeeId): Follower follows a followee.
 * unfollow(followerId, followeeId): Follower unfollows a followee.
 
-[Use * to unpack arguments lists](https://docs.python.org/2/tutorial/controlflow.html#unpacking-argument-lists)
 
 ```python
-import collections
-import heapq
-
+from collections import defaultdict
 class Twitter(object):
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
-
-        #key: user_id val: post_id
-        self.tweets = collections.defaultdict(collections.deque)
-        #key: follower val: followee
-        self.users = collections.defaultdict(set)
-        #give all tweets a time stamp for sorting
+        self.users = defaultdict(set)
+        self.tweets = defaultdict(list)
         self.time = 0
 
 
@@ -43,11 +35,9 @@ class Twitter(object):
         :type tweetId: int
         :rtype: void
         """
-        #user is follwing himself
+        self.tweets[userId].append((tweetId, self.time))
         self.users[userId].add(userId)
-        self.tweets[userId].append(Tweet(self.time, tweetId))
         self.time += 1
-
 
     def getNewsFeed(self, userId):
         """
@@ -55,12 +45,11 @@ class Twitter(object):
         :type userId: int
         :rtype: List[int]
         """
-        #heapq.merge - merge multiple sorted list from each followee
-        #use * to unpack argument lists
-        news = heapq.merge(*(sorted(self.tweets[followee]) for followee in self.users[userId]))
-        ret = [tweet.id for tweet in news]
-        return ret if len(ret) <= 10 else ret[:10]
-
+        tweet_list = []
+        for followee in self.users.get(userId, []):
+            tweet_list.extend(self.tweets.get(followee, []))
+        tweet_list.sort(key = lambda tweet: tweet[1], reverse=True)
+        return [tweet[0] for tweet in tweet_list[:10]]
 
     def follow(self, followerId, followeeId):
         """
@@ -71,7 +60,6 @@ class Twitter(object):
         """
         self.users[followerId].add(followeeId)
 
-
     def unfollow(self, followerId, followeeId):
         """
         Follower unfollows a followee. If the operation is invalid, it should be a no-op.
@@ -81,23 +69,4 @@ class Twitter(object):
         """
         if followerId != followeeId:
             self.users[followerId].discard(followeeId)
-
-class Tweet(object):
-    def __init__(self, time, id):
-        self.time = time
-        self.id = id
-
-
-    #user defined method for sorting Tweet object
-    #self.time < other.time if accending
-    #other.time < self.time if descending
-    def __lt__(self, other):
-        return other.time < self.time
-
-# Your Twitter object will be instantiated and called as such:
-# obj = Twitter()
-# obj.postTweet(userId,tweetId)
-# param_2 = obj.getNewsFeed(userId)
-# obj.follow(followerId,followeeId)
-# obj.unfollow(followerId,followeeId)
 ```
