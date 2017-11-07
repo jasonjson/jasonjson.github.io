@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 337 - House Robber Iii
+title: 337 - House Robber III
 date: 2017-11-06
 tags:
 - Leetcode
