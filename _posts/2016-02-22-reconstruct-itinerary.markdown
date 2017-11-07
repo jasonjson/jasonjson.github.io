@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reconstruct Itinerary
+title: 332 - Reconstruct Itinerary
 date: 2016-02-22 22:26:53.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.</em></strong></p>
+**Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.**
 
 
 ``` java
@@ -49,4 +49,38 @@ public class Solution {
         return false;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def findItinerary(self, tickets):
+        """
+        :type tickets: List[List[str]]
+        :rtype: List[str]
+        """
+
+        if not tickets:
+            return []
+        destinations = {}
+        for start, end in tickets:
+            destinations.setdefault(end, [])
+            destinations.setdefault(start, [])
+            destinations[start].append(end)
+        for dest in destinations.values():
+            dest.sort()
+        ret = ["JFK"]
+        self.helper(destinations, "JFK", ret, len(tickets) + 1)
+        return ret
+
+    def helper(self, destinations, last_stop, ret, total_stops):
+        if len(ret) == total_stops:
+            return True
+        potential_stops = destinations.get(last_stop)
+        for i in xrange(len(potential_stops)):
+            next_stop = potential_stops.pop(i)
+            ret.append(next_stop)
+            if self.helper(destinations, next_stop, ret, total_stops):
+                return True
+            potential_stops.insert(i, ret.pop())
+        return False
 ```
