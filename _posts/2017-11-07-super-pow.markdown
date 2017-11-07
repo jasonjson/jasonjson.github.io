@@ -1,0 +1,35 @@
+---
+layout: post
+title: 372 - Super Pow
+date: 2017-11-07
+tags:
+- Leetcode
+categories:
+- Brain Teaser
+author: Jason
+---
+**Your task is to calculate a ** b mod 1337 where a is a positive integer and b is an extremely large positive integer given in the form of an array.**
+
+
+```python
+class Solution(object):
+    def superPow(self, a, b):
+        """
+        :type a: int
+        :type b: List[int]
+        :rtype: int
+        """
+        if not b:
+            return 1
+        last_digit = b.pop()
+        #f1 takes a list, f2 takes an integer
+        #f1(a,1234567) = f1(a, 1234560) * f2(a, 7) % k = f2(f1(a, 123456),10) * f2(a,7)%k;
+        return self.helper(self.superPow(a, b), 10) * self.helper(a, last_digit) % 1337
+
+    def helper(self, a, k):
+        ret = 1
+        a %= 1337
+        for i in xrange(k):
+            ret = ret * a % 1337
+        return ret
+```
