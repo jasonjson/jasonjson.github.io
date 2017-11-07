@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 297 - Serialize and Deserialize Binary Tree
-date: 2015-10-21 02:57:07.000000000 -04:00
+title: 297 - Serialize And Deserialize Binary Tree
+date: 2017-11-06
 tags:
 - Leetcode
 categories:
@@ -49,10 +49,10 @@ class Solution {
             return root;
         }
     }
-}
+    }
 ```
 
-``` python
+```python
 class Codec:
 
     def serialize(self, root):
