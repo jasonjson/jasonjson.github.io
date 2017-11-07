@@ -1,17 +1,23 @@
 class Solution(object):
-    def getMoneyAmount(self, n):
+    def combinationSum4(self, nums, target):
         """
-        :type n: int
+        :type nums: List[int]
+        :type target: int
         :rtype: int
         """
-        dp = [[0] * (n + 1) for _ in xrange(n + 1)]
-        for left in range(n - 1, 0, -1):
-            for right in xrange(left + 1, n + 1):
-                dp[left][right] = min(max(dp[left][i - 1], dp[i + 1][right]) + i for i in xrange(left, right))
-        return dp[1][n]
+        if not nums:
+            return 0
 
+        dp = [0] * (target + 1)
+        dp[0] = 1
+
+        for i in xrange(1, target + 1):
+            for j in xrange(len(nums)):
+                if i >= nums[j]:
+                    dp[i] += dp[i - nums[j]]
+
+        return dp[-1]
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.getMoneyAmount(2))
-
+    pprint.pprint(solution.combinationSum4([1,2,3],4))
