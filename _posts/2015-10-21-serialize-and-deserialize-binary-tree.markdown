@@ -1,6 +1,6 @@
 ---
 layout: post
-title:297 - Serialize and Deserialize Binary Tree
+title: 297 - Serialize and Deserialize Binary Tree
 date: 2015-10-21 02:57:07.000000000 -04:00
 tags:
 - Leetcode
@@ -9,6 +9,7 @@ categories:
 author: Jason
 ---
 **Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.**
+
 
 ``` java
 class Solution {
