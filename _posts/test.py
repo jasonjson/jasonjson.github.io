@@ -1,29 +1,17 @@
-def guess(num):
-    if 6 > num:
-        return 1
-    elif 6 < num:
-        return -1
-    else:
-        return 0
 class Solution(object):
-    def guessNumber(self, n):
+    def getMoneyAmount(self, n):
         """
         :type n: int
         :rtype: int
         """
-        lo, hi = 1, n
-        while lo <= hi:
-            mid = (lo + hi) / 2
-            res = guess(mid)
-            if res == 0:
-                return mid
-            elif res == 1:
-                lo = mid + 1
-            else:
-                hi = mid - 1
-        return -1
+        dp = [[0] * (n + 1) for _ in xrange(n + 1)]
+        for left in range(n - 1, 0, -1):
+            for right in xrange(left + 1, n + 1):
+                dp[left][right] = min(max(dp[left][i - 1], dp[i + 1][right]) + i for i in xrange(left, right))
+        return dp[1][n]
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.guessNumber(10))
+    pprint.pprint(solution.getMoneyAmount(2))
+
