@@ -1,11 +1,25 @@
+---
+layout: post
+title: 393 - UTF-8 Validation
+date: 2017-11-11
+tags:
+- Leetcode
+categories:
+- Brain Teaser
+author: Jason
+---
+**Given an array of integers representing the data, return whether it is a valid utf-8 encoding.**
+
+
+```python
 class Solution(object):
     def validUtf8(self, data):
         """
         :type data: List[int]
         :rtype: bool
         """
+
         binary_data = map(self.to_binary_string, data)
-        __import__('pdb').set_trace()
         index = 0
         while index < len(binary_data):
             first_char = binary_data[index]
@@ -31,7 +45,6 @@ class Solution(object):
                 return False
         return True
 
-
     def to_binary_string(self, num):
         ret = []
         while num:
@@ -40,7 +53,4 @@ class Solution(object):
         if len(ret) < 8:
             ret += ["0"] * (8 - len(ret))
         return "".join(reversed(ret))
-if __name__ == "__main__":
-    solution = Solution()
-    import pprint
-    pprint.pprint(solution.validUtf8([237]))
+```
