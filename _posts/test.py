@@ -1,21 +1,29 @@
 class Solution(object):
-    def longestSubstring(self, s, k):
+    def integerReplacement(self, n):
         """
-        :type s: str
-        :type k: int
+        :type n: int
         :rtype: int
         """
-        if not s:
-            return 0
 
-        min_char = min(set(s), key=s.count)
-        __import__('pdb').set_trace()
-        if s.count(min_char) >= k:
-            return len(s)
-        else:
-            return max(self.longestSubstring(t, k) for t in s.split(min_char))
+        if n <= 1:
+            return 0
+        dp = list(xrange(n + 2))
+        dp[1] = 0
+        dp[2] = 1
+        for i in xrange(3, n + 2):
+            if i % 2 == 0:
+                dp[i] = dp[i / 2] + 1
+            else:
+                dp[i] = dp[i - 1] + 1
+
+        for i in reversed(xrange(2, n + 1)):
+            if i % 2 == 0:
+                dp[i] = dp[i / 2] + 1
+            else:
+                dp[i] = min(dp[i], dp[i + 1] + 1)
+        return dp[-2]
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.longestSubstring("aaabb", 3))
+    pprint.pprint(solution.integerReplacement(999))
