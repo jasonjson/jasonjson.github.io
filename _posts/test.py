@@ -1,33 +1,21 @@
 class Solution(object):
-    def decodeString(self, s):
+    def longestSubstring(self, s, k):
         """
         :type s: str
-        :rtype: str
+        :type k: int
+        :rtype: int
         """
         if not s:
-            return ""
+            return 0
 
-        index = [0]
-        return self.helper(s, index)
+        min_char = min(set(s), key=s.count)
+        __import__('pdb').set_trace()
+        if s.count(min_char) >= k:
+            return len(s)
+        else:
+            return max(self.longestSubstring(t, k) for t in s.split(min_char))
 
-    def helper(self, s, index):
-        ret = []
-        while (index[0] < len(s) and s[index[0]] != "]"):
-            if s[index[0]].isdigit():
-                num = 0
-                while index[0] < len(s) and s[index[0]].isdigit():
-                    num = num * 10 + int(s[index[0]])
-                    index[0] += 1
-                __import__('pdb').set_trace()
-                index[0] += 1
-                string = self.helper(s, index)
-                index[0] += 1
-                ret.extend([string] * num)
-            else:
-                ret.append(s[index[0]])
-                index[0] += 1
-        return "".join(ret)
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.decodeString("3[a]2[bc]"))
+    pprint.pprint(solution.longestSubstring("aaabb", 3))
