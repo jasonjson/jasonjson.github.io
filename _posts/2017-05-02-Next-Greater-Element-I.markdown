@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Next Greater Element I
+title: 496 - Next Greater Element I
 date: 2017-05-02
 tags:
 - Leetcode
@@ -19,18 +19,13 @@ class Solution(object):
         :rtype: List[int]
         """
         #map里保存着findNums里每个数的next greater element
-        next_greater_map = {}
         #stack里面的数字是降序排列，例如5，4，6当处理到6时
         #stack里有5，4，两者的next greater element都是6
-        stack = []
-        ret = []
+        stack, greater = [],{}
         for num in nums:
             while stack and stack[-1] < num:
-                next_greater_map[stack.pop()] = num
+                greater[stack.pop()] = num
             stack.append(num)
 
-        for num in findNums:
-            ret.append(next_greater_map.get(num, -1))
-
-        return ret
+        return [greater.get(i, -1) for i in findNums]
 ```
