@@ -21,6 +21,7 @@ class Solution(object):
         #map里保存着findNums里每个数的next greater element
         #stack里面的数字是降序排列，例如5，4，6当处理到6时
         #stack里有5，4，两者的next greater element都是6
+        #we can use map since there are no duplicates
         stack, greater = [],{}
         for num in nums:
             while stack and stack[-1] < num:
