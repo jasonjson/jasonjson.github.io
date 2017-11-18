@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Distribute Candies
+title: 575 - Distribute Candies
 date: 2017-05-14
 tags:
 - Leetcode
@@ -11,48 +11,6 @@ author: Jason
 **Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister. Return the maximum number of kinds of candies the sister could gain.**
 
 ```python
-#
-# [575] Distribute Candies
-#
-# https://leetcode.com/problems/distribute-candies
-#
-# Easy (62.34%)
-# Total Accepted:    5953
-# Total Submissions: 9550
-# Testcase Example:  '[1,1,2,2,3,3]'
-#
-# 
-# Example 1:
-# 
-# Input: candies = [1,1,2,2,3,3]
-# Output: 3
-# Explanation:
-# There are three different kinds of candies (1, 2 and 3), and two candies for
-# each kind.
-# Optimal distribution: The sister has candies [1,2,3] and the brother has
-# candies [1,2,3], too. 
-# The sister has three different kinds of candies. 
-# 
-# 
-# 
-# Example 2:
-# 
-# Input: candies = [1,1,2,3]
-# Output: 2
-# Explanation: For example, the sister has candies [2,3] and the brother has
-# candies [1,1]. 
-# The sister has two different kinds of candies, the brother has only one kind
-# of candies. 
-# 
-# 
-# 
-# Note:
-# 
-# The length of the given array is in range [2, 10,000], and will be even.
-# The number in given array is in range [-100,000, 100,000].
-# 
-# 
-#
 from collections import Counter
 class Solution(object):
     def distributeCandies(self, candies):
@@ -61,6 +19,6 @@ class Solution(object):
         :rtype: int
         """
         count = Counter(candies)
-        #不管是奇数个还是偶数个，最多只能算一种
+        #always can give all different kinds of candies to sister
         return min(len(candies) // 2, len(count))
 ```
