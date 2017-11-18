@@ -18,10 +18,11 @@ def generate_post(input_file):
     """
 
     today_date = dt.datetime.today().strftime("%Y-%m-%d")
+    problem_num = input_file.split(".")[0]
     problem_name = input_file.split(".")[1].title()
     title = problem_name.replace("-", " ")
     output_file = '-'.join([today_date, problem_name.lower()]) + ".markdown"
-    post = ['---', 'layout: post', 'title: {0}'.format(title), 'date: {0}'.format(today_date), 'tags:', '- Leetcode', 'categories:', '- ' , "author: Jason", '---']
+    post = ['---', 'layout: post', 'title: {} - {}'.format(problem_num, title), 'date: {0}'.format(today_date), 'tags:', '- Leetcode', 'categories:', '- ' , "author: Jason", '---']
     with open (input_file, "r") as input:
         lines = input.read()
     with open (output_file, 'w') as output:
