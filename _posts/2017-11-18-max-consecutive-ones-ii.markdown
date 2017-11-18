@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 487 - Max Consecutive Ones Ii
+title: 487 - Max Consecutive Ones II
 date: 2017-11-18
 tags:
 - Leetcode
