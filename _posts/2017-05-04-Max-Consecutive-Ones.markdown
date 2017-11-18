@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Max Consecutive Ones
+title: 485 - Max Consecutive Ones
 date: 2017-05-04
 tags:
 - Leetcode
@@ -17,8 +17,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        ret = 0
-        count = 0
+
+        ret = count = 0
         for num in nums:
             if num == 0:
                 count = 0
