@@ -5,7 +5,7 @@ date: 2015-10-26 11:22:41.000000000 -04:00
 tags:
 - Lintcode
 categories:
-- Data Structure
+- Array
 author: Jason
 ---
 **Given an integer array in the construct method, implement two methods query(start, end) and modify(index, value): For query(start, end), return the sum from index start to index end in the given array. For modify(index, value), modify the number in the given index to value**
