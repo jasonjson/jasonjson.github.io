@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Minimum Size Subarray Sum
+title: 209 - Minimum Size Subarray Sum
 date: 2015-10-21 14:31:53.000000000 -04:00
 tags:
 - Leetcode
@@ -47,12 +47,12 @@ class Solution(object):
             return 0
 
         start = summation = 0
-        length = len(nums) + 1
+        ret= len(nums) + 1
         for i, num in enumerate(nums):
             summation += num
             while summation >= s:
-                length = min(length, i - start + 1)
+                ret = min(ret, i - start + 1)
                 summation -= nums[start]
                 start += 1
-        return 0 if length == len(nums) + 1 else length
+        return ret if ret != len(nums) + 1 else 0
 ```
