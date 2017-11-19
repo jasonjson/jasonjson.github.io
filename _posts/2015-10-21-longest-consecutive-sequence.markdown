@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Longest Consecutive Sequence
+title: 128 - Longest Consecutive Sequence
 date: 2015-10-21 14:26:41.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</em></strong></p>
+**Given an unsorted array of integers, find the length of the longest consecutive elements sequence.**
 
 
 ``` java
@@ -40,4 +40,26 @@ public class Solution {
         return len;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def longestConsecutive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        nums_set = set(nums)
+        ret = 0
+        for num in nums:
+            left, right = num, num + 1
+            while left in nums_set:
+                nums_set.discard(left) #o(1)
+                left -= 1
+            while right in nums_set:
+                nums_set.discard(right)
+                right += 1
+            ret = max(ret, right - left - 1)
+        return ret
 ```
