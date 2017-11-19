@@ -1,21 +1,34 @@
 class Solution(object):
-    def nextGreaterElements(self, nums):
+    def threeSumSmaller(self, nums, target):
         """
         :type nums: List[int]
-        :rtype: List[int]
+        :type target: int
+        :rtype: int
         """
 
-        # store index in stack
-        stack, ret = [], [-1] * len(nums)
-        for i in xrange(2 * len(nums)):
-            num = nums[i % len(nums)]
-            while stack and nums[stack[-1]] < num:
-                ret[stack.pop()] = num
-            if i < len(nums):
-                stack.append(i)
-        return ret
+        if not nums:
+            return 0
 
+        ret = 0
+        nums.sort()
+        for i in xrange(len(nums) - 2):
+            # if i > 0 and nums[i] == nums[i - 1]:
+                # continue
+            lo, hi = i + 1, len(nums) - 1
+            while lo < hi:
+                # if lo > i + 1 and nums[lo] == nums[lo - 1]:
+                    # lo += 1
+                    # continue
+                # if hi < len(nums) - 1 and nums[hi] == nums[hi + 1]:
+                    # hi -= 1
+                    # continue
+                if nums[i] + nums[lo] + nums[hi] < target:
+                    ret += hi - lo
+                    lo += 1
+                else:
+                    hi -= 1
+        return ret
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.nextGreaterElements([100,1,11,1,120,111,123,1,-1,-100]))
+    pprint.pprint(solution.threeSumSmaller([2,0,0,2,-2],2))
