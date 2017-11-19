@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interval Minimum Number
+title: 205 - Interval Minimum Number
 date: 2015-10-21 13:31:18.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Given an integer array (index from 0 to n-1, where n is the size of this array), and an query list. Each query has two integers [start, end]. For each query, calculate the minimum number between index start and end in the given array, return the result list.</em></strong></p>
+**Given an integer array (index from 0 to n-1, where n is the size of this array), and an query list. Each query has two integers [start, end]. For each query, calculate the minimum number between index start and end in the given array, return the result list.**
 
 
 ``` java
@@ -59,4 +59,42 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution:
+    """
+    @param: A: An integer array
+    @param: queries: An query list
+    @return: The result list
+    """
+    def intervalMinNumber(self, A, queries):
+        # write your code here
+
+        root = self.build(A, 0, len(A) - 1)
+        return [self.query(root, start, end) for (start, end) in queries]
+
+    def build(self, A, start, end):
+        root = SegmentTreeNode(start, end, 0)
+        if start == end:
+            root.mins = A[start]
+        else:
+            mid = (start + end) / 2
+            root.left = self.build(A, start, mid)
+            root.right = self.build(A, mid + 1, end)
+            root.mins = min(root.left.mins, root.right.mins)
+        return root
+
+    def query(self, root, start, end):
+        if not root:
+            return 2 ** 31 - 1
+        if root.start == start and root.end == end:
+            return root.mins
+        mid = (root.start + root.end) / 2
+        if end < mid:
+            return self.query(root.left, start, end)
+        elif start > mid:
+            return self.query(root.right, start, end)
+        else:
+            return min(self.query(root.left, start, mid), self.query(root.right, mid + 1, end))
 ```
