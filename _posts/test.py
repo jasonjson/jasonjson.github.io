@@ -1,81 +1,40 @@
-"""
-Definition of Interval.
-class Interval(object):
-    def __init__(self, start, end):
-        self.start = start
-        self.end = end
-"""
-class SegmentTreeNode:
-    def __init__(self, start, end, sums):
-        self.start = start
-        self.end = end
-        self.sums = sums
-        self.left = None
-        self.right = None
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-class Solution:
-    """
-    @param: A: An integer array
-    """
-    def __init__(self, A):
-        # do intialization if necessary
-        self.root = self.build(A, 0, len(A) - 1)
+# Definition for a point.
+class Point(object):
+    def __init__(self, a=0, b=0):
+        self.x = a
+        self.y = b
 
-    def build(self, A, start, end):
-        root = SegmentTreeNode(start, end, 0)
-        if start == end:
-            root.sums = A[start]
-        else:
-            mid = (start + end) / 2
-            root.left = self.build(A, start, mid)
-            root.right = self.build(A, mid + 1, end)
-            root.sums = root.left.sums + root.right.sums
-        return root
-    """
-    @param: start: An integer
-    @param: end: An integer
-    @return: The sum from start to end
-    """
-    def query(self, start, end):
-        # write your code here
-        return self.query_helper(self.root, start, end)
-
-    def query_helper(self, root, start, end):
-        if not root:
+class Solution(object):
+    def maxPoints(self, points):
+        """
+        :type points: List[Point]
+        :rtype: int
+        """
+        if not points:
             return 0
-        if root.start == start and root.end == end:
-            return root.sums
-        mid = (root.start + root.end) / 2
-        if start > mid:
-            return self.query_helper(root.right, start, end)
-        elif end < mid:
-            return self.query_helper(root.left, start, end)
-        else:
-            return self.query_helper(root.left, start, mid) + self.query_helper(root.right, mid + 1, end)
 
-    """
-    @param: index: An integer
-    @param: value: An integer
-    @return: nothing
-    """
-    def modify(self, index, value):
-        # write your code here
-        self.modify_helper(self.root, index, value)
-
-    def modify_helper(self, root, index, value):
-        if not root:
-            return
-        if root.start == index and root.end == index:
-            root.sums = value
-            return
-        mid = (root.start + root.end) / 2
-        if index <= mid:
-            self.modify_helper(root.left, index, value)
-        else:
-            self.modify_helper(root.right, index, value)
-        root.sums = root.left.sums + root.right.sums
-
+        ret = 0
+        for i in xrange(len(points)):
+            slope_map = {}
+            same_point, same_x = 0, 1
+            for j in xrange(i + 1, len(points)):
+                if points[i][0] == points[j][0] and points[i][1] == points[j][1]:
+                    same_point += 1
+                if points[i][0] == points[j][0]:
+                    same_x += 1
+                    continue
+                slope = float(points[j][1] - points[i][1]) / float(points[j][0] - points[i][0])
+                if slope in slope_map:
+                    slope_map[slope] += 1
+                else:
+                    slope_map[slope] = 2
+                ret = max(ret, same_point + slope_map[slope])
+            ret = max(ret, same_x)
+        return ret
 if __name__ == "__main__":
-    solution = Solution([1,2,7,8,5])
-    solution.modify(0, 4)
-    print solution.query(0, 1)
+    solution = Solution()
+    import pprint
+    pprint.pprint(solution.maxPoints([[0,0],[94911151,94911150],[94911152,94911151]]))
