@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Continuous Subarray Sum II
+title: 403 - Continuous Subarray Sum II
 date: 2015-10-21 13:06:45.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.</em></strong></p>
+**Given an integer array, find a continuous rotate subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the last number.**
 
 
 ``` java

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Continuous Subarray Sum
+title: 402 - Continuous Subarray Sum
 date: 2015-10-21 13:06:06.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Given an integer array, find a continuous subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the index of the last number. (If their are duplicate answer, return anyone)</em></strong></p>
+**Given an integer array, find a continuous subarray where the sum of numbers is the biggest. Your code should return the index of the first number and the index of the last number. (If their are duplicate answer, return anyone)**
 
 
 ``` java
@@ -39,4 +39,28 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution:
+    """
+    @param: A: An integer array
+    @return: A list of integers includes the index of the first number and the index of the last number
+    """
+    def continuousSubarraySum(self, A):
+        # write your code here
+        if not A:
+            return
+
+        start = local_max = 0
+        global_max = - 2 * 31
+        ret = []
+        for i, num in enumerate(A):
+            if local_max < 0:
+                start = i
+            local_max = max(num, local_max + num)
+            if local_max > global_max:
+                global_max = local_max
+                ret = [start, i]
+        return ret
 ```
