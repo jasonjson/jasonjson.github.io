@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Longest Increasing Continuous subsequence
+title: 397 - Longest Increasing Continuous subsequence
 date: 2015-10-21 12:53:48.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array)，find the longest increasing continuous subsequence in this array. (The definition of the longest increasing continuous subsequence here can be from right to left or from left to right)</em></strong></p>
+**Give you an integer array (index from 0 to n-1, where n is the size of this array)，find the longest increasing continuous subsequence in this array. (The definition of the longest increasing continuous subsequence here can be from right to left or from left to right)**
 
 
 ``` java
@@ -41,4 +41,31 @@ public class Solution {
         return maxLen;
     }
 }
+```
+
+``` python
+class Solution:
+    """
+    @param: A: An array of Integer
+    @return: an integer
+    """
+    def longestIncreasingContinuousSubsequence(self, A):
+        # write your code here
+        if not A:
+            return 0
+        ret = count = 1
+        for i in xrange(1, len(A)):
+            if A[i] > A[i - 1]:
+                count += 1
+            else:
+                count = 1
+            ret = max(ret, count)
+        count = 1
+        for i in reversed(xrange(len(A) - 1)):
+            if A[i] > A[i + 1]:
+                count += 1
+            else:
+                count = 1
+            ret = max(ret, count)
+        return ret
 ```
