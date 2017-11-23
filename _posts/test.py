@@ -1,46 +1,36 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import collections
 class Solution(object):
-    def removeInvalidParentheses(self, s):
+    def findCircleNum(self, M):
         """
-        :type s: str
-        :rtype: List[str]
+        :type M: List[List[int]]
+        :rtype: int
         """
-        if not s:
-            return []
 
-        visited = set(s)
-        stack = collections.deque([s])
-        ret = []
-        found = False
-        while stack:
-            curr = stack.popleft()
-            if self.is_valid(curr):
-                ret.append(curr)
-                found = True
-            if not found:
-                for i, char in enumerate(curr):
-                    if char == "(" or char == ")":
-                        new_s = curr[:i] + curr[i+1:]
-                        print new_s
-                        __import__('pdb').set_trace()
-                        if new_s not in visited:
-                            stack.append(new_s)
-                            visited.add(new_s)
+        if not M:
+            return 0
+
+        num = len(M)
+        visited = [False] * num
+        queue = collections.deque()
+
+        visited[0] = True
+        queue.append(0)
+        ret = 0
+        while queue:
+            i = queue.popleft()
+            for j in xrange(num):
+                if M[i][j] == 1 and not visited[j] and i != j:
+                    queue.append(j)
+                    visited[j] = True
+            if not queue:
+                ret += 1
+                for i in xrange(num):
+                    if not visited[i]:
+                        queue.append(i)
+                        visited[i] = True
+                        break
         return ret
-
-    def is_valid(self, s):
-        count = 0
-        for c in s:
-            if c == "(":
-                count += 1
-            elif c == ")":
-                count -= 1
-                if count < 0:
-                    return False
-        return count == 0
 
 if __name__ == "__main__":
     solution = Solution()
-    solution.removeInvalidParentheses("s)")
+    solution.findCircleNum([[1,0,0],[0,1,0],[0,0,1]])
