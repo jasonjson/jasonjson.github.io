@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Subarray Sum II
+title: 139 - Subarray Sum II
 date: 2015-10-21 02:18:11.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Array
 author: Jason
 ---
-<p><strong><em>Given an integer array, find a subarray where the sum of numbers is between two given interval. Your code should return the number of possible answer.</em></strong></p>
+**Given an integer array, find a subarray where the sum of numbers is between two given interval. Your code should return the number of possible answer.**
 
 
 ``` java
