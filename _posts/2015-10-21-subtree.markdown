@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Subtree
+title: 245 - Subtree
 date: 2015-10-21 02:56:22.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>You have two every large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes. Create an algorithm to decide if T2 is a subtree of T1.</em></strong></p>
+**You have two every large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes. Create an algorithm to decide if T2 is a subtree of T1.**
 
 
 ``` java
@@ -21,10 +21,10 @@ public class Solution {
         // write your code here
         if (T2 == null) return true;
         //we must check T2 first, since if T2 == null and T1 == null the result should be true
-        if (T1 == null) return false;//null is not subtree of null
+        if (T1 == null) return false;
         return isSameTree(T1, T2) || isSubtree(T1.left, T2) || isSubtree(T1.right, T2);
     }
-    
+
     public boolean isSameTree(TreeNode T1, TreeNode T2) {
         if (T1 == null && T2 == null) return true;
         //both gets to leaf
@@ -36,4 +36,31 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class Solution:
+    """
+    @param: T1: The roots of binary tree T1.
+    @param: T2: The roots of binary tree T2.
+    @return: True if T2 is a subtree of T1, or false.
+    """
+    def isSubtree(self, T1, T2):
+        # write your code here
+        if not T2:
+            return True
+        elif not T1:
+            return False
+        else:
+            return self.is_same_tree(T1, T2) or self.isSubtree(T1.left, T2) or self.isSubtree(T1.right, T2)
+
+    def is_same_tree(self, T1, T2):
+        if not T1 and not T2:
+            return True
+        elif not T1 or not T2:
+            return False
+        if T1.val != T2.val:
+            return False
+        else:
+            return self.is_same_tree(T1.left, T2.left) and self.is_same_tree(T1.right, T2.right)
 ```
