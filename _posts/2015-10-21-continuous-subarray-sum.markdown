@@ -25,7 +25,7 @@ public class Solution {
         int local_max = 0, global_max = Integer.MIN_VALUE;
         int start = 0;
         for (int i = 0; i < A.length; i++) {
-            if (local_max <= 0) {
+            if (local_max < 0) {
                 start = i;
             }
             local_max = Math.max(A[i], local_max + A[i]);

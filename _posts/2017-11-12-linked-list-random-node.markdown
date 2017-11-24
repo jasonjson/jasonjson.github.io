@@ -5,7 +5,7 @@ date: 2017-11-12
 tags:
 - Leetcode
 categories:
-- Linkedlist
+- LinkedList
 author: Jason
 ---
 **Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.**

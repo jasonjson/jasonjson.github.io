@@ -1,29 +1,36 @@
-import heapq
+import collections
 class Solution(object):
-    def maxSlidingWindow(self, nums, k):
+    def findCircleNum(self, M):
         """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
+        :type M: List[List[int]]
+        :rtype: int
         """
 
-        if not nums:
-            return []
+        if not M:
+            return 0
 
-        pq = []
-        start = 0
-        ret = []
-        for num in nums:
-            heapq.heappush(pq, -num)
-            print pq
-            if len(pq) + 1 > k:
-                min_num = heapq.heappop(pq)
-                ret.append(-min_num)
-                heapq.heappush(pq, min_num)
-                pq.remove(-nums[start])
-                start += 1
+        num = len(M)
+        visited = [False] * num
+        queue = collections.deque()
+
+        visited[0] = True
+        queue.append(0)
+        ret = 0
+        while queue:
+            i = queue.popleft()
+            for j in xrange(num):
+                if M[i][j] == 1 and not visited[j] and i != j:
+                    queue.append(j)
+                    visited[j] = True
+            if not queue:
+                ret += 1
+                for i in xrange(num):
+                    if not visited[i]:
+                        queue.append(i)
+                        visited[i] = True
+                        break
         return ret
+
 if __name__ == "__main__":
     solution = Solution()
-    import pprint
-    pprint.pprint(solution.maxSlidingWindow([1,3,1,2,0,5], 3))
+    solution.findCircleNum([[1,0,0],[0,1,0],[0,0,1]])

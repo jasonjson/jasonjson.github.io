@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Friend circles
+title: 547 - Friend circles
 date: 2015-10-25 19:51:28.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- BFS
+- Matrix
 author: Jason
 ---
-**There are N students in a class. Some of them are friends, while some are not. Their friendship is transitive in nature, i.e., if A is friend of B and B is friend of C, then A is also friend of C. A friend circle is a group of students who are directly or indirectly friends. You are given a N×N−matrix M which consists of characters Y or N. If M[i][j]=Y, then ith and jth students are friends with each other, otherwise not. You have to print the total number of friend circles in the class.**
+**There are N students in a class. Some of them are friends, while some are not. Their friendship is transitive in nature. For example, if A is a direct friend of B, and B is a direct friend of C, then A is an indirect friend of C. And we defined a friend circle is a group of students who are direct or indirect friends. Given a N*N matrix M representing the friend relationship between students in the class. If M[i][j] = 1, then the ith and jth students are direct friends with each other, otherwise not. And you have to output the total number of friend circles among all the students.**
+
 
 ``` java
 public class Solution {
@@ -39,6 +40,7 @@ public class Solution {
                     if (!visited[i]) {
                         q.offer(i);//create a new component
                         visited[i] = true;
+                        break;
                     }
                 }
             }
@@ -46,4 +48,38 @@ public class Solution {
         return circles;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def findCircleNum(self, M):
+        """
+        :type M: List[List[int]]
+        :rtype: int
+        """
+
+        if not M:
+            return 0
+
+        num = len(M)
+        visited = [False] * num
+        queue = collections.deque()
+
+        visited[0] = True
+        queue.append(0)
+        ret = 0
+        while queue:
+            i = queue.popleft()
+            for j in xrange(num):
+                if M[i][j] == 1 and not visited[j] and i != j:
+                    queue.append(j)
+                    visited[j] = True
+            if not queue:
+                ret += 1
+                for i in xrange(num):
+                    if not visited[i]:
+                        queue.append(i)
+                        visited[i] = True
+                        break
+        return ret
 ```

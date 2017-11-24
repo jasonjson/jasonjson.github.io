@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Word Ladder II
+title: 126 - Word Ladder II
 date: 2015-10-21 12:58:31.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- BFS
 - DFS Backtracking
 author: Jason
 ---
-<p><strong><em>Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end.</em></strong></p>
+**Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end.**
 
 
 ``` java
