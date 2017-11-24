@@ -5,7 +5,7 @@ date: 2015-10-21 12:57:57.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- BFS
+- Brain Teaser
 author: Jason
 ---
 **Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that: Only one letter can be changed at a time. Each intermediate word must exist in the dictionary.**
