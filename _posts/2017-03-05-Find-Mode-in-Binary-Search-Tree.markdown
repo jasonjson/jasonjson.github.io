@@ -30,7 +30,7 @@ class Solution(object):
                 stack.append(root)
                 root = root.left
             else:
-                root = stack.pop(-1)
+                root = stack.pop()
                 if root.val == prev_val:
                     current_count += 1
                 else:
