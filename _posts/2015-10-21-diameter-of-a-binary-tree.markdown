@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Diameter of a Binary Tree
+title: 543 - Diameter of a Binary Tree
 date: 2015-10-21 02:54:43.000000000 -04:00
 tags:
 - Leetcode
@@ -8,18 +8,11 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree.</em></strong></p>
+**Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.**
 
 
 ``` java
 class Solution {
-    /*
-    * The diameter of a tree T is the largest of the following quantities:
-    * the diameter of left subtree
-    * the diameter of right subtree
-    * the longest path between leaves that goes through the root of T
-    * (this can be computed from the heights of the subtrees of T)
-    */
     public int diameter(TreeNode root) {
         if (root == null) return 0;
 
@@ -28,7 +21,7 @@ class Solution {
         int leftDia = diameter(root.left);
         int rightDia = diameter(root.right);
 
-        return Math.max(Math.max(leftDia, rightDia), leftHeight + 1 + rightHeight);
+        return Math.max(Math.max(leftDia, rightDia), leftHeight + rightHeight);
         //the maximum diameter might path the root, or on the left subtree, or in the right subtree
     }
 
@@ -37,4 +30,22 @@ class Solution {
         return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
     }
 };
+```
+
+``` python
+class Solution(object):
+    def diameterOfBinaryTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if not root:
+            return 0
+
+        return max(self.diameterOfBinaryTree(root.left), self.diameterOfBinaryTree(root.right), self.get_depth(root.left) + self.get_depth(root.right))
+
+    def get_depth(self, root):
+        if not root:
+            return 0
+        return max(self.get_depth(root.left), self.get_depth(root.right)) + 1
 ```
