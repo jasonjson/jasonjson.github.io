@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Count of Smaller Number
+title: 248 - Count of Smaller Number
 date: 2015-10-21 13:32:46.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Sorting
+- Array
 author: Jason
 ---
-<p><strong><em>Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller that the given integer.</em></strong></p>
+**Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller that the given integer.**
 
 
 ``` java
@@ -82,40 +82,31 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-   /**
-     * @param A: An integer array
-     * @return: The number of element in the array that
-     *          are smaller that the given integer
-     */
-    public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
 
-        Arrays.sort(A);
-        for (int i = 0; i < queries.length; i++) {
-            result.add(find(A, queries[i]));
-        }
-        return result;
-    }
+``` python
+class Solution:
+    """
+    @param: A: An integer array
+    @param: queries: The query list
+    @return: The number of element in the array that are smaller that the given integer
+    """
+    def countOfSmallerNumber(self, A, queries):
+        # write your code here
 
-    public int find(int[] A, int val) {
-        int lo = 0, hi = A.length - 1;
-        while (lo <= hi) {
-            int mid = (lo + hi) / 2;
-            if (A[mid] == val) {
-            //there can be duplicates in the array, find the first index of the val
-                while (mid - 1 >= 0 && A[mid - 1] == val) {
-                    mid --;
-                }
-                return mid;
-            } else if (A[mid] < val) {
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
-            }
-        }
-        return lo;
-    }
-}
+        A.sort()
+        return [self.query(A, num) for num in queries]
+
+    def query(self, A, target):
+        lo, hi = 0, len(A) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if A[mid] == target:
+                while mid - 1 >= 0 and A[mid - 1] == target:
+                    mid -= 1
+                return mid
+            elif A[mid] > target:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        return lo
 ```

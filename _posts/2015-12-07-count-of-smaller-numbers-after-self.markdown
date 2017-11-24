@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Count of Smaller Numbers After Self
+title: 315 - Count of Smaller Numbers After Self
 date: 2015-12-07 18:21:09.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
-- Sorting
+- Binary Search Tree
 author: Jason
 ---
-<p><strong><em>You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].</em></strong></p>
+**You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].**
 
 
 ``` java
@@ -47,4 +46,33 @@ public class Solution {
         return lo;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def countSmaller(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        sort, ret = [], []
+        for num in reversed(nums):
+            index = self.query(sort, num)
+            sort.insert(index, num)
+            ret.append(index)
+        return list(reversed(ret))
+
+    def query(self, sort, num):
+        lo, hi = 0, len(sort) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if sort[mid] == num:
+                while mid - 1 >= 0 and sort[mid - 1] == num:
+                    mid -= 1
+                return mid
+            elif sort[mid] < num:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return lo
 ```
