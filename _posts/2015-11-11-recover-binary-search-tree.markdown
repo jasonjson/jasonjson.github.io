@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recover Binary Search Tree
+title: 99 - Recover Binary Search Tree
 date: 2015-11-11 17:51:55.000000000 -05:00
 tags:
 - Leetcode
@@ -8,9 +8,9 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Two elements of a binary search tree (BST) are swapped by mistake.</p>
+**Two elements of a binary search tree (BST) are swapped by mistake. Recover the tree without changing its structure.**
 
-Recover the tree without changing its structure.</em></strong></p>
+
 ``` java
 public class Solution {
     private TreeNode n1 = null, n2 = null, prev = null;
@@ -35,32 +35,30 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    public void recoverTree(TreeNode root) {
-        if (null == root) return;
-        
-        Stack<treenode> stack = new Stack<treenode>();
-        TreeNode node1 = null, node2 = null, prev = null;
-        while (root != null || !stack.isEmpty()) {
-            if (root != null) {
-                stack.push(root);
-                root = root.left;
-            } else {
-                root = stack.pop();
-                if (prev != null && root.val < prev.val) {
-                    if (node1 == null) {
-                        node1 = prev;
-                    } 
-                    node2 = root;//we need to update both node1 and node2 here, otherwise for the case of two nodes only, node2 will be null
-                }
-                prev = root;
-                root = root.right;
-            }
-        }
-        int temp = node1.val;
-        node1.val = node2.val;
-        node2.val = temp;
-    }
-}
+
+``` python
+class Solution(object):
+    def recoverTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: void Do not return anything, modify root in-place instead.
+        """
+        if not root:
+            return
+
+        first = prev = second = None
+        stack = []
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                if prev is not None and root.val < prev.val:
+                    if first is None:
+                        first = prev
+                    second = root
+                prev = root
+                root = root.right
+        first.val, second.val = second.val, first.val
 ```
