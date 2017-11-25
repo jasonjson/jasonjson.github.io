@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Number of Connected Components in an Undirected Graph
+title: 323 - Number of Connected Components in an Undirected Graph
 date: 2016-01-03 19:50:36.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- BFS
-- Data Structure
+- Graph
 author: Jason
 ---
-<p><strong><em>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.</em></strong></p>
+**Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.**
 
 
 ``` java
@@ -47,43 +46,38 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    public int countComponents(int n, int[][] edges) {
-        if (n == 0) return 0;
-        List<List<Integer>> neighbors = new ArrayList<List<Integer>>();
-        for (int i = 0; i < n; i++) {
-            neighbors.add(new ArrayList<Integer>());
-        }
-        for (int[] edge : edges) {
-            neighbors.get(edge[0]).add(edge[1]);
-            neighbors.get(edge[1]).add(edge[0]);
-        }
-        int count = 0;
-        Queue<Integer> q = new LinkedList<Integer>();
-        boolean[] visited = new boolean[n];
-        q.offer(0);
-        visited[0] = true;
-        while (!q.isEmpty()) {
-            int curr = q.poll();
-            for (int neighbor : neighbors.get(curr)) {
-                if (!visited[neighbor]) {
-                    q.offer(neighbor);
-                    visited[neighbor] = true;
-                }
-            }
-            if (q.isEmpty()) {
-                count++;
-                for (int i = 0; i < n; i++) {
-                    if (!visited[i]) {
-                        q.offer(i);
-                        visited[i] = true;
-                        break;
-                    }
-                }
-            }
-        }
-        return count;
-    }
-}
+
+``` python
+class Solution(object):
+    def countComponents(self, n, edges):
+        """
+        :type n: int
+        :type edges: List[List[int]]
+        :rtype: int
+        """
+        if n == 0:
+            return 0
+
+        visited = [False] * n
+        neighbors = collections.defaultdict(list)
+        for a, b in edges:
+            neighbors[a].append(b)
+            neighbors[b].append(a)
+        ret = 0
+        queue = collections.deque([0])
+        visited[0] = True
+        while queue:
+            curr = queue.popleft()
+            for neighbor in neighbors[curr]:
+                if not visited[neighbor]:
+                    queue.append(neighbor)
+                    visited[neighbor] = True
+            if not queue:
+                ret += 1
+                for i in xrange(n):
+                    if not visited[i]:
+                        queue.append(i)
+                        visited[i] = True
+                        break
+        return ret
 ```
