@@ -1,26 +1,27 @@
 ---
 layout: post
-title: Shortest Distance from All Buildings
+title: 317 - Shortest Distance from All Buildings
 date: 2015-12-16 22:42:54.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- BFS
-- Brain Teaser
+- Matrix
 author: Jason
 ---
-<p><strong><em>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:</p>
+**You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:**
 
-Each 0 marks an empty land which you can pass by freely.</p>
-Each 1 marks a building which you cannot pass through.</p>
-Each 2 marks an obstacle which you cannot pass through.</p>
-The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.</em></strong></p>
+* Each 0 marks an empty land which you can pass by freely.
+* Each 1 marks a building which you cannot pass through.
+* Each 2 marks an obstacle which you cannot pass through.
+**The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.**
+
+
 ``` java
 //this problem is only slightly different from "best meeting points", but the algorithm is quite different
 public class Solution {
     public int shortestDistance(int[][] grid) {
         if (grid == null || grid.length == 0) return -1;
-        
+
         int row = grid.length, col = grid[0].length;
         int[][] num = new int[row][col]; //visited buildings at each point
         int[][] dist = new int[row][col]; //total distance for each point
@@ -73,4 +74,53 @@ public class Solution {
         return result == Integer.MAX_VALUE ? -1 : result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def shortestDistance(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        if not grid:
+            return -1
+
+        row, col = len(grid), len(grid[0])
+        nums = [[0] * col for _ in xrange(row)]
+        distance = [[0] * col for _ in xrange(row)]
+        buildings = 0
+        for i in xrange(row):
+            for j in xrange(col):
+                if grid[i][j] != 1:
+                    continue
+                buildings += 1
+                visited = [[False] * col for _ in xrange(row)]
+                queue = collections.deque()
+                queue.append([i, j])
+                dist = 0
+                while queue:
+                    for _ in xrange(len(queue)):
+                        x, y = queue.popleft()
+                        nums[x][y] += 1
+                        distance[x][y] += dist
+                        if x - 1 >= 0 and grid[x - 1][y] == 0 and not visited[x - 1][y]:
+                            queue.append([x-1, y])
+                            visited[x-1][y] = True
+                        if x + 1 < row and grid[x + 1][y] == 0 and not visited[x + 1][y]:
+                            queue.append([x+1, y])
+                            visited[x+1][y] = True
+                        if y - 1 >= 0 and grid[x][y - 1] == 0 and not visited[x][y - 1]:
+                            queue.append([x, y - 1])
+                            visited[x][y - 1] = True
+                        if y + 1 < col and grid[x][y + 1] == 0 and not visited[x][y + 1]:
+                            queue.append([x, y + 1])
+                            visited[x][y + 1] = True
+                    dist += 1
+        ret = 2 ** 31 - 1
+        for i in xrange(row):
+            for j in xrange(col):
+                if grid[i][j] == 0 and nums[i][j] == buildings:
+                    ret = min(ret, distance[i][j])
+        return ret if ret != 2 ** 31 - 1 else -1
 ```
