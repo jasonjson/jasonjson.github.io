@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Binary Tree Vertical Order Traversal
+title: 314 - Binary Tree Vertical Order Traversal
 date: 2015-12-05 09:53:04.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- BFS
-- Brain Teaser
+- Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, return the vertical order traversal of its nodes' values. (ie, from top to bottom, column by column). If two nodes are in the same row and column, the order should be from left to right.</em></strong></p>
+**Given a binary tree, return the vertical order traversal of its nodes' values. (ie, from top to bottom, column by column). If two nodes are in the same row and column, the order should be from left to right.**
 
 
 ``` java
@@ -46,4 +45,38 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def verticalOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+
+        index_map = collections.defaultdict(list)
+        dist_map = {}
+        queue = collections.deque([root])
+        dist_map[root] = 0
+        min_index = 2 ** 31 - 1
+        while queue:
+            curr = queue.popleft()
+            index = dist_map.get(curr)
+            min_index = min(min_index, index)
+            index_map[index].append(curr.val)
+            if curr.left:
+                queue.append(curr.left)
+                dist_map[curr.left] = index - 1
+            if curr.right:
+                queue.append(curr.right)
+                dist_map[curr.right] = index + 1
+
+        ret = []
+        while min_index in index_map:
+            ret.append(index_map[min_index])
+            min_index += 1
+        return ret
 ```
