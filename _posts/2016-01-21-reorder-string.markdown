@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string</em></strong></p>
+**BACCBBAAA -> ABABACABC，就是输出相邻字母不能相同的string**
 
 
 ``` java
