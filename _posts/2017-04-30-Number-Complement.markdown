@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Number Complement
+title: 476 - Number Complement
 date: 2017-04-30
 tags:
 - Leetcode
@@ -10,20 +10,6 @@ author: Jason
 ---
 **Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.**
 
-```python
-class Solution(object):
-    def findComplement(self, num):
-        """
-        :type num: int
-        :rtype: int
-        """
-
-        #convert number to binay string
-        bin_str = "{0:b}".format(num)
-        complement_str = "".join(["1" if digit == "0" else "0" for digit in bin_str])
-        #convert binary string to num
-        return int(complement_str, 2)
-```
 
 ```python
 class Solution(object):
