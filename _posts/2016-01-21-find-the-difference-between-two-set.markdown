@@ -44,3 +44,21 @@ public class Solution {
     }
 }
 ```
+
+``` python
+class Solution(object):
+    def findSubset(self, A, B):
+        if not A:
+            return []
+        elif not B:
+            return A
+
+        counter = collections.Counter(A)
+        for num in B:
+            if num in counter:
+                counter[num] -= 1
+        ret = []
+        for k, v in counter.iteritems():
+            ret.extend([k] * v)
+        return ret
+```
