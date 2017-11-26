@@ -3,9 +3,9 @@ layout: post
 title: Find the difference between two set
 date: 2016-01-21 11:30:59.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
-- Brain Teaser
+- Array
 author: Jason
 ---
 **找出两个数组的差，比如A = [1,1,1,2,2,2], B = [2,2,3]，在A出现在B不出现的集合是[1,1,1,2]**

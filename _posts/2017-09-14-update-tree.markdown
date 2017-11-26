@@ -3,7 +3,7 @@ layout: post
 title: Update Tree
 date: 2017-09-14
 tags:
-- Leetcode
+- OA
 categories:
 - Binary Search Tree
 author: Jason

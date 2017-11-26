@@ -1,25 +1,23 @@
 class Solution(object):
-    def minPatches(self, nums, n):
-        """
-        :type nums: List[int]
-        :type n: int
-        :rtype: int
-        """
-
-        miss = 1
-        ret = 0
-        i = 0
-        while miss <= n:
-            if i < len(nums) and nums[i] <= miss:
-                miss += nums[i]
-                i += 1
-            else:
-                print miss
-                miss += miss
-                ret += 1
-        return ret
-
-if __name__ == "__main__":
-    solution = Solution()
-    import pprint
-    pprint.pprint(solution.minPatches([1,5,10], 20))
+    def reOrder(self, s):
+        if not s:
+            return ""
+        counter = collections.Counter(s)
+        pq = []
+        ret = []
+        for k, v in counter.iteritems():
+            heapq.heappush(pq, (-v, k))
+        while pq:
+            count1, char1 = heapq.heappop(pq)
+            ret.append(char1)
+            if not pq:
+                break
+            count2, char2 = heapq.heappop(pq)
+            ret.append(char2)
+            count1 += 1
+            count2 += 1
+            if count1 < 0:
+                heapq.heappush(pq, (count1, char1))
+            if count2 < 0:
+                heapq.heappush(pq, (count2, char2))
+        return "".join(ret)
