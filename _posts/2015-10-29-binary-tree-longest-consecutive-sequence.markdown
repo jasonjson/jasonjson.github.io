@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binary Tree Longest Consecutive Sequence
+title: 298 - Binary Tree Longest Consecutive Sequence
 date: 2015-10-29 10:37:39.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Binary Search Tree
 author: Jason
 ---
-<p><strong><em>Given a binary tree, find the length of the longest consecutive sequence path. The path refers to any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The longest consecutive path need to be from parent to child (cannot be the reverse).</em></strong></p>
+**Given a binary tree, find the length of the longest consecutive sequence path. The path refers to any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The longest consecutive path need to be from parent to child (cannot be the reverse).**
 
 
 ``` java
@@ -30,4 +30,36 @@ public class Solution {
         return local;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def longestConsecutive(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if not root:
+            return 0
+
+        ret = [0]
+        self.helper(root, ret)
+        return ret[0]
+
+    def helper(self, root, ret):
+        if not root:
+            return 0
+        left_max = self.helper(root.left, ret)
+        right_max = self.helper(root.right, ret)
+        if root.left and root.left.val == root.val + 1:
+            left_max += 1
+        else:
+            left_max = 1
+        if root.right and root.right.val == root.val + 1:
+            right_max += 1
+        else:
+            right_max = 1
+        local_max = max(left_max, right_max)
+        ret[0] = max(ret[0], local_max)
+        return local_max
 ```
