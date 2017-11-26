@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A + B Problem
+title: 1 - A + B Problem
 date: 2015-10-21 02:39:12.000000000 -04:00
 tags:
 - Lintcode
@@ -29,4 +29,22 @@ class Solution {
         return result;
     }
 };
+```
+
+``` python
+class Solution:
+    """
+    @param: a: An integer
+    @param: b: An integer
+    @return: The sum of a and b
+    """
+    def aplusb(self, a, b):
+        #^y //执行加法，不考虑进位。
+        #(x&y)<<1 //进位操作
+        if b == 0:
+            return a
+
+        summation = a ^ b
+        carry = (a & b) << 1
+        return self.aplusb(summation, carry)
 ```
