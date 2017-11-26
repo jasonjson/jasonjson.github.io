@@ -1,37 +1,30 @@
 ---
 layout: post
-title: Flip Bits
+title: 181 - Flip Bits
 date: 2015-10-21 02:08:11.000000000 -04:00
 tags:
-- Leetcode
+- Lintcode
 categories:
 - Bit
-- Integer
 author: Jason
 ---
-<p><strong><em>Determine the number of bits required to flip if you want to convert integer n to integer m.</em></strong></p>
+**Determine the number of bits required to flip if you want to convert integer n to integer m.**
 
 
-``` java
-class Solution {
-    /**
-     *@param a, b: Two integer
-     *return: An integer
-     */
-    public static int bitSwapRequired(int a, int b) {
-        // write your code here
-        int mask = a ^ b;
-        int count = 0;
-        int number = 32;
-        //while(mask != 0){
-        //the int can be negative, and thus it will never get to zero
-        //using a number to control how many times with move right a bit.
-        while(number > 0){
-            if((mask & 1) == 1)  count++;
-            number--;
-            mask >>= 1;
-        }
-        return count;
-    }
-};
+``` python
+class Solution:
+    """
+    @param: a: An integer
+    @param: b: An integer
+    @return: An integer
+    """
+    def bitSwapRequired(self, a, b):
+        # write your code here
+        xor = a ^ b
+        count = 0
+        for i in xrange(32):
+            if xor & 1 == 1:
+                count += 1
+            xor >>= 1
+        return count
 ```
