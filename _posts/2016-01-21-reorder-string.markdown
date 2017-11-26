@@ -13,9 +13,6 @@ author: Jason
 
 ``` java
 public class Solution {
-    public static void main(String[] args) {
-        System.out.println(reOrder("BACCBBAAAACBACBAD"));
-    }
     public static String reOrder(String s) {
         if (s == null || s.length() == 0) return "";
 
