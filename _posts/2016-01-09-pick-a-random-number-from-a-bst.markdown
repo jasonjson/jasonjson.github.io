@@ -3,49 +3,21 @@ layout: post
 title: Pick a random number from a BST
 date: 2016-01-09 10:40:16.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Randomly pick a number fro binary searach tree</em></strong></p>
+**Randomly pick a number from binary searach tree**
 
 
 ``` java
 public class Solution {
-    public static void main(String[] args) {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(5);
-        TreeNode t6 = new TreeNode(6);
-        t1.left = t2;
-        t1.right = t3;
-        t2.left = t4;
-        t2.right = t5;
-        t3.left = t6;
-        System.out.println(pickRandom(t1));
-        System.out.println(pickRandom(t1));
-        System.out.println(pickRandom(t1));
-        System.out.println(pickRandom(t1));
-        System.out.println(pickRandom(t1));
-        System.out.println(pickRandom(t1));
-    }
-
     public static int pickRandom(TreeNode root) {
         if (root == null) return -1;
 
         List<Integer> nums = getList(root);
-        int i = 0, result = nums.get(0);
-        Random rand = new Random();
-        for (; i < nums.size(); i++) {
-            int j = rand.nextInt(i + 1);
-            if (j == 0) {
-                result = nums.get(i);
-            }
-        }
-        return result;
+        return nums.get(rand.nextInt(nums.size()));
     }
 
     public static List<Integer> getList(TreeNode root) {
@@ -60,4 +32,22 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def pickRandom(self, root):
+        if not root:
+            return
+
+        stack, ret = [], []
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                ret.append(root)
+                root = root.right
+        return ret[random.randInt(0, len(ret) - 1)]
 ```
