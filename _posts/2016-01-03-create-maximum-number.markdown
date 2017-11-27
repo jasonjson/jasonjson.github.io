@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create Maximum Number
+title: 321 - Create Maximum Number
 date: 2016-01-03 19:08:09.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- Array
 author: Jason
 ---
-<p><strong><em>Given two arrays of length m and n with digits 0-9 representing two numbers. Create the maximum number of length k &lt;= m + n from digits of the two. The relative order of the digits from the same array must be preserved. Return an array of the k digits. You should try to optimize your time and space complexity.</em></strong></p>
+**Given two arrays of length m and n with digits 0-9 representing two numbers. Create the maximum number of length k <= m + n from digits of the two. The relative order of the digits from the same array must be preserved. Return an array of the k digits. You should try to optimize your time and space complexity.**
 
 
 ``` java
@@ -23,7 +23,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public int[] maxArr(int[] nums, int k) {
         int[] result = new int[k];
         for (int i = 0, j = 0; i < nums.length; i++) {
@@ -36,7 +36,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public boolean greater(int[] nums1, int i, int[] nums2, int j) {
         while (i < nums1.length && j < nums2.length && nums1[i] == nums2[j]) {
             i++;
