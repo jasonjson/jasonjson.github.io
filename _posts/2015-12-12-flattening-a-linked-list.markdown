@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flattening a Linked List
+title: OA - Flattening a Linked List
 date: 2015-12-12 10:28:11.000000000 -05:00
 tags:
 - OA
@@ -47,4 +47,27 @@ class Solution {
         return dummy.next;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def flatten(self, head):
+        if not head or not head.right:
+            return head
+
+        return self.merge(head, self.flatten(head.right))
+
+    def merge(self, l1, l2):
+        dummy = ListNode(0)
+        curr = dummy
+        while l1 and l2:
+            if l1.val < l2.val:
+                curr.next = l1
+                l1 = l1.next
+            else:
+                curr.next = l2
+                l2 = l2.next
+            curr = curr.next
+        curr.next = l1 or l2
+        return dummy.next
 ```
