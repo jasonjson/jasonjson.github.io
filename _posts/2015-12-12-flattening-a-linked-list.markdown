@@ -3,17 +3,17 @@ layout: post
 title: Flattening a Linked List
 date: 2015-12-12 10:28:11.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
-- Brain Teaser
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list where every node represents a linked list and contains two pointers of its type:</p>
+**Given a linked list where every node represents a linked list and contains two pointers of its type:**
+* Pointer to next node in the main list (we call it ‘right’ pointer in below code)
+* Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).
+**All linked lists are sorted. Write a function to flatten the lists into a single sorted linked list.**
 
-(i) Pointer to next node in the main list (we call it ‘right’ pointer in below code)</p>
-(ii) Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).</p>
-All linked lists are sorted.Write a function flatten() to flatten the lists into a single linked list.</em></strong></p>
+
 ``` java
 class Solution {
     class ListNode {
@@ -27,11 +27,6 @@ class Solution {
     }
     public ListNode flatten(ListNode head) {
         if (head == null || head.right == null) return head;
-        /*while (head.right != null) {
-            ListNode next = head.right.right;
-            head = merge(head, head.right);
-            head.right = next;
-        }*/
         return merge(head, flatten(head.right));
     }
 
