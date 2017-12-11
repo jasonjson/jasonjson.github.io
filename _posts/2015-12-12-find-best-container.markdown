@@ -3,13 +3,12 @@ layout: post
 title: Find best container
 date: 2015-12-12 13:02:39.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
 - Brain Teaser
-- Two Pointers
 author: Jason
 ---
-<p><strong><em>現在給某個容量(double capacity), 還有一個array(double[] weights), 和int numOfContainers 主要是要在array中選出兩個weights總和小於等於capacity但最接近capacity.然後指定到一個Container object並且return</em></strong></p>
+**現在給某個容量(double capacity), 還有一個array(double[] weights), 和int numOfContainers 主要是要在array中選出兩個weights總和小於等於capacity但最接近capacity.然後指定到一個Container object並且return**
 
 
 ``` java
