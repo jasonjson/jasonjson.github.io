@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Randomly Choose k Samples
+title: OA - Randomly Choose k Samples
 date: 2016-01-09 10:29:27.000000000 -05:00
 tags:
 - OA
@@ -30,4 +30,18 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def randam_picket(self, nums, k):
+        if not nums or not k:
+            return []
+
+        ret = nums[0:k]
+        for i, num in enumerate(nums):
+            j = random.randint(0, i)
+            if j < k:
+                ret[i] = num
+        return ret
 ```
