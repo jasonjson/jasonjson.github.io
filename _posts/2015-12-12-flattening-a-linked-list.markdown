@@ -11,6 +11,7 @@ author: Jason
 **Given a linked list where every node represents a linked list and contains two pointers of its type:**
 * Pointer to next node in the main list (we call it ‘right’ pointer in below code)
 * Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).
+
 **All linked lists are sorted. Write a function to flatten the lists into a single sorted linked list.**
 
 
