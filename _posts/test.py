@@ -1,44 +1,41 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-
-from collections import defaultdict
 class Solution(object):
-    def findSubstring(self, s, words):
+    def solveSudoku(self, board):
         """
-        :type s: str
-        :type words: List[str]
-        :rtype: List[int]
+        :type board: List[List[str]]
+        :rtype: void Do not return anything, modify board in-place instead.
         """
-        if not s or not words:
-            return []
+        if not board:
+            return
 
-        word_map = defaultdict(int)
-        for word in words:
-            word_map[word] += 1
+        self.helper(0, board)
 
-        ret = []
-        length, number = len(words[0]), len(words)
-        seen_map = defaultdict(int)
-        for i in xrange(len(s) - length * number + 1):
-            if s[i : i + length] in word_map:
-                seen_map = defaultdict(int)
-                j = 0
-                while j < number:
-                    new_s = s[i + j * length: i + (j + 1) * length]
-                    print new_s
-                    if new_s in word_map:
-                        seen_map[new_s] += 1
-                        if seen_map[new_s] > word_map[new_s]:
-                            break
-                    else:
-                        break
-                    j += 1
-                if j == number:
-                    ret.append(i)
-        return ret
+    def helper(self, start, board):
+        if start == 81:
+            return True
+
+        i, j = start / 9, start % 9
+        if board[i][j] != ".":
+            return self.helper(start + 1, board)
+        else:
+            for candidate in xrange(1, 10):
+                if self.is_valid(board, i, j, str(candidate)):
+                    board[i][j] = str(candidate)
+                    if self.helper(start + 1, board):
+                        return True
+                    board[i][j] = "."
+            return False
+
+    def is_valid(self, board, i, j , candidate):
+        print i, j, candidate
+        for k in xrange(9):
+            if board[i][k] == candidate or board[k][j] == candidate or board[i - i % 3 + k /3 ][j - j %3 + k % 3] == candidate:
+                return False
+        return True
 if __name__ == "__main__":
     solution = Solution()
-    ret =solution.findSubstring("barfoothefoobarman", ["foo","bar"])
-    __import__('pprint').pprint(ret)
-
+    board = [[".",".","9","7","4","8",".",".","."],["7",".",".",".",".",".",".",".","."],[".","2",".","1",".","9",".",".","."],[".",".","7",".",".",".","2","4","."],[".","6","4",".","1",".","5","9","."],[".","9","8",".",".",".","3",".","."],[".",".",".","8",".","3",".","2","."],[".",".",".",".",".",".",".",".","6"],[".",".",".","2","7","5","9",".","."]]
+    solution.solveSudoku(board)
+    __import__('pprint').pprint(board)
