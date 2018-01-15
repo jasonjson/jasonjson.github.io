@@ -1,69 +1,27 @@
 ---
 layout: post
-title: Substring with Concatenation of All Words
+title: 30 - Substring with Concatenation of All Words
 date: 2015-11-15 11:38:30.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- String
 author: Jason
 ---
-<p><strong><em>You are given a string, s, and a list of words, words, that are all of the same length. Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.</em></strong></p>
+**You are given a string, s, and a list of words, words, that are all of the same length. Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.**
 
 
-``` java
-public class Solution {
-    public List<Integer> findSubstring(String s, String[] words) {
-        List<Integer> result = new ArrayList<Integer>();
-        if(words.length == 0 || s.length() == 0) return result;
-        
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-        for (String word : words) {
-            map.put(word, map.getOrDefault(word, 0) + 1);
-        }
-        int len = words[0].length(), num = words.length;
-        for (int k = 0; k < len; k++) {//len of a word
-            HashMap<String,Integer> toFind = new HashMap<String, Integer>(map);
-            for (int i = k, j = 0; i + j + len - 1 < s.length();){
-            //i is the start point of the matching string 
-            //j is the length of the matching string
-                String temp = s.substring(i + j, i + j + len);
-                if (toFind.containsKey(temp)) {
-                    toFind.put(temp, toFind.get(temp) - 1);
-                    if (toFind.get(temp) == 0) {
-                        toFind.remove(temp);
-                    }
-                    if (toFind.isEmpty()) {
-                        result.add(i);
-                    }
-                    j += len;
-                } else {
-                    if (j == 0) {
-                        i += len;
-                    } else {
-                        String newS = s.substring(i, i + len);
-                        toFind.put(newS, toFind.getOrDefault(newS, 0) + 1);
-                        i += len;
-                        j -= len;
-                    }
-                }
-            }
-        }
-        return result;
-    }
-}
-```
 ``` java
 public class Solution {
     public List<Integer> findSubstring(String s, String[] words) {
         List<Integer> result = new ArrayList<Integer>();
         if (s.length() == 0 || words.length == 0) return result;
-        
+
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         for (String word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        
+
         int len = words[0].length(), num = words.length;
         HashMap<String, Integer> seen = new HashMap<String, Integer>();
         for (int i = 0; i < s.length() - len * num + 1; i++) {
@@ -89,4 +47,40 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def findSubstring(self, s, words):
+        """
+        :type s: str
+        :type words: List[str]
+        :rtype: List[int]
+        """
+        if not s or not words:
+            return []
+
+        word_map = defaultdict(int)
+        for word in words:
+            word_map[word] += 1
+
+        ret = []
+        length, number = len(words[0]), len(words)
+        seen_map = defaultdict(int)
+        for i in xrange(len(s) - length * number + 1):
+            if s[i : i + length] in word_map:
+                seen_map = defaultdict(int)
+                j = 0
+                while j < number:
+                    new_s = s[i + j * length: i + (j + 1) * length]
+                    if new_s in word_map:
+                        seen_map[new_s] += 1
+                        if seen_map[new_s] > word_map[new_s]:
+                            break
+                    else:
+                        break
+                    j += 1
+                if j == number:
+                    ret.append(i)
+        return ret
 ```
