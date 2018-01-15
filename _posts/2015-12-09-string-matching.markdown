@@ -1,15 +1,14 @@
 ---
 layout: post
-title: String matching
+title: OA - String matching
 date: 2015-12-09 18:17:30.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
-- Brain Teaser
 - Data Structure
 author: Jason
 ---
-<p><strong><em>给一个字典，里面全是string，字典很大，可能有几百万个string。然后写一个方法判断输入是否有一个typo，否则返回false。比如，字典有google，facebook，amazon等。输入google返回false，因为没有typo。输入geogle，返回true，因为有一个typo。输入geogla，返回false，因为有多于一个的typo。</em></strong></p>
+**给一个字典，里面全是string，字典很大，可能有几百万个string。然后写一个方法判断输入是否有一个typo，否则返回false。比如，字典有google，facebook，amazon等。输入google返回false，因为没有typo。输入geogle，返回true，因为有一个typo。输入geogla，返回false，因为有多于一个的typo**
 
 
 ``` java
@@ -70,4 +69,37 @@ class Solution {
         System.out.println(trie.search("gogfgle", trie.root, false));
     }
 }
+```
+
+``` python
+class TrieNode(object):
+    def __init__(self):
+        self.is_word = False
+        self.children = {}
+
+class Trie(object):
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        curr = self.root
+        for char in word:
+            if char not in curr.children:
+                curr.children[char] = TrieNode()
+            curr = curr.children.get(char)
+        curr.is_word = True
+
+    def search(self, word, curr, is_typo):
+        for i, char in enumerate(word):
+            if char in curr.children:
+                curr = curr.children[char]
+            else:
+                if not is_typo:
+                    is_typo = True
+                    if self.search(word[i+1:], curr, is_typo):
+                        return True
+                    for tmp in curr.children.values():
+                        if self.search(word[i+1:], tmp, is_typo) or self.search(word[i:], tmp, is_typo):
+                            return True
+        return is_typo and curr.is_word
 ```
