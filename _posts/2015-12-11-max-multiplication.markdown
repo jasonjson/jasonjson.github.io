@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Max multiplication
+title: OA - Max multiplication
 date: 2015-12-11 11:44:45.000000000 -05:00
 tags:
-- Leetcode
+- OA
 categories:
-- Brain Teaser
 - Sorting
 author: Jason
 ---
-<p><strong><em>Given two integer arrays, find the kth smallest multiplication by picking one element from each array.</em></strong></p>
+**Given two integer arrays, find the kth smallest multiplication by picking one element from each array.**
 
 
 ``` java
@@ -29,13 +28,13 @@ class Solution {
     }
     public static int multiply(int[] num1, int[] num2, int k) {
         if (num1.length == 0 || num2.length == 0) return 0;
-        
+
         Arrays.sort(num1);
         Arrays.sort(num2);
         PriorityQueue<point> pq = new PriorityQueue<point>(k, new Comparator<point>() {
            public int compare(point a, point b) {
                return a.val - b.val;
-           } 
+           }
         });
         pq.offer(new point(0, 0, num1[0] * num2[0]));
         int result = 0;
@@ -52,4 +51,25 @@ class Solution {
         pq.offer(new point(i, j, num1[i] * num2[j]));
     }
 }
+```
+
+``` python
+import heapq
+class Solution(object):
+    def find_k_th_smallest(self, arr1, arr2, k):
+        if not arr1 or not arr2:
+            return -1
+
+        arr1.sort()
+        arr2.sort()
+        path = []
+        heapq.heappush(path, (arr1[0] * arr2[0], 0, 0))
+        ret = None
+        for _ in xrange(k):
+            ret, i, j = heapq.heappop(path)
+            if i + 1 < len(arr1):
+                heapq.heappush(path, (arr1[i + 1] * arr2[j], i + 1, j))
+            if j + 1 < len(arr2):
+                heapq.heappush(path, (arr1[i] * arr2[j + 1], i, j + 1))
+        return ret
 ```
