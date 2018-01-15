@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validate UTF-8 byte sequence,
+title: 393 - UTF-8 Validation
 date: 2016-01-21 12:09:57.000000000 -05:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em><a href="https://en.wikipedia.org/wiki/UTF-8#Description">Reference</a></em></strong></p>
+Given an array of integers representing the data, return whether it is a valid utf-8 encoding.
 
 
 ``` java
