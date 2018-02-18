@@ -1,31 +1,27 @@
+import collections
 class Solution:
-    def trap(self, height):
+    def lengthOfLongestSubstringTwoDistinct(self, s):
         """
-        :type height: List[int]
+        :type s: str
         :rtype: int
         """
 
-        if not height:
+        if not s:
             return 0
 
-        container = [0] * len(height)
-        max_height = ret = 0
-
-        for i in range(len(height)):
-            __import__('pdb').set_trace()
-            container[i] = max_height
-            max_height = max(max_height, height[i])
-
-        max_height = 0
-        for i in reversed(range(len(height))):
-            container[i] = min(container[i], max_height)
-            max_height = max(max_height, height[i])
-            diff = container[i] - height[i]
-            ret += diff if diff > 0 else 0
-
+        start = ret = 0
+        char_map = collections.defaultdict(int)
+        for i, char in enumerate(s):
+            char_map[char] += 1
+            while len(char_map) > 2:
+                char_map[s[start]] -= 1
+                if char_map[s[start]] == 0:
+                    del char_map[s[start]]
+                start += 1
+            ret = max(ret, i - start + 1)
         return ret
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.trap([0]))
+    pprint.pprint(solution.lengthOfLongestSubstringTwoDistinct("eceba"))
