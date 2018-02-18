@@ -1,27 +1,31 @@
-import collections
-class Solution:
-    def lengthOfLongestSubstringTwoDistinct(self, s):
+class Solution(object):
+    def findMissingRanges(self, nums, lower, upper):
         """
-        :type s: str
-        :rtype: int
+        :type nums: List[int]
+        :type lower: int
+        :type upper: int
+        :rtype: List[str]
         """
 
-        if not s:
-            return 0
+        if not nums:
+            return []
 
-        start = ret = 0
-        char_map = collections.defaultdict(int)
-        for i, char in enumerate(s):
-            char_map[char] += 1
-            while len(char_map) > 2:
-                char_map[s[start]] -= 1
-                if char_map[s[start]] == 0:
-                    del char_map[s[start]]
-                start += 1
-            ret = max(ret, i - start + 1)
+        ret = []
+        if nums[0] > lower + 1:
+            ret.append(self.helper(lower, nums[0]))
+        for i in xrange(1, len(nums)):
+            if nums[i] >= nums[i - 1] + 2:
+                ret.append(self.helper(nums[i - 1] + 1, nums[i] - 1))
+        if upper > nums[-1]:
+            ret.append(self.helper(nums[-1] + 1, upper))
         return ret
+    def helper(self, num1, num2):
+        if num1 == num2:
+            return str(num1)
+        elif num1 < num2:
+            return str(num1) + "->" + str(num2)
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.lengthOfLongestSubstringTwoDistinct("eceba"))
+    pprint.pprint(solution.findMissingRanges([0,1,3,50,75], 0, 99))
