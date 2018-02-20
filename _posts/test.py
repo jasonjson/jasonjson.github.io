@@ -1,31 +1,37 @@
 class Solution(object):
-    def findMissingRanges(self, nums, lower, upper):
+    def fractionToDecimal(self, numerator, denominator):
         """
-        :type nums: List[int]
-        :type lower: int
-        :type upper: int
-        :rtype: List[str]
+        :type numerator: int
+        :type denominator: int
+        :rtype: str
         """
 
-        if not nums:
-            return []
+        if (numerator > 0 and denominator < 0) or (numerator < 0 and denominator > 0):
+            sign = -1
+        else:
+            sign = 1
 
+        num, den = abs(numerator), abs(denominator)
         ret = []
-        if nums[0] > lower + 1:
-            ret.append(self.helper(lower, nums[0]))
-        for i in xrange(1, len(nums)):
-            if nums[i] >= nums[i - 1] + 2:
-                ret.append(self.helper(nums[i - 1] + 1, nums[i] - 1))
-        if upper > nums[-1]:
-            ret.append(self.helper(nums[-1] + 1, upper))
-        return ret
-    def helper(self, num1, num2):
-        if num1 == num2:
-            return str(num1)
-        elif num1 < num2:
-            return str(num1) + "->" + str(num2)
+        ret.append(str(num / den))
+        carry = num % den
+        if carry == 0:
+            return "".join(ret)
+        else:
+            ret.append(".")
+        carry_map = {}
+        while carry:
+            carry *= 10
+            if carry in carry_map:
+                ret.insert(carry_map[carry], "(")
+                ret.append(")")
+                break
+            carry_map[carry] = len(ret)
+            ret.append(str(carry / den))
+            carry = carry % den
+        return "".join(ret)
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.findMissingRanges([0,1,3,50,75], 0, 99))
+    pprint.pprint(solution.fractionToDecimal(2, 3))

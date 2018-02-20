@@ -66,7 +66,7 @@ class Solution(object):
         nume, deno = abs(numerator), abs(denominator)
 
         #integral part
-        if (numerator > 0) == (denominator < 0):
+        if (numerator > 0 and denominator < 0) or (numerator < 0 and denominator > 0):
             ret.append("-")
         ret.append(str(nume / deno))
         nume %= deno

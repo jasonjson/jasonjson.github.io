@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Calculator
+title: 224 - Basic Calculator
 date: 2015-11-03 13:49:17.000000000 -05:00
 tags:
 - Leetcode
@@ -8,10 +8,9 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Implement a basic calculator to evaluate a simple expression string.</p>
+**Implement a basic calculator to evaluate a simple expression string. The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces. You may assume that the given expression is always valid.**
 
-The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces .</p>
-You may assume that the given expression is always valid.</em></strong></p>
+
 ``` java
 public class Solution {
     //Simple iterative solution by identifying characters one by one. One important thing is that the input is valid, which means the parentheses are always paired and in order. Only 5 possible input we need to pay attention:digit: it should be one digit from the current number
@@ -22,7 +21,7 @@ public class Solution {
     public int calculate(String s) {
         if (s == null || s.length() == 0) return -1;
         Stack<Integer> stack = new Stack<Integer>();
-        
+
         int number = 0, sign = 1, result = 0;
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) {
@@ -51,4 +50,44 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def calculate(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        if not s:
+            return 0
+
+        stack = []
+        num = ret = 0
+        sign = 1
+        for char in s:
+            if char.isdigit():
+                num = num * 10 + int(char)
+            elif char == "+":
+                ret += sign * num
+                num = 0
+                sign = 1
+            elif char == "-":
+                ret += sign * num
+                num = 0
+                sign = -1
+            elif char == "(":
+                stack.append(ret)
+                stack.append(sign)
+                ret = 0
+                sign = 1
+            elif char == ")":
+                ret += sign * num
+                num = 0
+                ret *= stack.pop()
+                ret += stack.pop()
+        if num:
+            ret += sign * num
+        return ret
 ```
