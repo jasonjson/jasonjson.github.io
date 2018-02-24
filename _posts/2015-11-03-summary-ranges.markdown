@@ -44,18 +44,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[str]
         """
+
         if not nums:
             return []
 
-        start = nums[0]
         ret = []
-        for i in xrange(1, len(nums) + 1):
-            if i == len(nums) or nums[i] != nums[i - 1] + 1:
-                if nums[i - 1] == start:
-                    ret.append(str(start))
-                else:
-                    ret.append(str(start) + "->" + str(nums[i - 1]))
-                if i != len(nums):
-                    start = nums[i]
+        start = 0
+        for i in xrange(1, len(nums)):
+            if nums[i] > nums[i - 1] + 1:
+                ret.append(self.helper(nums[start], nums[i - 1]))
+                start = i
+        ret.append(self.helper(nums[start], nums[-1]))
         return ret
+
+    def helper(self, num1, num2):
+        if num1 == num2:
+            return str(num1)
+        else:
+            return str(num1) + "->" + str(num2)
 ```

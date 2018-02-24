@@ -1,37 +1,28 @@
 class Solution(object):
-    def fractionToDecimal(self, numerator, denominator):
+    def threeSumSmaller(self, nums, target):
         """
-        :type numerator: int
-        :type denominator: int
-        :rtype: str
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
         """
 
-        if (numerator > 0 and denominator < 0) or (numerator < 0 and denominator > 0):
-            sign = -1
-        else:
-            sign = 1
+        if not nums:
+            return 0
 
-        num, den = abs(numerator), abs(denominator)
-        ret = []
-        ret.append(str(num / den))
-        carry = num % den
-        if carry == 0:
-            return "".join(ret)
-        else:
-            ret.append(".")
-        carry_map = {}
-        while carry:
-            carry *= 10
-            if carry in carry_map:
-                ret.insert(carry_map[carry], "(")
-                ret.append(")")
-                break
-            carry_map[carry] = len(ret)
-            ret.append(str(carry / den))
-            carry = carry % den
-        return "".join(ret)
+        ret = 0
+        nums.sort()
+        for i in xrange(len(nums) - 2):
+            left, right = i + 1, len(nums) - 1
+            while left < right:
+                if nums[i] + nums[left] + nums[right] < target:
+                    print nums[i], nums[left], nums[right]
+                    ret += right - left
+                    left += 1
+                else:
+                    right -= 1
+        return ret
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.fractionToDecimal(2, 3))
+    pprint.pprint(solution.threeSumSmaller([3,1,0,-2], 4))
