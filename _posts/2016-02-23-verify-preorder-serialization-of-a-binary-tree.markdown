@@ -47,5 +47,5 @@ class Solution(object):
                 none_nodes_count += 1
             else:
                 none_nodes_count -= 1
-        return True if none_nodes_count == 1 else False
+        return none_nodes_count == 1
 ```
