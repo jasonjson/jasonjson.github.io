@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flip Game
+title: 293 - Flip Game
 date: 2015-10-29 11:37:27.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>You are playing the following Flip Game with your friend: Given a string that contains only these two characters: + and -, you and your friend take turns to flip two consecutive "++" into "--". The game ends when a person can no longer make a move and therefore the other person will be the winner. Write a function to compute all possible states of the string after one valid move.</em></strong></p>
+**You are playing the following Flip Game with your friend: Given a string that contains only these two characters: + and -, you and your friend take turns to flip two consecutive "++" into "--". The game ends when a person can no longer make a move and therefore the other person will be the winner. Write a function to compute all possible states of the string after one valid move.**
 
 
 ``` java
@@ -16,7 +16,7 @@ public class Solution {
     public List<String> generatePossibleNextMoves(String s) {
         List<String> result = new ArrayList<>();
         if (s == null || s.length() == 0) return result;
-        
+
         for (int i = 1; i < s.length(); i++) {
             if (s.charAt(i - 1) == '+' && s.charAt(i) == '+') {
                 result.add(s.substring(0, i - 1) + "--" + s.substring(i + 1));
@@ -25,4 +25,22 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def generatePossibleNextMoves(self, s):
+        """
+        :type s: str
+        :rtype: List[str]
+        """
+
+        if not s:
+            return []
+
+        ret = []
+        for i in xrange(1, len(s)):
+            if s[i] == "+" and s[i-1] == "+":
+                ret.append(s[:i-1] + "--" + s[i+1:])
+        return ret
 ```

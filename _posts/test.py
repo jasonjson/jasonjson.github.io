@@ -1,28 +1,39 @@
+import collections
 class Solution(object):
-    def threeSumSmaller(self, nums, target):
+    def countComponents(self, n, edges):
         """
-        :type nums: List[int]
-        :type target: int
+        :type n: int
+        :type edges: List[List[int]]
         :rtype: int
         """
 
-        if not nums:
+        if not n or not edges:
             return 0
 
-        ret = 0
-        nums.sort()
-        for i in xrange(len(nums) - 2):
-            left, right = i + 1, len(nums) - 1
-            while left < right:
-                if nums[i] + nums[left] + nums[right] < target:
-                    print nums[i], nums[left], nums[right]
-                    ret += right - left
-                    left += 1
-                else:
-                    right -= 1
-        return ret
+        edge_map = collections.defaultdict(list)
 
+        for (a, b) in edges:
+            edge_map[a].append(b)
+            edge_map[b].append(a)
+        visited = set()
+        queue = []
+        ret = 0
+        while len(visited) != n:
+            if not queue:
+                for i in xrange(n):
+                    if i not in visited:
+                        visited.add(i)
+                        queue.append(i)
+                        break
+                ret += 1
+            curr = queue.pop()
+            for neighbor in edge_map[curr]:
+                edge_map[neighbor].remove(curr)
+                if neighbor not in visited:
+                    queue.append(neighbor)
+                    visited.add(i)
+        return ret
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.threeSumSmaller([3,1,0,-2], 4))
+    pprint.pprint(solution.countComponents(5, [[0,1],[1,2],[3,4]]))

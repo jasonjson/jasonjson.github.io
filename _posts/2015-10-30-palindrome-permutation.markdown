@@ -1,28 +1,27 @@
 ---
 layout: post
-title: Palindrome Permutation
+title: 266 - Palindrome Permutation
 date: 2015-10-30 15:34:35.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Palindrome
-- Permutation
+- String
 author: Jason
 ---
-<p><strong><em>Given a string, determine if a permutation of the string could form a palindrome.</em></strong></p>
+**Given a string, determine if a permutation of the string could form a palindrome.**
 
 
 ``` java
 public class Solution {
     public boolean canPermutePalindrome(String s) {
        if (s == null || s.length() == 0) return false;
-       
+
        int[] count = new int[256];
        for (char c : s.toCharArray()) {
            if (count[c] > 0) {
                count[c] --;
            } else {
-               count[c] ++; 
+               count[c] ++;
            }
        }
        int single = 0;
@@ -37,4 +36,24 @@ public class Solution {
        return true;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def canPermutePalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if not s:
+            return True
+
+        char_count = collections.Counter(s)
+        found_single = False
+        for count in char_count.values():
+            if count % 2 != 0:
+                if found_single:
+                    return False
+                found_single = True
+        return True
 ```

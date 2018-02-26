@@ -48,8 +48,6 @@ class Solution(object):
         sell = [0] * len(prices)
         buy = max(-prices[0], -prices[1])
         sell[1] = max(0, prices[1] - prices[0])
-        if len(prices) == 2:
-            return sell[-1]
         for i in xrange(2, len(prices)):
             sell[i] = max(buy + prices[i], sell[i - 1])
             buy = max(buy, sell[i - 2] - prices[i])

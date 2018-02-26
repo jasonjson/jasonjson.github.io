@@ -54,29 +54,24 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[List[int]]
         """
+
         if not root:
             return []
 
-        index_map = collections.defaultdict(list)
-        dist_map = {}
-        queue = collections.deque([root])
-        dist_map[root] = 0
-        min_index = 2 ** 31 - 1
+        min_index = 0
+        node_map = collections.defaultdict(list)
+        queue = [(root, 0)]
         while queue:
-            curr = queue.popleft()
-            index = dist_map.get(curr)
-            min_index = min(min_index, index)
-            index_map[index].append(curr.val)
+            curr, index = queue.pop(0)
+            node_map[index].append(curr.val)
+            min_index = min(index, min_index)
             if curr.left:
-                queue.append(curr.left)
-                dist_map[curr.left] = index - 1
+                queue.append((curr.left, index - 1))
             if curr.right:
-                queue.append(curr.right)
-                dist_map[curr.right] = index + 1
-
+                queue.append((curr.right, index + 1))
         ret = []
-        while min_index in index_map:
-            ret.append(index_map[min_index])
+        while min_index in node_map:
+            ret.append(node_map[min_index])
             min_index += 1
         return ret
 ```
