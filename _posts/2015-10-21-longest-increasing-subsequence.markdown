@@ -58,10 +58,22 @@ class Solution(object):
         if not nums:
             return 0
 
-        dp = [1] * len(nums)
-        for i in xrange(1, len(nums)):
-            for j in reversed(xrange(i)):
-                if nums[i] > nums[j]:
-                    dp[i] = max(dp[i], dp[j] + 1)
-        return max(dp)
+        ret = []
+        for i, num in enumerate(nums):
+            index = self.find_index(ret, num)
+            if index < len(ret):
+                ret[index] = num
+            else:
+                ret.append(num)
+        return len(ret)
+
+    def find_index(self, nums, num):
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) / 2
+            if nums[mid] < num:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return lo
 ```
