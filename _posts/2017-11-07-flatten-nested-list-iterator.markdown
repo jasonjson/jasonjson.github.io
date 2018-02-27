@@ -44,7 +44,6 @@ class NestedIterator(object):
         :type nestedList: List[NestedInteger]
         """
         self.list = self.flatten_list(nestedList)
-        self.index = -1
 
     def flatten_list(self, nestedList):
         ret = []
@@ -59,13 +58,12 @@ class NestedIterator(object):
         """
         :rtype: int
         """
-        self.index += 1
-        return self.list[self.index]
+        return self.list.pop(0)
 
 
     def hasNext(self):
         """
         :rtype: bool
         """
-        return self.index + 1 < len(self.list)
+        return self.list
 ```
