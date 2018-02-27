@@ -1,70 +1,54 @@
-class SnakeGame(object):
-
-    def __init__(self, width, height, food):
+class Solution(object):
+    def sortTransformedArray(self, nums, a, b, c):
         """
-        Initialize your data structure here.
-        @param width - screen width
-        @param height - screen height
-        @param food - A list of food positions
-        E.g food = [[1,1], [1,0]] means the first food is positioned at [1,1], the second is at [1,0].
-        :type width: int
-        :type height: int
-        :type food: List[List[int]]
+        :type nums: List[int]
+        :type a: int
+        :type b: int
+        :type c: int
+        :rtype: List[int]
         """
+        if not nums:
+            return []
+        if a == 0:
+            if b > 0:
+                return [b * num + c for num in nums]
+            else:
+                return [b * num + c for num in reversed(nums)]
 
-        self.width = width
-        self.height = height
-        self.food = food
-        self.snake = [[0, 0]]
-        self.score = 0
-
-
-    def move(self, direction):
-        """
-        Moves the snake.
-        @param direction - 'U' = Up, 'L' = Left, 'R' = Right, 'D' = Down
-        @return The game's score after the move. Return -1 if game over.
-        Game over when snake crosses the screen boundary or bites its body.
-        :type direction: str
-        :rtype: int
-        """
-
-        x, y = self.snake[-1]
-        if direction == "U":
-            x -= 1
-        elif direction == "L":
-            y -= 1
-        elif direction == "R":
-            y += 1
-        elif direction == "D":
-            x += 1
-        print(x, y)
-        return self.count(x, y)
-
-    def count(self, x, y):
-        if x < 0 or x >= self.height or y < 0 or y >= self.width or [x, y] in self.snake[1:]:
-            __import__('pdb').set_trace()
-            return -1
-
-        if self.food and x == self.food[0][0] and y == self.food[0][1]:
-            self.food.pop(0) #eat food, length increases by 1
-            self.score += 1
-        else:
-            self.snake.pop(0) # length remain the same
-        self.snake.append([x, y])
-        return self.score
-
+        mid_point = - b / (2 * a)
+        left, right, ret = [], [], []
+        for num in nums:
+            if num <= mid_point:
+                left.append(num)
+            else:
+                right.append(num)
+        if a > 0:
+            left_index = len(left) - 1
+            right_index = 0
+            while left_index >= 0 or right_index < len(right):
+                left_value = a * left[left_index] * left[left_index] + b * left[left_index] + c if left_index >= 0 else 2 ** 31 - 1
+                right_value = a * right[right_index] * right[right_index] + b * right[right_index] + c if right_index < len(right) else 2 ** 31 - 1
+                __import__('pdb').set_trace()
+                if left_value < right_value:
+                    ret.append(left_value)
+                    left_index -= 1
+                else:
+                    ret.append(right_value)
+                    right_index += 1
+        elif a < 0:
+            left_indx = 0
+            right_index = len(right) - 1
+            while left_index < len(left) and right_index >= 0:
+                left_value = a * left[left_index] * left[left_index] + b * left[left_index] + c
+                right_value = a * right[right_index] * right[right_index] + b * right[right_index] + c
+                if left_value < right_value:
+                    ret.append(left_value)
+                    left_index += 1
+                else:
+                    ret.append(right_value)
+                    right_index -= 1
+        return ret
 if __name__ == "__main__":
-    obj = SnakeGame(3, 3, [[2,0], [0,0], [0,2], [2,2]])
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("L"))
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("L"))
-    __import__('pprint').pprint(obj.move("D"))
+    solution = Solution()
+    import pprint
+    pprint.pprint(solution.sortTransformedArray([-97,-95,-82,-81,-76,-75,-74,-73,-72,-69,-68,-66,-64,-61,-56,-53,-51,-50,-47,-46,-43,-41,-39,-33,-30,-30,-29,-28,-27,-26,-25,-25,-23,-22,-18,-16,-16,-15,-9,-4,-2,-1,5,16,20,20,21,21,24,24,33,39,40,44,44,49,51,53,54,55,57,58,58,59,62,63,65,67,68,69,71,72,73,73,74,76,77,78,79,81,88,90,91,92,92,96,97], 31, 71, 96))
