@@ -1,3 +1,16 @@
+---
+layout: post
+title: 353 - Design Snake Game
+date: 2018-02-27
+tags:
+- Leetcode
+categories:
+- Data Structure
+author: Jason
+---
+**Design a Snake game that is played on a device with screen size = width x height. Play the game online if you are not familiar with the game. The snake is initially positioned at the top left corner (0,0) with length = 1 unit. You are given a list of food's positions in row-column order. When a snake eats the food, its length and the game's score both increase by 1. Each food appears one by one on the screen. For example, the second food will not appear until the first food was eaten by the snake. When a food does appear on the screen, it is guaranteed that it will not appear on a block occupied by the snake.**
+
+``` python
 class SnakeGame(object):
 
     def __init__(self, width, height, food):
@@ -38,14 +51,11 @@ class SnakeGame(object):
             y += 1
         elif direction == "D":
             x += 1
-        print(x, y)
         return self.count(x, y)
 
     def count(self, x, y):
         if x < 0 or x >= self.height or y < 0 or y >= self.width or [x, y] in self.snake[1:]:
-            __import__('pdb').set_trace()
             return -1
-
         if self.food and x == self.food[0][0] and y == self.food[0][1]:
             self.food.pop(0) #eat food, length increases by 1
             self.score += 1
@@ -53,18 +63,4 @@ class SnakeGame(object):
             self.snake.pop(0) # length remain the same
         self.snake.append([x, y])
         return self.score
-
-if __name__ == "__main__":
-    obj = SnakeGame(3, 3, [[2,0], [0,0], [0,2], [2,2]])
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("L"))
-    __import__('pprint').pprint(obj.move("D"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("R"))
-    __import__('pprint').pprint(obj.move("U"))
-    __import__('pprint').pprint(obj.move("L"))
-    __import__('pprint').pprint(obj.move("D"))
+```
