@@ -1,29 +1,31 @@
 class Solution(object):
-    def lengthLongestPath(self, input):
+    def nextClosestTime(self, time):
         """
-        :type input: str
-        :rtype: int
+        :type time: str
+        :rtype: str
         """
 
-        if not input:
-            return 0
+        if not time:
+            return ""
 
-        dir_list = input.split("\n")
-        dir_map = {}
-        ret = 0
-        for directory in dir_list:
-            level = directory.count("\t")
-            name = directory[level:]
-            if "." in directory:
-                __import__('pdb').set_trace()
-                size = len(name)
-                for i in xrange(level):
-                    size += len(dir_map[i]) + 1
-                ret = max(ret, size)
-            else:
-                dir_map[level] = name
-        return ret
+        num_set = set(time)
+        hour, minute = time.split(":")
+        hour, minute = int(hour), int(minute)
+        while True:
+            minute += 1
+            if minute == 60:
+                hour += 1
+                minute = 0
+                hour %= 24
+            str_hour = "0" + str(hour) if hour <= 9 else str(hour)
+            str_min = "0" + str(minute) if minute <= 9 else str(minute)
+            print str_hour, str_min
+            if set(str_hour) <= num_set and set(str_min) <= num_set:
+                return str_hour + ":" + str_min
+        return ""
+
+
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"))
+    pprint.pprint(solution.nextClosestTime("23:59"))
