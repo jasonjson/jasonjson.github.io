@@ -1,57 +1,16 @@
 ---
 layout: post
-title: Range Sum Query 2D - Mutable
+title: 308 - Range Sum Query 2D - Mutable
 date: 2015-11-23 17:39:50.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
 - Matrix
 author: Jason
 ---
-<p><strong><em>Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2).</em></strong></p>
+**Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2).**
 
 
-``` java
-public class NumMatrix {
-    private int[][] arrs;
-    private int[][] Bindex;
-
-    public NumMatrix(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) return;
-        int row = matrix.length, col = matrix[0].length;
-        this.arrs = new int[row][col];
-        this.Bindex = new int[row + 1][col + 1];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                update(i, j, matrix[i][j]);
-                arrs[i][j] = matrix[i][j];
-            }
-        }
-    }
-    public void update(int row, int col, int val) {
-        int diff = val - arrs[row][col];
-        arrs[row][col] = val;
-        for (int i = row + 1; i < Bindex.length; i += (i & -i)) {
-            for (int j = col + 1; j < Bindex[0].length; j += (j & -j)) {
-                Bindex[i][j] += diff;
-            }
-        }
-    }
-    public int getSum(int row, int col) {
-        int sum = 0;
-        for (int i = row + 1; i > 0; i -= (i & -i)) {
-            for (int j = col + 1; j > 0; j -= (j & -j)) {
-                sum += Bindex[i][j];
-            }
-        }
-        return sum;
-    }
-    public int sumRegion(int row1, int col1, int row2, int col2) {
-        return getSum(row2,col2) - getSum(row1-1, col2) - getSum(row2, col1-1) + getSum(row1-1, col1-1);
-    }
-}
-```
 ``` java
 public class NumMatrix {
     private int[][] sumCol;//we can also do this use sumRow, then use one extra cols
@@ -83,4 +42,46 @@ public class NumMatrix {
         return result;
     }
 }
+```
+
+``` python
+class NumMatrix(object):
+
+    def __init__(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        """
+
+        if not matrix:
+            return
+        self.matrix = matrix
+        self.col_sum = [[0] * (len(matrix[0])) for _ in xrange(len(matrix) + 1)]
+        for i in xrange(1, len(matrix) + 1):
+            for j in xrange(len(matrix[0])):
+                self.col_sum[i][j] = self.col_sum[i - 1][j] + self.matrix[i - 1][j]
+
+    def update(self, row, col, val):
+        """
+        :type row: int
+        :type col: int
+        :type val: int
+        :rtype: void
+        """
+        diff = val - self.matrix[row][col]
+        for i in xrange(row + 1, len(self.matrix) + 1):
+            self.col_sum[i][col] += diff
+        self.matrix[row][col] = val
+
+    def sumRegion(self, row1, col1, row2, col2):
+        """
+        :type row1: int
+        :type col1: int
+        :type row2: int
+        :type col2: int
+        :rtype: int
+        """
+        ret = 0
+        for j in xrange(col1, col2 + 1):
+            ret += self.col_sum[row2 + 1][j] - self.col_sum[row1][j]
+        return ret
 ```
