@@ -28,9 +28,7 @@ class Solution(object):
             level = path.count("\t")
             #\t does not count as path
             len_list[level] = len(path) - level
-            #add 1 for each level to add "/"
-            curr_length = sum(len_list[:level + 1]) + level
-            if "." in path and curr_length > max_len:
-                max_len = curr_length
+            if "." in path:
+                max_len = max(max_len, sum(len_list[:level + 1]) + level)
         return max_len
 ```
