@@ -1,27 +1,34 @@
 class Solution(object):
-    def licenseKeyFormatting(self, S, K):
+    def wordsTyping(self, sentence, rows, cols):
         """
-        :type S: str
-        :type K: int
-        :rtype: str
+        :type sentence: List[str]
+        :type rows: int
+        :type cols: int
+        :rtype: int
         """
 
-        if not S or not K:
-            return ""
+        x, y = 0, 0
+        ret = 0
+        while x < rows and y < cols:
+            x, y = self.helper(sentence, x, y, cols)
+            if x < rows:
+                ret += 1
+        return ret
 
-        new_s = "".join(S.split("-"))
-        ret = []
-        index = len(new_s)
-        while index > 0:
-            print index
-            left_index = index - K
-            if left_index < 0:
-                left_index = 0
-            ret.append(new_s[left_index : index])
-            index = left_index
-        return "-".join(ret)
+    def helper(self, words, x, y, cols):
+        for word in words:
+            if y + len(word) == cols:
+                y = 0
+                x += 1
+            elif y + len(word) + 1 > cols:
+                y = len(word) + 1
+                x += 1
+            else:
+                y += len(word) + 1
+            print x, y, word
+        return x, y
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.licenseKeyFormatting("5F3Z-2e-9-w", 4))
+    pprint.pprint(solution.wordsTyping(["a", "bcd", "e"], 5, 6))
