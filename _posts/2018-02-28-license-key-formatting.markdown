@@ -1,3 +1,15 @@
+---
+layout: post
+title: 482 - License Key Formatting
+date: 2018-02-28
+tags:
+- Leetcode
+categories:
+- String
+author: Jason
+---
+
+```python
 class Solution(object):
     def licenseKeyFormatting(self, S, K):
         """
@@ -9,19 +21,14 @@ class Solution(object):
         if not S or not K:
             return ""
 
-        new_s = "".join(S.split("-"))
+        new_s = "".join(S.split("-")).upper()
         ret = []
         index = len(new_s)
         while index > 0:
-            print index
             left_index = index - K
             if left_index < 0:
                 left_index = 0
             ret.append(new_s[left_index : index])
             index = left_index
-        return "-".join(ret)
-
-if __name__ == "__main__":
-    solution = Solution()
-    import pprint
-    pprint.pprint(solution.licenseKeyFormatting("5F3Z-2e-9-w", 4))
+        return "-".join(reversed(ret))
+```
