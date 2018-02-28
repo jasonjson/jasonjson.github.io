@@ -1,34 +1,29 @@
 class Solution(object):
-    def wordsTyping(self, sentence, rows, cols):
+    def decodeString(self, s):
         """
-        :type sentence: List[str]
-        :type rows: int
-        :type cols: int
-        :rtype: int
+        :type s: str
+        :rtype: str
         """
 
-        x, y = 0, 0
-        ret = 0
-        while x < rows and y < cols:
-            x, y = self.helper(sentence, x, y, cols)
-            if x < rows:
-                ret += 1
-        return ret
+        if not s:
+            return ""
 
-    def helper(self, words, x, y, cols):
-        for word in words:
-            if y + len(word) == cols:
-                y = 0
-                x += 1
-            elif y + len(word) + 1 > cols:
-                y = len(word) + 1
-                x += 1
+        stack = [["", 1]]
+        num = 0
+        for char in s:
+            if char.isdigit():
+                num = num * 10 + int(char)
+            elif char == "[":
+                stack.append(["", num])
+                num = 0
+            elif char == "]":
+                new_s, count = stack.pop()
+                stack[-1][0] += new_s * count
             else:
-                y += len(word) + 1
-            print x, y, word
-        return x, y
-
+                stack[-1][0] += char
+        new_s, count = stack.pop()
+        return new_s * count
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.wordsTyping(["a", "bcd", "e"], 5, 6))
+    pprint.pprint(solution.decodeString("2[abc]3[cd]ef"))

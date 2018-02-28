@@ -21,23 +21,19 @@ class Solution(object):
 
         if not s:
             return ""
-        index = [0]
-        return self.helper(s, index)
 
-    def helper(self, s, index):
-        ret = []
-        while (index[0] < len(s) and s[index[0]] != "]"):
-            if s[index[0]].isdigit():
+        stack = [["", 1]]
+        num = 0
+        for char in s:
+            if char.isdigit():
+                num = num * 10 + int(char)
+            elif char == "[":
+                stack.append(["", num])
                 num = 0
-                while index[0] < len(s) and s[index[0]].isdigit():
-                    num = num * 10 + int(s[index[0]])
-                    index[0] += 1
-                index[0] += 1
-                string = self.helper(s, index)
-                index[0] += 1
-                ret.extend([string] * num)
+            elif char == "]":
+                new_s, count = stack.pop()
+                stack[-1][0] += new_s * count
             else:
-                ret.append(s[index[0]])
-                index[0] += 1
-        return "".join(ret)
+                stack[-1][0] += char
+        return stack.pop()[0]
 ```
