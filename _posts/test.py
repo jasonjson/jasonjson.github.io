@@ -1,44 +1,33 @@
-import collections
 class Solution(object):
-    def areSentencesSimilarTwo(self, words1, words2, pairs):
+    def addBoldTag(self, s, dict):
         """
-        :type words1: List[str]
-        :type words2: List[str]
-        :type pairs: List[List[str]]
-        :rtype: bool
+        :type s: str
+        :type dict: List[str]
+        :rtype: str
         """
 
-        if len(words1) != len(words2):
-            return False
+        if not s:
+            return ""
 
-        word_map = collections.defaultdict(set)
-        # for word in words1:
-            # word_map[word].add(word)
-        # for word in words2:
-            # word_map[word].add(word)
-        for a, b in pairs:
-            word_map[a].add(b)
-            word_map[b].add(a)
+        is_bold = [False] * len(s)
+        end = 0
+        for i in xrange(len(s)):
+            for word in dict:
+                if s.startswith(word, i):
+                    end = max(end, i + len(word))
+            is_bold[i] = end > i
 
-        for w1, w2 in zip(words1, words2):
-            visited = set([w1])
-            if not self.verify(w1, w2, word_map, visited):
-                return False
-        return True
-
-
-    def verify(self, w1, w2, w_map, visited):
-        if w1 == w2:
-            return True
-        for word in w_map[w1]:
-            if word not in visited:
-                visited.add(word)
-                if self.verify(word, w2, w_map, visited):
-                    return True
-                visited.discard(word)
-        return False
+        ret, bold_s = [], []
+        for i, char in enumerate(s):
+            if is_bold[i]:
+                bold_s.append(char)
+            else:
+                ret.append("<b>" + "".join(bold_s) + "</b>")
+                ret.append(char)
+                bold_s = []
+        return "".join(ret)
 
 if __name__ == "__main__":
     solution = Solution()
     import pprint
-    pprint.pprint(solution.areSentencesSimilarTwo(["great", "acting", "skills"], ["fine", "drama", "talent"], [["great", "good"], ["fine", "good"], ["acting","drama"], ["skills","talent"]]))
+    pprint.pprint(solution.addBoldTag("aaabbcc", ["aaa","aab","bc"]))
