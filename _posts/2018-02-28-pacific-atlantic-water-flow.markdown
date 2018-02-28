@@ -1,3 +1,17 @@
+---
+layout: post
+title: 417 - Pacific Atlantic Water Flow
+date: 2018-02-28
+tags:
+- Leetcode
+categories:
+- Matrix
+author: Jason
+---
+**Given an m x n matrix of non-negative integers representing the height of each unit cell in a continent, the "Pacific ocean" touches the left and top edges of the matrix and the "Atlantic ocean" touches the right and bottom edges. Water can only flow in four directions (up, down, left, or right) from a cell to another one with height equal or lower. Find the list of grid coordinates where water can flow to both the Pacific and Atlantic ocean.**
+
+
+```python
 class Solution(object):
     def pacificAtlantic(self, matrix):
         """
@@ -15,18 +29,14 @@ class Solution(object):
         for i in xrange(m):
             p_queue.append([i, 0])
             a_queue.append([i, n - 1])
-            p_visited[i][0] = True
-            a_visited[i][n - 1] = True
+            p_visited[i][0] = a_visited[i][n - 1] = True
         for j in xrange(n):
             p_queue.append([0, j])
             a_queue.append([m - 1, j])
-            p_visited[0][j] = True
-            a_visited[m - 1][j] = True
+            p_visited[0][j] = a_visited[m - 1][j] = True
 
         self.bfs(matrix, p_queue, p_visited)
         self.bfs(matrix, a_queue, a_visited)
-        __import__('pprint').pprint(a_visited)
-        __import__('pprint').pprint(p_visited)
         for i in xrange(m):
             for j in xrange(n):
                 if p_visited[i][j] and a_visited[i][j]:
@@ -40,11 +50,7 @@ class Solution(object):
             i, j = queue.pop(0)
             for k in xrange(4):
                 new_i, new_j = i + idx[k], j + idy[k]
-                if new_i >= 0 and new_i < len(matrix) and new_j >= 0 and new_j < len(matrix[0]) and not visited[new_i][new_j] and matrix[i][j] < matrix[new_i][new_j]:
+                if new_i >= 0 and new_i < len(matrix) and new_j >= 0 and new_j < len(matrix[0]) and not visited[new_i][new_j] and matrix[i][j] <= matrix[new_i][new_j]:
                     visited[new_i][new_j] = True
                     queue.append([new_i, new_j])
-
-if __name__ == "__main__":
-    solution = Solution()
-    import pprint
-    pprint.pprint(solution.pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]))
+```
