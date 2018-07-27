@@ -27,7 +27,7 @@ disqus_shortname: mickeyliu5
 #duoshuo_shortname: mickeyliu5
 # get one: http://duoshuo.com/create-site/
 
-permalink: /archivers/:title
+permalink: /archivers/:title.html
 gems:
  - jekyll-paginate
  - jekyll-gist
