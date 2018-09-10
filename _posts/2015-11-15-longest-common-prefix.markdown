@@ -58,13 +58,14 @@ class Solution(object):
         :rtype: str
         """
 
-        if not strs:
+        if not strs or len(strs) < 2:
             return ""
 
         strs.sort()
-        head, tail = strs[0], strs[-1]
-        for i, char in enumerate(head):
-            if char != tail[i]:
-                return head[0:i] if i > 0 else ""
-        return head
+        ret = []
+        for s, e in zip(strs[0], strs[-1]):
+            if s != e:
+                break
+            ret.append(s)
+        return "".join(ret)
 ```
