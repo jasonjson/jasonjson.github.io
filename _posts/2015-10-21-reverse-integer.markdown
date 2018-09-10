@@ -34,7 +34,7 @@ public class Solution {
 }
 ```
 
-```python
+``` python
 class Solution(object):
     def reverse(self, x):
         """
@@ -47,8 +47,7 @@ class Solution(object):
         ret = 0
         while x:
             ret = ret * 10 + x % 10
-            x /= 10
-        #-10 % 3 = 2,i does not work well with python
+            x //= 10
 
         return ret if ret < 2 ** 31 else 0
 ```

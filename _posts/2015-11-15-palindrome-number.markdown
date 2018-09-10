@@ -37,6 +37,6 @@ class Solution(object):
         tmp, x_copy = 0, x
         while x_copy:
             tmp = tmp * 10 + x_copy % 10
-            x_copy /= 10
+            x_copy //= 10
         return tmp == x
 ```
