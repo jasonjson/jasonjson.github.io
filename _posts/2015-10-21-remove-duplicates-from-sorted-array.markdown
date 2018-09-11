@@ -39,10 +39,10 @@ class Solution(object):
             return 0
 
         index = 0
-        for i in xrange(1, len(nums)):
-            if nums[i] != nums[i - 1]:
+        for i, num in enumerate(nums[1:])
+            if num != nums[i - 1]:
                 index += 1
-            nums[index] = nums[i]
+                nums[index] = num
 
         return index + 1
 ```
