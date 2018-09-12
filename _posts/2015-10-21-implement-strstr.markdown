@@ -71,11 +71,12 @@ class Solution(object):
         if not needle:
             return 0
 
-        for i in xrange(len(haystack) - len(needle) + 1):
-            for j in xrange(len(needle)):
-                if haystack[i + j] != needle[j]:
-                    break
-                elif j == len(needle) - 1:
-                    return i
+        index = 0
+        while index < len(haystack):
+            if haystack[index : index + len(needle)] == needle:
+                return index
+            index += 1
+
         return -1
+
 ```

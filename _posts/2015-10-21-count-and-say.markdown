@@ -55,23 +55,20 @@ class Solution(object):
         :rtype: str
         """
 
-        if not n:
-            return ""
-
         prev = "1"
-        for i in xrange(n - 1):
-            count, j = 1, 1
+        for _ in range(n - 1):
             curr = []
-            while j < len(prev):
-                if prev[j] == prev[j - 1]:
+            count, char = 1, prev[0]
+            for c in prev[1:]:
+                if c == char:
                     count += 1
                 else:
                     curr.append(str(count))
-                    curr.append(prev[j - 1])
-                    count = 1
-                j += 1
+                    curr.append(char)
+                    count, char = 1, c
             curr.append(str(count))
-            curr.append(prev[j - 1])
+            curr.append(char)
             prev = "".join(curr)
+
         return prev
 ```

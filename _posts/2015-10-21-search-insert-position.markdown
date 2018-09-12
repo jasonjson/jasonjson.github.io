@@ -33,7 +33,6 @@ public class Solution {
                 lo = mid + 1;
             }
         }
-        //cases where target is not present in the array
         return lo; //当循环停下来时，如果不是正好找到target，lo指向的元素恰好大于target，hi指向的元素恰好小于target，这里lo和hi可能越界，不过如果越界就说明大于（小于）target并且是最大（最小）
     }
 }
@@ -48,17 +47,16 @@ class Solution(object):
         :rtype: int
         """
 
-        if not nums:
-            return 0
-
         lo, hi = 0, len(nums) - 1
+
         while lo <= hi:
-            mid = (lo + hi) / 2
+            mid = (lo + hi) // 2
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
                 hi = mid - 1
             else:
                 lo = mid + 1
+
         return lo
 ```
