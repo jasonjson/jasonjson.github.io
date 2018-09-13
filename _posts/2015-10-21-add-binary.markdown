@@ -55,7 +55,7 @@ class Solution(object):
             if j >= 0:
                 carry += int(b[j])
             ret.append(str(carry % 2))
-            carry /= 2
+            carry //= 2
             i -= 1
             j -= 1
 

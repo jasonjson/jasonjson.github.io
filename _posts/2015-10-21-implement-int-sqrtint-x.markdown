@@ -53,8 +53,8 @@ class Solution(object):
         lo, hi, ret = 1, x, 0
 
         while lo <= hi:
-            mid = (lo + hi) / 2
-            if mid <= x / mid:
+            mid = (lo + hi) // 2
+            if mid * mid <= x:
                 ret = mid
                 lo = mid + 1
             else:

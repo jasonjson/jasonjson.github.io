@@ -43,7 +43,7 @@ class Solution(object):
         if not digits:
             return []
 
-        for i in reversed(xrange(len(digits))):
+        for i in reversed(range(len(digits))):
             if digits[i] < 9:
                 digits[i] += 1
                 return digits

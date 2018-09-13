@@ -41,9 +41,9 @@ class Solution(object):
         if not nums:
             return 0
 
-        local, ret = 0, -2**31
+        global_max, local_max = - 2 ** 31, 0
         for num in nums:
-            local = max(num, local + num)
-            ret = max(ret, local)
-        return ret
+            local_max = max(num, num + local_max)
+            global_max = max(global_max, local_max)
+        return global_max
 ```
