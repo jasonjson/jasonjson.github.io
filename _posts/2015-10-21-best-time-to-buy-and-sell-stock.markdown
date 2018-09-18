@@ -44,7 +44,7 @@ class Solution(object):
 
         min_buy = prices[0]
         profit = 0
-        for i, price in enumerate(prices[1:]):
+        for price in prices[1:]:
             profit = max(profit, price - min_buy)
             min_buy = min(min_buy, price)
         return profit

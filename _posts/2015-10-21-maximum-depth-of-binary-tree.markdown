@@ -54,6 +54,7 @@ class Solution(object):
 
         if root is None:
             return 0
+
         left_dep = self.maxDepth(root.left)
         right_dep = self.maxDepth(root.right)
         return max(left_dep, right_dep) + 1

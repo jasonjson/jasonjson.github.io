@@ -52,16 +52,32 @@ public class Solution {
 ``` python
 class Solution(object):
     def isSymmetric(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
+
         return self.helper(root, root)
 
     def helper(self, left, right):
-        if left is None and right is None:
+        if not left and not right:
             return True
         if not left or not right:
             return False
         return left.val == right.val and self.helper(left.left, right.right) and self.helper(left.right, right.left)
+```
+
+``` python
+class Solution:
+    def isSymmetric(self, root):
+
+        q1, q2 = [root], [root]
+        while q1 and q2:
+            left = q1.pop(0)
+            right = q2.pop(0)
+            if not left and not right:
+                continue
+            if not left or not right or left.val != right.val:
+                return False
+            q1.append(left.left)
+            q1.append(left.right)
+            q2.append(right.right)
+            q2.append(right.left)
+        return not q1 and not q2
 ```

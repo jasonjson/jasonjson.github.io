@@ -37,13 +37,10 @@ class Solution(object):
         """
 
 
-        ret = [0] * (rowIndex + 1)
-        for i in xrange(1, rowIndex + 2):
-            for j in reversed(xrange(i)):
-                if j == 0 or j == i - 1:
-                    ret[j] = 1
-                else:
-                #must do this reversly, so ret[j - 1] is alterted later
-                    ret[j] = ret[j] + ret[j - 1]
+        ret = [1]
+        for i in range(rowIndex):
+            for j in reversed(range(1, i + 1)):
+                ret[j] += ret[j - 1]
+            ret.append(1)
         return ret
 ```

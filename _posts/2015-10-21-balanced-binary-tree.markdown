@@ -42,21 +42,6 @@ class Solution(object):
         :type root: TreeNode
         :rtype: bool
         """
-        if root is None:
-            return True
-        return abs(self.get_depth(root.left) - self.get_depth(root.right)) <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)
-
-    def get_depth(self, root):
-        if root is None:
-            return 0
-        return max(self.get_depth(root.left), self.get_depth(root.right)) + 1
-
-class Solution(object):
-    def isBalanced(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
         return self.get_depth(root) != -1
 
     def get_depth(self, root):

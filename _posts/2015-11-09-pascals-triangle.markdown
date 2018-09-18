@@ -46,9 +46,9 @@ class Solution(object):
             return []
 
         ret = []
-        for i in xrange(1, numRows + 1):
+        for i in range(1, numRows + 1):
             curr = []
-            for j in xrange(0, i): # the length is i
+            for j in range(i):
                 if j == 0 or j == i - 1:
                     curr.append(1)
                 else:

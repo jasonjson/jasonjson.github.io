@@ -49,7 +49,8 @@ class Solution(object):
     def helper(self, nums, left, right):
         if left > right:
             return
-        mid = (left + right) / 2
+
+        mid = (left + right) // 2
         root = TreeNode(nums[mid])
         root.left = self.helper(nums, left, mid - 1)
         root.right = self.helper(nums, mid + 1, right)
