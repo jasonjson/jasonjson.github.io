@@ -42,18 +42,12 @@ class Solution(object):
         :rtype: int
         """
 
-        if not nums:
-            return -1
-
         count = ret = 0
         for num in nums:
             if count == 0:
                 ret = num
                 count += 1
             else:
-                if num == ret:
-                    count += 1
-                else:
-                    count -= 1
+                count += 1 if num == ret else -1
         return ret
 ```

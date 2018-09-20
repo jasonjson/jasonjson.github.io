@@ -42,7 +42,7 @@ class Solution(object):
 
         ret = 0
         while n:
-            ret += n / 5
-            n /= 5
+            ret += n // 5
+            n //= 5
         return ret
 ```

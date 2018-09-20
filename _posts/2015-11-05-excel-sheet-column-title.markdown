@@ -38,16 +38,10 @@ class Solution(object):
         :rtype: str
         """
 
-        if not n:
-            return ""
-
-        letter_map = "ZABCDEFGHIJKLMNOPQRSTUVWXY"
         ret = []
-        while n > 0:
-            digit = n % 26
-            n = n / 26
-            if digit == 0:
-                n -= 1
-            ret.append(letter_map[digit])
+        while n:
+            n -= 1
+            ret.append(chr(n % 26 + ord("A")))
+            n //= 26
         return "".join(reversed(ret))
 ```

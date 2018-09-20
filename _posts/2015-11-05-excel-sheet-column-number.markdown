@@ -32,12 +32,8 @@ class Solution(object):
         :rtype: int
         """
 
-        if not s:
-            return 0
-
-        num_map = {val : key + 1 for key, val in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ")}
         ret = 0
-        for char in s:
-            ret = ret * 26 + num_map[char]
+        for c in s:
+            ret = ret * 26 + ord(c) - ord("A") + 1
         return ret
 ```

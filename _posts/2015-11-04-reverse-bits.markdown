@@ -28,11 +28,12 @@ public class Solution {
 
 ``` python
 class Solution:
-    # @param n, an integer
-    # @return an integer
     def reverseBits(self, n):
+        # @param n, an integer
+        # @return an integer
+
         ret = 0
-        for i in xrange(32):
+        for i in range(32):
             if (n >> i) & 1:
                 ret |= 1 << (31 - i)
         return ret

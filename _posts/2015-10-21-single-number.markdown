@@ -32,9 +32,6 @@ class Solution(object):
         :rtype: int
         """
 
-        if not nums:
-            return -1
-
         xor = 0
         for num in nums:
             xor ^= num

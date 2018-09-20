@@ -20,8 +20,8 @@ class Solution(object):
         """
 
         ret = 0
-        for i in xrange(32):
-            if (n >> i) & 1:
-                ret += 1
+        for _ in range(32):
+            ret += n & 1
+            n >>= 1
         return ret
 ```
