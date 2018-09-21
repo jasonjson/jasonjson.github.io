@@ -51,6 +51,7 @@ class Solution(object):
 
         curr = dummy = ListNode(0)
         dummy.next = head
+
         while curr.next:
             if curr.next.val == val:
                 curr.next = curr.next.next

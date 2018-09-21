@@ -44,16 +44,17 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        if n < 2:
+
+        if n <= 2:
             return 0
 
         is_prime = [True] * n
         is_prime[0] = is_prime[1] = False
-        for i in xrange(2, n):
+        for i in range(2, n):
             if is_prime[i]:
                 j = 2
                 while i * j < n:
                     is_prime[i * j] = False
                     j += 1
-        return sum([1 for i in is_prime if i])
+        return sum(1 for k in is_prime if k)
 ```
