@@ -54,10 +54,11 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
+
         if root is None:
             return
-        stack = []
-        stack.append(root)
+        stack = [root]
+
         while stack:
             curr = stack.pop()
             curr.left, curr.right = curr.right, curr.left
@@ -71,8 +72,10 @@ class Solution(object):
 ```python
 class Solution(object):
     def invertTree(self, root):
+
         if root is None:
             return
+
         root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
         return root
 ```

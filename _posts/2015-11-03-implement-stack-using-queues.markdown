@@ -62,7 +62,8 @@ class MyStack(object):
         """
         Initialize your data structure here.
         """
-        self.q1 = self.q2 = collections.deque()
+        self.q1 = []
+        self.q2 = []
         self.size = 0
 
     def push(self, x):
@@ -79,25 +80,24 @@ class MyStack(object):
         Removes the element on top of the stack and returns that element.
         :rtype: int
         """
-        for i in xrange(self.size - 1):
-            self.q2.append(self.q1.popleft())
-        top = self.q1.popleft()
+        for _ in range(self.size - 1):
+            self.q2.append(self.q1.pop(0))
+        ret = self.q1.pop(0)
         self.size -= 1
         self.q1, self.q2 = self.q2, self.q1
-        return top
+        return ret
 
     def top(self):
         """
         Get the top element.
         :rtype: int
         """
-        for i in xrange(self.size - 1):
-            self.q2.append(self.q1.popleft())
-        top = self.q1.popleft()
+        for _ in range(self.size - 1):
+            self.q2.append(self.q1.pop(0))
+        top = self.q1.pop(0)
         self.q2.append(top)
         self.q1, self.q2 = self.q2, self.q1
         return top
-
 
     def empty(self):
         """

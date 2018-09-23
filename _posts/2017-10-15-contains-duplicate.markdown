@@ -19,12 +19,5 @@ class Solution(object):
         :rtype: bool
         """
 
-        if not nums:
-            return False
-        num_map = {}
-        for num in nums:
-            if num in num_map:
-                return True
-            num_map[num] = 1
-        return False
+        return len(set(nums)) < len(nums)
 ```

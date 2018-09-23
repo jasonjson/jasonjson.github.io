@@ -37,7 +37,5 @@ class Solution(object):
         :rtype: bool
         """
 
-        if n <= 0:
-            return False
-        return (n & n - 1) == 0
+        return False if n <= 0 else (n & n - 1) == 0
 ```
