@@ -38,19 +38,18 @@ public class Solution {
 
 ``` python
 class Solution(object):
-    def wordPattern(self, pattern, str):
+    def wordPattern(self, pattern, strs):
         """
         :type pattern: str
         :type str: str
         :rtype: bool
         """
-        if not pattern or not str:
+
+        str_list = strs.split(" ")
+        if len(pattern) != len(str_list):
             return False
 
         p_map, s_map = {}, {}
-        str_list = str.split(" ")
-        if len(pattern) != len(str_list):
-            return False
         for p, s in zip(pattern, str_list):
             if p_map.get(p, s) != s or s_map.get(s, p) != p:
                 return False

@@ -62,10 +62,13 @@ class Solution(object):
         :rtype: int
         """
 
+        if not nums:
+            return -1
+
         xor = 0
         for num in nums:
             xor ^= num
-        for i in xrange(len(nums) + 1):
+        for i in range(len(nums) + 1):
             xor ^= i
         return xor
 ```

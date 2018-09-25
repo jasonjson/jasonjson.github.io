@@ -41,9 +41,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+
         lo, hi = 1, n
         while lo < hi:
-            mid = (lo + hi) / 2
+            mid = (lo + hi) // 2
             if isBadVersion(mid):
                 hi = mid
             else:

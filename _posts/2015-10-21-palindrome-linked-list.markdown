@@ -53,9 +53,6 @@ class Solution(object):
         :rtype: bool
         """
 
-        if not head:
-            return True
-
         fast = slow = head
         while fast and fast.next:
             fast = fast.next.next

@@ -34,11 +34,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
+
         if not nums:
             return
 
         zero_index = 0
-        for i in xrange(len(nums)):
+        for i, num in enumerate(nums):
             if num != 0:
                 nums[zero_index], nums[i] = nums[i], nums[zero_index]
                 zero_index += 1
