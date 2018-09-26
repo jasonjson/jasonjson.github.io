@@ -19,9 +19,6 @@ class Solution(object):
         :rtype: str
         """
 
-        if not s:
-            return ""
-
         vowel = "aeiouAEIOU"
         s = list(s)
         lo, hi = 0, len(s) - 1

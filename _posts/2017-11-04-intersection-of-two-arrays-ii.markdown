@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 350 - Intersection Of Two Arrays Ii
+title: 350 - Intersection Of Two Arrays II
 date: 2017-11-04
 tags:
 - Leetcode

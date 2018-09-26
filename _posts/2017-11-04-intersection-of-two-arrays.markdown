@@ -19,8 +19,6 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        if not nums1 or not nums2:
-            return []
 
         return list(set(nums1) & set(nums2))
 ```

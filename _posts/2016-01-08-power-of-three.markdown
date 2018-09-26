@@ -34,6 +34,7 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
+
         #3^20 is bigger than int
         return n > 0 and 3 ** 19 % n == 0
 ```
