@@ -8,6 +8,7 @@ categories:
 - Brain Teaser
 author: Jason
 ---
+**Given n points on a 2D plane, find if there is such a line parallel to y-axis that reflect the given set of points.**
 
 ```python
 class Solution(object):
