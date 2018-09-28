@@ -54,6 +54,7 @@ class Solution(object):
         :type str: str
         :rtype: int
         """
+
         if not str:
             return 0
 
@@ -61,11 +62,11 @@ class Solution(object):
         for i, char in enumerate(str.strip()):
             if i == 0 and char == "-":
                 sign = -1
-                continue
             elif i == 0 and char == "+":
                 continue
             elif not char.isdigit():
                 break
-            ret = ret * 10 + sign * int(char)
+            else:
+                ret = ret * 10 + sign * int(char)
         return min(max(ret, -2 ** 31), 2 **31 - 1)
 ```

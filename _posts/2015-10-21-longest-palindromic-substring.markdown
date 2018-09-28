@@ -1,4 +1,4 @@
----
+z--
 layout: post
 title: 5 - Longest Palindromic Substring
 date: 2015-10-21 02:14:16.000000000 -04:00
@@ -71,26 +71,23 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        if not s:
-            return ""
 
-        max_len, start = 1, 0 #max_len default to 1
-        for i, char in enumerate(s):
-            lo, hi = i, i + 1
-            while lo >= 0 and hi < len(s) and s[lo] == s[hi]:
-                if hi - lo + 1 > max_len:
-                    max_len = hi - lo + 1
-                    start = lo
-                lo -= 1
-                hi += 1
+        start = max_len = 0
+        for i in range(len(s)):
+            left, right = i, i + 1
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            if max_len < right - left - 1:
+                max_len = right - left - 1
+                start = left + 1
 
-            lo, hi = i - 1, i + 1
-            while lo >= 0 and hi < len(s) and s[lo] == s[hi]:
-                if hi - lo + 1 > max_len:
-                    max_len = hi - lo + 1
-                    start = lo
-                lo -= 1
-                hi += 1
-
-        return s[start:start + max_len]
+            left = right = i
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            if max_len < right - left - 1:
+                max_len = right - left - 1
+                start = left + 1
+        return s[start : start + max_len]
 ```

@@ -41,12 +41,6 @@ author: Jason
 ```
 
 ```python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -54,12 +48,12 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
+
         if not l1 or not l2:
             return l1 or l2
 
         carry = 0
-        head = ListNode(0)
-        curr = head
+        curr = dummy = ListNode(0)
         while l1 or l2 or carry:
             if l1:
                 carry += l1.val
@@ -69,7 +63,7 @@ class Solution(object):
                 l2 = l2.next
             curr.next = ListNode(carry % 10)
             curr = curr.next
-            carry /= 10
+            carry //= 10
 
-        return head.next
+        return dummy.next
 ```

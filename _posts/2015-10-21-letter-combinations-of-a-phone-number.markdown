@@ -48,6 +48,7 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
+
         if not digits:
             return []
 
@@ -61,7 +62,5 @@ class Solution(object):
             ret.append("".join(curr))
             return
         for char in letters[int(digits[index])]:
-            curr.append(char)
-            self.helper(index + 1, digits, letters, curr, ret)
-            curr.pop()
+            self.helper(index + 1, digits, letters, curr + [curr], ret)
 ```

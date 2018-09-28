@@ -42,6 +42,7 @@ class Solution(object):
         :type height: List[int]
         :rtype: int
         """
+
         if not height:
             return 0
 

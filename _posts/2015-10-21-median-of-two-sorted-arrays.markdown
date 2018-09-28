@@ -49,13 +49,14 @@ class Solution {
 ```
 
 ``` python
-class Solution(object):
+class Solution():
     def findMedianSortedArrays(self, nums1, nums2):
         """
         :type nums1: List[int]
         :type nums2: List[int]
         :rtype: float
         """
+
         total_length = len(nums1) + len(nums2)
         if total_length % 2 == 0:
             return (self.helper(nums1, 0, nums2, 0, total_length / 2) + self.helper(nums1, 0, nums2, 0, total_length / 2 + 1)) / 2.0

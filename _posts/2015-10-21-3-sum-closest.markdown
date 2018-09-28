@@ -48,6 +48,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
+
         if not nums:
             return 0
 

@@ -63,16 +63,17 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+
         if not s:
             return 0
-        ret, first_index = 0, 0
-        char_map = {}
-        for i, char in enumerate(s):
-            if char in char_map:
-                while char_map[char] > 0:
-                    char_map[s[first_index]] -= 1
-                    first_index += 1
-            ret = max(ret, i - first_index + 1)
-            char_map[char] = 1
+
+        ret = start = 0
+        mapping = defaultdict(int)
+        for i, c in enumerate(s):
+            mapping[c] += 1
+            while mapping[c] > 1:
+                mapping[s[start]] -= 1
+                start += 1
+            ret = max(ret, i - start + 1)
         return ret
 ```
