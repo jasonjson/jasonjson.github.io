@@ -56,27 +56,27 @@ class Solution(object):
 
         if not lists:
             return
+
         return self.helper(lists, 0, len(lists) - 1)
 
-    def helper(self, lists, left, right):
-        if left == right:
-            return lists[left]
-        mid = (left + right) / 2
-        left_side = self.helper(lists, left, mid)
-        right_side = self.helper(lists, mid + 1, right)
-        return self.merge_two_lists(left_side, right_side)
+    def helper(self, lists, lo, hi):
+        if lo == hi:
+            return lists[lo]
+        mid = (lo + hi) // 2
+        left = self.helper(lists, lo, mid)
+        right = self.helper(lists, mid + 1, hi)
+        return self.merge(left, right)
 
-    def merge_two_lists(self, l1, l2):
-        dummy = ListNode(0)
-        curr = dummy
-        while l1 and l2:
-            if l1.val < l2.val:
-                curr.next = l1
-                l1 = l1.next
+    def merge(self, left, right):
+        curr = dummy = ListNode(0)
+        while left and right:
+            if left.val < right.val:
+                curr.next = left
+                left = left.next
             else:
-                curr.next = l2
-                l2 = l2.next
+                curr.next = right
+                right = right.next
             curr = curr.next
-        curr.next = l1 if l1 else l2
+        curr.next = left or right
         return dummy.next
 ```
