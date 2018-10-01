@@ -14,12 +14,11 @@ author: Jason
 
 
 ``` java
-//和 maximum histogram 非常类似
 public class Solution {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
 
-        Stack<Integer> stack = new Stack<Integer>();//换换思维,不是push char而是push index便于求长度
+        Stack<Integer> stack = new Stack<Integer>();
         int start = 0, len = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -38,45 +37,28 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    public int longestValidParentheses(String s) {
-        if (s == null || s.length() == 0) return 0;
 
-        Set<String> visited = new HashSet<String>();
-        Queue<String> q = new LinkedList<String>();
-        q.offer(s);
-        visited.add(s);
-        while (!q.isEmpty()) {
-            s = q.poll();
-            if (isValid(s)) {
-                return s.length();
-            } else {
-                for (int i = 0; i < s.length(); i++) {
-                    String newS = s.substring(0, i) + s.substring(i + 1);
-                    if (visited.add(newS)) {
-                        q.offer(newS);
-                    }
-                }
-            }
-        }
-        return 0;
-    }
+``` python
+class Solution(object):
+    def longestValidParentheses(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
 
-    public boolean isValid(String s) {
-        int count = 0;
-        for (char c : s.toCharArray()) {
-            if (c == '(') {
-                count ++;
-            } else {
-                if (count <= 0) {
-                    return false;
-                } else {
-                    count--;
-                }
-            }
-        }
-        return true;
-    }
-}
+        if not s:
+            return 0
+
+        index = []
+        start = ret = 0
+        for i, c in enumerate(s):
+            if c == "(":
+                index.append(i)
+            else:
+                if not index:
+                    start = i + 1
+                else:
+                    index.pop()
+                    ret = max(ret, i - start + 1 if not index else i - index[-1])
+        return ret
 ```

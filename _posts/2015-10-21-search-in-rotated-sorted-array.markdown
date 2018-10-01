@@ -57,15 +57,15 @@ class Solution(object):
         :rtype: int
         """
 
-        if not nums:
+        if not nums or target is None:
             return -1
 
         lo, hi = 0, len(nums) - 1
         while lo <= hi:
-            mid = (lo + hi) / 2
+            mid = (lo + hi) // 2
             if nums[mid] == target:
                 return mid
-            elif nums[mid] > nums[hi]:
+            if nums[mid] > nums[hi]:
                 if (nums[lo] <= target and target < nums[mid]):
                     hi = mid - 1
                 else:

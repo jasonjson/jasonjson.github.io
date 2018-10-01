@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-<p><strong><em>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.</em></strong></p>
+**Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.**
 
 
 ``` java
@@ -23,28 +23,58 @@ public class Solution {
             i ++;
             if (i % k == 0) {
                 prev = reverse(prev, head.next);
-                //reverse the node between prev and head.next!!
-                //we reverse k node one time
                 head = prev.next;
-            } else {//we move head forward as an ending point
+            } else {
                 head = head.next;
             }
         }
         return dummy.next;
     }
     public ListNode reverse(ListNode prev, ListNode next) {
-    //draw a sketch for prev, last, curr and next
         ListNode last = prev.next;
         ListNode curr = last.next;
-        //next is the ending node, when curr == next, we stop!
         while (curr != next) {
-            last.next = curr.next;//last node keep going back
-            //insert curr between prev and last
+            last.next = curr.next;
             curr.next = prev.next;
             prev.next = curr;
-            curr = last.next;//update curr
+            curr = last.next;
         }
         return last;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def reverseKGroup(self, head, k):
+        """
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        """
+
+        if not head or k <= 1:
+            return head
+
+        prev = dummy = ListNode(0)
+        dummy.next = head
+        i = 0
+        while head:
+            i += 1
+            if i % k == 0:
+                prev = self.reverse(prev, head.next)
+                head = prev.next
+            else:
+                head = head.next
+        return dummy.next
+
+    def reverse(self, prev, end):
+        last = prev.next
+        curr = last.next
+        while curr != end:
+            last.next = curr.next
+            curr.next = prev.next
+            prev.next = curr
+            curr = last.next
+        return last
 ```

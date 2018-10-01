@@ -57,17 +57,15 @@ class Solution(object):
         :type words: List[str]
         :rtype: List[int]
         """
+
         if not s or not words:
             return []
 
-        word_map = defaultdict(int)
-        for word in words:
-            word_map[word] += 1
+        word_map = Counter(words)
 
         ret = []
         length, number = len(words[0]), len(words)
-        seen_map = defaultdict(int)
-        for i in xrange(len(s) - length * number + 1):
+        for i in range(len(s) - length * number + 1):
             if s[i : i + length] in word_map:
                 seen_map = defaultdict(int)
                 j = 0
