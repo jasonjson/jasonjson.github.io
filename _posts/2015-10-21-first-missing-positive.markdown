@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Missing Positive
+title: 41 - First Missing Positive
 date: 2015-10-21 02:20:34.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Given an unsorted integer array, find the first missing positive integer.</em></strong></p>
+**Given an unsorted integer array, find the first missing positive integer.**
 
 
 ``` java
@@ -21,7 +21,7 @@ public class Solution {
             //while loop, not if, we keep swapping
             }
         }
-        
+
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] - 1 != i) {
                 return i + 1;
@@ -35,4 +35,26 @@ public class Solution {
         nums[a] = temp;
     }
 }
+```
+
+``` python
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        if not nums:
+            return 1
+
+        for i in range(len(nums)):
+            while nums[i] > 0 and nums[i] - 1 < len(nums) and nums[nums[i] - 1] != nums[i]:
+                to_index = nums[i] - 1
+                nums[i], nums[to_index] = nums[to_index], nums[i]
+
+        for i, num in enumerate(nums):
+            if nums[i] - 1!= i:
+                return i + 1
+        return len(nums) + 1
 ```

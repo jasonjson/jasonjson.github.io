@@ -41,29 +41,30 @@ public class Solution {
 ```
 
 ``` python
-class Solution:
+class Solution(object):
     def trap(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
+        #scan A both from left to right and right to left, record the largest seen during
+        #the scan; then for each position the water level should be the min of the 2 large value.
 
         if not height:
             return 0
 
-        container = [0] * len(height)
-        max_height = ret = 0
+        left_max = []
+        ret = left_height = right_height = 0
 
-        for i in range(len(height)):
-            container[i] = max_height
-            max_height = max(max_height, height[i])
+        for h in height:
+            left_max.append(left_height)
+            left_height = max(left_height, h)
 
-        max_height = 0
-        for i in reversed(range(len(height))):
-            container[i] = min(container[i], max_height)
-            max_height = max(max_height, height[i])
-            diff = container[i] - height[i]
-            ret += diff if diff > 0 else 0
+        for h in reversed(height):
+            min_height = min(left_max.pop(), right_height)
+            right_height = max(right_height, h)
+            water = min_height - h
+            ret += water if water > 0 else 0
 
         return ret
 ```

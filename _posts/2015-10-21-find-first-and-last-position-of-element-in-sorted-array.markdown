@@ -59,19 +59,19 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        if not nums:
+        if not nums or target is None:
             return [-1, -1]
 
         lo, hi = 0, len(nums) - 1
         while lo <= hi:
             mid = (lo + hi) / 2
             if nums[mid] == target:
-                left, right = mid, mid
-                while left - 1 >= 0 and nums[left - 1] == target:
+                left, right = mid - 1, mid + 1
+                while left >= 0 and nums[left] == target:
                     left -= 1
-                while right + 1 < len(nums) and nums[right + 1] == target:
+                while right < len(nums) and nums[right] == target:
                     right += 1
-                return [left, right]
+                return [left + 1, right - 1]
             elif nums[mid] < target:
                 lo = mid + 1
             else:

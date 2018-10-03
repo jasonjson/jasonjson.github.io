@@ -54,26 +54,26 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
+
         if not board:
             return False
 
-        size = len(board)
-        for i in xrange(size):
-            nums1, nums2 = [], []
-            for j in xrange(size):
-                if board[i][j] != "." and board[i][j] in nums1:
+        for i in range(9):
+            s1, s2 = set(), set
+            for j in range(9):
+                if board[i][j] != "." and board[i][j] in s1:
                     return False
-                if board[j][i] != "." and board[j][i] in nums2:
+                if board[j][i] != "." and board[j][i] in s2:
                     return False
-                nums1.append(board[i][j])
-                nums2.append(board[j][i])
-        for i in xrange(0, size, 3):
-            for j in xrange(0, size, 3):
-                nums3 = []
-                for k in xrange(i, i + 3):
-                    for l in xrange(j, j + 3):
-                        if board[k][l] != "." and board[k][l] in nums3:
+                s1.add(board[i][j])
+                s2.add(board[j][i])
+        for i in range(0, 9, 3):
+            for j in range(0, 9, 3):
+                s3 = set()
+                for k in range(i, i + 3):
+                    for l in range(j, j + 3):
+                        if board[k][l] != "." and board[k][l] in s3:
                             return False
-                        nums3.append(board[k][l])
+                        s3.add(board[k][l])
         return True
 ```
