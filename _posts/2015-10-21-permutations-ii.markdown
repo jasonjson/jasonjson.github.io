@@ -62,26 +62,26 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+
         if not nums:
             return []
 
-        used = [False] * len(nums)
         nums.sort()
+        visited = [False] * len(nums)
         ret = []
-        self.helper(nums, [], used, ret)
+        self.helper(nums, visited, [], ret)
         return ret
 
-    def helper(self, nums, curr, used, ret):
+    def helper(self, nums, visited, curr, ret):
         if len(curr) == len(nums):
-            ret.append(copy.deepcopy(curr))
+            ret.append(curr[:])
             return
-        for i, num in enumerate(nums):
-            if i > 0 and nums[i] == nums[i - 1] and not used[i - 1]:
+
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i - 1] and not visited[i - 1]:
                 continue
-            if not used[i]:
-                curr.append(num)
-                used[i] = True
-                self.helper(nums, curr, used, ret)
-                curr.pop()
-                used[i] = False
+            if not visited[i]:
+                visited[i] = True
+                self.helper(nums, visited, curr + [nums[i]], ret)
+                visited[i] = False
 ```

@@ -56,12 +56,13 @@ class Solution(object):
         for i, n1 in enumerate(reversed(num1)):
             for j, n2 in enumerate(reversed(num2)):
                 ret[i + j] += int(n1) * int(n2)
-                ret[i + j + 1] += ret[i + j] / 10
+                ret[i + j + 1] += ret[i + j] // 10
                 ret[i + j] %= 10
 
-        tmp = []
-        for i, num in enumerate(reversed(ret)):
-            if not (len(tmp) == 0 and num == 0):
-                tmp.append(str(num))
-        return "".join(tmp) if tmp else "0"
+        num3 = []
+        for i, n3 in enumerate(reversed(ret)):
+            if not tmp and n3 == 0:
+                continue
+            num3.append(str(n3))
+        return "".join(num3) if num3 else "0"
 ```
