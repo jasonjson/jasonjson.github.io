@@ -54,13 +54,13 @@ class Solution(object):
 
         letters = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
         ret = []
-        self.helper(0, digits, letters, [], ret)
+        self.helper(digits, letters, "", ret)
         return ret
 
-    def helper(self, index, digits, letters, curr, ret):
-        if index == len(digits):
-            ret.append("".join(curr))
+    def helper(self, digits, letters, curr, ret):
+        if len(digits) == 0:
+            ret.append(curr)
             return
-        for char in letters[int(digits[index])]:
-            self.helper(index + 1, digits, letters, curr + [curr], ret)
+        for char in letters[int(digits[0])]:
+            self.helper(digits[1:], letters, curr + char, ret)
 ```
