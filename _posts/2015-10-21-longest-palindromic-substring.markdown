@@ -1,4 +1,4 @@
-z--
+---
 layout: post
 title: 5 - Longest Palindromic Substring
 date: 2015-10-21 02:14:16.000000000 -04:00
