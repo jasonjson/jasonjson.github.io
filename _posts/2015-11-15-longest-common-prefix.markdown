@@ -10,23 +10,6 @@ author: Jason
 ---
 **Write a function to find the longest common prefix string amongst an array of strings.**
 
-
-``` java
-public class Solution {
-    public String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0) return "";
-        String s = strs[0];
-        for (int i = 1; i < strs.length; i++) {
-            int j = 0;
-            while (j < s.length() && j < strs[i].length() && s.charAt(j) == strs[i].charAt(j)) {
-                j ++;
-            }
-            s = s.substring(0, j);
-        }
-        return s;
-    }
-}
-```
 ``` java
 public class Solution {
     /**
@@ -58,14 +41,12 @@ class Solution(object):
         :rtype: str
         """
 
-        if not strs or len(strs) < 2:
+        if not strs:
             return ""
 
         strs.sort()
-        ret = []
-        for s, e in zip(strs[0], strs[-1]):
-            if s != e:
-                break
-            ret.append(s)
-        return "".join(ret)
+        start = 0
+        while start < len(strs[0]) and strs[0][start] == strs[-1][start]:
+            start += 1
+        return strs[0][:start]
 ```
