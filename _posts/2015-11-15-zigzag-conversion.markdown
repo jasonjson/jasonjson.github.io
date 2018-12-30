@@ -39,20 +39,17 @@ class Solution(object):
         :rtype: str
         """
 
-        buckets = [[] for i in xrange(numRows)]
+        buckets = [[] for _ in range(numRows)]
         i = 0
         while i < len(s):
-            for j in xrange(numRows):
+            for j in range(numRows):
                 if i < len(s):
                     buckets[j].append(s[i])
                     i += 1
-            for j in reversed(xrange(1, numRows-1)):
+            for j in reversed(range(1, numRows-1)):
                 if i < len(s):
                     buckets[j].append(s[i])
                     i += 1
 
-        ret = []
-        for bucket in buckets:
-            ret.extend(bucket)
-        return "".join(ret)
+        return "".join([item for row in buckets for item in row])
 ```
