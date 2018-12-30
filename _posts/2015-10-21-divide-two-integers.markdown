@@ -57,14 +57,14 @@ class Solution(object):
 
         positive = (dividend < 0) is (divisor < 0)
         dvd, dvs = abs(dividend), abs(divisor)
-        ret = 0
+        count = 0
         while dvd >= dvs:
-            tmp, multiple = dvs, 1
-            while dvd >= tmp:
-                dvd -= tmp
-                ret += multiple
-                multiple <<= 1
-                tmp <<= 1
+            tmp, tmp_count = dvs, 1
+            while tmp + tmp <= dvd:
+                tmp += tmp
+                tmp_count += tmp_count
+            count += tmp_count
+            dvd -= tmp
         if not positive:
             ret = -ret
         return min(max(-2 ** 31, ret), 2 ** 31 - 1)
