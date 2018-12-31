@@ -64,21 +64,21 @@ class Solution(object):
         if start == 81:
             return True
 
-        i, j = start / 9, start % 9
+        i, j = start // 9, start % 9
         if board[i][j] != ".":
             return self.helper(start + 1, board)
         else:
-            for candidate in xrange(1, 10):
-                if self.is_valid(board, i, j, str(candidate)):
-                    board[i][j] = str(candidate)
+            for x in range(1, 10):
+                if self.is_valid(board, i, j, str(x)):
+                    board[i][j] = str(x)
                     if self.helper(start + 1, board):
                         return True
                     board[i][j] = "."
             return False
 
-    def is_valid(self, board, i, j , candidate):
-        for k in xrange(9):
-            if board[i][k] == candidate or board[k][j] == candidate or board[i - i % 3 + k / 3][j - j % 3 + k % 3] == candidate:
+    def is_valid(self, board, i, j , x):
+        for k in range(9):
+            if board[i][k] == x or board[k][j] == x or board[i - i % 3 + k / 3][j - j % 3 + k % 3] == x:
                 return False
         return True
 ```
