@@ -59,7 +59,7 @@ class Solution(object):
             return False
 
         for i in range(9):
-            s1, s2 = set(), set
+            s1, s2 = set(), set()
             for j in range(9):
                 if board[i][j] != "." and board[i][j] in s1:
                     return False
