@@ -52,17 +52,17 @@ class Solution(object):
         if not num1 or not num2:
             return ""
 
-        ret = [0] * (len(num1) + len(num2))
+        num3 = [0] * (len(num1) + len(num2))
         for i, n1 in enumerate(reversed(num1)):
             for j, n2 in enumerate(reversed(num2)):
-                ret[i + j] += int(n1) * int(n2)
-                ret[i + j + 1] += ret[i + j] // 10
-                ret[i + j] %= 10
+                num3[i + j] += int(n1) * int(n2)
+                num3[i + j + 1] += ret[i + j] // 10
+                num3[i + j] %= 10
 
-        num3 = []
-        for i, n3 in enumerate(reversed(ret)):
-            if not tmp and n3 == 0:
+        ret = []
+        for i, n3 in enumerate(reversed(num3)):
+            if not ret and n3 == 0:
                 continue
-            num3.append(str(n3))
-        return "".join(num3) if num3 else "0"
+            ret.append(str(n3))
+        return "".join(ret) or "0"
 ```

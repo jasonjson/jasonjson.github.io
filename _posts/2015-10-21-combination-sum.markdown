@@ -53,14 +53,17 @@ class Solution(object):
             return
 
         ret = []
-        self.helper(candidates, target, 0, [], ret)
+        self.helper(candidates, target, [], ret)
         return ret
 
-    def helper(self, candidates, target, start, curr, ret):
-        if target == 0:
+    def helper(self, candidates, remain, curr, ret):
+        if remain == 0:
             ret.append(curr[:])
             return
-        for i in xrange(start, len(candidates)):
-            if candidates[i] <= target:
-                self.helper(candidates, target - candidates[i], i, curr + [candidates[i]], ret)
+
+        for i, num in enumerate(candidates):
+            if num <= remain:
+                curr.append(num)
+                self.helper(candidates[i:], remain - num, curr, ret)
+                curr.pop()
 ```

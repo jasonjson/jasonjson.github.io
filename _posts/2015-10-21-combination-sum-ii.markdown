@@ -52,16 +52,18 @@ class Solution(object):
             return []
         candidates.sort()
         ret = []
-        self.helper(candidates, target, 0, [], ret)
+        self.helper(candidates, target, [], ret)
         return ret
 
-    def helper(self, candidates, remain, start, curr, ret):
+    def helper(self, candidates, remain, curr, ret):
         if remain == 0:
             ret.append(curr[:])
             return
-        for i in xrange(start, len(candidates)):
-            if i > start and candidates[i] == candidates[i - 1]:
+        for i, num in enumerate(candidates):
+            if i > 0 and num == candidates[i - 1]:
                 continue
-            if candidates[i] <= remain:
-                self.helper(candidates, remain - candidates[i], i + 1, curr + [candidates[i]], ret)
+            if num <= remain:
+                curr.append(num)
+                self.helper(candidates[i + 1:], remain - num, curr, ret)
+                curr.pop()
 ```
