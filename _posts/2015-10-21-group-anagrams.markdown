@@ -49,9 +49,8 @@ class Solution(object):
         :rtype: List[List[str]]
         """
 
-        str_dict = {}
+        str_dict = defaultdict(int)
         for s in strs:
-            str_list= str_dict.setdefault("".join(sorted(s)), [])
-            str_list.append(s)
-        return str_dict.values()
+            str_list["".join(sorted(s))].append(s)
+        return list(str_dict.values())
 ```
