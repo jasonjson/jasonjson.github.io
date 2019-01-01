@@ -44,8 +44,7 @@ class Solution(object):
 
         top, bottom = 0, len(matrix) - 1
         while top < bottom:
-            for i in xrange(len(matrix)):
-                matrix[top][i], matrix[bottom][i] = matrix[bottom][i], matrix[top][i]
+            matrix[top], matrix[bottom] = matrix[bottom], matrix[top]
             top += 1
             bottom -= 1
 
