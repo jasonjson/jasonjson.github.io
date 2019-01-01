@@ -62,10 +62,10 @@ class Solution(object):
 
     def helper(self, nums, curr, ret):
         if len(curr) == len(nums):
-            ret.append(copy.deepcopy(curr))
+            ret.append(curr[:])
             return
 
-        for i, num in enumerate(nums):
+        for num in nums:
             if num not in curr:
                 curr.append(num)
                 self.helper(nums, curr, ret)
