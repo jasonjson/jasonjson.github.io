@@ -47,37 +47,19 @@ class Solution {
 ```
 
 ``` python
-# Definition for an interval.
-# class Interval(object):
-#     def __init__(self, s=0, e=0):
-#         self.start = s
-#         self.end = e
-
-class Solution(object):
+class Solution:
     def merge(self, intervals):
         """
         :type intervals: List[Interval]
         :rtype: List[Interval]
         """
 
-        if not intervals:
-            return []
-
+        intervals.sort(key = lambda x: x.start)
         ret = []
         for interval in intervals:
-            ret = self.helper(ret, interval)
-        return ret
-
-    def helper(self, curr, new_interval):
-        ret = []
-        for interval in curr:
-            if interval.end < new_interval.start:
-                ret.append(interval)
-            elif interval.start > new_interval.end:
-                ret.append(new_interval)
-                new_interval = interval
+            if ret and ret[-1].end >= interval.start:
+                ret[-1].end = max(ret[-1].end, interval.end)
             else:
-                new_interval = Interval(min(interval.start, new_interval.start), max(interval.end, new_interval.end))
-        ret.append(new_interval)
+                ret.append(interval)
         return ret
 ```
