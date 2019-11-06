@@ -1,15 +1,48 @@
 ---
 layout: post
-title: Valid Number
+title: 65 - Valid Number
 date: 2015-10-26 17:19:21.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Brain Teaser
-- Integer
 author: Jason
 ---
-<p><strong><em>Validate if a given string is numeric.</em></strong></p>
+**Validate if a given string is numeric.**
+
+```python
+class Solution:
+    def isNumber(self, s: str) -> bool:
+        s = s.strip()
+        if not s:
+            return False
+        index = 0
+        if s[index] in ("+", "-"):
+            index += 1
+        found_dot = found_exp = found_num = False
+
+        while index < len(s):
+            if s[index].isdigit():
+                found_num = True
+                index += 1
+                continue
+            elif s[index] == ".":
+                if found_dot or found_exp:
+                    return False
+                found_dot = True
+            elif s[index] == "e":
+                if found_exp or not found_num:
+                    return False
+                found_exp = True
+                found_num = False
+            elif s[index] in ("+", "-"):
+                if s[index - 1] != "e":
+                    return False
+            else:
+                return False
+            index += 1
+        return found_num
+```
 
 
 ``` java
@@ -21,8 +54,8 @@ public class Solution {
     public boolean isNumber(String s) {
         // Write your code here
         if (s == null || s.length() == 0) return false;
-        
-        boolean dot = false, exp = false, num = false;        
+
+        boolean dot = false, exp = false, num = false;
         s = s.trim();
         int i = 0;
         if (i < s.length() && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
@@ -56,4 +89,4 @@ public class Solution {
         return num;
     }
 }
-```
+
