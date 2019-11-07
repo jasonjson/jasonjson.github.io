@@ -79,30 +79,6 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def setZeroes(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: void Do not return anything, modify matrix in-place instead.
-        """
-
-        if not matrix:
-            return
-
-        zero_row, zero_col = [], []
-        for i in xrange(len(matrix)):
-            for j in xrange(len(matrix[0])):
-                if matrix[i][j] == 0:
-                    zero_row.append(i)
-                    zero_col.append(j)
-
-        for i in xrange(len(matrix)):
-            for j in xrange(len(matrix[0])):
-                if i in zero_row or j in zero_col:
-                    matrix[i][j] = 0
-```
-
-``` python
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
