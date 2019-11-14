@@ -47,23 +47,17 @@ public class Solution {
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def deleteDuplicates(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
-
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
         if not head:
             return
 
-        dummy = ListNode(0)
+        curr = dummy = ListNode(0)
         dummy.next = head
-        curr = dummy
         while curr.next and curr.next.next:
             if curr.next.val == curr.next.next.val:
-                repeated_value = curr.next.val
-                while curr.next and curr.next.val == repeated_value:
+                value = curr.next.val
+                while curr.next and curr.next.val == value:
                     curr.next = curr.next.next
             else:
                 curr = curr.next

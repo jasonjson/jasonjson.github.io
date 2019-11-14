@@ -66,40 +66,40 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def solveNQueens(self, n):
-        """
-        :type n: int
-        :rtype: List[List[str]]
-        """
+class Solution:
+    def solveNQueens(self, n: int) -> List[List[str]]:
+        if not n:
+            return
 
         ret = []
         self.helper(n, [], ret)
         return ret
 
-    def helper(self, n, cols, ret):
-        if (len(cols) == n):
-            ret.append(self.place_queen(cols))
+    def helper(self, n, curr, ret):
+        if len(curr) == n:
+            ret.append(self.place_queen(curr))
             return
-        for i in xrange(n):
-            if self.is_valid(cols, i):
-                cols.append(i)
-                self.helper(n, cols, ret)
-                cols.pop()
+        for i in range(n):
+            if self.is_valid(curr, i):
+                curr.append(i)
+                self.helper(n, curr, ret)
+                curr.pop()
 
     def is_valid(self, cols, col):
         row = len(cols)
-        for i in xrange(row):
-            if col == cols[i] or abs(row - i) == abs(col - cols[i]):
+        for i, used in enumerate(cols):
+            if used == col or abs(row - i) == abs(col - used):
                 return False
         return True
 
-    def place_queen(self, cols):
+    def place_queen(self, curr):
         board = []
-        for i in xrange(len(cols)):
-            line = []
-            for j in xrange(len(cols)):
-                line.append("Q" if j == cols[i] else ".")
+        for num in curr:
+            line = ["."] * len(curr)
+            for j in range(len(line)):
+                if j == num:
+                    line[j] = "Q"
+                    break
             board.append("".join(line))
         return board
 ```

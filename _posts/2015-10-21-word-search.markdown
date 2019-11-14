@@ -51,27 +51,24 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def exist(self, board, word):
-        """
-        :type board: List[List[str]]
-        :type word: str
-        :rtype: bool
-        """
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        if not board:
+            return False
 
-        for i in xrange(len(board)):
-            for j in xrange(len(board[0])):
-                if self.helper(board, i, j, 0, word):
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                if self.helper(board, i, j, word):
                     return True
         return False
 
-    def helper(self, board, i, j, index, word):
-        if index == len(word):
+    def helper(self, board, i, j, word):
+        if len(word) == 0:
             return True
-        if i in xrange(len(board)) and j in xrange(len(board[0])) and board[i][j] == word[index]:
+        if i >= 0 and i < len(board) and j >= 0 and j < len(board[0]) and board[i][j] == word[0]:
             board[i][j] = "#"
-            if self.helper(board, i + 1, j, index + 1, word) or self.helper(board, i - 1, j, index + 1, word) or self.helper(board, i, j + 1, index + 1, word) or self.helper(board, i, j - 1, index + 1, word):
+            if self.helper(board, i + 1, j, word[1:]) or self.helper(board, i, j + 1, word[1:]) or self.helper(board, i - 1, j , word[1:]) or self.helper(board, i, j - 1, word[1:]):
                 return True
-            board[i][j] = word[index]
+            board[i][j] = word[0]
         return False
 ```
