@@ -54,8 +54,8 @@ class Solution(object):
                 root = root.left
             else:
                 root = stack.pop()
-                if prev is not None and root.val < prev.val:
-                    if first is None:
+                if prev and root.val < prev.val:
+                    if not first :
                         first = prev
                     second = root
                 prev = root
