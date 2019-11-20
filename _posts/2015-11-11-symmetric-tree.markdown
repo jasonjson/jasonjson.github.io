@@ -56,10 +56,8 @@ class Solution(object):
         return self.helper(root, root)
 
     def helper(self, left, right):
-        if not left and not right:
-            return True
         if not left or not right:
-            return False
+            return left == right
         return left.val == right.val and self.helper(left.left, right.right) and self.helper(left.right, right.left)
 ```
 
@@ -69,8 +67,8 @@ class Solution:
 
         q1, q2 = [root], [root]
         while q1 and q2:
-            left = q1.pop(0)
-            right = q2.pop(0)
+            left = q1.pop()
+            right = q2.pop()
             if not left and not right:
                 continue
             if not left or not right or left.val != right.val:
