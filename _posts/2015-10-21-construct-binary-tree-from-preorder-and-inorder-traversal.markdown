@@ -58,14 +58,10 @@ class Solution(object):
         if not preorder or not inorder:
             return
 
-        return self.helper(preorder, 0, len(preorder) - 1, inorder, 0, len(inorder) - 1)
-
-    def helper(self, preorder, pre_start, pre_end, inorder, in_start, in_end):
-        if pre_start > pre_end or in_start > in_end:
-            return
-        root = TreeNode(preorder[pre_start])
+        root = TreeNode(preorder[0])
         index = inorder.index(root.val)
-        root.left = self.helper(preorder, pre_start + 1, pre_start + index - in_start, inorder, in_start, index - 1)
-        root.right = self.helper(preorder, pre_start + index - in_start + 1, pre_end, inorder, index + 1, in_end)
+        root.left = self.buildTree(preorder[1: index + 1], inorder[: index])
+        root.right = self.buildTree(preorder[index + 1:], inorder[index + 1:])
         return root
+
 ```
