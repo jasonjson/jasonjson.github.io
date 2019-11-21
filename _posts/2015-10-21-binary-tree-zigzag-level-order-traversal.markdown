@@ -67,7 +67,7 @@ class Solution(object):
                 ret.append([n.val for n in reversed(prev)])
             else:
                 ret.append([n.val for n in prev])
-            reverse = False if reverse else True
+            reverse = not reverse
             curr = []
             for node in prev:
                 if node.left:
