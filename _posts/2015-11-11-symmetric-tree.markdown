@@ -67,8 +67,8 @@ class Solution:
 
         q1, q2 = [root], [root]
         while q1 and q2:
-            left = q1.pop()
-            right = q2.pop()
+            left = q1.pop(0)
+            right = q2.pop(0)
             if not left and not right:
                 continue
             if not left or not right or left.val != right.val:
