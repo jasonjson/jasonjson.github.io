@@ -49,25 +49,14 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def buildTree(self, inorder, postorder):
-        """
-        :type inorder: List[int]
-        :type postorder: List[int]
-        :rtype: TreeNode
-        """
-
+class Solution:
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
         if not inorder or not postorder:
             return
 
-        return self.helper(postorder, 0, len(postorder) - 1, inorder, 0, len(inorder) - 1)
-
-    def helper(self, postorder, post_start, post_end, inorder, in_start, in_end):
-        if post_start > post_end or in_start > in_end:
-            return
-        root = TreeNode(postorder[post_end])
+        root = TreeNode(postorder[-1])
         index = inorder.index(root.val)
-        root.left = self.helper(postorder, post_start, index - in_start + post_start - 1, inorder, in_start, index - 1)
-        root.right = self.helper(postorder, index - in_start + post_start, post_end - 1, inorder, index + 1, in_end)
+        root.left = self.buildTree(inorder[: index], postorder[: index])
+        root.right = self.buildTree(inorder[index + 1:], postorder[index: -1])
         return root
 ```
