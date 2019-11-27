@@ -74,16 +74,13 @@ class Solution(object):
         if not gas or not cost:
             return -1
 
-        total_left_gas, left_gas, index = 0, 0, 0
-        for i in xrange(len(gas)):
+        total_left_ga = left_gas = index = 0
+        for i in range(len(gas)):
             left_gas += gas[i] - cost[i]
             if left_gas < 0:
                 total_left_gas += left_gas
                 left_gas = 0
                 index = i + 1
         total_left_gas += left_gas
-        if total_left_gas < 0:
-            return -1
-        else:
-            return index
+        return index if total_left_gas >= 0 else -1
 ```
