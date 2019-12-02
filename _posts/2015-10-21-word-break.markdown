@@ -37,26 +37,21 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: bool
-        """
-
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         if not wordDict:
             return False
-        max_len = max([len(word) for word in wordDict])
+
+        max_len = max(map(len, wordDict))
         dp = [False] * (len(s) + 1)
-        dp[0] = True #empty string is always true
-        for i in xrange(1, len(s) + 1):
-            j = i - 1
-            while j >= 0 and i - j <= max_len:
-                if dp[j] and s[j : i] in wordDict:
+        dp[0] = True
+
+        for i in range(1, len(s) + 1):
+            for j in reversed(range(i)):
+                if dp[j] and s[j: i] in wordDict:
                     dp[i] = True
                     break
-                j -= 1
+                if i - j > max_len:
+                    break
         return dp[-1]
 ```
-
