@@ -58,7 +58,8 @@ class Solution(object):
         :type head: ListNode
         :rtype: void Do not return anything, modify head in-place instead.
         """
-        if not head or not head.next:
+
+        if not head:
             return
 
         slow = fast = head
@@ -79,8 +80,8 @@ class Solution(object):
         ret = None
         while head:
             next_node = head.next
-            head.next = rev
-            rev = head
+            head.next = ret
+            ret = head
             head = next_node
         return ret
 ```

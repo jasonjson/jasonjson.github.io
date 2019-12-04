@@ -8,10 +8,8 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set. get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</em></strong></p>
+**Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set. get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.**
 
-
-<p><a href="http://www.cnblogs.com/springfor/p/3869393.html">Read more</a></p>
 
 ``` java
 public class Solution {
@@ -41,14 +39,14 @@ public class Solution {
             prev.next = post;
         } else {
             head = post;
-        }        
+        }
         if (post != null) {
             post.prev = prev;
         } else {
             tail = prev;
         }
     }
-    
+
     public void setHead(DoubleLinkedNode node) {
         node.next = head;
         node.prev = null;//清空头部
@@ -88,4 +86,36 @@ public class Solution {
         }
     }
 }
+```
+
+``` python
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.cache = {}
+        self.usage = {}
+        self.time = 0
+        self.capacity = capacity
+
+    def get(self, key: int) -> int:
+        if key in self.cache:
+            self.update_usage(key)
+            return self.cache[key]
+        else:
+            return -1
+
+    def update_usage(self, key):
+        self.time += 1
+        self.usage[key] = self.time
+
+    def put(self, key: int, value: int) -> None:
+        if len(self.cache) == self.capacity and key not in self.cache:
+            self.remove_lru()
+        self.cache[key] = value
+        self.update_usage(key)
+
+    def remove_lru(self):
+        to_remove = min(self.usage, key=self.usage.get)
+        del self.cache[to_remove]
+        del self.usage[to_remove]
 ```
