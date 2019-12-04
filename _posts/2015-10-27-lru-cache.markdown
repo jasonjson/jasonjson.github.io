@@ -109,10 +109,10 @@ class LRUCache:
         self.usage[key] = self.time
 
     def put(self, key: int, value: int) -> None:
-        if len(self.cache) == self.capacity and key not in self.cache:
-            self.remove_lru()
         self.cache[key] = value
         self.update_usage(key)
+        if len(self.cache) > self.capacity:
+            self.remove_lru()
 
     def remove_lru(self):
         to_remove = min(self.usage, key=self.usage.get)
