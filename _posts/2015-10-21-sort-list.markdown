@@ -77,6 +77,6 @@ class Solution(object):
                 curr.next = right
                 right = right.next
             curr = curr.next
-        curr.next = left if left else right
+        curr.next = left or right
         return dummy.next
 ```
