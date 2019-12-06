@@ -28,21 +28,14 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def maxProduct(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
         if not nums:
             return 0
-        min_product = max_product = 1
-        ret = nums[0]
-        for num in nums:
-            tmp = max_product
-            max_product = max(max_product * num, min_product * num, num)
-            min_product = min(tmp * num, min_product * num, num)
-            ret = max(ret, max_product)
+
+        ret = min_val = max_val = nums[0]
+        for i in range(1, len(nums)):
+            min_val, max_val = min(min_val * nums[i], nums[i], max_val * nums[i]), max(min_val * nums[i], nums[i], max_val * nums[i])
+            ret = max(ret, max_val)
         return ret
 ```
