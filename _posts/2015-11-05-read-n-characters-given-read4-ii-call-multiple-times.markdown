@@ -56,13 +56,13 @@ class Solution(object):
         index = 0
         while True:
             tmp = [""] * 4
-            read4(tmp)
-            self.queue.extend(tmp)
+            num_read = read4(tmp)
+            self.queue.extend(tmp[:num_read])
             curr = min(len(self.queue), n - index)
-            for _ in xrange(curr):
-                buf[index] = self.queue.pop(0)
-                index += 1
             if curr == 0:
                 break
+            for _ in range(curr):
+                buf[index] = self.queue.pop(0)
+                index += 1
         return index
 ```
