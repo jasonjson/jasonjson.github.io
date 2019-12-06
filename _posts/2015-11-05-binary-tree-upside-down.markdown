@@ -27,19 +27,14 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def upsideDownBinaryTree(self, root):
-        """
-        :type root: TreeNode
-        :rtype: TreeNode
-        """
-        if not root or (not root.left and not root.right):
+class Solution:
+    def upsideDownBinaryTree(self, root: TreeNode) -> TreeNode:
+        if not root or not root.left:
             return root
 
         new_root = self.upsideDownBinaryTree(root.left)
         root.left.left = root.right
         root.left.right = root
-        root.left = None
-        root.right = None
+        root.left = root.right = None
         return new_root
 ```
