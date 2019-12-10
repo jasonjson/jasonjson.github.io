@@ -40,30 +40,21 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def findMissingRanges(self, nums, lower, upper):
-        """
-        :type nums: List[int]
-        :type lower: int
-        :type upper: int
-        :rtype: List[str]
-        """
-
+class Solution:
+    def findMissingRanges(self, nums: List[int], lower: int, upper: int) -> List[str]:
         if not nums:
             return [self.helper(lower, upper)]
 
         ret = []
-        if nums[0] > lower:
+        if lower < nums[0]:
             ret.append(self.helper(lower, nums[0] - 1))
-        for i in xrange(1, len(nums)):
-            if nums[i] >= nums[i - 1] + 2:
+        for i in range(1, len(nums)):
+            if nums[i] > nums[i - 1] + 1:
                 ret.append(self.helper(nums[i - 1] + 1, nums[i] - 1))
         if upper > nums[-1]:
             ret.append(self.helper(nums[-1] + 1, upper))
         return ret
-    def helper(self, num1, num2):
-        if num1 == num2:
-            return str(num1)
-        elif num1 < num2:
-            return str(num1) + "->" + str(num2)
+
+    def helper(self, lo, hi):
+        return str(lo) if lo == hi else str(lo) + "->" + str(hi)
 ```
