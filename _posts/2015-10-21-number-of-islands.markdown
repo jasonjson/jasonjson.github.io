@@ -41,30 +41,27 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def numIslands(self, grid):
-        """
-        :type grid: List[List[str]]
-        :rtype: int
-        """
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:
             return 0
 
-        row, col = len(grid), len(grid[0])
         ret = 0
-        for i in xrange(row):
-            for j in xrange(col):
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
                 if grid[i][j] == "1":
-                    self.helper(grid, i, j)
                     ret += 1
+                    self.helper(grid, i, j)
         return ret
 
     def helper(self, grid, i, j):
-        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] != "1" or not grid[i][j]:
-            return
-        grid[i][j] = False
-        self.helper(grid, i - 1, j)
-        self.helper(grid, i + 1, j)
-        self.helper(grid, i, j - 1)
-        self.helper(grid, i, j + 1)
+        grid[i][j] = "2"
+        if i - 1 >= 0 and grid[i - 1][j] == "1":
+            self.helper(grid, i- 1, j)
+        if i + 1 < len(grid) and grid[i + 1][j] == "1":
+            self.helper(grid, i + 1, j)
+        if j - 1 >= 0 and grid[i][j - 1] == "1":
+            self.helper(grid, i, j - 1)
+        if j + 1 < len(grid[0]) and grid[i][j + 1] == "1":
+            self.helper(grid, i, j + 1)
 ```
