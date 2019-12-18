@@ -48,36 +48,27 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def countComponents(self, n, edges):
-        """
-        :type n: int
-        :type edges: List[List[int]]
-        :rtype: int
-        """
-        if n == 0:
-            return 0
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        if not edges:
+            return n
 
-        visited = [False] * n
-        neighbors = collections.defaultdict(list)
+        union = {}
         for a, b in edges:
-            neighbors[a].append(b)
-            neighbors[b].append(a)
-        ret = 0
-        queue = collections.deque([0])
-        visited[0] = True
-        while queue:
-            curr = queue.popleft()
-            for neighbor in neighbors[curr]:
-                if not visited[neighbor]:
-                    queue.append(neighbor)
-                    visited[neighbor] = True
-            if not queue:
-                ret += 1
-                for i in xrange(n):
-                    if not visited[i]:
-                        queue.append(i)
-                        visited[i] = True
-                        break
-        return ret
+            a1 = self.find(union, a)
+            b1 = self.find(union, b)
+            union[a1] = b1
+
+        ret = set()
+        for i in range(n):
+            ret.add(self.find(union, i))
+
+        return len(ret)
+
+    def find(self, union, i):
+        if i == union.get(i, i):
+            union[i] = i
+            return i
+        else:
+            return self.find(union, union[i])
 ```

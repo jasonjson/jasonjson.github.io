@@ -49,32 +49,26 @@ class Solution {
 ```
 
 ``` python
-class Solution():
-    def findMedianSortedArrays(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: float
-        """
-
-        total_length = len(nums1) + len(nums2)
-        if total_length % 2 == 0:
-            return (self.helper(nums1, 0, nums2, 0, total_length / 2) + self.helper(nums1, 0, nums2, 0, total_length / 2 + 1)) / 2.0
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        total_len = len(nums1) + len(nums2)
+        if total_len % 2 == 0:
+            return (self.helper(nums1, nums2, total_len // 2) + self.helper(nums1, nums2, total_len // 2 + 1)) / 2
         else:
-            return self.helper(nums1, 0, nums2, 0, total_length / 2 + 1)
+            return self.helper(nums1, nums2, total_len // 2 + 1)
 
-    def helper(self, a, a_start, b, b_start, k):
-        if a_start >= len(a):
-            return b[b_start + k - 1]
-        elif b_start >= len(b):
-            return a[a_start + k - 1]
-        elif k == 1:
-            return min(a[a_start], b[b_start])
+    def helper(self, nums1, nums2, k):
+        if not nums1:
+            return nums2[k - 1]
+        if not nums2:
+            return nums1[k - 1]
+        if k == 1:
+            return min(nums1[0], nums2[0])
+        index = k // 2 - 1
+        m1 = nums1[index] if index < len(nums1) else 2 ** 31 - 1
+        m2 = nums2[index] if index < len(nums2) else 2 ** 31 - 1
+        if m1 < m2:
+            return self.helper(nums1[index+1:], nums2, k - index - 1)
         else:
-            k1 = a[a_start + k / 2 - 1] if a_start + k / 2 - 1 < len(a) else 2 ** 31
-            k2 = b[b_start + k / 2 - 1] if b_start + k / 2 - 1 < len(b) else 2 ** 31
-            if k1 < k2:
-                return self.helper(a, a_start + k / 2, b, b_start, k - k / 2)
-            else:
-                return self.helper(a, a_start, b, b_start + k / 2, k - k / 2)
+            return self.helper(nums1, nums2[index+1:], k - index - 1)
 ```

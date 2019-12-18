@@ -48,30 +48,23 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def verticalOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
-
+from collections import defaultdict
+class Solution:
+    def verticalOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
 
-        min_index = 0
-        node_map = collections.defaultdict(list)
-        queue = [(root, 0)]
+        queue = [(0, root)]
+        level_map = defaultdict(list)
         while queue:
-            curr, index = queue.pop(0)
-            node_map[index].append(curr.val)
-            min_index = min(index, min_index)
+            level, curr = queue.pop(0)
+            level_map[level].append(curr.val)
             if curr.left:
-                queue.append((curr.left, index - 1))
+                queue.append((level - 1, curr.left))
             if curr.right:
-                queue.append((curr.right, index + 1))
+                queue.append((level + 1, curr.right))
         ret = []
-        while min_index in node_map:
-            ret.append(node_map[min_index])
-            min_index += 1
+        for key in sorted(level_map):
+            ret.append(level_map[key])
         return ret
 ```
