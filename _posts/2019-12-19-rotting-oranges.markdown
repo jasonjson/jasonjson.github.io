@@ -4,8 +4,8 @@ title: 994 - Rotting Oranges
 date: 2019-12-19
 tags:
 - Leetcode
-categories: DFS
--
+categories:
+- DFS
 author: Jason
 ---
 **In a given grid, each cell can have one of three values:**
