@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 937-reorder-data-in-log-files - Py
+title: 937 - Reorder Data in Log Files
 date: 2019-12-19
 tags:
 - Leetcode
