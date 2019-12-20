@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Meeting Rooms II
+title: 253 - Meeting Rooms II
 date: 2015-11-02 07:46:53.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
+- Sort
 author: Jason
 ---
-<p><strong><em>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.</em></strong></p>
+**Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.**
 
 
 ``` java
@@ -34,24 +34,23 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    public int minMeetingRooms(Interval[] intervals) {
-        if (intervals == null || intervals.length == 0) return 0;
-        
-        Arrays.sort(intervals, new Comparator<interval>() {
-           public int compare (Interval a, Interval b) {
-               return a.start - b.start;
-           } 
-        });
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-        for (Interval interval : intervals) {
-            if (!pq.isEmpty() && interval.start >= pq.peek()) {
-                pq.poll();//可以想象把pq.peek()和新的interval合并在一起
-            }
-            pq.offer(interval.end);
-        }
-        return pq.size();
-    }
-}
+
+``` python
+class Solution:
+    def minMeetingRooms(self, intervals: List[List[int]]) -> int:
+        if not intervals:
+            return 0
+
+        start = [interval[0] for interval in intervals]
+        end = [interval[1] for interval in intervals]
+        start.sort()
+        end.sort()
+        end_index = 0
+        room = 0
+        for i in range(len(start)):
+            if start[i] < end[end_index]:
+                room += 1
+            else:
+                end_index += 1
+        return room
 ```
