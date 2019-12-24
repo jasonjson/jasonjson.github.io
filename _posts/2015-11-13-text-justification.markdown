@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Justification
+title: 68 - Text Justification
 date: 2015-11-13 09:05:29.000000000 -05:00
 tags:
 - Leetcode
@@ -8,17 +8,15 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-<p><strong><em>Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and right) justified.</p>
+**Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and right) justified. You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly L characters.**
+**Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right. For the last line of text, it should be left justified and no extra space is inserted between words.**
 
-You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly L characters.</p>
-Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.</p>
-For the last line of text, it should be left justified and no extra space is inserted between words.</em></strong></p>
 ``` java
 public class Solution {
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> result = new ArrayList<String>();
         if (words == null || words.length == 0) return result;
-        
+
         int index = 0;
         while (index < words.length) {
             int len = words[index].length();//此处没有额外+1，相当于最后一个word不需要空格
@@ -55,4 +53,24 @@ public class Solution {
         return result;
     }
 }
+```
+
+``` python
+class Solution:
+    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
+        curr = []
+        ret = []
+        num_letters = 0
+        for word in words:
+            if num_letters + len(word) + len(curr) > maxWidth:
+                for i in range(maxWidth - num_letters):
+                    index = 0 if len(curr) == 1 else i % (len(curr) - 1)
+                    curr[index] += " "
+                ret.append("".join(curr))
+                num_letters = 0
+                curr = []
+            curr.append(word)
+            num_letters += len(word)
+        ret.append(" ".join(curr).ljust(maxWidth))
+        return ret
 ```
