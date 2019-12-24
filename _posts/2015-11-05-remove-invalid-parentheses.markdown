@@ -59,41 +59,24 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def removeInvalidParentheses(self, s):
-        """
-        :type s: str
-        :rtype: List[str]
-        """
+class Solution:
+    def removeInvalidParentheses(self, s: str) -> List[str]:
 
-        visited = set([s])
-        #cannot write set(s), if s = "ab", set(s) = set("a", "b")
-        stack = collections.deque([s])
-        #have to use queue, we need to stop once is valid one is found
-        ret = []
-        found = False
-        while stack:
-            curr = stack.popleft()
-            if self.is_valid(curr):
-                ret.append(curr)
-                found = True
-            if not found:
-                for i, char in enumerate(curr):
-                    if char == "(" or char == ")":
-                        new_s = curr[:i] + curr[i+1:]
-                        if new_s not in visited:
-                            stack.append(new_s)
-                            visited.add(new_s)
-        return ret or [""]
+        def is_valid(s):
+            count = 0
+            for c in s:
+                if c == "(":
+                    count += 1
+                elif c == ")":
+                    count -= 1
+                    if count < 0:
+                        return False
+            return count == 0
 
-    def is_valid(self, s):
-        count = 0
-        for c in s:
-            if c == "(":
-                count += 1
-            elif c == ")":
-                count -= 1
-                if count < 0:
-                    return False
-        return count == 0
+        level = {s}
+        while level:
+            found = list(filter(is_valid, level))
+            if found:
+                return found
+            level = {a[:i] + a[i+1:] for a in level for i in range(len(a))}
 ```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Alien Dictionary
+title: 269 - Alien Dictionary
 date: 2015-10-30 15:12:16.000000000 -04:00
 tags:
 - Leetcode
@@ -8,14 +8,14 @@ categories:
 - Sorting
 author: Jason
 ---
-<p><strong><em>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.</em></strong></p>
+**There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.**
 
 
 ``` java
 public class Solution {
     public String alienOrder(String[] words) {
         if (words == null || words.length == 0) return "";
-        
+
         StringBuilder rst = new StringBuilder();
         HashMap<Character, Integer> degree = new HashMap<Character, Integer>();
         HashMap<Character, Set<character>> map = new HashMap<Character, Set<character>>();
@@ -64,4 +64,31 @@ public class Solution {
         return rst.toString();
     }
 }
+```
+
+``` python
+from collections import defaultdict
+class Solution:
+    def alienOrder(self, words: List[str]) -> str:
+        chars = set("".join(words))
+        graph = defaultdict(list)
+        degrees = {c:0 for c in chars}
+        for w1, w2 in zip(words, words[1:]):
+            for c1, c2 in zip(w1, w2):
+                if c1 != c2:
+                    graph[c1].append(c2)
+                    degrees[c2] += 1
+                    break
+
+        stack = list(filter(lambda x: degrees[x] == 0, degrees.keys()))
+        ret = []
+        while stack:
+            curr = stack.pop()
+            ret.append(curr)
+            for n in graph[curr]:
+                degrees[n] -= 1
+                if degrees[n] == 0:
+                    stack.append(n)
+
+        return "".join(ret) if len(ret) == len(chars) else ""
 ```
