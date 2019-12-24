@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integer to English Words
+title: 273 - Integer to English Words
 date: 2015-10-30 10:40:37.000000000 -04:00
 tags:
 - Leetcode
@@ -9,7 +9,7 @@ categories:
 - Integer
 author: Jason
 ---
-<p><strong><em>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.</em></strong></p>
+**Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 2^31 - 1.**
 
 
 ``` java
@@ -42,4 +42,23 @@ public class Solution {
         return sb.toString().trim();//trim() is for the case 23 not "twenty three " but "twenty three", the space after three
     }
 }
+```
+
+``` python
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        to_19 = "One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen".split()
+        to_100 = "Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety".split()
+
+        def convert(n):
+            if n < 20:
+                return to_19[n - 1: n]
+            if n < 100:
+                return [to_100[n // 10 - 2]] + convert(n % 10)
+            if n < 1000:
+                return [to_19[n // 100 - 1]] + ["Hundred"] + convert(n % 100)
+            for i, word in enumerate(["Thousand", "Million", "Billion"], 1):
+                if n < 1000 ** (i + 1):
+                    return convert(n // 1000 ** i) + [word] + convert(n % 1000 ** i)
+        return " ".join(convert(num)) or "Zero"
 ```
