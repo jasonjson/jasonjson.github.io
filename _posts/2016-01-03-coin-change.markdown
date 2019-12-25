@@ -58,18 +58,11 @@ class Solution(object):
 ```
 
 ``` python
-class Solution(object):
-    def coinChange(self, coins, amount):
-        """
-        :type coins: List[int]
-        :type amount: int
-        :rtype: int
-        """
-        if not coins:
-            return -1
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
 
         dp = [0] * (amount + 1)
-        for i in xrange(1, amount + 1):
+        for i in range(1, amount + 1):
             dp[i] = 2 ** 31 - 1
             for coin in coins:
                 if i >= coin:
