@@ -16,48 +16,44 @@ author: Jason
 
 
 ```python
-class RandomizedSet(object):
+import random
+class RandomizedSet:
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.num = []
-        self.index = {}
+        self.nums = []
+        self.index_map = {}
 
-    def insert(self, val):
+    def insert(self, val: int) -> bool:
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
-        :type val: int
-        :rtype: bool
         """
-        if val not in self.index:
-            self.num.append(val)
-            self.index[val] = len(self.num) - 1
+        if val not in self.index_map:
+            self.nums.append(val)
+            self.index_map[val] = len(self.nums) - 1
             return True
         else:
             return False
 
-    def remove(self, val):
+    def remove(self, val: int) -> bool:
         """
         Removes a value from the set. Returns true if the set contained the specified element.
-        :type val: int
-        :rtype: bool
         """
-        if val in self.index:
-            index, last = self.index[val], self.num[-1]
-            self.num[index] = last
-            self.index[last] = index
-            self.index.pop(val)
-            self.num.pop()
+
+        if val in self.index_map:
+            index, last = self.index_map[val], self.nums[-1]
+            self.index_map[last], self.nums[index] = index, last
+            self.nums.pop()
+            del self.index_map[val]
             return True
         else:
             return False
 
-    def getRandom(self):
+    def getRandom(self) -> int:
         """
         Get a random element from the set.
-        :rtype: int
         """
-        return self.num[random.randint(0, len(self.num) - 1)]
+        return random.choice(self.nums)
 ```
