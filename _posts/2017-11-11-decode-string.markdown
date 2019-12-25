@@ -22,7 +22,7 @@ class Solution(object):
         if not s:
             return ""
 
-        stack = [["", 1]]
+        stack = [["", 0]]
         num = 0
         for char in s:
             if char.isdigit():
