@@ -59,42 +59,30 @@ public class Solution {
 ```
 
 ``` python
-import collections
-class Solution(object):
-    def ladderLength(self, beginWord, endWord, wordList):
-        """
-        :type beginWord: str
-        :type endWord: str
-        :type wordList: List[str]
-        :rtype: int
-        """
-
-        if not wordList:
-            return 0
-
-        dict_words = self.construct_dict(wordList)
-        word_queue = collections.deque([(beginWord, 1)])
+from collections import defaultdict
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        words_map = self.helper(wordList)
+        queue = [(beginWord, 1)]
         visited = set()
-        while word_queue:
-            curr_word, step = word_queue.popleft()
-            if curr_word not in visited:
-                visited.add(curr_word)
-                if curr_word == endWord:
-                    return step
-                for i in xrange(len(curr_word)):
-                    s = curr_word[:i] + "_" + curr_word[i+1:]
-                    neigh_words = dict_words.get(s, [])
-                    for new_word in neigh_words:
-                        if new_word not in visited:
-                            word_queue.append((new_word, step + 1))
+        while queue:
+            curr, step = queue.pop(0)
+            if curr == endWord:
+                return step
+            visited.add(curr)
+            step += 1
+            for i in range(len(curr)):
+                new_curr = curr[:i] + "_" + curr[i+1:]
+                for candidate in words_map.get(new_curr, []):
+                    if candidate not in visited:
+                        queue.append((candidate, step))
         return 0
 
-    def construct_dict(self, word_list):
-        #find all possible tranformation words
-        d = {}
-        for word in word_list:
+    def helper(self, wordList):
+        words_map = defaultdict(list)
+        for word in wordList:
             for i in range(len(word)):
-                s = word[:i] + "_" + word[i+1:]
-                d[s] = d.get(s, []) + [word]
-        return d
+                new_word = word[:i] + "_" + word[i+1:]
+                words_map[new_word].append(word)
+        return words_map
 ```
