@@ -57,52 +57,36 @@ public class Solution {
 }
 ```
 
-``` java
-public class Solution {
-    //We can apply the maximum in histogram in each row of the 2D matrix.
-    //What we need is to maintain an int array for each row, which represent
-    //for the height of the histogram.
-    public int maximalRectangle(char[][] matrix) {
-        if (matrix == null || matrix.length == 0) return 0;
+``` python
+class Solution:
+    def maximalRectangle(self, matrix: List[List[str]]) -> int:
+        #left[i]: the index of leftmost '1' in the current group
+        #right[i]: the index of rightmost '1' plus one in the current group
+        if not matrix:
+            return 0
+        row, col = len(matrix), len(matrix[0])
+        height = [0] * col
+        left = [0] * col
+        right = [col] * col
 
-        int row = matrix.length, col = matrix[0].length, max = 0;
-        int[] height = new int[col];
-        for (int j = 0; j < col; j++) {
-            if (matrix[0][j] == '1') {
-                height[j] = 1;
-            }
-        }
-        max = getArea(height);
-        for (int i = 1; i < row; i++) {
-            reset(matrix, height, i);
-            max = Math.max(max, getArea(height));
-        }
-        return max;
-    }
-
-    public void reset(char[][] matrix, int[] height, int row) {
-        for (int j = 0; j < height.length; j ++) {
-            if (matrix[row][j] == '1') {
-                height[j] += 1;
-            } else {
-                height[j] = 0;
-            }
-        }
-    }
-
-    public int getArea(int[] height) {
-        Stack<Integer> stack = new Stack<Integer>();
-        int area = 0;
-        for (int i = 0; i < height.length; i++) {
-            while (!stack.isEmpty() && height[i] < height[stack.peek()]) {
-                area = Math.max(area, height[stack.pop()] * (i - (stack.isEmpty() ? 0 : stack.peek() + 1)));
-            }
-            stack.push(i);
-        }
-        while (!stack.isEmpty()) {
-            area = Math.max(area, height[stack.pop()] * (height.length - (stack.isEmpty() ? 0 : stack.peek() + 1)));
-        }
-        return area;
-    }
-}
+        ret = 0
+        for i in range(row):
+            curr_left, curr_right = 0, col
+            for j in range(col):
+                if matrix[i][j] == "1":
+                    height[j] += 1
+                    left[j] = max(left[j], curr_left)
+                else:
+                    height[j] = 0
+                    left[j] = 0
+                    curr_left = j + 1
+            for j in reversed(range(col)):
+                if matrix[i][j] == "1":
+                    right[j] = min(right[j], curr_right)
+                else:
+                    right[j] = col
+                    curr_right = j
+            for j in range(col):
+                ret = max(ret, (right[j] - left[j]) * height[j])
+        return ret
 ```
