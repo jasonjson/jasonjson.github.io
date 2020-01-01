@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Word Search II
+title: 212 - Word Search II
 date: 2015-10-21 14:40:11.000000000 -04:00
 tags:
 - Leetcode
 categories:
 - Data Structure
-- Dynamic Programming
 author: Jason
 ---
-<p><strong><em>Given a matrix of lower alphabets and a dictionary. Find all words in the dictionary that can be found in the matrix. A word can start from any position in the matrix and go left/right/up/down to the adjacent position.</em></strong></p>
+**Given a matrix of lower alphabets and a dictionary. Find all words in the dictionary that can be found in the matrix. A word can start from any position in the matrix and go left/right/up/down to the adjacent position.**
 
 
 ``` java
@@ -17,7 +16,7 @@ public class Solution {
     class TrieNode {
         boolean isWord = false;
         TrieNode[] children = new TrieNode[26];
-    } 
+    }
     class Trie {
         TrieNode root = new TrieNode();
         public void insert(String word) {
@@ -30,7 +29,7 @@ public class Solution {
             }
             curr.isWord = true;
         }
-        
+
         public boolean startsWith(String prefix) {
             TrieNode curr = root;
             for (char c : prefix.toCharArray()) {
@@ -41,7 +40,7 @@ public class Solution {
             }
             return true;
         }
-        
+
         public boolean search(String word) {
             TrieNode curr = root;
             for (char c : word.toCharArray()) {
@@ -53,8 +52,8 @@ public class Solution {
             return curr.isWord;
         }
     }
-     
-     
+
+
     public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
         // write your code here
         ArrayList<String> result = new ArrayList<String>();
@@ -73,7 +72,7 @@ public class Solution {
         result.addAll(set);
         return result;
     }
-    
+
     public void helper(char[][] board, int i, int j, Trie trie, String path, boolean[][] visited, HashSet<String> set) {
         if (trie.search(path)) {
             set.add(new String(path));
@@ -91,41 +90,52 @@ public class Solution {
     }
 }
 ```
-``` java
-public class Solution {
-    public ArrayList<String> wordSearchII(char[][] board, ArrayList<String> words) {
-        ArrayList<String> result = new ArrayList<String>();
-        if (board == null || board.length == 0 || words == null || words.size() == 0) return result;        
-        for (String word : words) {
-            if (exist(board, word)) {
-                result.add(word);
-            }
-        }
-        return result;
-    }    
-    public boolean exist(char[][] board, String word) {
-        int row = board.length, col = board[0].length;
-        boolean[][] visited = new boolean[row][col];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-            //each time a brand new visited is passed to find method
-                if (find(board, i, j, word, 0, visited)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }    
-    public boolean find(char[][] board, int i, int j, String word, int start, boolean[][] visited) {
-        if (start == word.length()) return true;
-        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || visited[i][j] || board[i][j] != word.charAt(start)) {
-            return false;
-        }
-        visited[i][j] = true;//we don't want to modify the original matrix, but we can't use board[i][j] in following search, so we mark it visited
-        if (find(board, i+1, j, word, start + 1, visited) || find(board, i - 1, j, word, start + 1, visited) || find(board, i, j + 1, word, start + 1, visited) || find(board, i , j - 1, word, start + 1, visited)) {
-            return true;
-        }
-        visited[i][j] = false;
-        return false;
-    }
+
+``` python
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.is_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        curr = self.root
+        for c in word:
+            if c not in curr.children:
+                curr.children[c] = TrieNode()
+            curr = curr.children[c]
+        curr.is_word = True
+
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        if not board or not words:
+            return []
+        trie = Trie()
+        for word in words:
+            trie.insert(word)
+        ret = []
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                self.helper(board, i, j, trie.root, "", ret)
+        return ret
+
+    def helper(self, board, i, j, curr, path, ret):
+        if curr.is_word:
+            ret.append(path)
+            curr.is_word = False
+        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or board[i][j] not in curr.children:
+            return
+        tmp = board[i][j]
+        curr = curr.children[tmp]
+        board[i][j] = "#"
+        path += tmp
+        self.helper(board, i + 1, j, curr, path, ret)
+        self.helper(board, i - 1, j, curr, path, ret)
+        self.helper(board, i, j - 1, curr, path, ret)
+        self.helper(board, i, j + 1, curr, path, ret)
+        path = path[:-1]
+        board[i][j] = tmp
 ```
