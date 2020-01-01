@@ -34,25 +34,17 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def maximalSquare(self, matrix):
-        """
-        :type matrix: List[List[str]]
-        :rtype: int
-        """
-
+class Solution:
+    def maximalSquare(self, matrix: List[List[str]]) -> int:
         if not matrix:
             return 0
 
-        row, col = len(matrix), len(matrix[0])
-        dp = [[0] * col for i in xrange(row)]
-        max_len = 0
-        for i in xrange(row):
-            for j in xrange(col):
-                if i == 0 or j == 0:
-                    dp[i][j] = int(matrix[i][j])
-                elif matrix[i][j] == "1":
-                    dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
-                max_len = max(max_len, dp[i][j])
-        return max_len ** 2
+        ret = 0
+        dp = [[int(matrix[i][j]) for j in range(len(matrix[0]))] for i in range(len(matrix))]
+        for i in range(1, len(matrix)):
+            for j in range(1, len(matrix[0])):
+                if matrix[i][j] == "1":
+                    dp[i][j] = min(dp[i-1][j], dp[i-1][j-1], dp[i][j-1]) + 1
+        ret = max([max(row) for row in dp])
+        return ret ** 2
 ```
