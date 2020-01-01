@@ -1,0 +1,49 @@
+---
+layout: post
+title: 460 - Lfu Cache
+date: 2020-01-01
+tags:
+- Leetcode
+categories:
+- Data Structure
+author: Jason
+---
+Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.**
+
+* get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+* put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item. For the purpose of this problem, when there is a tie (i.e., two or more keys that have the same frequency), the least recently used key would be evicted.
+
+**Note that the number of times an item is used is the number of calls to the get and put functions for that item since it was inserted. This number is set to zero when the item is removed.**
+
+```python
+class LFUCache:
+
+    def __init__(self, capacity: int):
+        self.pair = {}
+        self.usage = {}
+        self.capacity = capacity
+        self.time = 0
+
+    def get(self, key: int) -> int:
+        self.time += 1
+        if key in self.pair:
+            self.usage[key][0] += 1
+            self.usage[key][1] = self.time
+            return self.pair[key]
+        return -1
+
+    def put(self, key: int, value: int) -> None:
+        if self.capacity == 0:
+            return
+        self.time += 1
+        if key not in self.pair and len(self.pair) == self.capacity:
+            self.remove_least_recent()
+        self.pair[key] = value
+        self.usage[key] = [self.usage.get(key, [0, 0])[0] + 1, self.time]
+
+    def remove_least_recent(self):
+        if self.usage:
+            to_remove = min(self.usage, key=self.usage.get)
+            del self.pair[to_remove]
+            del self.usage[to_remove]
+```
