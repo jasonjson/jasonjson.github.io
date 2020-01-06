@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find Median from Data Stream
+title: 295 Find Median from Data Stream
 date: 2015-10-28 16:25:11.000000000 -04:00
 tags:
 - Leetcode
@@ -8,18 +8,14 @@ categories:
 - Data Structure
 author: Jason
 ---
-<p><strong><em>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.</em></strong></p>
+**Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value. Design a data structure that supports the following two operations:**
 
+* void addNum(int num) - Add a integer number from the data stream to the data structure.
+* double findMedian() - Return the median of all elements so far.
 
-<p>Examples:</p>
-[2,3,4] , the median is 3</p>
-<p>[2,3], the median is (2 + 3) / 2 = 2.5</p>
-<p>Design a data structure that supports the following two operations:</p>
-<p>void addNum(int num) - Add a integer number from the data stream to the data structure.</p>
-double findMedian() - Return the median of all elements so far.</p>
 ``` java
 class MedianFinder {
-    
+
     PriorityQueue<Integer> max = new PriorityQueue<Integer>(10, Collections.reverseOrder());
     PriorityQueue<Integer> min = new PriorityQueue<Integer>();
     int count = 0;
@@ -48,4 +44,33 @@ class MedianFinder {
         }
     }
 };
+```
+``` python
+from heapq import heappush, heappop
+class MedianFinder:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.count = 0
+        self.max_part = []
+        self.min_part = []
+
+    def addNum(self, num: int) -> None:
+        self.count += 1
+        if not self.max_part or num > self.max_part[0]:
+            heappush(self.max_part, num)
+        else:
+            heappush(self.min_part, -num)
+
+        if len(self.min_part) > len(self.max_part):
+            heappush(self.max_part, -heappop(self.min_part))
+        if len(self.max_part) > len(self.min_part) + 1:
+            heappush(self.min_part, -heappop(self.max_part))
+    def findMedian(self) -> float:
+        if self.count % 2 == 0:
+            return (self.max_part[0] - self.min_part[0]) / 2
+        else:
+            return self.max_part[0]
 ```
