@@ -36,16 +36,12 @@ public class Solution { //level order traversal
 ```
 
 ``` python
-class Solution(object):
-    def rightSideView(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[int]
-        """
-
+class Solution:
+    def rightSideView(self, root: TreeNode) -> List[int]:
         if not root:
             return []
-        prev, ret = [root], []
+        ret = []
+        prev = [root]
         while prev:
             curr = []
             ret.append(prev[-1].val)

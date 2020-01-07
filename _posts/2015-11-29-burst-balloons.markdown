@@ -39,26 +39,18 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def maxCoins(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+class Solution:
+    def maxCoins(self, nums: List[int]) -> int:
         if not nums:
             return 0
 
-        balloon = [1]
-        for num in nums:
-            if num > 0:
-                balloon.append(num)
-        balloon.append(1)
-        size = len(balloon)
-        dp = [[0] * size for i in xrange(size)]
-        for i in xrange(3, size + 1):
-            for left in xrange(size - i + 1):
+        nums = [num for num in nums if num > 0]
+        nums = [1] + nums + [1]
+        dp = [[0] * len(nums) for _ in range(len(nums))]
+        for i in range(3, len(nums) + 1):
+            for left in range(len(nums) - i + 1):
                 right = left + i - 1
-                for j in xrange(left + 1, right):
-                    dp[left][right] = max(dp[left][right], balloon[left] * balloon[j] * balloon[right] + dp[left][j] + dp[j][right])
+                for j in range(left + 1, right):
+                    dp[left][right] = max(dp[left][right], nums[left] * nums[j] * nums[right] + dp[left][j] + dp[j][right])
         return dp[0][-1]
 ```
