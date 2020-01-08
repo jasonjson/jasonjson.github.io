@@ -49,19 +49,16 @@ class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def findKthLargest(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        if not nums:
+            return -1
 
-        return self.helper(k, nums, 0, len(nums) - 1)
+        return self.helper(nums, k, 0, len(nums) - 1)
 
-    def helper(self, k, nums, start, end):
+    def helper(self, nums, k, start, end):
         lo, hi, pivot = start, end, end
-        while lo <= hi:
+        while lo < hi:
             if nums[lo] < nums[pivot]:
                 lo += 1
                 continue
@@ -73,7 +70,7 @@ class Solution(object):
         if lo == len(nums) - k:
             return nums[lo]
         elif lo > len(nums) - k:
-            return self.helper(k, nums, start, lo - 1)
+            return self.helper(nums, k, start, lo - 1)
         else:
-            return self.helper(k, nums, lo + 1, end)
+            return self.helper(nums, k, lo + 1, end)
 ```
