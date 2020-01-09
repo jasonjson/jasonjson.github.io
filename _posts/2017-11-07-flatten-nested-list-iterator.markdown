@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 341 - Flatten Nested List Iterator
-date: 2017-11-07
+date: 2020-01-09
 tags:
 - Leetcode
 categories:
@@ -66,4 +66,30 @@ class NestedIterator(object):
         :rtype: bool
         """
         return self.list
+```
+
+``` python
+class NestedIterator:
+    def __init__(self, nestedList: [NestedInteger]):
+        self.stack = [[nestedList, 0]]
+
+
+    def next(self) -> int:
+        self.hasNext()
+        nestedList, index = self.stack[-1]
+        self.stack[-1][1] += 1
+        return nestedList[index].getInteger()
+
+    def hasNext(self) -> bool:
+        while self.stack:
+            nestedList, index = self.stack[-1]
+            if index == len(nestedList):
+                self.stack.pop()
+            else:
+                nestedInteger = nestedList[index]
+                if nestedInteger.isInteger():
+                    return True
+                self.stack[-1][1] += 1
+                self.stack.append([nestedInteger.getList(), 0])
+        return False
 ```

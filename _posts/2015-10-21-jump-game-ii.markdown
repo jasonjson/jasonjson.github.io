@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 45 - Jump Game II
-date: 2020-01-09 21:02:23.000000000 -04:00
+date: 2020-01-09
 tags:
 - Leetcode
 categories:
