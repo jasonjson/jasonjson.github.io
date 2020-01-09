@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 45 - Jump Game II
-date: 2015-10-21 21:02:23.000000000 -04:00
+date: 2020-01-09 21:02:23.000000000 -04:00
 tags:
 - Leetcode
 categories:
@@ -35,16 +35,11 @@ public class Solution {
 
 ``` python
 class Solution:
-    def jump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-
+    def jump(self, nums: List[int]) -> int:
         if not nums:
             return 0
 
-        rightmost = end = count = 0
+        rightmost = count = end = 0
         for i in range(len(nums) - 1):
             rightmost = max(rightmost, i + nums[i])
             if i == end:
@@ -53,4 +48,19 @@ class Solution:
                 if end >= len(nums) - 1:
                     break
         return count
+```
+
+``` python
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+
+        dp = [float("inf")] * len(nums)
+        dp[0] = 0
+        for i in range(1, len(nums)):
+            for j in range(i):
+                if i - j <= nums[j]:
+                    dp[i] = min(dp[i], dp[j] + 1)
+        return dp[-1]
 ```
