@@ -12,13 +12,8 @@ author: Jason
 
 
 ```python
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def plusOne(self, head: ListNode) -> ListNode:
 
         if not head:
             return
@@ -34,5 +29,4 @@ class Solution(object):
             last_node.next.val = 0
             last_node = last_node.next
         return dummy if dummy.val == 1 else dummy.next
-
 ```

@@ -12,13 +12,8 @@ author: Jason
 
 
 ```python
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def getModifiedArray(self, length: int, updates: List[List[int]]) -> List[int]:
 
         if not length:
             return []

@@ -11,13 +11,8 @@ author: Jason
 **Given n points on a 2D plane, find if there is such a line parallel to y-axis that reflect the given set of points.**
 
 ```python
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def isReflected(self, points: List[List[int]]) -> bool:
         if not points:
             return True
 
