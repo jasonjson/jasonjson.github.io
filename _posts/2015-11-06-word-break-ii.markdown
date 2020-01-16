@@ -12,12 +12,7 @@ Given a string s and a dictionary of words dict, add spaces in s to construct a 
 
 ``` python
 class Solution(object):
-    def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: Set[str]
-        :rtype: List[str]
-        """
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
         return self.helper(s, wordDict, {})
 
     def helper(self, s, wordDict, memo):
