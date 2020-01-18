@@ -52,27 +52,26 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def findOrder(self, numCourses, prerequisites):
-        """
-        :type numCourses: int
-        :type prerequisites: List[List[int]]
-        :rtype: List[int]
-        """
+from collections import defaultdict
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        if not numCourses:
+            return []
 
-        degree_list = [0] * numCourses
-        prere_list = [[] for i in xrange(numCourses)]
-        for x, y in prerequisites:
-            degree_list[x] += 1
-            prere_list[y].append(x)
+        course_map = defaultdict(list)
+        course_depth = {i: 0 for i in range(numCourses)}
+
+        for a, b in prerequisites:
+            course_map[b].append(a)
+            course_depth[a] += 1
         ret = []
-        stack = [index for index, i in enumerate(degree_list) if i == 0]
-        while stack:
-            curr = stack.pop()
+        queue = [c for c in course_depth if course_depth[c] == 0]
+        while queue:
+            curr = queue.pop(0)
             ret.append(curr)
-            for j in prere_list[curr]:
-                degree_list[j] -= 1
-                if degree_list[j] == 0:
-                    stack.append(j)
+            for next_one in course_map[curr]:
+                course_depth[next_one] -= 1
+                if course_depth[next_one] == 0:
+                    queue.append(next_one)
         return ret if len(ret) == numCourses else []
 ```
