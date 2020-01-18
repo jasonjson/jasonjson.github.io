@@ -1,47 +1,25 @@
 ---
 layout: post
-title: 235 - Lowest Common Ancestor of a Binary Search Tree
-date: 2015-11-02 16:51:12.000000000 -05:00
+title: 236 - Lowest Common Ancestor of a Binary Search Tree
+date: 2020-01-18
 tags:
 - Leetcode
 categories:
 - Binary Search Tree
 author: Jason
 ---
-**Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.**
-
-
-``` java
-public class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) return null;
-        if (root.val > p.val && root.val > q.val) {
-            return lowestCommonAncestor(root.left, p, q);
-        } else if (root.val < p.val && root.val < q.val) {
-            return lowestCommonAncestor(root.right, p, q);
-        } else {
-            return root;
-        }
-    }
-}
-```
+Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST. The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).
 
 ``` python
-class Solution(object):
-    def lowestCommonAncestor(self, root, p, q):
-        """
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        """
-
-        if not root:
-            return
-        if root.val > p.val and root.val > q.val:
-            return self.lowestCommonAncestor(root.left, p, q)
-        elif root.val < p.val and root.val < q.val:
-            return self.lowestCommonAncestor(root.right, p, q)
-        else:
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if root in (None, p, q):
             return root
+
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        if left and right:
+            return root
+        else:
+            return left or right
 ```

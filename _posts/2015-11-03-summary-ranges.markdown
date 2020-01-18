@@ -1,14 +1,14 @@
 ---
 layout: post
 title: 228 - Summary Ranges
-date: 2015-11-03 12:00:26.000000000 -05:00
+date: 2020-01-18
 tags:
 - Leetcode
 categories:
 - Brain Teaser
 author: Jason
 ---
-**Given a sorted integer array without duplicates, return the summary of its ranges. For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].**
+Given a sorted integer array without duplicates, return the summary of its ranges. For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].
 
 
 ``` java
@@ -38,28 +38,17 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def summaryRanges(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[str]
-        """
-
+class Solution:
+    def summaryRanges(self, nums: List[int]) -> List[str]:
         if not nums:
             return []
 
-        ret = []
-        start = 0
-        for i in xrange(1, len(nums)):
-            if nums[i] > nums[i - 1] + 1:
-                ret.append(self.helper(nums[start], nums[i - 1]))
-                start = i
-        ret.append(self.helper(nums[start], nums[-1]))
-        return ret
-
-    def helper(self, num1, num2):
-        if num1 == num2:
-            return str(num1)
-        else:
-            return str(num1) + "->" + str(num2)
+        ret = [[nums[0]]]
+        for num in nums[1:]:
+            prev = ret[-1][-1]
+            if num > prev + 1:
+                ret.append([num])
+            else:
+                ret[-1][1:] = num,
+        return ["->".join(map(str, n)) for n in ret]
 ```
