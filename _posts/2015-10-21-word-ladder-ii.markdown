@@ -10,64 +10,59 @@ author: Jason
 ---
 **Given two words (start and end), and a dictionary, find all shortest transformation sequence(s) from start to end.**
 
+``` python
+from typing import List
+from collections import defaultdict
+class Solution:
+    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+        if not wordList:
+            return []
 
-``` java
-public class Solution {
-    public static List<List<String>> findLadders(String beginWord, String endWord, Set<String> wordList) {
-        List<List<String>> result = new ArrayList<List<String>>();
+        word_map = self.construct(wordList)
+        visited = {beginWord}
+        ret = []
+        step = self.find_step(beginWord, endWord, word_map)
+        self.helper(visited, endWord, word_map, [beginWord], ret, step)
+        return ret
 
-        wordList.add(beginWord);
-        wordList.add(endWord);
-        HashMap<String, Integer> dist = new HashMap<String, Integer>();
-        bfs(beginWord, dist, wordList);
-        List<String> path = new ArrayList<>();
-        path.add(endWord);
-        dfs(endWord, beginWord, dist, wordList, path, result);
-        return result;
-    }
-    public static void bfs(String start, HashMap<String, Integer> dist, Set<String> wordList) {
-        Queue<String> q = new LinkedList<String>();
-        q.offer(start);
-        dist.put(start, 0);
-        while (!q.isEmpty()) {
-            String curr = q.poll();
-            for (String s : getWord(curr, wordList)) {
-                if (!dist.containsKey(s)) {
-                    q.offer(s);
-                    dist.put(s, dist.get(curr) + 1);
-                }
-            }
-        }
-    }
-    public static void dfs(String end, String start, HashMap<String, Integer> dist, Set<String> wordList, List<String> path, List<List<String>> result) {
-        if (end.equals(start)) {
-            Collections.reverse(path);
-            result.add(new ArrayList<String>(path));
-            Collections.reverse(path);
-            return;
-        }
-        for (String s : getWord(end, wordList)) {
-            if (dist.containsKey(s) && dist.get(s) + 1 == dist.get(end)) {
-                path.add(s);
-                dfs(s, start, dist, wordList, path, result);
-                path.remove(path.size() - 1);
-            }
-        }
-    }
-    public static Set<String> getWord(String s, Set<String> wordList) {
-        Set<String> result = new HashSet<String>();
-        for (int i = 0; i < s.length(); i++) {
-            char[] chars = s.toCharArray();
-            for (char c = 'a'; c <= 'z'; c++) {
-                if (chars[i] == c) continue;
-                chars[i] = c;
-                String newS = String.valueOf(chars);
-                if (wordList.contains(newS)) {
-                    result.add(newS);
-                }
-            }
-        }
-        return result;
-    }
-}
+    def find_step(self, beginWord, endWord, word_map):
+        queue = [(beginWord, 1)]
+        visited = set()
+        while queue:
+            curr, step = queue.pop(0)
+            if curr == endWord:
+                return step
+            visited.add(curr)
+            step += 1
+            for i in range(len(curr)):
+                new_curr = curr[:i] + "_" + curr[i+1:]
+                for candidate in word_map[new_curr]:
+                    if candidate not in visited:
+                        queue.append((candidate, step))
+        return 0
+
+    def helper(self, visited, endWord, word_map, path, ret, step):
+        if len(path) > step:
+            return
+        elif path[-1] == endWord:
+            ret.append(path[:])
+            return
+        prev = path[-1]
+        for i in range(len(prev)):
+            new_word = prev[:i] + "_" + prev[i+1:]
+            for candidate in word_map[new_word]:
+                if candidate not in visited:
+                    path.append(candidate)
+                    visited.add(candidate)
+                    self.helper(visited, endWord, word_map, path, ret, step)
+                    visited.remove(candidate)
+                    path.pop()
+
+    def construct(self, wordList):
+        word_map = defaultdict(list)
+        for word in wordList:
+            for i in range(len(word)):
+                new_word = word[:i] + "_" + word[i+1:]
+                word_map[new_word].append(word)
+        return word_map
 ```
