@@ -1,0 +1,57 @@
+---
+layout: post
+title: 716 - Max Stack
+date: 2020-01-20
+tags:
+- Leetcode
+categories:
+- Data Structure
+author: Jason
+---
+Design a max stack that supports push, pop, top, peekMax and popMax.
+
+1. push(x) -- Push element x onto stack.
+2. pop() -- Remove the element on top of the stack and return it.
+3. top() -- Get the element on the top.
+4. peekMax() -- Retrieve the maximum element in the stack.
+5. popMax() -- Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.
+
+```python
+from heapq import heappush, heappop
+class MaxStack:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.stack = []
+        self.pq = []
+        self.stack_deleted = set()
+        self.pq_deleted = set()
+        self.id = 1
+
+    def push(self, x: int) -> None:
+        heappush(self.pq, (-x, -self.id))
+        self.stack.append((x, self.id))
+        self.id += 1
+
+    def pop(self) -> int:
+        ret = self.top()
+        self.stack_deleted.add(self.stack.pop()[1])
+        return ret
+
+    def top(self) -> int:
+        while self.stack[-1][1] in self.pq_deleted:
+            self.stack.pop()
+        return self.stack[-1][0]
+
+    def peekMax(self) -> int:
+        while -self.pq[0][1] in self.stack_deleted:
+            heappop(self.pq)
+        return -self.pq[0][0]
+
+    def popMax(self) -> int:
+        ret = self.peekMax()
+        self.pq_deleted.add(-heappop(self.pq)[1])
+        return ret
+```
