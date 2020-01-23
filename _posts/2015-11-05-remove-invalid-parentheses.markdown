@@ -61,7 +61,6 @@ public class Solution {
 ``` python
 class Solution:
     def removeInvalidParentheses(self, s: str) -> List[str]:
-
         def is_valid(s):
             count = 0
             for c in s:
@@ -78,5 +77,5 @@ class Solution:
             found = list(filter(is_valid, level))
             if found:
                 return found
-            level = {a[:i] + a[i+1:] for a in level for i in range(len(a))}
+            level = {a[:i] + a[i+1:] for a in level for i in range(len(a)) if a[i] in "()"}
 ```
