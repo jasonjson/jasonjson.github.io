@@ -78,7 +78,7 @@ class Solution(object):
 
     def is_valid(self, board, i, j , x):
         for k in range(9):
-            if board[i][k] == x or board[k][j] == x or board[i - i % 3 + k / 3][j - j % 3 + k % 3] == x:
+            if x in (board[i][k], board[k][j], board[i - i % 3 + k / 3][j - j % 3 + k % 3]):
                 return False
         return True
 ```
