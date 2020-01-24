@@ -24,5 +24,6 @@ class Solution:
                 pre_word = word[:i] + word[i+1:]
                 if pre_word in word_count:
                     word_count[word] = word_count[pre_word] + 1
+                    break
         return max(word_count.values())
 ```
