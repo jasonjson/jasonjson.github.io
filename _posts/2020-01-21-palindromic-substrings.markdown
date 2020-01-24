@@ -24,9 +24,6 @@ class Solution:
                 right += 1
             return count
 
-        ret = 0
-        for i in range(len(s)):
-            ret += count(i, i)
-            ret += count(i, i + 1)
-        return ret
+        counts = [count(i, i) + count(i, i + 1) for i in range(len(s))]
+        return sum(counts)
 ```
