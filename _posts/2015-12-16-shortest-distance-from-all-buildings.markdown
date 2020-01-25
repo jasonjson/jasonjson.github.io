@@ -8,119 +8,40 @@ categories:
 - Matrix
 author: Jason
 ---
-**You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2, where:**
+You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You are given a 2D grid of values 0, 1 or 2. The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.
 
 * Each 0 marks an empty land which you can pass by freely.
 * Each 1 marks a building which you cannot pass through.
 * Each 2 marks an obstacle which you cannot pass through.
-**The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.**
-
-
-``` java
-//this problem is only slightly different from "best meeting points", but the algorithm is quite different
-public class Solution {
-    public int shortestDistance(int[][] grid) {
-        if (grid == null || grid.length == 0) return -1;
-
-        int row = grid.length, col = grid[0].length;
-        int[][] num = new int[row][col]; //visited buildings at each point
-        int[][] dist = new int[row][col]; //total distance for each point
-        int buildings = 0; //number of buidlings visited
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (grid[i][j] == 1) {
-                    buildings ++;
-                    boolean[][] visited = new boolean[row][col];
-                    Queue<int[]> q = new LinkedList<int[]>();
-                    q.offer(new int[]{i, j});//[i][j] is like a root, we do bfs
-                    int distance = 0;
-                    while (!q.isEmpty()) {
-                        int size = q.size();
-                        for (int k = 0; k < size; k++) {
-                            int[] point = q.poll();
-                            int x = point[0], y = point[1];
-                            num[x][y] ++;//one more point gets visited
-                            dist[x][y] += distance;//update distance for this point
-                            if (x - 1 >= 0 && grid[x - 1][y] == 0 && !visited[x - 1][y]) {
-                                q.offer(new int[]{x - 1, y});
-                                visited[x - 1][y] = true;
-                            }
-                            if (x + 1 < row && grid[x + 1][y] == 0 && !visited[x + 1][y]) {
-                                q.offer(new int[]{x + 1, y});
-                                visited[x + 1][y] = true;
-                            }
-                            if (y - 1 >= 0 && grid[x][y - 1] == 0 && !visited[x][y - 1]) {
-                                q.offer(new int[]{x, y - 1});
-                                visited[x][y - 1] = true;
-                            }
-                            if (y + 1 < col && grid[x][y + 1] == 0 && !visited[x][y + 1]) {
-                                q.offer(new int[]{x, y + 1});
-                                visited[x][y + 1] = true;
-                            }
-                        }
-                        distance ++;
-                    }
-                }
-            }
-        }
-        int result = Integer.MAX_VALUE;
-        for (int i = 0; i < row; i ++) {
-            for (int j = 0; j < col; j++) {
-                if (grid[i][j] == 0 && num[i][j] == buildings) {
-                    result = Math.min(result, dist[i][j]);
-                }
-            }
-        }
-        return result == Integer.MAX_VALUE ? -1 : result;
-    }
-}
-```
 
 ``` python
-class Solution(object):
-    def shortestDistance(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def shortestDistance(self, grid: List[List[int]]) -> int:
         if not grid:
-            return -1
+            return 0
 
         row, col = len(grid), len(grid[0])
-        nums = [[0] * col for _ in xrange(row)]
-        distance = [[0] * col for _ in xrange(row)]
+        dist_dict = [[0] * col for _ in range(row)]
+        count_dict = [[0] * col for _ in range(row)]
         buildings = 0
-        for i in xrange(row):
-            for j in xrange(col):
-                if grid[i][j] != 1:
-                    continue
-                buildings += 1
-                visited = [[False] * col for _ in xrange(row)]
-                queue = collections.deque()
-                queue.append([i, j])
-                dist = 0
-                while queue:
-                    for _ in xrange(len(queue)):
-                        x, y = queue.popleft()
-                        nums[x][y] += 1
-                        distance[x][y] += dist
-                        if x - 1 >= 0 and grid[x - 1][y] == 0 and not visited[x - 1][y]:
-                            queue.append([x-1, y])
-                            visited[x-1][y] = True
-                        if x + 1 < row and grid[x + 1][y] == 0 and not visited[x + 1][y]:
-                            queue.append([x+1, y])
-                            visited[x+1][y] = True
-                        if y - 1 >= 0 and grid[x][y - 1] == 0 and not visited[x][y - 1]:
-                            queue.append([x, y - 1])
-                            visited[x][y - 1] = True
-                        if y + 1 < col and grid[x][y + 1] == 0 and not visited[x][y + 1]:
-                            queue.append([x, y + 1])
-                            visited[x][y + 1] = True
-                    dist += 1
-        ret = 2 ** 31 - 1
-        for i in xrange(row):
-            for j in xrange(col):
-                if grid[i][j] == 0 and nums[i][j] == buildings:
-                    ret = min(ret, distance[i][j])
-        return ret if ret != 2 ** 31 - 1 else -1
+
+        def dfs(queue, visited):
+            while queue:
+                i, j, distance = queue.pop(0)
+                dist_dict[i][j] += distance
+                count_dict[i][j] += 1
+                for new_i, new_j in (i + 1, j), (i - 1, j), (i, j - 1), (i, j + 1):
+                    if 0 <= new_i < row and 0 <= new_j < col and grid[new_i][new_j] == 0 and not visited[new_i][new_j]:
+                        visited[new_i][new_j] = True
+                        queue.append([new_i, new_j, distance + 1])
+
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j] == 1:
+                    buildings += 1
+                    visited = [[False] * col for _ in range(row)]
+                    dfs([[i, j, 0]], visited)
+
+        candidates = [dist_dict[i][j] for i in range(row) for j in range(col) if grid[i][j] == 0 and count_dict[i][j] == buildings]
+        return min(candidates) if candidates else -1
 ```
