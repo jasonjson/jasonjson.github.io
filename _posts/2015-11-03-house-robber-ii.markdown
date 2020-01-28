@@ -10,50 +10,19 @@ author: Jason
 ---
 **After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get too much attention. This time, all houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, the security system for these houses remain the same as for those in the previous street. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.**
 
-
-``` java
-public class Solution {
-    //Taking into account this circular constraint, either we rob the house at index 0, or the house at last index n. In order to reduce this problem to the simpler problem House Robber I, we need to remove the circular condition.
-    //If we assume that the house at index 0 is not robbed, then we can compute the maximum robbed value using the same algorithm for the linear problem House Robber I.
-    //In the same way, we compute the maximum robbed value by assuming that the house at last index n is not robbed.
-    public int rob(int[] nums) {
-        if (nums == null || nums.length == 0) return 0;
-        int n = nums.length;
-        if (n == 1) return nums[0];
-        if (n == 2) return Math.max(nums[0], nums[1]);
-        return Math.max(helper(Arrays.copyOfRange(nums, 0, nums.length-1)), helper(Arrays.copyOfRange(nums, 1, nums.length)));
-    }
-
-    public int helper(int[] nums) {
-        int n = nums.length;
-        nums[1] = Math.max(nums[0], nums[1]);
-        for (int i = 2; i < n; i++) {
-            nums[i] = Math.max(nums[i - 2] + nums[i], nums[i - 1]);
-        }
-        return nums[n-1];
-    }
-}
-```
-
 ``` python
-class Solution(object):
-    def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        if len(nums) == 0:
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if not nums:
             return 0
         elif len(nums) == 1:
             return nums[0]
-        elif len(nums) == 2:
-            return max(nums[0], nums[1])
 
-        return max(self.helper(nums[: -1]), self.helper(nums[1:]))
+        def helper(nums):
+            prev = now = 0
+            for num in nums:
+                prev, now = now, max(prev + num, now)
+            return now
 
-    def helper(self, nums):
-        nums[1] = max(nums[0], nums[1])
-        for i in xrange(2, len(nums)):
-            nums[i] = max(nums[i - 2] + nums[i], nums[i - 1])
-        return nums[-1]
+        return max(helper(nums[:-1]), helper(nums[1:]))
 ```
