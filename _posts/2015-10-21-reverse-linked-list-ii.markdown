@@ -10,62 +10,21 @@ author: Jason
 ---
 **Reverse a linked list from position m to n.**
 
-
-``` java
-public class Solution {
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        int index = 1;
-        ListNode prev = dummy;
-        while (index < m) {
-            index ++;
-            prev = prev.next;
-        }
-        ListNode last = prev.next, curr = last.next;
-        while (index < n) {
-            index ++;
-            last.next = curr.next;
-            curr.next = prev.next;
-            prev.next = curr;
-            curr = last.next;
-        }
-        return dummy.next;
-    }
-}
-```
-
 ``` python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def reverseBetween(self, head, m, n):
-        """
-        :type head: ListNode
-        :type m: int
-        :type n: int
-        :rtype: ListNode
-        """
-
-        if not head:
-            return
-
-        index = 1
-        dummy, dummy.next = ListNode(0), head
-        prev = dummy
-        while index < m:
-            index += 1
+class Solution:
+    def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
+        dummy = ListNode(0)
+        dummy.next = head
+        prev, curr = dummy, head
+        for _ in range(m - 1):
             prev = prev.next
-        last, curr = prev.next, prev.next.next
-        while index < n:
-            index += 1
-            last.next = curr.next
-            curr.next = prev.next
-            prev.next = curr
-            curr = last.next
+            curr = curr.next
+
+        for _ in range(n - m):
+            tmp = curr.next
+            curr.next = tmp.next
+            tmp.next = prev.next
+            prev.next = tmp
+
         return dummy.next
 ```
