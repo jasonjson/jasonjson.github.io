@@ -10,49 +10,19 @@ author: Jason
 ---
 **Given an array of n positive integers and a positive integer s, find the minimal length of a subarray of which the sum >= s. If there isn't one, return -1 instead.**
 
-
-``` java
-public class Solution {
-    /**
-     * @param nums: an array of integers
-     * @param s: an integer
-     * @return: an integer representing the minimum size of subarray
-     */
-    public int minimumSize(int[] nums, int s) {
-        if (nums == null || nums.length == 0) return -1;
-        int start = 0, sum = 0, len = nums.length + 1;
-        for (int i = start; i < nums.length; i++) {
-            sum += nums[i];
-            while (sum >= s) {
-                len = Math.min(len, i - start + 1);
-                sum -= nums[start++];//先从sum减去再increment start,不能弄反
-                //不论减去后sum是正是负都没关系，已经记录了len
-            }
-        }
-        return len == nums.length + 1 ? -1 : len;
-    }
-}
-```
-
 ``` python
-class Solution(object):
-    def minSubArrayLen(self, s, nums):
-        """
-        :type s: int
-        :type nums: List[int]
-        :rtype: int
-        """
-
+class Solution:
+    def minSubArrayLen(self, s: int, nums: List[int]) -> int:
         if not nums:
             return 0
 
-        start = summation = 0
-        ret= len(nums) + 1
+        start = sums = 0
+        ret = float("inf")
         for i, num in enumerate(nums):
-            summation += num
-            while summation >= s:
+            sums += num
+            while sums >= s:
                 ret = min(ret, i - start + 1)
-                summation -= nums[start]
+                sums -= nums[start]
                 start += 1
-        return ret if ret != len(nums) + 1 else 0
+        return ret if ret != float("inf") else 0
 ```
