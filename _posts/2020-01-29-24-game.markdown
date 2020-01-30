@@ -1,0 +1,31 @@
+---
+layout: post
+title: 679 - 24 Game
+date: 2020-01-29
+tags:
+- Leetcode
+categories:
+- Array
+author: Jason
+---
+You have 4 cards each containing a number from 1 to 9. You need to judge whether they could operated through *, /, +, -, (, ) to get the value of 24.
+
+```python
+class Solution:
+    def judgePoint24(self, nums: List[int]) -> bool:
+        if len(nums) == 1:
+            return round(nums[0], 4) == 24
+
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                a, b = nums[i], nums[j]
+                rest_nums = [x for k, x in enumerate(nums) if i != k != j]
+                candidates = {a + b, abs(a - b), a * b}
+                if b != 0:
+                    candidates.add(a / b)
+                if a != 0:
+                    candidates.add(b / a)
+                if any(self.judgePoint24(rest_nums + [x]) for x in candidates):
+                    return True
+        return False
+```
