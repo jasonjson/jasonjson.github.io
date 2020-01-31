@@ -1,0 +1,28 @@
+---
+layout: post
+title: 456 - 132 Pattern
+date: 2020-01-31
+tags:
+- Leetcode
+categories:
+- Array
+author: Jason
+---
+Given a sequence of n integers a1, a2, ..., an, a 132 pattern is a subsequence ai, aj, ak such that i < j < k and ai < ak < aj. Design an algorithm that takes a list of n numbers as input and checks whether there is a 132 pattern in the list.
+
+```python
+class Solution:
+    def find132pattern(self, nums: List[int]) -> bool:
+        if not nums:
+            return False
+
+        stack = []
+        mid = -float("inf")
+        for num in reversed(nums):
+            if num < mid:
+                return True
+            while stack and stack[-1] < num:
+                mid = stack.pop()
+            stack.append(num)
+        return False
+```
