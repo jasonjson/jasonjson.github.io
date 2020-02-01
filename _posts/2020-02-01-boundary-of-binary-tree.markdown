@@ -19,11 +19,14 @@ class Solution:
         ret = [root.val]
         def get_left(curr):
             if not curr or (not curr.left and not curr.right):
+                #don't include leaf node in left boundary
                 return
             ret.append(curr.val)
             get_left(curr.left) if curr.left else get_left(curr.right)
+
         def get_right(curr):
             if not curr or (not curr.left and not curr.right):
+                #don't include leaf node in right boundary
                 return
             get_right(curr.right) if curr.right else get_right(curr.left)
             ret.append(curr.val)
