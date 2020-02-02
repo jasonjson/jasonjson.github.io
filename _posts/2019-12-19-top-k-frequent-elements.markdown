@@ -5,7 +5,7 @@ date: 2019-12-19
 tags:
 - Leetcode
 categories:
-- List
+- Array
 author: Jason
 ---
 **Given a non-empty array of integers, return the k most frequent elements.**

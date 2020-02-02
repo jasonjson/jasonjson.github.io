@@ -5,7 +5,7 @@ date: 2019-12-19
 tags:
 - Leetcode
 categories:
-- DFS
+- DFS Backtracking
 author: Jason
 ---
 **In a given grid, each cell can have one of three values:**

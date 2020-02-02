@@ -5,7 +5,7 @@ date: 2015-11-19 18:10:55.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- Arrary
+- Array
 author: Jason
 ---
 **Given a string s, find the length of the longest substring T that contains at most k distinct characters.**
