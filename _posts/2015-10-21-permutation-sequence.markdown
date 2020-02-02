@@ -5,7 +5,7 @@ date: 2015-10-21 03:43:20.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Permutation
+- Array
 author: Jason
 ---
 **Given n and k, return the k-th permutation sequence.**

@@ -1,16 +1,14 @@
 ---
 layout: post
-title: Palindrome Permutation II
+title: 267 - Palindrome Permutation II
 date: 2015-10-30 16:14:52.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
-- Palindrome
-- Permutation
+- Array
 author: Jason
 ---
-<p><strong><em>Given a string s, return all the palindromic permutations (without duplicates) of it. Return an empty list if no palindromic permutation could be form.</em></strong></p>
+**Given a string s, return all the palindromic permutations (without duplicates) of it. Return an empty list if no palindromic permutation could be form.**
 
 
 ``` java
@@ -18,7 +16,7 @@ public class Solution {
     public List<String> generatePalindromes(String s) {
         List<String> result = new ArrayList<String>();
         if (s == null || s.length() == 0) return result;
-        
+
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         for (char c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
@@ -38,7 +36,7 @@ public class Solution {
         helper(list, mid, visited, new StringBuilder(), result);
         return result;
     }
-    
+
     public void helper(List<character> list, String mid, boolean[] visited, StringBuilder sb, List<String> result) {
         if (sb.length() == list.size()) {
             result.add(sb.toString() + mid + sb.reverse().toString());
@@ -67,7 +65,7 @@ public class Solution {
        helper(s, "", visited, result);
        return result;
     }
-    
+
     public void helper(String s, String path, boolean[] visited, List<String> result) {
         if (path.length() == s.length() && isPali(path)) {
             result.add(new String(path));
@@ -84,7 +82,7 @@ public class Solution {
             visited[i] = false;
         }
     }
-    
+
     public boolean isPali(String s) {
         int lo = 0, hi = s.length() - 1;
         while (lo <= hi) {

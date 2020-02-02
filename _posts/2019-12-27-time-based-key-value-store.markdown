@@ -5,7 +5,7 @@ date: 2019-12-27
 tags:
 - Leetcode
 categories:
-- Sort
+- Sorting
 author: Jason
 ---
 
