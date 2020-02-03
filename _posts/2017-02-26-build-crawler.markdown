@@ -5,10 +5,10 @@ date: 2017-02-26 21:41
 tags:
 - Python
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
-<p><strong><em>Build crawler using scrapy</em></strong></p>
+**Build crawler using scrapy**
 
 ## Build the project
 `$scrapy startproject my_crawler`

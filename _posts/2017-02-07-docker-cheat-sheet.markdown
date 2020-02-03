@@ -3,12 +3,12 @@ layout: post
 title: Docker cheat sheet
 date: 2017-02-07 09:11
 categories:
-- A note
+- Reading Notes
 tags:
 - Docker
 author: Jason
 ---
-<p><strong><em>Docker cheet sheet</em></strong></p>
+**Docker cheet sheet**
 
 # Containers
  * `docker create` creates a container but does not start it.

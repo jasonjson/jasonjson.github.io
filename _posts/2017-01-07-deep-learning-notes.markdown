@@ -5,10 +5,10 @@ date: 2017-01-07 13:31
 tags:
 - Deep Learning
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
-<p><strong><em>Deep learning notes</em></strong></p>
+**Deep learning notes**
 
 # Implementing neural network
 
@@ -27,9 +27,9 @@ author: Jason
 * In mini-batch gradient descent, at every iteration, we compute the error surface with respect to some subset of the total dataset (instead of just a single example). Mini-batches strike a balance between the efficiency of batch gradient descent and the local-minima avoidance afforded by stochastic gradient descent.
 
 ## Test Sets, Validation Sets, and Overfitting
-* By building a very complex model, it’s quite easy to perfectly fit our dataset. But when we evaluate such a complex model on new data, it performs very poorly. In other words, the model does not generalize well. This is a phenomenon called overfitting, and it is one of the biggest challenges that a machine learning engineer must combat. 
-* This leads to three major observations. First, the machine learning engineer is always working with a direct trade-off between overfitting and model complexity. Second, it is very misleading to evaluate a model using the data we used to train it. Third, it’s quite likely that while we’re training our data, there’s a point in time where instead of learning useful features, we start overfitting to the training set. 
-* Let’s outline the workflow we use when building and training deep learning models. 
+* By building a very complex model, it’s quite easy to perfectly fit our dataset. But when we evaluate such a complex model on new data, it performs very poorly. In other words, the model does not generalize well. This is a phenomenon called overfitting, and it is one of the biggest challenges that a machine learning engineer must combat.
+* This leads to three major observations. First, the machine learning engineer is always working with a direct trade-off between overfitting and model complexity. Second, it is very misleading to evaluate a model using the data we used to train it. Third, it’s quite likely that while we’re training our data, there’s a point in time where instead of learning useful features, we start overfitting to the training set.
+* Let’s outline the workflow we use when building and training deep learning models.
     1. First we define our problem rigorously.
     2. We need to build a neural network architecture to solve it.
     3. Finally, we’re ready to begin gradient descent.

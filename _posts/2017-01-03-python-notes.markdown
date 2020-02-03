@@ -5,7 +5,7 @@ date: 2017-01-05 10:10
 tags:
 - Python
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
 **Python notes**
@@ -41,7 +41,7 @@ from functools import lru_cache
 def fib(n):
     if n < 2:
         return n
-    return fib(n-1) + fib(n-2) 
+    return fib(n-1) + fib(n-2)
 
 >>> print([fib(n) for n in range(10)])
 # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]

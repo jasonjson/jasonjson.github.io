@@ -5,10 +5,10 @@ date: 2017-03-27
 tags:
 - Html
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
-<p><strong><em>Add google analytics to your website</em></strong></p>
+Add google analytics to your website
 
 ## Adding analytics.js to your site
 

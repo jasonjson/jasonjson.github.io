@@ -5,7 +5,7 @@ date: 2017-04-16
 tags:
 - Python
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
 **Beautiful Soup Cheat Sheet**

@@ -5,10 +5,10 @@ date: 2017-03-14
 tags:
 - Html
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
-<p><strong><em>Useful Html tags</em></strong></p>
+**Useful Html tags**
 
 ## Layout
 * `<html>` wraps all the content on the entire page.

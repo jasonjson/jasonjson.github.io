@@ -5,7 +5,7 @@ date: 2015-11-03 22:49:09.000000000 -05:00
 tags:
 - OS
 categories:
-- A note
+- Reading Notes
 author: Jason
 ---
 <p><a href="http://career.guru99.com/">ZZ from</a></p>
