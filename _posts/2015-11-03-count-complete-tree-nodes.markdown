@@ -42,27 +42,24 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def countNodes(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        depth = self.get_depth(root)
-        count = 0
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        def get_depth(curr):
+            depth = 0
+            while curr:
+                depth += 1
+                curr = curr.left
+            return depth
+
+        ret = 0
+        depth = get_depth(root)
         while root:
-            if self.get_depth(root.right) == depth - 1:
-                count += 2 ** (depth - 1)
+            if get_depth(root.right) == depth - 1:
+                ret += 2 ** (depth - 1)
                 root = root.right
             else:
-                count += 2 ** (depth - 2)
+                ret += 2 ** (depth - 2)
                 root = root.left
             depth -= 1
-        return count
-
-    def get_depth(self, root):
-        depth = 0
-        while root:
-            depth += 1
-            root = root.left
-        return depth
+        return ret
+```
