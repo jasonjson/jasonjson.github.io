@@ -3,7 +3,8 @@ layout: post
 title: 1231 - Divide Chocolate
 date: 2020-02-03
 tags:
-- Binary Search, Greedy
+- Binary Search
+- Greedy
 categories:
 - Array
 author: Jason
