@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 731 - My Calendar Ii
+title: 731 - My Calendar II
 date: 2020-02-04
 tags:
 - Leetcode
