@@ -11,66 +11,29 @@ author: Jason
 **Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.**
 [reference](http://segmentfault.com/a/1190000003797204")
 
-``` java
-public class Solution {
-    public List<String> addOperators(String num, int target) {
-        List<String> result = new ArrayList<String>();
-        if (num == null || num.length() == 0) return result;
-
-        helper(num, target, 0, 0, "", result);
-        return result;
-    }
-
-    public void helper(String num, int target, long prev, long currRes, String path, List<String> result) {
-        if (num.length() == 0 && currRes == target) {
-            result.add(new String(path));
-            return;
-        }
-        for (int i = 1; i <= num.length(); i++) {
-            String newStr = num.substring(0, i);
-            if (newStr.charAt(0) == '0' && i > 1) return;//illegal numbers 01, 0123
-            long newNum = Long.parseLong(newStr);//use long
-            if (path.length() == 0) {//check if it's the first number
-                helper(num.substring(i), target, newNum, newNum, path + newStr, result);
-            } else {
-                helper(num.substring(i), target, newNum, currRes + newNum, path + "+" + newStr, result);
-                helper(num.substring(i), target, -newNum, currRes - newNum, path + "-" + newStr, result);
-                helper(num.substring(i), target, prev * newNum, currRes - prev + prev * newNum, path + "*" + newStr, result);
-            }
-        }
-    }
-}
-```
-
 ``` python
-class Solution(object):
-    def addOperators(self, num, target):
-        """
-        :type num: str
-        :type target: int
-        :rtype: List[str]
-        """
-
+class Solution:
+    def addOperators(self, num: str, target: int) -> List[str]:
         if not num:
             return []
 
         ret = []
-        self.helper(num, target, [], 0, 0, ret)
+        self.helper(num, target, 0, 0, [], ret)
         return ret
 
-    def helper(self, num, target, curr, prev, curr_ret, ret):
+    def helper(self, num, target, sums, prev, path, ret):
         if len(num) == 0:
-            if target == curr_ret:
-                ret.append("".join(curr))
+            if sums == target:
+                ret.append("".join(path))
             return
-        for i in xrange(1, len(num) + 1):
+        for i in range(1, len(num) + 1):
             if num[0] == "0" and i > 1:
                 continue
-            new_num = int(num[:i])
-            if len(curr) == 0:
-                self.helper(num[i:], target, [str(new_num)], new_num, new_num, ret)
+            n = int(num[:i])
+            if not path:
+                self.helper(num[i:], target, n, n, [str(n)], ret)
             else:
-                self.helper(num[i:], target, curr + ["+", str(new_num)], new_num, curr_ret + new_num, ret)
-                self.helper(num[i:], target, curr + ["-", str(new_num)], -new_num, curr_ret - new_num, ret)
-                self.helper(num[i:], target, curr + ["*", str(new_num)], prev * new_num, curr_ret - prev + prev * new_num, ret)
+                self.helper(num[i:], target, sums + n, n, path + ["+", str(n)], ret)
+                self.helper(num[i:], target, sums - n, -n, path + ["-", str(n)], ret)
+                self.helper(num[i:], target, sums + prev * n - prev, prev * n, path + ["*", str(n)], ret)
 ```
