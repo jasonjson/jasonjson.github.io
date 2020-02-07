@@ -11,6 +11,10 @@ author: Jason
 Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
 
 ```python
+# [0], 0 -> false;
+# [5, 2, 4], 5 -> false;
+# [0, 0], 100 -> true;
+# [1,5], -6 -> true;
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:
         sums = 0
