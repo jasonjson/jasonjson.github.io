@@ -5,7 +5,7 @@ date: 2016-02-22 22:26:53.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.**

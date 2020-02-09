@@ -5,7 +5,7 @@ date: 2015-10-21 03:37:39.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given a list of numbers, return all possible permutations.**

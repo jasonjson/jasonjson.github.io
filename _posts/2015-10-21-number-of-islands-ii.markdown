@@ -5,7 +5,7 @@ date: 2015-10-21 03:03:07.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given a n,m which means the row and column of the 2D matrix and an array of pair A( size k). Originally, the 2D matrix is all 0 which means there is only sea in the matrix. The list pair has k operator and each operator has two integer A[i].x, A[i].y means that you can change the grid matrix[A[i].x][A[i].y] from sea to island. Return how many island are there in the matrix after each operator.**

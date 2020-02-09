@@ -5,7 +5,7 @@ date: 2015-10-21 13:24:37.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Follow up for N-Queens problem. Now, instead outputting board configurations, return the total number of distinct solutions.**

@@ -5,7 +5,7 @@ date: 2015-11-18 09:31:17.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Additive number is a positive integer whose digits can form additive sequence. A valid additive sequence should contain at least three numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.**

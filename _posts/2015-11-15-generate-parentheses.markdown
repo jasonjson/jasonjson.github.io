@@ -5,7 +5,7 @@ date: 2015-11-15 11:41:02.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.**

@@ -5,7 +5,7 @@ date: 2015-11-02 07:28:09.000000000 -05:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 <p><strong><em>Numbers can be regarded as product of its factors. For example,</p>

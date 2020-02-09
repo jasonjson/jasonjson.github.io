@@ -5,7 +5,7 @@ date: 2015-10-29 13:31:35.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 <p><strong><em>You are given a m x n 2D grid initialized with these three possible values.</p>

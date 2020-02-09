@@ -5,7 +5,7 @@ date: 2015-10-21 13:23:55.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **The n-queens puzzle is the problem of placing n queens on an n by n chessboard such that no two queens attack each other.**

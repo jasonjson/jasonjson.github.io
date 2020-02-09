@@ -5,7 +5,7 @@ date: 2015-10-21 14:48:16.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 <p><strong><em>Given a pattern and a string str, find if str follows the same pattern.You are given a pattern, such as [a b a b]. You are also given a string, example "redblueredblue".</em></strong></p>

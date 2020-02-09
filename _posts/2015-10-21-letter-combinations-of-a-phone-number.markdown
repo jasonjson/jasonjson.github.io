@@ -5,7 +5,7 @@ date: 2015-10-21 14:43:14.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given a digit string, return all possible letter combinations that the number could represent.**

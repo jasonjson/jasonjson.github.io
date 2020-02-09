@@ -5,7 +5,7 @@ date: 2020-02-09
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 from typing import List

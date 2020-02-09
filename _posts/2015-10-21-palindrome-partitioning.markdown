@@ -5,7 +5,7 @@ date: 2015-10-21 03:25:53.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.**

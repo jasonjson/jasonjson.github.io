@@ -5,7 +5,7 @@ date: 2015-10-21 03:41:06.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- DFS Backtracking
+- DFS
 author: Jason
 ---
 **Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.**
