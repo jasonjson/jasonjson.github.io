@@ -20,13 +20,15 @@ class Solution:
         first = defaultdict(list)
         last = defaultdict(list)
         for i, phrase in enumerate(phrases):
-            f, l = phrase.split()[0], phrase.split()[-1]
-            first[f].append(i)
-            last[l].append(i)
+            words = phrase.split()
+            first[words[0]].append(i)
+            last[words[-1]].append(i)
 
         ret = set()
-        for l in last:
-            if l in first:
-                ret.update([" ".join(phrases[i].split() + phrases[j].split()[1:]) for i in last[l] for j in first[l] if i != j])
+        for w in set(first) & set(last):
+            for i in first[w]:
+                for j in last[w]:
+                    if i != j:
+                        ret.add(phrases[j] + phrases[i].split(w, 1)[1])
         return sorted(list(ret))
 ```

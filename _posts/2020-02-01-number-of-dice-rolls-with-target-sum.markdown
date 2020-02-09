@@ -10,18 +10,14 @@ author: Jason
 ---
 You have d dice, and each die has f faces numbered 1, 2, ..., f. Return the number of possible ways (out of fd total ways) modulo 10^9 + 7 to roll the dice so the sum of the face up numbers equals target.
 
-```python
+``` python
+from functools import lru_cache
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        cache = {}
-        def count(d, t):
-            if d == 0:
-                return 1 if t == 0 else 0
-            elif (d, t) in cache:
-                return cache[(d, t)]
-            ways = sum(count(d - 1, i) for i in range(max(0, t - f), t))
-            cache[(d, t)] = ways
-            return ways
-
+        @lru_cache(None)
+        def count(num, sums):
+            if num == 0:
+                return 1 if sums == 0 else 0
+            return sum(count(num - 1, i) for i in range(max(0, sums - f), sums))
         return count(d, target) % (10 ** 9 + 7)
 ```
