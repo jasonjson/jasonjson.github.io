@@ -22,8 +22,10 @@ class Solution:
             while j >= 0 and (back_t or T[j] == "#"):
                 back_t += 1 if T[j] == "#" else -1
                 j -= 1
-            if i < 0 or j < 0 or S[i] != T[j]:
+            if i < 0 or j < 0:
                 return i == j == -1
+            elif S[i] != T[j]:
+                return False
             i -= 1
             j -= 1
         return True
