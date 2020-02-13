@@ -25,17 +25,15 @@ class Solution:
         dead_sets = set(deadends)
         queue = [("0000", 0)]
         visited = {"0000"}
-        ret = []
         while queue:
             curr, step = queue.pop(0)
             if curr in dead_sets:
                 continue
             elif curr == target:
-                ret.append(step)
-                continue
+                return step
             for candidate in helper(curr):
                 if candidate not in visited:
                     visited.add(candidate)
                     queue.append((candidate, step + 1))
-        return min(ret) if ret else -1
+        return -1
 ```
