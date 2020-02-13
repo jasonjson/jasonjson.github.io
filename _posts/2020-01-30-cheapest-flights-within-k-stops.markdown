@@ -15,9 +15,9 @@ from heapq import heappush, heappop
 from collections import defaultdict
 class Solution:
     def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, K: int) -> int:
-        price_map = defaultdict(dict)
-        for s, e, p in flights:
-            price_map[s][e] = p
+        price_map = defaultdict(list)
+        for u, v, w in flights:
+            price_map[u].append([v, w])
 
         heap = [[0, src, K + 1]]
         while heap:
@@ -25,7 +25,7 @@ class Solution:
             if curr == dst:
                 return price
             if stop > 0:
-                for city in price_map[curr]:
-                    heappush(heap, [price + price_map[curr][city], city, stop - 1])
+                for city, p in price_map[curr]:
+                    heappush(heap, [price + p, city, stop - 1])
         return -1
 ```
