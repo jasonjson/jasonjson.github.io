@@ -21,7 +21,7 @@ class Solution:
         for interval in intervals[1:]:
             if interval.start <= prev.end:
                 prev.end = max(prev.end, interval.end)
-            elif interval.start > prev.end:
+            else:
                 ret.append(Interval(prev.end, interval.start))
                 prev = interval
         return ret
