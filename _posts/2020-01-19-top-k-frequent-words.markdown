@@ -12,17 +12,16 @@ Given a non-empty list of words, return the k most frequent elements. Your answe
 
 ```python
 from collections import Counter
+from heapq import heappop
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
         if not words or not k:
             return []
 
-        buckets = [[] for _ in range(len(words))]
-        for word, count in Counter(words).items():
-            buckets[len(words) - count].append(word)
-
-        for bucket in buckets:
-            bucket.sort()
-
-        return sum(buckets, [])[:k]
+        ret = []
+        pq = [[-v, k] for k, v in Counter(words).items()]
+        heapify(pq)
+        while len(ret) < k:
+            ret.append(heappop(pq)[1])
+        return ret
 ```
