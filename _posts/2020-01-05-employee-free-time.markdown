@@ -19,8 +19,8 @@ class Solution:
         intervals = sorted([i for s in schedule for i in s], key=lambda x: x.start)
         ret, prev = [], intervals[0]
         for interval in intervals[1:]:
-            if interval.start <= prev.end and interval.end > prev.end:
-                prev.end = interval.end
+            if interval.start <= prev.end:
+                prev.end = max(prev.end, interval.end)
             elif interval.start > prev.end:
                 ret.append(Interval(prev.end, interval.start))
                 prev = interval
