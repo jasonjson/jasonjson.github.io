@@ -21,7 +21,7 @@ class Solution:
         for i in range(len(T)):
             while stack and T[stack[-1]] < T[i]:
                 index = stack.pop()
-                ret[index] = max(i - index, 0)
+                ret[index] = i - index
             stack.append(i)
         return ret
 ```
