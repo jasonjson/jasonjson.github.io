@@ -15,15 +15,13 @@ class Solution:
     def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
         if not t:
             return True
-        if not s:
+        elif not s:
             return False
 
-        return self.isSameTree(s, t) or self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
+        return self.isSametree(s, t) or self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
 
-    def isSameTree(self, s, t):
-        if s is None and t is None:
-            return True
-        elif s is None or t is None:
-            return False
-        return s.val == t.val and self.isSameTree(s.left, t.left) and self.isSameTree(s.right, t.right)
+    def isSametree(self, s1, s2):
+        if not s1 or not s2:
+            return s1 == s2
+        return s1.val == s2.val and self.isSametree(s1.left, s2.left) and self.isSametree(s1.right, s2.right)
 ```
