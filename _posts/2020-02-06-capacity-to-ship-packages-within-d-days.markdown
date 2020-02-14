@@ -14,10 +14,10 @@ A conveyor belt has packages that must be shipped from one port to another withi
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         lo, hi = max(weights), sum(weights)
-        while lo < hi:
+        while lo <= hi:
             mid = (lo + hi) // 2
             if self.is_valid(weights, mid, D):
-                hi = mid
+                hi = mid - 1
             else:
                 lo = mid + 1
         return lo
