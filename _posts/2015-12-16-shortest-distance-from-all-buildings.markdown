@@ -25,7 +25,7 @@ class Solution:
         count_dict = [[0] * col for _ in range(row)]
         buildings = 0
 
-        def dfs(queue, visited):
+        def bfs(queue, visited):
             while queue:
                 i, j, distance = queue.pop(0)
                 dist_dict[i][j] += distance
