@@ -13,11 +13,9 @@ author: Jason
 ``` python
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
-
-        prev = now = 0
+        rob = no_rob = 0
+        # rob:rob current house, no_rob: dont rob current house
         for num in nums:
-            prev, now = now, max(now, prev + num)
-        return now
+            rob, no_rob = no_rob + num, max(rob, no_rob)
+        return max(rob, no_rob)
 ```
