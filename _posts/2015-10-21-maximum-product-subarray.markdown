@@ -11,22 +11,6 @@ author: Jason
 **Find the contiguous subarray within an array (containing at least one number) which has the largest product.**
 
 
-``` java
-public class Solution {
-    public int maxProduct(int[] nums) {
-        if (nums == null || nums.length == 0) return -1;
-        int min = 1, max = 1, global = Integer.MIN_VALUE;
-        for (int n : nums) {
-            int temp = max;
-            max = Math.max(max * n, Math.max(min * n, n));
-            min = Math.min(temp * n, Math.min(min * n, n));
-            global = Math.max(max, global);
-        }
-        return global;
-    }
-}
-```
-
 ``` python
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
@@ -34,8 +18,9 @@ class Solution:
             return 0
 
         ret = min_val = max_val = nums[0]
-        for i in range(1, len(nums)):
-            min_val, max_val = min(min_val * nums[i], nums[i], max_val * nums[i]), max(min_val * nums[i], nums[i], max_val * nums[i])
+        for num in nums[1:]:
+            candidates = [min_val * num, max_val * num, num]
+            min_val, max_val = min(candidates), max(candidates)
             ret = max(ret, max_val)
         return ret
 ```
