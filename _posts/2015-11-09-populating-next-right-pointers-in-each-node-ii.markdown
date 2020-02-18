@@ -10,43 +10,11 @@ author: Jason
 ---
 **Follow up for problem "Populating Next Right Pointers in Each Node". What if the given tree could be any binary tree? Would your previous solution still work?**
 
-
-``` java
-public class Solution {
-    public void connect(TreeLinkNode root) {
-        if (root == null) return;
-
-        TreeLinkNode curr = root;
-        while (curr != null) {
-            if (curr.left != null) {
-                curr.left.next = curr.right != null ? curr.right : getNext(curr.next);
-            }
-            if (curr.right != null) {
-                curr.right.next = getNext(curr.next);
-            }
-            curr = curr.next;
-        }
-        connect(root.left);
-        connect(root.right);
-    }
-
-    public TreeLinkNode getNext(TreeLinkNode root) {
-        while (root != null) {
-            if (root.left != null) return root.left;
-            if (root.right != null) return root.right;
-            root = root.next;
-        }
-        return null;
-    }
-}
-```
-
 ``` python
 class Solution:
-    # @param root, a tree link node
-    # @return nothing
-    def connect(self, node):
-        curr = dummy = TreeLinkNode(0)
+    def connect(self, root: 'Node') -> 'Node':
+        curr = dummy = Node(0)
+        node = root
         while node:
             curr.next = node.left
             if curr.next:
@@ -56,6 +24,7 @@ class Solution:
                 curr = curr.next
             node = node.next
             if not node:
-                curr = dummy #dummy储存了连好的本层所有nodes
                 node = dummy.next
+                curr = dummy
+        return root
 ```
