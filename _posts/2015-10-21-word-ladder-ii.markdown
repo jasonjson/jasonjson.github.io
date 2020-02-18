@@ -15,7 +15,6 @@ from collections import defaultdict
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
         word_set = set(wordList)
-        prev = defaultdict(list)
         prev[beginWord] = [[beginWord]]
         while prev:
             curr = defaultdict(list)
@@ -27,7 +26,7 @@ class Solution:
                         new_word = word[:i] + c + word[i + 1:]
                         if new_word in word_set:
                             curr[new_word].extend(w + [new_word] for w in prev[word])
-            prev = curr
             word_set -= set(curr)
+            prev = curr
         return []
 ```
