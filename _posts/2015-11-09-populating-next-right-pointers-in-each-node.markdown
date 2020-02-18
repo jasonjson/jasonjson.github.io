@@ -10,30 +10,20 @@ author: Jason
 ---
 **Given a binary tree, populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.**
 
-
-``` java
-public class Solution {
-    public void connect(TreeLinkNode root) {
-        if (root == null || (root.left == null && root.right == null)) return;
-        root.left.next = root.right;
-        if (root.next != null) root.right.next = root.next.left;
-        connect(root.left);
-        connect(root.right);
-    }
-}
-```
-
 ``` python
 class Solution:
-    # @param root, a tree link node
-    # @return nothing
-    def connect(self, root):
-        if not root or not root.left or root.right:
+    def connect(self, root: 'Node') -> 'Node':
+        if not root:
             return
 
-        root.left.next = root.right
-        if root.next:
-            root.right.next = root.next.left
-        connect(root.left)
-        connect(root.right)
+        queue = [root]
+        while queue:
+            curr = queue.pop(0)
+            if curr.left and curr.right:
+                curr.left.next = curr.right
+                if curr.next:
+                    curr.right.next = curr.next.left
+                queue.append(curr.left)
+                queue.append(curr.right)
+        return root
 ```
