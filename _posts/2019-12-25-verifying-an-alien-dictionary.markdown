@@ -14,13 +14,15 @@ author: Jason
 class Solution:
     def isAlienSorted(self, words: List[str], order: str) -> bool:
         for w1, w2 in zip(words, words[1:]):
-            for i in range(min(len(w1), len(w2))):
-                if w1[i] != w2[i]:
-                    if order.index(w1[i]) > order.index(w2[i]):
+            i = j = 0
+            while i < len(w1) and j < len(w2):
+                if w1[i] != w2[j]:
+                    if order.index(w1[i]) > order.index(w2[j]):
                         return False
                     break
-                if i == len(w2) - 1 and i < len(w1) - 1:
-                    return False
-
+                i += 1
+                j += 1
+            if j == len(w2) and i < len(w1):
+                return False
         return True
 ```
