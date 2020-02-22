@@ -10,72 +10,23 @@ author: Jason
 ---
 **Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.**
 
-
-``` java
-public class Solution {
-    HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        // write your code here
-        if (node == null) return null;
-        UndirectedGraphNode newNode = new UndirectedGraphNode(node.label);
-        map.put(node, newNode);
-        for (UndirectedGraphNode neighbor : node.neighbors) {
-            if (!map.containsKey(neighbor)) {
-                UndirectedGraphNode newNeighbor = cloneGraph(neighbor);
-                map.put(neighbor, newNeighbor);
-            }
-            newNode.neighbors.add(map.get(neighbor));
-        }
-        return newNode;
-    }
-}
-```
-``` java
-public class Solution {
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        if (node == null) return null;
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-        Queue<undirectedgraphnode> queue = new LinkedList<undirectedgraphnode>();
-        UndirectedGraphNode newNode = new UndirectedGraphNode(node.label);
-        map.put(node, newNode);
-        queue.add(node);//always add old node for cloning
-        while (!queue.isEmpty()) {
-            UndirectedGraphNode curr = queue.poll();
-            UndirectedGraphNode newCurr = map.get(curr);
-            for (UndirectedGraphNode neighbor : curr.neighbors) {
-                if (map.containsKey(neighbor)) {
-                    newCurr.neighbors.add(map.get(neighbor));
-                } else {
-                    UndirectedGraphNode newNeighbor = new UndirectedGraphNode(neighbor.label);
-                    newCurr.neighbors.add(newNeighbor);
-                    map.put(neighbor, newNeighbor);
-                    queue.add(neighbor);//neighbor might have neighbors, push it to queue
-                }
-            }
-        }
-        return newNode;
-    }
-```
-```python
+``` python
 class Solution:
-    # @param node, a undirected graph node
-    # @return a undirected graph node
-    def cloneGraph(self, node):
+    def cloneGraph(self, node: 'Node') -> 'Node':
         if not node:
             return
 
-        new_node = UndirectedGraphNode(node.label)
-        mapping = {node: new_node}
-        queue = collections.deque([node])
+        node_dict = {}
+        new_node = Node(node.val)
+        node_dict[node] = new_node
+        queue = [node]
         while queue:
-            curr = queue.popleft()
-            new_curr = mapping[curr]
+            curr = queue.pop(0)
+            new_curr = node_dict.setdefault(curr, Node(curr.val))
             for neighbor in curr.neighbors:
-                if neighbor not in mapping:
-                    new_neighbor = UndirectedGraphNode(neighbor.label)
-                    mapping[neighbor] = new_neighbor
+                if neighbor not in node_dict:
+                    node_dict[neighbor] = Node(neighbor.val)
                     queue.append(neighbor)
-                new_curr.neighbors.append(mapping[neighbor])
+                new_curr.neighbors.append(node_dict[neighbor])
         return new_node
 ```
-
