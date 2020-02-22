@@ -21,9 +21,8 @@ class Solution:
             if parent and child:
                 conn[parent.val].append(child.val)
                 conn[child.val].append(parent.val)
-            if child.left:
+            if child:
                 helper(child, child.left)
-            if child.right:
                 helper(child, child.right)
         helper(None, root)
         ret = [target.val]
