@@ -16,78 +16,24 @@ class Solution:
         s = s.strip()
         if not s:
             return False
-        index = 0
-        if s[index] in ("+", "-"):
-            index += 1
-        found_dot = found_exp = found_num = False
 
-        while index < len(s):
-            if s[index].isdigit():
-                found_num = True
-                index += 1
-                continue
-            elif s[index] == ".":
-                if found_dot or found_exp:
+        has_num = has_dot = has_exp = False
+        for i, c in enumerate(s):
+            if c.isdigit():
+                has_num = True
+            elif c == ".":
+                if has_dot or has_exp:
                     return False
-                found_dot = True
-            elif s[index] == "e":
-                if found_exp or not found_num:
+                has_dot = True
+            elif c == "e":
+                if has_exp or not has_num:
                     return False
-                found_exp = True
-                found_num = False
-            elif s[index] in ("+", "-"):
-                if s[index - 1] != "e":
+                has_exp = True
+                has_num = False
+            elif c in "+-":
+                if i > 0 and s[i - 1] != "e":
                     return False
             else:
                 return False
-            index += 1
-        return found_num
+        return has_num
 ```
-
-
-``` java
-public class Solution {
-    /**
-     * @param s the string that represents a number
-     * @return whether the string is a valid number
-     */
-    public boolean isNumber(String s) {
-        // Write your code here
-        if (s == null || s.length() == 0) return false;
-
-        boolean dot = false, exp = false, num = false;
-        s = s.trim();
-        int i = 0;
-        if (i < s.length() && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
-            i ++;
-        }
-        for (; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (Character.isDigit(c)) {
-                num = true;
-            } else if (c == '.') {
-                if (dot || exp) {
-                    return false;
-                } else {
-                    dot = true;
-                }
-            } else if (c == 'e') {
-                if (exp || !num) {
-                    return false;
-                } else {
-                    exp = true;
-                    num = false;
-                }
-            } else if (c == '+' || c == '-') {
-                if (s.charAt(i-1) != 'e') {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        }
-        return num;
-    }
-}
-```
-

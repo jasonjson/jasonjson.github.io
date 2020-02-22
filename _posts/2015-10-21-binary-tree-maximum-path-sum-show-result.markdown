@@ -21,7 +21,7 @@ class Solution(object):
         """
         if not root:
             return 0
-        ret = [-2 ** 31]
+        ret = [float("-inf")]
         self.helper(root, ret)
         return ret[0]
 
