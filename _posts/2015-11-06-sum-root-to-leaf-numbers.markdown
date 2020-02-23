@@ -19,14 +19,14 @@ class Solution:
 
         ret = []
         self.helper(root, "", ret)
-        return sum([int(n) for n in ret])
+        return sum(int(n) for n in ret)
 
-    def helper(self, root, curr, ret):
+    def helper(self, root, path, ret):
         if not root:
             return
         if not root.left and not root.right:
-            ret.append(curr + str(root.val))
+            ret.append(path + str(root.val))
             return
-        self.helper(root.left, curr + str(root.val), ret)
-        self.helper(root.right, curr + str(root.val), ret)
+        self.helper(root.left, path + str(root.val), ret)
+        self.helper(root.right, path + str(root.val), ret)
 ```
