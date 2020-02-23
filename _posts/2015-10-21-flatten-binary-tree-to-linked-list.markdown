@@ -10,59 +10,6 @@ author: Jason
 ---
 **Given a binary tree, flatten it to a linked list in-place.**
 
-
-``` java
-public class Solution {
-    public void flatten(TreeNode root) {
-        if (root == null) return;
-
-        Stack<treenode> stack = new Stack<treenode>();
-        stack.push(root);
-        TreeNode prev = null;
-        while (!stack.isEmpty()) {
-            TreeNode curr = stack.pop();
-            if (prev != null) {
-                prev.right = curr;
-                prev.left = null;
-            }
-            prev = curr;
-            if (curr.right != null) {
-                stack.push(curr.right);
-            }
-            if (curr.left != null) {
-                stack.push(curr.left);
-            }
-        }
-    }
-}
-```
-``` java
-public class Solution {
-    /**
-     * @param root: a TreeNode, the root of the binary tree
-     * @return: nothing
-     */
-    public void flatten(TreeNode root) {
-        // write your code here
-        if (root == null) return;
-        helper(root);
-    }
-    public TreeNode helper(TreeNode root) {
-        if (root == null) return null;
-        TreeNode left = helper(root.left);
-        TreeNode right = helper(root.right);
-        root.left = null;
-        root.right = left;
-        TreeNode curr = root;
-        while (curr.right != null) {
-            curr = curr.right;
-        }
-        curr.right = right;
-        return root;
-    }
-}
-```
-
 ``` python
 class Solution(object):
     def flatten(self, root):
@@ -85,4 +32,28 @@ class Solution(object):
                 stack.append(curr.right)
             if curr.left:
                 stack.append(curr.left)
+```
+
+``` python
+class Solution:
+    def flatten(self, root: TreeNode) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+
+        self.helper(root)
+
+    def helper(self, node):
+        if not node:
+            return
+
+        left = self.helper(node.left)
+        right = self.helper(node.right)
+        node.left = None
+        node.right = left
+        curr = node
+        while curr.right:
+            curr = curr.right
+        curr.right = right
+        return node
 ```
