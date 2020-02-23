@@ -10,65 +10,28 @@ author: Jason
 ---
 **Given a 2D board and a word, find if the word exists in the grid. The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.**
 
-
-``` java
-public class Solution {
-    /**
-     * @param board: A list of lists of character
-     * @param word: A string
-     * @return: A boolean
-     */
-    public boolean exist(char[][] board, String word) {
-        // write your code here
-        if (board == null || board.length == 0) return false;
-
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
-                if (helper(board, i, j, word)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-    public boolean helper(char[][] board, int i, int j, String word) {
-        if (word.length() == 0) {
-            return true;
-        }//this must come first!!!, the last char be be at the edge and thus i j might be out of border
-        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) {
-            return false;
-        }
-        if (word.charAt(0) == board[i][j]) {
-            board[i][j] = '#';
-            if (helper(board, i + 1, j, word.substring(1)) || helper(board, i - 1, j, word.substring(1)) || helper(board, i, j + 1, word.substring(1)) || helper(board, i, j - 1, word.substring(1))) {
-                return true;
-            }
-            board[i][j] = word.charAt(0);
-        }
-        return false;
-    }
-}
-```
-
 ``` python
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         if not board:
             return False
+        if not word:
+            return True
+
+        def helper(i, j, left):
+            if not left:
+                return True
+            if 0 <= i < len(board) and 0 <= j < len(board[0]) and board[i][j] == left[0]:
+                board[i][j] = "#"
+                for new_i, new_j in (i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1):
+                    if helper(new_i, new_j, left[1:]):
+                        return True
+                board[i][j] = left[0]
+            return False
 
         for i in range(len(board)):
             for j in range(len(board[0])):
-                if self.helper(board, i, j, word):
+                if helper(i, j, word):
                     return True
-        return False
-
-    def helper(self, board, i, j, word):
-        if len(word) == 0:
-            return True
-        if i >= 0 and i < len(board) and j >= 0 and j < len(board[0]) and board[i][j] == word[0]:
-            board[i][j] = "#"
-            if self.helper(board, i + 1, j, word[1:]) or self.helper(board, i, j + 1, word[1:]) or self.helper(board, i - 1, j , word[1:]) or self.helper(board, i, j - 1, word[1:]):
-                return True
-            board[i][j] = word[0]
         return False
 ```
