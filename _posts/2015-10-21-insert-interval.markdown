@@ -5,39 +5,24 @@ date: 2015-10-21 13:03:18.000000000 -04:00
 tags:
 - Leetcode
 categories:
-- Brain Teaser
-- Data Structure
+- Array
 author: Jason
 ---
-<p><strong><em>Given a non-overlapping interval list which is sorted by start point. Insert a new interval into it, make sure the list is still in order and non-overlapping (merge intervals if necessary).</em></strong></p>
+Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary). You may assume that the intervals were initially sorted according to their start times.
 
+``` python
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
 
-``` java
-class Solution {
-    /**
-     * Insert newInterval into intervals.
-     * @param intervals: Sorted interval list.
-     * @param newInterval: A new interval.
-     * @return: A new sorted interval list.
-     */
-    public ArrayList<interval> insert(ArrayList<interval> intervals, Interval newInterval) {
-        ArrayList<interval> result = new ArrayList<interval>();
-        if (intervals == null || intervals.size() == 0) {
-            result.add(newInterval);
-            return result;
-        }
-        for (Interval interval : intervals) {
-            if (interval.end < newInterval.start) {
-                result.add(interval);
-            } else if (interval.start > newInterval.end) {
-                result.add(newInterval);
-                newInterval = interval;
-            } else {
-                newInterval = new Interval(Math.min(interval.start, newInterval.start), Math.max(interval.end, newInterval.end));
-            }
-        }
-        result.add(newInterval);
-        return result;
-    }
-}
+        ret = []
+        for interval in intervals:
+            if interval[1] < newInterval[0]:
+                ret.append(interval)
+            elif interval[0] > newInterval[1]:
+                ret.append(newInterval)
+                newInterval = interval
+            else:
+                newInterval = [min(interval[0], newInterval[0]), max(interval[1], newInterval[1])]
+        ret.append(newInterval)
+        return ret
 ```
