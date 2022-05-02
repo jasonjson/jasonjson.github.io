@@ -44,20 +44,30 @@ public class Solution {
 ```
 
 ``` python
-class Solution(object):
-    def intToRoman(self, num):
-        """
-        :type num: int
-        :rtype: str
-        """
-
-        values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-        roman = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
-
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        if not num:
+            return ""
+        roman = ["M", "D", "C", "L", "X", "V", "I"]
+        scale = 1000
         ret = []
-        for i, value in enumerate(values):
-            while (num >= value):
-                ret.append(roman[i])
-                num -= value
+        for i in range(0, 7, 2):
+            digit = num // scale
+            if digit <= 3:
+                for j in range(digit):
+                    ret.append(roman[i])
+            elif digit == 4:
+                ret.extend([roman[i], roman[i - 1]])
+            elif digit == 5:
+                ret.append(roman[i - 1])
+            elif digit <= 8:
+                ret.append(roman[i - 1])
+                for j in range(digit - 5):
+                    ret.append(roman[i])
+            elif digit == 9:
+                ret.extend([roman[i], roman[i - 2]])
+            num %= scale
+            scale //= 10
+
         return "".join(ret)
 ```
