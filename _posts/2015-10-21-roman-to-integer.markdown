@@ -15,7 +15,7 @@ author: Jason
 public class Solution {
     public int romanToInt(String s) {
         if (s == null || s.length() == 0) return 0;
-                char[] roman = {'I','V','X','L','C','D','M'};
+        char[] roman = {'I','V','X','L','C','D','M'};
         int result = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
