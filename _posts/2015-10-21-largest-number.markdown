@@ -44,12 +44,18 @@ public class Solution {
 ```
 
 ``` python
+from functools import cmp_to_key
 class Solution:
-    # @param {integer[]} nums
-    # @return {string}
-    def largestNumber(self, nums):
+    def largestNumber(self, nums: List[int]) -> str:
+        def compare(a, b):
+            if a + b > b + a:
+                return 1
+            elif a + b < b + a:
+                return -1
+            else:
+                return 0
 
-        nums = [str(num) for num in nums]
-        nums.sort(cmp = lambda x, y : cmp(y + x, x + y))
+        nums = [str(n) for n in nums]
+        nums = sorted(nums, key=cmp_to_key(compare), reverse=True)
         return "".join(nums).lstrip("0") or "0"
 ```
