@@ -13,18 +13,21 @@ author: Jason
 ``` python
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
-        if not nums:
-            return
-
-        red, blue = 0, len(nums) - 1
-        i = 0
-        while i <= blue:
-            if nums[i] == 0:
-                nums[i], nums[red] = nums[red], nums[i]
-                red += 1
-            elif nums[i] == 2:
-                nums[i], nums[blue] = nums[blue], nums[i]
-                blue -= 1
-                i -= 1
-            i += 1
+        """
+        1. array[0 to lo-1] = 0 is present
+        2. array[lo to mid-1] = 1 is present
+        3. array[mid to hi-1] = unknown
+        4. array[hi to n(size of list)] = 2 is present
+        """
+        lo, mid, hi = 0, 0, len(nums) - 1
+        while mid <= hi:
+            if nums[mid] == 0:
+                nums[mid], nums[lo] = nums[lo], nums[mid]
+                lo += 1
+                mid += 1
+            elif nums[mid] == 1:
+                mid += 1
+            elif nums[mid] == 2:
+                nums[mid], nums[hi] = nums[hi], nums[mid]
+                hi -= 1
 ```
