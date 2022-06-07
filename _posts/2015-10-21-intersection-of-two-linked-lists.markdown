@@ -45,3 +45,34 @@ class Solution(object):
             B = B.next if B else headA
         return A
 ```
+
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode* dummyA = headA;
+        ListNode* dummyB = headB;
+        while (dummyA != dummyB) {
+            if (dummyA != NULL) {
+                dummyA = dummyA->next;
+            } else {
+                dummyA = headB;
+            }
+            if (dummyB != NULL) {
+                dummyB = dummyB->next;
+            } else {
+                dummyB = headA;
+            }
+        }
+        return dummyA;
+    }
+};
+```
