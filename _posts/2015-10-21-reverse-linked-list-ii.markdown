@@ -28,3 +28,25 @@ class Solution:
 
         return dummy.next
 ```
+
+```cpp
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        ListNode dummy;
+        dummy.next = head;
+        ListNode* prev = &dummy;
+        for (int i = 0; i < left - 1; i++) {
+            prev = prev->next;
+            head = head->next;
+        }
+        for (int i = 0; i < right - left; i ++) {
+            ListNode* tmp = head->next;
+            head->next = tmp->next;
+            tmp->next = prev->next;
+            prev->next = tmp;
+        }
+        return dummy.next;
+    }
+};
+```
