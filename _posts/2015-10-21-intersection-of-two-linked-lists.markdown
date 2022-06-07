@@ -46,7 +46,7 @@ class Solution(object):
         return A
 ```
 
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {

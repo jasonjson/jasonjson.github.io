@@ -66,7 +66,7 @@ class Solution(object):
         return rev
 ```
 
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
