@@ -8,7 +8,7 @@ categories:
 - LinkedList
 author: Jason
 ---
-**Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes. You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.**
+Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes. You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
 
 
 ``` java
@@ -57,4 +57,31 @@ class Solution(object):
             else:
                 curr = curr.next
         return head
+```
+
+```cpp
+class Solution {
+public:
+    ListNode* oddEvenList(ListNode* head) {
+        if (head == NULL || head->next == NULL) {
+            return head;
+        }
+        ListNode* prev = head;
+        ListNode* curr = head->next;
+        int index = 1;
+        while (curr->next) {
+            index += 1;
+            if (index % 2 == 0) {
+                ListNode* tmp = curr->next;
+                curr->next = tmp->next;
+                tmp->next = prev->next;
+                prev->next = tmp;
+                prev = tmp;
+            } else {
+                curr = curr->next;
+            }
+        }
+        return head;
+    }
+    };
 ```
