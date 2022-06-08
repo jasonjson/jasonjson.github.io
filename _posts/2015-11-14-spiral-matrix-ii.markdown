@@ -70,3 +70,37 @@ class Solution(object):
             left += 1
         return ret
 ```
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>> ret (n, vector<int>(n));
+        if (n == 0) {
+            return ret;
+        }
+        int left = 0, right = n - 1;
+        int top = 0, bottom = n - 1;
+        int num = 1;
+        while (num <= n * n) {
+            for (int j = left; j <= right; j ++) {
+                ret[top][j] = num++;
+            }
+            top++;
+            for (int i = top; i <= bottom; i ++) {
+                ret[i][right] = num++;
+            }
+            right--;
+            for (int j = right; j >= left; j--) {
+                ret[bottom][j] = num++;
+            }
+            bottom--;
+            for (int i = bottom; i >= top; i--) {
+                ret[i][left] = num++;
+            }
+            left++;
+        }
+        return ret;
+    }
+};
+```
