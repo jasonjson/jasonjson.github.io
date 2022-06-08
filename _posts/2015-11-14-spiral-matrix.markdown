@@ -91,3 +91,48 @@ class Solution(object):
                 break
         return ret
 ```
+
+```cpp
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        vector<int> ret;
+        if (matrix.empty()) {
+            return ret;
+        }
+        int left = 0, right = matrix[0].size() - 1;
+        int top = 0, bottom = matrix.size() - 1;
+        while (true) {
+            for (int j = left; j <= right; j++) {
+                ret.push_back(matrix[top][j]);
+            }
+            ++top;
+            if (top > bottom) {
+                break;
+            }
+            for (int i = top; i <= bottom; i++) {
+                ret.push_back(matrix[i][right]);
+            }
+            --right;
+            if (right < left) {
+                break;
+            }
+            for (int j = right; j >= left; j--) {
+                ret.push_back(matrix[bottom][j]);
+            }
+            --bottom;
+            if (bottom < top) {
+                break;
+            }
+            for (int i = bottom; i >= top; i--) {
+                ret.push_back(matrix[i][left]);
+            }
+            ++left;
+            if (left > right) {
+                break;
+            }
+        }
+        return ret;
+    }
+    };
+```
