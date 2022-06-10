@@ -12,9 +12,9 @@ You have a queue of integers, you need to retrieve the first unique integer in t
 
 Implement the FirstUnique class:
 
-1. FirstUnique(int[] nums) Initializes the object with the numbers in the queue.
-2. int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer.
-3. void add(int value) insert value to the queue.
+1. `FirstUnique(int[] nums)` Initializes the object with the numbers in the queue.
+2. `int showFirstUnique()` returns the value of the first unique integer of the queue, and returns -1 if there is no such integer.
+3. `void add(int value)` insert value to the queue.
 
 ```cpp
 from collections import Counter

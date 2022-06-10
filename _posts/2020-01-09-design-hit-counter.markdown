@@ -14,9 +14,9 @@ Your system should accept a timestamp parameter (in seconds granularity), and yo
 
 Implement the HitCounter class:
 
-1. HitCounter() Initializes the object of the hit counter system.
-2. void hit(int timestamp) Records a hit that happened at timestamp (in seconds). Several hits may happen at the same timestamp.
-3. int getHits(int timestamp) Returns the number of hits in the past 5 minutes from timestamp (i.e., the past 300 seconds).
+1. `HitCounter()` Initializes the object of the hit counter system.
+2. `void hit(int timestamp)` Records a hit that happened at timestamp (in seconds). Several hits may happen at the same timestamp.
+3. `int getHits(int timestamp)` Returns the number of hits in the past 5 minutes from timestamp (i.e., the past 300 seconds).
 
 ```python
 class HitCounter:
