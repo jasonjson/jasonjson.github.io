@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 232 - Implement Queue by Two Stacks
+title: 232 - Implement Queue Using Stacks
 date: 2015-10-21 12:59:51.000000000 -04:00
 tags:
 - Leetcode
@@ -8,7 +8,14 @@ categories:
 - Data Structure
 author: Jason
 ---
-**As the title described, you should only use two stacks to implement a queue's actions. The queue should support push(element), pop() and top() where pop is pop the first(a.k.a front) element in the queue. Both pop and top methods should return the value of first element.**
+Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
+
+Implement the MyQueue class:
+
+1. `void push(int x)` Pushes element x to the back of the queue.
+2. `int pop()` Removes the element from the front of the queue and returns it.
+3. `int peek()` Returns the element at the front of the queue.
+4. `boolean empty()` Returns true if the queue is empty, false otherwise.
 
 
 ``` java
@@ -46,48 +53,28 @@ public class Solution {
 ```
 
 ``` python
-class MyQueue(object):
+class MyQueue:
 
     def __init__(self):
-        """
-        Initialize your data structure here.
-        """
-        self.s1 = []
-        self.s2 = []
+        self.stack1 = []
+        self.stack2 = []
 
-    def push(self, x):
-        """
-        Push element x to the back of queue.
-        :type x: int
-        :rtype: void
-        """
-        self.s1.append(x)
+    def push(self, x: int) -> None:
+        self.stack2.append(x)
 
-    def pop(self):
-        """
-        Removes the element from in front of queue and returns that element.
-        :rtype: int
-        """
+    def pop(self) -> int:
         self.move()
-        return self.s2.pop()
+        return self.stack1.pop()
 
-    def peek(self):
-        """
-        Get the front element.
-        :rtype: int
-        """
+    def peek(self) -> int:
         self.move()
-        return self.s2[-1]
+        return self.stack1[-1]
 
-    def empty(self):
-        """
-        Returns whether the queue is empty.
-        :rtype: bool
-        """
-        return not self.s1 and not self.s2
+    def empty(self) -> bool:
+        return not self.stack1 and not self.stack2
 
-    def move(self):
-        if not self.s2:
-            while self.s1:
-                self.s2.append(self.s1.pop())
+    def move(self) -> None:
+        if not self.stack1:
+            while self.stack2:
+                self.stack1.append(self.stack2.pop())
 ```
