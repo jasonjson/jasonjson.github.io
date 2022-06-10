@@ -8,8 +8,13 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-**Evaluate the value of an arithmetic expression in Reverse Polish Notation. Valid operators are +, -, *, /. Each operand may be an integer or another expression.**
+Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
+Valid operators are `+, -, *, /`. Each operand may be an integer or another expression.
+
+**Note that division between two integers should truncate toward zero**.
+
+It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.
 
 ``` python
 class Solution:
@@ -17,7 +22,6 @@ class Solution:
         if not tokens:
             return 0
 
-        ret = 0
         stack = []
         for token in tokens:
             if token == "+":
