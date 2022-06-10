@@ -69,3 +69,32 @@ class ZigzagIterator(object):
         """
         return self.queue
 ```
+
+```cpp
+class ZigzagIterator {
+public:
+    vector<int>::iterator b1, b2, e1, e2;
+    ZigzagIterator(vector<int>& v1, vector<int>& v2) {
+        b1 = v1.begin();
+        e1 = v1.end();
+        b2 = v2.begin();
+        e2 = v2.end();
+    }
+
+    int next() {
+        hasNext();
+        int tmp = *b1++;
+        swap(b1, b2);
+        swap(e1, e2);
+        return tmp;
+    }
+
+    bool hasNext() {
+        if (b1 == e1) {
+            swap(b1, b2);
+            swap(e1, e2);
+        }
+        return b1 != e1;
+    }
+};
+```
