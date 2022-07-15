@@ -1,45 +1,41 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from typing import List
+class BrowserHistory:
 
-class Solution:
-    def calculate(self, s: str) -> int:
-        if not s:
-            return 0
+    def __init__(self, homepage: str):
+        self.history = [homepage]
+        self.index = 0
 
-        s += "$"
-        return self.helper(s, 0)[0]
+    def visit(self, url: str) -> None:
+        self.history = self.history[:self.index + 1]
+        self.history.append(url)
+        self.index += 1
 
 
-    def helper(self, s, index):
-        stack = []
-        num = 0
-        sign = "+"
-        while index < len(s):
-            c = s[index]
-            if c == " ":
-                continue
-                index += 1
-            elif c.isdigit():
-                num = num * 10 + int(c)
-                index += 1
-            elif c == "(":
-                num, index = self.helper(s, index + 1)
-            else:
-                if sign == "+":
-                    stack.append(num)
-                elif sign == "-":
-                    stack.append(-num)
-                elif sign == "*":
-                    stack.append(stack.pop() * num)
-                elif sign == "/":
-                    stack.append(int(stack.pop() / num))
-                elif sign == ")":
-                    break
-                sign = c
-                num = 0
-                index += 1
-        return sum(stack), index
+    def back(self, steps: int) -> str:
+        self.index -= steps
+        if self.index < 0:
+            self.inex = 0
+        try:
+            return self.history[self.index]
+        except:
+            import pdb; pdb.set_trace()
 
-s = Solution()
-print(s.calculate("1+1"))
+    def forward(self, steps: int) -> str:
+        self.index += steps
+        if self.index >= len(self.history):
+            self.index = len(self.history) - 1
+        return self.history[self.index]
+
+b = BrowserHistory("leetcode.com")
+b.visit("google.com")
+b.visit("facebook.com")
+b.visit("youtube.com")
+print(b.back(1))
+print(b.back(1))
+print(b.forward(1))
+b.visit("linkedin.com")
+print(b.forward(2))
+print(b.back(2))
+print(b.back(7))
