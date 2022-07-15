@@ -5,16 +5,26 @@ from typing import List
 class Solution:
     def calculate(self, s: str) -> int:
         if not s:
-            return -1
-        s = s + "$"
+            return 0
+
+        s += "$"
+        return self.helper(s, 0)[0]
+
+
+    def helper(self, s, index):
         stack = []
-        sign = "+"
         num = 0
-        for c in s:
+        sign = "+"
+        while index < len(s):
+            c = s[index]
             if c == " ":
                 continue
+                index += 1
             elif c.isdigit():
                 num = num * 10 + int(c)
+                index += 1
+            elif c == "(":
+                num, index = self.helper(s, index + 1)
             else:
                 if sign == "+":
                     stack.append(num)
@@ -23,15 +33,13 @@ class Solution:
                 elif sign == "*":
                     stack.append(stack.pop() * num)
                 elif sign == "/":
-                    prev = stack.pop()
-                    print(prev, num)
-                    a = int(prev / num)
-                    stack.append(a)
+                    stack.append(int(stack.pop() / num))
+                elif sign == ")":
+                    break
                 sign = c
                 num = 0
-
-        print(stack)
-        return sum(stack)
+                index += 1
+        return sum(stack), index
 
 s = Solution()
-print(s.calculate("14-3/2"))
+print(s.calculate("1+1"))
