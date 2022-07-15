@@ -8,33 +8,38 @@ categories:
 - Brain Teaser
 author: Jason
 ---
-**Implement a basic calculator to evaluate a simple expression string.  The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero. You may assume that the given expression is always valid.**
+Given a string s which represents an expression, evaluate this expression and return its value.
+
+The integer division should truncate toward zero.
+
+You may assume that the given expression is always valid. All intermediate results will be in the range of [-231, 231 - 1].
+
+**Note**: You are not allowed to use any built-in function which evaluates strings as mathematical expressions, such as eval().
 
 ``` python
 class Solution:
     def calculate(self, s: str) -> int:
+        if not s:
+            return -1
         s += "$"
         stack = []
         sign = "+"
-        num = index = 0
-        while index < len(s):
-            c = s[index]
+        num = 0
+        for c in s:
             if c == " ":
-                index += 1
+                continue
             elif c.isdigit():
                 num = num * 10 + int(c)
-                index += 1
             else:
                 if sign == "+":
                     stack.append(num)
                 elif sign == "-":
                     stack.append(-num)
-                elif sign == '*':
+                elif sign == "*":
                     stack.append(stack.pop() * num)
-                elif sign == '/':
+                elif sign == "/":
                     stack.append(int(stack.pop() / num))
                 sign = c
                 num = 0
-                index += 1
         return sum(stack)
 ```
