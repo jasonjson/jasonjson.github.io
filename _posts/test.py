@@ -3,18 +3,24 @@
 from typing import List
 
 class Solution:
-    def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
-        if startRow < 0 or startRow >= m or startColumn < 0 or startColumn >= n:
-            return 1
-        elif maxMove == 0:
-            return 0
-        else:
-            a = self.findPaths(m, n, maxMove - 1, startRow - 1, startColumn)
-            b = self.findPaths(m, n, maxMove - 1, startRow + 1, startColumn)
-            c = self.findPaths(m, n, maxMove - 1, startRow, startColumn - 1)
-            d = self.findPaths(m, n, maxMove - 1, startRow, startColumn + 1)
-            return a + b + c + d
+    def removeDuplicates(self, s: str) -> str:
+        if not s:
+            return ""
+
+        ret = []
+        index = 0
+        while index < len(s):
+            ret.append(s[index])
+            left, right = index, index + 1
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                print(ret)
+                ret.pop()
+                left -= 1
+                right += 1
+            index = right
+            print(ret)
+
+        return "".join(ret)
 
 s = Solution()
-print(s.findPaths(2, 2, 2, 0, 0))
-print(s.findPaths(1, 3, 3, 0, 1))
+print(s.removeDuplicates("aaaaaaaa"))
