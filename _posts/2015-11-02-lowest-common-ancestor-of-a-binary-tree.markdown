@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 236 - Lowest Common Ancestor of a Binary Search Tree
+title: 236 - Lowest Common Ancestor of a Binary Tree
 date: 2020-01-18
 tags:
 - Leetcode
@@ -13,7 +13,7 @@ Given a binary search tree (BST), find the lowest common ancestor (LCA) of two g
 ``` python
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if root in (None, p, q):
+        if root == None or root == p or root == q:
             return root
 
         left = self.lowestCommonAncestor(root.left, p, q)
