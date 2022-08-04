@@ -45,3 +45,30 @@ class MyCalendar:
         else:
             return False
 ```
+
+```
+class MyCalendar:
+    def __init__(self):
+        self.books = []
+
+    def book(self, start: int, end: int) -> bool:
+        index = self.search(start)
+        if index > 0 and self.books[index - 1][1] > start:
+            return False
+        elif index < len(self.books) and self.books[index][0] < end:
+            return False
+        self.books.insert(index, [start, end])
+        return True
+
+    def search(self, start):
+        left, right = 0, len(self.books) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if self.books[mid][0] == start:
+                return mid
+            elif self.books[mid][0] > start:
+                right = mid - 1
+            else:
+                left = mid + 1
+        return left
+```
